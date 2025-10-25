@@ -5,3 +5,4 @@ public/
 # Generated Quarto files
 Lectures/_book/
 Lectures/site_libs/
+.quarto
