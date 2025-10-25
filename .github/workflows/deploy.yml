@@ -17,10 +17,19 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Deploy
+      - name: Deploy to main site
         if: ${{ github.ref == 'refs/heads/main' }}
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./Lectures
           publish_branch: gh-pages
+
+      - name: Deploy PR preview
+        if: ${{ github.event_name == 'pull_request' }}
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./Lectures
+          publish_branch: gh-pages
+          destination_dir: preview/pr-${{ github.event.number }}
