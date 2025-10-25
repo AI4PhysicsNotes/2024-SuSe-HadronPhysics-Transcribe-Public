@@ -1,3 +1,16 @@
+---
+title: (2024) Lecture 5
+author: ''
+presenter: Mikhail Mikhasenko
+note_taker: Ilya Segal
+date: '2024'
+format: html
+---
+
+**Presenter**: {{< meta presenter >}}
+
+**Note Taker**: {{< meta note_taker >}}
+
 
 
 ### Kinematics and Variables in Two-Body Scattering Processes
@@ -16,11 +29,15 @@ First, consider scalar particles — for example, spin-0 pseudoscalars ("0 minus
 Two such scalar particles scatter into two final-state scalar particles.
 Second, consider the case with spin — for example, scattering a 0⁻ particle into a 3⁻ and a 1⁺ final state.
 
-> [!NOTE]
-> The "blob" in scattering diagrams represents the interaction region — where strong, electromagnetic, or other forces act. Arrows show incoming and outgoing particles. These are not Feynman diagrams; they are sometimes called unitarity diagrams.
-> 
-> ![A unitary diagram for the three-body decay. The arrows show the initial and final state particles, and the blob stands for the interaction that transforms the initial state into the final state.](images/fig1.png)
+::: callout-note
+The "blob" in scattering diagrams represents the interaction region — where strong, electromagnetic, or other forces act. Arrows show incoming and outgoing particles. These are not Feynman diagrams; they are sometimes called unitarity diagrams.
 
+
+
+![A unitary diagram for the three-body decay. The arrows show the initial and final state particles, and the blob stands for the interaction that transforms the initial state into the final state.](images/fig1.png){#fig-fg1}
+
+
+:::
 
 We are only discussing kinematics here — whatever happens inside the blob does not change the number of variables needed.
 
@@ -40,9 +57,9 @@ For two incoming and two outgoing particles:
 For spinless particles, the scattering amplitude is a scalar function of these two variables.
 When particles have spin, the amplitude becomes a multi-component object — for example, for a 3⁻ and 1⁺ final state, the amplitude has 7 × 3 = 21 components — but each component still depends on the same **two kinematic variables**.
 
-> [!IMPORTANT]
-> Even with spin, the number of independent kinematic variables remains two. Spin only increases the number of amplitude components, not the kinematic degrees of freedom.
-
+::: callout-important
+Even with spin, the number of independent kinematic variables remains two. Spin only increases the number of amplitude components, not the kinematic degrees of freedom.
+:::
 **What are good choices for these two variables?**
 
 Common choices include:
@@ -61,15 +78,23 @@ Any two independent variables work, but some choices (like $s$ and $t$) are Lore
 
 Now, moving to three-body decays — such as in Dalitz plot analysis — we again need **two variables** to fully describe the kinematics.
 
-![The Dalitz plot, a representation of the phase-space for the three-body decay. It appears as an ellipse-shaped area where the internal region corresponds to allowed kinematics and the outside region is forbidden. On the x-axis lies the squared mass of two final-state particles, while the y-axis corresponds to the other subsystem. A horizontal line represents a slice of the phase-space with one mass fixed. The borders of the area correspond to configurations where all three momenta are aligned in the rest frame of the decaying particle, or equivalently, where the scattering angle in the relevant rest frame is either 0 or π.](images/fig3.png)
 
 
-> [!TIP]
-> In a three-body decay, the differential decay rate plotted against two Mandelstam variables (e.g., $m_{12}^2$ and $m_{23}^2$) is flat in phase space — meaning the density directly reflects the dynamics of the interaction, without kinematic distortion.
+![The Dalitz plot, a representation of the phase-space for the three-body decay. It appears as an ellipse-shaped area where the internal region corresponds to allowed kinematics and the outside region is forbidden. On the x-axis lies the squared mass of two final-state particles, while the y-axis corresponds to the other subsystem. A horizontal line represents a slice of the phase-space with one mass fixed. The borders of the area correspond to configurations where all three momenta are aligned in the rest frame of the decaying particle, or equivalently, where the scattering angle in the relevant rest frame is either 0 or π.](images/fig3.png){#fig-fg3}
 
+
+
+
+::: callout-tip
+In a three-body decay, the differential decay rate plotted against two Mandelstam variables (e.g., $m_{12}^2$ and $m_{23}^2$) is flat in phase space — meaning the density directly reflects the dynamics of the interaction, without kinematic distortion.
+:::
 The three-body phase space can be written recursively using two-body phase spaces:
 
-![A sketch illustrating the recursive relation when computing the phase-space expression. This is not a dynamic assumption but a mathematical trick that rewrites the full three-body phase-space through lower-dimensional phase-space elements and the two-body phase-space, for which the expression is simple.](images/fig2.png)
+
+
+![A sketch illustrating the recursive relation when computing the phase-space expression. This is not a dynamic assumption but a mathematical trick that rewrites the full three-body phase-space through lower-dimensional phase-space elements and the two-body phase-space, for which the expression is simple.](images/fig2.png){#fig-fg2}
+
+
 
 
 $$
@@ -108,6 +133,7 @@ The transition **c → s** happens within the same generation and is **not suppr
 
 This decay is considered a **golden channel** for detection.
 The final state consists of three charged particles with no neutrals:
+
 - The proton is charged and stable on detector timescales.
 - The kaon is stable in our experimental environment.
 - The pion is also stable.
@@ -115,43 +141,44 @@ The final state consists of three charged particles with no neutrals:
 Without neutral particles to complicate reconstruction, all three charged tracks fly outward from the decay vertex.
 We observe clean tracks through the detector layers and see that they originate away from the primary interaction point.
 
-> [!NOTE]
-> The observed decay length of Λₐ in the lab frame is around **1 cm**, due to relativistic time dilation:
-> \[
-> \tau_{\text{lab}} = \gamma \, \tau_{\text{rest}}, \quad \gamma = \frac{E_{\Lambda_c}}{m_{\Lambda_c}}
-> \]
-> Since Λₐ is produced with several hundred GeV in LHC proton-proton collisions, its boosted lifetime allows it to travel a measurable distance.
-
+::: callout-note
+The observed decay length of Λₐ in the lab frame is around **1 cm**, due to relativistic time dilation:
+$$
+\tau_{\text{lab}} = \gamma \, \tau_{\text{rest}}, \quad \gamma = \frac{E_{\Lambda_c}}{m_{\Lambda_c}}
+$$
+Since Λₐ is produced with several hundred GeV in LHC proton-proton collisions, its boosted lifetime allows it to travel a measurable distance.
+:::
 
 
 
 We now turn to a Dalitz plot analysis.
 
-![The Dalitz plot, a representation of the phase-space for the three-body decay. It appears as an ellipse-shaped area where the internal region corresponds to allowed kinematics and the outside region is forbidden. On the x-axis lies the squared mass of two final-state particles, while the y-axis corresponds to the other subsystem. A horizontal line represents a slice of the phase-space with one mass fixed. The borders of the area correspond to configurations where all three momenta are aligned in the rest frame of the decaying particle, or equivalently, where the scattering angle in the relevant rest frame is either 0 or π.    ](images/fig3.png)
+Refer to @fig-fg3
 
 The following plot resembles real experimental data—in fact, with such high statistics, the actual data would look just as smooth.
 
 - **x-axis**: invariant mass squared of the proton and kaon,
-\[
+$$
 m_{pK}^2 = (p_p + p_K)^2
-\]
+$$
+
 - **y-axis**: invariant mass squared of the kaon and pion,
-\[
+$$
 m_{K\pi}^2 = (p_K + p_\pi)^2
-\]
+$$
 
-The colored region shows all **kinematically allowed values** for the decay; the white area corresponds to kinematically forbidden configurations. Refer to Figure 3
+The colored region shows all **kinematically allowed values** for the decay; the white area corresponds to kinematically forbidden configurations. Refer to @fig-fg3
 
-> [!TIP]
-> Each point in the Dalitz plot corresponds to a unique set of four-momenta for the final-state particles.
-> If you pick a point inside the colored region, you can compute angles and construct the physical configuration.
-> A point in the white region would violate energy-momentum conservation.
-
+::: callout-tip
+Each point in the Dalitz plot corresponds to a unique set of four-momenta for the final-state particles.
+If you pick a point inside the colored region, you can compute angles and construct the physical configuration.
+A point in the white region would violate energy-momentum conservation.
+:::
 The differential decay rate is given by
-\[
+$$
 d\Gamma = \frac{1}{2m_{\Lambda_c}} |\mathcal{M}|^2 \, d\Phi_3
-\]
-where \(|\mathcal{M}|^2\) contains the dynamics and \(d\Phi_3\) is the Lorentz-invariant three-body phase space.
+$$
+where $|\mathcal{M}|^2$ contains the dynamics and $d\Phi_3$ is the Lorentz-invariant three-body phase space.
 
 Different colors on the plot indicate different probabilities—certain kinematic configurations are preferred.
 Particles tend to be emitted in specific directions relative to one another.
@@ -160,6 +187,7 @@ Particles tend to be emitted in specific directions relative to one another.
 
 
 To interpret the structure:
+
 - On the **border** of the Dalitz plot, two particles become **collinear**.
 - The location where the invariant mass of a pair is maximized corresponds to a boundary point.
 
@@ -177,9 +205,9 @@ My initial idea was that with three momenta going out, if they are in opposite d
 
 The key question is: should the mass on the y-axis be as large or as small as possible? The answer is **as small as possible**.
 
-> [!IMPORTANT]
-> The invariant mass squared for two particles is given by $m_{12}^2 = (p_1 + p_2)^2 = (E_1 + E_2)^2 - (\vec{p}_1 + \vec{p}_2)^2$. When the three-momenta are aligned, we subtract them, leading to a smaller invariant mass.
-
+::: callout-important
+The invariant mass squared for two particles is given by $m_{12}^2 = (p_1 + p_2)^2 = (E_1 + E_2)^2 - (\vec{p}_1 + \vec{p}_2)^2$. When the three-momenta are aligned, we subtract them, leading to a smaller invariant mass.
+:::
 Why is it minimal? Because when the three momenta are collinear, we subtract them in the mass calculation. Another way to think about it: if you boost to the rest frame of the $K$ and $\pi$, they might be nearly at rest relative to each other. In that case, their relative momentum is small, and their invariant mass would be close to the sum of their rest masses, which is the **minimum** possible for that pair.
 
 Therefore, we are looking for the **minimal mass** of the $K\pi$ system. Let's figure out what this point on the plot corresponds to kinematically. There is a configuration where two particles are produced back-to-back from a decay at rest; that corresponds to the point of maximum mass. The point we are discussing is the one that minimizes the mass.
@@ -195,16 +223,16 @@ For a three-body decay, there is a standard way to define the angles for analysi
 *   **Step 2:** In the $K\pi$ rest frame, the kaon and pion are back-to-back.
 *   **Step 3:** In the overall center-of-momentum frame, all three particles ($\Lambda_c$, $K$, $\pi$) have momenta that sum to zero. After boosting to the $K\pi$ rest frame, the $\Lambda_c$ has a non-zero momentum, while the $K$ and $\pi$ momenta add to zero.
 
-If I fix the invariant mass of the $K\pi$ system, the magnitudes of the momentum vectors in their rest frame are fixed. The only variable that changes is the angle $\theta$ between the direction of the $\Lambda_c$ and one of the decay products in the $K\pi$ rest frame. By scanning $\theta$ from $0$ to $\pi$, I explore the entire phase space along a line of fixed $m_{K\pi}$. Refer to Figure 3
+If I fix the invariant mass of the $K\pi$ system, the magnitudes of the momentum vectors in their rest frame are fixed. The only variable that changes is the angle $\theta$ between the direction of the $\Lambda_c$ and one of the decay products in the $K\pi$ rest frame. By scanning $\theta$ from $0$ to $\pi$, I explore the entire phase space along a line of fixed $m_{K\pi}$. Refer to @fig-fg3
 
-> [!NOTE]
-> The dependence of the invariant mass of two particles on the angle between them is given by the term $(\vec{p}_1 + \vec{p}_2)^2$ in the mass formula. A wider angle leads to a smaller vector sum and thus a **smaller** invariant mass. A smaller angle (particles moving in similar directions) leads to a **larger** invariant mass.
-
+::: callout-note
+The dependence of the invariant mass of two particles on the angle between them is given by the term $(\vec{p}_1 + \vec{p}_2)^2$ in the mass formula. A wider angle leads to a smaller vector sum and thus a **smaller** invariant mass. A smaller angle (particles moving in similar directions) leads to a **larger** invariant mass.
+:::
 So, for the proton and $K\pi$ system, when the angle $\theta$ is zero, they are moving in the same direction, resulting in a high invariant mass $m_{p(K\pi)}$. When the angle is $\pi$, they are moving in opposite directions, resulting in a small invariant mass. The most straightforward analysis is to go to the rest frame of one pair (e.g., proton-$K$) where everything is fixed, and scan the Dalitz plot by changing the angle of the third particle.
 
 Another variable in $2 \to 2$ scattering is the $u$-channel Mandelstam variable. For three particles, it's a linear combination of the invariant masses and appears as a diagonal line on the Dalitz plot.
 
-The common experimental representation is the **Dalitz plot** itself, where the x-axis is the squared invariant mass of one pair (e.g., $m_{K\pi}^2$) and the y-axis is the squared invariant mass of another pair (e.g., $m_{pK}^2$). Refer to Figure 3
+The common experimental representation is the **Dalitz plot** itself, where the x-axis is the squared invariant mass of one pair (e.g., $m_{K\pi}^2$) and the y-axis is the squared invariant mass of another pair (e.g., $m_{pK}^2$). Refer to @fig-fg3
 
 
 
@@ -215,9 +243,9 @@ There is also a more symmetric representation using an equilateral triangle. The
 *   **Variable 2:** Distance to side 2 $\propto m_{AC}^2$
 *   **Variable 3:** Distance to side 3 $\propto m_{BC}^2$
 
-> [!TIP]
-> This symmetric representation is related to the standard rectangular plot by a linear transformation (a skew) involving factors like $\sqrt{3}/2$ due to the 60° angles. It's a nice way to visualize the kinematics symmetrically, but the rectangular plot is more common and easier to work with.
-
+::: callout-tip
+This symmetric representation is related to the standard rectangular plot by a linear transformation (a skew) involving factors like $\sqrt{3}/2$ due to the 60° angles. It's a nice way to visualize the kinematics symmetrically, but the rectangular plot is more common and easier to work with.
+:::
 The objective of these kinematic representations is to understand the dynamics. What we often see is that the decay $\Lambda_c^+ \to p K^- \pi^+$ does not proceed directly but via **intermediate resonances**.
 
 *   For a brief moment, two particles form an intermediate state that then decays.
@@ -239,14 +267,18 @@ Questions on the angular distribution? The final point is that within a resonanc
 
 This **angular dependence** occurs because the intermediate resonance (e.g., the $K^*$) has a spin. The spin of the particle causes an inhomogeneity in the angular distributions. Particles may prefer to be aligned rather than perpendicular. This preference is a powerful tool for measuring spin and other quantum numbers.
 
-> [!IMPORTANT]
-> For a resonance of spin $J$ decaying to two spinless particles, the angular distribution in its rest frame is proportional to the square of a Wigner d-function: $\frac{d\Gamma}{d\cos\theta} \propto |d^J_{m,0}(\theta)|^2$. The number of nodes (zeros) in this distribution can directly indicate the spin $J$.
-
+::: callout-important
+For a resonance of spin $J$ decaying to two spinless particles, the angular distribution in its rest frame is proportional to the square of a Wigner d-function: $\frac{d\Gamma}{d\cos\theta} \propto |d^J_{m,0}(\theta)|^2$. The number of nodes (zeros) in this distribution can directly indicate the spin $J$.
+:::
 Particles with higher spin produce more structured distributions. However, if the initial state is unpolarized and the final state spins are not measured, the distributions are averaged and smeared, potentially removing clear nodes.
 
 A particle with spin $J$ has $2J+1$ possible spin projections $m$ onto a quantization axis (z-axis). 
 
-![A diagram showing the spin projection. The horizontal line arrow indicates the z-axis, which is chosen as the quantization axis. The arrow denotes the particle spin, and its projection onto the axis is represented by m in the equations.](images/fig4.png)
+
+
+![A diagram showing the spin projection. The horizontal line arrow indicates the z-axis, which is chosen as the quantization axis. The arrow denotes the particle spin, and its projection onto the axis is represented by m in the equations.](images/fig4.png){#fig-fg4}
+
+
 
 The state is a vector with $2J+1$ components. Operators acting on this state are matrices.
 
@@ -276,16 +308,16 @@ These coefficients are found in the same place as the Clebsch-Gordan coefficient
 
 I just remember this table because it's super simple. The $D^{(1/2)}_{m' m}$ matrix is $\begin{pmatrix} \cos(\beta/2) & -\sin(\beta/2) \\ \sin(\beta/2) & \cos(\beta/2) \end{pmatrix}$ for the half angle. I should have picked 60 degrees because 15 degrees is a bit inconvenient. So here, the coefficient will be $\cos(15^\circ)$, and here it will be $\sin(15^\circ)$.
 
-> [!NOTE]
-> **Wigner D-Matrix for Spin-1/2:**
-> $$
-> D^{(1/2)}_{m'm}(\alpha, \beta, \gamma) = \begin{pmatrix} \cos(\beta/2) & -\sin(\beta/2) \\ \sin(\beta/2) & \cos(\beta/2) \end{pmatrix}
-> $$
-> This is the Wigner D-matrix for spin-1/2, representing the rotation operator in the SU(2) group. It gives the amplitude for a state with spin projection $m$ to transform into $m'$ under a rotation by Euler angles, with $\beta$ as the rotation angle about the y-axis.
-
+::: callout-note
+**Wigner D-Matrix for Spin-1/2:**
+$$
+D^{(1/2)}_{m'm}(\alpha, \beta, \gamma) = \begin{pmatrix} \cos(\beta/2) & -\sin(\beta/2) \\ \sin(\beta/2) & \cos(\beta/2) \end{pmatrix}
+$$
+This is the Wigner D-matrix for spin-1/2, representing the rotation operator in the SU(2) group. It gives the amplitude for a state with spin projection $m$ to transform into $m'$ under a rotation by Euler angles, with $\beta$ as the rotation angle about the y-axis.
+:::
 Are there any questions concerning the Wigner D functions? Would you be able to calculate any rotations of the spin projection?
 
-![A diagram showing the spin projection. The horizontal line arrow indicates the z-axis, which is chosen as the quantization axis. The arrow denotes the particle spin, and its projection onto the axis is represented by m in the equations.    ](images/fig4.png)
+Refer to @fig-fg4
 
 It looks alright, right? What's important to note is the convention with the minus sign. If you want to do matrix exponentiation yourself, in previous exercises we computed these matrices.
 
@@ -304,18 +336,22 @@ Let's now explore the blob that I had on the previous slide and consider one of 
 
 I'm going to assume that the three particles in the final state are produced via a cascade process where the initial particle goes first to an intermediate particle with spin $J$, and then $X$ decays to 1 and 2. This three-way process with two variables and spins gives the dimension of the matrix, the discrete dimensions. 
 
-![A dynamic diagram of a cascade decay, where particle 0 decays to a three-body final state through an intermediate state x that sequentially decays into particles 1 and 2. The intermediate particle carries spin j and serves as an expansion term of the full amplitude, known as the partial projection term. Lines represent initial and final state particles, while the double line denotes the intermediate particle.](images/fig5.png)
+
+
+![A dynamic diagram of a cascade decay, where particle 0 decays to a three-body final state through an intermediate state x that sequentially decays into particles 1 and 2. The intermediate particle carries spin j and serves as an expansion term of the full amplitude, known as the partial projection term. Lines represent initial and final state particles, while the double line denotes the intermediate particle.](images/fig5.png){#fig-fg5}
+
+
 
 
 For this problem, since all particles have spin, I'm going to deal with dimensions which are the product of $(2j_0 + 1)$ for all particles: $(2j_0 + 1) \times (2j_1 + 1) \times (2j_2 + 1) \times (2j_3 + 1)$. If a particle's spin is 0, the dimension of the corresponding spin is 1. That's easy.
 
-> [!NOTE]
-> **Hilbert Space Dimension:**
-> $$
-> \dim(\mathcal{H}) = \prod_i (2j_i + 1)
-> $$
-> This gives the dimension of the Hilbert space for a system of particles with spins $j_i$, representing the total number of spin states. For spin-0 particles, $2j_i + 1 = 1$, simplifying the product.
-
+::: callout-note
+**Hilbert Space Dimension:**
+$$
+\dim(\mathcal{H}) = \prod_i (2j_i + 1)
+$$
+This gives the dimension of the Hilbert space for a system of particles with spins $j_i$, representing the total number of spin states. For spin-0 particles, $2j_i + 1 = 1$, simplifying the product.
+:::
 But in the general case, you have many of these two-variable functions, and the way to write the amplitude is to sum over the intermediate spin.
 
 Another thing I would like to say is that for simplicity, we are going to align. We are going to consider these $X$, 3; they are in different rest frames. Particles 1 and 2 are in the rest frame of $X$, and $X$ and 3 have a boost from the initial state center of momentum.
@@ -332,7 +368,7 @@ In that case, the $\lambda$'s are helicity projections, projection to motion to 
 
 Let's look at particle $X$. Particle $X$ carries the spin projection $\lambda_X$. It decays to particles 1 and 2. They are going at a certain angle with respect to the direction of motion of $X$. To compensate for this angle, one has to adjust the quantization axis.
 
-![A dynamic diagram of a cascade decay, where particle 0 decays to a three-body final state through an intermediate state x that sequentially decays into particles 1 and 2. The intermediate particle carries spin j and serves as an expansion term of the full amplitude, known as the partial projection term. Lines represent initial and final state particles, while the double line denotes the intermediate particle.    ](images/fig5.png)
+Refer to @fig-fg5
 
 One has to adjust, and this is done by rotating the spin of $X$ to the direction in which it decays. From that combination, one has to rotate to that combination. That's what is indicated by this rotation operator of the decay rotation.
 
@@ -346,24 +382,32 @@ This gives me a delta function on $\lambda_0$, $\lambda_X - \lambda_3$. If I don
 
 The final expression is $H_0 D^{J_X}_{\lambda_X, \lambda_1 - \lambda_2}(\theta, \phi)$, where $\lambda_X = \lambda_0 + \lambda_3$. So it's $D^{J_X}_{(\lambda_0 + \lambda_3), (\lambda_1 - \lambda_2)}(\theta, \phi)$. That's it. As simple as that.
 
-> [!IMPORTANT]
-> **Cascade Decay Amplitude:**
-> $$
-> \mathcal{A} = \sum_{\lambda_X} H_{\lambda_0 \lambda_3 \lambda_X} D^{J_X}_{\lambda_X, \lambda_1 - \lambda_2}(\theta, \phi)
-> $$
-> This is the decay amplitude for a cascade process, where an initial particle decays via an intermediate state $X$ with spin $J_X$. The $H$ factors encapsulate dynamics from interactions (e.g., weak or strong), while the Wigner D-function handles the rotational transformation to align quantization axes with decay directions.
->
-> **Aligned Kinematics Amplitude:**
-> $$
-> \mathcal{A}_{\text{aligned}} = H_{\lambda_0 \lambda_3 (\lambda_0 + \lambda_3)} D^{J_X}_{(\lambda_0 + \lambda_3), (\lambda_1 - \lambda_2)}(\theta, \phi)
-> $$
-> This is the amplitude in aligned kinematics ($\phi = 0, \theta = 0$), where rotations simplify due to quantization along the z-axis. It constrains intermediate spin projections via $\lambda_X = \lambda_0 + \lambda_3$, reducing the summation.
+::: callout-important
+**Cascade Decay Amplitude:**
+$$
+\mathcal{A} = \sum_{\lambda_X} H_{\lambda_0 \lambda_3 \lambda_X} D^{J_X}_{\lambda_X, \lambda_1 - \lambda_2}(\theta, \phi)
+$$
+This is the decay amplitude for a cascade process, where an initial particle decays via an intermediate state $X$ with spin $J_X$. The $H$ factors encapsulate dynamics from interactions (e.g., weak or strong), while the Wigner D-function handles the rotational transformation to align quantization axes with decay directions.
+
+**Aligned Kinematics Amplitude:**
+$$
+\mathcal{A}_{\text{aligned}} = H_{\lambda_0 \lambda_3 (\lambda_0 + \lambda_3)} D^{J_X}_{(\lambda_0 + \lambda_3), (\lambda_1 - \lambda_2)}(\theta, \phi)
+$$
+This is the amplitude in aligned kinematics ($\phi = 0, \theta = 0$), where rotations simplify due to quantization along the z-axis. It constrains intermediate spin projections via $\lambda_X = \lambda_0 + \lambda_3$, reducing the summation.
+:::
 
 
-![A kinematic representation of the transition from the initial state to the final state in the process where particle 0 decays into particle x and particle 3. The arrows indicate the three-momenta of particles 3 and x, and the fat dot marks particle 0, which is at rest in this frame.](images/fig6.png)
+
+![A kinematic representation of the transition from the initial state to the final state in the process where particle 0 decays into particle x and particle 3. The arrows indicate the three-momenta of particles 3 and x, and the fat dot marks particle 0, which is at rest in this frame.](images/fig6.png){#fig-fg6}
 
 
-![A kinematic configuration for the introduction of the helicity matrix in the transition of particle x decaying into particles 1 and 2. The representation is drawn in the rest frame of particle x, shown as a dot at rest, with arrows representing the three-momenta of particles 1 and 2 in this frame.](images/fig7.png)
+
+
+
+
+![A kinematic configuration for the introduction of the helicity matrix in the transition of particle x decaying into particles 1 and 2. The representation is drawn in the rest frame of particle x, shown as a dot at rest, with arrows representing the three-momenta of particles 1 and 2 in this frame.](images/fig7.png){#fig-fg7}
+
+
 
 
 How many numbers do I need in order to compute? I want to think now about electromagnetic interactions or gravity. How many numbers as an input do I need to predict the angular distribution? It's essentially here, but it misses fundamental components.
@@ -392,13 +436,13 @@ This is what is called partial wave analysis. If you project the differential cr
 
 Then try to learn what's inside the blocks by adjusting them on the data. As a first step, what is often done is to project angular distributions onto polynomials, which will not give you the inside of the blocks directly, but some combination of these conditions. There are questions; this is not straightforward, I believe, and we will have more chance to discuss that.
 
-> [!NOTE]
-> **Differential Decay Rate:**
-> $$
-> \frac{d\Gamma}{d\cos\theta} \propto |\mathcal{A}|^2
-> $$
-> This expresses the differential decay rate with respect to $\cos\theta$, derived from squaring the transition amplitude $\mathcal{A}$. It describes the angular distribution observed in experiments, often expanded in Legendre polynomials for partial wave analysis.
-
+::: callout-note
+**Differential Decay Rate:**
+$$
+\frac{d\Gamma}{d\cos\theta} \propto |\mathcal{A}|^2
+$$
+This expresses the differential decay rate with respect to $\cos\theta$, derived from squaring the transition amplitude $\mathcal{A}$. It describes the angular distribution observed in experiments, often expanded in Legendre polynomials for partial wave analysis.
+:::
 I didn't tell you much about the differences between the canonical state that we introduced at the beginning and the helicity state that we introduced later. We only touched a little on how the state is defined in the rest frame, and hopefully we will get to explore more.
 
 I would like to tell you that this book has the best coverage of this subject: Martin Spearman's *Elementary Particle Theory*, chapter four is fundamental. It's really fun reading because it starts from the Lorentz group. It tells you how to introduce the vectors, how to do a little group theory in a nice way without heavy details.
@@ -417,13 +461,13 @@ From the kinematics, you can figure out masses and perhaps guess what the decay 
 
 I have to leave because I have... You don't want to take it, even? Yeah, no. Yeah. It's a kind of homework. Oh, sorry. I... Okay, you come with me and I'll give it to you from my office. And you guys as well. Thanks a lot for coming and sorry for being slightly late, but will you have time tomorrow at 8am? Leave.
 
-> [!NOTE]
-> For those working on the **angular distributions homework**, remember the key formulas we discussed for cascade decays:
->
-> * **Wigner D-Matrix**: $D^J_{m'm}(\alpha, \theta, \phi) = e^{-im'\alpha} d^J_{m'm}(\theta) e^{-im\phi}$
-> * **Cascade decay amplitude**: $A_{\lambda_0, \lambda_1, \lambda_2, \lambda_3}(s, \theta) = \sum_{\lambda'_X} H^X_{\lambda_0 \lambda'_X} D^{j_X}_{\lambda'_X \lambda_X}(\theta_X, \phi_X) H^Y_{\lambda_X \lambda_Y} D^{j_Y}_{\lambda_Y \lambda_3}(\theta_Y, \phi_Y)$
-> * **Aligned kinematics simplification**: $A_{\text{aligned}} = H^X_{\lambda_0 \lambda_3} d^{j_X}_{\lambda'_X \lambda_X}(0) H^Y_{\lambda_X \lambda_3}$
+::: callout-note
+For those working on the **angular distributions homework**, remember the key formulas we discussed for cascade decays:
 
+* **Wigner D-Matrix**: $D^J_{m'm}(\alpha, \theta, \phi) = e^{-im'\alpha} d^J_{m'm}(\theta) e^{-im\phi}$
+* **Cascade decay amplitude**: $A_{\lambda_0, \lambda_1, \lambda_2, \lambda_3}(s, \theta) = \sum_{\lambda'_X} H^X_{\lambda_0 \lambda'_X} D^{j_X}_{\lambda'_X \lambda_X}(\theta_X, \phi_X) H^Y_{\lambda_X \lambda_Y} D^{j_Y}_{\lambda_Y \lambda_3}(\theta_Y, \phi_Y)$
+* **Aligned kinematics simplification**: $A_{\text{aligned}} = H^X_{\lambda_0 \lambda_3} d^{j_X}_{\lambda'_X \lambda_X}(0) H^Y_{\lambda_X \lambda_3}$
+:::
 
 I'll be available tomorrow at 8am if you need help with the **Wigner rotation matrices** or the **three-body decay phase space** calculations. The phase space element for three-body decay is:
 
@@ -431,5 +475,5 @@ $$
 d\Phi_3 = \frac{1}{(8\pi)^2 2s} \int dm_{23}^2 dm_{24}^2
 $$
 
-This is particularly important for understanding how the **angular distributions** integrate over the available phase space in particle decays. ![A sketch illustrating the recursive relation when computing the phase-space expression. This is not a dynamic assumption but a mathematical trick that rewrites the full three-body phase-space through lower-dimensional phase-space elements and the two-body phase-space, for which the expression is simple.    ](images/fig2.png)
+This is particularly important for understanding how the **angular distributions** integrate over the available phase space in particle decays. Refer to @fig-fg2
 
