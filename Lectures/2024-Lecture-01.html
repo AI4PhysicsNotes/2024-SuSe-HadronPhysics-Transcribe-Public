@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.554">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="">
+<meta name="dcterms.date" content="2024-01-01">
+
+<title>(2024) Lecture 1</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div id="quarto-search-results"></div>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#foundations-of-hadron-physics" id="toc-foundations-of-hadron-physics" class="nav-link active" data-scroll-target="#foundations-of-hadron-physics"><span class="header-section-number">0.0.1</span> Foundations of Hadron Physics</a></li>
+  <li><a href="#lecture-1-introduction-to-hadron-physics" id="toc-lecture-1-introduction-to-hadron-physics" class="nav-link" data-scroll-target="#lecture-1-introduction-to-hadron-physics"><span class="header-section-number">1</span> Lecture 1: Introduction to Hadron Physics</a>
+  <ul class="collapse">
+  <li><a href="#course-introduction-and-structure" id="toc-course-introduction-and-structure" class="nav-link" data-scroll-target="#course-introduction-and-structure"><span class="header-section-number">1.1</span> Course Introduction and Structure</a></li>
+  <li><a href="#cosmic-timeline-and-scales" id="toc-cosmic-timeline-and-scales" class="nav-link" data-scroll-target="#cosmic-timeline-and-scales"><span class="header-section-number">1.2</span> Cosmic Timeline and Scales</a></li>
+  <li><a href="#atomic-structure-and-scales" id="toc-atomic-structure-and-scales" class="nav-link" data-scroll-target="#atomic-structure-and-scales"><span class="header-section-number">1.3</span> Atomic Structure and Scales</a></li>
+  <li><a href="#standard-model-overview" id="toc-standard-model-overview" class="nav-link" data-scroll-target="#standard-model-overview"><span class="header-section-number">1.4</span> Standard Model Overview</a>
+  <ul class="collapse">
+  <li><a href="#indices-and-gauge-symmetry-in-lagrangian-construction" id="toc-indices-and-gauge-symmetry-in-lagrangian-construction" class="nav-link" data-scroll-target="#indices-and-gauge-symmetry-in-lagrangian-construction"><span class="header-section-number">1.4.1</span> Indices and Gauge Symmetry in Lagrangian Construction</a></li>
+  <li><a href="#group-theory-and-confinement-in-qcd" id="toc-group-theory-and-confinement-in-qcd" class="nav-link" data-scroll-target="#group-theory-and-confinement-in-qcd"><span class="header-section-number">1.4.2</span> Group Theory and Confinement in QCD</a></li>
+  <li><a href="#request-for-lecture-transcript" id="toc-request-for-lecture-transcript" class="nav-link" data-scroll-target="#request-for-lecture-transcript"><span class="header-section-number">1.4.3</span> Request for Lecture Transcript</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">(2024) Lecture 1</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">January 1, 2024</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><strong>Presenter</strong>: Mikhail Mikhasenko</p>
+<p><strong>Note Taker</strong>: Ilya Segal</p>
+<section id="foundations-of-hadron-physics" class="level3" data-number="0.0.1">
+<h3 data-number="0.0.1" class="anchored" data-anchor-id="foundations-of-hadron-physics"><span class="header-section-number">0.0.1</span> Foundations of Hadron Physics</h3>
+</section>
+<section id="lecture-1-introduction-to-hadron-physics" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Lecture 1: Introduction to Hadron Physics</h1>
+<section id="course-introduction-and-structure" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="course-introduction-and-structure"><span class="header-section-number">1.1</span> Course Introduction and Structure</h2>
+<p><strong>Lecture one</strong> will be dedicated to the introduction of <strong>hadron physics</strong>. I would like to start by explaining the <strong>origin of hadron physics</strong> and how it appeared at the earlier stages of the universe, where it matters in the course of evolution of our universe. Then we will discuss the <strong>matter composition</strong> and how <strong>quark physics</strong> plays its own role. We will briefly discuss the <strong>Standard Model</strong> and then <strong>equations that describe the motion of fields</strong>. We will talk about the <strong>gauge groups</strong> and move to the important property of the <strong>strong interaction</strong> that is the key to matter formation, known as <strong>confinement</strong>. I will write the <strong>basic equations</strong> that will help you to solve exercises.</p>
+<p>Today is the 8th. This course is being offered for the <strong>second time</strong>. I will be reusing material from the last lecture from last year as well. Last year we made an experiment of <strong>recording the lectures</strong> and transforming them into text. There is a project we are working on to have this more <strong>automatic way</strong>. We are experimenting to gain more material to work with. This iPhone is the recording device. I have recordings from last year. That will benefit you as well, because the idea is that I provide you with the <strong>text of the lecture</strong>. Another thing is that if someone makes <strong>pictures of the board</strong>, it will also be included. We will input this into the language model and have it formally typed. So probably I will ask you to make a picture once we fill the board.</p>
+</section>
+<section id="cosmic-timeline-and-scales" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="cosmic-timeline-and-scales"><span class="header-section-number">1.2</span> Cosmic Timeline and Scales</h2>
+<p>It is good to start the lecture course by establishing the <strong>timeline for the universe</strong> and the numbers for different epochs and stages. They are really hard to imagine—either <strong>very small or very large</strong>. That is why we need this on a <strong>human scale</strong> first. The number where we are now is <strong>14 billion years</strong>, which is what we believe is the <strong>age of the universe</strong>.</p>
+<p>Starting from the <strong>Big Bang</strong> there will be many points. To have a human scale, consider an exercise where a <strong>clap represents the Big Bang</strong>. The sound comes to different rows at different times. If the clap was a Big Bang from that moment, the universe started evolving. By the time when the sound came to you, most of the stages had already passed. <strong>Hadron physics</strong> is actually around this time.</p>
+<p>Key time scales in early universe evolution:</p>
+<ul>
+<li><strong>10⁻⁶ seconds</strong>: Matter production begins</li>
+<li><strong>10⁻¹² seconds</strong>: Electroweak scale passed, Planck scale passed</li>
+<li><strong>1 second</strong>: Nuclear synthesis starts</li>
+</ul>
+<p>We need <span class="math inline">10^{-6}</span>, <span class="math inline">10^{-12}</span>, <span class="math inline">10^{-12}</span>, <span class="math inline">10^{-6}</span>. At about <strong>one second</strong> at the beginning, <strong>matter is produced</strong>. We do not know what kind of matter is there, but we assume that the <strong>structures started forming already</strong>. The <strong>seeds of the structure</strong> were already produced during <strong>inflation</strong>, inflation of the space and time. We have little idea about what is going on here.</p>
+<p>We will advance the time to <span class="math inline">10^{-12}</span>, where already the <strong>electroweak scale</strong> is passed. The <strong>Planck scale</strong> is passed. The <strong>Higgs potential</strong> developed its minimum, the universe collapsed to the lower second minimum of the Higgs potential, and we arrive at <span class="math inline">10^{-12}</span>, where the matter itself is the equivalent <strong>plasma</strong>.</p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>The <strong>quark-gluon plasma (QGP)</strong> is a state of matter where quarks and gluons are not confined within hadrons but exist freely in a hot, dense soup.</p>
+</div>
+</div>
+</div>
+<p>The dots here are <strong>quarks</strong>. They are constituents of the matter. The fields that operate in this space are <strong>gluons</strong>. With this abbreviation, <strong>QGP</strong>, we refer to <strong>quark gluon plasma</strong>. There is no matter as we know it. It is just a <strong>soup</strong> in which fields are acting. The <strong>equation of motion</strong> at high temperature in place around <span class="math inline">10^{-6}</span>, this soup starts evolving into structure. In the interval somewhere here you have got the <strong>hadronization process</strong>.</p>
+<p>When the sound came to you, what happened with our universe is that it already has <strong>elementary matter blocks</strong>, which are <strong>mesons and baryons</strong>. Quarks are now <strong>confined</strong> and gluon fields are almost entirely sitting inside of these objects. Essentially that is all we need from this picture. What happens further is another <strong>14 billion years of evolution</strong>.</p>
+<p>Somewhere here mark <strong>one second</strong>, which is a good mark, where the <strong>nuclear synthesis</strong> starts. Another visually pleasant indication is when <strong>radiation separates from the matter</strong>. Big Bang nuclear synthesis and then radiation separates from the matter is around, does not have a scale. It happens for <strong>400,000 years</strong> after the Big Bang. We have got <strong>pions and baryons</strong>.</p>
+<p>For the rest of the semester, what will happen with our universe, which we just created? There will be some <strong>nuclear synthesis</strong> starting. We will not get to the forming of the <strong>atoms</strong> as we know them with <strong>electron shells</strong> until <strong>400,000 years</strong> after.</p>
+</section>
+<section id="atomic-structure-and-scales" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="atomic-structure-and-scales"><span class="header-section-number">1.3</span> Atomic Structure and Scales</h2>
+<p>So what I have here is the <strong>electron</strong>, right? So atom is what? Let us now go to the second item. What is the <strong>matter</strong>? What is the most abundant element in the crust of the earth? By mass, the most abundant element is <strong>iron</strong> and the most abundant in the crust it seems is <strong>oxygen</strong>, so oxygen.</p>
+<p><strong>Oxygen</strong> is an element with <strong>eight protons</strong> and <strong>eight neutrons</strong> and they form rather <strong>compact objects</strong> in the center of the atom which is the <strong>atomic nucleus</strong> and they are actually packed to each other very, very tightly. What is the size of a single nuclear proton or neutron? It is roughly <strong>one fermi</strong>. So a little gold. And yet you have <strong>16 balls</strong> of one fermi packed together. If you think of this setup, you get roughly the size of the nucleus and this is <strong>6 fermi in diameter</strong>. So we do measure that a <strong>radius of 3 fermi</strong> is what naive calculation tells you. That is why I multiply by two and I get the diameter of six fermi.</p>
+<p>And then <strong>electrons</strong> are another part of the atom and how many of them do we expect? They occupy <strong>shells</strong> of the atom which is <span class="math inline">1s^2 2s^2 2p^4</span>, where <span class="math inline">s</span> stands for <span class="math inline">s</span> orbital circular, <span class="math inline">p</span> stands for the <span class="math inline">p</span> orbital which are what is the shape of it? It is not banana shape, it is what exactly like a <strong>dumbbell shape</strong>. If you remember that there was the energy of electrons versus the angular momentum in the lower one was <span class="math inline">1p</span> was <span class="math inline">2 1s</span> and here. Right, something like that.</p>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>The <strong>Schrödinger equation</strong> for hydrogen-like atoms: <span class="math display">
+\left[-\frac{\hbar^2}{2m}\nabla^2 - \frac{Ze^2}{4\pi\epsilon_0 r}\right]\psi(\mathbf{r}) = E\psi(\mathbf{r})
+</span> This describes the quantum mechanical behavior of electrons in atomic orbitals and determines their wavefunctions and energy levels.</p>
+</div>
+</div>
+</div>
+<p>Then the <strong>wave function</strong> of the electron of <span class="math inline">1s</span> orbital is something like <span class="math inline">e^{-r/a_0}</span> where <span class="math inline">a_0</span> is the <strong>Bohr radius</strong> and you already get the scale. So the <strong>size of the atom</strong> is given by the <strong>Bohr radius</strong>. This you find by solving the <strong>Schrödinger equation</strong> of moving of electron bound in the electromagnetic field of the core.</p>
+<p>For the scale <span class="math inline">a_0</span> is equal to <strong>50 picometers</strong> I think 59, 59,000 femtometers. This is <strong>60 picometers</strong> and this thing would be of order 50,000.</p>
+<p>Wait a second, does not the <strong>charge of the nucleus</strong> affect the radius? Of course it does. In fact it just scales. If you have a <span class="math inline">Z</span> equal to 8 here, then you are going to find <strong>8 times smaller numbers</strong>. However, further electrons from the orbital they get <strong>screened</strong> by the internal electrons, they feel less charge and that is why you have <strong>outer shells</strong>, I mean of roughly several hundred picometers. So I have a clear estimation of 100.</p>
+<p>And again, to imagine that I was comparing this to our <strong>solar system</strong> and let me sketch it here. Here is Earth. If I compare the radius of the nuclei to the orbital shells and compare to the radius of the sun versus the orbital of the Earth I get that I have to scale the sun by a factor of 150 so it makes them smaller and then it matches the distances in the atom roughly. This is so that you have scales in mind, scaled some sizes.</p>
+<p>The <strong>average radius</strong> for <span class="math inline">1s</span> is equal to <span class="math inline">\frac{3}{2}a_0</span>. The average radius for the <span class="math inline">2s</span> is equal to <span class="math inline">6a_0</span> and then the average radius for the <span class="math inline">2p</span>. When this number is roughly taken and divided by <strong>effective charge</strong>, <span class="math inline">2s</span> is <span class="math inline">6a_0</span> and then divide by effective charge of roughly probably it is to be started with eight. We get some screening. So it is probably four, minus two six. So we get roughly <span class="math inline">a_0</span>. That is why <span class="math inline">a_0</span> is taken is giving us the radius and then roughly where the hundred picometers come from.</p>
+</section>
+<section id="standard-model-overview" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="standard-model-overview"><span class="header-section-number">1.4</span> Standard Model Overview</h2>
+<p>All right, <strong>Standard Model</strong> then questions here. <strong>Particle physics</strong> has the most accurate and precise theory that describes unfortunately everything that we have observed so far which is the <strong>Standard Model</strong>. It is so accurate that for <strong>10 years</strong> now we have been trying to find any single deviation by colliding particles at <strong>CERN</strong> and elsewhere from predictions of the Standard Model. So far we do not find it, it is very nice and accurate.</p>
+<p>There are some <strong>problems with the Standard Model</strong> which we will probably touch on at the large scale. When we think of the evolution of the universe, there are also questions of the <strong>naturalness</strong> of the certain couplings, that is certain parameters have been measured and we know accurately in the Standard Model. But it is unclear where they come from, why they are like this.</p>
+<p>Roughly the Standard Model you can think of is <strong>electroweak sector</strong> times <strong>QCD</strong>. The fact that Standard Model is such a good theory and it works so well does not mean that we understand it fully. That particularly refers to the <strong>quantum chromodynamics</strong>. The interaction that describes <strong>strong interaction</strong>. Everything that we talk about in hadron physics course is governed by <strong>strong interaction</strong>.</p>
+<p><strong>Quantum chromodynamics</strong> is the theory of the <strong>strong interaction</strong>, theory of the <strong>color charge</strong>. This is the theory that works very well, for phenomena physics, but it is such a complicated theory that until recently direct predictions from the sort of basic equations of quantum chromodynamics to the real world observables were not possible.</p>
+<p>The reason that we will discuss later in the lecture is the fact that <strong>fundamental interaction</strong> describes interactions between its fundamental building blocks, <strong>quarks and gluons</strong>. After that the theory turns into something different, where there are particles with the <strong>non-trivial structure</strong> and not fundamental particles of the theory starts interacting. Essentially <strong>hadron physics</strong> is not so much about level of the quark and gluons, but what this fundamental theory implies.</p>
+<p>For the form in which the theory manifests itself, the <strong>hadrons</strong> manifest themselves as <strong>color neutral objects</strong>, in the objects where the charge that is carried by the theory is <strong>confined</strong>. We will in this course, in the scope of this course, we will try to understand the relation of the <strong>fundamental part</strong> to sort of <strong>effective interaction</strong> that appears between hadrons.</p>
+<p>Right. To match to what you prefer already to manage this picture of the standard model being two parts, I think it is worth expanding still. The <strong>electroweak sector</strong> and the <strong>leptonic sector</strong> contains only three parts: <strong>electromagnetic interaction</strong>, <strong>weak interaction</strong> and <strong>mass energy sector</strong>.</p>
+<p>Let us quickly probably have a repetition of that. Quickly write down the particles. Write down the particle symbol.</p>
+<p><strong>Standard Model Particle Classification:</strong></p>
+<ul>
+<li><strong>Higgs</strong>: Belongs to the Higgs sector</li>
+<li><strong><span class="math inline">W</span> boson</strong>: From the weak sector</li>
+<li><strong><span class="math inline">Z</span> boson</strong>: Belongs to weak sector</li>
+<li><strong>Photon</strong>: Belongs to electromagnetic sector</li>
+<li><strong>Top quark</strong>: Strong interaction (QCD)</li>
+<li><strong>Charm quark</strong>: Strong interaction (QCD)</li>
+</ul>
+<p>These are the two <strong>force carriers</strong> of the weak sector. So they are carriers of the charge in the weak sector. Which sector would it belong? Weak interaction plus electromagnetic. Electroweak. Then maybe switch finally some particles.</p>
+<p>These are called <strong>quarks</strong>. These are <strong>elementary particles</strong> that make strong interactions so this classification is a little bit vague because we will mostly talk about quarks. Electroweak talks about <strong>leptons</strong>, electromagnetic has <strong>photons</strong> and weak interaction has <span class="math inline">W</span>, <span class="math inline">Z</span> bosons and Higgs as a separate field however, as soon as the particle has a <strong>charge</strong> of certain type it can interact with the carriers of the charge in a certain way so things worth describing what charge?</p>
+<p>Let us write them all down. Think that is most important if you forgot the charge of particle. Should we mention a diagram? Yes, it is actually and well would have been better to put it first but I think we will get to the discussion of that if you forgot the charge just draw that up down, charm strange, top bottom this diagram and then tells you already a lot so the quarks are organized in <strong>generations</strong> first generation, second generation, third generation and they are organized in the two rows of top quarks and bottom quarks and depending on the location the only thing that matters for the charges is the either top row or bottom row so the top row electric charge of <span class="math inline">+2/3</span> plus electric charge of <span class="math inline">-1/3</span> plus <span class="math inline">+2/3</span> minus <span class="math inline">1/3</span> and then the weak charge for the upper one will be <span class="math inline">+1/2</span> weak charge for the lower one will be <span class="math inline">-1/2</span>.</p>
+<p>Let us look at the chart <strong>Quark</strong> it has a charge of <span class="math inline">+2/3</span> and then has the weak charge <span class="math inline">+1/2</span> as soon as a particle has a charge of certain type it can <strong>couple</strong> to the carrier of the charge it actually has to be other sector that is relevant for this charge has to be considered so the quarks are the most <strong>diverse particles</strong> in the standard model because they couple to all charges they couple to the <strong>electromagnetic charge</strong> they couple to the <strong>weak charge</strong> and then also have <strong>strong charge</strong>.</p>
+<p>Let us take <strong>up quark</strong> can it interact with the light that comes out of the window? Yes it can because it has an <strong>electric charge</strong> can it actually interact with the <span class="math inline">Z</span> boson and <span class="math inline">W</span>? Yes it can because it has a <strong>weak charge</strong> and can it interact with the <strong>gluons</strong> carriers of the strong interaction? Yes, because it has a <strong>strong charge</strong> which in fact we called <strong>color</strong> that is because it is colored.</p>
+<p>I do not know if <strong>color charge</strong> and <strong>strong charge</strong> are the same thing. Like electrons could be positive or negative, the color charge could be positive or negative but also we use letters <strong>red, green and blue</strong> for the color charge. In the same way <strong>anti-red, anti-green and anti-blue</strong> are the three charges that the antiparticle can have. You will quickly get used to this language: strong charge as color charge. In the course of the physics consideration we will be talking about the <strong>strong interaction</strong>, which is also <strong>color interaction</strong>.</p>
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Remember that <strong>quarks</strong> are unique in coupling to all fundamental forces: electromagnetic, weak, and strong interactions. Their color charge comes in three types (red, green, blue) and determines their strong interactions via gluon exchange.</p>
+</div>
+</div>
+</div>
+<p>All right. And then perhaps worse, squaring the carriers of the… When we say <strong>interaction</strong>, it is interaction of the object with the <strong>field</strong>. The fields are represented by these <strong>carriers of the force</strong> which are <span class="math inline">W</span> and <span class="math inline">Z</span> for the <strong>weak interaction</strong>, <strong>photons</strong> for <strong>electromagnetic interaction</strong> and <strong>gluons</strong> for the <strong>strong interaction</strong>.</p>
+<p>We are reaching… So we discussed <strong>standard model composition</strong> and we are reaching <strong>unification</strong>. The standard framework in the field theory to describe the fields and the interaction between particles and carriers is the <strong>field theory</strong>, which starts with the <strong>Lagrangian</strong>, an expression that describes interaction in a very condensed line.</p>
+<p>Here I have an example. You might remember the <strong>Lagrangian mechanics</strong> from your first second semester where the entire motion of the system was condensed down to a single equation. This was <strong>Lagrange equation</strong>. There is the <strong>kinetic term</strong>, there is a <strong>potential term</strong>, and once you subtract them you get a certain expression. This expression represents the <strong>energy of the system</strong>. So kinetic minus potential in that case, and this is an <strong>equation of motion</strong>.</p>
+<p>What happens with the system in the next moment, starting from the initial state, is described by an equation that can be derived from the Lagrangian. So what you do, you differentiate the Lagrangian by the dot by the velocity. Then you subtract the term that differentiates Lagrangian by the coordinate. In that case one that is a system where the point can move here and it creates slides without friction. Then also we have a pendulum and there is another mass here. The equation of motion is a <strong>differential equation</strong>. You find this equation by applying a classical classical equivalent of this equation.</p>
+<section id="indices-and-gauge-symmetry-in-lagrangian-construction" class="level3" data-number="1.4.1">
+<h3 data-number="1.4.1" class="anchored" data-anchor-id="indices-and-gauge-symmetry-in-lagrangian-construction"><span class="header-section-number">1.4.1</span> Indices and Gauge Symmetry in Lagrangian Construction</h3>
+<p>I will now clarify this equation, because this is the one we will use for the fields.</p>
+<p>Let me refresh your memory on this.</p>
+<p>I start with <strong>QED (quantum electrodynamics)</strong> — this is how light interacts with anything that has a charge.</p>
+<p>It’s relevant for us for two main reasons:</p>
+<ol type="1">
+<li>Our quarks have charge, so they interact with photons.</li>
+<li>The Lagrangian for QED is much simpler than for QCD (quantum chromodynamics).</li>
+</ol>
+<p>Let’s use this opportunity to understand all the symbols, and then we’ll proceed to QCD later.</p>
+<p>The equation looks complicated, but once you understand the general structure, you don’t need to look it up to write it down.</p>
+<p>The <strong>QED Lagrangian density</strong> is:</p>
+<p><span class="math display"> \mathcal{L}_{\text{QED}} = -\frac{1}{4}F_{\mu\nu}F^{\mu\nu} + \bar{\psi}(i\gamma^\mu D_\mu - m)\psi </span></p>
+<p>What this says is that the Lagrangian is a function of two fundamental fields:</p>
+<ul>
+<li><span class="math inline">\psi</span> — the field of an electron, muon, or quark (anything with charge)</li>
+<li><span class="math inline">A</span> — the photon field</li>
+</ul>
+<p>So, <span class="math inline">\psi</span> is a <strong>fermion field</strong>, and <span class="math inline">A</span> is the <strong>photon field</strong>.</p>
+<p>The Lagrangian is a <strong>scalar quantity</strong> — not a vector or matrix, but a number once evaluated at any point.</p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>A scalar quantity is achieved by contracting indices. Every index introduces a dimension, and you only get a scalar when all indices match. We use <strong>Einstein notation</strong>, where repeated indices imply summation.</p>
+</div>
+</div>
+</div>
+<p>We have <span class="math inline">\mu</span> and <span class="math inline">\nu</span> — these are <strong>Lorentz indices</strong> living in 4 dimensions (3 spatial + 1 time). They must be contracted.</p>
+<p>What I’m skipping in the equation is the summation over <span class="math inline">\mu</span> and <span class="math inline">\nu</span> — they each appear twice.</p>
+<p>Now, <span class="math inline">F_{\mu\nu}</span> is actually a <strong>matrix</strong>. Since <span class="math inline">\mu</span> and <span class="math inline">\nu</span> are 4-dimensional, <span class="math inline">F_{\mu\nu}</span> is a <span class="math inline">4 \times 4</span> matrix.</p>
+<p>You don’t multiply matrices in the usual way here — you multiply them component-wise. Each component of the matrix is multiplied by itself, and then you take the trace or sum all elements.</p>
+<p>The components of the <strong>electromagnetic field strength tensor</strong> are defined as:</p>
+<p><span class="math display"> F_{\mu\nu} = \partial_\mu A_\nu - \partial_\nu A_\mu </span></p>
+<p>Here, <span class="math inline">\partial_\mu</span> is the derivative in time and space — essentially <span class="math inline">\partial/\partial x^\mu</span>.</p>
+<p>If it were just <span class="math inline">\mu</span> contracted with <span class="math inline">\mu</span>, it would be simple. But here, <span class="math inline">\gamma^\mu</span> is also a matrix — in fact, it’s four matrices.</p>
+<p>How do we get a scalar quantity? There’s another set of indices that I suppressed — the <strong>spinor indices</strong>.</p>
+<p>Let me bring them out explicitly: <span class="math inline">\tau</span> and <span class="math inline">\rho</span> — these live in <strong>spin space</strong>.</p>
+<p>Where does this 4-dimensionality come from? It comes from the fact that particles are not scalars — they have <strong>spin</strong>.</p>
+<p>So <span class="math inline">\tau</span> and <span class="math inline">\rho</span> are dimensions of spin. That’s why the fermion field <span class="math inline">\psi</span> has four components.</p>
+<p>These are <strong>matrix indices</strong>, not Lorentz indices. For matrix indices, we don’t distinguish covariant and contravariant — we just sum.</p>
+<p>Something still looks fishy in this Lagrangian because I’m adding matrices.</p>
+<p>We agree that <span class="math inline">\gamma^\mu</span> are four matrices, and <span class="math inline">D_\mu</span> is a vector, so we can contract them to get a matrix here. But then I’m subtracting a scalar — that doesn’t work.</p>
+<p>What’s missing is the <strong>diagonal matrix</strong>.</p>
+<p>Let me clarify: <span class="math inline">\psi</span> is a <strong>four-component spinor</strong>. <span class="math inline">\bar{\psi}</span> is not exactly a four-component spinor — it’s a row vector.</p>
+<p>What we do is take the conjugate transpose (dagger), then multiply by the <span class="math inline">\gamma</span> matrix from the left so it remains a row of numbers. Then you’re ready to contract this with whatever matrix is here.</p>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>The covariant derivative in QED is: <span class="math display"> D_\mu = \partial_\mu - ieA_\mu </span> This ensures local gauge invariance and describes how fermions couple to photons.</p>
+</div>
+</div>
+</div>
+<p>One of the exercises is to see the same structure — what are the objects in terms of dimensions — for the <strong>QCD Lagrangian</strong>, which I’ll write next. Once you do it once, it becomes super clear.</p>
+<p>Let’s do QCD now — it’s not too bad.</p>
+<p>The exercise says: recover the indices, the range, the number of terms. You introduce the blue one because every index is <span class="math inline">N</span>.</p>
+<p>So <span class="math inline">F^a_{\mu\nu}</span> — no, then <span class="math inline">U^a_\nu - D^a_\mu</span> — <span class="math inline">A</span> is contracted, okay, besides gluon.</p>
+<p>That’s a really good exercise to write down. It’s super logical.</p>
+<p>It’s actually the same equation as here, but with more indices because there are more dimensions.</p>
+<p>Let me check if I forgot <span class="math inline">G</span> in front of the term <span class="math inline">g_s</span> — exactly, there’s another <span class="math inline">G</span>.</p>
+<p>Now let’s figure out the dimensionality of the objects quickly.</p>
+<p>There’s this new object <span class="math inline">\lambda</span> that stands here. These are three-dimensional — that’s a good starting point to think about dimensions.</p>
+<p>So <span class="math inline">IJ</span> is here — these are <span class="math inline">2 \times 2</span> matrices. So <span class="math inline">IJ</span> must be here, must be here this one.</p>
+<p>Then they come — you contract over <span class="math inline">A</span>. So this has a <span class="math inline">\mu</span> and also <span class="math inline">ij</span>. These are still…</p>
+<p>Now we go here — <span class="math inline">IJ</span> stays <span class="math inline">I</span>, <span class="math inline">J</span>, <span class="math inline">I</span>, <span class="math inline">J</span>. Here is the trace in these <span class="math inline">IJ</span> dimensions.</p>
+<p>When you commute two matrices, you get a matrix — it’s multiplication minus subtracted multiplication. Then this is…</p>
+<p>Overall, this is a matrix in <span class="math inline">\mu</span> and <span class="math inline">\nu</span> (<span class="math inline">2 \times 2</span>), but also in <span class="math inline">ij</span> where <span class="math inline">I</span> is an index of 3 and <span class="math inline">j</span> is an index of 3.</p>
+<p>I’ll try to make more sense of this equation in a moment. As soon as I think all indices have to be introduced, I really care that you understand what equations are right, at least in terms of mathematical structure.</p>
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>The <strong>QCD Lagrangian density</strong> is: <span class="math display"> \mathcal{L}_{\text{QCD}} = -\frac{1}{2}\mathrm{Tr}(G_{\mu\nu}G^{\mu\nu}) + \sum_f \bar{\psi}_f(i\gamma^\mu D_\mu - m_f)\psi_f </span> And the <strong>QCD field strength tensor</strong> is: <span class="math display"> G_{\mu\nu}^a = \partial_\mu A_\nu^a - \partial_\nu A_\mu^a + g_s f^{abc}A_\mu^b A_\nu^c </span> The additional term arises from the non-commutative nature of SU(3), leading to gluon self-interactions.</p>
+</div>
+</div>
+</div>
+<p>Definitely everyone is capable of tracing this. The <span class="math inline">F</span> traces the flavors — <span class="math inline">F</span> numbers: quarks <span class="math inline">U</span>, <span class="math inline">D</span>, <span class="math inline">S</span>, <span class="math inline">C</span>, <span class="math inline">T</span>, <span class="math inline">B</span>. We have six coordinates, so the index <span class="math inline">F</span> goes over all six possibilities.</p>
+<p>What else? Spinors in this case have four dimensions, and now there’s an extra three for color. The index <span class="math inline">I</span> here traces the <strong>color charge</strong>.</p>
+<p>The only thing I don’t track is the spinor indices. For the QED Lagrangian, we agreed there’s something related to the spin projection of the particle — that’s another <span class="math inline">\tau\rho</span> indices. We don’t put it here; otherwise it’s too complicated.</p>
+<p>If you think of this field, it has:</p>
+<ul>
+<li>A flavor (let’s fix to <span class="math inline">U</span> quark)</li>
+<li>A color (let’s fix to red)</li>
+<li>Another four which are spinors (spin projections)</li>
+</ul>
+<p>The last thing to say about this expression is that once you know the Lagrangian, you can get to the <strong>equations of motion</strong> by applying:</p>
+<p><span class="math display"> \frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi)} - \frac{\partial\mathcal{L}}{\partial\phi} = 0 </span></p>
+<p>How clear is this? Let’s see: <span class="math inline">\partial\mathcal{L}/\partial(\text{derivative over field})</span>.</p>
+<p>I think it’s easier to look at this expression where such a partial derivative would be non-zero. For <span class="math inline">\psi</span>, we can do the same for <span class="math inline">A_\mu</span> (the gauge field).</p>
+<p><span class="math inline">\psi</span> only appears in this term. The first derivative for the first term actually equals zero, and the only place where it’s non-zero is when you have <span class="math inline">D_\mu\psi</span>.</p>
+<p><span class="math inline">D</span> has the derivative inside it. If you expand this, you’ll have <span class="math inline">\bar{\psi}\gamma^\mu D_\mu\psi</span>. When you differentiate, <span class="math inline">\bar{\psi}</span> remains, and then <span class="math inline">\partial\mathcal{L}/\partial\psi</span> would be non-zero from the other term here — this term instead of that — and the mass term as well will produce something for the second term.</p>
+<p>That way, you get an equation of motion — differential equations describing how the field evolves in time and space.</p>
+<p>If we apply this to QED, do you know what the equation is called that describes the motion of a fermion?</p>
+<p>This is — remember — what’s the equation? It says it changes, but it doesn’t have a <span class="math inline">\bar{\psi}</span> side; it just has <span class="math inline">\psi</span>.</p>
+<p>Note: <span class="math inline">g</span> plus or minus — minus is the same term as here. I think the <span class="math inline">D_\mu</span> here instead of the short… Yes.</p>
+<p>That would be for the… That’s a good point for the next.</p>
+<p>So the Rancho Kinemic picture — let me ask questions for this point.</p>
+<p>We discussed the Lagrangian and equations of motion. Let’s discuss <strong>gauge transformation</strong> and <strong>gauge symmetry</strong> — an extremely important concept in field theory.</p>
+<p>We’ll only touch on this briefly since we’re not doing full field theory, but it’s really important — you should know where legs grow from.</p>
+<p>Something very familiar from quantum mechanics is the <strong>phase ambiguity</strong> of the wave function. We can update the phase, and the absolute square of the wave function won’t change because you multiply <span class="math inline">\psi</span> to <span class="math inline">\psi^\dagger</span> and the phase drops out — that’s fine.</p>
+<p>First, we acknowledge that this should be a symmetry of our theory. This should be allowed — to make this gauge, to make this phase transformation.</p>
+<p>It’s kind of by definition, so this overall phase you don’t even have to think about.</p>
+<p>The problem appears when you demand your theory to be invariant under changes of phase at <strong>all possible spacetime points</strong> simultaneously with <strong>different phases</strong>.</p>
+<p>What if I want to adjust my wave function at every space point? Why is this a problem?</p>
+<p>Because in our equation of motion, in our Lagrangian — let me just write the Dirac part:</p>
+<p>There’s <span class="math inline">\bar{\psi}D_\mu\gamma^\mu\psi</span> and the same…</p>
+<p>What happens is that here I have a term <span class="math inline">\partial_\mu\psi</span>, and this term is going to become <span class="math inline">\partial_\mu\psi'</span> which is <span class="math inline">\partial_\mu</span> of <span class="math inline">e^{i\alpha(x)}\psi</span>.</p>
+<p>Let me take the derivative:</p>
+<p><span class="math display"> \partial_\mu(e^{i\alpha(x)}\psi) = e^{i\alpha(x)}\partial_\mu\psi + i(\partial_\mu\alpha)e^{i\alpha(x)}\psi </span></p>
+<p>I simply apply it to the second term <span class="math inline">\partial_\mu\psi</span>. When I apply it to the first term, I get <span class="math inline">\partial_\mu</span> acting on the exponent. The exponent stays, but then I have to take the derivative of the exponent — so there’s an extra derivative term.</p>
+<p>What happens? Indeed, the same equation won’t hold any longer for <span class="math inline">\psi'</span>. It does not transform to the same equation because the derivative yields another term with <span class="math inline">\partial_\mu\alpha</span>.</p>
+<p>In fact, it means that <strong>local gauge transformation</strong> is not a symmetry of the free Lagrangian of the free-moving Dirac particle.</p>
+<p>You cannot adjust phase independently at different points for a free particle.</p>
+<p>In simple words, this means the theory is <strong>incomplete</strong>. It only becomes complete if you consider radiation, photons, and charged particles together.</p>
+<p>The way — once you look at the full Lagrangian — I think I get a minus here. That’s an exercise you do in a field theory course.</p>
+<p>In the first lecture, you update simultaneously the phase of the field <span class="math inline">\psi</span> and the electromagnetic field:</p>
+<p><span class="math display"> \psi(x) \rightarrow \psi'(x) = e^{i\alpha(x)}\psi(x) </span> <span class="math display"> A_\mu(x) \rightarrow A'_\mu(x) = A_\mu(x) - \frac{1}{e}\partial_\mu\alpha(x) </span></p>
+<p>Then you see that the additional term that appears in the covariant derivative — the additional term here — will cancel exactly the one you get from the phase.</p>
+<p>Then the Lagrangian stays the same with the new updated field <span class="math inline">\psi</span> and new updated field <span class="math inline">A</span>.</p>
+<p>This fact led us to this consideration — led us to the <span class="math inline">D_\mu</span> term, which is worse.</p>
+<p>Actually, writing <span class="math inline">D_\mu</span> — plus or minus — was it plus before or minus? That’s correct.</p>
+<p>Actually, from equations of motion, you can see how different fields are coupled to each other.</p>
+<p>In our pendulum example, we would see how the pendulum affects the movement of the upper marble. Similarly, from equations of motion, we can see that motion of fermion fields is affected by motion of photons, and photons are affected by fermions.</p>
+<p>The way we introduce gauge symmetry tells us exactly how they affect each other — how they interact.</p>
+<p>So <strong>gauge symmetry enforces</strong> a certain way how photons and fermions interact with each other. They have to interact with strength <span class="math inline">g</span>.</p>
+<p>The structure is very simple. Again, this is a scalar quantity. You can figure out — convince yourself — that it’s a scalar quantity.</p>
+<p>I guess it comes from this <span class="math inline">g</span> matrix. <span class="math inline">\gamma</span> being <span class="math inline">4 \times 4</span> and then contracting the stuff. These are contracted. We’ll find…</p>
+<p>That’s important. I think it’s worth writing down.</p>
+<p>But the gauge symmetry tells us how objects interact with each other — that’s very important.</p>
+<p>Now we’ll take this idea and move from QED to QCD.</p>
+<p>Before jumping to QCD, where we have to deal with the wave function in three dimensions, let’s consider the wave function in the space of two coordinates.</p>
+<p>That’s the case for the <strong>weak interaction</strong>.</p>
+<p>For weak interaction, you have up components and down components. Remember how the weak charge for quarks was <span class="math inline">+1/2</span> or <span class="math inline">-1/2</span> — the same range.</p>
+<p>Here you have an up field and down field. Remember, it’s still a fermion, so they have hidden four spinor components — we don’t talk about that.</p>
+<p>But in that case, the transformation that updates the phase is somewhat more general.</p>
+<p>What we want is that the update that happens here does not change the observable. Our observable will be <span class="math inline">\psi^\dagger\psi</span>.</p>
+<p><span class="math inline">g</span> or <span class="math inline">g</span> the matrix that updates the field — <span class="math inline">\psi</span> is the <span class="math inline">2 \times 2</span> matrix, and it’s <strong>unitary</strong> because observables should not change.</p>
+<p>In this case, we’re dealing with transformations that are unitary, described by unitary matrices that span the class of what’s called a <strong>group</strong> — specifically <span class="math inline">U(2)</span>.</p>
+<p>We’ll also fix the determinant of this matrix to be 1, and then this <span class="math inline">S</span> comes from… So for all matrices that have determinant equal to 1 and are unitary, they can be represented as an exponent.</p>
+<p>Who has seen the exponent of a matrix before? So if you saw — what is this? Can you tell me what should I write here and then <span class="math inline">V</span>? Well, this is more complicated.</p>
+<p>As soon as I put here one, it gets a little bit… We solved it last year, right? I think it’s either 1 or <span class="math inline">1 - E</span> something. So <span class="math inline">e</span> to 1, 1, 10 gets more complicated.</p>
+</section>
+<section id="group-theory-and-confinement-in-qcd" class="level3" data-number="1.4.2">
+<h3 data-number="1.4.2" class="anchored" data-anchor-id="group-theory-and-confinement-in-qcd"><span class="header-section-number">1.4.2</span> Group Theory and Confinement in QCD</h3>
+<p>Exactly right. So the approach is to take the exponent of this expression and then perform matrix multiplication. Here, this term is certainly not zero, and in fact, I’m not entirely sure about it anyway — but you understand what I’m referring to.</p>
+<p>This is the <strong>matrix exponential</strong>, and you can represent any element of the SU(2) group using it:</p>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Any element of the SU(2) group can be expressed as <span class="math display"> U = \exp(i \alpha_a \sigma_a) </span> where <span class="math inline">\sigma_a</span> are the Pauli matrices, and <span class="math inline">\alpha_a</span> are real parameters.</p>
+</div>
+</div>
+</div>
+<p>Here, we are working with a <span class="math inline">2 \times 2</span> matrix with zero trace. The determinant condition for special unitary groups implies:</p>
+<p><span class="math display"> \det(U) = 1 \Rightarrow \operatorname{tr}(\alpha) = 0 </span></p>
+<p>In fact, only three matrices span the entire basis of such traceless Hermitian matrices — the <strong>Pauli matrices</strong>. These are called the <strong>generators</strong> of the group because they generate any group element.</p>
+<p>Once we identify these three generators, we can take any three real numbers <span class="math inline">\alpha_1, \alpha_2, \alpha_3</span>, compute the exponential, and obtain an element that spans the entire SU(2) group. The generator matrices are fixed; you just input the three numbers into a routine (e.g., in Python).</p>
+<p><strong>Why do we fix the determinant to 1?</strong> Because we are working with SU(2). In general, U(2) = U(1) × SU(2), where U(1) corresponds to a scalar phase and SU(2) to a non-trivial matrix part. The scalar phase behaves similarly to the 2D case, but the matrix part introduces interesting structure.</p>
+<p>We fix the determinant because SU(2) is one of the standard groups — well-understood and widely used. If we considered U(2) instead, we would have more generators and greater complexity. SU(2) is a primary elementary group: we know its number of generators, matrix representations, and properties — making it a nice object to work with.</p>
+<p>This factorization approach generalizes. For example:</p>
+<ul>
+<li>U(3) = U(1) × SU(3)</li>
+<li>We factor out the phase, and what remains is SU(3), which deals with the global update of the wave function components.</li>
+</ul>
+<p>This is exactly what appears in <strong>quantum chromodynamics (QCD)</strong>. When dealing with color charge, we have three components — red, blue, and green — and transformations are described by <span class="math inline">3 \times 3</span> matrices with an overall phase. That’s not too complicated; we’ve discussed this before.</p>
+<p>The non-trivial part involves updating fields via <span class="math inline">3 \times 3</span> matrices with determinant equal to 1. Again, we relate this to the matrix exponential, where the exponent must be traceless.</p>
+<p>The basis of traceless matrices in three dimensions satisfies certain anti-commutation properties. If we look at the basis:</p>
+<ul>
+<li>In two dimensions (traceless matrices) → 3 generators</li>
+<li>In three dimensions → 8 generators</li>
+</ul>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>For SU(N) groups, the number of independent generators is <span class="math display"> N^2 - 1 </span> This counts the gauge bosons in the corresponding gauge theory.</p>
+</div>
+</div>
+</div>
+<p>The number of generators is related to the number of charge carriers in the field. In fact, we identify each generator matrix with the action of the field, as they appear in the <strong>interaction term</strong>.</p>
+<p>Every time we attach the field <span class="math inline">\psi</span> and the interaction field <span class="math inline">A</span>, they come together with the generator matrix. To connect this back: recall that this discussion originated from computing derivatives and identifying an extra derivative for the phase. This led to introducing an extended derivative of the field — an interaction term that appears in Feynman diagrams.</p>
+<p>When we move to higher dimensions, the same derivative computation will involve the appropriate matrix. So, for SU(2), <span class="math inline">\alpha</span> is <span class="math inline">2 \times 2</span>, and it enters here as another matrix. The generator matrices — <span class="math inline">\sigma</span> for SU(2), <span class="math inline">\lambda</span> for SU(3) — penetrate into the <strong>interaction vertex</strong>.</p>
+<p>Thus:</p>
+<ul>
+<li>For SU(2): 3 generators → 3 charge carriers: <span class="math inline">Z</span>, <span class="math inline">W^+</span>, <span class="math inline">W^-</span></li>
+<li>For SU(3): 8 generators → 8 gluons</li>
+</ul>
+<p>Unfortunately, we lack the imagination to name all eight gluons individually. They are identified by their matrices.</p>
+<p>In weak interactions, one matrix is diagonal in the space and corresponds roughly to the <span class="math inline">Z</span> boson. Similarly, in the gluon field, some are diagonal, and we assign hypercharge to states; others act like <span class="math inline">W^\pm</span>.</p>
+<p>You will see the same matrices in homework exercises. Think of them as eight different gluons — you can name them, and they act differently on the field. They appear in interaction vertices depending on the gluon flavor interacting with the quark. This is driven by Pauli-like matrices, making it a valuable exercise to study this interaction term.</p>
+<p>How does this become a skewer? How to contract color charge is a deep question.</p>
+<p>Now, let’s briefly discuss <strong>confinement</strong>, and then we’ll move to basic equations.</p>
+<p><strong>Confinement</strong> is a property of the theory where the strong interaction strength <strong>grows</strong> with distance. For electrons and positrons, the interaction decreases with distance, but for quarks, it’s the opposite: the strong interaction governing color charge <strong>increases</strong> as you pull objects apart. This confines quarks to small scales.</p>
+<p>The only way to experience strong interaction is to zoom in to the smallest objects: <strong>mesons</strong> and <strong>baryons</strong>.</p>
+<ul>
+<li>A <strong>meson</strong> is a quark-antiquark pair.</li>
+<li>A <strong>baryon</strong> consists of three quarks.</li>
+</ul>
+<p><strong>Confined</strong> means that strong interaction exists only inside these hadronic “bubbles.” Outside, there is no strong interaction. If you try to pull a quark out with huge force, eventually the system divides, and new color-neutral confined objects form.</p>
+<p><strong>Color neutral</strong> means having zero net color charge with respect to strong interaction. If a particle carries color charge, gluons interact with it, and it is not confined. Thus, matter forms into small, color-neutral bubbles where strong interactions are active inside and inactive outside.</p>
+<p>I’m not deriving this here — it’s a postulated fact of the theory, supported by experimental evidence. Confinement plays a vital role in binding and structuring matter as we know it.</p>
+<p>However, looking at the Lagrangian, confinement is not immediately obvious:</p>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>The complete QCD Lagrangian is: <span class="math display"> \mathcal{L}_{\text{QCD}} = -\frac{1}{2}\mathrm{Tr}(G_{\mu\nu}G^{\mu\nu}) + \bar{\psi}(i\gamma^\mu D_\mu - m)\psi </span> with the gluon field strength tensor: <span class="math display"> G_{\mu\nu}^a = \partial_\mu A_\nu^a - \partial_\nu A_\mu^a + g_s f^{abc} A_\mu^b A_\nu^c </span></p>
+</div>
+</div>
+</div>
+<p>Here, <span class="math inline">G_{\mu\nu}</span> includes terms like <span class="math inline">G_\nu G_\nu - G_\nu G_\nu + f^{abc} A_\mu^b A_\nu^c</span>, leading to <strong>3-gluon</strong> and <strong>4-gluon</strong> interaction vertices. This <strong>gluon self-interaction</strong> is an indication of confinement — though not a proof.</p>
+<p>Various field theories exhibit confinement; others do not. Confinement remains one of the unsolved problems in theoretical physics — there’s even a prize waiting for someone who can explain it fully.</p>
+<p>Now, consider the <strong>running coupling</strong> in QCD. The strong interaction strength <span class="math inline">\alpha_s</span> depends on the momentum scale <span class="math inline">Q</span> at which you probe the hadron.</p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>The QCD running coupling behaves as: <span class="math display"> \alpha_s(Q) \sim \frac{1}{\ln(Q/\Lambda_{\text{QCD}})} </span></p>
+</div>
+</div>
+</div>
+<ul>
+<li>At <strong>very high <span class="math inline">Q</span></strong>: we enter <strong>asymptotic freedom</strong> — coupling is small.</li>
+<li>At <strong>low <span class="math inline">Q</span></strong> (around GeV or below): we are in the <strong>confinement regime</strong>.</li>
+</ul>
+<p>Hadrons live in the low-<span class="math inline">Q</span> region, where the interaction is very strong. When quarks exchange gluons at small momentum transfer (below 1 GeV), the coupling becomes large, and perturbation theory breaks down.</p>
+<p>Asymptotic freedom, on the other hand, allows perturbative calculations at high energies. We will discuss asymptotic freedom in more detail later.</p>
+</section>
+<section id="request-for-lecture-transcript" class="level3" data-number="1.4.3">
+<h3 data-number="1.4.3" class="anchored" data-anchor-id="request-for-lecture-transcript"><span class="header-section-number">1.4.3</span> Request for Lecture Transcript</h3>
+<hr>
+<p>I notice you haven’t provided the actual nuclear physics lecture transcript that needs to be polished.</p>
+<p>Could you please share the specific raw, unedited speech transcription from the lecture that requires editing?</p>
+<p>Once you provide the specific text, I’ll apply <strong>minimal corrections</strong> while preserving all:</p>
+<ul>
+<li><strong>Technical content</strong> and explanations</li>
+<li><strong>Analogies</strong> and teaching examples</li>
+<li><strong>Original structure</strong> and flow</li>
+<li><strong>Meaningful content</strong> in its entirety</li>
+</ul>
+<p>The editing will focus on removing only:</p>
+<ul>
+<li><strong>Hesitations</strong> and false starts</li>
+<li><strong>Repetitive phrasing</strong></li>
+<li>Correcting single <strong>misspoken words</strong></li>
+<li>Completing <strong>partial sentences</strong></li>
+</ul>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Common nuclear physics formulas that frequently appear in lectures include:</p>
+<ul>
+<li><strong>Nuclear Binding Energy</strong>: <span class="math inline">B(Z,A) = [Zm_p + (A-Z)m_n - m_{\text{nucleus}}]c^2</span> - calculates the energy required to disassemble a nucleus</li>
+<li><strong>Semi-Empirical Mass Formula</strong>: <span class="math inline">B(Z,A) = a_V A - a_S A^{2/3} - a_C \frac{Z(Z-1)}{A^{1/3}} - a_A \frac{(A-2Z)^2}{A} + \delta(A,Z)</span> - approximates binding energy accounting for volume, surface, Coulomb, asymmetry, and pairing effects</li>
+<li><strong>Radioactive Decay Law</strong>: <span class="math inline">N(t) = N_0 e^{-\lambda t}</span> - describes exponential decay of radioactive nuclei</li>
+</ul>
+<p>When you provide the actual lecture transcript, I’ll integrate the specific formulas being discussed directly into the relevant content sections.</p>
+</div>
+</div>
+</div>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
