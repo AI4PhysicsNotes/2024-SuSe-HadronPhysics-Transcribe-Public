@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.24">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Mikhail Mikhasenko">
+
+<title>lecture-02 – Hadron Physics</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-a6e161b2431e1f94a14e0f5d32135a3c.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-e93ed9f6d3b522571f2d845392b64587.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="quarto-light">
+
+<div id="quarto-search-results"></div>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#symmetries-in-hadron-physics-and-estimating-hadronic-cross-sections" id="toc-symmetries-in-hadron-physics-and-estimating-hadronic-cross-sections" class="nav-link active" data-scroll-target="#symmetries-in-hadron-physics-and-estimating-hadronic-cross-sections"><span class="header-section-number">0.1</span> Symmetries in Hadron Physics and Estimating Hadronic Cross Sections</a></li>
+  <li><a href="#charge-definitions-in-qed-and-qcd-and-introduction-to-su2-group-theory" id="toc-charge-definitions-in-qed-and-qcd-and-introduction-to-su2-group-theory" class="nav-link" data-scroll-target="#charge-definitions-in-qed-and-qcd-and-introduction-to-su2-group-theory"><span class="header-section-number">0.2</span> Charge Definitions in QED and QCD, and Introduction to SU(2) Group Theory</a></li>
+  <li><a href="#symmetries-of-the-qcd-lagrangian-and-quark-mass-hierarchy" id="toc-symmetries-of-the-qcd-lagrangian-and-quark-mass-hierarchy" class="nav-link" data-scroll-target="#symmetries-of-the-qcd-lagrangian-and-quark-mass-hierarchy"><span class="header-section-number">0.3</span> Symmetries of the QCD Lagrangian and Quark Mass Hierarchy</a></li>
+  <li><a href="#combining-isospin-and-spin-representations-in-su2" id="toc-combining-isospin-and-spin-representations-in-su2" class="nav-link" data-scroll-target="#combining-isospin-and-spin-representations-in-su2"><span class="header-section-number">0.4</span> Combining Isospin and Spin Representations in SU(2)</a></li>
+  <li><a href="#parity-charge-conjugation-and-composite-systems-in-particle-states" id="toc-parity-charge-conjugation-and-composite-systems-in-particle-states" class="nav-link" data-scroll-target="#parity-charge-conjugation-and-composite-systems-in-particle-states"><span class="header-section-number">0.5</span> Parity, Charge Conjugation, and Composite Systems in Particle States</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Mikhail Mikhasenko </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="symmetries-in-hadron-physics-and-estimating-hadronic-cross-sections" class="level3" data-number="0.1">
+<h3 data-number="0.1" class="anchored" data-anchor-id="symmetries-in-hadron-physics-and-estimating-hadronic-cross-sections"><span class="header-section-number">0.1</span> Symmetries in Hadron Physics and Estimating Hadronic Cross Sections</h3>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Recap of Previous Lecture</strong><br>
+The homework problems last week were deemed too easy, so we’ll <strong>increase the problem level</strong> this week. Some problems recur across courses—like <strong>Clebsch-Gordan coefficients</strong>, which appear in nuclear physics, particle physics, and quantum field theory. This week’s homework will include them, but they should be manageable.</p>
+</div>
+</div>
+</div>
+<hr>
+<p>We’ll explore:</p>
+<ol type="1">
+<li><strong>QCD</strong> with the <strong>SU group</strong> (as previously discussed).<br>
+</li>
+<li>The <strong>phenomenology of the SU flavor group</strong>, including:
+<ul>
+<li><strong>Isospin</strong><br>
+</li>
+<li><strong>SU flavor</strong> by interchanging <em>u/d</em> and squarks.</li>
+</ul></li>
+<li>Connection to the <strong>Lorentz group</strong>, where <strong>SU(2)</strong> is a subgroup responsible for rotations.</li>
+</ol>
+<p>You’ll see how <strong>spin addition</strong> relates to <strong>quark addition inside hadrons</strong>. This builds on <strong>quantum mechanics</strong> material you’ve already seen, and I hope it’s easy to follow.</p>
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>This is a particularly enjoyable section because the <strong>spin algebra</strong> can be derived independently—just isolate yourself from books and the internet, and you can work through it elegantly.</p>
+</div>
+</div>
+</div>
+<hr>
+<p>Let’s start with a question from last lecture:<br>
+<strong>How would you estimate the typical cross section of hadronic reactions?</strong></p>
+<p>The <strong>exact approach</strong> involves:<br>
+<span class="math display">\sigma = \frac{1}{F} \int |\mathcal{M}|^2 \, d\Phi</span><br>
+where:</p>
+<ul>
+<li><span class="math inline">\sigma</span> = cross section<br>
+</li>
+<li><span class="math inline">F</span> = flux factor<br>
+</li>
+<li><span class="math inline">\mathcal{M}</span> = matrix element<br>
+</li>
+<li><span class="math inline">d\Phi</span> = phase space differential</li>
+</ul>
+<p>This gives the <strong>exact value</strong> in inverse GeV (convertible to cm²).</p>
+<hr>
+<p>But what’s the <strong>scale</strong>? We’re dealing with <strong>barns</strong> (<span class="math inline">1\,\text{barn} = 10^{-24}\,\text{cm}^2</span>).</p>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Key Insight</strong>: The cross section represents the <strong>effective interaction area</strong>. For a proton (radius ~<span class="math inline">1\,\text{fm} = 10^{-13}\,\text{cm}</span>):<br>
+<span class="math display">\sigma \approx \pi r^2 = \pi (10^{-13}\,\text{cm})^2 \approx 3 \times 10^{-26}\,\text{cm}^2 \approx 30\,\text{mb}</span></p>
+</div>
+</div>
+</div>
+<p>This is the <strong>typical scale</strong> for hadronic reactions. The <strong>strong interaction</strong> is powerful but <strong>short-range</strong>—particles must overlap to interact.</p>
+</section>
+<section id="charge-definitions-in-qed-and-qcd-and-introduction-to-su2-group-theory" class="level3" data-number="0.2">
+<h3 data-number="0.2" class="anchored" data-anchor-id="charge-definitions-in-qed-and-qcd-and-introduction-to-su2-group-theory"><span class="header-section-number">0.2</span> Charge Definitions in QED and QCD, and Introduction to SU(2) Group Theory</h3>
+<p>The second question addressed is how to define charge in <strong>QED</strong> and <strong>QCD</strong>.</p>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>In QED, the <strong>electric charge</strong> is physical and conserved. It corresponds to a symmetry, as per <strong>Noether’s theorem</strong>, which guarantees a conserved current. The charge is defined as the integral of the zero component of this current:<br>
+<span class="math display"> Q = \int d^3x \, J^0 = \int d^3x \, \psi^\dagger \psi. </span></p>
+</div>
+</div>
+</div>
+<p>For a Dirac field, <span class="math inline">\bar{\psi}\psi</span> involves conjugation with <span class="math inline">\gamma^0</span>, yielding <span class="math inline">\psi^\dagger \psi</span>—a positive quantity. This implies that if <span class="math inline">\psi</span> represents an electron, it has a <strong>positive charge</strong>. However, this is a convention:</p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>The observed charge <span class="math inline">Q</span> is matched to <span class="math inline">-e</span> for electrons to align with experimental conventions. The current in QED is:<br>
+<span class="math display"> J^\mu = -e \bar{\psi} \gamma^\mu \psi. </span><br>
+The <span class="math inline">-e</span> ensures consistency with standard definitions, but the <strong>conservation</strong> of the quantity is the key takeaway from field theory.</p>
+</div>
+</div>
+</div>
+<hr>
+<p>The approach in <strong>QCD</strong> is analogous but involves <strong>color indices</strong> and <strong>generators</strong> of <span class="math inline">SU(3)</span>:</p>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>The QCD current for color charge is:<br>
+<span class="math display"> J^\mu_a = \bar{\psi} \gamma^\mu T_a \psi, </span><br>
+where <span class="math inline">T_a</span> are the <strong>Gell-Mann matrices</strong> (generators of <span class="math inline">SU(3)</span>). Unlike QED, quarks have <strong>eight color charges</strong>, corresponding to the gluon probes.</p>
+</div>
+</div>
+</div>
+<p>For example, given a quark field <span class="math inline">\psi_{\text{color}} = (1, 2, i\sqrt{3})</span>, its charge is an <strong>eight-component vector</strong>—each component depends on the gluon used to probe it.</p>
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>This structure arises from <strong>group theory</strong>: QED uses <span class="math inline">U(1)</span>, while QCD uses <span class="math inline">SU(3)</span>. Today, we’ll also discuss <span class="math inline">SU(2)</span>, which shares similar principles.</p>
+</div>
+</div>
+</div>
+<hr>
+<p>The <span class="math inline">SU(2)</span> group is fundamental in particle physics. It is a <strong>special unitary group</strong> of <span class="math inline">2 \times 2</span> matrices with determinant one:</p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>For <span class="math inline">U \in SU(2)</span>, the conditions are:<br>
+<span class="math display"> U U^\dagger = I \quad \text{and} \quad U^\dagger U = I. </span><br>
+The <strong>determinant</strong> is restricted to <span class="math inline">1</span> (the “<span class="math inline">S</span>” in <span class="math inline">SU(2)</span>).</p>
+</div>
+</div>
+</div>
+<ul>
+<li><strong>Inverse</strong>: If <span class="math inline">g \in SU(2)</span>, then <span class="math inline">g^{-1} \in SU(2)</span>.<br>
+</li>
+<li><strong>Closure</strong>: For <span class="math inline">g_1, g_2 \in SU(2)</span>, <span class="math inline">g_1 g_2 \in SU(2)</span>.<br>
+</li>
+<li><strong>Identity</strong>: The identity matrix <span class="math inline">I</span> is included.</li>
+</ul>
+<p>Any <span class="math inline">SU(2)</span> element can be written as:<br>
+<span class="math display"> U = \exp\left(-i \alpha_a \sigma_a / 2\right), </span><br>
+where <span class="math inline">\sigma_a</span> are the <strong>Pauli matrices</strong>:<br>
+<span class="math display"> \sigma_1 = \begin{pmatrix} 0 &amp; 1 \\ 1 &amp; 0 \end{pmatrix}, \quad \sigma_2 = \begin{pmatrix} 0 &amp; -i \\ i &amp; 0 \end{pmatrix}, \quad \sigma_3 = \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; -1 \end{pmatrix}. </span></p>
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>For <strong>nilpotent matrices</strong>, the exponential simplifies. For example:<br>
+<span class="math display"> \exp\begin{pmatrix} 0 &amp; 1 \\ 0 &amp; 0 \end{pmatrix} = I + \begin{pmatrix} 0 &amp; 1 \\ 0 &amp; 0 \end{pmatrix} = \begin{pmatrix} 1 &amp; 1 \\ 0 &amp; 1 \end{pmatrix}. </span></p>
+</div>
+</div>
+</div>
+<hr>
+<p>In quantum mechanics, <strong>spin operators</strong> <span class="math inline">J_i</span> satisfy:<br>
+<span class="math display"> [J_i, J_j] = i \epsilon_{ijk} J_k. </span><br>
+The <strong>raising/lowering operators</strong> are:<br>
+<span class="math display"> J_\pm = J_1 \pm i J_2, </span><br>
+acting on states <span class="math inline">|j, m\rangle</span> as:<br>
+<span class="math display"> J_\pm |j, m\rangle = \sqrt{j(j+1) - m(m \pm 1)} \, |j, m \pm 1\rangle. </span></p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>The eigenvalues are:<br>
+<span class="math display"> J^2 |j, m\rangle = j(j+1) |j, m\rangle, \quad J_3 |j, m\rangle = m |j, m\rangle. </span></p>
+</div>
+</div>
+</div>
+<p>For quark states (e.g., <span class="math inline">\Xi</span> particles), <strong>flavor symmetry</strong> treats <span class="math inline">u</span> and <span class="math inline">d</span> quarks similarly due to nearly equal masses (<span class="math inline">m_u \approx m_d \approx 3 \text{MeV}</span>).</p>
+<div class="callout callout-style-simple callout-warning">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>The <span class="math inline">\Xi_{cc}</span> (with <span class="math inline">ccu</span> or <span class="math inline">ccd</span>) shows a <strong>puzzling mass difference</strong>, violating the expected <span class="math inline">SU(2)</span> symmetry. This remains a <strong>hot topic</strong> in particle physics.</p>
+</div>
+</div>
+</div>
+<hr>
+<p>We’ve covered:</p>
+<ol type="1">
+<li><strong>Charge definitions</strong> in QED and QCD.<br>
+</li>
+<li><strong><span class="math inline">SU(2)</span> group theory</strong> and its generators.<br>
+</li>
+<li><strong>Applications</strong> to spin and flavor symmetry.</li>
+</ol>
+<p>Next, we’ll delve deeper into <strong><span class="math inline">SU(2)</span> representations</strong> and their role in particle physics.</p>
+</section>
+<section id="symmetries-of-the-qcd-lagrangian-and-quark-mass-hierarchy" class="level3" data-number="0.3">
+<h3 data-number="0.3" class="anchored" data-anchor-id="symmetries-of-the-qcd-lagrangian-and-quark-mass-hierarchy"><span class="header-section-number">0.3</span> Symmetries of the QCD Lagrangian and Quark Mass Hierarchy</h3>
+<p>When we speak about the symmetries of the Lagrangian of QCD, we have in mind the Lagrangian itself. It consists of two key terms:</p>
+<ol type="1">
+<li><strong>Gluon term</strong>: Describes the dynamics of the gluon fields.</li>
+<li><strong>Quark term</strong>: The Dirac term, which includes a mass parameter for the quarks.</li>
+</ol>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>The QCD Lagrangian is given by: <span class="math display">\mathcal{L}_{\text{QCD}} = -\frac{1}{4}G^{a}_{\mu u}G^{a\mu u} + \sum_{f}\bar{\psi}_f(i\gamma^\mu D_\mu - m_f)\psi_f</span> where:</p>
+<ul>
+<li><span class="math inline">G^{a}_{\mu u}</span> is the gluon field strength tensor,</li>
+<li><span class="math inline">\psi_f</span> represents quark fields of flavor <span class="math inline">f</span>,</li>
+<li><span class="math inline">m_f</span> are the quark masses,</li>
+<li><span class="math inline">D_\mu</span> is the covariant derivative.</li>
+</ul>
+</div>
+</div>
+</div>
+<hr>
+<p>If the quark masses are <strong>not the same</strong>, the mass term will break the symmetry. For the <strong>u and d quarks</strong>, since their masses are almost identical (<span class="math inline">m_u \approx m_d</span>), the symmetry is <strong>not broken</strong> by the mass terms, and this remains a good symmetry.</p>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>The mass term in the Lagrangian is: <span class="math display">\mathcal{L}_{\text{mass}} = -\sum_{f=u,d,s} m_f \bar{\psi}_f \psi_f</span> When <span class="math inline">m_u \approx m_d</span>, this preserves an approximate <strong>SU(2) isospin symmetry</strong>.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="combining-isospin-and-spin-representations-in-su2" class="level3" data-number="0.4">
+<h3 data-number="0.4" class="anchored" data-anchor-id="combining-isospin-and-spin-representations-in-su2"><span class="header-section-number">0.4</span> Combining Isospin and Spin Representations in SU(2)</h3>
+<p><strong>Group.</strong><br>
+This is so <strong>ud</strong>. Let me sketch this like this: <strong>U to D</strong>. Rotation in the space is a good scene. Then my cascade particle would be in that case, if I consider <strong>U</strong> and <strong>D</strong> to be the same particle as the <strong>SSL</strong> where <strong>L</strong> is the number in the <strong>ISIS spin wave function</strong>. It’s clear that cascade.</p>
+<hr>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>The <strong>cascade particle</strong> is historically named due to its decay pattern. While its original name is difficult to pronounce (except by Greek speakers), it’s universally referred to as “cascade” in particle physics.</p>
+</div>
+</div>
+</div>
+<p>Let me also introduce the language that you might not be familiar with: <strong>Cascade</strong> is the same as this guy. It’s just historically people saw this guy decaying in the cascade of particles. That’s why. And no one can actually pronounce this correctly except Greek people. So if you want to make sure you spell it correctly, call it <strong>cascade</strong>. Everyone calls it <strong>cascade</strong>.</p>
+<p>The <strong>cascade particle</strong> is now a single particle in our consideration with respect to the <strong>strong interaction</strong> and has <strong>ISIS spin wave function</strong>. This is very similar to the <strong>spin</strong>. We again have a <strong>two-dimensional vector space</strong> in which we can act with the group elements.</p>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>The <strong>SU(2) Rotation Operator</strong> for isospin transformations is given by:<br>
+<span class="math display">  
+U = e^{-i \alpha \cdot \mathbf{G}}  
+</span><br>
+where <span class="math inline">\mathbf{G}</span> are the generators of <strong>SU(2)</strong> and <span class="math inline">\alpha</span> are rotation parameters.</p>
+</div>
+</div>
+</div>
+<p>So <strong>U</strong> is equal to <span class="math inline">e^{-i\alpha G}</span>. Then what is the charge of the group of this vector? Take it in right? You put it to the equation for the charge and then we get essentially now it’s clear what the spin stands for.</p>
+<p><strong>Isospin</strong> is the same way as the spin would give <strong>one half</strong> for this and <strong>minus one</strong>. You get it right? Acting well, it’s a <strong>doublet</strong> corresponds to the two components. The dimension of the representation is <strong>2</strong>, it corresponds to the spin or isospin <strong>1/2</strong>. We just counted.</p>
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>The <strong>Isospin Doublet Representation</strong> for <span class="math inline">u</span> and <span class="math inline">d</span> quarks is:<br>
+<span class="math display">  
+\begin{pmatrix} u \\ d \end{pmatrix}, \quad \text{isospin } I = \frac{1}{2}  
+</span></p>
+</div>
+</div>
+</div>
+<p>So if I get a multiplet of <strong>four dimensions</strong>, what would be the isospin? Okay, let’s come back. <strong>Four dimensions</strong> is <strong>three half</strong>. If it’s <strong>95 dimensions</strong>, it’ll be <strong>47</strong>.</p>
+<p>Now you might wonder, wait a second, how do we get more than two? We’ve got two quarks, right? <strong>U</strong> and <strong>D</strong>. How do we get more dimensions if we are not…</p>
+<p>I mentioned here that in grouping mock quarks actually changes the group. We are going to consider a different group. It will be <strong>SU</strong>. We are not talking about <strong>SU</strong>. Now we stick with the <strong>SU</strong> and we only permute two unique quarks.</p>
+<p><strong>How do we get higher representations, higher dimensions, more particles?</strong> Exactly. The next word: <strong>combining particles, combining representations</strong>.</p>
+<hr>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>The <strong>Clebsch-Gordan Series</strong> for combining two spin-<span class="math inline">1/2</span> particles is:<br>
+<span class="math display">  
+\frac{1}{2} \otimes \frac{1}{2} = 0 \oplus 1  
+</span></p>
+</div>
+</div>
+</div>
+<p>The higher dimension of representations appear when I start combining considering particles more than one quark. Because in that case I have to deal with the polling situation. There is one system. There is another system with spin <strong>one half</strong>. But I want to consider them as a system, as a combined system. And I want to characterize the total system by the total either spin or isospin and the projection.</p>
+<p>In that case for <strong>SU</strong>, we are still sitting with the <strong>SU2 group</strong>. You can think of the system as a system of two vectors. The total spin of the system has again constantly. And the total <strong>J</strong> is one of the numbers from…</p>
+<p>Don’t remember that. Just think of the vector you have in one hand, one vector with <strong>J1</strong>, another hand, another vector with <strong>G2</strong>. And you want to obtain some of them in our regular vector space. In our regular vector sense, you want to take one and then you stick the other one right.</p>
+<p>The resulting vector can have different lengths depending on the angle between these two. But there are <strong>minimal and maximal values</strong>. And all values in between are possible, but they have to contain them. Essentially that’s what’s written here.</p>
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>The <strong>General Spin Addition Rule</strong> is:<br>
+<span class="math display">  
+j_1 \otimes j_2 = |j_1 - j_2| \oplus \cdots \oplus (j_1 + j_2)  
+</span><br>
+Example: For <span class="math inline">j_1 = 3</span>, <span class="math inline">j_2 = 2</span>:<br>
+<span class="math display">  
+3 \otimes 2 = 1 \oplus 2 \oplus 3 \oplus 4 \oplus 5  
+</span></p>
+</div>
+</div>
+</div>
+<p>The minimum you obtain by combining in this direction and then maximum combining and all intermediate values are possible. What we have here is combining the <strong>1/2</strong>. Let’s know the notations that we often use. That tells you you combine two vector spaces coming from the cross product to the irreducible representations.</p>
+<p>You combine spin <strong>1/2</strong> and spin <strong>1/2</strong>. The total system can have spin <strong>0</strong> or <strong>1</strong>. Let’s do exactly another example. We combine spin <strong>3</strong> and spin <strong>2</strong>. What do I get? Just anyone output <strong>5</strong> or <strong>55</strong> again? Yes, <strong>5, 4, 3, 1, 2</strong>. Put plus.</p>
+<p>What amazed me is that the dimension on the left and right is the same. Can we count that? This would be common dimensional <strong>3</strong>. Spin <strong>3</strong> is <strong>7</strong>, spin <strong>2</strong> is <strong>5</strong>. Here is <strong>3, 5, 7, 9, 11</strong>. Can someone tell me if it works or not? It might.</p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Dimension Check for Representations</strong>:<br>
+For the combination <span class="math inline">3 \otimes 2</span>:<br>
+<span class="math display">  
+\text{Dim}(3) \times \text{Dim}(2) = 7 \times 5 = 35  
+</span><br>
+<span class="math display">  
+\text{Dim}(1) + \text{Dim}(2) + \text{Dim}(3) + \text{Dim}(4) + \text{Dim}(5) = 3 + 5 + 7 + 9 + 11 = 35  
+</span></p>
+</div>
+</div>
+</div>
+<p>Right, <strong>20, 35</strong> on the left, <strong>35</strong> on the right. Isn’t it amazing? We just, I mean probably formally prove that by counting all intermediate states from one to another. But that tells you the way to check yourself if you want to combine spins and write it with recombinations.</p>
+<p>You can always count dimensions and see what essentially we do when we map this to that. Here we have a vector. The basis in this dimension is the… Let’s say <strong>1, 1</strong>. This is an example of the <strong>7 into 7</strong> and then this is <strong>5</strong>. This is one unit vector in that dimension.</p>
+<p>In that case I have a <strong>35 dimensional vector</strong> which has blocks. The first block is <strong>3, 3</strong> is the second block, <strong>3</strong>. The second block is <strong>5, 7, 9, 11</strong>. So I have blocks. We map this to that.</p>
+<p>Moreover, what group theory tells you is that these blocks did not talk to each other. Once you put this exponent and then consider matrix that acts on these <strong>35 dimensional spaces</strong>, it will rotate different components within the box. They won’t talk to each other. That’s called <strong>representation</strong>.</p>
+<p>For us it’s different sectors that give a total spin. If I have a system with total spin equals to say <strong>three</strong>, there is no rotation that would change the spin to <strong>four</strong>. That’s super clear, right? Under rotations the spin is preserved.</p>
+<p>The implication in mathematics is that there is a representation that has a <strong>block diagonal form</strong> of the interaction where the blocks don’t talk to each other. Now we know how to combine.</p>
+<p>Before doing a few practical combinations, let’s introduce part in <strong>charge conjugation</strong> quickly. I think we are good.</p>
+<hr>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Is it clear that what we discussed about <strong>spin</strong> is the same applied to <strong>isospin</strong>? Often in particle physics you deal with both and one shouldn’t mix them up.</p>
+</div>
+</div>
+</div>
+<p>We deal with <strong>isospin</strong> when you construct the quark wave function. But when you combine particles with spin and want to understand angular dependence, you’re dealing with <strong>spin</strong>. With rotational group, the same algebra, the same methods, everything is the same.</p>
+<p>Just keep in mind whether you’re talking about <strong>flavor SU(2)</strong> or <strong>Lorentz part of the Lorentz Group rotational SU(2)</strong>.</p>
+</section>
+<section id="parity-charge-conjugation-and-composite-systems-in-particle-states" class="level3" data-number="0.5">
+<h3 data-number="0.5" class="anchored" data-anchor-id="parity-charge-conjugation-and-composite-systems-in-particle-states"><span class="header-section-number">0.5</span> Parity, Charge Conjugation, and Composite Systems in Particle States</h3>
+<p><strong>Number 3, 4, 5</strong> in our discussion: the <strong>parity operator</strong> performs space inversion with respect to the origin. Both parity and charge conjugation act on a state and produce another state.</p>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>The <strong>parity operator</strong> <span class="math inline">\mathcal{P}</span> inverts spatial coordinates:<br>
+<span class="math display">\mathcal{P} \psi(\vec{r}) = \eta_P \psi(-\vec{r}), \quad \eta_P = \pm 1</span><br>
+where <span class="math inline">\eta_P</span> is the intrinsic parity eigenvalue.</p>
+</div>
+</div>
+</div>
+<p>The parity answers how the wave function changes when flipped through the origin. Intuitively, flipping a vector through the origin reverses all spatial components. For any particle, you can determine its parity. Acting twice with parity returns the original state, so the eigenvalue is <strong>modulo 1</strong> (conventionally <span class="math inline">\pm 1</span>).</p>
+<hr>
+<p>Charge conjugation flips all charges, converting a particle to its antiparticle.</p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>The <strong>charge conjugation operator</strong> <span class="math inline">\mathcal{C}</span> acts as:<br>
+<span class="math display">\mathcal{C} |\psi\rangle = \eta_C |\overline{\psi}\rangle, \quad \eta_C = \pm 1</span><br>
+For neutral eigenstates (e.g., <span class="math inline">\pi^0</span>), <span class="math inline">\eta_C</span> is defined, but charged particles (e.g., <span class="math inline">\pi^+</span>) are not eigenstates since <span class="math inline">\mathcal{C} \pi^+ = \pi^-</span>.</p>
+</div>
+</div>
+</div>
+<p>The <strong>prime notation</strong> here indicates the antiparticle. By convention, charge conjugation is defined for the neutral member of a multiplet (e.g., <span class="math inline">\pi^0</span>). The Particle Data Group lists <span class="math inline">J^{PC}</span> (spin, parity, charge conjugation) for all particles. For <span class="math inline">\pi^0</span>, <span class="math inline">J^{PC} = 0^{-+}</span>; for <span class="math inline">\pi^+</span>, charge conjugation is assigned by analogy to <span class="math inline">\pi^0</span>.</p>
+<hr>
+<p>To find <span class="math inline">J^{PC}</span> for a composite system:</p>
+<ol type="1">
+<li><strong>Total <span class="math inline">J</span></strong>: Use spin algebra.<br>
+</li>
+<li><strong>Parity</strong>: Multiplicative, including <span class="math inline">(-1)^L</span> for orbital angular momentum <span class="math inline">L</span>.<br>
+</li>
+<li><strong>Charge Conjugation</strong>: Multiplicative (for neutral systems, <span class="math inline">C = (-1)^{L+S}</span>).</li>
+</ol>
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Parity of a composite system</strong>:<br>
+<span class="math display">P = \eta_{P1} \eta_{P2} (-1)^L</span><br>
+where <span class="math inline">\eta_{P1}, \eta_{P2}</span> are intrinsic parities.</p>
+</div>
+</div>
+</div>
+<p><strong>Example</strong>: For <span class="math inline">L = 0</span>, combine spins multiplicatively (e.g., <span class="math inline">1/2 + 0 = 1/2</span>). For <span class="math inline">L = 1</span>, add one unit of angular momentum, with parity <span class="math inline">(-1)^{L+1}</span>.</p>
+<hr>
+<p>In the quark model, heavy quarks (e.g., charm) are treated without gluons. The <span class="math inline">u</span> and <span class="math inline">d</span> quarks form isospin multiplets:</p>
+<ul>
+<li><strong>Isospin 1</strong>: Symmetric combination.<br>
+</li>
+<li><strong>Isospin 0</strong>: Antisymmetric combination (matched with antisymmetric spin wave function).</li>
+</ul>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>For baryons like <span class="math inline">\Lambda_c</span> (isospin-0), excitations include radial (<span class="math inline">n=1s, 2s</span>) or orbital (<span class="math inline">P</span>-wave, <span class="math inline">D</span>-wave) modes. The Particle Data Group lists ~7 <span class="math inline">\Lambda_c</span> states, including ground and excited configurations.</p>
+</div>
+</div>
+</div>
+<hr>
+<p><strong>Key skill</strong>: Determine allowed <span class="math inline">L</span> in decays.</p>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Decay selection rules</strong>: For <span class="math inline">A \to B + C</span>, allowed <span class="math inline">L</span> satisfies:<br>
+<span class="math display">|J_B - J_C| \leq L \leq J_B + J_C \quad \text{and} \quad P_A = P_B P_C (-1)^L.</span><br>
+Example: <span class="math inline">0^+ \to 1^- + 2^-</span> requires <span class="math inline">L=2</span> (<span class="math inline">D</span>-wave) to conserve <span class="math inline">J^P</span>.</p>
+</div>
+</div>
+</div>
+<hr>
+<p>Neglecting spins, sketch the energy spectrum for <span class="math inline">n \leq 3</span> (1s, 2s, 2p, 3s, 3d). Recall <span class="math inline">L &lt; n</span> (no <span class="math inline">f</span>-waves).</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

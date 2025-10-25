@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.24">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Mikhail Mikhasenko">
+
+<title>lecture-01 – Hadron Physics</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-a6e161b2431e1f94a14e0f5d32135a3c.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-e93ed9f6d3b522571f2d845392b64587.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="quarto-light">
+
+<div id="quarto-search-results"></div>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#lecture-upload-plans-and-transition-to-logistics" id="toc-lecture-upload-plans-and-transition-to-logistics" class="nav-link active" data-scroll-target="#lecture-upload-plans-and-transition-to-logistics"><span class="header-section-number">0.1</span> Lecture Upload Plans and Transition to Logistics</a></li>
+  <li><a href="#the-evolution-of-the-universe-from-electroweak-epoch-to-qcd-and-hadron-formation" id="toc-the-evolution-of-the-universe-from-electroweak-epoch-to-qcd-and-hadron-formation" class="nav-link" data-scroll-target="#the-evolution-of-the-universe-from-electroweak-epoch-to-qcd-and-hadron-formation"><span class="header-section-number">0.2</span> The Evolution of the Universe: From Electroweak Epoch to QCD and Hadron Formation</a></li>
+  <li><a href="#einstein-notation-gauge-invariance-and-fermion-interactions-in-field-theory" id="toc-einstein-notation-gauge-invariance-and-fermion-interactions-in-field-theory" class="nav-link" data-scroll-target="#einstein-notation-gauge-invariance-and-fermion-interactions-in-field-theory"><span class="header-section-number">0.3</span> Einstein Notation, Gauge Invariance, and Fermion Interactions in Field Theory</a></li>
+  <li><a href="#course-logistics-exam-details-and-summer-school-opportunities" id="toc-course-logistics-exam-details-and-summer-school-opportunities" class="nav-link" data-scroll-target="#course-logistics-exam-details-and-summer-school-opportunities"><span class="header-section-number">0.4</span> Course Logistics, Exam Details, and Summer School Opportunities</a></li>
+  <li><a href="#collaborative-problem-solving-resource-use-and-course-logistics" id="toc-collaborative-problem-solving-resource-use-and-course-logistics" class="nav-link" data-scroll-target="#collaborative-problem-solving-resource-use-and-course-logistics"><span class="header-section-number">0.5</span> Collaborative Problem-Solving, Resource Use, and Course Logistics</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Mikhail Mikhasenko </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="lecture-upload-plans-and-transition-to-logistics" class="level3" data-number="0.1">
+<h3 data-number="0.1" class="anchored" data-anchor-id="lecture-upload-plans-and-transition-to-logistics"><span class="header-section-number">0.1</span> Lecture Upload Plans and Transition to Logistics</h3>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Lecture Materials &amp; Uploads</strong><br>
+The lecture content will be uploaded, including items that are already prepared. References to additional material will also be provided.</p>
+</div>
+</div>
+</div>
+<hr>
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Logistics Reminder</strong><br>
+Let’s transition to logistical discussions in the final 15 minutes of the session.</p>
+</div>
+</div>
+</div>
+<hr>
+<ul>
+<li><strong>Uploads:</strong> The lecture content and references will be shared.<br>
+</li>
+<li><strong>Logistics:</strong> Administrative details will be addressed shortly.</li>
+</ul>
+<hr>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Supporting Context</strong><br>
+While this segment focuses on logistics, nuclear physics formulas like those below may appear in technical sections of the lecture:</p>
+<ul>
+<li>Nuclear binding energy: <span class="math inline">E_b = (Zm_p + Nm_n - m_{nuc})c^2</span><br>
+</li>
+<li>Semi-empirical mass formula: <span class="math inline">E_B = a_V A - a_S A^{2/3} - a_C \frac{Z(Z-1)}{A^{1/3}} - a_A \frac{(A-2Z)^2}{A} + \delta(A,Z)</span><br>
+</li>
+<li>Radioactive decay law: <span class="math inline">N(t) = N_0 e^{-\lambda t}</span></li>
+</ul>
+</div>
+</div>
+</div>
+<hr>
+<ul>
+<li><strong>Clarity:</strong> Separating logistical announcements from technical content improves readability.<br>
+</li>
+<li><strong>Preparation:</strong> References and uploads ensure access to critical materials.</li>
+</ul>
+</section>
+<section id="the-evolution-of-the-universe-from-electroweak-epoch-to-qcd-and-hadron-formation" class="level3" data-number="0.2">
+<h3 data-number="0.2" class="anchored" data-anchor-id="the-evolution-of-the-universe-from-electroweak-epoch-to-qcd-and-hadron-formation"><span class="header-section-number">0.2</span> The Evolution of the Universe: From Electroweak Epoch to QCD and Hadron Formation</h3>
+<p><strong>Right.</strong><br>
+We are living in a universe made of <strong>hardened physics</strong>, but it was not always the case. Essentially, I like thinking of the evolution of the universe on a timescale. Here is the origin of the universe where everything started. There was a <strong>Big Bang</strong> first, and then several epochs followed. It started with the <strong>Planck epoch</strong>, then there was the <strong>electroweak epoch</strong>, <strong>quarks</strong>, and others. What has been happening during this is part of the physics that we also go through in the courses.</p>
+<hr>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Higgs Mechanism and Symmetry Breaking</strong><br>
+The Higgs potential—the field giving mass to particles and ensuring protons don’t decay so life can exist—obtains a condensate during the electroweak epoch. The potential is given by:<br>
+<span class="math display">  
+V(\phi) = \mu^2 |\phi|^2 + \lambda |\phi|^4  
+</span><br>
+where <span class="math inline">\phi</span> is the Higgs field, <span class="math inline">\mu^2 &lt; 0</span> triggers symmetry breaking, and <span class="math inline">\lambda</span> is the self-coupling constant.</p>
+</div>
+</div>
+</div>
+<p>Essentially, let me start with the <strong>electroweak epoch</strong>, where the Higgs potential forms a condensate. The field that drives electroweak physics fills the entire space, creating a condensate of the Higgs field. Through this condensate, particles are slowed down, gain inertia, and obtain mass—this is the <strong>Higgs mechanism</strong>. The process of the potential evolving is called <strong>spontaneous symmetry breaking</strong>, where one of the minima is peaked. That’s how I like thinking about the electroweak stage.</p>
+<hr>
+<p>Then, particles have masses, the universe starts evolving, and at some point, we arrive at the <strong>quark epoch</strong>, where the universe is filled with a <strong>quark-gluon plasma</strong>. Essentially, quarks and gluons make an unstructured soup of objects—quarks, gluons, and more. There is nothing about <strong>structure formation</strong> yet; it’s just quarks disturbing. There is no scale to discuss yet. Quarks and gluons are together, and the universe is extremely hot. From that moment, it starts cooling down. At some point, the temperature is low enough that this medium starts separating, and we arrive at the <strong>quantum chromodynamics (QCD) epoch</strong>.</p>
+<hr>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Nuclear Size Scaling</strong><br>
+The radius <span class="math inline">R</span> of a nucleus scales with the number of nucleons <span class="math inline">A</span> as:<br>
+<span class="math display">  
+R \approx r_0 A^{1/3}  
+</span><br>
+where <span class="math inline">r_0 \approx 1.2 \, \text{fm}</span> (Fermi).</p>
+</div>
+</div>
+</div>
+<p>This medium starts forming small volumes where quark and gluon interactions bind to a scalable level. If you think of this, you’d need two years to learn it in detail. This comes in particle physics, introductory nuclear physics, and specialized courses on <strong>QCD</strong> or <strong>statistical mechanics</strong>. You could have a special course on QCD at finite temperature, since it’s a heated medium with different laws applied to what we’ll discuss for strong interactions.</p>
+<hr>
+<p><strong>Hydrogen</strong> is what we’ll focus on now. But if you think of how quickly this happened, you’ll be slightly surprised. Essentially, this is… do you have a guess? <span class="math inline">10^{-36}</span> seconds (Planck), <span class="math inline">10^{-12}</span> (electroweak), <span class="math inline">10^{-6}</span>, then <span class="math inline">10^{-3}</span>, and finally <strong>1 second</strong>. Imagine there was nothing, and then the time it takes for sound to reach you when I clap—about 10 milliseconds—by that time, we’d already passed through all these stages and everything had formed. That’s how quickly the universe evolved.</p>
+<hr>
+<p>The rest of the timeline to the present <strong>13.8 billion years</strong> has other interesting physics, but not as intense from the perspective of <strong>hadron physics</strong>. Hadrons are objects where strong interactions are confined to a scale of a few femtometers (<span class="math inline">10^{-15} \, \text{m}</span>). There’s essentially nothing around—just small chunks of volume where quarks and gluons interact. By colliding hadrons, we study their internal structure, but there’s no natural scale smaller than this.</p>
+<hr>
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Proton Mass Decomposition</strong><br>
+The proton mass <span class="math inline">m_p</span> is dominated by QCD energy (gluon condensate):<br>
+<span class="math display">  
+m_p \approx 938 \, \text{MeV}, \quad \text{with} \quad m_{\text{quarks}} \sim 9 \, \text{MeV} \quad (\text{only} \sim 1\%)  
+</span><br>
+The remainder arises from strong interaction energy.</p>
+</div>
+</div>
+</div>
+<p>Concerning <strong>empty space</strong>, let’s sketch one of the most common elements on Earth. From the periodic table, what is it? <strong>Oxygen</strong>. Oxygen-16 (or 18) has 8 protons and 8 (or 10) neutrons. The geometry of this atom is a core of protons and neutrons, with electrons compensating the charge. The nucleus scales as the number of nucleons to the power of <span class="math inline">1/3</span> (volume scaling). Packing 16 nucleons gives a radius of about <strong>3 fm</strong>. Electrons, however, have wave functions <strong>3 orders of magnitude larger</strong> (~50 picometers). This shows how empty space is—a tiny core surrounded by vast electron space with no strong interactions.</p>
+<hr>
+<p>Now, the <strong>fundamental hardware</strong>: the <strong>Standard Model</strong> describes most known interactions (excluding neutrinos’ open questions). The part responsible for strong interactions is <strong>quantum chromodynamics (QCD)</strong>. The participants are <strong>quarks</strong> and <strong>gluons</strong>, the only particles carrying <strong>color charge</strong>—similar to electric charge but distinct. Color charge is a quantum number; we describe it via color wave functions.</p>
+<hr>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>QCD and QED Lagrangians</strong><br>
+The Lagrangian density for QCD is:<br>
+<span class="math display">  
+\mathcal{L}_{\text{QCD}} = \bar{\psi}_i (i \gamma^\mu D_\mu - m) \psi_i - \frac{1}{4} G^a_{\mu\nu} G_a^{\mu\nu}  
+</span><br>
+where <span class="math inline">D_\mu = \partial_\mu - i g_s A_\mu^a T^a</span> and <span class="math inline">G^a_{\mu\nu}</span> is the gluon field strength.<br>
+For QED:<br>
+<span class="math display">  
+\mathcal{L}_{\text{QED}} = \bar{\psi} (i \gamma^\mu D_\mu - m) \psi - \frac{1}{4} F_{\mu\nu} F^{\mu\nu}  
+</span><br>
+where <span class="math inline">D_\mu = \partial_\mu - i e A_\mu</span>.</p>
+</div>
+</div>
+</div>
+<p>Other Standard Model particles (<strong>electrons, muons, taus, photons, neutrinos</strong>) don’t carry color charge and don’t interact strongly. Quarks come in six types: <strong>up</strong> (charge <span class="math inline">+2/3</span>), <strong>down</strong> (<span class="math inline">-1/3</span>), <strong>charm</strong>, <strong>strange</strong>, <strong>top</strong>, <strong>bottom</strong>. They’re grouped by generation (<strong>light: u/d; heavier: s/c; heaviest: t/b</strong>). Most matter is made of first-generation quarks. Strange quarks may affect neutron star equations of state. Charm and bottom are studied in high-energy collisions; the top quark’s lifetime is too short for hadronization.</p>
+<hr>
+<p><strong>Hadrons</strong> are classified as <strong>mesons</strong> (quark-antiquark) or <strong>baryons</strong> (three quarks). At the <strong>chiral symmetry breaking scale</strong>, gluons condense, dressing quarks and giving them effective mass. The proton’s mass is ~1 GeV, but the Higgs contributes only ~1% (3 MeV per quark); <strong>99% comes from QCD energy</strong> (gluon condensate).</p>
+<hr>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Natural Units Conversion</strong><br>
+In natural units (<span class="math inline">\hbar = c = 1</span>):<br>
+<span class="math display">  
+1 \, \text{GeV}^{-1} \approx 0.197 \, \text{fm}, \quad 1 \, \text{GeV} \approx 1.783 \times 10^{-27} \, \text{kg}  
+</span><br>
+Relating energy, mass, and length scales.</p>
+</div>
+</div>
+</div>
+<p>Now, <strong>quantum chromodynamics (QCD)</strong> and <strong>quantum electrodynamics (QED)</strong> share a Lagrangian framework. QED’s Lagrangian is:<br>
+<span class="math display">  
+\mathcal{L}_{\text{QED}} = \bar{\psi} (i \gamma^\mu D_\mu - m) \psi - \frac{1}{4} F_{\mu\nu} F^{\mu\nu},  
+</span><br>
+where <span class="math inline">D_\mu = \partial_\mu - i e A_\mu</span>. Maxwell’s equations in covariant form are <span class="math inline">\partial_\mu F^{\mu\nu} = j^\nu</span>. QCD’s Lagrangian adds color charge:<br>
+<span class="math display">  
+\mathcal{L}_{\text{QCD}} = \bar{\psi}_i (i \gamma^\mu D_\mu - m) \psi_i - \frac{1}{4} G^a_{\mu\nu} G_a^{\mu\nu},  
+</span><br>
+with <span class="math inline">D_\mu = \partial_\mu - i g_s A_\mu^a T^a</span> and <span class="math inline">G^a_{\mu\nu}</span> as the gluon field strength.</p>
+<p><strong>Natural units</strong> (<span class="math inline">\hbar = c = 1</span>) simplify conversions: <span class="math inline">1 \, \text{GeV}^{-1} \approx 0.197 \, \text{fm}</span>; <span class="math inline">1 \, \text{GeV} \approx 1.78 \times 10^{-27} \, \text{kg}</span>.</p>
+</section>
+<section id="einstein-notation-gauge-invariance-and-fermion-interactions-in-field-theory" class="level3" data-number="0.3">
+<h3 data-number="0.3" class="anchored" data-anchor-id="einstein-notation-gauge-invariance-and-fermion-interactions-in-field-theory"><span class="header-section-number">0.3</span> Einstein Notation, Gauge Invariance, and Fermion Interactions in Field Theory</h3>
+<p>Another thing to note is that here I am explicitly using <strong>Einstein notation</strong> and summing over repeated indices.</p>
+<ul>
+<li><span class="math inline">\mu</span> here, <span class="math inline">\mu</span> there—they are repeated.<br>
+</li>
+<li>This means that if I were precise, I should have written here a sum from <span class="math inline">\mu=1</span> to <span class="math inline">4</span> over all components.<br>
+</li>
+<li>The <span class="math inline">\nu</span> is a repeated index again, so we sum.</li>
+</ul>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Summation Example</strong>: For <span class="math inline">F_{\mu\nu}F^{\mu\nu}</span>, expanding the sum yields <span class="math inline">4 \times 4 = 16</span> terms (4 components per index). If multiplied by another term with 4 components, the total becomes <span class="math inline">16 \times 4 = 64</span> terms.</p>
+</div>
+</div>
+</div>
+<hr>
+<p>The equation of motion for this Lagrangian is obtained using the <strong>Euler-Lagrange equation</strong>.</p>
+<ul>
+<li>You might remember this from classical mechanics where we had dots, and the first term was the time derivative, the second was the derivative of the field.<br>
+</li>
+<li>Essentially, we treat the Lagrangian as a function of the field derivatives and the fields themselves as independent objects.<br>
+</li>
+<li>First, we differentiate with respect to the derivatives, and then with respect to the fields.</li>
+</ul>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Key Insight</strong>: In classical mechanics, these would be the momentum terms, but here they are <strong>field variables</strong>. The index <span class="math inline">\mu</span> is summed over—a simple summation.</p>
+</div>
+</div>
+</div>
+<p>The derivative is with respect to <span class="math inline">A_\rho</span> (another index convention). If I take this Lagrangian, where everything is defined, and use the Euler-Lagrange equation, I get the equation of motion describing how the field propagates through space. We know this gives <strong>Maxwell’s equations</strong>.</p>
+<hr>
+<p>Now let me introduce the second part. This was the gauge field. Let me label it 1, 2, 3, 4.</p>
+<ul>
+<li>This is a less intuitive concept that you might not have seen before, but we will need it.<br>
+</li>
+<li>There are degrees of freedom that are not fixed for photons in the electromagnetic field, and there is an arbitrary <strong>gauge choice</strong> we can make.</li>
+</ul>
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Gauge Transformation</strong>:<br>
+<span class="math display">  
+A_\mu \rightarrow A'_\mu = A_\mu - \partial_\mu \chi  
+</span><br>
+where <span class="math inline">\chi</span> is an arbitrary scalar field. Under this, <span class="math inline">F_{\mu\nu}</span> remains invariant: <span class="math inline">F'_{\mu\nu} = F_{\mu\nu}</span>.</p>
+</div>
+</div>
+</div>
+<p>This is a <strong>symmetry of the Lagrangian</strong>—the gauge symmetry. If you derive Maxwell’s equations from the Lagrangian, you’ll get them up to a gauge term. By fixing the gauge, you recover the standard Maxwell equations.</p>
+<hr>
+<p>Now we introduce <strong>fermion fields</strong>.</p>
+<ul>
+<li>In electrodynamics, our leptons are described by the <strong>Dirac field</strong> <span class="math inline">\psi</span>, a four-component spinor (not a four-vector).<br>
+</li>
+<li>The Lagrangian is a scalar quantity—no free indices—and is constructed from objects of different dimensionality.</li>
+</ul>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Spinor Properties</strong>:</p>
+<ul>
+<li><span class="math inline">\psi</span> describes spin-<span class="math inline">1/2</span> particles with four components (particle + antiparticle).<br>
+</li>
+<li>The adjoint spinor is <span class="math inline">\bar{\psi} = \psi^\dagger \gamma^0</span>.<br>
+</li>
+<li>The Dirac Lagrangian:<br>
+<span class="math display">  
+\mathcal{L}_{\text{Dirac}} = \bar{\psi} (i \gamma^\mu \partial_\mu - m) \psi  
+</span></li>
+</ul>
+</div>
+</div>
+</div>
+<p>The equation of motion is the <strong>Dirac equation</strong>: <span class="math inline">(i\not{\partial} - m)\psi = 0</span> (using Feynman slash notation).</p>
+<hr>
+<p>To introduce <strong>interactions</strong>, we use <strong>gauge invariance</strong>.</p>
+<ul>
+<li>For fermions, gauge invariance means changing the phase of <span class="math inline">\psi</span> locally at every space-time point.<br>
+</li>
+<li>The tricky part is that <span class="math inline">\partial_\mu \psi</span> introduces extra terms under a space-dependent phase transformation.</li>
+</ul>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Covariant Derivative Fix</strong>:<br>
+Replace <span class="math inline">\partial_\mu</span> with <span class="math inline">D_\mu = \partial_\mu + ieA_\mu</span>. Under simultaneous transformations of <span class="math inline">\psi</span> and <span class="math inline">A_\mu</span>, the Lagrangian remains invariant.</p>
+</div>
+</div>
+</div>
+<p>This is the essence of <strong>QED</strong>: interactions arise from requiring invariance under local phase transformations.</p>
+<hr>
+<p>The same principle applies to other gauge theories (e.g., SU(2) for electroweak, SU(3) for QCD).</p>
+<div class="callout callout-style-simple callout-warning">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Key Difference in QCD</strong>:</p>
+<ul>
+<li>Gluons self-interact due to non-Abelian structure (terms like <span class="math inline">f^{abc}</span> in <span class="math inline">G^a_{\mu\nu}</span>).<br>
+</li>
+<li>Coupling runs with energy: <strong>asymptotic freedom</strong> (weak at high energy) vs.&nbsp;<strong>confinement</strong> (strong at low energy).</li>
+</ul>
+</div>
+</div>
+</div>
+<hr>
+<p>Finally, in <strong>perturbation theory</strong>, we compute scattering amplitudes using Feynman diagrams.</p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Cross-Section and Decay Width</strong>:</p>
+<ul>
+<li><p>Cross-section:<br>
+<span class="math display">  
+\sigma = \frac{1}{2E_A 2E_B |v_A - v_B|} \int |\mathcal{M}|^2 \, d\Pi_{\text{phase space}}  
+</span></p></li>
+<li><p>Decay width:<br>
+<span class="math display">  
+\Gamma = \frac{1}{2m} \int |\mathcal{M}|^2 \, d\Pi_{\text{phase space}}  
+</span></p></li>
+</ul>
+</div>
+</div>
+</div>
+<p>These connect field theory to measurable quantities in experiments.</p>
+</section>
+<section id="course-logistics-exam-details-and-summer-school-opportunities" class="level3" data-number="0.4">
+<h3 data-number="0.4" class="anchored" data-anchor-id="course-logistics-exam-details-and-summer-school-opportunities"><span class="header-section-number">0.4</span> Course Logistics, Exam Details, and Summer School Opportunities</h3>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Lecture &amp; Exercise Schedule</strong><br>
+It’s really nice to have a watch today. We are three minutes out, but let me quickly say logistics for the course.</p>
+<ul>
+<li>I have notes: <strong>11 lectures and 11 exercises</strong>.<br>
+</li>
+<li><em>A bit fewer exercises</em> because we will have some breaks.<br>
+</li>
+<li>For <strong>Moodle</strong>, we put a calendar listing anticipated dates for lectures and exercises.<br>
+</li>
+<li>Closer to the dates, you may discuss shifting exercise sessions to other days, but for now, we keep the schedule as it is and we’ll discuss later.</li>
+</ul>
+</div>
+</div>
+</div>
+<hr>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Admission &amp; Format</strong><br>
+For the exam, we would like to offer during the semester that we will check the points you gain through exercise sheets, and then <strong>50% will admit you to the examination</strong>.</p>
+<ul>
+<li>The exam is designed to be <strong>easy</strong>: you’ll receive problem sets in advance (e.g., 1–2 weeks before).<br>
+</li>
+<li>You’ll bring your solutions to the exam, and we’ll have a discussion.<br>
+</li>
+<li><strong>Focus</strong>: Working on exercise sheets during the semester is <em>most important</em>.</li>
+</ul>
+</div>
+</div>
+</div>
+<hr>
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>How to Submit &amp; Receive Feedback</strong><br>
+Now, let me show you these beautiful exercise sheets.</p>
+<ul>
+<li>Each sheet has a <strong>barcode to scan</strong> and classwork (optional for now).<br>
+</li>
+<li><strong>Homework</strong>: 1–2 problems per assignment.<br>
+</li>
+<li><strong>Submission</strong>: Write solutions, hand them in at the lecture, and retrieve marked sheets during Thursday exercise sessions.<br>
+</li>
+<li>A <strong>box</strong> will be provided for submissions (include your name!).</li>
+</ul>
+</div>
+</div>
+</div>
+<hr>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Key Timings</strong></p>
+<ul>
+<li><strong>Lectures</strong>: Tuesday<br>
+</li>
+<li><strong>Exercise Sessions</strong>: Thursday<br>
+</li>
+<li><strong>Excursion</strong>: Fully booked, but 1–2 spots may open.<br>
+</li>
+<li><strong>Office Hours</strong>: Thursday, 9–10 AM (Office 13B, Building B).</li>
+</ul>
+</div>
+</div>
+</div>
+<hr>
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Apply Soon!</strong><br>
+For our field, several <strong>summer schools</strong> are happening this summer:</p>
+<ol type="1">
+<li><strong>Zurich, Switzerland</strong>: 8 weeks<br>
+</li>
+<li><strong>Krakow, Poland</strong>: 4 weeks<br>
+</li>
+<li><strong>Bochum</strong>: 2 weeks (for advanced students)<br>
+</li>
+</ol>
+<ul>
+<li>Applications are open for a few more weeks.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-caution">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Course Description Access</strong><br>
+For the course description… Well, in order to proceed, just write an email, and I can forward you the announcement. I think I sent it to <em>Fast Shaft</em>, but I’m not sure it was propagated. These are <strong>super exciting events</strong> if you want to know more.</p>
+</div>
+</div>
+</div>
+<hr>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><em>No physics formulas were discussed in this segment. The focus was on administrative and organizational details.</em></p>
+</div>
+</div>
+</div>
+</section>
+<section id="collaborative-problem-solving-resource-use-and-course-logistics" class="level3" data-number="0.5">
+<h3 data-number="0.5" class="anchored" data-anchor-id="collaborative-problem-solving-resource-use-and-course-logistics"><span class="header-section-number">0.5</span> Collaborative Problem-Solving, Resource Use, and Course Logistics</h3>
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Collaboration is encouraged!</strong> Feel free to discuss and solve the sheets together. Use any resources you find helpful—ChatGPT, books, or other materials. The problems are <strong>standard</strong> and designed for learning, not assessment. How you learn is up to you.</p>
+</div>
+</div>
+</div>
+<hr>
+<p>The lecturer follows several key texts:</p>
+<ol type="1">
+<li><strong>Hudson Martin</strong> (first reference)<br>
+</li>
+<li><strong>Martin Schemer</strong><br>
+</li>
+<li><strong>Thomson’s Particle Physics</strong> (general particle physics)<br>
+</li>
+<li><strong>Martin Spearman</strong> (dedicated to Hadron Physics)</li>
+</ol>
+<hr>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<ul>
+<li>Exercise groups start this week with <strong>three class problems</strong>.<br>
+</li>
+<li><strong>Sheets distribution</strong>: Two pages per sheet, 15 printed. Take one for yourself and extras for friends.<br>
+</li>
+<li><em>“Before leaving, please take the sheets. We should stamp them together, but make sure you don’t miss one.”</em><br>
+</li>
+<li><em>“Do you have a quarter of the sheet? Leave me this quarter before leaving.”</em></li>
+</ul>
+</div>
+</div>
+</div>
+<hr>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>System description</strong>:</p>
+<ul>
+<li>A <strong>spark</strong>, a <strong>balloon</strong>, and a <strong>pendulum</strong> with a sliding hanging point.<br>
+</li>
+<li><strong>Lagrangian</strong>: Kinetic term minus potential term (<span class="math inline">\mathcal{L} = T - V</span>).
+<ul>
+<li><span class="math inline">\dot{X}^2</span> term for the moving part.<br>
+</li>
+<li>Pendulum interaction and potential energy terms.</li>
+</ul></li>
+<li><strong>Goal</strong>: Derive the <strong>Dirac equation</strong> and <strong>Maxwell’s equations</strong>.<br>
+<em>“This is a fun problem—I just dropped it on this table.”</em></li>
+</ul>
+</div>
+</div>
+</div>
+<hr>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<ul>
+<li><em>“Thank everyone who came today. Hope we survive to the end of the semester!”</em><br>
+</li>
+<li>Exercises are <strong>not obligatory</strong>, but <em>“everyone has to do the work.”</em><br>
+</li>
+<li><em>“You’re gonna have troubles to get people to the board because this is not private.”</em></li>
+</ul>
+</div>
+</div>
+</div>
+<hr>
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Upcoming focus</strong>:</p>
+<ul>
+<li><p>Reintroducing the <strong>QED Lagrangian</strong>:<br>
+<span class="math display">\mathcal{L}_{QED} = \bar{\psi}(i\gamma^\mu D_\mu - m)\psi - \frac{1}{4}F_{\mu\nu}F^{\mu\nu}</span><br>
+Where <span class="math inline">D_\mu = \partial_\mu + ieA_\mu</span> (covariant derivative).</p></li>
+<li><p>Comparing <strong>QED</strong> (electromagnetic interactions) and <strong>QCD</strong> (added complexity).<br>
+<em>“Starting with a simpler case and explaining how to calculate terms is a good starting point.”</em></p></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

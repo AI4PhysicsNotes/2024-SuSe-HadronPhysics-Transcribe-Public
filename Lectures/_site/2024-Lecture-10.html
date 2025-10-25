@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.24">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Mikhail Mikhasenko">
+
+<title>lecture-10 – Hadron Physics</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-a6e161b2431e1f94a14e0f5d32135a3c.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-e93ed9f6d3b522571f2d845392b64587.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="quarto-light">
+
+<div id="quarto-search-results"></div>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#calculating-cross-sections-and-spin-algebra-in-scattering-processes" id="toc-calculating-cross-sections-and-spin-algebra-in-scattering-processes" class="nav-link active" data-scroll-target="#calculating-cross-sections-and-spin-algebra-in-scattering-processes"><span class="header-section-number">0.1</span> Calculating Cross Sections and Spin Algebra in Scattering Processes</a></li>
+  <li><a href="#scattering-length-dimensionality-and-spin-12-particle-representations" id="toc-scattering-length-dimensionality-and-spin-12-particle-representations" class="nav-link" data-scroll-target="#scattering-length-dimensionality-and-spin-12-particle-representations"><span class="header-section-number">0.2</span> Scattering Length Dimensionality and Spin-1/2 Particle Representations</a></li>
+  <li><a href="#properties-and-applications-of-chiral-projection-operators" id="toc-properties-and-applications-of-chiral-projection-operators" class="nav-link" data-scroll-target="#properties-and-applications-of-chiral-projection-operators"><span class="header-section-number">0.3</span> Properties and Applications of Chiral Projection Operators</a></li>
+  <li><a href="#chirality-helicity-and-the-v-a-interaction-in-particle-states" id="toc-chirality-helicity-and-the-v-a-interaction-in-particle-states" class="nav-link" data-scroll-target="#chirality-helicity-and-the-v-a-interaction-in-particle-states"><span class="header-section-number">0.4</span> Chirality, Helicity, and the <span class="math inline">V-A</span> Interaction in Particle States</a></li>
+  <li><a href="#flavor-symmetry-and-chiral-limit-in-qcd-lagrangian" id="toc-flavor-symmetry-and-chiral-limit-in-qcd-lagrangian" class="nav-link" data-scroll-target="#flavor-symmetry-and-chiral-limit-in-qcd-lagrangian"><span class="header-section-number">0.5</span> Flavor Symmetry and Chiral Limit in QCD Lagrangian</a></li>
+  <li><a href="#chiral-symmetry-and-its-spontaneous-breaking-in-qcd" id="toc-chiral-symmetry-and-its-spontaneous-breaking-in-qcd" class="nav-link" data-scroll-target="#chiral-symmetry-and-its-spontaneous-breaking-in-qcd"><span class="header-section-number">0.6</span> Chiral Symmetry and Its Spontaneous Breaking in QCD</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Mikhail Mikhasenko </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="calculating-cross-sections-and-spin-algebra-in-scattering-processes" class="level3" data-number="0.1">
+<h3 data-number="0.1" class="anchored" data-anchor-id="calculating-cross-sections-and-spin-algebra-in-scattering-processes"><span class="header-section-number">0.1</span> Calculating Cross Sections and Spin Algebra in Scattering Processes</h3>
+<p>Let me recap what we discussed in the lecture. I had two excellent problems before moving to the exercise.</p>
+<p>I would like you to calculate the cross section for the scattering of two massless particles. Each matrix element is given for spin-zero scalar particles. Calculate the cross section and give the answer in <strong>millibarns squared</strong>.</p>
+<p><strong>Steps for the calculation:</strong></p>
+<ol type="1">
+<li>First, calculate the cross section—remember the equation for how we compute it.</li>
+<li>The whole computation is straightforward once you put the numbers in.</li>
+</ol>
+<p>The <strong>cross section formula</strong> is: <span class="math display">
+\sigma = \frac{1}{2s} \times |\mathcal{M}|^2 \times \frac{1}{8\pi} \frac{2p}{\sqrt{s}}
+</span></p>
+<ul>
+<li>The matrix element squared gives <span class="math inline">3 + 9 + 4 = 13</span>.</li>
+<li>Here is the <strong>flux</strong>, and here is the <strong>phase space</strong>.</li>
+</ul>
+<p>The <strong>phase space</strong> is: <span class="math display">
+\frac{1}{8\pi} \frac{2p}{\sqrt{s}}
+</span></p>
+<ul>
+<li>The term <span class="math inline">\frac{2p}{\sqrt{s}}</span> must be calculated given the masses and energy.</li>
+<li>For this case, it simplifies to <span class="math inline">\sqrt{s}/4</span>.</li>
+<li>Since momentum equals energy for massless particles, <span class="math inline">p = \sqrt{s}/2</span>.</li>
+<li>Thus, this factor becomes 1, leaving just <span class="math inline">\frac{1}{8\pi}</span>.</li>
+</ul>
+<p>Now, consider the <strong>flux</strong>: <span class="math display">
+\text{Flux} = \frac{1}{2E} \frac{1}{|v_1 - v_2|}
+</span></p>
+<ul>
+<li>Both energies are half the total energy, and <span class="math inline">v_1 - v_2 = 2</span> in the lab frame (since velocities are equal and at the speed of light).</li>
+<li>This simplifies the flux to 2.</li>
+</ul>
+<p><strong>Putting it all together:</strong> <span class="math display">
+\sigma = \frac{1}{2s} \times 13 \times \frac{1}{8\pi} = \frac{13}{16\pi s}
+</span> In <span class="math inline">\text{GeV}^{-2}</span>, this is <span class="math inline">\frac{13}{8\pi}</span>.</p>
+<p>For <strong>unit conversion</strong>: <span class="math display">
+1 \text{ GeV}^{-2} = 0.2 \text{ millibarns}
+</span> Thus, the cross section is: <span class="math display">
+\frac{13}{8\pi} \times 0.2 \text{ millibarns}
+</span></p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>The final numerical result depends on simplifying <span class="math inline">\pi \approx 3</span>, but the <strong>method</strong> is what matters. The key is starting with the correct equations for cross section, flux, and phase space.</p>
+</div>
+</div>
+</div>
+<hr>
+<p>Now, consider the <strong>imaginary part</strong> of the matrix element. Using the <strong>optical theorem</strong>: <span class="math display">
+\sigma_{\text{total}} = \frac{\text{Im}\,\mathcal{M}(0)}{2p\sqrt{s}}
+</span> This gives the <strong>total cross section</strong>, not just the elastic one.</p>
+<ul>
+<li>The total cross section includes all processes: <span class="math inline">AB \to AB</span>, <span class="math inline">AB \to CD</span>, etc.</li>
+<li>It should be larger than the elastic cross section.</li>
+<li>If the imaginary part gives a negative result, it’s <strong>unphysical</strong>—the imaginary part must be positive.</li>
+</ul>
+<p><strong>Example: Breit-Wigner resonance</strong> <span class="math display">
+\mathcal{M} = \frac{\Gamma/2}{(E - E_0) - i\Gamma/2}
+</span> Its imaginary part is always positive.</p>
+<ul>
+<li>Recall the <strong>Argand diagram</strong>: the imaginary part (y-axis) must be non-negative.</li>
+<li>This constraint ensures physical results.</li>
+</ul>
+<hr>
+<p>Now, for the second problem: <strong>spin algebra</strong>. You need to combine spins and compute partial waves. The brute-force method involves constructing a table of quantum numbers.</p>
+<p><strong>Example:</strong></p>
+<ul>
+<li>The <span class="math inline">b_1</span> meson with spin-parity <span class="math inline">1^+</span>.</li>
+<li>Combining <span class="math inline">1^-</span> and <span class="math inline">1^+</span> in S-wave gives <span class="math inline">1^-</span>.</li>
+<li>D-wave also allows <span class="math inline">0^-, 1^-, 2^-</span>.</li>
+</ul>
+<p><strong>Exotic Quantum Numbers:</strong></p>
+<ul>
+<li>The <span class="math inline">\pi_1(1600)</span> has exotic quantum numbers <span class="math inline">1^-+</span>, forbidden in the quark model.</li>
+<li>It’s interpreted as a <strong>hybrid meson</strong>, with excited gluonic degrees of freedom.</li>
+<li>Originally misidentified as <span class="math inline">\pi_1(1400)</span>, it was corrected with better data.</li>
+</ul>
+<hr>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Key takeaways:</p>
+<ul>
+<li>Cross section calculations require careful handling of flux and phase space.</li>
+<li>The optical theorem links the imaginary part of the amplitude to the total cross section.</li>
+<li>Spin composition rules are essential for understanding particle interactions.</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="scattering-length-dimensionality-and-spin-12-particle-representations" class="level3" data-number="0.2">
+<h3 data-number="0.2" class="anchored" data-anchor-id="scattering-length-dimensionality-and-spin-12-particle-representations"><span class="header-section-number">0.2</span> Scattering Length Dimensionality and Spin-1/2 Particle Representations</h3>
+<p>I thought it’s important to clarify. The notations got mixed up a little bit at the last lecture concerning the scattering length. The scattering length is indeed measured in <strong>Fermi</strong>. However, when you use relativistic notations, it appears <strong>dimensionless</strong>.</p>
+<p>In quantum mechanics, the scattering length is defined as an expansion of the amplitude in terms of <span class="math inline">K</span>, the breakup momentum. <span class="math inline">K</span> has units of <strong>GeV</strong>, so <span class="math inline">1/A</span> has units of <strong>GeV</strong>, and <span class="math inline">A</span> itself is in <strong>Fermi</strong>. The non-relativistic amplitude has a denominator: <span class="math display">
+F_{\text{non-rel.}} = \frac{1}{A - iK}
+</span></p>
+<p>In the relativistic formulation, unitarity tells us that the imaginary part of the amplitude is related to the phase space, which is dimensionless. The first expansion term is again something like the scattering length, but it is dimensionless. If you still want to talk about <strong>Fermi</strong>, you have to relate this to that, and the relation happens at the threshold.</p>
+<p>Since it’s a threshold expansion, you would like these amplitudes to match up to a numerical constant at the threshold. In this exercise, I want you to relate these two at the threshold and determine what the relativistic amplitude is near threshold. I even give you the answer—the only thing missing is the value of <span class="math inline">\tilde{A}</span>.</p>
+<p>The scattering length is equal to <strong>three Fermi</strong>, corresponding to <span class="math inline">A</span>. Knowing that, you need to compute <span class="math inline">\tilde{A}</span>. The way to do this is not simply to equate the amplitudes at threshold, because then you miss the point. If you evaluate the non-relativistic amplitude at threshold (<span class="math inline">K = 0</span>): <span class="math display">
+F_{\text{non-rel.}} = A
+</span> while the relativistic amplitude is <span class="math inline">\tilde{A}</span>. They are not equal—there is a numerical constant to account for.</p>
+<p>To equate them, you must compare numerators or denominators up to a numerical constant and examine the coefficients in front of <span class="math inline">K</span>. One approach is to Taylor-expand the expression where <span class="math inline">S</span> is a function of <span class="math inline">K</span> and equate the first term. Alternatively, notice that the only difference between numerators is the factor <span class="math inline">1/(8\pi^2 s)</span>.</p>
+<p>At threshold, the condition to convert one to the other is: <span class="math display">
+\tilde{A} = \frac{A}{8\pi^2 s_{\text{thr}}}
+</span> To solve this, you need the masses and the threshold value. For example, if <span class="math inline">s_{\text{thr}} = 1 \, \text{GeV}^2</span>, then <span class="math inline">\tilde{A} = A / (8\pi^2)</span>.</p>
+<hr>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Key Insight</strong>: The relativistic and non-relativistic scattering lengths differ by a factor of <span class="math inline">8\pi^2 s_{\text{thr}}</span>. This conversion is essential for matching amplitudes at threshold.</p>
+</div>
+</div>
+</div>
+<hr>
+<p>This is widely used and provides interesting insights into hydrodynamics, which relies on the extra symmetry observed when particle masses are zero—called <strong>chirality</strong>. This is related to spin orientation for spin-1/2 particles.</p>
+<p>We now return to particles carrying spin information, focusing on <strong>spin-1/2</strong> and their field-theoretical representation. Spin-1/2 particles obey the Dirac equation: <span class="math display">
+(P\!\!\!/ - m)U = 0
+</span></p>
+<p><strong>Notations</strong>:</p>
+<ul>
+<li><span class="math inline">P\!\!\!/ = P_\mu \gamma^\mu</span> (contraction of four-momentum with <span class="math inline">\gamma^\mu</span> matrices).</li>
+<li><span class="math inline">\gamma^0</span> is part of the Dirac matrices.</li>
+</ul>
+<p>There are two common conventions for solving the Dirac equation:</p>
+<ol type="1">
+<li>The <strong>Dirac convention</strong></li>
+<li>The <strong>Weyl convention</strong></li>
+</ol>
+<p>The Weyl convention is more convenient for right- and left-handed particles, but we will stick to the standard <strong>Dirac convention</strong>.</p>
+<p>The <span class="math inline">\gamma^\mu</span> are four-dimensional matrices, and <span class="math inline">P</span> is a four-vector. Contracting them gives <span class="math inline">P\!\!\!/</span>, a <span class="math inline">4 \times 4</span> matrix. The term <span class="math inline">P\!\!\!/ - m</span> implies <span class="math inline">m</span> is multiplied by the identity matrix. <span class="math inline">U</span> is a four-component spinor (in German, “Spinor”).</p>
+<p>The Dirac equation has two solutions for a given momentum <span class="math inline">P</span>. If <span class="math inline">P</span> has spatial components, the matrix equation yields two spinors, <span class="math inline">U_1</span> and <span class="math inline">U_2</span>: <span class="math display">
+U_1 = \begin{pmatrix} 1 \\ 0 \end{pmatrix}, \quad U_2 = \begin{pmatrix} P \cos \theta \\ \sin \theta \end{pmatrix}
+</span> These correspond to canonical states with spin quantized along the <span class="math inline">Z</span>-axis, with projections <span class="math inline">+1/2</span> and <span class="math inline">-1/2</span>.</p>
+<p>To transform these to helicity states (spin quantized along momentum), we use a linear combination. The canonical state is defined as a pure boost acting on the <span class="math inline">|J, M\rangle</span> state at rest.</p>
+<p>The transformation between canonical and helicity states involves an extra rotation <span class="math inline">R^{-1}</span> to match the canonical state, followed by <span class="math inline">R</span>. The resulting state is a linear combination of canonical states with coefficients given by <strong>Wigner <span class="math inline">D</span>-matrices</strong>.</p>
+<p>There are two conventions for the Wigner <span class="math inline">D</span>-function:</p>
+<ol type="1">
+<li><strong>Standard</strong>: <span class="math inline">R(\phi, \theta, \psi) = R_z(\phi) R_y(\theta) R_z(\psi)</span>.</li>
+<li><strong>Simplified (for helicity states)</strong>: <span class="math inline">R(\phi, \theta, 0) = R_z(\phi) R_y(\theta)</span>.</li>
+</ol>
+<p>The <span class="math inline">D</span>-function describes rotations with spherical angles <span class="math inline">\theta, \phi</span>. The simplified convention omits the unobservable phase from the first <span class="math inline">R_z</span> rotation.</p>
+<p>Applying this to helicity states, we get: <span class="math display">
+U_{\text{helicity}} = N \begin{pmatrix} \cos(\theta/2) \\ e^{i\phi} \sin(\theta/2) \\ \cos(\theta/2) \\ e^{i\phi} \sin(\theta/2) \end{pmatrix}
+</span> where <span class="math inline">N = \sqrt{E + m}</span> is the normalization. For the lower spinor component: <span class="math display">
+U_{\text{down}} \approx \frac{P}{E + m} \begin{pmatrix} \cos(\theta/2) \\ e^{i\phi} \sin(\theta/2) \end{pmatrix}
+</span> When <span class="math inline">m \ll E</span>, <span class="math inline">P \approx E</span>, and this factor approaches 1, simplifying the spinor.</p>
+</section>
+<section id="properties-and-applications-of-chiral-projection-operators" class="level3" data-number="0.3">
+<h3 data-number="0.3" class="anchored" data-anchor-id="properties-and-applications-of-chiral-projection-operators"><span class="header-section-number">0.3</span> Properties and Applications of Chiral Projection Operators</h3>
+<p>Now let me introduce <strong>projection operators</strong>, which will allow us to move on.</p>
+<p>The <span class="math inline">\gamma^5</span> matrix is introduced as the product of the gamma matrices with the Levi-Civita symbol:</p>
+<p><span class="math display">
+\gamma^5 = i \gamma^0 \gamma^1 \gamma^2 \gamma^3.
+</span></p>
+<p>This is the convention we choose.</p>
+<hr>
+<p>It is very convenient for describing interactions to introduce <strong>right-handed</strong> and <strong>left-handed projection operators</strong>:</p>
+<p><span class="math display">
+P_R = \frac{1}{2}(1 + \gamma^5), \quad P_L = \frac{1}{2}(1 - \gamma^5).
+</span></p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>These projection operators satisfy key properties:</p>
+<ul>
+<li><span class="math inline">P_R^2 = P_R</span>, <span class="math inline">P_L^2 = P_L</span> (idempotence)</li>
+<li><span class="math inline">P_R + P_L = 1</span> (completeness)</li>
+<li><span class="math inline">P_R P_L = P_L P_R = 0</span> (orthogonality)</li>
+</ul>
+</div>
+</div>
+</div>
+<hr>
+<p>Why are they projection operators? Because when they act twice on a state, nothing changes:</p>
+<p><span class="math display">
+P_R^2 = P_R, \quad P_L^2 = P_L.
+</span></p>
+<p>Let’s verify this explicitly for <span class="math inline">P_L</span>:</p>
+<p><span class="math display">
+\left(\frac{1 - \gamma^5}{2}\right) \left(\frac{1 - \gamma^5}{2}\right) = \frac{1 - 2\gamma^5 + (\gamma^5)^2}{4}.
+</span></p>
+<p>Since <span class="math inline">(\gamma^5)^2 = 1</span>, this simplifies back to <span class="math inline">\frac{1 - \gamma^5}{2}</span>.</p>
+<hr>
+<p>Another key property is that their sum is the identity:</p>
+<p><span class="math display">
+P_R + P_L = 1.
+</span></p>
+<p>The spaces they project onto are <strong>orthogonal</strong>. If you project onto the left-handed space, there are no right-handed components left:</p>
+<p><span class="math display">
+P_R P_L = P_L P_R = 0.
+</span></p>
+<hr>
+<p>An important consequence arises from the fact that <span class="math inline">\gamma^5</span> <strong>anti-commutes</strong> with all <span class="math inline">\gamma^\mu</span>:</p>
+<p><span class="math display">
+\{\gamma^5, \gamma^\mu\} = 0.
+</span></p>
+<p>This implies that:</p>
+<p><span class="math display">
+P_R \gamma^\mu P_L = 0.
+</span></p>
+<p>Here’s why: if you start with <span class="math inline">P_L</span>, multiply by <span class="math inline">\gamma^\mu</span>, and swap the order using the anti-commutation relation, you get <span class="math inline">P_R</span>, and <span class="math inline">P_R P_L = 0</span>.</p>
+<hr>
+<p>Any spinor can be <strong>decomposed</strong> into right-handed and left-handed components:</p>
+<p><span class="math display">
+\psi = P_R \psi + P_L \psi = \psi_R + \psi_L.
+</span></p>
+<hr>
+<p>Now, let’s give <strong>physical meaning</strong> to these states. Consider a helicity spinor (spin-up or spin-down). We can decompose it into right-handed and left-handed parts using the explicit matrix forms of the projection operators.</p>
+<p>In a simplified representation:</p>
+<p><span class="math display">
+P_R = \frac{1}{2} \begin{pmatrix} 1 &amp; 1 \\ 1 &amp; 1 \end{pmatrix}, \quad P_L = \frac{1}{2} \begin{pmatrix} 1 &amp; -1 \\ -1 &amp; 1 \end{pmatrix}.
+</span></p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>These are symbolic representations; the full forms are <span class="math inline">4 \times 4</span> matrices in the standard Dirac basis.</p>
+</div>
+</div>
+</div>
+<p>Using these, we can decompose the spinor into its <strong>chiral components</strong>. The result is a clean separation, which is very useful for analyzing interactions.</p>
+</section>
+<section id="chirality-helicity-and-the-v-a-interaction-in-particle-states" class="level3" data-number="0.4">
+<h3 data-number="0.4" class="anchored" data-anchor-id="chirality-helicity-and-the-v-a-interaction-in-particle-states"><span class="header-section-number">0.4</span> Chirality, Helicity, and the <span class="math inline">V-A</span> Interaction in Particle States</h3>
+<p>It’s cumbersome dealing with <span class="math inline">4 \times 4</span> matrices. This product will give me blocks, and the second component gives me what is inside the block.</p>
+<p>I have this state acting on the spinor, which is <span class="math inline">\begin{pmatrix} 1 \\ 1 \end{pmatrix}</span>. When I do multiplication, I multiply in components. That’s <strong>super convenient</strong>.</p>
+<p>When I do the projection, I realize that the left component from the operator yields a small factor <span class="math inline">1 - \kappa</span> that is negligible—vanishing at high energy when mass gets smaller. The component of my right-handed helicity state is a spinor <span class="math inline">\frac{1}{2}</span> and has an intrinsically small left-handed component.</p>
+<hr>
+<p>There is no single interpretation of the right-handed and left-handed states. However, they are closely related to the spin orientation along the direction of motion in the limit of zero mass. When a particle moves at the speed of light, they are literally the same constants.</p>
+<p>When you hear <strong>“right-handed,”</strong> it means the particle travels with spin aligned with the direction of motion. When you hear <strong>“left-handed,”</strong> it means the spin is opposite. But when the mass is significant—or when <span class="math inline">m</span> is not much smaller than <span class="math inline">E</span>—things get mixed, and the state becomes a superposition of both components.</p>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Chiral Projection Operators</strong> define right-handed and left-handed states: <span class="math display">
+P_R = \frac{1 + \gamma^5}{2}, \quad P_L = \frac{1 - \gamma^5}{2}
+</span> These operators are key to understanding the <strong>V-A interaction</strong> structure in the Standard Model.</p>
+</div>
+</div>
+</div>
+<hr>
+<p>It’s very interesting that in the Standard Model, the <span class="math inline">W</span> boson, when it decays weakly, produces only the right-handed component for leptons and the left-handed component for antileptons. This happens due to the structure of the Lagrangian.</p>
+<p>You’ve likely heard that the dominant interaction in the Standard Model is the <span class="math inline">V-A</span> interaction. Here:</p>
+<ul>
+<li><span class="math inline">V</span> stands for <strong>vector</strong> (<span class="math inline">\gamma^\mu</span>),</li>
+<li><span class="math inline">A</span> stands for <strong>axial</strong> (<span class="math inline">\gamma^\mu \gamma^5</span>).</li>
+</ul>
+<p>The <span class="math inline">V-A</span> structure means the Lagrangian contains terms like <span class="math inline">\gamma^\mu (1 - \gamma^5)</span>, which can also be written as <span class="math inline">2 \gamma^\mu P_L</span>, where <span class="math inline">P_L = \frac{1 - \gamma^5}{2}</span> is the left-handed projection operator.</p>
+<p>This interaction vertex governs processes like <span class="math inline">W</span> boson decay into an electron and antineutrino. The electron (<span class="math inline">e^-</span>) is left-handed (spin opposite to motion at high energy), while the antineutrino is right-handed (spin aligned with motion).</p>
+<hr>
+<p>Have you heard about pion decay and spin suppression due to helicity mismatch? No? Good—I’m glad to be the first to explain it.</p>
+<p>One must be careful when relating handedness to spin orientation because this one-to-one correspondence only holds in the high-energy limit or for massless particles. For neutrinos, this is always true:</p>
+<ul>
+<li>All <strong>neutrinos</strong> are left-handed,</li>
+<li>All <strong>antineutrinos</strong> are right-handed.</li>
+</ul>
+<p>This is why, before neutrinos were well understood, right-handed neutrinos were proposed as new physics candidates—even as potential dark matter.</p>
+<hr>
+<p>Due to orthogonality, right-handed and left-handed particles in the massless case do not interact. They could even be entirely different particles with different masses. What connects them is relativity.</p>
+<p>For massive particles, you can apply a boost <span class="math inline">\Lambda^{-1}</span> to bring them to the rest frame and then analyze their spin. But for massless particles, this is impossible—they have no rest frame, and their helicity cannot be flipped.</p>
+<p>Right-handed and left-handed states are called <strong>chiral states</strong>. The <strong>chiral limit</strong> refers to the case where <span class="math inline">m = 0</span>, and particles are purely right- or left-handed.</p>
+<p>Helicity is tied to Lorentz transformations—it’s the spin’s alignment with motion. Chirality is closely related but only equivalent for massless particles. There’s no intuitive picture for chirality unless the particle is ultra-relativistic.</p>
+<p>In the Lagrangian, chiral states are easier to work with because they are defined by projection operators (<span class="math inline">P_L, P_R</span>) and don’t mix under boosts. Helicity states, while easier to visualize, do mix when you change reference frames. A left-handed chiral state remains left-handed no matter how you boost or rotate it.</p>
+</section>
+<section id="flavor-symmetry-and-chiral-limit-in-qcd-lagrangian" class="level3" data-number="0.5">
+<h3 data-number="0.5" class="anchored" data-anchor-id="flavor-symmetry-and-chiral-limit-in-qcd-lagrangian"><span class="header-section-number">0.5</span> Flavor Symmetry and Chiral Limit in QCD Lagrangian</h3>
+<p>Here is the <strong>Lagrangian of QCD</strong>. The Lagrangian of QCD is not the Standard Model. We don’t talk about electromagnetic interactions here. The dynamics of quarks and gluons is described by this Lagrangian:</p>
+<p><span class="math display">
+\mathcal{L}_{\text{QCD}} = \bar{\psi}_I^A (i \gamma^\mu D_\mu - m_I) \psi_I^A - \frac{1}{4} G_{\mu\nu}^A G^{A,\mu\nu}
+</span></p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Key components of the QCD Lagrangian:</p>
+<ul>
+<li><span class="math inline">\bar{\psi}_I^A (i \gamma^\mu D_\mu) \psi_I^A</span>: Kinetic term for quarks</li>
+<li><span class="math inline">\bar{\psi}_I^A m_I \psi_I^A</span>: Mass term</li>
+<li><span class="math inline">G_{\mu\nu}^A G^{A,\mu\nu}</span>: Gluon field strength term</li>
+</ul>
+</div>
+</div>
+</div>
+<p>The <span class="math inline">G</span> is the gluon field. This is the <strong>gauge part</strong> of the Lagrangian. There are many things here:</p>
+<ul>
+<li>The <span class="math inline">\bar{\psi} \partial \psi</span> is the <strong>kinetic term</strong></li>
+<li><span class="math inline">\bar{\psi} m \psi</span> is the <strong>mass term</strong></li>
+<li>The <span class="math inline">G</span> inside the covariant derivative gives the <strong>interaction</strong> with the gauge field</li>
+</ul>
+<hr>
+<p>The <span class="math inline">I</span> is the index for the <strong>flavor</strong>. The main point is that <span class="math inline">I</span> gives flavor, which is <span class="math inline">U, D, S, C, B, T</span>—one of the six flavors. The <span class="math inline">A</span> is the <strong>color index</strong>. The <span class="math inline">T</span> is connected to the local gauge transformation.</p>
+<p>I hope you’re not afraid of these words. We discussed them before. “<strong>Gauge</strong>” means you can modify this; you can gauge. It means there is a <strong>symmetry</strong> of the Lagrangian, and there are many symmetries here. One of them, discussed in the first lecture, is the <strong>local gauge transformation</strong>, where you can readjust the phase of the color part of the fermion wave function.</p>
+<hr>
+<p>The <span class="math inline">\psi</span> is a <strong>fermion wave function</strong>. It has many components, but the color components are in a three-state vector. This is something we can adjust with a local transformation. We do this using a matrix exponent with parameters that depend on the spacetime point <span class="math inline">x</span>. This adjustment can be done at every point of spacetime—that’s what “<strong>local</strong>” means. This local transformation determines how gluons and quarks interact, and that’s how we construct the covariant derivative:</p>
+<p><span class="math display">
+D_\mu \psi = (\partial_\mu - i g T^A G_\mu^A) \psi
+</span></p>
+<hr>
+<p>We don’t go deeper into this; instead, we look at the <strong>flavor symmetry</strong>. The masses of the light quarks—<span class="math inline">U, D,</span> and <span class="math inline">S</span>—are very small compared to the scale of quantum chromodynamics, which is about <strong>1 GeV</strong>. That’s why we consider the <strong>chiral limit</strong>, setting these masses to zero. This is the basis for the low-energy expansion, where the small parameter is the ratio of the quark mass or momentum to <span class="math inline">\Lambda_{\text{QCD}}</span>. This leads to our <strong>effective theory</strong>.</p>
+<hr>
+<p>What I wanted to discuss now is the <strong>flavor transformation</strong>. Flavor transformation means the flavor indices of the wave function can be rotated. We consider a global <span class="math inline">SU(3)</span> flavor symmetry. The flavor part of the wave function has three components. We started with <span class="math inline">I</span> as one of six flavors, but for simplicity, we now focus on the light quarks. The transformation is a global <span class="math inline">SU(3)</span>, represented by a <span class="math inline">3 \times 3</span> matrix. We can rotate or readjust this wave function freely.</p>
+<p>It’s important that this is <strong>global</strong>—we don’t allow the transformation parameters <span class="math inline">\alpha</span> to depend on spacetime coordinates. The QCD Lagrangian is symmetric under this transformation. Wherever <span class="math inline">\psi</span> appears, the phases cancel each other. This is straightforward to see.</p>
+<hr>
+<p>What might be confusing is the <span class="math inline">T</span>. <span class="math inline">T</span> is a <strong>Gell-Mann matrix</strong>, and you might wonder how it interacts with the <span class="math inline">D_\mu</span>, since <span class="math inline">D_\mu</span> also contains <span class="math inline">T</span>. But the <span class="math inline">T</span> inside <span class="math inline">D_\mu</span> is the <strong>color Gell-Mann matrix</strong>, acting in a different space. In the flavor space, it’s just the identity—there are no matrices here. So the flavor transformation is simple.</p>
+<p>The phase comes from the Hermitian conjugate—or rather, the Dirac adjoint <span class="math inline">\bar{\psi} = \psi^\dagger \gamma^0</span>. For clarity, let’s label the indices: <span class="math inline">\alpha^a T^a</span>, where <span class="math inline">a</span> runs from 1 to 8 for <span class="math inline">SU(3)</span>.</p>
+<hr>
+<p>Now, we project the states into <strong>left- and right-handed components</strong> using the chirality operators:</p>
+<p><span class="math display">
+\psi_L = P_L \psi = \frac{1 - \gamma_5}{2} \psi, \quad \psi_R = P_R \psi = \frac{1 + \gamma_5}{2} \psi
+</span></p>
+<p>The <strong>vector part</strong> of the interaction is <span class="math inline">\bar{\psi}_L \gamma^\mu D_\mu \psi_L + \bar{\psi}_R \gamma^\mu D_\mu \psi_R</span>. There is no mixing between left and right components. The covariant derivative <span class="math inline">D_\mu</span> doesn’t affect the flavor space, so it doesn’t change anything here. The <span class="math inline">\gamma^\mu</span> could have been <span class="math inline">D_\mu</span>, but I didn’t say that.</p>
+</section>
+<section id="chiral-symmetry-and-its-spontaneous-breaking-in-qcd" class="level3" data-number="0.6">
+<h3 data-number="0.6" class="anchored" data-anchor-id="chiral-symmetry-and-its-spontaneous-breaking-in-qcd"><span class="header-section-number">0.6</span> Chiral Symmetry and Its Spontaneous Breaking in QCD</h3>
+<p><strong>Possible symmetry.</strong> The <strong>chiral symmetry</strong> is the transformation of the right and left components independently. So we want to consider a symmetry.</p>
+<p>Let’s check if everything is fine. Here is a three-component vector in the flavor space, <span class="math inline">SU(3)</span>. And here is a <span class="math inline">3 \times 3</span> matrix. The parameter <span class="math inline">\alpha</span> does not depend on the coordinates—this is a <strong>global transformation</strong>.</p>
+<p>We introduce parameters for the left-handed rotation and right-handed states rotation. We count eight numbers here and eight numbers there, giving <strong>16 random numbers</strong> in total. We apply this transformation, and the Lagrangian doesn’t change unless it has mass.</p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Chiral Transformation of Quark Fields</strong>: <span class="math display">
+q_L \rightarrow e^{i \theta_L^a T^a} q_L, \quad q_R \rightarrow e^{i \theta_R^a T^a} q_R
+</span> where <span class="math inline">q_L</span> and <span class="math inline">q_R</span> are the left- and right-handed quark fields, <span class="math inline">T^a</span> are the generators of <span class="math inline">SU(3)</span>, and <span class="math inline">\theta_L^a, \theta_R^a</span> are transformation parameters.</p>
+</div>
+</div>
+</div>
+<p><strong>How do we see that it doesn’t change if the mass is zero?</strong> Because left-handed and right-handed states don’t talk to each other. An extra phase appears here and cancels with the one there—same for the other terms. The symmetry is only broken when mass terms appear. That’s <strong>chiral symmetry</strong>.</p>
+<p>The mass term mixes the two components. Here is one combination of the <span class="math inline">\alpha</span> parameters, and here is the other one. The phases no longer cancel, so the mass term breaks chiral symmetry explicitly.</p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Mass Term Breaking Chiral Symmetry</strong>: <span class="math display">
+\mathcal{L}_{\text{mass}} = -m \bar{q} q = -m (\bar{q}_L q_R + \bar{q}_R q_L)
+</span> This term mixes left- and right-handed components, explicitly breaking chiral symmetry.</p>
+</div>
+</div>
+</div>
+<p><strong>Now, something I won’t derive but you might have heard:</strong> chiral symmetry is also <strong>spontaneously broken</strong>. Even if you start with no mass term in QCD at low energy, the quarks generate a non-zero expectation value through their interactions. The quarks appear massive even without a mass term in the Lagrangian.</p>
+<p>Here is the vacuum. QCD, left side, right side—it’s quite spectacular that the entire symmetry is broken.</p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Spontaneous Symmetry Breaking via Quark Condensate</strong>: <span class="math display">
+\langle \bar{q} q \rangle \neq 0
+</span> The non-zero vacuum expectation value of the quark condensate signals spontaneous chiral symmetry breaking.</p>
+</div>
+</div>
+</div>
+<p><strong>Imagine a plane of field excitations.</strong> If you’re at zero, chiral symmetry is exact in the Lagrangian, and you can rotate left and right states independently. But the vacuum we live in is not at zero—it’s at a shifted location in field space.</p>
+<p>This happens because the potential of the theory has a shape like the <strong>Higgs potential</strong>. For QCD, quark pairs acquire a non-zero expectation value by interacting, so the vacuum resides at a non-zero point in the field space.</p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Mexican Hat Potential (for Illustration)</strong>: <span class="math display">
+V(\phi) = -\mu^2 |\phi|^2 + \lambda |\phi|^4
+</span> Analogous to the Higgs mechanism, this potential shape describes spontaneous symmetry breaking, where <span class="math inline">\phi</span> represents the order parameter (e.g., quark condensate in QCD).</p>
+</div>
+</div>
+</div>
+<p><strong>This continuous symmetry-breaking effect appears in many areas of physics:</strong> superconductors (Cooper pairs), the Higgs mechanism, and others. The mechanism is always the same. You have an exact theory at zero in the coordinate space, but once you move away, symmetry breaks spontaneously.</p>
+<p><strong>Think of a Mexican hat potential.</strong> The interaction integrates over gluons, and the resulting potential has this shape. We could live in a vacuum with perfect chiral symmetry, but energetically, it’s favorable to be where the expectation value is non-zero. That’s <strong>spontaneous symmetry breaking</strong>.</p>
+<p><strong>In addition to spontaneous breaking, QCD has explicit symmetry breaking from non-zero quark masses.</strong> Spontaneous breaking is the major effect, captured by the theory. Explicit breaking is smaller since quark masses are much less than <span class="math inline">\Lambda_{\text{QCD}}</span>.</p>
+<p><strong>This is where chiral perturbation theory comes in.</strong> It builds on chiral symmetry, with spontaneous breaking as an outcome. The breaking is treated as a perturbation.</p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Chiral Lagrangian (Low-Energy QCD)</strong>: <span class="math display">
+\mathcal{L}_{\text{chiral}} = \frac{f_\pi^2}{4} \text{Tr}[\partial_\mu U \partial^\mu U^\dagger] + \cdots
+</span> Here, <span class="math inline">U = e^{i \pi^a T^a / f_\pi}</span> encodes the pseudo-Goldstone bosons (pions), and <span class="math inline">f_\pi</span> is the pion decay constant. The ellipsis represents higher-order terms in chiral perturbation theory.</p>
+</div>
+</div>
+</div>
+<p><strong>We won’t go into details of chiral perturbation theory.</strong> Next lecture, I’ll write the chiral Lagrangian, but we won’t have time to explore it deeply. For that, I’d recommend dedicated courses—we have experts in the theory department.</p>
+<p>I wanted to give you the <strong>general concepts</strong> and an <strong>experimentalist’s perspective</strong>.</p>
+<hr>
+<p><strong>Question:</strong> What is the variable in this plane? Is it the vacuum expectation value? <strong>Answer:</strong> Yes, the axis represents the expectation value of the field. The potential is drawn as a function of this expectation value.</p>
+<p><strong>Question:</strong> Is the vacuum state always the correct one? <strong>Answer:</strong> It’s the state with the lowest energy, where the expectation value is non-zero.</p>
+<p><strong>Question:</strong> What’s on the axis? <strong>Answer:</strong> The expectation value of the field. Strictly speaking, the potential in quantum field theory is defined via the expectation value.</p>
+<p><strong>I’m not entirely happy with this analogy</strong> because the field space should be complex, but let me think of a simpler model, like superconductors, where this is clearer.</p>
+<p><strong>Question:</strong> You mentioned electron-positron pairs earlier, but Cooper pairs are two electrons. <strong>Answer:</strong> Correct, Cooper pairs are two electrons.</p>
+<p><strong>Question:</strong> Did you cover the Higgs mechanism in the particle physics course? <strong>Answer:</strong> Some of it, but not deeply.</p>
+<p><strong>Question:</strong> What about heavy quarks? <strong>Answer:</strong> For heavy quarks, you use a different expansion—potential non-relativistic QCD (pNRQCD).</p>
+<hr>
+<p>We’ll have a project discussion on <strong>June 28th</strong> for bachelors, masters, and anyone interested in internships. I’ll send details later.</p>
+<p><strong>Thanks!</strong></p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
