@@ -21,6 +21,7 @@ In the 1950s and 1960s, there were a lot of new big accelerators built, like for
 
 If you think about the periodic table, for example, we had all these atoms and we were able to group them together according to their proton and neutron numbers. We knew how many electrons were in the outermost shells, which helped us to group them together in the periodic table. This is kind of what we want to do now with hadrons. In the context of particle physics or hadron physics, the characteristics that we choose to group them together are according to their quantum numbers. We will now discuss different quantum numbers and why they were introduced and how they helped us to group together certain particles.
 
+### Isospin Introduction
 
 Let's start with isospin. In 1932 the neutron was discovered, and different experiments showed that when we look into proton-proton interactions, proton-neutron interactions, or neutron-neutron interactions, they had a very similar interaction strength. If you look at the rate at which these interactions were taking place, then they were basically the same. Experiments showed that all of these had similar interaction strength. If you also look at the mass of the proton and neutron, it's almost the same at 939 MeV. This led to the suggestion that we can consider proton and neutron to be the same particle, but to have two different states that it can occur in, described by the isospin.
 
@@ -39,6 +40,7 @@ The isospin quantum numbers for quarks are:
 - Down quark: $I_3(d) = -\frac{1}{2}$
 For antiquarks, the signs are reversed: $I_3(\bar{u}) = -\frac{1}{2}$ and $I_3(\bar{d}) = +\frac{1}{2}$ to maintain consistent SU(2) transformation properties.
 :::
+### Mathematical Framework of Isospin
 
 Isospin is not exactly a property like the spin, but mathematically we can treat the isospin like the spin. It follows the SU(2) algebra. In the last lecture, you already heard a little bit about the SU(2) algebras. Let me remind you a couple of things. It holds for the matrices, and we can describe this as a rotation matrix. Here, these sigma matrices are just the Pauli matrices. For the isospin operator, it was the same as for the spin where you had $J$ instead of an $I$.
 
@@ -53,6 +55,7 @@ The SU(2) isospin algebra follows these key relations:
 - Ladder operators: $I_\pm = I_1 \pm iI_2$
 - Casimir operator: $I^2|I,I_3\rangle = I(I+1)|I,I_3\rangle$
 :::
+### Meson Isospin Combinations
 
 Now let's look at a couple of examples. For example, if you want to think about the up and down quarks: last time you heard that we can form mesons taking a quark and an antiquark. Let's think about what kind of particles we can get if you combine up and down quarks with antiquarks for the mesons.
 
@@ -90,6 +93,7 @@ Just one more thing that I need to mention is that for the antiquarks we get $I_
 
 Now let's take a step forward. I also wanted to mention what kind of particles we have here. This triplet typically pions: this would be a $\pi^+$, this would be a $\pi^0$, and here $\pi^-$. We can also have rho particles: they're basically the same, but there's one thing that distinguishes these two, and that's their spin. Here we have antiparallel spin, spin zero, and here they have parallel spin, but otherwise they're the same. For the singlets we can have here an omega and here eta prime. Choosing this isospin quantum number, we can already group together some particles.
 
+### Meson-Nucleon Systems and Baryons
 
 Let's now go one step further and think about if you take for example a pion beam and shoot it on a proton target. We have a pion with isospin 1 and a nucleon target with isospin $\frac{1}{2}$. What kind of isospin states can you get out of this? If you combine isospin 1 and isospin $\frac{1}{2}$, you add this up. What do you guess? It's either $\frac{3}{2}$ or $\frac{1}{2}$.
 
@@ -102,6 +106,7 @@ I also wanted to mention what this actually means, what we're writing down. Basi
 If you have isospin in SU(2), you get these four projections. This can be actually assigned to particles that were found at the time: these are called delta particles. We have $\Delta^{++}, \Delta^+, \Delta^0, \Delta^-$. They also give you the mass $m_\Delta = 1232\text{ MeV}$.
 
 I want to do one last example. Right now we have looked into meson systems and combining a meson and a nucleon system. What about if you just combine three quarks to get baryons? Then you would have basically $2 \times 2 \times 2$: three quarks, and there are always two projections possible for $\pm\frac{1}{2}$. We can now use what we have already seen here: $2 \times 2$ gives us $3 + 1$. (see Figure 1) This is what we had before: $\mathbf{2} \otimes \mathbf{2} \otimes \mathbf{2} = \mathbf{4} \oplus \mathbf{2} \oplus \mathbf{2}$. This gives us four, eight: $\frac{3}{2}$ and we have here two out of spin doublets with isospin $\frac{1}{2}$.
+### Experimental Significance and Historical Context
 
 What is this good for in isospin? You will later also see in the exercises that we can actually use this quantum number to see why certain cross sections that were measured are of different sizes. 
 
@@ -304,6 +309,7 @@ Generally, what I always find difficult with histories like what is known versus
 
 I should have perhaps asked this earlier when you introduced strangeness in the context of cosmic rays.
 
+### Particle Identification Through Invariant Mass
 
 The fundamental practical question is: how do you distinguish kaons from other particles using just invariant masses? (see Figure 3) (see Figure 10)
 
@@ -314,6 +320,7 @@ This relativistic invariant allows identification of particle resonances from de
 :::
 You can only look at the invariant mass in these cases. You detect the proton and the pions, then examine the spectra to identify what's known versus unknown.
 
+### Historical Discovery Timeline and Strange Particles
 
 These particles were called "strange" because researchers were confused about why they only appeared in pairs and had longer lifetimes than other particles. (see Figure 3)
 
@@ -329,6 +336,7 @@ The pions were discovered relatively quickly after fundamental particles:
 
 Since many are charged, you can measure them directly.
 
+### Conservation Laws and Quantum Numbers
 
 You mentioned **C-parity** - how was that introduced? Was it used to say certain decays aren't allowed? (see Figure 10)
 
@@ -341,6 +349,7 @@ C-parity describes how particles transform into their antiparticles under charge
 I don't know exactly when charge conjugation was introduced, but it emerged when people started thinking systematically about particles and antiparticles - directly with the positron in the 1930s, before the antiproton discovery.
 
 This highlights the difficulty: sometimes concepts come from theory, sometimes from experiments. It's interesting how the omega baryon was predicted, but also how quantum numbers were introduced based on cross-section measurements.
+### Quark Model Development and Mass Patterns (see Figure 11)
 
 Historically, the multiplets were mostly correct - I only added the quark content for clarity. When multiplets were assembled, researchers postulated there might be smaller substructure, initially called "partons" before becoming "quarks." (see Figure 2) (see Figure 10)
 
