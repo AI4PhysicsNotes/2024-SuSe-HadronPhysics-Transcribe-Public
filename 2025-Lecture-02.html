@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.25">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="">
+<meta name="dcterms.date" content="2025-01-01">
+
+<title>(2025) Lecture 2</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-065a5179aebd64318d7ea99d77b64a9e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-7d3a565c23c4d3b0e7c030e96a8964f3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="quarto-light">
+
+<div id="quarto-search-results"></div>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#isospin-and-hadron-classification" id="toc-isospin-and-hadron-classification" class="nav-link active" data-scroll-target="#isospin-and-hadron-classification"><span class="header-section-number">1</span> Isospin and Hadron Classification</a>
+  <ul class="collapse">
+  <li><a href="#isospin-introduction" id="toc-isospin-introduction" class="nav-link" data-scroll-target="#isospin-introduction"><span class="header-section-number">1.1</span> Isospin Introduction</a></li>
+  <li><a href="#mathematical-framework-of-isospin" id="toc-mathematical-framework-of-isospin" class="nav-link" data-scroll-target="#mathematical-framework-of-isospin"><span class="header-section-number">1.2</span> Mathematical Framework of Isospin</a></li>
+  <li><a href="#meson-isospin-combinations" id="toc-meson-isospin-combinations" class="nav-link" data-scroll-target="#meson-isospin-combinations"><span class="header-section-number">1.3</span> Meson Isospin Combinations</a></li>
+  <li><a href="#meson-nucleon-systems-and-baryons" id="toc-meson-nucleon-systems-and-baryons" class="nav-link" data-scroll-target="#meson-nucleon-systems-and-baryons"><span class="header-section-number">1.4</span> Meson-Nucleon Systems and Baryons</a></li>
+  </ul></li>
+  <li><a href="#the-eightfold-way-and-quark-model" id="toc-the-eightfold-way-and-quark-model" class="nav-link" data-scroll-target="#the-eightfold-way-and-quark-model"><span class="header-section-number">2</span> The Eightfold Way and Quark Model</a></li>
+  <li><a href="#unraveling-strange-particles-and-quantum-numbers" id="toc-unraveling-strange-particles-and-quantum-numbers" class="nav-link" data-scroll-target="#unraveling-strange-particles-and-quantum-numbers"><span class="header-section-number">3</span> Unraveling Strange Particles and Quantum Numbers</a>
+  <ul class="collapse">
+  <li><a href="#particle-identification-through-invariant-mass" id="toc-particle-identification-through-invariant-mass" class="nav-link" data-scroll-target="#particle-identification-through-invariant-mass"><span class="header-section-number">3.1</span> Particle Identification Through Invariant Mass</a></li>
+  <li><a href="#historical-discovery-timeline-and-strange-particles" id="toc-historical-discovery-timeline-and-strange-particles" class="nav-link" data-scroll-target="#historical-discovery-timeline-and-strange-particles"><span class="header-section-number">3.2</span> Historical Discovery Timeline and Strange Particles</a></li>
+  <li><a href="#conservation-laws-and-quantum-numbers" id="toc-conservation-laws-and-quantum-numbers" class="nav-link" data-scroll-target="#conservation-laws-and-quantum-numbers"><span class="header-section-number">3.3</span> Conservation Laws and Quantum Numbers</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">(2025) Lecture 2</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">January 1, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><strong>Presenter</strong>: Farah Afzal</p>
+<p><strong>Note Taker</strong>: Anna Zimmer</p>
+<section id="isospin-and-hadron-classification" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="isospin-and-hadron-classification"><span class="header-section-number">1</span> Isospin and Hadron Classification</h2>
+<p>Welcome everyone to today’s lecture. It will be mostly about classification of hadrons. I will walk you a little bit through the history of how important discoveries were made and what we learned from there about the hadrons and how we can group them together.</p>
+<p>In the 1950s and 1960s, there were a lot of new big accelerators built, like for example the Bevatron. It came into operation in 1954. It was a proton accelerator with energies of up to 13 GeV. These high energy protons were then shot at a fixed target, and a lot of different particles were produced and detected. They found over 100 new particles, which was then called the particle zoo. Physicists of the time had to think about how to organize these particles: is there some pattern? Are these all fundamental particles? This is what we will be talking about today.</p>
+<p>If you think about the periodic table, for example, we had all these atoms and we were able to group them together according to their proton and neutron numbers. We knew how many electrons were in the outermost shells, which helped us to group them together in the periodic table. This is kind of what we want to do now with hadrons. In the context of particle physics or hadron physics, the characteristics that we choose to group them together are according to their quantum numbers. We will now discuss different quantum numbers and why they were introduced and how they helped us to group together certain particles.</p>
+<section id="isospin-introduction" class="level3" data-number="1.1">
+<h3 data-number="1.1" class="anchored" data-anchor-id="isospin-introduction"><span class="header-section-number">1.1</span> Isospin Introduction</h3>
+<p>Let’s start with isospin. In 1932 the neutron was discovered, and different experiments showed that when we look into proton-proton interactions, proton-neutron interactions, or neutron-neutron interactions, they had a very similar interaction strength. If you look at the rate at which these interactions were taking place, then they were basically the same. Experiments showed that all of these had similar interaction strength. If you also look at the mass of the proton and neutron, it’s almost the same at 939 MeV. This led to the suggestion that we can consider proton and neutron to be the same particle, but to have two different states that it can occur in, described by the isospin.</p>
+<p>This means that the strong interaction does not distinguish between proton and neutron. The only time when we know that there are different particles is in an electromagnetic field. We can describe them as the same particle, the nucleon, and put them into an isospin doublet:</p>
+<p><span class="math display">N = \begin{pmatrix} p \\ n \end{pmatrix}</span></p>
+<p>This is an analog property like the spin: if you look at the electron, we can have either spin up or spin down. This is similar here. At the level of quarks, since protons and neutrons are composed of up and down quarks, this means that the strong interaction does not distinguish between up and down.</p>
+<p>The strong interaction is not capable of distinguishing between the different flavors of down and up. We can write that the up quark has an isospin of <span class="math inline">I = \frac{1}{2}</span> with the third component <span class="math inline">I_3(u) = +\frac{1}{2}</span>, and the down quark with <span class="math inline">I_3(d) = -\frac{1}{2}</span>.</p>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>The isospin quantum numbers for quarks are:</p>
+<ul>
+<li>Up quark: <span class="math inline">I_3(u) = +\frac{1}{2}</span></li>
+<li>Down quark: <span class="math inline">I_3(d) = -\frac{1}{2}</span> For antiquarks, the signs are reversed: <span class="math inline">I_3(\bar{u}) = -\frac{1}{2}</span> and <span class="math inline">I_3(\bar{d}) = +\frac{1}{2}</span> to maintain consistent SU(2) transformation properties.</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="mathematical-framework-of-isospin" class="level3" data-number="1.2">
+<h3 data-number="1.2" class="anchored" data-anchor-id="mathematical-framework-of-isospin"><span class="header-section-number">1.2</span> Mathematical Framework of Isospin</h3>
+<p>Isospin is not exactly a property like the spin, but mathematically we can treat the isospin like the spin. It follows the SU(2) algebra. In the last lecture, you already heard a little bit about the SU(2) algebras. Let me remind you a couple of things. It holds for the matrices, and we can describe this as a rotation matrix. Here, these sigma matrices are just the Pauli matrices. For the isospin operator, it was the same as for the spin where you had <span class="math inline">J</span> instead of an <span class="math inline">I</span>.</p>
+<p>Generally we write these states always with the isospin and then the third component: <span class="math inline">|I, I_3 \rangle</span>. If we apply, for example, the <span class="math inline">I_3</span> operator to up, then we just get the eigenvalue <span class="math inline">+\frac{1}{2}</span>. We have here the lowering operators. If you have the isospin <span class="math inline">I</span>, then we can have different projections <span class="math inline">I_3</span> from <span class="math inline">I</span> down to <span class="math inline">-I</span>, so you have <span class="math inline">2I + 1</span> projections. With these lowering operators, you can go from one projection to the next. If you apply this to a state, you get out the Clebsch-Gordan coefficients.</p>
+<p>This is just to remind you how this SU(2) algebra works.</p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>The SU(2) isospin algebra follows these key relations:</p>
+<ul>
+<li>Commutation relations: <span class="math inline">[I_i, I_j] = i\epsilon_{ijk}I_k</span></li>
+<li>Ladder operators: <span class="math inline">I_\pm = I_1 \pm iI_2</span></li>
+<li>Casimir operator: <span class="math inline">I^2|I,I_3\rangle = I(I+1)|I,I_3\rangle</span></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="meson-isospin-combinations" class="level3" data-number="1.3">
+<h3 data-number="1.3" class="anchored" data-anchor-id="meson-isospin-combinations"><span class="header-section-number">1.3</span> Meson Isospin Combinations</h3>
+<p>Now let’s look at a couple of examples. For example, if you want to think about the up and down quarks: last time you heard that we can form mesons taking a quark and an antiquark. Let’s think about what kind of particles we can get if you combine up and down quarks with antiquarks for the mesons.</p>
+<p>If you look here at the isospin, we have for both up and down quarks isospin <span class="math inline">\frac{1}{2}</span>. We combine <span class="math inline">\frac{1}{2}</span> with another <span class="math inline">\frac{1}{2}</span>. What can we get if we have two <span class="math inline">\frac{1}{2}</span> isospin particles? We can have isospin of 0 or 1, just like you’re used to in the spin. If you think about the dimensions here, we always have two projections for one half: <span class="math inline">+\frac{1}{2}</span> or <span class="math inline">-\frac{1}{2}</span>. This is the dimensions here: <span class="math inline">2 \times 2</span>. To indicate that we have here an antiquark, I place this bar here on top.</p>
+<p>If you have an isospin of 1, how many projections can we have for <span class="math inline">I_3</span>? You can have <span class="math inline">2I + 1</span> projections. For <span class="math inline">I = 1</span>, you get three: <span class="math inline">+1, 0, -1</span>. For <span class="math inline">I = 0</span>, just zero. If you take these as dimensions, then you would get <span class="math inline">3 + 1</span>. This is how you would write it down according to group theory:</p>
+<p><span class="math display">\mathbf{2} \otimes \mathbf{\bar{2}} = \mathbf{3} \oplus \mathbf{1}</span></p>
+<p>I will also discuss a little bit later how we can understand this in terms of matrices. Here basically you have a <span class="math inline">4 \times 4</span> matrix and then you can decompose it into two components: into a <span class="math inline">3 \times 3</span> and a <span class="math inline">1 \times 1</span> matrix.</p>
+<div id="fig-fg1" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2025-Lecture-02-images/fig1.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Excerpt of a Clebsch–Gordan coefficient table for the spin combination of 1/2 and 1/2. The table lists the coefficients used to couple two spin-1/2 particles into total spin states, showing how individual spin components combine to form singlet and triplet configurations.
+</figcaption>
+</figure>
+</div>
+<p>This is a triplet isospin state and this is an isospin singlet. This is how these different states would look like written down in terms of up and down quarks and form mesons.</p>
+<p>Now I want to briefly discuss with you where these factors come from. Like in the case of spins, you can use Clebsch-Gordan coefficients if you combine two spins or two isospins to figure out what kind of signs and coefficients you have in front of them. I will just write down a small fraction of the Clebsch-Gordan coefficients. We are combining here either spin <span class="math inline">\frac{1}{2}</span> with <span class="math inline">\frac{1}{2}</span>. These are the isospins of the two particles that we want to combine, and these are then the projections, the <span class="math inline">I_3</span> components.</p>
+<p>I will write the one now on top. Here you can see the outcome: the new particles that you get out and below it you see the projection <span class="math inline">I_3</span> of this combination. We said we can have an isospin triplet with isospin 1, so we get here this one three times with the projection <span class="math inline">+1, 0, -1</span>. We have here the singlet with zero and the projection zero. Then here we can see the Clebsch-Gordan coefficients, and you also have to always take the square root. If you now look here, you can then see why these states look the way they do.</p>
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>The explicit wavefunctions for the pion triplet members are:</p>
+<ul>
+<li><span class="math inline">|\pi^+\rangle = -|u\bar{d}\rangle</span></li>
+<li><span class="math inline">|\pi^0\rangle = \frac{1}{\sqrt{2}}(|u\bar{u}\rangle - |d\bar{d}\rangle)</span></li>
+<li><span class="math inline">|\pi^-\rangle = |d\bar{u}\rangle</span> These come from Clebsch-Gordan coefficients for combining isospin-1/2 states.</li>
+</ul>
+</div>
+</div>
+</div>
+<p>Just one more thing that I need to mention is that for the antiquarks we get <span class="math inline">I_3(\bar{u}) = -\frac{1}{2}</span> and <span class="math inline">I_3(\bar{d}) = +\frac{1}{2}</span>. This minus sign is chosen so the quarks and antiquarks behave in the same way when you apply SU(2) transformations. If you look here at the singlet, we get then from the up and anti-up we get this vector: we have these projections <span class="math inline">+\frac{1}{2}, -\frac{1}{2}</span>, so we get this vector with the square root. You do the same for down anti-down: you have <span class="math inline">-\frac{1}{2}, +\frac{1}{2}</span>, you get here this minus sign, but because there’s also here this minus sign, it ends up being a plus. Then you do the same with the triplet one states. I just wanted to show you how it’s done, because we also practice this a lot more in the exercises.</p>
+<p>Now let’s take a step forward. I also wanted to mention what kind of particles we have here. This triplet typically pions: this would be a <span class="math inline">\pi^+</span>, this would be a <span class="math inline">\pi^0</span>, and here <span class="math inline">\pi^-</span>. We can also have rho particles: they’re basically the same, but there’s one thing that distinguishes these two, and that’s their spin. Here we have antiparallel spin, spin zero, and here they have parallel spin, but otherwise they’re the same. For the singlets we can have here an omega and here eta prime. Choosing this isospin quantum number, we can already group together some particles.</p>
+</section>
+<section id="meson-nucleon-systems-and-baryons" class="level3" data-number="1.4">
+<h3 data-number="1.4" class="anchored" data-anchor-id="meson-nucleon-systems-and-baryons"><span class="header-section-number">1.4</span> Meson-Nucleon Systems and Baryons</h3>
+<p>Let’s now go one step further and think about if you take for example a pion beam and shoot it on a proton target. We have a pion with isospin 1 and a nucleon target with isospin <span class="math inline">\frac{1}{2}</span>. What kind of isospin states can you get out of this? If you combine isospin 1 and isospin <span class="math inline">\frac{1}{2}</span>, you add this up. What do you guess? It’s either <span class="math inline">\frac{3}{2}</span> or <span class="math inline">\frac{1}{2}</span>.</p>
+<p>Let me write this properly. What are the dimensions here? For <span class="math inline">I = 1</span>, we know it’s three: we have three different projections that are possible. For <span class="math inline">I = \frac{1}{2}</span>, we have two projections. Here we get four because we have <span class="math inline">\pm\frac{3}{2}</span> and <span class="math inline">\pm\frac{1}{2}</span>, and we get two again for <span class="math inline">\frac{1}{2}</span>. This is how you write this theory:</p>
+<p><span class="math display">\mathbf{3} \otimes \mathbf{2} = \mathbf{4} \oplus \mathbf{2}</span></p>
+<p>I also wanted to mention what this actually means, what we’re writing down. Basically we have here a <span class="math inline">6 \times 6</span> matrix and we can decompose it into matrices of the subspaces here: we have here a <span class="math inline">2 \times 2</span> matrix and here a <span class="math inline">4 \times 4</span> matrix. These are then called irreducible representations. This is basically what we do. For small numbers it’s kind of easy to know and write it down, but if you have larger numbers, there are some methods how you can figure this out. We will not discuss it in more depth, but I just wanted to mention what this actually means.</p>
+<p>If you have isospin in SU(2), you get these four projections. This can be actually assigned to particles that were found at the time: these are called delta particles. We have <span class="math inline">\Delta^{++}, \Delta^+, \Delta^0, \Delta^-</span>. They also give you the mass <span class="math inline">m_\Delta = 1232\text{ MeV}</span>.</p>
+<p>I want to do one last example. Right now we have looked into meson systems and combining a meson and a nucleon system. What about if you just combine three quarks to get baryons? Then you would have basically <span class="math inline">2 \times 2 \times 2</span>: three quarks, and there are always two projections possible for <span class="math inline">\pm\frac{1}{2}</span>. We can now use what we have already seen here: <span class="math inline">2 \times 2</span> gives us <span class="math inline">3 + 1</span>. (see Figure <a href="#fig-fg1" class="quarto-xref">Figure&nbsp;1</a>) This is what we had before: <span class="math inline">\mathbf{2} \otimes \mathbf{2} \otimes \mathbf{2} = \mathbf{4} \oplus \mathbf{2} \oplus \mathbf{2}</span>. This gives us four, eight: <span class="math inline">\frac{3}{2}</span> and we have here two out of spin doublets with isospin <span class="math inline">\frac{1}{2}</span>. ### Experimental Significance and Historical Context</p>
+<p>What is this good for in isospin? You will later also see in the exercises that we can actually use this quantum number to see why certain cross sections that were measured are of different sizes.</p>
+<div id="fig-fg2" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2025-Lecture-02-images/fig2.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Diagram showing the cross section on the y-axis and the mass on the x-axis, with two curves representing pπ⁺ and pπ⁻ interactions. A clear resonance peak appears at the Δ mass, indicating the formation of the Δ resonance during scattering.
+</figcaption>
+</figure>
+</div>
+<p>If we take for example the cross section for <span class="math inline">\pi^+ p</span> and for <span class="math inline">\pi^- p</span>, if you look here in the delta mass region, you see that there is a factor of three difference: <span class="math inline">\frac{\sigma_{\pi^+p}}{\sigma_{\pi^-p}} \approx 3:1</span>. You can figure out in the exercises and classwork why there are differences in the cross sections between the different reactions.</p>
+<p>I introduced this isospin concept for protons and neutrons. How was that in experiment? They also write like up and down quarks—that wasn’t there. This concept in the 1950s: how should you imagine this? They saw like, oh, well, you produce pions and rho—was it also there? Yes, they also found rho later on. They introduced this concept to find symmetries or something. They were first just looking for patterns that they could find between different particles. This was like purely mathematical looking: just how can we group these together?</p>
+<p>If you take the isospin, then we can already group some of these particles together. Like I said, we can group the pions or the rhos into triplets. We can have the delta in an isospin quadruplet and things like this. Then later bigger patterns were also seen. That’s where this lecture is headed towards: we will look later next into the strangeness and then hypercharge and so on.</p>
+<p>The reason why I’m asking is because if you look just at protons and neutrons, you might initially think, oh, you have spin and charge and that’s all they do. Why would you introduce isospin? But it’s only when you do these kinds of reactions: proton-proton, proton-neutron, and neutron-neutron, and if you see that the reaction rates are pretty much the same, then you can come to the conclusion: okay, maybe the strong interaction doesn’t care about whether it’s a proton or a neutron. That’s where the isospin idea came from.</p>
+<p>It comes down to once you start to look at cross sections, you start to see that certain reactions are stronger and you need to introduce new concepts in the theory. Here it was actually that they are pretty much similar. If you look at these different experiments and you see that the strong interaction does not seem to care about whether it’s a proton or a neutron, on quark level it means then it doesn’t care about up or down quark. That’s why we also placed not just the proton and neutron into an isospin doublet, but also the up and down quarks.</p>
+</section>
+</section>
+<section id="the-eightfold-way-and-quark-model" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="the-eightfold-way-and-quark-model"><span class="header-section-number">2</span> The Eightfold Way and Quark Model</h2>
+<p>So first, physicists had this kind of an isospin doublet. They found all these other particles like the pions and kaons and grouped them together, then looked for bigger patterns with also the strangeness included as the next quantum number.</p>
+<p>Around the 1960s, with the Bevatron experiment and large accelerators accessible, they found over 100 particles and didn’t know what to do with them. They later found out we can actually decompose them into smaller particles to understand how, and we are still trying to understand.</p>
+<p>Some particles detected behaved in a strange manner. For example, in cosmic rays with pions going to a carbon target, they could see in a cloud chamber four tracks which look like a V: $ ^+ $, $ ^- $, proton, and $ ^- $.</p>
+<div id="fig-fg3" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2025-Lecture-02-images/fig3.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: A π⁻ from cosmic rays collides with a proton, initiating decay chains involving several intermediate particles. The π⁻ decays into a K⁰ and a Λ⁰, which subsequently decay into π⁻π⁺ and pπ⁻ respectively, illustrating hadronic decay processes.
+</figcaption>
+</figure>
+</div>
+<p>These particles always appeared in pairs and had a fairly long lifetime.</p>
+<p>They concluded by introducing a new quantum number <strong>strangeness</strong> and said that it needs to be conserved. Isospin is also a quantum number conserved in strong interactions.</p>
+<p>How do we assign this quantum number? Particles consisting of up and down quarks have strangeness $ S = 0 $, for example pion, neutron, proton. Particles with strangeness $ S = +1 $ include lambda, and in general these are called hyperons. There are different types of hyperons like lambda, sigmas, cascades, and kaons.</p>
+<p>With this we can form two isospin doublets with $ K^+ $ and $ K^0 $, and similarly $ K^- $ and $ {K^0} $ in an isospin doublet with strangeness $ S = -1 $. They figured since these two come always in pairs that this quantum number needs to be conserved in strong interaction, but it is not conserved in weak interaction.</p>
+<p>Looking at the lambda decay $ p + ^- $, both products don’t have strangeness but this decay can happen. (see Figure <a href="#fig-fg3" class="quarto-xref">Figure&nbsp;3</a>) From the long lifetime this means weak decay. They are produced in strong interaction because we have $ + p p + K^+ $ and $ n $ hypercharge.</p>
+<p><strong>Hypercharge</strong> $ Y $ is given by baryon number $ B $ and strangeness number $ S $: $ Y = B + S $. For baryon number, if it’s a baryon then it gets $ B = +1 $, if it’s an antibaryon then $ B = -1 $, and if it’s a meson then $ B = 0 $.</p>
+<p>We can’t have certain reactions. For example, if here we didn’t have a lambda but a proton, then this would not happen. Same way here, if you have lambda then we can’t have a $ $ in here. This always comes in pairs, so the strangeness number is conserved.</p>
+<p>Also if you have $ ^- $ in a proton beam, then you can’t have suddenly in the end two mesons only. There needs to be a baryon as well, so the baryon number is conserved.</p>
+<p>From isospin, we had the isospin triplet with projections $ +1 $, $ 0 $, and $ -1 $ correlating to charge: $ -1 $ for $ ^- $, $ 0 $ for $ ^0 $, and $ +1 $ for $ ^+ $. There seems to be a relationship between isospin and charge.</p>
+<p>This is what <strong>Gell-Mann and Nishijima</strong> calculation tells us: the charge can be expressed as the third component of the isospin plus the hypercharge divided by two: $ Q = I_3 + $.</p>
+<p>Let’s check this formula:</p>
+<ul>
+<li>For proton, $ I = $ and $ I_3 = + $. Hypercharge: strangeness $ S = 0 $ for proton, but it’s a baryon so $ B = 1 $, giving $ Y = 1 $. Using the relation, charge $ Q = + = +1 $, as expected.</li>
+<li>For neutron, $ I_3 = - $, $ Y = 1 $, giving $ Q = - + = 0 $.</li>
+</ul>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Key Formulas:</strong></p>
+<ul>
+<li><strong>Gell-Mann–Nishijima Formula:</strong> $ Q = I_3 + $ relates electric charge to isospin and hypercharge</li>
+<li><strong>Hypercharge Definition:</strong> $ Y = B + S $ combines baryon number and strangeness</li>
+<li><strong>Conservation Laws:</strong> $ B_{} = B_{} $ and $ S_{} = S_{} $ (strong interactions only)</li>
+</ul>
+</div>
+</div>
+</div>
+<p>Using strangeness and/or hypercharge in combination with isospin, Gell-Mann and Ne’eman found a much larger pattern for these particles. They can be arranged in bigger multiplets, called the <strong>eightfold way</strong>.</p>
+<p>For these larger patterns they looked not just at the up and down quark, but also included the strange quark. Now we are in the <strong>SU(3) flavor symmetry</strong>. At the time they didn’t know these different quarks existed, but we are just going to look at it in this way.</p>
+<div id="fig-fg4" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2025-Lecture-02-images/fig4.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Diagram plotting the z-component of isospin on the x-axis and strangeness (S) on the y-axis. An inverted triangle connects the up, down, and strange quarks, with each vertex labeled by its corresponding quantum numbers, visualizing the quark model’s flavor structure.
+</figcaption>
+</figure>
+</div>
+<div id="fig-fg6" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2025-Lecture-02-images/fig6.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: Diagram with strangeness on the y-axis and the third component of isospin on the x-axis, showing the baryon octet. Each vertex of the hexagonal arrangement represents a baryon with its quark composition, demonstrating SU(3) flavor symmetry.
+</figcaption>
+</figure>
+</div>
+<p>Plotting the third component of isospin against strangeness for the up, down, and strange quarks, let’s write down the quantum numbers:</p>
+<ul>
+<li>For baryon number each gets $ $ because up, up, down gives total $ 1 $</li>
+<li>Charge for up is $ + $, for down is $ - $</li>
+<li>They’re all fermions with spin $ $</li>
+<li>Strangeness for strange quark is $ -1 $</li>
+</ul>
+<div id="fig-fg7" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2025-Lecture-02-images/fig7.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: Depiction of a baryon decuplet multiplet including Ω⁻, Ξ<em>⁻, Ξ</em>⁰, Σ<em>⁻, Σ</em>⁰, Σ*⁺, and the four Δ states (Δ⁻, Δ⁰, Δ⁺, Δ⁺⁺). Diagonals denote electric charge (Q) and horizontal lines indicate strangeness, with mass differences of roughly 150 MeV between each level.
+</figcaption>
+</figure>
+</div>
+<p>Now looking at bigger patterns for baryons. Baryons are composed of three quarks from up, down, or strange: $ = $. This gives a decuplet and octets. We look at ground state variants arranged into an octet and decuplet.</p>
+<p>Plotting third component of isospin against strangeness (or hypercharge), we have $ S = 0, -1, -2 $.</p>
+<div id="fig-fg8" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2025-Lecture-02-images/fig8.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7: Meson octet diagram showing K⁰, K⁺, π⁻, η, π⁰, π⁺, K⁻, and K̄⁰. The y-axis represents strangeness, the x-axis represents the third component of isospin, and diagonal lines indicate electric charge (Q), highlighting SU(3) meson symmetry.
+</figcaption>
+</figure>
+</div>
+<p>On the horizontal axis are isospin multiplets: isospin doublet for neutron and proton, triplet for sigmas, doublet for cascades.</p>
+<p>Pointing out positions: here is $ I_3 = +, - $, here $ I_3 = 0 $, here $ S = -1 $.</p>
+<div id="fig-fg5" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2025-Lecture-02-images/fig5.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8: Table listing the u, d, and s quarks along with their fundamental quantum numbers. Entries include baryon number (B), electric charge (Q), spin, strangeness (S), isospin (I), z-component of isospin (I₃), and hypercharge (Y).
+</figcaption>
+</figure>
+</div>
+<p>You can see quark content: here all with one strange quark, here with two strange quarks.</p>
+<p>Looking at masses:</p>
+<ul>
+<li>Proton and neutron masses are almost the same, difference about 1 MeV</li>
+<li>Similar for isospin partners</li>
+<li>But in vertical direction, mass difference is much larger: sigma mass difference about 250 MeV, here to here about 130 MeV</li>
+</ul>
+<p>This tells us that isospin symmetry in SU(2) is a good symmetry, but including strange quark it’s pretty much broken. It’s only an approximate symmetry because otherwise we would have same masses for all.</p>
+<p>Working out the pattern: upper row has data, down here only minus. On this axis highest third component, along this axis strangeness $ 0, -1, -2 $.</p>
+<p>All these particles have spin in common. Baryons in octet have spin $ $ and parity $ + $. For decuplet, spin $ $ and parity $ + $. Here spins can be aligned or permutations giving $ $, here all aligned.</p>
+<p>When this pattern was found, the $ ^- $ was not yet discovered. This was a big success to predict its existence, found two years later in bubble chamber experiments with $ K^- + p ^- + K^+ + K^0 $. For strangeness conservation, we need two more kaons.</p>
+<p>$ ^- $ decays into cascade $ ^- $, then further to $ ^0 + ^0 $, $ ^0 $, and $ p + ^- $. Not only predicted existence but roughly predicted mass: looking at masses between horizontal lines, $ $ mass 1232 MeV, sigmas, then $ ^- $ mass around 1680 MeV, with mass spacing roughly 150 MeV.</p>
+<p>All these considerations come from group theory, mathematical descriptions of particles with symmetry considerations. Difference between masses in octet and decuplet is that spin is different, so mass difference accounted to spin-spin or spin-orbit interactions from dynamics. For mesons, with up, down, strange quarks, $ {} = $. On diagonal you have charge: here all charge $ -1 $, middle charge $ 0 $, $ +1 $, $ +2 $. This octet or nonet including $ ’ $ has quantum numbers $ 0^-+ $. (see Figure <a href="#fig-fg8" class="quarto-xref">Figure&nbsp;7</a>)</p>
+<div id="fig-fg9" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2025-Lecture-02-images/fig9.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;9: Vector meson octet including ρ⁻, ω, ρ⁰, ρ⁺, and the K* mesons with charges 0, +, −, and anti-0. The diagram mirrors the pseudoscalar meson octet structure, illustrating similar flavor symmetry among vector mesons.
+</figcaption>
+</figure>
+</div>
+<p>This means quark-antiquark pair have anti-parallel spins, parity $ - $. For spins aligned parallel, spin $ 1 $, parity $ -1 $, charge conjugation $ C $. Parity inverts spatial coordinates, charge conjugation converts particle to antiparticle.</p>
+<p>For baryons, if you know orbital angular momentum $ L $, parity $ P = (-1)^L $. For octet ground states $ L = 0 $, parity $ + $ for $ ^+ $ and $ ^+ $. For mesons, $ P = (-1)^{L+1} $, giving $ - $ for both. Charge conjugation well-defined for neutral mesons, e.g., $ ^0 $ has $ C = +1 $. (see Figure <a href="#fig-fg3" class="quarto-xref">Figure&nbsp;3</a>)</p>
+<p>For decays, parity and C parity are multiplicative. Combining spins of different particles to get total spin. Example: can $ $ meson decay into two pions? For $ ^0 $, $ C = +1 $, multiplied gives $ +1 $, but for $ $, $ C = -1 $, so cannot happen.</p>
+<p>Lastly, consider quark content for $ ^- $ or $ ^{++} $. All spins aligned, flavor content same. With Pauli exclusion principle for fermions, they should be distinguishable by one quantum number. Looking at total wave function: spatial, spin, and flavor.</p>
+<p>For $ L = 0 $, spatial wave function symmetric. Spins all aligned up, symmetric. Flavor all same, symmetric. Physicists introduced new quantum number: <strong>color charge</strong>. This part of wave function must be antisymmetric to get total antisymmetric wave function. (see Figure <a href="#fig-fg5" class="quarto-xref">Figure&nbsp;8</a>) Assign each quark different color: red, green, blue.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2025-Lecture-02-images/fig11.png" class="img-fluid figure-img"></p>
+<figcaption>A step-like diagram with energy ω (in GeV) on the x-axis, showing three discrete levels corresponding to accessible quark flavors. The steps mark quark sets (u,d,s), (u,d,s,c), and (u,d,s,c,b,t), each annotated with example hadrons, providing evidence for the existence of color charge.</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Parity Formulas:</strong></p>
+<ul>
+<li><strong>Baryons:</strong> $ P = (-1)^L $ (ground states have $ L = 0 $, $ P = + $)</li>
+<li><strong>Mesons:</strong> $ P = (-1)^{L+1} $ (ground states have $ L = 0 $, $ P = - $)</li>
+<li><strong>Multiplet Decompositions:</strong>
+<ul>
+<li>Baryons: $ = $</li>
+<li>Mesons: $ {} = $</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<p>Briefly discuss experiment showing three colors. Looked into $ e^+ e^- $ annihilation with virtual photon exchanged, producing different particles: quark-antiquark pairs or leptons like $ ^+ ^- $.</p>
+<p>Measured ratio $ R = $. For leptons no color, so dividing gives proportionality to number of colors. Photon vertex proportional to charge squared, different quark types. (see Figure <a href="#fig-fg4" class="quarto-xref">Figure&nbsp;4</a>)</p>
+<p>Initially up, down, strange quarks measured as peaks in spectrum (rho, omega, pi mesons). When energy high enough, produce charm-anticharm bound states (J/ψ), then B bar states. Calculated steps show number of colors should be three.</p>
+<p>This was historical background on how from detected particles, patterns were seen using eightfold way strangeness, later forming quark model where particles consist of smaller quarks with six flavors and three colors.</p>
+</section>
+<section id="unraveling-strange-particles-and-quantum-numbers" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="unraveling-strange-particles-and-quantum-numbers"><span class="header-section-number">3</span> Unraveling Strange Particles and Quantum Numbers</h2>
+<p>Generally, what I always find difficult with histories like what is known versus what’s not known relates back to my previous question about particle identification methods.</p>
+<p>I should have perhaps asked this earlier when you introduced strangeness in the context of cosmic rays.</p>
+<section id="particle-identification-through-invariant-mass" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="particle-identification-through-invariant-mass"><span class="header-section-number">3.1</span> Particle Identification Through Invariant Mass</h3>
+<p>The fundamental practical question is: how do you distinguish kaons from other particles using just invariant masses? (see Figure <a href="#fig-fg3" class="quarto-xref">Figure&nbsp;3</a>) (see Figure <strong>?@fig-fg10</strong>)</p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Invariant Mass Formula</strong>: <span class="math display">M^2 = \left(\sum E_i\right)^2 - \left(\sum \vec{p}_i\right)^2</span> This relativistic invariant allows identification of particle resonances from decay products. (see Figure <a href="#fig-fg2" class="quarto-xref">Figure&nbsp;2</a>) When analyzing cosmic ray events with protons and pions, peaks in the invariant mass spectrum reveal new particles like kaons.</p>
+</div>
+</div>
+</div>
+<p>You can only look at the invariant mass in these cases. You detect the proton and the pions, then examine the spectra to identify what’s known versus unknown.</p>
+</section>
+<section id="historical-discovery-timeline-and-strange-particles" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="historical-discovery-timeline-and-strange-particles"><span class="header-section-number">3.2</span> Historical Discovery Timeline and Strange Particles</h3>
+<p>These particles were called “strange” because researchers were confused about why they only appeared in pairs and had longer lifetimes than other particles. (see Figure <a href="#fig-fg3" class="quarto-xref">Figure&nbsp;3</a>)</p>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Strangeness Conservation</strong>: <span class="math inline">\Delta S = 0</span> This quantum number explains why strange particles (like kaons) are always produced in pairs and have unexpectedly long lifetimes. Violation occurs only through weak interactions.</p>
+</div>
+</div>
+</div>
+<p>The pions were discovered relatively quickly after fundamental particles:</p>
+<ul>
+<li>Protons were known early</li>
+<li>Neutrons discovered in 1932</li>
+<li>Later in the 1950s: antiprotons and many other particles emerged</li>
+</ul>
+<p>Since many are charged, you can measure them directly.</p>
+</section>
+<section id="conservation-laws-and-quantum-numbers" class="level3" data-number="3.3">
+<h3 data-number="3.3" class="anchored" data-anchor-id="conservation-laws-and-quantum-numbers"><span class="header-section-number">3.3</span> Conservation Laws and Quantum Numbers</h3>
+<p>You mentioned <strong>C-parity</strong> - how was that introduced? Was it used to say certain decays aren’t allowed? (see Figure <strong>?@fig-fg10</strong>)</p>
+<p>Actually, I think it worked the other way around: researchers observed that certain decays weren’t measured, suggesting some quantum number must be violated.</p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Charge Conjugation (C-parity)</strong>: <span class="math inline">C|\psi\rangle = \eta_C|\psi\rangle</span> C-parity describes how particles transform into their antiparticles under charge conjugation, providing selection rules for decays.</p>
+</div>
+</div>
+</div>
+<p>I don’t know exactly when charge conjugation was introduced, but it emerged when people started thinking systematically about particles and antiparticles - directly with the positron in the 1930s, before the antiproton discovery.</p>
+<p>This highlights the difficulty: sometimes concepts come from theory, sometimes from experiments. It’s interesting how the omega baryon was predicted, but also how quantum numbers were introduced based on cross-section measurements. ### Quark Model Development and Mass Patterns (see Figure <strong>?@fig-fg11</strong>)</p>
+<p>Historically, the multiplets were mostly correct - I only added the quark content for clarity. When multiplets were assembled, researchers postulated there might be smaller substructure, initially called “partons” before becoming “quarks.” (see Figure <a href="#fig-fg2" class="quarto-xref">Figure&nbsp;2</a>) (see Figure <strong>?@fig-fg10</strong>)</p>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Quark Model Mass Relations</strong>: <span class="math display">M(\Omega^-) - M(\Xi^*) \approx M(\Xi^*) - M(\Sigma^*) \approx M(\Sigma^*) - M(\Delta) \approx 150\text{ MeV}</span> The regular mass spacing in baryon multiplets provided crucial evidence for the quark model, suggesting these particles differ by replacing one quark with a heavier strange quark.</p>
+</div>
+</div>
+</div>
+<p>The mass differences already indicated there should be different quark content in these particles - for the deltas, sigmas, cascades, and so on. Researchers observed these mass differences and reasoned that the last undetected particle would also have approximately 150 MeV more mass than the others, which turned out to be correct.</p>
+<p>The original quark paper is remarkably brief - just two pages - so you can easily look up how they introduced the concept.</p>
+<p>It was an exciting time: they predicted the omega-minus in the quark model, and it was experimentally detected and discovered in 1964.</p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Omega-Minus Discovery</strong>: <span class="math inline">K^- + p \to \Omega^- + K^+ + K^0</span> This was the experimental reaction that discovered the <span class="math inline">\Omega^-</span> particle, confirming quark model predictions.</p>
+</div>
+</div>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
