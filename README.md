@@ -18,3 +18,16 @@ python3 generate_index.py
 ```
 
 The index will be generated as `Lectures/index.html` with buttons for all available lectures and gray placeholders for missing ones.
+
+### LLMs used in this project
+
+External:
+ - Deepseek for main processing
+ - OpenAI gpt-4-mini for image reconition
+
+Local (in Ollama interface):
+ - [`mirth/chonky_modernbert_large_1`](https://github.com/mirth/chonky)
+ - `snowflake-arctic-embed2` for creating larger simularity blocks
+ - `all-minilm:33m` and `qwen3-embedding:8b` for image insertion 
+
+
