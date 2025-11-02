@@ -282,7 +282,11 @@ Lastly, consider quark content for $\Omega^-$ or $\Delta^{++}$. All spins aligne
 For $L = 0$, spatial wave function symmetric. Spins all aligned up, symmetric. Flavor all same, symmetric. Physicists introduced new quantum number: **color charge**. This part of wave function must be antisymmetric to get total antisymmetric wave function. (see @fig-fg5) Assign each quark different color: red, green, blue. 
 
 
-![A step-like diagram with energy ω (in GeV) on the x-axis, showing three discrete levels corresponding to accessible quark flavors. The steps mark quark sets (u,d,s), (u,d,s,c), and (u,d,s,c,b,t), each annotated with example hadrons, providing evidence for the existence of color charge.](2025-Lecture-02-images/fig11.png)
+
+
+![A step-like diagram with energy ω (in GeV) on the x-axis, showing three discrete levels corresponding to accessible quark flavors. The steps mark quark sets (u,d,s), (u,d,s,c), and (u,d,s,c,b,t), each annotated with example hadrons, providing evidence for the existence of color charge.](2025-Lecture-02-images/fig11.png){#fig-fg11}
+
+
 
 ::: callout-note
 **Parity Formulas:**
