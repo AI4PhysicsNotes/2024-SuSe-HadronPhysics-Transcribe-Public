@@ -105,7 +105,8 @@ I also wanted to mention what this actually means, what we're writing down. Basi
 
 If you have isospin in SU(2), you get these four projections. This can be actually assigned to particles that were found at the time: these are called delta particles. We have $\Delta^{++}, \Delta^+, \Delta^0, \Delta^-$. They also give you the mass $m_\Delta = 1232\text{ MeV}$.
 
-I want to do one last example. Right now we have looked into meson systems and combining a meson and a nucleon system. What about if you just combine three quarks to get baryons? Then you would have basically $2 \times 2 \times 2$: three quarks, and there are always two projections possible for $\pm\frac{1}{2}$. We can now use what we have already seen here: $2 \times 2$ gives us $3 + 1$. (see @fig-fg1) This is what we had before: $\mathbf{2} \otimes \mathbf{2} \otimes \mathbf{2} = \mathbf{4} \oplus \mathbf{2} \oplus \mathbf{2}$. This gives us four, eight: $\frac{3}{2}$ and we have here two out of spin doublets with isospin $\frac{1}{2}$.
+I want to do one last example. Right now we have looked into meson systems and combining a meson and a nucleon system. What about if you just combine three quarks to get baryons? Then you would have basically $2 \times 2 \times 2$: three quarks, and there are always two projections possible for $\pm\frac{1}{2}$. We can now use what we have already seen here: $2 \times 2$ gives us $3 + 1$. This is what we had before: $\mathbf{2} \otimes \mathbf{2} \otimes \mathbf{2} = \mathbf{4} \oplus \mathbf{2} \oplus \mathbf{2}$. This gives us four, eight: $\frac{3}{2}$ and we have here two out of spin doublets with isospin $\frac{1}{2}$.
+
 ### Experimental Significance and Historical Context
 
 What is this good for in isospin? You will later also see in the exercises that we can actually use this quantum number to see why certain cross sections that were measured are of different sizes. 
@@ -154,7 +155,7 @@ How do we assign this quantum number? Particles consisting of up and down quarks
 
 With this we can form two isospin doublets with $K^+$ and $K^0$, and similarly $K^-$ and $\bar{K^0}$ in an isospin doublet with strangeness $S = -1$. They figured since these two come always in pairs that this quantum number needs to be conserved in strong interaction, but it is not conserved in weak interaction.
 
-Looking at the lambda decay $\Lambda \to p + \pi^-$, both products don't have strangeness but this decay can happen. (see @fig-fg3) From the long lifetime this means weak decay. They are produced in strong interaction because we have $\pi + p \to p + K^+$ and $n \to$ hypercharge.
+Looking at the lambda decay $\Lambda \to p + \pi^-$, both products don't have strangeness but this decay can happen. From the long lifetime this means weak decay. They are produced in strong interaction because we have $\pi + p \to p + K^+$ and $n \to$ hypercharge.
 
 **Hypercharge** $Y$ is given by baryon number $B$ and strangeness number $S$: $Y = B + S$. For baryon number, if it's a baryon then it gets $B = +1$, if it's an antibaryon then $B = -1$, and if it's a meson then $B = 0$.
 
@@ -230,7 +231,7 @@ Plotting third component of isospin against strangeness (or hypercharge), we hav
 
  On the horizontal axis are isospin multiplets: isospin doublet for neutron and proton, triplet for sigmas, doublet for cascades.
 
-Pointing out positions: here is $I_3 = +\frac{1}{2}, -\frac{1}{2}$, here $I_3 = 0$, here $S = -1$. 
+Pointing out positions: here is $I_3 = +\frac{1}{2}, -\frac{1}{2}$, here $I_3 = 0$, here $S = -1$. You can see quark content: here all with one strange quark, here with two strange quarks. 
 
 
 
@@ -240,7 +241,7 @@ Pointing out positions: here is $I_3 = +\frac{1}{2}, -\frac{1}{2}$, here $I_3 = 
 
 
 
- You can see quark content: here all with one strange quark, here with two strange quarks.
+
 
 Looking at masses:
 
@@ -259,7 +260,7 @@ When this pattern was found, the $\Omega^-$ was not yet discovered. This was a b
 $\Omega^-$ decays into cascade $\Xi^-$, then further to $\Lambda^0 + \pi^0$, $\pi^0 \to 2\gamma$, and $\Lambda \to p + \pi^-$. Not only predicted existence but roughly predicted mass: looking at masses between horizontal lines, $\Delta$ mass 1232 MeV, sigmas, then $\Omega^-$ mass around 1680 MeV, with mass spacing roughly 150 MeV.
 
 All these considerations come from group theory, mathematical descriptions of particles with symmetry considerations. Difference between masses in octet and decuplet is that spin is different, so mass difference accounted to spin-spin or spin-orbit interactions from dynamics.
-For mesons, with up, down, strange quarks, $\mathbf{3} \otimes \bar{\mathbf{3}} = \mathbf{8} \oplus \mathbf{1}$. On diagonal you have charge: here all charge $-1$, middle charge $0$, $+1$, $+2$. This octet or nonet including $\eta'$ has quantum numbers $0^-+$. (see @fig-fg8) 
+For mesons, with up, down, strange quarks, $\mathbf{3} \otimes \bar{\mathbf{3}} = \mathbf{8} \oplus \mathbf{1}$. On diagonal you have charge: here all charge $-1$, middle charge $0$, $+1$, $+2$. This octet or nonet including $\eta'$ has quantum numbers $0^-+$. 
 
 
 
@@ -273,13 +274,13 @@ For mesons, with up, down, strange quarks, $\mathbf{3} \otimes \bar{\mathbf{3}} 
 
 This means quark-antiquark pair have anti-parallel spins, parity $-$. For spins aligned parallel, spin $1$, parity $-1$, charge conjugation $C$. Parity inverts spatial coordinates, charge conjugation converts particle to antiparticle.
 
-For baryons, if you know orbital angular momentum $L$, parity $P = (-1)^L$. For octet ground states $L = 0$, parity $+$ for $\frac{1}{2}^+$ and $\frac{3}{2}^+$. For mesons, $P = (-1)^{L+1}$, giving $-$ for both. Charge conjugation well-defined for neutral mesons, e.g., $\pi^0$ has $C = +1$. (see @fig-fg3)
+For baryons, if you know orbital angular momentum $L$, parity $P = (-1)^L$. For octet ground states $L = 0$, parity $+$ for $\frac{1}{2}^+$ and $\frac{3}{2}^+$. For mesons, $P = (-1)^{L+1}$, giving $-$ for both. Charge conjugation well-defined for neutral mesons, e.g., $\pi^0$ has $C = +1$.
 
 For decays, parity and C parity are multiplicative. Combining spins of different particles to get total spin. Example: can $\omega$ meson decay into two pions? For $\pi^0$, $C = +1$, multiplied gives $+1$, but for $\omega$, $C = -1$, so cannot happen.
 
 Lastly, consider quark content for $\Omega^-$ or $\Delta^{++}$. All spins aligned, flavor content same. With Pauli exclusion principle for fermions, they should be distinguishable by one quantum number. Looking at total wave function: spatial, spin, and flavor.
 
-For $L = 0$, spatial wave function symmetric. Spins all aligned up, symmetric. Flavor all same, symmetric. Physicists introduced new quantum number: **color charge**. This part of wave function must be antisymmetric to get total antisymmetric wave function. (see @fig-fg5) Assign each quark different color: red, green, blue. 
+For $L = 0$, spatial wave function symmetric. Spins all aligned up, symmetric. Flavor all same, symmetric. Physicists introduced new quantum number: **color charge**. This part of wave function must be antisymmetric to get total antisymmetric wave function. 
 
 
 
@@ -287,6 +288,9 @@ For $L = 0$, spatial wave function symmetric. Spins all aligned up, symmetric. F
 ![A step-like diagram with energy ω (in GeV) on the x-axis, showing three discrete levels corresponding to accessible quark flavors. The steps mark quark sets (u,d,s), (u,d,s,c), and (u,d,s,c,b,t), each annotated with example hadrons, providing evidence for the existence of color charge.](2025-Lecture-02-images/fig11.png){#fig-fg11}
 
 
+
+
+ Assign each quark different color: red, green, blue.
 
 ::: callout-note
 **Parity Formulas:**
@@ -297,9 +301,19 @@ For $L = 0$, spatial wave function symmetric. Spins all aligned up, symmetric. F
   - Baryons: $\mathbf{3} \otimes \mathbf{3} \otimes \mathbf{3} = \mathbf{10} \oplus \mathbf{8} \oplus \mathbf{8} \oplus \mathbf{1}$
   - Mesons: $\mathbf{3} \otimes \bar{\mathbf{3}} = \mathbf{8} \oplus \mathbf{1}$
 :::
+
+
+
+![Feynman diagram illustrating electron–positron annihilation producing a virtual photon. The photon subsequently decays into either a quark–antiquark pair or a lepton pair, with an example of a μ⁺μ⁻ final state shown.](2025-Lecture-02-images/fig10.png){#fig-fg10}
+
+
+
+
+
+
 Briefly discuss experiment showing three colors. Looked into $e^+ e^-$ annihilation with virtual photon exchanged, producing different particles: quark-antiquark pairs or leptons like $\mu^+ \mu^-$.
 
-Measured ratio $R = \frac{\sigma(e^+ e^- \to \text{hadrons})}{\sigma(e^+ e^- \to \mu^+ \mu^-)}$. For leptons no color, so dividing gives proportionality to number of colors. Photon vertex proportional to charge squared, different quark types. (see @fig-fg4)
+Measured ratio $R = \frac{\sigma(e^+ e^- \to \text{hadrons})}{\sigma(e^+ e^- \to \mu^+ \mu^-)}$. For leptons no color, so dividing gives proportionality to number of colors. Photon vertex proportional to charge squared, different quark types.
 
 Initially up, down, strange quarks measured as peaks in spectrum (rho, omega, pi mesons). When energy high enough, produce charm-anticharm bound states (J/ψ), then B bar states. Calculated steps show number of colors should be three.
 
@@ -315,18 +329,18 @@ I should have perhaps asked this earlier when you introduced strangeness in the 
 
 ### Particle Identification Through Invariant Mass
 
-The fundamental practical question is: how do you distinguish kaons from other particles using just invariant masses? (see @fig-fg3) (see @fig-fg10)
+The fundamental practical question is: how do you distinguish kaons from other particles using just invariant masses? (see @fig-fg3)
 
 ::: callout-note
 **Invariant Mass Formula**:
 $$M^2 = \left(\sum E_i\right)^2 - \left(\sum \vec{p}_i\right)^2$$
-This relativistic invariant allows identification of particle resonances from decay products. (see @fig-fg2) When analyzing cosmic ray events with protons and pions, peaks in the invariant mass spectrum reveal new particles like kaons.
+This relativistic invariant allows identification of particle resonances from decay products. When analyzing cosmic ray events with protons and pions, peaks in the invariant mass spectrum reveal new particles like kaons.
 :::
 You can only look at the invariant mass in these cases. You detect the proton and the pions, then examine the spectra to identify what's known versus unknown.
 
 ### Historical Discovery Timeline and Strange Particles
 
-These particles were called "strange" because researchers were confused about why they only appeared in pairs and had longer lifetimes than other particles. (see @fig-fg3)
+These particles were called "strange" because researchers were confused about why they only appeared in pairs and had longer lifetimes than other particles.
 
 ::: callout-important
 **Strangeness Conservation**: $\Delta S = 0$
@@ -353,9 +367,10 @@ C-parity describes how particles transform into their antiparticles under charge
 I don't know exactly when charge conjugation was introduced, but it emerged when people started thinking systematically about particles and antiparticles - directly with the positron in the 1930s, before the antiproton discovery.
 
 This highlights the difficulty: sometimes concepts come from theory, sometimes from experiments. It's interesting how the omega baryon was predicted, but also how quantum numbers were introduced based on cross-section measurements.
-### Quark Model Development and Mass Patterns (see @fig-fg11)
 
-Historically, the multiplets were mostly correct - I only added the quark content for clarity. When multiplets were assembled, researchers postulated there might be smaller substructure, initially called "partons" before becoming "quarks." (see @fig-fg2) (see @fig-fg10)
+### Quark Model Development and Mass Patterns
+
+Historically, the multiplets were mostly correct - I only added the quark content for clarity. When multiplets were assembled, researchers postulated there might be smaller substructure, initially called "partons" before becoming "quarks."
 
 ::: callout-important
 **Quark Model Mass Relations**:
