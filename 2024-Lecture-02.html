@@ -139,6 +139,19 @@ window.Quarto = {
   <li><a href="#su2-group-representations-generators-and-physical-charges" id="toc-su2-group-representations-generators-and-physical-charges" class="nav-link" data-scroll-target="#su2-group-representations-generators-and-physical-charges"><span class="header-section-number">4</span> SU(2) Group: Representations, Generators, and Physical Charges</a></li>
   <li><a href="#su2-representations-and-the-construction-of-generators" id="toc-su2-representations-and-the-construction-of-generators" class="nav-link" data-scroll-target="#su2-representations-and-the-construction-of-generators"><span class="header-section-number">5</span> SU(2) Representations and the Construction of Generators</a></li>
   <li><a href="#the-ξ-baryons-and-isospin-symmetry" id="toc-the-ξ-baryons-and-isospin-symmetry" class="nav-link" data-scroll-target="#the-ξ-baryons-and-isospin-symmetry"><span class="header-section-number">6</span> The Ξ Baryons and Isospin Symmetry</a></li>
+  <li><a href="#symmetry-isospin-and-combining-representations" id="toc-symmetry-isospin-and-combining-representations" class="nav-link" data-scroll-target="#symmetry-isospin-and-combining-representations"><span class="header-section-number">7</span> Symmetry, Isospin, and Combining Representations</a>
+  <ul class="collapse">
+  <li><a href="#symmetry-of-qcd" id="toc-symmetry-of-qcd" class="nav-link" data-scroll-target="#symmetry-of-qcd"><span class="header-section-number">7.1</span> Symmetry of QCD</a></li>
+  <li><a href="#isospin-su2-symmetry" id="toc-isospin-su2-symmetry" class="nav-link" data-scroll-target="#isospin-su2-symmetry"><span class="header-section-number">7.2</span> Isospin SU(2) Symmetry</a></li>
+  <li><a href="#combining-representations-higher-multiplets" id="toc-combining-representations-higher-multiplets" class="nav-link" data-scroll-target="#combining-representations-higher-multiplets"><span class="header-section-number">7.3</span> Combining Representations: Higher Multiplets</a></li>
+  </ul></li>
+  <li><a href="#parity-charge-conjugation-and-excitations-of-the-λc-baryon" id="toc-parity-charge-conjugation-and-excitations-of-the-λc-baryon" class="nav-link" data-scroll-target="#parity-charge-conjugation-and-excitations-of-the-λc-baryon"><span class="header-section-number">8</span> Parity, Charge Conjugation, and Excitations of the Λc Baryon</a></li>
+  <li><a href="#spin-algebra-and-decay-partial-waves" id="toc-spin-algebra-and-decay-partial-waves" class="nav-link" data-scroll-target="#spin-algebra-and-decay-partial-waves"><span class="header-section-number">9</span> Spin Algebra and Decay Partial Waves</a>
+  <ul class="collapse">
+  <li><a href="#constructing-the-s-wave-and-angular-momentum-addition" id="toc-constructing-the-s-wave-and-angular-momentum-addition" class="nav-link" data-scroll-target="#constructing-the-s-wave-and-angular-momentum-addition"><span class="header-section-number">9.1</span> Constructing the S Wave and Angular Momentum Addition</a></li>
+  <li><a href="#applying-this-to-a-particle-decay" id="toc-applying-this-to-a-particle-decay" class="nav-link" data-scroll-target="#applying-this-to-a-particle-decay"><span class="header-section-number">9.2</span> Applying This to a Particle Decay</a></li>
+  <li><a href="#a-practice-problem-hydrogen-atom-in-a-magnetic-field" id="toc-a-practice-problem-hydrogen-atom-in-a-magnetic-field" class="nav-link" data-scroll-target="#a-practice-problem-hydrogen-atom-in-a-magnetic-field"><span class="header-section-number">9.3</span> A Practice Problem: Hydrogen Atom in a Magnetic Field</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -415,10 +428,13 @@ You don’t do this manually for large representations; you use a computer. What
 </div>
 <div class="callout-body-container">
 <p>Why is this discrepancy scandalous? Because, so far, whenever you replace an up quark with a down quark (or vice versa), the particle’s mass <strong>almost does not change</strong> and its properties remain the same. This is due to <strong>strong isospin symmetry</strong>, which arises because the strong interaction is essentially blind to the difference between up and down quarks, given their very similar masses:$ m_u m_d <span class="math inline">.
-For the</span> _{cc} <span class="math inline">states, it would be impossible for them to have significantly different masses under this symmetry. They **must** have nearly identical properties.
-:::
-If you were to do a PhD on data analysis and discover the **Ξ_cc^{+}</span> <strong>, you would become a superstar in particle physics. There have been several PhD projects dedicated to searching for it. The search often involves a </strong>blind analysis**: researchers define the reactions and a mass window to study, but they do not look at the data in that window until all selection criteria and procedures are optimized and fixed. Only then do they “unblind” the mass range.</p>
+For the</span> _{cc} $states, it would be impossible for them to have significantly different masses under this symmetry. They <strong>must</strong> have nearly identical properties.</p>
+</div>
+</div>
+</div>
+<p>If you were to do a PhD on data analysis and discover the <strong>Ξ_cc^{+}$ </strong>, you would become a superstar in particle physics. There have been several PhD projects dedicated to searching for it. The search often involves a <strong>blind analysis</strong>: researchers define the reactions and a mass window to study, but they do not look at the data in that window until all selection criteria and procedures are optimized and fixed. Only then do they “unblind” the mass range.</p>
 <p>Four PhD students completed this rigorous process, pressed the button to unblind their data, and unfortunately found nothing there. The challenge is likely in picking the right decay channel. The <strong>Ξ_cc^{+} $</strong> decays through many modes, and current statistics may be insufficient to see it in some of the rarer ones. The right decay mode probably exists—we just haven’t found it yet.</p>
+</section>
 <section id="symmetry-isospin-and-combining-representations" class="level2" data-number="7">
 <h2 data-number="7" class="anchored" data-anchor-id="symmetry-isospin-and-combining-representations"><span class="header-section-number">7</span> Symmetry, Isospin, and Combining Representations</h2>
 <section id="symmetry-of-qcd" class="level3" data-number="7.1">
@@ -622,10 +638,6 @@ where <span class="math inline">\mu_B</span> is the Bohr magneton, <span class="
 
 
 </section>
-</section>
-</div>
-</div>
-</div>
 </section>
 
 </main> <!-- /main -->
