@@ -39,9 +39,11 @@ What would this area be? It is the effective area of the interaction. How do I e
 
 The cross section is on the order of  $\pi R^2$ . That's the area. For a radius  $R \approx 1 \, \text{fm}$ , we get  $\sigma \approx \pi \times (10^{-13} \, \text{cm})^2$ . This is on the order of  $10^{-26} \, \text{cm}^2$ , or about 10 millibarns. If you calculate the total cross section for hadrons, you're going to get values around that scale because the way they interact is by essentially overlapping their densities. If they are far away from each other, they never talk to each other. The strong interaction is really strong, but it's short-range.
 
+
 ::: callout-important
 **Key Estimation:** The **geometric cross section** provides a quick order-of-magnitude estimate for hadronic reactions:  $\sigma \approx \pi R^2$ . For a proton radius  $R \approx 1 \, \text{fm} = 10^{-13} \, \text{cm}$ , this yields  $\sigma \approx 3 \times 10^{-26} \, \text{cm}^2$ , or about **30 millibarns**. This scale is typical because the interaction probability is essentially unity within the effective area defined by the particle's size.
 :::
+
 
 
 ## Defining Charge via Conserved Currents
@@ -80,9 +82,11 @@ We define the **observed charge** to match our conventions:
 
 So, it doesn't matter what constant you put in front; the crucial point from field theory is that this quantity  $Q$  is conserved. Scaling it by a factor (like  $-e$ ) to match experiment is our choice.
 
+
 ::: callout-note
 This discussion focuses on **electric charge in QED**, arising from a **U(1) symmetry**. A similar logic applies to **color charge in QCD**, but it originates from a more complex **SU(3) gauge symmetry**. The conserved currents in QCD involve color indices and matrices (like the Gell-Mann matrices  $T^a$ ), leading to eight conserved color charges.
 :::
+
 
 
 ## Currents and Charges in QED and QCD
@@ -101,11 +105,13 @@ This is the **conserved Noether current** associated with the  $U(1)$  gauge sym
 
  The factor  $-e$  is a convention to match our common definition of electric charge (electrons have negative charge). We could have defined electrons as positively charged, but that is not our standard convention.So, how do we define the analogous charge in Quantum Chromodynamics (QCD)? We follow a similar logic. In QED, a photon couples to a fermion via a vertex with  $\gamma^\mu$ , probing its electric charge through the current. (see @fig-fg1) For QCD, we want a vertex that probes **color charge**.
 
+
 ::: callout-note
 The **color current** in QCD is the conserved non-Abelian current associated with the  $SU(3)$  gauge symmetry. It couples to the gluon fields and describes the flow of color charge, which has eight components corresponding to the eight gluons:
   $$j^{\mu,\,a} = g_s \, \bar{\psi}_i \gamma^\mu (T^a)_{ij} \psi_j$$  
 Here,  $g_s$  is the strong coupling constant,  $\psi_i$  is the Dirac spinor field for a quark with a color index  $i = 1,2,3$  (representing red, green, blue), and  $(T^a)_{ij}$  are the Gell-Mann matrices (the generators of  $SU(3)$ ) with  $a = 1, \dots, 8$ .
 :::
+
 The construction is very similar:
 
 * The quarks are still fermions, so we use the Dirac spinor  $\psi$ , but now it carries a **color index**.
@@ -135,9 +141,11 @@ SU(2) is a **special unitary** group. It is the group of  $2 \times 2$  unitary 
   $$U^\dagger U = U U^\dagger = I, \quad \det(U) = 1$$  
 The letter **S** stands for "special," meaning the determinant is exactly one.
 
+
 ::: callout-note
 This is the **fundamental representation** of SU(2). A representation is a way of realizing the group's elements as matrices acting on a vector space. The fundamental representation acts on a 2-dimensional (complex) vector space.
 :::
+
 We could imagine listing all matrices in the group, but it's not possible because the group is continuous and infinite. However, if we could list them, we would know how they compose—multiplying two group elements gives another group element. To construct other representations, we find a correspondence where each group element is mapped to a matrix in a different dimension (e.g.,  $3 \times 3$  or  $4 \times 4$ ) while preserving the group multiplication rules. SU(2) is a nice group because it has a straightforward way of constructing representations of any dimension.
 
 Another key concept from group theory is the **Lie algebra**. All group elements near the identity can be generated from the algebra. For SU(2), the generators are the **Pauli matrices**,  $\sigma_1, \sigma_2, \sigma_3$ . Any group element can be written in exponential form:
@@ -228,11 +236,13 @@ To demonstrate their properties, consider the product:
 Using the commutation relation  $[J_1, J_2] = i J_3$ , this becomes:
   $$J_+ J_- = J_1^2 + J_2^2 + J_3 = \mathbf{J}^2 - J_3^2 + J_3.$$  
 
+
 ::: callout-important
 The action of the operators on an eigenstate  $|J M\rangle$  is defined by:
   $$J_3 |J M\rangle = M |J M\rangle, \quad \mathbf{J}^2 |J M\rangle = J(J+1) |J M\rangle.$$  
 These operators commute with each other and, in quantum mechanics, with a rotationally invariant Hamiltonian, making them conserved quantities.
 :::
+
 Therefore,  $J_+ J_-$  acting on  $|J M\rangle$  gives  $[J(J+1) - M(M-1)] |J M\rangle$ . From this, we find the action of the ladder operators themselves:
 
   $$J_+ |J M\rangle = \sqrt{J(J+1) - M(M+1)} \, |J, M+1\rangle,$$  
@@ -252,9 +262,11 @@ Once you have  $J_+$  and  $J_-$ , you recover the original generators:
   $$J_1 = \frac{J_+ + J_-}{2}, \quad J_2 = \frac{J_+ - J_-}{2i},$$  
 and  $J_3$  is the diagonal matrix with eigenvalues  $m = -j, -j+1, ..., j$  on the diagonal.
 
+
 ::: callout-note
 **General Algorithm**: For a representation of dimension  $d = 2j+1$ , the diagonal entries of  $J_3$  are  $m$  from  $-j$  to  $j$  in integer steps. Use the formula  $J_\pm |j, m\rangle = \sqrt{j(j+1) - m(m \pm 1)} \, |j, m \pm 1\rangle$  to populate the  $J_+$  and  $J_-$  matrices, then construct  $J_1$  and  $J_2$ .
 :::
+
 Now the fun part: to get finite rotations, you exponentiate these generators. A general **SU(2)** group element is given by:
   $$U(\boldsymbol{\alpha}) = \exp(-i \boldsymbol{\alpha} \cdot \mathbf{J}).$$  
 You don't do this manually for large representations; you use a computer. What we have discussed so far is how to construct an arbitrary matrix representation of the **SU(2)** group.
@@ -284,10 +296,12 @@ The third member of this family is the **Ξ_cc baryon**, a doubly-charmed state.
 
 The **Ξ_cc^{++} $** has been discovered. However, the **Ξ_cc^{+}$ ** is frequently discussed at conferences. One experiment reported a signal-like bump, but another experiment, LHCb, did not find it at the expected mass. Moreover, LHCb found a candidate for the **Ξ_cc^{+} $** with a mass that was in conflict—about **40 MeV different** from the mass of the state seen previously.
 
+
 ::: callout-important
 Why is this discrepancy scandalous? Because, so far, whenever you replace an up quark with a down quark (or vice versa), the particle's mass **almost does not change** and its properties remain the same. This is due to **strong isospin symmetry**, which arises because the strong interaction is essentially blind to the difference between up and down quarks, given their very similar masses:$ m_u \approx m_d \approx 3 \text{ MeV} $.
 For the$ \Xi_{cc} $states, it would be impossible for them to have significantly different masses under this symmetry. They **must** have nearly identical properties.
 :::
+
 If you were to do a PhD on data analysis and discover the **Ξ_cc^{+}$ **, you would become a superstar in particle physics. There have been several PhD projects dedicated to searching for it. The search often involves a **blind analysis**: researchers define the reactions and a mass window to study, but they do not look at the data in that window until all selection criteria and procedures are optimized and fixed. Only then do they "unblind" the mass range.
 
 Four PhD students completed this rigorous process, pressed the button to unblind their data, and unfortunately found nothing there. The challenge is likely in picking the right decay channel. The **Ξ_cc^{+} $** decays through many modes, and current statistics may be insufficient to see it in some of the rarer ones. The right decay mode probably exists—we just haven't found it yet.
@@ -310,9 +324,11 @@ The transformation under this SU(2) group for a doublet like$ (u, d) $is given b
  $$U(\boldsymbol{\alpha}) = e^{-i \boldsymbol{\alpha} \cdot \boldsymbol{\tau} / 2}$$  
 where  $\boldsymbol{\alpha}$  are the rotation parameters and  $\boldsymbol{\tau}$  are the Pauli matrices. This is mathematically identical to how we describe spin rotations in quantum mechanics.
 
+
 ::: callout-note
 The particle historically named **cascade** is denoted by the Greek letter **Ξ (Xi)**. Because its decay chain resembled a cascade of particles, and the Greek name can be challenging to pronounce, it's commonly just called "cascade" in particle physics.
 :::
+
 In this framework, treating the **u** and **d** quarks as an isospin doublet (like spin-1/2), a particle like the cascade (**Ξ**) can be assigned an **isospin wave function**.
 
 *   The dimension of the representation tells us the isospin quantum number. For a representation of dimension  $d$ , the isospin  $I$  is given by  $d = 2I + 1$ .
@@ -343,10 +359,12 @@ A powerful consistency check is that the total dimension must be conserved:
   $$\text{Dim}(j_1) \times \text{Dim}(j_2) = \sum_{j=|j_1-j_2|}^{j_1+j_2} \text{Dim}(j)$$  
 For example, with  $j_1=3$  (dimension 7) and  $j_2=2$  (dimension 5):  $7 \times 5 = 35$ , and  $1+3+5+7+9+11 = 35$ .
 
+
 ::: callout-important
 Group theory tells us that when we combine representations, the resulting higher-dimensional space breaks into **blocks that do not mix** under symmetry transformations (rotations in isospin or spin space). Each block corresponds to a distinct total spin/isospin value. This is why, for instance, a system with total spin 3 can never rotate into a state with total spin 4.
 ### Practical Application & Final Notes
 :::
+
 
 
 
@@ -394,6 +412,7 @@ In order to find what are the charge conjugation, parity, and the spin, total sp
 
 For  $L$  equals one,  $(-1)^L$  is the orbital angular momentum contribution to the parity that one has to add. The total parity for a composite system is  $P_{\text{total}} = P_1 P_2 (-1)^L$ .
 
+
 ::: callout-important
 **Key Formulas for Composite Systems**
 
@@ -401,6 +420,7 @@ For  $L$  equals one,  $(-1)^L$  is the orbital angular momentum contribution to
 *   **Total Angular Momentum:**  $\mathbf{J} = \mathbf{L} + \mathbf{S}_1 + \mathbf{S}_2$ , obtained via vector addition of spins and orbital angular momentum.
 *   **Charge Conjugation for Neutral Mesons:**  $C = (-1)^{L+S}$ , where  $S$  is the total spin of the quark-antiquark pair.
 :::
+
 I would like to give an example before you stop because it's one of the most important skills I would like you to have: to be able to determine what are possible combinations of the spin and parity when you combine two particles. I'm going to draw the table that would list  $J^{PC}$ ,  $J^P$ .
 
 For the uncharged fermions, there is no charge conjugation, so I won't have charge conjugation here. So  $J^P$ , for the combination of particles I start following out with the orbital angular momentum equals zero. I just combine spin and charge. In that case I have  $1/2$ , I add a 0, I get only  $1/2$ . The charge is multiplicative. Parity is multiplicative.
@@ -446,11 +466,13 @@ If you look at the PDG, you will see the names that we know of. We have discover
 
 We start by constructing the **S wave**, where the orbital angular momentum  $L = 0$ . Using **Clebsch-Gordan coefficients** is straightforward here. Adding one unit of angular momentum is also straightforward, but you must be careful not to mix up the procedure.
 
+
 ::: callout-important
 When combining two systems with angular momenta  $j_1$  and  $j_2$ , the total angular momentum  $j$  can take values:
   $$j = |j_1 - j_2|, |j_1 - j_2| + 1, \dots, j_1 + j_2$$  
 This is the **Clebsch-Gordan series**, fundamental for constructing spin wavefunctions and determining allowed states.
 :::
+
 If you are already in an orbital angular momentum zero combination—and there are only a few of them—you must consider them separately. One combination spans several states, and another will span several different states.
 
 The same procedure applies when you want to **combine angular momenta** in a decay.
@@ -467,11 +489,13 @@ We know the quantum numbers:
 
 We can ask: **What is the orbital angular momentum  $L$  in this decay?** The decay is analyzed in the **rest frame of particle  $A$ **. Particle  $B$  goes in one direction, particle  $C$  goes in the opposite direction, defining a relative angle.
 
+
 ::: callout-note
 In a decay  $A \to B + C$ , **parity is conserved**:
   $$P_A = P_B \, P_C \, (-1)^L$$  
 where  $(-1)^L$  is the parity of the orbital state.
 :::
+
 If you combine the two final-state particles in an **S wave** ( $L = 0$ ), the possible total spin-parity  $J^P$  is only  $1^-$ .
 In a **P wave** ( $L = 1$ ), the parity would be positive.
 To reach the  $2^-$  state, you need a **D wave** ( $L = 2$ ).
@@ -485,17 +509,21 @@ Let’s work on a problem. We have a hydrogen atom placed in a **strong magnetic
 Consider the following energy levels:
  $1s$ ,  $2s$ ,  $2p$ ,  $3s$ ,  $3p$ ,  $3d$ .
 
+
 ::: callout-tip
 In the hydrogen atom, the orbital angular momentum quantum number  $l$  is restricted by the principal quantum number  $n$ :
   $$l < n$$  
 This is why, for  $n=3$ , we have  $l = 0$  (s),  $1$  (p), and  $2$  (d), but **no f-wave** ( $l=3$ ).
 :::
+
 We will restrict ourselves to **s, p, and d waves only**, excluding the f-wave. This is a beautiful puzzle—you may have seen it before. It’s the same problem.
+
 
 ::: callout-important
 In a **strong magnetic field** (Paschen-Back regime), the energy shift for a state with quantum numbers  $n, l, m_l, m_s$  is approximately:
   $$\Delta E = \mu_B B \, (m_l + 2m_s)$$  
 where  $\mu_B$  is the Bohr magneton,  $B$  is the field strength,  $m_l$  is the orbital magnetic quantum number, and  $m_s = \pm 1/2$  is the spin projection.
 :::
+
 The skill of constructing and using the spin-algebra table is something we want to practice more. I think we’re done, except for this problem.
 
