@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="">
+<meta name="dcterms.date" content="2024-01-01">
+
+<title>(2024) Lecture 4</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-597958c53c93a607afca12fd375c57ed.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-7d3a565c23c4d3b0e7c030e96a8964f3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="quarto-light">
+
+<div id="quarto-search-results"></div>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#computing-the-omega-baryon-magnetic-moment" id="toc-computing-the-omega-baryon-magnetic-moment" class="nav-link active" data-scroll-target="#computing-the-omega-baryon-magnetic-moment"><span class="header-section-number">1</span> Computing the Omega Baryon Magnetic Moment</a>
+  <ul class="collapse">
+  <li><a href="#calculating-the-magnetic-moment-of-the-omega-baryon" id="toc-calculating-the-magnetic-moment-of-the-omega-baryon" class="nav-link" data-scroll-target="#calculating-the-magnetic-moment-of-the-omega-baryon"><span class="header-section-number">1.1</span> <strong>Calculating the Magnetic Moment of the Omega Baryon</strong></a></li>
+  <li><a href="#interpretation-and-scale" id="toc-interpretation-and-scale" class="nav-link" data-scroll-target="#interpretation-and-scale"><span class="header-section-number">1.2</span> <strong>Interpretation and Scale</strong></a></li>
+  </ul></li>
+  <li><a href="#excitation-pattern-of-the-σ_b-baryon" id="toc-excitation-pattern-of-the-σ_b-baryon" class="nav-link" data-scroll-target="#excitation-pattern-of-the-σ_b-baryon"><span class="header-section-number">2</span> Excitation Pattern of the Σ_b Baryon</a></li>
+  <li><a href="#the-puzzle-of-exotic-hadrons" id="toc-the-puzzle-of-exotic-hadrons" class="nav-link" data-scroll-target="#the-puzzle-of-exotic-hadrons"><span class="header-section-number">3</span> The Puzzle of Exotic Hadrons</a></li>
+  <li><a href="#hadron-production-and-spectroscopy-experiments" id="toc-hadron-production-and-spectroscopy-experiments" class="nav-link" data-scroll-target="#hadron-production-and-spectroscopy-experiments"><span class="header-section-number">4</span> Hadron Production and Spectroscopy Experiments</a></li>
+  <li><a href="#from-charmonium-to-bottomonium-and-lhc-multiplicities" id="toc-from-charmonium-to-bottomonium-and-lhc-multiplicities" class="nav-link" data-scroll-target="#from-charmonium-to-bottomonium-and-lhc-multiplicities"><span class="header-section-number">5</span> From Charmonium to Bottomonium and LHC Multiplicities</a>
+  <ul class="collapse">
+  <li><a href="#quarkonium-spectroscopy-charmonium-to-bottomonium" id="toc-quarkonium-spectroscopy-charmonium-to-bottomonium" class="nav-link" data-scroll-target="#quarkonium-spectroscopy-charmonium-to-bottomonium"><span class="header-section-number">5.1</span> <strong>Quarkonium Spectroscopy: Charmonium to Bottomonium</strong></a></li>
+  </ul></li>
+  <li><a href="#hadron-production-and-spectroscopy-at-lhcb" id="toc-hadron-production-and-spectroscopy-at-lhcb" class="nav-link" data-scroll-target="#hadron-production-and-spectroscopy-at-lhcb"><span class="header-section-number">6</span> Hadron Production and Spectroscopy at LHCb</a>
+  <ul class="collapse">
+  <li><a href="#studying-hadrons-via-displaced-production" id="toc-studying-hadrons-via-displaced-production" class="nav-link" data-scroll-target="#studying-hadrons-via-displaced-production"><span class="header-section-number">6.1</span> Studying Hadrons via Displaced Production</a></li>
+  </ul></li>
+  <li><a href="#fixed-target-experiments-and-light-hadron-spectroscopy" id="toc-fixed-target-experiments-and-light-hadron-spectroscopy" class="nav-link" data-scroll-target="#fixed-target-experiments-and-light-hadron-spectroscopy"><span class="header-section-number">7</span> Fixed-Target Experiments and Light Hadron Spectroscopy</a></li>
+  <li><a href="#two-mechanisms-in-fixed-target-experiments" id="toc-two-mechanisms-in-fixed-target-experiments" class="nav-link" data-scroll-target="#two-mechanisms-in-fixed-target-experiments"><span class="header-section-number">8</span> Two Mechanisms in Fixed-Target Experiments</a>
+  <ul class="collapse">
+  <li><a href="#exclusive-vs.-inclusive-processes-kinematic-counting" id="toc-exclusive-vs.-inclusive-processes-kinematic-counting" class="nav-link" data-scroll-target="#exclusive-vs.-inclusive-processes-kinematic-counting"><span class="header-section-number">8.1</span> Exclusive vs.&nbsp;Inclusive Processes &amp; Kinematic Counting</a></li>
+  <li><a href="#phase-space-and-its-element" id="toc-phase-space-and-its-element" class="nav-link" data-scroll-target="#phase-space-and-its-element"><span class="header-section-number">8.2</span> Phase Space and its Element</a></li>
+  </ul></li>
+  <li><a href="#recursive-phase-space-parameterization" id="toc-recursive-phase-space-parameterization" class="nav-link" data-scroll-target="#recursive-phase-space-parameterization"><span class="header-section-number">9</span> Recursive Phase Space Parameterization</a></li>
+  <li><a href="#two-body-phase-space-and-introduction-to-the-dalitz-plot" id="toc-two-body-phase-space-and-introduction-to-the-dalitz-plot" class="nav-link" data-scroll-target="#two-body-phase-space-and-introduction-to-the-dalitz-plot"><span class="header-section-number">10</span> Two-Body Phase Space and Introduction to the Dalitz Plot</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">(2024) Lecture 4</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">January 1, 2024</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><strong>Presenter</strong>: Mikhail Mikhasenko</p>
+<p><strong>Note Taker</strong>: Ilya Segal</p>
+<section id="computing-the-omega-baryon-magnetic-moment" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="computing-the-omega-baryon-magnetic-moment"><span class="header-section-number">1</span> Computing the Omega Baryon Magnetic Moment</h2>
+<p>Today’s lecture is dedicated to the experiments in spectroscopy and the computations of the kinematics for the experiments. But before going there, I would like to have a short recap of the last lecture and to pose two questions.</p>
+<ol type="1">
+<li><strong>Compute the magnetic moment in the current model of the Omega baryon.</strong></li>
+<li><strong>Compute the lowest 1s multiplet excitation multiplet of the Sigma particle parameter.</strong> This is essentially asking about isospin fermions.</li>
+</ol>
+<p>Let’s address the first question quickly because it’s rather straightforward.</p>
+<section id="calculating-the-magnetic-moment-of-the-omega-baryon" class="level3" data-number="1.1">
+<h3 data-number="1.1" class="anchored" data-anchor-id="calculating-the-magnetic-moment-of-the-omega-baryon"><span class="header-section-number">1.1</span> <strong>Calculating the Magnetic Moment of the Omega Baryon</strong></h3>
+<p><strong>What is the quark content of the Omega baryon (Ω⁻)?</strong> It consists of three strange quarks (<em>sss</em>).</p>
+<p>The total wave function lives in the tensor product space of color, flavor (isospin), and spin coordinates. For this magnetic moment calculation, we focus on the <strong>spin</strong> part, as the flavor part is trivial for three identical strange quarks.</p>
+<p>The Omega baryon has spin <span class="math inline">J = 3/2</span> and positive parity. To calculate its magnetic moment, we use the maximal spin projection state, <span class="math inline">|s↑ s↑ s↑ \rangle</span> , where all three quark spins are aligned up.</p>
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>You don’t need to use complicated spin configurations. For calculating the magnetic moment, you can simply take the state with the highest value of spin projection ( <span class="math inline">m_s = +3/2</span> ). Acting on this state with the magnetic moment operator yields an eigenvalue directly.</p>
+</div>
+</div>
+</div>
+<p>The total magnetic moment operator for the baryon is the sum of the magnetic moment operators for its constituent quarks: <span class="math display">\hat{\mu}_z = \sum_{i=1}^{3} \hat{\mu}_{i,z} = \sum_{i=1}^{3} \frac{e q_i}{2 m_i} \sigma_z^{(i)}</span><br>
+where for a strange quark, the charge <span class="math inline">q_s = -\frac{1}{3}e</span> and its mass <span class="math inline">m_s \approx 500 \text{ MeV}</span> .</p>
+<p>Since all three quarks are identical, the magnetic moment of the Omega baryon is simply three times the magnetic moment of a single strange quark in this fully aligned state: <span class="math display">\mu_{\Omega^-} = 3 \cdot \mu_s = 3 \cdot \left( \frac{e q_s}{2 m_s} \right)</span><br>
+Substituting <span class="math inline">q_s</span> gives: <span class="math display">\mu_{\Omega^-} = \frac{e}{2 m_s} \cdot (3 \cdot (-\frac{1}{3})) = -\frac{e}{2 m_s}</span><br>
+In absolute terms, <span class="math inline">|\mu_{\Omega^-}| = \frac{e}{2 m_s}</span> .</p>
+</section>
+<section id="interpretation-and-scale" class="level3" data-number="1.2">
+<h3 data-number="1.2" class="anchored" data-anchor-id="interpretation-and-scale"><span class="header-section-number">1.2</span> <strong>Interpretation and Scale</strong></h3>
+<p>Our intuition is correct: the magnetic moment is negative because the Omega baryon has a net negative charge. However, the mass in the denominator is the <strong>constituent quark mass</strong> (roughly 500 MeV), not the mass of the Omega baryon itself (about 1672 MeV).</p>
+<p><strong>How does this compare to an electron?</strong> The electron’s magnetic moment is <span class="math inline">\mu_e = \frac{e}{2 m_e}</span> , with <span class="math inline">m_e \approx 0.5 \text{ MeV}</span> . The ratio is: <span class="math display">\frac{|\mu_{\Omega^-}|}{\mu_e} = \frac{m_e}{m_s} \approx \frac{0.5}{500} = 10^{-3}</span><br>
+This shows the Omega baryon’s magnetic moment is about <strong>one thousand times smaller</strong> than the electron’s, due to the much larger mass scale of the strange quark.</p>
+<p><strong>Key Lesson:</strong> With a simple, symmetric wave function, the evaluation is straightforward. You take the maximal projection state, apply the magnetic moment operator, and collect the contributions.</p>
+</section>
+</section>
+<section id="excitation-pattern-of-the-σ_b-baryon" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="excitation-pattern-of-the-σ_b-baryon"><span class="header-section-number">2</span> Excitation Pattern of the Σ_b Baryon</h2>
+<p>Now, question number two is the excitation pattern of the <span class="math inline">\Sigma_b</span> baryon.</p>
+<p>I gave you a hint that the ground state of the <span class="math inline">\Sigma_b</span> baryon has the light diquark in the configuration with isospin <span class="math inline">I=1</span> and spin <span class="math inline">1/2^+</span> .</p>
+<p>A bonus question is the isospin pattern: the partners of this baryon that one gets simply from isospin. You see that isospin equals 1. It immediately tells you the multiplicity of the isospin multiplet.</p>
+<p>How many charge partners am I going to get for this baryon? Since isospin is one, there are three different projections, three different quantizations: <span class="math inline">I_3 = +1</span> , <span class="math inline">0</span> , and <span class="math inline">-1</span> .</p>
+<p>What are the charges? I’m going to get <span class="math inline">\Sigma_b^+</span> (uub), <span class="math inline">\Sigma_b^0</span> (udb), and <span class="math inline">\Sigma_b^-</span> (ddb). Two up quarks and one bottom quark is like a proton, it has a charge of <span class="math inline">+1</span> . Once I act with a spin lowering operator, I reduce the charge by one unit. So this number tells you immediately how many particles and what their charges are. It is super simple.</p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>The charges for the <span class="math inline">\Sigma_b</span> isospin triplet ( <span class="math inline">I=1</span> ) can be determined from the quark content or the Gell-Mann–Nishijima formula, <span class="math inline">Q = I_3 + Y/2</span> , where the hypercharge <span class="math inline">Y=1</span> . This gives:</p>
+<ul>
+<li><span class="math inline">I_3 = +1</span> → <span class="math inline">Q = +1</span> ( <span class="math inline">\Sigma_b^+</span> , uub)</li>
+<li><span class="math inline">I_3 = 0</span> → <span class="math inline">Q = 0</span> ( <span class="math inline">\Sigma_b^0</span> , udb)</li>
+<li><span class="math inline">I_3 = -1</span> → <span class="math inline">Q = -1</span> ( <span class="math inline">\Sigma_b^-</span> , ddb)</li>
+</ul>
+</div>
+</div>
+</div>
+<p>In order to find the excitation pattern you need to work with spin, not with isospin. All three families are related by isospin, therefore their properties are going to be almost the same. Isospin is broken by different quark masses, but this breaking is tiny. I can talk about any of these three, and for all of them, the ladder of excitations is going to be the same.</p>
+<p>Let’s now pick one of them, put it as the lowest state as usual. For the diagram of the excitation pattern, we draw on the x-axis different quantum numbers, often the orbital angular momentum <span class="math inline">L</span> . On the y-axis we put the energy or the rest mass of the state, which is the same as the mass of the hadron.</p>
+<p>To obtain that, I start by combining the spins of the light quarks and the heavy quark.</p>
+<div id="fig-fg1" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2024-Lecture-04-images/fig1.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: This figure schematically illustrates the <strong>excitation pattern of the <span class="math inline">\Sigma_b</span> baryon</strong> in terms of its quantum numbers and mass splittings, as discussed in the lecture. On the vertical axis is the <strong>energy or mass of the hadron</strong> (labeled “mass of hadron”), while the horizontal axis represents the <strong>orbital angular momentum <span class="math inline">L</span> </strong> of the system. - The lowest block at <span class="math inline">L=0</span> (S-wave) corresponds to the <strong>ground state multiplet</strong> of the <span class="math inline">\Sigma_b</span> , specifically the <span class="math inline">J^P=1/2^+</span> and <span class="math inline">J^P=3/2^+</span> states, arising from combining the light diquark spin ( <span class="math inline">s_\ell = 1</span> ) with the heavy quark spin ( <span class="math inline">s_Q = 1/2</span> ). - The “radial excitation” arrow, labeled as approximately <span class="math inline">\Lambda_{\text{QCD}}</span> , represents the energy gap between different principal quantum numbers (radial excitations), reflecting the typical QCD scale for hadronic structure. - The higher-lying blocks at <span class="math inline">L=1</span> (P-wave) display the <strong>P-wave excitation multiplet</strong>, with five total states corresponding to the possible combinations of spins and orbital motions: specifically, <span class="math inline">J^P=1/2^-, 3/2^-</span> (from <span class="math inline">S=1/2</span> ) and <span class="math inline">J^P=1/2^-, 3/2^-, 5/2^-</span> (from <span class="math inline">S=3/2</span> ). - The vertical separations correspond to mass splittings between S-wave and P-wave states (dominated by orbital excitation energy, of order <span class="math inline">\Lambda_{\text{QCD}}</span> ), while the smaller splittings within each block are due to <strong>hyperfine interactions</strong> (suppressed by <span class="math inline">1/m_Q</span> for the heavy quark). - This diagram captures the overall <strong>structure of the baryon spectrum</strong>, encoding both the quantum number assignments and the physical energy scales discussed in the lectures on spectroscopy and multiplet structure.
+</figcaption>
+</figure>
+</div>
+<p>For most hadrons, except the light meson sector, the radial excitation from 1s to 2s orbitals is much higher than the hyperfine splitting. Once you deal with heavy quarks, this is always true.</p>
+<p>The energy difference from combining the spin of the heavy quark and the spin of the light quark comes with a suppression factor, <span class="math inline">1/m_Q</span> . When you combine the light diquark, which has spin <span class="math inline">s_\ell=1</span> , and the heavy quark of spin <span class="math inline">s_Q=1/2</span> , for the S-wave you get two total spin combinations: <span class="math inline">J=1/2</span> and <span class="math inline">J=3/2</span> .</p>
+<p><strong>Ground State (S-wave) Multiplicity:</strong></p>
+<ul>
+<li>Coupling <span class="math inline">s_\ell = 1</span> and <span class="math inline">s_Q = 1/2</span> gives: <span class="math inline">J = \frac{1}{2}, \frac{3}{2}</span> .</li>
+<li>Parity is positive for S-wave states.</li>
+<li>This yields the ground-state doublet: <span class="math inline">\Sigma_b (J^P = 1/2^+)</span> and <span class="math inline">\Sigma_b^* (J^P = 3/2^+)</span> .</li>
+</ul>
+<p>If I want to calculate the multiplicity of states after adding one unit of orbital angular momentum, I have to consider both possibilities separately and do the spin algebra. For the P-wave ( <span class="math inline">L=1</span> ), combining with <span class="math inline">S=1/2</span> gives <span class="math inline">J^P = 1/2^-, 3/2^-</span> . Combining with <span class="math inline">S=3/2</span> gives <span class="math inline">J^P = 1/2^-, 3/2^-, 5/2^-</span> .</p>
+<p><strong>P-wave ( <span class="math inline">L=1</span> ) Multiplicity:</strong></p>
+<ul>
+<li>For <span class="math inline">S = 1/2</span> : <span class="math inline">J^P = \frac{1}{2}^-, \frac{3}{2}^-</span></li>
+<li>For <span class="math inline">S = 3/2</span> : <span class="math inline">J^P = \frac{1}{2}^-, \frac{3}{2}^-, \frac{5}{2}^-</span></li>
+<li><strong>Total:</strong> Five distinct P-wave states (negative parity).</li>
+</ul>
+<p>The multiplicity for the P-wave block is five. The multiplicity for the S-wave orbital is two. The lowest state is <span class="math inline">1/2^+</span> and <span class="math inline">3/2^+</span> . Then there are five states in the P-wave. That is what we call the excitation pattern.</p>
+<p>All of these lines are different particles you find in the PDG. I don’t think the 2004 PDG had even the next one, because it was discovered recently. The <span class="math inline">\Sigma_b^*</span> entered there roughly 10 years ago. This was a discovery of the colliders.</p>
+<p>Now one word about energy splitting. The energy splitting between the S-wave and P-wave states is caused by the orbital excitation, with a scale given by quark dynamics of order <span class="math inline">\Lambda_{\text{QCD}}</span> , roughly a few hundred MeV. That gives the elevation of the different blocks.</p>
+<p>Within a block, the splitting between levels comes from the dynamics of the heavy quark spin. This splitting is suppressed inversely proportional to its mass, <span class="math inline">\Delta E_{\text{hyperfine}} \sim \kappa/m_Q</span> . In the Lagrangian of effective theories, the spin-orbit interaction enters as a term like <span class="math inline">(C/m_Q) \vec{S}_Q \cdot \vec{S}_\ell</span> .</p>
+<p>The mass of the <span class="math inline">b</span> quark is about 4 GeV. <span class="math inline">\Lambda_{\text{QCD}}</span> is a few hundred MeV. The ratio between them is roughly 1:10. That is the difference between the orbital excitation energies and the hyperfine splittings within a multiplet.</p>
+<p>I think that if I remember correctly, the energy difference between <span class="math inline">\Sigma_b</span> with spin <span class="math inline">3/2</span> and <span class="math inline">\Sigma_b</span> with spin <span class="math inline">1/2</span> is on the order of 10 MeV.</p>
+</section>
+<section id="the-puzzle-of-exotic-hadrons" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="the-puzzle-of-exotic-hadrons"><span class="header-section-number">3</span> The Puzzle of Exotic Hadrons</h2>
+<p>Today’s lecture is dedicated to <strong>kinematics and experimental techniques</strong>.</p>
+<p>I would like to start by overviewing what we do in physics on the experimental side. The direction of <strong>hadron spectroscopy</strong> has been extremely vibrant and fruitful in the last 10 years. It started around 2004, where it became a prominent and trending topic with the first observations of <strong>exotic particles</strong>.</p>
+<p>Since then, every few months, there would be new observations of hadrons that do not fit the simple quark model of mesons and baryons. Many experiments have since dedicated part of their programs to study these exotic hadrons.</p>
+<p>Across the world, several large labs study particle collisions. One of the central, puzzling questions is to understand the very fabric of matter: how hadrons form, which combinations are possible, and what rules determine their excitation patterns and properties.</p>
+<p>We have a quantum theory of strong interactions—<strong>Quantum Chromodynamics (QCD)</strong>—which seems to describe these interactions well. However, there has been no success in <strong>classifying and predicting large multiplets of exotic hadrons from first principles</strong>. We observe something and would like to predict its properties, but we cannot. This is due to:</p>
+<ul>
+<li>Limitations in our computational methods (e.g., Lattice QCD works well for ground states but not yet for excited states).</li>
+<li>The intrinsic complexity of the theory itself.</li>
+</ul>
+<p>There are many emerging phenomena. You can look at the QCD Lagrangian and see quarks and gluons, but these are not the direct degrees of freedom for describing hadrons. We seem to be facing a transition in the description of matter: from configurations where <strong>quark degrees of freedom</strong> are important, to configurations where <strong>hadrons themselves</strong> become the important degrees of freedom, binding together to form hadronic atoms or molecules.</p>
+<p>In hadron spectroscopy, you face this borderline. You have a mixture of:</p>
+<ul>
+<li><strong>Compact hadrons</strong> made of elementary quarks.</li>
+<li><strong>Larger, sparse objects</strong> where hadrons bind into bigger entities (e.g., <span class="math inline">\text{Hadron}_1 + \text{Hadron}_2 \rightarrow \text{Molecule}</span> ).</li>
+</ul>
+<p>Some hadrons are complicated exactly for this reason—they are in a <strong>mixed state</strong> of different configurations. Some properties require it to be a compact hadron, while others require it to be a sparse hadronic molecule. This is the area where, at the current stage, lattice QCD cannot help very much.</p>
+<p>Experiments around the world provide new data and insight. The way we understand this is by measuring the properties of hadrons and their decays. We want to:</p>
+<ol type="1">
+<li>Observe hadrons in new decay configurations.</li>
+<li>Measure the same hadron from different production mechanisms.</li>
+</ol>
+<p>Many labs explore these different mechanisms:</p>
+<ul>
+<li><p><strong>Experiments like Belle (Japan) and BESIII (China)</strong> collide <strong>leptons</strong> (electrons and positrons). They annihilate to produce an intermediate state that decays. A typical reaction is: <span class="math display">e^+ + e^- \rightarrow \psi \rightarrow \text{hadrons}, \quad \sqrt{s} \sim 2 - 4 \, \text{GeV}</span><br>
+The study happens by analyzing these decay products.</p></li>
+<li><p><strong>Colliders at CERN, like the LHC</strong>, explore different mechanisms by colliding <strong>protons</strong> (large energetic conglomerates of quarks and gluons). This produces many particles, including long-lived particles with heavy quarks like <span class="math inline">B</span> and <span class="math inline">D</span> mesons.</p></li>
+</ul>
+<p>These heavy mesons live long enough to travel a measurable distance, providing a clean environment to study hadrons. A <span class="math inline">B</span> or <span class="math inline">D</span> meson is produced, flies a few millimeters, and we track this with our detectors. We can then distinguish the <strong>primary vertex</strong> from the <strong>secondary decay vertex</strong>.</p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Key Experimental Formulas</strong> The analysis in these experiments relies on fundamental kinematic formulas:</p>
+<ul>
+<li><p><strong>Relativistic Energy-Momentum:</strong> <span class="math inline">E^2 = p^2 c^2 + m^2 c^4</span></p></li>
+<li><p><strong>Invariant Mass:</strong> Used to reconstruct particle masses from decay products. <span class="math display">M_{\text{inv}}^2 = \left( \sum_i E_i \right)^2 - \left( \sum_i \vec{p}_i \right)^2 c^2</span></p></li>
+<li><p><strong>Decay Width &amp; Lifetime:</strong> <span class="math inline">\Gamma = \hbar / \tau</span></p></li>
+<li><p><strong>Resonance Cross-Section:</strong> Described by a Breit-Wigner form, <span class="math inline">\sigma(E) \propto 1/[(E - M)^2 + \Gamma^2/4]</span> , crucial for identifying short-lived exotic states.</p></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="hadron-production-and-spectroscopy-experiments" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="hadron-production-and-spectroscopy-experiments"><span class="header-section-number">4</span> Hadron Production and Spectroscopy Experiments</h2>
+<p>Another class of experiments uses <strong>hadronic production</strong>. Essentially, shooting a hadron at a hadron without aiming to describe the kinematics exclusively. Those are mostly fixed-target experiments.</p>
+<p>I will be talking about the <strong>GlueX experiment</strong> at Jefferson Lab that has a photon beam, and the <strong>COMPASS experiment</strong> at CERN that has a pion beam. They both use a hydrogen target. The proton in the target and whatever particle comes in gets excited or scatters off the target.</p>
+<div id="fig-fg9" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2024-Lecture-04-images/fig9.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: This figure schematically represents a <strong>generic hadronic collision</strong> in which two incoming particles interact and produce a multiparticle final state. The arrows entering the central blob on the left signify two <strong>incoming particles</strong> (such as protons, pions, photons, or leptons) participating in the collision. The arrows exiting on the right denote the <strong>production of several outgoing hadrons</strong> (“h” stands for a generic hadron), which may include resonances or decay products. In the context of this lecture, this diagram illustrates the general ** <span class="math inline">2 \to n</span> process** central to experiments in hadron spectroscopy. Such processes underpin both <strong>inclusive</strong> and <strong>exclusive production mechanisms</strong> discussed above—for example, proton-proton collisions at the LHC, photon-proton collisions at GlueX, or <span class="math inline">e^+e^-</span> annihilation at Belle and BES experiments. The central region represents the <strong>strong interaction dynamics</strong>, where the initial particles interact via Quantum Chromodynamics (QCD) to create various possible hadronic final states. Physically, this encapsulates the need to analyze multi-particle final states using <strong>Lorentz invariant phase space</strong>, <strong>mass-shell constraints</strong>, and <strong>energy-momentum conservation</strong>, as described in the kinematics section of the lecture. The schematic is a universal representation of the kind of events for which one computes invariant masses, studies resonance production, and counts independent kinematic variables.
+</figcaption>
+</figure>
+</div>
+<p>That’s another way to study hadrons, by using different production mechanisms.</p>
+<p>I would say the third major way to study hadrons is to compute their properties from <strong>lattice QCD</strong>. That’s where a large piece of information comes from.</p>
+<p>Let’s overview the production mechanism and experiments. We start with <strong>BES</strong>.</p>
+<ul>
+<li>The <strong>BES experiment</strong> (Beijing Spectrometer) is located at the <strong>BEPC</strong> (Beijing Electron Positron Collider) accelerator complex.</li>
+<li>It collides electrons and positrons and is dedicated to studying hadrons in the Charmonium and Tau energy regions.</li>
+<li>It is a <strong>symmetric collider</strong>; the electron has the same energy as the positron.</li>
+</ul>
+<div id="fig-fg2" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2024-Lecture-04-images/fig2.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: This diagram represents the process of electron-positron ( <span class="math inline">e^+e^-</span> ) annihilation and the subsequent production of hadrons in a collider experiment such as BESIII or Belle II. In this physical context, an electron ( <span class="math inline">e^-</span> ) and a positron ( <span class="math inline">e^+</span> ) collide head-on, annihilate at the interaction point, and produce a virtual intermediate state—typically a photon or a vector meson with quantum numbers <span class="math inline">J^{PC} = 1^{--}</span> . This intermediate state then decays into multiple hadrons, shown here as several arrows radiating from the interaction point. The image encodes the experimental environment where all produced hadrons fly out from the collision vertex and are detected. This is central to studies in hadron spectroscopy, where the kinematics and invariant mass distributions of the outgoing hadrons are analyzed to identify hadron resonances, determine their properties, and scan for new or exotic states. This mechanism serves as the basis for resonance production, allowing experiments to reconstruct resonance peaks and study the strong interaction via the analysis of the final-state hadrons.
+</figcaption>
+</figure>
+</div>
+<p>When the two particles collide, one interaction possibility is <strong>annihilation</strong>. The electron and positron produce a virtual photon that then couples to a hadron.</p>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Quantum Number Selection Rule</strong> In relativistic <span class="math inline">e^+ e^-</span> collisions, the initial state quantum numbers restrict the produced virtual photon.</p>
+</div>
+</div>
+</div>
+<div id="fig-fg3" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2024-Lecture-04-images/fig3.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: This diagram depicts the fundamental process of hadron production in an electron-positron ( <span class="math inline">e^+ e^-</span> ) collider experiment as described in the lecture. An electron ( <span class="math inline">e^-</span> ) and a positron ( <span class="math inline">e^+</span> ) annihilate, producing a virtual photon ( <span class="math inline">\gamma</span> ). This virtual photon then couples to a hadronic resonance, specifically the <span class="math inline">J/\psi</span> meson, which has quantum numbers <span class="math inline">J^{PC} = 1^{--}</span> , consistent with the selection rules discussed. The <span class="math inline">J/\psi</span> resonance subsequently decays into three pions: a positive pion ( <span class="math inline">\pi^+</span> ), a negative pion ( <span class="math inline">\pi^-</span> ), and a neutral pion ( <span class="math inline">\pi^0</span> ). In the context of the lecture, this process illustrates how <span class="math inline">e^+ e^-</span> annihilation at experiments like BES or Belle/Belle II can be used to study hadron spectroscopy, especially by observing exclusive decay final states of vector mesons (like <span class="math inline">J/\psi</span> ) into lighter mesons. The depicted reaction is a clear example of both the initial state quantum number selection (only <span class="math inline">1^{--}</span> states can be directly produced) and the analysis of exclusive decays in spectroscopy experiments. The decay products ( <span class="math inline">\pi^+</span> , <span class="math inline">\pi^-</span> , and <span class="math inline">\pi^0</span> ) can be reconstructed to study the properties and dynamics of the <span class="math inline">J/\psi</span> resonance via invariant mass techniques and Dalitz plot analysis as highlighted in the lecture.
+</figcaption>
+</figure>
+</div>
+<p>Combining the spins and parities of the electron ( <span class="math inline">1/2^-</span> ) and positron ( <span class="math inline">1/2^+</span> ) in an S-wave results in quantum numbers <span class="math inline">J^{PC} = 1^{--}</span> . This means <strong>only hadronic resonances with <span class="math inline">J^{PC} = 1^{--}</span> </strong> (like the <span class="math inline">J/\psi</span> or <span class="math inline">\psi(2S)</span> ) can be directly produced in <span class="math inline">e^+ e^-</span> annihilation.</p>
+<div id="fig-fg4" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2024-Lecture-04-images/fig4.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: This figure schematically represents the total cross section <span class="math inline">\sigma_{e^+e^- \to X}</span> measured as a function of the center-of-mass energy <span class="math inline">\sqrt{s}</span> in electron-positron annihilation experiments, such as those conducted at BES or Belle II. The vertical axis shows the cross section for producing hadronic final states <span class="math inline">X</span> in <span class="math inline">e^+e^-</span> collisions, while the horizontal axis is the center-of-mass energy, marked at characteristic values (e.g., 2 GeV, 4 GeV). The sharp peaks and structures correspond to the production of intermediate resonances, such as the <span class="math inline">J/\psi</span> and its excitations ( <span class="math inline">\psi(2S)</span> , etc.), which have <span class="math inline">J^{PC}=1^{--}</span> and couple directly to the virtual photon in <span class="math inline">e^+e^-</span> annihilation. The decomposition <span class="math inline">\sigma_\text{full} = \sigma_{3\pi} + \sigma_{2D} + \dots</span> at the top indicates that the total cross section is the sum over exclusive cross sections for different final states. This plot physically illustrates how the hadronic production rate varies with <span class="math inline">\sqrt{s}</span> , highlighting resonance peaks where particle production is enhanced due to the formation of specific quark-antiquark bound states (quarkonia), a central method in hadron spectroscopy.
+</figcaption>
+</figure>
+</div>
+<p>Therefore, the BES experiment explores hadrons with the quantum numbers <span class="math inline">1^{--}</span> .</p>
+<p>The experiment operates in two main modes:</p>
+<ol type="1">
+<li><strong>Resonance Peak Data Taking:</strong> They set the beam energy to sit directly on a resonance peak (e.g., the <span class="math inline">J/\psi</span> ) and collect enormous amounts of data on its production and decays.</li>
+<li><strong>Energy Scan:</strong> They vary the beam energy point-by-point to measure the cross section <span class="math inline">\sigma_{\text{total}}</span> as a function of center-of-mass energy <span class="math inline">\sqrt{s}</span> .</li>
+</ol>
+<p><span class="math display">\sigma(e^+ e^- \to R \to \text{hadrons}) \propto \frac{\Gamma_{e^+ e^-} \Gamma_{\text{total}}}{(s - M_R^2)^2 + M_R^2 \Gamma_{\text{total}}^2}</span></p>
+<p>The cross section is not homogeneous; it shows <strong>peaking structures (resonances)</strong> where the probability of interaction is higher. Researchers then analyze specific final states (like <span class="math inline">\pi^+\pi^-</span> or <span class="math inline">3\pi</span> ) from these data sets to extract hadron properties.</p>
+<p>The <strong>Belle II experiment</strong> in Japan also uses an electron-positron collider (the SuperKEKB accelerator). Its primary goal was to study <strong>B mesons and CP violation</strong>, but its data is extremely valuable for hadron spectroscopy.</p>
+<p>In contrast to symmetric colliders like BES, <strong>Belle II is an asymmetric collider</strong>. The electron and positron beams have different energies.</p>
+<div id="fig-fg5" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2024-Lecture-04-images/fig5.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: This figure illustrates the production mechanism at the Belle II experiment, an <strong>asymmetric electron-positron collider</strong>. An electron beam with an energy of approximately 7 GeV collides with a positron beam of about 4.6 GeV. The collision center-of-mass energy is tuned to <span class="math inline">\sqrt{s} \approx 10.58\,\text{GeV}</span> , which matches the mass of the <span class="math inline">\Upsilon(4S)</span> resonance (a bottomonium state with quantum numbers <span class="math inline">J^{PC} = 1^{--}</span> ). The <span class="math inline">\Upsilon(4S)</span> then decays predominantly into a pair of <span class="math inline">B</span> mesons ( <span class="math inline">B\bar{B}</span> ). The <strong>asymmetric beam energies</strong> provide a net boost to the produced <span class="math inline">B</span> mesons, causing them to travel a measurable distance before decaying—this is essential for identifying secondary decay vertices. This process is a central feature of experimental techniques in hadron spectroscopy described in the lecture, specifically highlighting how asymmetric colliders like Belle II facilitate the study of <span class="math inline">B</span> mesons through precise vertex separation and kinematic reconstruction.
+</figcaption>
+</figure>
+</div>
+<ul>
+<li>For symmetric colliders: <span class="math inline">\sqrt{s} = 2E</span></li>
+<li>For asymmetric colliders: <span class="math inline">\sqrt{s} = 2\sqrt{E_- E_+}</span></li>
+</ul>
+<p>Belle II operates at a center-of-mass energy tuned to the <span class="math inline">\Upsilon(4S)</span> resonance mass ( <span class="math inline">\sqrt{s} = 10.58 \text{ GeV}</span> ), which primarily decays to a <span class="math inline">B\bar{B}</span> pair.</p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Purpose of the Asymmetric Design</strong> The energy asymmetry ( <span class="math inline">E_- \neq E_+</span> ) creates a <strong>boost</strong> of the entire center-of-mass frame along the beam axis. <span class="math display">\beta_{\text{CM}} = \frac{|E_- - E_+|}{E_- + E_+}, \quad \gamma_{\text{CM}} = \frac{E_- + E_+}{\sqrt{s}}</span><br>
+This boost gives the produced B mesons significant longitudinal momentum. As a result, they travel a longer, measurable distance ( <span class="math inline">L_{\text{lab}} = \gamma_{\text{CM}} \beta_{\text{CM}} c \tau</span> ) from the primary interaction vertex before decaying. This <strong>secondary vertex separation</strong> is crucial for identifying and studying the short-lived B mesons.</p>
+</div>
+</div>
+</div>
+<p>Let’s return to the spectrum. The <span class="math inline">J/\psi</span> is the first charmonium state discovered and appears as a clear peak in the <span class="math inline">e^+ e^-</span> cross section. It is a <span class="math inline">1^{--}</span> state.</p>
+<p>The charmonium spectrum is organized into multiplets based on radial ( <span class="math inline">n</span> ) and orbital ( <span class="math inline">L</span> ) excitations:</p>
+<ul>
+<li>The lowest <span class="math inline">1^{--}</span> state is the <span class="math inline">J/\psi(1S)</span> .</li>
+<li>Its radial excitation is the <span class="math inline">\psi(2S)</span> .</li>
+<li>The lowest state in the 1S multiplet is the <span class="math inline">\eta_c(1S)</span> ( <span class="math inline">0^{-+}</span> ).</li>
+<li>The P-wave multiplet ( <span class="math inline">L=1</span> ) consists of the <span class="math inline">\chi_{cJ}</span> states: <span class="math inline">\chi_{c0}</span> ( <span class="math inline">0^{++}</span> ), <span class="math inline">\chi_{c1}</span> ( <span class="math inline">1^{++}</span> ), and <span class="math inline">\chi_{c2}</span> ( <span class="math inline">2^{++}</span> ).</li>
+</ul>
+<p>The mass splittings within these multiplets arise from the detailed interactions in the quark model, including spin-spin and spin-orbit terms.</p>
+</section>
+<section id="from-charmonium-to-bottomonium-and-lhc-multiplicities" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="from-charmonium-to-bottomonium-and-lhc-multiplicities"><span class="header-section-number">5</span> From Charmonium to Bottomonium and LHC Multiplicities</h2>
+<p>To reconstruct the schematics before we move away from Belle II, let me relate to what we just said before.</p>
+<p>Essentially it’s the same process: <span class="math inline">e^+e^-</span> annihilation. So it’s a total cross section <span class="math inline">\sigma(e^+e^- \to \text{everything})</span> .</p>
+<section id="quarkonium-spectroscopy-charmonium-to-bottomonium" class="level3" data-number="5.1">
+<h3 data-number="5.1" class="anchored" data-anchor-id="quarkonium-spectroscopy-charmonium-to-bottomonium"><span class="header-section-number">5.1</span> <strong>Quarkonium Spectroscopy: Charmonium to Bottomonium</strong></h3>
+<p>The Belle experiment operated at energies covering the <span class="math inline">J/\psi</span> and the <span class="math inline">\tau</span> production threshold. Belle II operates in the region of <strong>bottomonium</strong>—the family of hadrons made of <span class="math inline">b\bar{b}</span> quarks, analogous to <strong>charmonium</strong> ( <span class="math inline">c\bar{c}</span> ).</p>
+<ul>
+<li><p>The energy scale moves from ~3 GeV (KEK) to the ~10 GeV region.</p></li>
+<li><p>The bottomonium system is very similar to charmonium, but the <span class="math inline">b</span> quark is heavier.</p></li>
+<li><p>This leads to a <strong>smaller hyperfine splitting</strong> between states. The mass difference is given by: <span class="math display">\Delta M_{\text{hfs}} = M(1^{--}) - M(0^{-+})</span></p></li>
+<li><p>While the scale between major energy levels is still roughly a few hundred MeV, the states within each level are <strong>much more condensed in energy</strong>.</p></li>
+</ul>
+<p>The new symbol here is <strong>upsilon</strong> ( <span class="math inline">\Upsilon</span> ). This is the vector particle (spin 1, quantum numbers <span class="math inline">1^{--}</span> ), making it the <strong>cousin of the <span class="math inline">J/\psi</span> </strong>.</p>
+<ul>
+<li>The <span class="math inline">J/\psi</span> is the easiest charmonium particle to produce in <span class="math inline">e^+e^-</span> annihilation due to its <span class="math inline">1^{--}</span> quantum numbers.</li>
+<li>Its counterpart in the bottomonium spectrum is the <span class="math inline">\Upsilon</span> .</li>
+<li>When scanning the energy, the states appear sequentially: <span class="math inline">\Upsilon(1S)</span> , <span class="math inline">\Upsilon(2S)</span> , <span class="math inline">\Upsilon(3S)</span> , <span class="math inline">\Upsilon(4S)</span> .</li>
+<li>The <span class="math inline">\Upsilon(4S)</span> is notable because all these states are above the production threshold for <span class="math inline">b</span> quarks (~9.46 GeV for the <span class="math inline">\Upsilon(1S)</span> ). ### <strong>Contrast with Hadron Colliders: The LHC Environment</strong></li>
+</ul>
+<div id="fig-fg6" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2024-Lecture-04-images/fig6.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7: This figure illustrates the physical process occurring during a high-energy proton-proton collision at a hadron collider like the LHC. Each proton (denoted by “P”) enters the collision point with an energy of 7 TeV. Upon collision, the energy released results in the production of a very large number of secondary particles—on the order of <span class="math inline">10^3</span> (about a thousand) per event. This reflects the high multiplicity environment typical of LHC collisions, as described in the lecture. The resulting particles are distributed in various directions with a broad range of momenta, most commonly with energies of a few hundred MeV. This environment is crucial for hadron spectroscopy studies, as it enables the observation and identification of rare and exotic hadronic states among the many produced particles. The diagram underscores the difference between the complex, high-multiplicity environment of hadron colliders and the cleaner environment of <span class="math inline">e^+ e^-</span> colliders.
+</figcaption>
+</figure>
+</div>
+<p>Proton-proton colliders like the LHC present a <strong>far more complex environment</strong> compared to clean <span class="math inline">e^+e^-</span> annihilation.</p>
+<ul>
+<li><p><strong>Energy &amp; Process:</strong> At the LHC, protons collide at energies like 7.7 TeV per beam. This is not a simple annihilation process; the <strong>beam remnants</strong>—primarily quarks and gluons—carry TeV-scale energies.</p></li>
+<li><p><strong>Event Multiplicity:</strong> The collisions produce a very high number of particles. The average multiplicity <span class="math inline">\langle N \rangle</span> scales with the collision energy <span class="math inline">\sqrt{s}</span> : <span class="math display">\langle N \rangle \propto \ln(\sqrt{s})</span><br>
+At the LHC, a <strong>typical event has a multiplicity of roughly a thousand particles</strong>.</p></li>
+<li><p><strong>Particle Spectrum:</strong> The transverse momentum ( <span class="math inline">p_T</span> ) distribution of these particles follows an approximate exponential fall-off: <span class="math display">\frac{dN}{dp_T} \propto e^{-p_T / \langle p_T \rangle}</span><br>
+This means there are <strong>many low-energy particles</strong> and a <strong>long tail extending to high energies</strong>.</p></li>
+</ul>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Key Scale:</strong> The typical energy scale for most particles produced in an LHC collision is on the order of <strong>hundreds of MeV</strong>. Even with thousands of particles sharing the total collision energy, the bulk of them have low momentum, establishing this few-hundred-MeV scale as characteristic of the hadronic environment.</p>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="hadron-production-and-spectroscopy-at-lhcb" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="hadron-production-and-spectroscopy-at-lhcb"><span class="header-section-number">6</span> Hadron Production and Spectroscopy at LHCb</h2>
+<p>LHCb has been the most productive experiment in discovering new hadrons because of the high cross section. The cross section for two protons interacting, <span class="math inline">\sigma_{pp \to \text{hadrons}}</span> , is much larger than the cross section for annihilating two electrons, <span class="math inline">\sigma_{e^+e^- \to \text{hadrons}}</span> . This enables the detailed study of hadron production.</p>
+<p>The two main production mechanisms explored in proton-proton collisions are:</p>
+<ul>
+<li><strong>Prompt production:</strong> The particle of interest originates directly from the primary collision vertex.</li>
+<li><strong>Displaced production:</strong> The particle originates from the decay of a longer-lived particle, creating a secondary vertex. ### Studying Hadrons via Prompt Production</li>
+</ul>
+<div id="fig-fg7" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2024-Lecture-04-images/fig7.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8: This figure illustrates two main types of hadron production observed in high-energy collider experiments, as discussed in the lecture: <strong>prompt production</strong> and <strong>production from <span class="math inline">b</span> -hadron ( <span class="math inline">B/\Lambda_b</span> ) decays</strong>. - <strong>Prompt production:</strong> The top part shows the direct (prompt) creation of hadrons at the primary interaction point. It depicts the decay of an excited charmed baryon, <span class="math inline">\Omega_c^0</span> , which promptly decays into a cascade baryon <span class="math inline">\Xi_c</span> and a <span class="math inline">K^-</span> meson. The <span class="math inline">\Xi_c</span> is then reconstructed from its decay products (e.g., proton, <span class="math inline">K^-</span> , and <span class="math inline">\pi^+</span> ), and a characteristic <strong>secondary vertex</strong> is indicated (displaced by several millimeters from the primary vertex), signifying the weak decay of the <span class="math inline">\Xi_c</span> . - <strong>Production from <span class="math inline">b</span> -decays:</strong> The bottom part shows the production of hadrons via the decay of a long-lived <span class="math inline">b</span> -hadron ( <span class="math inline">B</span> or <span class="math inline">\Lambda_b</span> ). The <span class="math inline">B/\Lambda_b</span> baryon travels a measurable distance (on the order of <span class="math inline">\sim 2</span> cm) from the primary collision before decaying. Its decay produces particles such as <span class="math inline">J/\psi</span> , a proton ( <span class="math inline">p</span> ), and a kaon ( <span class="math inline">K</span> ). The diagram notes ** <span class="math inline">P_c</span> resonances** (pentaquark candidates observed in the <span class="math inline">J/\psi p</span> invariant mass spectrum) and ** <span class="math inline">\Lambda^*</span> resonances** (seen in the <span class="math inline">pK</span> spectrum), illustrating how secondary vertices allow the identification of new excited hadronic states. The physical meaning centers on the use of <strong>vertex displacement</strong> to distinguish production mechanisms, the reconstruction of invariant mass spectra to identify resonances, and the importance of tracking kinematics in hadron spectroscopy studies as explained in the lecture.
+</figcaption>
+</figure>
+</div>
+<p>A prime example from charm production is the observation of the <span class="math inline">\Omega_c</span> baryons and the <span class="math inline">\Xi_c^*</span> and <span class="math inline">\Omega_c^*</span> baryons in prompt production. This is done by reconstructing <span class="math inline">\Xi_c K</span> combinations.</p>
+<p>The <span class="math inline">\Xi_c</span> is the ground state of the cascade multiplet. For all such multiplets containing a charm or bottom quark, the ground state decays weakly because the heavy quark is stable under the strong interaction. The decay proceeds via the weak interaction, with a proper lifetime <span class="math inline">\tau</span> on the order of <span class="math inline">10^{-10}</span> seconds.</p>
+<p>For a boosted particle with a momentum around 100 GeV, this lifetime results in a measurable flight distance. The decay length in the lab frame is given by:</p>
+<p><span class="math display">L = \gamma \beta c \tau</span></p>
+<p>where <span class="math inline">\gamma</span> is the Lorentz factor and <span class="math inline">\beta = v/c</span> . This is sufficient to resolve its decay vertex from the primary vertex. The ground states of charm baryons fly millimeters; we resolve their decays from the primary vertex. In this case, the <span class="math inline">\Xi_c</span> produces a separate secondary vertex, displaced by roughly 5 or 6 millimeters.</p>
+<p>You reconstruct this <span class="math inline">\Xi_c</span> secondary vertex by looking at combinations of charged particles, such as a proton, kaon, and pion. From the thousands of other particles, you then loop over all kaons and combine each with an identified <span class="math inline">\Xi_c</span> .</p>
+<p>By examining these combinations, you find resonances that are produced promptly at the primary vertex and then decay into this pair. In the spectrum of the <span class="math inline">\Xi_c K</span> invariant mass, defined as:</p>
+<p><span class="math display">M_{\Xi_c K}^2 = (E_{\Xi_c} + E_K)^2 - (\vec{p}_{\Xi_c} + \vec{p}_K)^2</span></p>
+<p>you see distinct peaks. These peaks, five of them, correspond to the highest probability for producing a system, meaning the system resonates at a frequency corresponding to excited states in the <span class="math inline">\Omega_c</span> spectrum.</p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Identifying the State via Strangeness:</strong> The <span class="math inline">\Xi_c</span> has quark content <span class="math inline">csu</span> and contains one strange quark (s), giving it strangeness <span class="math inline">S = -1</span> . The <span class="math inline">K^-</span> has quark content <span class="math inline">s\bar{u}</span> and strangeness <span class="math inline">S = -1</span> . Therefore, <span class="math inline">\Xi_c K</span> combinations have a total strangeness of <span class="math inline">S = -2</span> . The resonances appearing in this spectrum have quark content <span class="math inline">css</span> , which is precisely the <span class="math inline">\Omega_c</span> baryon.</p>
+</div>
+</div>
+</div>
+<section id="studying-hadrons-via-displaced-production" class="level3" data-number="6.1">
+<h3 data-number="6.1" class="anchored" data-anchor-id="studying-hadrons-via-displaced-production"><span class="header-section-number">6.1</span> Studying Hadrons via Displaced Production</h3>
+<p>Another method is to look at separate secondary vertices from <span class="math inline">B</span> hadrons. The ground-state hadrons containing a <span class="math inline">b</span> quark are the <span class="math inline">B</span> mesons and the <span class="math inline">\Lambda_b</span> baryon. These are easiest to produce from the fragmentation of the initial <span class="math inline">b</span> quark.</p>
+<p>Since they are ground states, they also decay weakly. Their proper lifetime is longer, on the order of <span class="math inline">10^{-9}</span> seconds. When boosted, they produce a secondary vertex a few centimeters away from the primary interaction point, for example, two centimeters.</p>
+<p>This flight distance cleanly separates the decay we want to study from the primary interaction vertex, making the kinematics very clean. You reconstruct the final-state particles, determine the decay length and the momentum of the <span class="math inline">B</span> hadron, and study its isolated decay. (see <a href="#fig-fg7" class="quarto-xref">Figure&nbsp;8</a>)</p>
+<p>Resonances in this case appear <strong>within</strong> the decay products of the <span class="math inline">B</span> or <span class="math inline">\Lambda_b</span> . A prominent recent example, which led to the discovery of pentaquark states, is the decay:</p>
+<p><span class="math display">\Lambda_b \to J/\psi \, p \, K^-</span></p>
+<p>This is a three-body decay. You start with the <span class="math inline">\Lambda_b</span> and look at the exclusive combination of the final-state particles: <span class="math inline">J/\psi</span> , proton, and kaon. These particles can resonate at different masses.</p>
+<ul>
+<li>If you look at the invariant mass spectrum of the proton and kaon, <span class="math inline">M_{pK}^2 = (p_p + p_K)^2</span> , you see bumps corresponding to known <span class="math inline">\Lambda</span> resonances.</li>
+<li>If you look at the invariant mass spectrum of the proton and <span class="math inline">J/\psi</span> , <span class="math inline">M_{J/\psi p}^2 = (p_{J/\psi} + p_p)^2</span> , you do not expect any known resonances. However, resonant peaks are still observed.</li>
+</ul>
+<p>These peaks in the <span class="math inline">J/\psi\, p</span> spectrum correspond to <strong>pentaquark resonances</strong>, meaning they are combinations of five quarks: <span class="math inline">u, u, d, c, \bar{c}</span> .</p>
+</section>
+</section>
+<section id="fixed-target-experiments-and-light-hadron-spectroscopy" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="fixed-target-experiments-and-light-hadron-spectroscopy"><span class="header-section-number">7</span> Fixed-Target Experiments and Light Hadron Spectroscopy</h2>
+<p>Now let’s quickly overview <strong>fixed-target experiments</strong> and the techniques used there.</p>
+<p>I will have three examples.</p>
+<ul>
+<li><strong>The GlueX experiment at Jefferson Lab</strong> operates with a <strong>9 GeV photon beam</strong> hitting a liquid hydrogen target, which is essentially a liquid way of preparing protons as a target.</li>
+<li><strong>The COMPASS experiment at CERN</strong> explores hadron structure with a <strong>beam of pions</strong>, also using a liquid hydrogen target.</li>
+<li><strong>The CB-ELSA/TAPS experiment at Bonn</strong> uses a <strong>2 GeV photon beam</strong>.</li>
+</ul>
+<p>With these energies, we are not talking about bottom or charm quark production. Most of these experiments are focused on <strong>light hadron spectroscopy</strong>.</p>
+<ul>
+<li>COMPASS studies light hadrons like protons, kaons, and light mesons.</li>
+<li>GlueX does similar physics but with a different setup, beam, and energy.</li>
+<li>CB-ELSA/TAPS also studies light mesons in a fixed-target configuration.</li>
+</ul>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>The <strong>center-of-mass energy</strong> available in these fixed-target collisions is a key kinematic quantity, given by: <span class="math display">\sqrt{s} = \sqrt{m_{\text{beam}}^2 + m_{\text{target}}^2 + 2 E_{\text{beam}} m_{\text{target}}}</span><br>
+For photoproduction experiments like GlueX and CB-ELSA/TAPS, the <strong>threshold photon energy</strong> to produce a particle of mass <span class="math inline">m_X</span> from a proton target is: <span class="math display">E_{\gamma}^{\text{th}} = \frac{m_X^2 - m_p^2}{2 m_p}</span></p>
+</div>
+</div>
+</div>
+<p>The event rate in these experiments depends on the <strong>luminosity</strong>. For a fixed-target setup, the luminosity is <span class="math inline">\mathcal{L} = \Phi \, n \, L</span> , where <span class="math inline">\Phi</span> is the beam flux, <span class="math inline">n</span> is the target number density, and <span class="math inline">L</span> is the target length.</p>
+</section>
+<section id="two-mechanisms-in-fixed-target-experiments" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="two-mechanisms-in-fixed-target-experiments"><span class="header-section-number">8</span> Two Mechanisms in Fixed-Target Experiments</h2>
+<p>It is important to realize that there are two different mechanisms involved when you deal with fixed-target experiments at intermediate energy. These are not the same.</p>
+<p>The first process is <strong>diffraction</strong> and the second one is <strong>s-channel scattering</strong>. Which process happens when you collide two particles is determined by the energy. ### Diffraction vs.&nbsp;s-Channel Scattering</p>
+<div id="fig-fg8" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2024-Lecture-04-images/fig8.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;9: This figure illustrates the two primary physical processes occurring in fixed-target hadron experiments at intermediate energies: <strong>diffraction</strong> and <strong>s-channel scattering</strong>. - On the left, the diagram represents <strong>diffraction</strong>, where an incoming photon ( <span class="math inline">\gamma</span> ) interacts with a stationary proton ( <span class="math inline">p</span> ) via the exchange of a color-neutral <strong>gluonic field</strong>, phenomenologically described as a <strong>Pomeron</strong>. This process is characteristic at higher energies (around 20 GeV), where the proton acts as a source of strong interaction fields. The photon is excited through interaction with the gluonic field, producing a final hadronic state, with the proton typically remaining intact. - On the right, the diagram depicts <strong>s-channel scattering</strong>, which occurs predominantly at lower energies (2–3 GeV). Here, an incoming pion ( <span class="math inline">\pi</span> ) collides with a proton ( <span class="math inline">p</span> ), and both particles can resonate together via an intermediate state (the “X” in the middle), forming a true resonance. The final state contains specific outgoing hadrons resulting from this short-lived intermediate state. These processes are distinguished by their production mechanisms: <strong>diffraction</strong> involves exchange of a Pomeron (gluonic field) and typically dominates at higher energies, while <strong>s-channel scattering</strong> proceeds through the formation of a resonant intermediate state and is more prevalent at lower energies. This distinction is crucial for understanding hadron production and excitation patterns in experiments like GlueX and COMPASS, as described in the lecture.
+</figcaption>
+</figure>
+</div>
+<ul>
+<li><p><strong>Diffraction:</strong> This process uses the proton as the source of the strong interaction field. The proton sits and emits gluons. A pion or a photon comes and interacts with these gluonic fields and gets excited. The excited state <span class="math inline">X</span> then flies for a bit and decays.</p></li>
+<li><p>When we say “for a bit,” it’s not a physical flight in the detector. We are talking about strong interactions and hadronic resonances. Light hadronic resonances live for about <span class="math inline">10^{-25}</span> seconds, which is not sufficient time at these energies to move away from the primary vertex. However, on diagrams we sketch them as separate particles.</p></li>
+<li><p><strong>s-Channel Scattering:</strong> This process is more plausible at lower energies, typically around 2–3 GeV. Here, the proton and the incoming beam (pion or photon) can resonate at a specific frequency.</p></li>
+</ul>
+<p>For fixed-target kinematics, experiments like COMPASS separate the regime of diffraction from the regime of s-channel production to study baryonic excitations.</p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>The exchanged object in diffraction is not a single gluon (the proton must remain color neutral). It is a color-neutral gluonic field, described phenomenologically by the <strong>Pomeron</strong>. The Pomeron is not a fundamental particle found in the Particle Data Group (PDG) listings but is a useful way to model this interaction.</p>
+</div>
+</div>
+</div>
+<section id="exclusive-vs.-inclusive-processes-kinematic-counting" class="level3" data-number="8.1">
+<h3 data-number="8.1" class="anchored" data-anchor-id="exclusive-vs.-inclusive-processes-kinematic-counting"><span class="header-section-number">8.1</span> Exclusive vs.&nbsp;Inclusive Processes &amp; Kinematic Counting</h3>
+<p>We now move to discussing <strong>exclusive reactions</strong>, where all final-state particles are measured ( <span class="math inline">2 \to n</span> ). This is in contrast to <strong>inclusive</strong> processes, where a system is produced alongside many other particles that are not measured.</p>
+<p>To analyze an exclusive process, we need to count its independent <strong>kinematic variables</strong>. The method is:</p>
+<ol type="1">
+<li>Count the independent components of all particle momenta.</li>
+<li>Subtract constraints from energy-momentum conservation.</li>
+<li>Optionally subtract degrees of freedom fixed by choosing a specific reference frame.</li>
+</ol>
+<p><strong>Example: A <span class="math inline">2 \to 3</span> Process</strong></p>
+<ul>
+<li>Each of the 5 particles has a four-momentum <span class="math inline">p_i^\mu = (E_i, \mathbf{p}_i)</span> .</li>
+<li>The <strong>mass-shell condition</strong> <span class="math inline">p_i^2 = E_i^2 - \mathbf{p}_i^2 = m_i^2</span> reduces each four-vector to 3 independent components.</li>
+<li><strong>Energy-momentum conservation</strong>, <span class="math inline">\delta^4(P_{\text{initial}} - \sum p_i)</span> , imposes 4 constraints.</li>
+</ul>
+<p>The count before fixing a frame is: <span class="math display">N_{\text{vars}} = (5 \text{ particles}) \times (3 \text{ components}) - 4 \text{ constraints} = 11</span></p>
+<p>By choosing a specific frame (fixing 3 rotations and 3 boosts), we lose 6 more degrees of freedom, leaving <strong>5 independent variables</strong> to describe the kinematics.</p>
+</section>
+<section id="phase-space-and-its-element" class="level3" data-number="8.2">
+<h3 data-number="8.2" class="anchored" data-anchor-id="phase-space-and-its-element"><span class="header-section-number">8.2</span> Phase Space and its Element</h3>
+<p>For cross-section calculations, we need the <strong>Lorentz Invariant Phase Space (LIPS) element</strong>, which counts the number of accessible kinematic configurations. For an <span class="math inline">n</span> -particle final state, it is:</p>
+<p><span class="math display">d\Phi_n = \left[ \prod_{i=1}^n \frac{d^3 \mathbf{p}_i}{(2\pi)^3 \, 2E_i} \right] (2\pi)^4 \delta^4\!\left(P_{\text{initial}} - \sum_{i=1}^n p_i\right)</span></p>
+<p><strong>Key points about this formula:</strong></p>
+<ul>
+<li>The factor <span class="math inline">\frac{d^3 \mathbf{p}_i}{(2\pi)^3 2E_i}</span> for each particle comes from integrating over its four-momentum and enforcing the mass-shell condition.</li>
+<li>The <span class="math inline">(2\pi)^4 \delta^4(...)</span> enforces total energy and momentum conservation.</li>
+<li>This element is Lorentz invariant, meaning it has the same form in any inertial reference frame.</li>
+</ul>
+<p>Phase space for complex processes (e.g., a <span class="math inline">1 \to 4</span> decay) can often be evaluated recursively by factorizing it into successive two-body phase spaces, which is a kinematic simplification, not a dynamical one.</p>
+</section>
+</section>
+<section id="recursive-phase-space-parameterization" class="level2" data-number="9">
+<h2 data-number="9" class="anchored" data-anchor-id="recursive-phase-space-parameterization"><span class="header-section-number">9</span> Recursive Phase Space Parameterization</h2>
+<p>When you calculate the phase space, you see that three integrals come for every particle. That’s why I have a factor of three here for every particle in the phase space.</p>
+<p>Here we have a final state and an initial state. For the phase space to count, you only count the final state. So you see the initial state doesn’t enter.</p>
+<p>Then the four energy-momentum conservation conditions come here explicitly. That’s the number of the integrals that remain. That gives you three times four: twelve, minus four remains eight.</p>
+<p>This is the five kinematic variables. So five plus three overall rotations, which is five variables. The three rotations are the Euler angles. But which five I pick to parameterize my kinematics is up to me.</p>
+<p>One has to choose these five in the most convenient way to calculate dynamics, because it’s not going to tell you what interactions you have in these vertices. It doesn’t even tell you that your reactions happen in this cascade way. It’s just purely kinematical parameterization. It’s your choice of the kinematic variables.</p>
+<p>One particular choice is to say I’m going to introduce <span class="math inline">M_X</span> here and <span class="math inline">M_Y</span> there and write my phase space as the integral <span class="math inline">\frac{dM_X^2}{2\pi} \frac{dM_Y^2}{2\pi} \, d\Phi_2(P \to p_X, p_Y) \, d\Phi_3(p_Y \to p_1, p_2, p_3)</span> . That’s what is referred to as the <strong>recursive expression</strong>.</p>
+<p>It’s not only valid for two, but you can also do this for three. The important thing is that they introduce a variable that is the sort of intermediate mass of the combination and you integrate over this variable, and every integral comes with a <span class="math inline">2\pi</span> in the denominator.</p>
+<p>Just another example: if I just introduce <span class="math inline">d\Phi_2(P \to p_Y, p_4)</span> and then <span class="math inline">d\Phi_3(p_Y \to p_1, p_2, p_3)</span> , that’s also legal. That’s fine.</p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>The general formula for an <span class="math inline">n</span> -body final state is: <span class="math display">d\Phi_n(P; p_1, \dots, p_n) = (2\pi)^4 \delta^{(4)}\left(P - \sum_{i=1}^n p_i\right) \prod_{i=1}^n \frac{d^3p_i}{(2\pi)^3 2E_i}</span><br>
+The number of independent kinematic variables is <span class="math inline">3n - 4</span> .</p>
+</div>
+</div>
+</div>
+<div id="fig-fg10" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2024-Lecture-04-images/fig10.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;10: This diagram represents a typical <strong>cascade decay chain</strong> in a multi-particle final state process, often encountered in hadron spectroscopy experiments. Here, an initial state produces an intermediate resonance <span class="math inline">X</span> (after vertex 1), which subsequently decays into another intermediate state (at point 2), followed by further decays resulting in final state particles labeled 3 and 4. The particle denoted “i” appears to decay into a multi-particle final state, as indicated by the several lines emerging from it. Physically, this diagram illustrates how a <strong>complex decay topology</strong> is analyzed via <strong>exclusive processes</strong> (where all final state particles are measured), as discussed in the lecture. Each vertex represents a step in the decay where <strong>energy-momentum conservation</strong> applies, and the overall structure enables the use of <strong>recursive phase space factorization</strong>. For example, the total <span class="math inline">n</span> -body phase space <span class="math inline">d\Phi_n</span> can be decomposed into products of two- and three-body phase spaces at each vertex, integrating over intermediate invariant masses (e.g., <span class="math inline">M_X</span> ). This is foundational for reconstructing resonance signals, calculating invariant mass distributions (such as those used in Dalitz plots), and determining the kinematic variables required to describe multi-body decays in hadron spectroscopy experiments.
+</figcaption>
+</figure>
+</div>
+<p>For a 4-body decay ( <span class="math inline">n=4</span> ), this gives <span class="math inline">3 \times 4 - 4 = 8</span> variables, as mentioned.</p>
+<p>Once you learn this trick, this calculation of the phase space is super straightforward because every two-to-two phase space is <span class="math inline">\frac{2p}{\sqrt{s}} \frac{d\Omega}{4\pi} \times \frac{1}{2\pi}</span> . So this does not have any simplification.</p>
+</section>
+<section id="two-body-phase-space-and-introduction-to-the-dalitz-plot" class="level2" data-number="10">
+<h2 data-number="10" class="anchored" data-anchor-id="two-body-phase-space-and-introduction-to-the-dalitz-plot"><span class="header-section-number">10</span> Two-Body Phase Space and Introduction to the Dalitz Plot</h2>
+<hr>
+<p>We have now completed a <strong>more general treatment</strong> for the <strong>two-body phase space</strong>.</p>
+<p>With this expression and the general formula, you are equipped to calculate <strong>any n-body phase space</strong>. As a next step, there is an exercise for you to try at home: play with the <strong>three-body phase space</strong>.</p>
+<p>The <strong>three-body phase space</strong> will have:</p>
+<ul>
+<li>Three particles × three coordinates = <strong>9</strong> initial degrees of freedom.</li>
+<li>Minus <strong>4</strong> constraints from energy-momentum conservation.</li>
+<li>Minus <strong>3</strong> from overall rotations.</li>
+</ul>
+<p>This leaves only <strong>two independent variables</strong>. The resulting distribution is often represented using these two variables.</p>
+<p>A common choice for these two variables is to use <strong>invariant masses</strong> of particle pairs. When plotted, this representation is called the <strong>Dalitz plot</strong>.</p>
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>In a three-body decay, the <strong>Dalitz plot</strong> is a two-dimensional distribution where each point corresponds to a specific pair of invariant masses squared. It visually encodes the entire dynamics of the decay, making it a powerful tool for analyzing resonances and interaction mechanisms.</p>
+</div>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
