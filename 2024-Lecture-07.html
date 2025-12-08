@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="">
+<meta name="dcterms.date" content="2024-01-01">
+
+<title>(2024) Lecture 7</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-597958c53c93a607afca12fd375c57ed.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-7d3a565c23c4d3b0e7c030e96a8964f3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="quarto-light">
+
+<div id="quarto-search-results"></div>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#pentaquark-mass-and-quantum-numbers" id="toc-pentaquark-mass-and-quantum-numbers" class="nav-link active" data-scroll-target="#pentaquark-mass-and-quantum-numbers"><span class="header-section-number">1</span> Pentaquark Mass and Quantum Numbers</a>
+  <ul class="collapse">
+  <li><a href="#question-1-the-pentaquark-state" id="toc-question-1-the-pentaquark-state" class="nav-link" data-scroll-target="#question-1-the-pentaquark-state"><span class="header-section-number">1.1</span> <strong>Question 1: The Pentaquark State</strong></a></li>
+  <li><a href="#question-2-kinematics-and-mandelstam-variables" id="toc-question-2-kinematics-and-mandelstam-variables" class="nav-link" data-scroll-target="#question-2-kinematics-and-mandelstam-variables"><span class="header-section-number">1.2</span> <strong>Question 2: Kinematics and Mandelstam Variables</strong></a></li>
+  <li><a href="#unitarity-and-the-scattering-amplitude" id="toc-unitarity-and-the-scattering-amplitude" class="nav-link" data-scroll-target="#unitarity-and-the-scattering-amplitude"><span class="header-section-number">1.3</span> <strong>Unitarity and the Scattering Amplitude</strong></a></li>
+  </ul></li>
+  <li><a href="#partial-wave-amplitudes-and-unitarity-constraints" id="toc-partial-wave-amplitudes-and-unitarity-constraints" class="nav-link" data-scroll-target="#partial-wave-amplitudes-and-unitarity-constraints"><span class="header-section-number">2</span> Partial Wave Amplitudes and Unitarity Constraints</a></li>
+  <li><a href="#two-pole-structure-and-unitarity-in-scattering-amplitudes" id="toc-two-pole-structure-and-unitarity-in-scattering-amplitudes" class="nav-link" data-scroll-target="#two-pole-structure-and-unitarity-in-scattering-amplitudes"><span class="header-section-number">3</span> Two-Pole Structure and Unitarity in Scattering Amplitudes</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">(2024) Lecture 7</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">January 1, 2024</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><strong>Presenter</strong>: Mikhail Mikhasenko</p>
+<p><strong>Note Taker</strong>: Ilya Segal</p>
+<section id="pentaquark-mass-and-quantum-numbers" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="pentaquark-mass-and-quantum-numbers"><span class="header-section-number">1</span> Pentaquark Mass and Quantum Numbers</h2>
+<p>All right, two minutes. So all of the problems are one-liners. You solved them online, but you have to know what to do. It’s okay.</p>
+<section id="question-1-the-pentaquark-state" class="level3" data-number="1.1">
+<h3 data-number="1.1" class="anchored" data-anchor-id="question-1-the-pentaquark-state"><span class="header-section-number">1.1</span> <strong>Question 1: The Pentaquark State</strong></h3>
+<p>Let’s discuss quickly question number one. First, the mass of the states. This appears as the particle. In this condition, neglecting inelastic channels, this particle is formed by the cascade <span class="math inline">\Sigma_c</span> and <span class="math inline">\bar{D}</span> .</p>
+<div id="fig-fg1" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2024-Lecture-07-images/fig1.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: This image represents the internal structure of a <strong>hadronic molecule</strong>, specifically illustrating a bound state of two hadrons. In the context of the lecture, it shows two color-singlet clusters (hadronic “bags”), each containing three quarks—one on the left with quark content <span class="math inline">cud</span> (likely a <span class="math inline">\Sigma_c</span> baryon) and one on the right with <span class="math inline">u\bar{c}</span> (likely a <span class="math inline">\bar{D}</span> meson). The connection between them indicates they are held together by residual strong forces, similar to the nuclear force binding nucleons in the deuteron. This depicts the concept of <strong>hadronic molecules</strong> discussed in the “Pentaquark State” section, where such states are interpreted as loosely bound systems of two hadrons (rather than five-quark bags), with their total mass close to the sum of the constituent hadron masses, and small binding energy.
+</figcaption>
+</figure>
+</div>
+<p>This particle can travel, can leave. This is a regular particle, but its internal structure is a <strong>hadronic molecule</strong>.</p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>A <strong>hadronic molecule</strong> is a bound state of two or more hadrons, held together by residual strong forces, similar to how nucleons form a deuteron.</p>
+</div>
+</div>
+</div>
+<p>What is the mass of this particle? Indeed, what is roughly the mass of this <span class="math inline">P_c</span> particle—that’s how we call them—is the mass of the constituents. Let me put an equal sign: <span class="math display">M_{P_c} \approx M_{\Sigma_c} + M_{\bar{D}}</span><br>
+That’s the way how we define the binding energy. Binding energy is the mass difference between the mass of the constituents and the mass of the particle: <span class="math display">B = (M_{\Sigma_c} + M_{\bar{D}}) - M_{P_c}</span></p>
+<p>It used to be called <span class="math inline">P_c</span> , and last year we updated notations. Now it’s a <span class="math inline">P_c</span> , because with the <span class="math inline">C</span> , you indicate that it contains charm. I think this is better. So that’s really clear. As an index, you list heavy quarks because they kind of conserve quantities with the decay; light quarks are… we don’t miss them. You can always recover them from the capital letter. If I say <span class="math inline">\Sigma</span> , you know, that’s a capital. The two light quarks, depending on the charge, are either <span class="math inline">u u</span> , or <span class="math inline">d d</span> , or <span class="math inline">u d</span> . An <span class="math inline">SAP</span> means pentaquark—5 quarks. An <span class="math inline">SACC</span> , you know, the content is <span class="math inline">c \bar{c}</span> plus other 3. For the <span class="math inline">P_c^+</span> , this is <span class="math inline">u d</span> . Likely the <span class="math inline">P_c</span> candidates that we see in this particular channel are of this type.</p>
+<p>Mass of the… okay, this was easy. Neglecting binding energy, you really get the mass of two particles that are called the threshold. The language that we use is saying that the state is… since the binding energy is small, the state sits at the threshold. So the hadronic threshold is there.</p>
+<p>How much is the binding energy? Approximately like 10 MeV? 100 MeV? What’s the scale? 10. Less than 10. More than 1. Yes. The mass of the <span class="math inline">\Sigma_c</span> is 2.5 or so, the mass of the <span class="math inline">D</span> is around 2 GeV. So the sum is 4.5 GeV. That’s roughly where one would search for such formations.</p>
+<p>Now, quantum numbers, spin algebra—my favorite exercise in this course. We have <span class="math inline">1/2</span> and <span class="math inline">3/2</span> constituents. Parity should be minus minus because we have s-wave. Exactly. Very good. So then it tells you that you expect two states. One of them with spin-parity one-half minus, another one with spin-parity three-halves minus.</p>
+<p>They have a lower bound on lifetime. Where does the lower bound really come from? It is the binding of the two constituents. Any idea why this state would ever decay and how it would decay? When we talk about lifetime, the particle then decays. That’s what happens with all the particles.</p>
+<p>How does this particle decay? The energy of the system is conserved. Once you split it into two, the minimal energy that is in a system of two is their mass, like mass one plus mass two. This is already high energy. If they fly apart, its energy is even higher. So this is not allowed. Energy must be conserved. We sit in the rest frame of this particle, and all the energy you have is the mass of this particle. That’s it.</p>
+<p>Because the <span class="math inline">c</span> and the <span class="math inline">\bar{c}</span> charm quark travel via the electromagnetic process? So annihilation of these two quarks is possible. But this is a slow process. Since it’s an electromagnetic interaction, the probability of this process is much smaller than the process that I would like you to come up with.</p>
+<p>Why have <span class="math inline">c \bar{c}</span> ? It will. Why do they have to annihilate electromagnetically? Can they annihilate via the strong interaction? I mean, like when he says that we take <span class="math inline">c \bar{c}</span> and then, even if they have different color, they can produce… then you can create some other quarks. This is… it’s actually suppressed for heavy particles. The heavier the particles, the smaller the chance for them to annihilate. So this is also strongly suppressed.</p>
+<p>No, no. The three gluons appear only for the color neutral objects. The three gluons we need to construct the color neutral object here are living in the color octet. It’s not singular, so they don’t. The strict vertex is a different suppression. No.&nbsp;So you just make the strange. Yeah. Right.</p>
+<p>So the big decay, that’s what happens with this object. If we neglect inelastic channels, the decay of this particle that is going to happen is one of the <span class="math inline">c</span> quarks transitions to <span class="math inline">s</span> emitting the <span class="math inline">W</span> . This is a big decay. Actually if the structure of the object is like that, we can even understand the probability of this decay to happen. Because what happens is… Oh, sorry. Big decay is one thing, but there is another transition.</p>
+<p>Okay, big decay is what we discussed. So then one of these two objects decays since it decays weakly. This object will decay or this object would decay quickly. So we can compute the lifetime due to that. But there is another process. You see that this guy is not the lower, it’s not the ground state.</p>
+<p>As I said, in the spectrum of the <span class="math inline">D</span> , we combine quarks. So we have <span class="math inline">1</span> and <span class="math inline">0</span> . The lower one is called <span class="math inline">D</span> and the upper one is called <span class="math inline">D^*</span> . The <span class="math inline">T</span> is <span class="math inline">D^*</span> here is the <span class="math inline">D</span> , here is energy. This transition is possible by emitting <span class="math inline">\pi^0</span> or <span class="math inline">\pi</span> . Actually the most likely decay channel of this is the radiative decay of the <span class="math inline">D</span> . That’s what happens lower bound of the lifetime. The width is smaller than the width of the <span class="math inline">D^*</span> . So the time is bigger than the time of the <span class="math inline">D^*</span> . That’s a bound.</p>
+<p>Never mind. You combine two objects and the object lives as long. It would live an infinite amount if these two particles are stable. Like deuteron is made of proton and neutron, both proton and neutron. Proton is stable, neutron is not stable, but lives long. But deuteron is a stable particle. It happens because the neutron is so bound inside that it cannot decay.</p>
+<p>What happens is that the binding mechanism suppresses the phase space of the decay and suppresses the lifetime of the particle. The <span class="math inline">D</span> meson here would live longer than the <span class="math inline">D</span> meson. <span class="math inline">D^*</span> meson isolated. The width of the state is smaller than the width of the <span class="math inline">D^*</span> . The lifetime <span class="math inline">\tau</span> is one over the width. So the lifetime of this object is bigger than the lifetime of the <span class="math inline">D^*</span> .</p>
+<p>Will the <span class="math inline">\Sigma_c^*</span> also survive or also be an atomic molecule? It just goes down an energy step instead of really falling apart. Let’s try to understand what you ask. You say there is a cascade: <span class="math inline">\Sigma_c^*</span> and now the <span class="math inline">\Sigma_c</span> plus <span class="math inline">\pi^0</span> this molecule. Does this exist? It does.</p>
+<p>My question was just: so this molecule just makes steps down one energy step? Can it do this? Yes. But it can also dissociate into <span class="math inline">\Sigma_c D \pi</span> or <span class="math inline">\Sigma_c D \gamma</span> , because the energy for this is a lot. In my project, I have a fixed binding energy because my toy model is fixed for the U turn. So it’s actually this binding energy and the situation of the decays is actively discussed in the field, and at every conference you come, you see five talks roughly. That’s a really hot subject.</p>
+</section>
+<section id="question-2-kinematics-and-mandelstam-variables" class="level3" data-number="1.2">
+<h3 data-number="1.2" class="anchored" data-anchor-id="question-2-kinematics-and-mandelstam-variables"><span class="header-section-number">1.2</span> <strong>Question 2: Kinematics and Mandelstam Variables</strong></h3>
+<p>Let’s move to other questions. Let’s move to item number two. Understand? Plane is plane of invariants. For any reaction that has a blob, an open direction center on four legs going out, <span class="math inline">X</span> , <span class="math inline">A</span> , <span class="math inline">B</span> , <span class="math inline">C</span> , you can define invariant variables that characterize the kinematics.</p>
+<p>The first variable is the mass of the <span class="math inline">A</span> and <span class="math inline">B</span> squared. So mass of the <span class="math inline">A</span> and <span class="math inline">B</span> computed as the square root of <span class="math inline">P_A + P_B</span> . So <span class="math inline">s</span> is the mass squared and square root of <span class="math inline">s</span> will be the mass of the system of particle <span class="math inline">A</span> and <span class="math inline">B</span> . Then <span class="math inline">t</span> is mass of the system where it has <span class="math inline">B</span> and <span class="math inline">C</span> particles. Then the <span class="math inline">u</span> is the mass of the system that has <span class="math inline">A</span> and <span class="math inline">C</span> . Oh, mass squared. Sorry: <span class="math display">s = (p_A + p_B)^2, \quad t = (p_A - p_C)^2, \quad u = (p_A - p_D)^2</span></p>
+<div id="fig-fg2" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2024-Lecture-07-images/fig2.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: This figure schematically represents a generic 2 → 2 scattering process in particle physics, as discussed in the context of Mandelstam variables and kinematics. The central blob denotes an unspecified interaction (“something happens”) between four particles, labeled <span class="math inline">X</span> , <span class="math inline">A</span> , <span class="math inline">B</span> , and <span class="math inline">C</span> , each with arrows indicating their directions. All arrows are pointing outward from the interaction, which is a standard convention indicating final states (except for <span class="math inline">X</span> if it is considered an initial state). In the context of the lecture, this setup is used to define the Lorentz-invariant Mandelstam variables ( <span class="math inline">s, t, u</span> ): - <span class="math inline">s = (p_A + p_B)^2</span> , the invariant mass squared of particles <span class="math inline">A</span> and <span class="math inline">B</span> - <span class="math inline">t = (p_A - p_C)^2</span> , the squared momentum transfer between <span class="math inline">A</span> and <span class="math inline">C</span> - <span class="math inline">u = (p_A - p_D)^2</span> , the squared momentum transfer between <span class="math inline">A</span> and <span class="math inline">D</span> This diagram is crucial for understanding how these invariants are assigned based on the flow of momenta, to analyze particle reactions and kinematic domains for scattering and decay processes. It forms the basis for further analysis of the physical kinematics, such as the allowed regions in Dalitz plots, and is central to the discussion of unitarity and analytic properties of the scattering amplitude.
+</figcaption>
+</figure>
+</div>
+<div id="fig-fg3" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2024-Lecture-07-images/fig3.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: This figure represents the <strong>Dalitz plot</strong> or <em>plane of Mandelstam invariants</em> for a 2 → 2 scattering process as discussed in the lecture. The triangle in the center illustrates the kinematically allowed region for the Mandelstam variables <span class="math inline">s</span> , <span class="math inline">t</span> , and <span class="math inline">u</span> . Each vertex and side of the triangle corresponds to one of the channels (s, t, u). The labeled arrows indicate the directions and relationships between the Mandelstam variables: - <span class="math inline">s</span> : total energy squared for the incoming system, - <span class="math inline">t</span> : squared momentum transfer between certain legs, - <span class="math inline">u</span> : squared momentum transfer for the cross-channel. The shaded areas outside the triangle represent physically forbidden regions, while the interior triangle (Dalitz plot) is the physically allowed region for the process, where the transitions and resonance formations happen. The letters <span class="math inline">b</span> , <span class="math inline">c</span> , and <span class="math inline">d</span> correspond respectively to the external particles, aligning with the notation <span class="math inline">A, B, C, D</span> from the text. The points where the boundaries are marked indicate kinematic thresholds determined by the masses of the particles, and the triangle’s edges are defined by the zeros of the Källén function <span class="math inline">\lambda</span> . This diagram visualizes how scattering amplitudes span different kinematic domains and how all physical observable processes for the 2 → 2 system are confined within the Dalitz plot.
+</figcaption>
+</figure>
+</div>
+<div id="fig-fg4" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2024-Lecture-07-images/fig4.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: This figure illustrates the kinematics of a <span class="math inline">2 \to 2</span> scattering process in particle physics, as described in the lecture. The top part of the figure shows a generic Feynman diagram with two incoming particles (labeled <span class="math inline">p_1</span> , <span class="math inline">p_2</span> ) and two outgoing particles ( <span class="math inline">p_1'</span> , <span class="math inline">p_2'</span> ), all connected via a central blob which represents an unspecified interaction. This visual encapsulates the general scenario discussed when introducing Mandelstam variables and the scattering amplitude. The bottom part of the figure provides a depiction of the momenta in the center-of-momentum frame. Here, the incoming momenta <span class="math inline">p_1</span> and <span class="math inline">p_2</span> are directed towards each other, while the outgoing momenta <span class="math inline">p_1'</span> and <span class="math inline">p_2'</span> are shown with the angle <span class="math inline">\theta</span> between <span class="math inline">p_1</span> and <span class="math inline">p_1'</span> . The angle <span class="math inline">\theta</span> represents the scattering angle, the primary observable that characterizes the final state in elastic <span class="math inline">2 \to 2</span> scattering. This geometric arrangement is essential for defining variables such as the Mandelstam <span class="math inline">s</span> , <span class="math inline">t</span> , and <span class="math inline">u</span> , and for expanding the scattering amplitude in terms of partial waves, where the amplitude depends on the collision energy and the scattering angle. The figure thus directly links the abstract formalism of scattering theory to concrete physical kinematics and observables.
+</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>These are the <strong>Mandelstam variables</strong>. They are Lorentz-invariant quantities that fully describe the kinematics of a 2 → 2 scattering process <span class="math inline">A + B \to C + D</span> .</p>
+</div>
+</div>
+</div>
+<p>It appears that what we figured out before is that two variables are enough to characterize kinematics of the four-legged process. It just comes from counting degrees of freedom. These two variables we have to pick could be either <span class="math inline">s</span> and <span class="math inline">t</span> or could be <span class="math inline">s</span> and <span class="math inline">u</span> , or it could be all three. But then on the plane they are connected since the sum of the three invariants is related to the masses: <span class="math display">s + t + u = m_A^2 + m_B^2 + m_C^2 + m_D^2</span></p>
+<p>The matrix element or the scattering amplitude or transition amplitude depends on two variables only, <span class="math inline">s</span> and <span class="math inline">t</span> or <span class="math inline">s</span> and <span class="math inline">u</span> or any. This amplitude is defined as a function on the plane of invariants and the different domains on this plane describe different processes.</p>
+<p>Before making this step, let’s only focus on kinematics of the process and try to see where <span class="math inline">A</span> , <span class="math inline">B</span> , <span class="math inline">C</span> , <span class="math inline">D</span> are located. Any ideas? Number one and the way how I want to solve this is to check just the signs. I want to ask for every process: is <span class="math inline">s</span> more or less than 0, <span class="math inline">t</span> more or less than 0, <span class="math inline">u</span> more or less than 0. By identifying what is the correct answer here, I should be able to place the kinematics.</p>
+<p>Let’s do <span class="math inline">A</span> . The question is, is the mass of these two particles physical? If it’s physical, then it’s more than zero. If it’s unphysical, then it doesn’t, you know, like most of the dynamics. You have to see exact masses of particles to see exactly where the range of the variables for these kinematics lies. But for the exercise right now, this should be sufficient.</p>
+<p>Okay, <span class="math inline">A</span> is variable <span class="math inline">s</span> positive. Why? Because we just simply sum masses of this? Not simply sum the masses. No, that’s not what we do. It’s sum of four-vectors. It’s not equivalent of summing masses. True. But they are like real particles. So the mass of the system for these two real particles is well defined. This mass is at least the sum of masses. Since they have a momentum in the rest frame, the energy of the system is bigger than the sum of masses if they have. For the <span class="math inline">A</span> , the answer is <span class="math inline">s</span> more than zero. That’s actually more than <span class="math inline">(m_A + m_B)^2</span> .</p>
+<p>What about <span class="math inline">t</span> ? Same logic. If you write drawing the momenta on the right side on this one. I had to say in which direction arrows are pointing out of the blob or inside of the blob. In this definition all of the particles <span class="math inline">A</span> , <span class="math inline">B</span> , <span class="math inline">C</span> are pointing out of the blob and <span class="math inline">X</span> points inside the blob and that defines the sign.</p>
+<p>The <span class="math inline">t</span> is a regular variable, the same as <span class="math inline">s</span> . It’s a physical mass of two particles. It’s also more than zero and more than even particle threshold, <span class="math inline">m_B + m_C</span> , and then <span class="math inline">u</span> more than zero. So the domain. <span class="math inline">s</span> is bigger than the threshold. This is threshold, this is threshold <span class="math inline">(m_B + m_C)^2</span> . <span class="math inline">u</span> is also bigger than the threshold. The only domain that we have here is the allowed domain for the first kinematics.</p>
+<p>For <span class="math inline">B</span> , <span class="math inline">t</span> is the physical mass of two particles, is again more than zero, more than threshold again. To discuss, to avoid redefining these variables I then discuss <span class="math inline">A</span> and <span class="math inline">D</span> particles. I swap <span class="math inline">p</span> to <span class="math inline">r</span> , <span class="math inline">p</span> to minus. I mean if you don’t like that object and we can do it different, but I don’t know is it.</p>
+<p>The point is to discuss kinematics of part of the reactions, so-called cross-channel reactions, using the same variables. For this scattering, one has to modify definition of the invariants by swapping momenta to minus momenta for particles that move to the other side.</p>
+<p>Two different directions and then the sum minuses would appear in the first place there. We could start with this direction. The place for this is when <span class="math inline">t</span> is more than zero because <span class="math inline">t</span> is the physical mass of two particles. Then <span class="math inline">s</span> is under <span class="math inline">A</span> and <span class="math inline">B</span> . This is kind of an impossible combination. They are on different sides and the variable <span class="math inline">s</span> is going to be less than zero and then <span class="math inline">u</span> is less than zero.</p>
+<p>It’s another impossible combination and the domain, roughly speaking, is where <span class="math inline">u</span> is below zero. Then <span class="math inline">s</span> is above, <span class="math inline">t</span> is above zero. So <span class="math inline">t</span> prime, <span class="math inline">t</span> , <span class="math inline">t</span> . Here’s <span class="math inline">t</span> . <span class="math inline">t</span> is this direction. <span class="math inline">s</span> is above zero. This and <span class="math inline">u</span> is above zero. This color has so here this is the minimum. This one is <span class="math inline">B</span> and same on the <span class="math inline">C</span> . Another one <span class="math inline">D</span> where is <span class="math inline">D</span> ? <span class="math inline">A</span> plus <span class="math inline">C</span> , <span class="math inline">X</span> plus <span class="math inline">B</span> . <span class="math inline">A</span> and <span class="math inline">C</span> give us <span class="math inline">u</span> channel. This is the positive. <span class="math inline">u</span> is positive.</p>
+<p>Now to see real physical contours for the kinematics. One has to calculate what are the physical ranges of the scattering variables. Like if you work in the cosine of the scattering angle, by placing the restriction that cosine should be from minus one to one, you identify that the border—that not all points here are allowed, but only a certain region.</p>
+<p>The true border for the scattering is often given by this sixth-order polynomial. In the center is this canvas. This is our Dalitz plot. This is here. Another direction could be here. So 1, 2, 3, 4. Four regions for physical reactions that are happening. It’s important to realize that connection because there’s just a single amplitude, a matrix element, that describes all four.</p>
+<p>If you get this function and if you constrain it, I mean if you get precisely this function, it describes all four. Just define it on this domain and for every point you can compute, it gives you the complex number one plus three <span class="math inline">i</span> . This is the value of the quantum transition amplitude. The amplitude itself you can compute at a different place. Now we have a complex transition amplitude for the decay. I think that’s super cool.</p>
+<p>It works very well in QED. When you consider Compton scattering, photon electron going to photon electron. This is a Compton process. It’s exactly the same matrix element that describes the electron positron annihilation to two photons. It’s exactly the same process that describes two-photon production of an electron positron pair in quantum electrodynamics.</p>
+<p>In hadron physics it’s a little bit more complicated. Since we don’t have perturbation theory, we always model. What we are going to do when we describe the Dalitz plot, we model it as a sum of the resonances. Then you find that once you want to compute this function right here, the scattering amplitude, it blows up. It has infinities, so it has unphysical behavior.</p>
+<p>The reason is because we employ a finite range or a finite number of resonances and the physics is more complicated analytically. The fact that this amplitude is related to that domain tells you already that you have to put an infinite number of resonances. Like we saw the lines on the dispersion, these are all resonances. In order to relate this to that domain, you have to operate with infinite sums and then the infinite terms would compensate each other and then you have a reasonable amplitude.</p>
+<p>There has been an effort for now, 30 years, 50 years, to find such a set of functions that works everywhere nicely and is analytic and reasonable. What’s most difficult is to come up with something that describes the data, because the data is described by Regge theory. You might have heard of Regge theory and this is one of the approaches. So you come up with a complex function that has all the nice properties; it works reasonably in the scattering domain and it works in the decay domain.</p>
+<p>However, of course, it lacks an exact understanding of the resonance properties. Like, it would put in resonances there that have zero width in Regge theory. One of the interesting developments is to implement resonances with widths.</p>
+<p>Okay, questions on Monday’s timeline. One more thing. If you like playing with functions, there is a very simple expression that describes the contours of the physical domain. This is called the Källén function. I think it’s worth giving. There is just one function. If you solve <span class="math inline">\Phi(s, t, u) = 0</span> , you find this line, that line, that line and that line.</p>
+<p>Just one function, put it into a solver and for any given value of <span class="math inline">s</span> . Let’s fix <span class="math inline">s</span> —where is our <span class="math inline">s</span> ? Let’s fix <span class="math inline">s</span> to be minus, you know, 50. We’re going to get two solutions. One of them, let’s put <span class="math inline">s</span> equal to plus 20. Then you have two solutions using this. So this function is really easy to type into code. This is the Källén function or Klein function. It’s almost a complete polynomial but it misses more terms of this table.</p>
+<p>So it’s <span class="math inline">x^2 + y^2 + z^2 - 2xy - 2yz - 2zx</span> . This is called the Källén or challenge function. I think it’s—correct me if it should be going a different direction. So challenge function or Källén function and that’s it. Then the Kibble function is the challenge of three challenge functions where every <span class="math inline">\lambda_1</span> , <span class="math inline">\lambda_2</span> and <span class="math inline">\lambda_3</span> corresponds to a different channel.</p>
+<p>So <span class="math inline">\lambda_2</span> is then for <span class="math inline">B</span> it’s <span class="math inline">\lambda(t, m_X^2, m_A^2)</span> . Here is the—what’s missing? Mass and <span class="math inline">t</span> . <span class="math inline">\lambda_3</span> is <span class="math inline">\lambda(u, m_X^2, m_B^2)</span> . Yeah, that’s it: <span class="math inline">\Phi(s, t, u) = \lambda(\lambda_1, \lambda_2, \lambda_3)</span> .</p>
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>The <strong>Källén (or triangle) function</strong> is defined as <span class="math inline">\lambda(x, y, z) = x^2 + y^2 + z^2 - 2xy - 2yz - 2zx</span> . The <strong>Kibble function</strong>, <span class="math inline">\Phi(s, t, u) = \lambda(\lambda_1, \lambda_2, \lambda_3)</span> , where each <span class="math inline">\lambda_i</span> is a Källén function of different Mandelstam variables and masses, defines the physical boundaries of the Dalitz plot.</p>
+</div>
+</div>
+</div>
+<p>So then you come home, you go to Wolfram Alpha and say give me a contour plot. Then you form them and you find all this function and discussion on that in the Pikin and Calani book. Have we discussed this book? The best book on particle kinematics is written by two authors. This is the, if I got it right, see Byckling and Kajantie. The book is excellent. If you get a chance, get yourself this. You know everything about particle kinematics, particularly very peculiar properties of the Kibble function and the Chandrasekhar function, right?</p>
+</section>
+<section id="unitarity-and-the-scattering-amplitude" class="level3" data-number="1.3">
+<h3 data-number="1.3" class="anchored" data-anchor-id="unitarity-and-the-scattering-amplitude"><span class="header-section-number">1.3</span> <strong>Unitarity and the Scattering Amplitude</strong></h3>
+<p>So we are good to move to the topic of today and it’s unitarity. Unitarity is a constraint on the scattering amplitude. In particle physics we don’t compute from first principles the scattering amplitude, this amplitude, but rather we model it and our guiding principles are on what this amplitude can be and what it cannot be.</p>
+<p>You cannot just write up an arbitrary expression for this amplitude that fits the data. There are some principles and one of them is probability conservation. Probability conservation transforms into the mathematical statement on the amplitude that is known as unitarity. You might have seen earlier in the particle scattering course, of course, the optical theorem that relates the imaginary part to the total cross section, essentially telling that the imaginary part is equal to the total cross section.</p>
+<p>That’s a consequence of unitarity, a consequence of the probability conservation. It’s so important that this is a very powerful statement that we are going to derive hopefully today, that just this principle alone allows you already to get a decent low-energy scattering amplitude that describes all of the resonance phenomena. You see the bump in the spectrum due to the resonance. You know what expression you should take in order to describe this phenomenon.</p>
+<p>Moreover, since unitarity is about analytic properties of the amplitude, it tells you what the analytic structure of the amplitude is. In the last lecture we shortly discussed analytic functions and what singularities they might have like cuts, branch points. Unitarity also tells you what is the location of the singularities in the complex plane. That comes from the fact that we are going to deal with unitary functions. Our scattering amplitudes are real unitary functions, functions for which the imaginary part determines the locations of the cuts.</p>
+<p>Let’s start discussing the scattering amplitude and partial waves. For the sake of time, let me state where we arrive. We’ll arrive there first, and then the emphasis is on the derivation. We will derive the following three equations. The first, and all three are dealing with scattering amplitudes.</p>
+<p>The first one tells how unitarity acts on the full amplitude. So <span class="math inline">A</span> is the scattering amplitude that describes a certain process. Unitarity tells you that <span class="math inline">A - A^*</span> is equal to <span class="math inline">i</span> times <span class="math inline">A^* A</span> integrated over the phase space of the intermediate state: <span class="math display">T - T^\dagger = i \int d\Phi \, T^\dagger T</span></p>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>This is the <strong>general unitarity condition</strong>. It is derived from the requirement that the S-matrix is unitary ( <span class="math inline">\hat{S}\hat{S}^\dagger = \hat{I}</span> ), where <span class="math inline">\hat{S} = \hat{I} + i \hat{T}</span> .</p>
+</div>
+</div>
+</div>
+<p>What is this diagrammatically? We are going to simplify this process for writing this. For the partial waves, and for the partial waves the variable <span class="math inline">A</span> is a function of. So the amplitude <span class="math inline">A</span> is a function of one variable. We’re going to find that <span class="math inline">A - A^*</span> is equal to this expression, where <span class="math inline">A^*</span> is very similar to that. For the partial waves you can simplify the phase space and find the expression for that.</p>
+<p>Essentially it tells you that amplitude minus its complex conjugate gives you the imaginary part, and the imaginary part of the amplitude is now equal to. Okay, let’s now try to get these expressions and start with the scattering amplitude and the process, and we are going to deal with the 2-to-2 scattering elastic process.</p>
+<p>On the board, I draw the first diagram where the blob just indicates some interaction—something happens with two particles. Below is the kinematic representation of the reactions in the center of mass frame—the center of momentum frame. In the center of momentum, lengths of the vectors are the same, so the center of momentum means total momentum is zero.</p>
+<p>Even if particles have different masses, their momenta are the same and they equal to the function of square root of the <span class="math inline">\lambda</span> function of masses. So the <span class="math inline">p_1</span> is equal to <span class="math inline">p_2</span> is equal to <span class="math inline">\lambda^{1/2} / (2\sqrt{s})</span> , and <span class="math inline">\lambda</span> has <span class="math inline">s</span> and the masses. After interactions, particles are the same, the masses are the same, breakup momentum is the same. The only thing that happens is the angle is changing.</p>
+<p>You might wonder where this whole beautiful physics is sitting. Where in my variables would I see different interactions that they put in? It appears the observable for these interactions is the distribution over this angle. We have discussed this already. Whatever happens inside has only one way to manifest itself in the way how the distribution over the angle looks like. Because for two-to-two everything is fixed, energy is fixed. Once you fix the energy, the only way to manifest itself will be the angle.</p>
+<p>There are two variables on it: the energy of the system and the scattering angle, right? So <span class="math inline">p_1</span> , <span class="math inline">p_2</span> is the state, is the two-particle state vector, and I’m, I also have mass, and I’m going to use the variable <span class="math inline">\theta</span> . The only variable that I need is the scattering angle. The one here I’m going to drop, it indicates that the angle is for particle one.</p>
+<p>I would like to define the amplitude. I would like to consider the contraction of the final state. I make that first: <span class="math inline">p_1'</span> , <span class="math inline">p_2'</span> ; <span class="math inline">p_1</span> , <span class="math inline">p_2</span> is that scattering amplitude is defined as the expectation value of two-particle states: initial state on the right and then the final state on the left. Conservation of energy and momentum comes with these four delta functions.</p>
+<p>Now in order to proceed, which is integrated, so this is the identity operator, or the projection operator. This phase space for 2-body is nothing but <span class="math inline">1 / (2\pi)^5 \cdot (\sqrt{s}/2) \, d\cos\theta \, d\phi / 2</span> . What my state here is is the two particles back to back. I define the coordinate system as <span class="math inline">xyz</span> . In that coordinate system I have a two-particle state with the angles <span class="math inline">\theta</span> and <span class="math inline">\phi</span> which are going back to back. The momentum of particle 1 I characterize by the angles <span class="math inline">\theta</span> and <span class="math inline">\phi</span> .</p>
+<p>That’s why it actually makes sense to keep <span class="math inline">\theta</span> and <span class="math inline">\phi</span> here. I have the same state on the right and on the left. I integrate over all possible angles. The two-body phase space here just gives me all possible directions on the sphere. On the sphere for all possible combinations of angles for the <span class="math inline">4\pi</span> solid angle.</p>
+<p>Now it’s obvious. It’s important to make sure that identity acts as an identity. You come, you act as an identity. You should get something like something similar from that you have normalization condition. What is that? I mean, you see this already. So I put it in. I have to. This is certainly not a function of the <span class="math inline">p_1</span> , <span class="math inline">p_2</span> , <span class="math inline">p_1'</span> , <span class="math inline">p_2'</span> . <span class="math inline">1 /</span> . The first phase space integral <span class="math inline">d^4</span> , so probably <span class="math inline">d^3 / (2\pi)^3</span> . That’s the expression for this paper. <span class="math inline">2\pi</span> over cube, <span class="math inline">2\pi</span> over 2 and <span class="math inline">2\pi</span> over 4 over here. So this should be identical.</p>
+<p>Let’s see if it works. We put it in. Now I have everything right. If I put this identity here, I get to integrate over <span class="math inline">p_1</span> , <span class="math inline">p_2</span> and <span class="math inline">2\pi</span> .</p>
+<div id="fig-fg5" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2024-Lecture-07-images/fig5.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: This figure represents the unitarity condition for the scattering amplitude in diagrammatic form. On the left side, there is a difference between the full amplitude and its complex conjugate (depicted as two blobs), illustrating the left-hand side of the unitarity equation. On the right side, the diagram shows the “cut” through the intermediate state, representing the sum over all possible intermediate on-shell states in the phase space. The equality reflects the mathematical expression <span class="math inline">T - T^\dagger = i \int d\Phi \, T^\dagger T</span> , where the imaginary part of the full amplitude is generated by the sum over amplitudes involving all possible intermediate configurations. This is a pictorial way to represent probability conservation (unitarity) at the level of Feynman diagrams.
+</figcaption>
+</figure>
+</div>
+<p>Of course, if you have one, we have a density. Now we can proceed with unitarity.</p>
+<p>This two-particle scattering amplitude is defined. Now unitarity comes. Shouldn’t there also be from the unitarity the option that <span class="math inline">p_1'</span> is <span class="math inline">p_2</span> ? They are distinguishable particles for me, scalar particles distinguishable, different type to avoid cross terms. The probability is a statement on the full scattering operator that it’s unitary, and part of the operator is the identity—the transition without interaction—and another one that.</p>
+<p>Well, by subtracting identity from the full scattering operator, we introduce our interaction operator, this <span class="math inline">T</span> , and that’s the operator that stands here that defines our scattering amplitude. When we deal with these amplitudes in field theory we always talk about the nontrivial part, something addition to this one. The easiest way to proceed with this. This is our unitary constraint.</p>
+<p>That’s a critical statement that will constrain our partial waves, will constrain our scattering amplitude. But in order to see that we need to come from this condition to the condition for <span class="math inline">T</span> , and then the condition for <span class="math inline">A</span> . The way goes is that by putting <span class="math inline">T</span> , so <span class="math inline">1 - 1 + i T</span> , <span class="math inline">1 - i T^\dagger</span> . Let’s see if <span class="math inline">i</span> is on the right side. So minus plus here, plus minus here, <span class="math inline">i</span> times <span class="math inline">i</span> gives me plus. That’s why plus here <span class="math inline">T T^\dagger</span> , right? Then here is the <span class="math inline">i T</span> multiplied to one and then minus <span class="math inline">i T^\dagger</span> here.</p>
+<p>Once we multiply both parts by <span class="math inline">i</span> , the minus appears here, this <span class="math inline">i</span> disappears and we move to the other side. That’s correct. The only thing that remains is to put the final state and we put now the <span class="math inline">T</span> operator here to split it into <span class="math inline">A A^*</span> . Let me first fill this part. For the sake of time.</p>
+<p>Right, so the way to proceed from here is to use this expression for the amplitude here and here. That’s the product here. What to do with this is a bit more involved. We have to insert identity here and split it into intermediate states. Insert intermediate state, which is in our case just all possible orientations of the intermediate particles, and energy is fixed. Then we have to integrate over the momentum.</p>
+<p>What now happens here is that this gives us <span class="math inline">T</span> and then <span class="math inline">(2\pi)^4</span> delta function. This gives another <span class="math inline">T^\dagger</span> , <span class="math inline">T^*</span> , <span class="math inline">(2\pi)^4</span> delta function. It’s equal to <span class="math inline">i</span> . This together is the delta function to the power 4 even in the phase space <span class="math inline">d\Phi_{\text{intermediate}}</span> . Delta function for the energy momentum conservation is going to tell you that <span class="math inline">p_1' + p_2'</span> should be equal to the <span class="math inline">p_{1,\text{int}} + p_{2,\text{int}}</span> . That’s the first.</p>
+<p>The second one is going to tell me that the <span class="math inline">p_1 + p_2</span> is going to equal <span class="math inline">p_{1,\text{int}} + p_{2,\text{int}}</span> . This, the first one connects initial state to final state. Second connects initial state to intermediate, intermediate to final. We can just pull out the one that connects intermediate, which one connects the initial to final. Then keep the one that just constrains the sum of the momentum for the two particles and get our phase space equal to the <span class="math inline">2\pi</span> equals <span class="math inline">\delta(p_1 + p_2 - p_{1,\text{int}})</span> , and then integral of the <span class="math inline">T^\dagger T d^4</span> .</p>
+<p>Now we arrive to the first equation: <span class="math inline">T - T^\dagger = i \int T^\dagger T \, d\Phi</span> . The most general form of this equation that does not have none of these constraints is going to be very similar to that. It’s just you have to sum over all intermediate states and then integrate not over two-body phase space, but rather n-body phase space if there are n-body allowed.</p>
+<p>Diagrammatically, it says amplitude minus amplitude conjugated has to be sum over all intermediate states. Every time you have it, the means that you have to integrate over all possible configurations. That’s what now. Instead of working, we simplify variables in terms of the momentum and the transferred energy squared and transferred momentum. We can change. We can use angle and this.</p>
+<p>Now a function of angle can be approximated by the partial waves. That’s a very convenient series because it converges well, especially when for hadron physics. These amplitudes are. There are constraints on this amplitude that they cannot be present for the high <span class="math inline">J</span> , so they cannot be large for high <span class="math inline">J</span> . There is a natural suppression related to the size of hadrons. There are no, the contributions of the high values of the <span class="math inline">J</span> are small.</p>
+<p>That’s why often in experiment, in order to describe the data, you just need a few partial waves, two, three, sometimes six, but not more than ten. That’s a very convenient approximation. It’s not an approximation once you keep this sum to infinity. Once you. If you keep the sum to infinity, like in Regge theory, that’s an exact relation between left and right.</p>
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>The scattering amplitude is often expanded in <strong>partial waves</strong>: <span class="math inline">A(s, \theta) = \sum_{\ell=0}^\infty (2\ell + 1) a_\ell(s) P_\ell(\cos\theta)</span> . This expansion simplifies the unitarity condition for each angular momentum component <span class="math inline">\ell</span> .</p>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="partial-wave-amplitudes-and-unitarity-constraints" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="partial-wave-amplitudes-and-unitarity-constraints"><span class="header-section-number">2</span> Partial Wave Amplitudes and Unitarity Constraints</h2>
+<p>Another thing that appears here is the <strong>partial wave amplitude</strong>. This amplitude is a function of a single variable. For every partial wave there is one function of one variable, and every partial wave has fixed quantum numbers.</p>
+<p>A large advantage of partial waves is that they do not talk to each other. They don’t influence each other. Every partial wave is independent. Since quantum numbers in scattering are conserved, partial waves in the initial state are only related to partial waves in the final state with the same quantum numbers.</p>
+<p>In the unitarity constraint, you will see that it’s actually a single partial wave that relates to its output. There is no mixing of partial waves.</p>
+<p>The way we can proceed is to insert the partial wave expansion here and then simplify the phase space. For this, you will need one magic formula, and I don’t have time to derive it. It’s present in many references, which I will send you.</p>
+<p>But there is a really cool relation I would like you to see. When we insert the expansion, the initial state has an angle of zero. The final state depends on the scattering angle <span class="math inline">\theta</span> .</p>
+<p>For the final state, the Legendre polynomial <span class="math inline">P_J(\cos\theta)</span> is a function of <span class="math inline">\theta</span> . This is the same as the big Wigner <span class="math inline">d</span> function <span class="math inline">d^J_{0,0}(\cos\theta)</span> . We can write it differently. We know <span class="math inline">d^J_{0,0}</span> is important, and it can be decomposed using the relation: <span class="math display">d^J_{0,0}(\cos\theta) = \sum_\lambda d^J_{0,\lambda} \, d^J_{\lambda,0}</span><br>
+This is a very powerful expression.</p>
+<p>Here, the capital <span class="math inline">G</span> function is defined such that when the indices are zero, it relates to <span class="math inline">d^J_{0,0}</span> . What happens next is that you have to integrate over all possible intermediate states, and both amplitudes are expanded in partial waves. The way to do this is to expand the cosine between the first, second, and last states into a composition of intermediate states. These are exactly the functions we need to relate the full amplitude to the partial wave amplitude.</p>
+<p>The expression we arrive at for the partial wave amplitude has expected numerical coefficients because it’s essentially a base case. The next step is to divide the right part by… or multiply both parts by <span class="math inline">1 / a_J</span> , so that term vanishes. Then we have <span class="math inline">1 / a_J^*</span> , and a minus sign appears.</p>
+<p>From this, we find the <strong>imaginary part of the partial wave amplitude</strong> is simply <span class="math inline">i \rho(s)</span> .</p>
+<div id="fig-fg6" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2024-Lecture-07-images/fig6.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: This figure represents the behavior of the imaginary part of the inverse partial wave amplitude, as constrained by unitarity in two-body scattering. The key relation shown in the lecture is <span class="math inline">\operatorname{Im} a_J^{-1} = -i \rho</span> , which leads to a prediction for how the imaginary part of the amplitude, <span class="math inline">\operatorname{Im} a_j</span> , depends on the kinematic variable <span class="math inline">s</span> (the square of the total energy in the center-of-mass frame). Physically, the plot shows that as the invariant mass <span class="math inline">\sqrt{s}</span> increases from the two-particle threshold (where <span class="math inline">\sqrt{s} = m_1 + m_2</span> ), the phase space factor <span class="math inline">\rho(s)</span> also increases. This function <span class="math inline">\rho(s)</span> is proportional to the breakup momentum of the two outgoing particles and characterizes the available phase space for the reaction. The curve in the diagram starts from zero at the threshold (where the particles just begin to be produced), rises sharply with a square-root behavior, and then gradually saturates to a constant value <span class="math inline">1/(16\pi)</span> at high energies, as described by the expression [ (s) = ] where the Källén function <span class="math inline">\lambda</span> encodes kinematic constraints. This plot highlights how unitarity fixes the imaginary part of the partial wave amplitude as a function of energy: it is determined entirely by kinematics and phase space, not model-dependent details. This is crucial for constructing amplitudes that respect probability conservation in scattering theory.
+</figcaption>
+</figure>
+</div>
+<p>This is amazing because it tells us exactly how the imaginary part of the <strong>inverse amplitude</strong> looks.</p>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>The unitarity condition for a partial wave amplitude <span class="math inline">a_J(s)</span> is: <span class="math display">\operatorname{Im} a_J(s) = \rho(s) \, |a_J(s)|^2</span><br>
+This leads directly to the inverse amplitude relation: <span class="math display">\frac{1}{a_J(s)} = \operatorname{Re} \left[ \frac{1}{a_J(s)} \right] - i \rho(s)</span><br>
+The imaginary part of the inverse amplitude is fixed by unitarity to be <span class="math inline">-\rho(s)</span> .</p>
+</div>
+</div>
+</div>
+<p>Let’s visualize this. Plot <span class="math inline">s</span> on the horizontal axis and the imaginary part of <span class="math inline">a_J</span> on the vertical axis. The phase space function <span class="math inline">\rho(s)</span> starts from threshold with a square-root behavior, <span class="math inline">\sqrt{s - (M_1 + M_2)^2}</span> , and approaches a constant <span class="math inline">1/(16\pi)</span> at high <span class="math inline">s</span> .</p>
+<p>More precisely, the two-body phase space factor is: <span class="math display">\rho(s) = \frac{1}{16\pi} \frac{\lambda^{1/2}(s, m_1^2, m_2^2)}{s}</span><br>
+where <span class="math inline">\lambda(x, y, z) = x^2 + y^2 + z^2 - 2xy - 2xz - 2yz</span> . This function goes to one at high <span class="math inline">s</span> .</p>
+<p>Now for the last point: <strong>modeling</strong>. We know the imaginary part from unitarity, but we do not know the real part. The real part of the amplitude is genuine to the specific interaction—whether electromagnetic, strong, or gravitational. Any unitary interaction must have an imaginary part related to phase space, but the real part must be computed or modeled.</p>
+<ul>
+<li>Theorists extract the real part by analyzing LHC data.</li>
+<li>Experimentalists extract it by analyzing hadronic data.</li>
+</ul>
+<p>The simplest model writes the inverse amplitude as some real function plus the unitary imaginary part. One option for this real function is a simple pole. The amplitude computed assuming the real part is a single pole is called a <strong>relativistic Breit-Wigner amplitude</strong>: <span class="math display">a_J(s) = \frac{g}{M^2 - s - i g \rho(s)}</span></p>
+<p>Modeling the amplitude in terms of such pole terms is often called the ** <span class="math inline">K</span> -matrix approach<strong>, where: <span class="math display">a_J(s) = \frac{K(s)}{1 - i \rho(s) K(s)}</span><br>
+and <span class="math inline">K(s)</span> is a real function, like <span class="math inline">K(s) = g / (M^2 - s)</span> . Let me plot this unperturbed amplitude. On the vertical axis is the absolute value of <span class="math inline">A</span> , and on the horizontal axis is <span class="math inline">s</span> . The parameter <span class="math inline">M</span> is the </strong>bare mass** where the peak appears, and the coupling <span class="math inline">g</span> determines how broad the peak is. This is the simplest resonance amplitude.</p>
+<div id="fig-fg7" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2024-Lecture-07-images/fig7.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7: This figure shows the typical shape of the absolute value of the resonance scattering amplitude, <span class="math inline">|A|</span> , as a function of the center-of-mass energy squared, <span class="math inline">s</span> . The peak occurs near the “bare mass,” marked as <span class="math inline">m^2</span> , and the height of the peak is related to the coupling squared, <span class="math inline">g^2</span> . This diagram represents a resonant phenomenon described by the relativistic Breit-Wigner amplitude, which is commonly used in particle physics to model resonance behavior. When two particles scatter, if the energy matches the resonance mass, the scattering probability rises sharply—this is visible as the large peak in the amplitude. Away from this energy, the amplitude is small, resulting in a characteristic bump. This behavior is a direct manifestation of creating an intermediate unstable particle (a resonance), and the width of the peak encodes the lifetime (inverse of the decay width) of that resonance. The plot thus visualizes how the unitarity constraint and resonance modeling describe experimental observations in particle collision experiments.
+</figcaption>
+</figure>
+</div>
+<p>This describes a resonant phenomenon: particles collide, form an intermediate resonance for a short time, and then decay. In an experiment, you smash particles and count how often they scatter, tuning their collision energy. You would observe:</p>
+<ul>
+<li>A small interaction probability at most energies.</li>
+<li>A huge peak in the cross-section when the energy matches the resonance mass <span class="math inline">M</span> .</li>
+<li>The probability dies out again at higher energies.</li>
+</ul>
+<p>This resonance phenomenon indicates something interesting inside the interaction: an intermediate particle that can be formed.</p>
+</section>
+<section id="two-pole-structure-and-unitarity-in-scattering-amplitudes" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="two-pole-structure-and-unitarity-in-scattering-amplitudes"><span class="header-section-number">3</span> Two-Pole Structure and Unitarity in Scattering Amplitudes</h2>
+<p>Now, from the two-particle K-matrix, we get two poles. The cross section has two peaks: the first corresponds to the first pole, and the second corresponds to the second pole, with a zero in between.</p>
+<p>This zero comes from the fact that the <strong>K-matrix</strong> vanishes. There is a typo to correct: it should be <span class="math inline">K^{-1}</span> in the initial expression. The correct scattering amplitude is: <span class="math display">A = (K^{-1} - i)^{-1}</span><br>
+When <span class="math inline">K</span> multiplies this expression, the entire amplitude is managed, producing two poles. The K-matrix itself has one singularity, which generates another set. To reach the second singular asymptotic behavior, the function must cross zero. Therefore, <span class="math inline">K</span> vanishes between the poles, and this zero propagates into the squared amplitude, resulting in an exact zero on the real axis.</p>
+<p>Another key point is that the energy values of the peaks are not exactly the bare masses. They enter a complicated expression, so the peak occurs very close to, but not exactly at, the bare mass value. This is why the mass is called the <strong>bare mass</strong>; the process of inserting it into the amplitude <strong>dresses</strong> the bare particle mass via propagator screening. Let’s examine the amplitude expression more closely: <span class="math display">A = (K^{-1} - i \rho)^{-1}</span><br>
+Expanding this in a Taylor series gives: <span class="math display">A = K + K(i\rho)K + K(i\rho)K(i\rho)K + \cdots</span><br>
+This infinite series provides a diagrammatic meaning:</p>
+<ul>
+<li><span class="math inline">\rho</span> represents the <strong>two-particle phase space</strong> (the propagator).</li>
+<li><span class="math inline">K</span> represents the <strong>point-like elementary interaction</strong>.</li>
+</ul>
+<div id="fig-fg8" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2024-Lecture-07-images/fig8.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8: This figure illustrates the decomposition and diagrammatic expansion of the two-body scattering amplitude in the <strong>K-matrix formalism</strong>. The equation <span class="math inline">a = (K^{-1} - i\rho)^{-1}</span> expresses the amplitude <span class="math inline">a</span> as the sum of iterated elementary interactions (K), each connected by insertions of the two-particle phase space factor ( <span class="math inline">i\rho</span> ). The expansion <span class="math inline">K + K(i\rho)K + K(i\rho)K(i\rho)K + \ldots</span> represents the resummation of all possible repeated scatterings between two particles, where each term corresponds to an additional loop (propagator) in the intermediate state. The diagrams underneath the terms show the corresponding Feynman-like representations: - The first term (K) is a single point-like interaction (no intermediate states). - The second term (K <span class="math inline">i\rho</span> K) describes two consecutive point-like interactions separated by a loop, indicating propagation through an intermediate two-particle state. - The third term (K <span class="math inline">i\rho</span> K$i<span class="math inline">K) corresponds to three such interactions connected by two intermediate propagations, and so on.  Physically, this expansion encapsulates the unitarity constraint discussed in the lecture, showing that the imaginary part (and analytic structure) of the amplitude arises from the possibility of these intermediate on-shell two-particle states, as enforced by the phase space factor</span> $. This formalism guarantees probability conservation in the scattering process and models resonant phenomena, such as the formation of intermediate bound or quasi-bound states (resonances). The approach is foundational in constructing amplitudes that respect the analytic properties and unitarity required by quantum field theory.
+</figcaption>
+</figure>
+</div>
+<p>The scattering amplitude is a complex function. We have discussed the magnitude (length) of this complex vector, but not its angle—the <strong>scattering phase</strong>. The argument of the scattering amplitude is this phase, and it has interesting behavior.</p>
+<p>In the complex plane, the amplitude traces a circle. Starting from threshold, it increases, reaches a maximum, then decreases back to zero before making a second, similar shape. The variable here is the imaginary part of$ A$ as a function of <span class="math inline">s</span> . The maximum is approached around <span class="math inline">m_{1,0}^2</span> . This plot is called an <strong>Argand diagram</strong>. A more convenient quantity to plot is often: <span class="math display">F = A \cdot \rho</span></p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>The <strong>unitarity constraint</strong>, from probability conservation, is a crucial tool for modeling amplitudes. It fixes the imaginary part of the amplitude, so we only need to model the real part. This real part represents the point-like interaction, which must be resummed to all orders.</p>
+</div>
+</div>
+</div>
+<p>To summarize, unitarity provides a powerful constraint for modeling. The real part of the interaction can be modeled in several ways; one common technique is the <strong>effective range expansion</strong>.</p>
+<p>You can parametrize the inverse K-matrix at low energy as: <span class="math display">K^{-1}(k) = a^{-1} + \frac{1}{2} r_s k^2 + \mathcal{O}(k^4)</span><br>
+This is called the <strong>effective range approximation</strong>, where:</p>
+<ul>
+<li><span class="math inline">a</span> is the <strong>scattering length</strong>.</li>
+<li><span class="math inline">r_s</span> is the <strong>effective range</strong>.</li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="">
+<meta name="dcterms.date" content="2024-01-01">
+
+<title>(2024) Lecture 8</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-597958c53c93a607afca12fd375c57ed.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-7d3a565c23c4d3b0e7c030e96a8964f3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="quarto-light">
+
+<div id="quarto-search-results"></div>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#analytic-and-holomorphic-functions" id="toc-analytic-and-holomorphic-functions" class="nav-link active" data-scroll-target="#analytic-and-holomorphic-functions"><span class="header-section-number">1</span> Analytic and Holomorphic Functions</a>
+  <ul class="collapse">
+  <li><a href="#examples-and-properties-of-analytic-functions" id="toc-examples-and-properties-of-analytic-functions" class="nav-link" data-scroll-target="#examples-and-properties-of-analytic-functions"><span class="header-section-number">1.1</span> Examples and Properties of Analytic Functions</a></li>
+  <li><a href="#visualizing-and-applying-the-concepts" id="toc-visualizing-and-applying-the-concepts" class="nav-link" data-scroll-target="#visualizing-and-applying-the-concepts"><span class="header-section-number">1.2</span> Visualizing and Applying the Concepts</a></li>
+  </ul></li>
+  <li><a href="#cauchys-theorem-and-discontinuous-integrals" id="toc-cauchys-theorem-and-discontinuous-integrals" class="nav-link" data-scroll-target="#cauchys-theorem-and-discontinuous-integrals"><span class="header-section-number">2</span> Cauchy’s Theorem and Discontinuous Integrals</a>
+  <ul class="collapse">
+  <li><a href="#contour-integral-of-sqrtz-on-the-unit-circle" id="toc-contour-integral-of-sqrtz-on-the-unit-circle" class="nav-link" data-scroll-target="#contour-integral-of-sqrtz-on-the-unit-circle"><span class="header-section-number">2.1</span> <strong>Contour Integral of <span class="math inline">\sqrt{z}</span> on the Unit Circle</strong></a></li>
+  <li><a href="#deforming-the-contour-and-the-branch-cut-discontinuity" id="toc-deforming-the-contour-and-the-branch-cut-discontinuity" class="nav-link" data-scroll-target="#deforming-the-contour-and-the-branch-cut-discontinuity"><span class="header-section-number">2.2</span> <strong>Deforming the Contour and the Branch Cut Discontinuity</strong></a></li>
+  </ul></li>
+  <li><a href="#analyticity-and-branch-points-in-the-scattering-amplitude" id="toc-analyticity-and-branch-points-in-the-scattering-amplitude" class="nav-link" data-scroll-target="#analyticity-and-branch-points-in-the-scattering-amplitude"><span class="header-section-number">3</span> Analyticity and Branch Points in the Scattering Amplitude</a></li>
+  <li><a href="#analytic-structure-and-branch-cuts-of-a-square-root-function" id="toc-analytic-structure-and-branch-cuts-of-a-square-root-function" class="nav-link" data-scroll-target="#analytic-structure-and-branch-cuts-of-a-square-root-function"><span class="header-section-number">4</span> Analytic Structure and Branch Cuts of a Square Root Function</a></li>
+  <li><a href="#complex-plane-analogy-for-scattering-amplitudes-and-resonances" id="toc-complex-plane-analogy-for-scattering-amplitudes-and-resonances" class="nav-link" data-scroll-target="#complex-plane-analogy-for-scattering-amplitudes-and-resonances"><span class="header-section-number">5</span> Complex Plane Analogy for Scattering Amplitudes and Resonances</a></li>
+  <li><a href="#thresholds-branch-points-and-poles" id="toc-thresholds-branch-points-and-poles" class="nav-link" data-scroll-target="#thresholds-branch-points-and-poles"><span class="header-section-number">6</span> Thresholds, Branch Points, and Poles</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">(2024) Lecture 8</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">January 1, 2024</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><strong>Presenter</strong>: Mikhail Mikhasenko</p>
+<p><strong>Note Taker</strong>: Ilya Segal</p>
+<section id="analytic-and-holomorphic-functions" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="analytic-and-holomorphic-functions"><span class="header-section-number">1</span> Analytic and Holomorphic Functions</h2>
+<p>In today’s lecture, I would like to discuss unitarity and complex numbers and move towards discussing complex functions. We had a little too little time in the previous lecture to cover these aspects, but this is important to understand and I think it also links to what you already know from mathematics.</p>
+<p>I would like to introduce you to two mathematical concepts: <strong>analytic functions</strong> and <strong>holomorphic functions</strong>, which are two words for the same idea.</p>
+<ul>
+<li><p>A function is called <strong>analytic at a point <span class="math inline">x_0</span> </strong> if it can be represented by a Taylor series that equals the function in the vicinity of that point. This means there exist coefficients such that: <span class="math display">f(x) = \sum_{n=0}^{\infty} \frac{f^{(n)}(x_0)}{n!} (x - x_0)^n</span></p></li>
+<li><p>A function is called <strong>holomorphic</strong> if its complex derivative exists, meaning you can approach the point from any direction in the complex plane and the derivative is the same. This is the same property as being analytic. Don’t be afraid of the word “holomorphic”—it’s just mathematicians inventing a cool word to say a function is analytic.</p></li>
+</ul>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Key Definitions:</strong></p>
+<ul>
+<li><strong>Analytic/Holomorphic Function:</strong> A function that can be locally represented by a convergent power series (Taylor series) and has a well-defined complex derivative.</li>
+<li><strong>Taylor Series Representation:</strong> <span class="math inline">f(x) = \sum_{n=0}^{\infty} \frac{f^{(n)}(x_0)}{n!} (x - x_0)^n</span> expresses that the function’s value near <span class="math inline">x_0</span> is determined by its derivatives at <span class="math inline">x_0</span> .</li>
+</ul>
+</div>
+</div>
+</div>
+<section id="examples-and-properties-of-analytic-functions" class="level3" data-number="1.1">
+<h3 data-number="1.1" class="anchored" data-anchor-id="examples-and-properties-of-analytic-functions"><span class="header-section-number">1.1</span> Examples and Properties of Analytic Functions</h3>
+<p>As examples, consider functions that are analytic:</p>
+<ul>
+<li>All <strong>polynomials</strong> are analytic everywhere.</li>
+<li>A <strong>rational function</strong> (a polynomial divided by another polynomial) is analytic except at a finite number of points—the zeros of the denominator.</li>
+<li>When we say a function is analytic on a domain, it means <strong>every point</strong> in that domain is a point of analyticity.</li>
+</ul>
+<p>The function <span class="math inline">\sqrt{x}</span> is analytic everywhere except at <span class="math inline">x = 0</span> . Zero is called a <strong>branch point</strong>, a point where there is no derivative and no valid Taylor series.</p>
+<p><strong>Real analytic functions</strong> are another interesting class—functions that are real-valued and analytic. An example is the real function <span class="math inline">\sqrt{x}</span> for <span class="math inline">x \geq 0</span> .</p>
+<p>A key property of a real analytic function extended to the complex plane is the <strong>Schwarz reflection principle</strong>. It states that for such a function <span class="math inline">f</span> , the value at the complex conjugate of a point is the complex conjugate of the function’s value: <span class="math display">\overline{f(z)} = f(\overline{z})</span></p>
+</section>
+<section id="visualizing-and-applying-the-concepts" class="level3" data-number="1.2">
+<h3 data-number="1.2" class="anchored" data-anchor-id="visualizing-and-applying-the-concepts"><span class="header-section-number">1.2</span> Visualizing and Applying the Concepts</h3>
+<p>When discussing analytic functions of a single complex argument, it’s convenient to draw the domain—the complex plane. On the x-axis is the real part of the argument ( <span class="math inline">\Re(z)</span> ), and on the y-axis is the imaginary part ( <span class="math inline">\Im(z)</span> ). We can indicate regions of analyticity on this diagram.</p>
+<p>The Schwarz reflection principle implies a symmetry: the function’s values in the lower half-plane are related to those in the upper half-plane. You can compute a value in the lower half-plane by computing it at the conjugate point in the upper half-plane and then taking the complex conjugate.</p>
+<p>Let’s test this with an example using <span class="math inline">f(z) = \sqrt{z}</span> , which is real analytic for real <span class="math inline">z</span> . We’ll compute <span class="math inline">\sqrt{1 + i}</span> and <span class="math inline">\sqrt{1 - i}</span> .</p>
+<p>First, express the numbers in polar form <span class="math inline">z = r e^{i\theta}</span> , where <span class="math inline">r = |z|</span> and <span class="math inline">\theta = \arg(z)</span> :</p>
+<ul>
+<li>For <span class="math inline">1 + i</span> : <span class="math inline">r = \sqrt{2}</span> and <span class="math inline">\theta = \pi/4</span> . So, <span class="math inline">1 + i = \sqrt{2} e^{i\pi/4}</span> .</li>
+<li>For <span class="math inline">1 - i</span> : <span class="math inline">r = \sqrt{2}</span> and <span class="math inline">\theta = -\pi/4</span> . So, <span class="math inline">1 - i = \sqrt{2} e^{-i\pi/4}</span> .</li>
+</ul>
+<p>Now, apply the square root using the rule <span class="math inline">\sqrt{z} = \sqrt{r} e^{i\theta/2}</span> :</p>
+<ul>
+<li><span class="math inline">\sqrt{1 + i} = \sqrt{\sqrt{2} e^{i\pi/4}} = 2^{1/4} e^{i\pi/8}</span></li>
+<li><span class="math inline">\sqrt{1 - i} = \sqrt{\sqrt{2} e^{-i\pi/4}} = 2^{1/4} e^{-i\pi/8}</span></li>
+</ul>
+<p>Notice that <span class="math inline">\sqrt{1 - i}</span> is indeed the complex conjugate of <span class="math inline">\sqrt{1 + i}</span> , which confirms the Schwarz reflection principle: <span class="math inline">\overline{\sqrt{1 + i}} = \sqrt{\overline{1 + i}} = \sqrt{1 - i}</span> .</p>
+</section>
+</section>
+<section id="cauchys-theorem-and-discontinuous-integrals" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="cauchys-theorem-and-discontinuous-integrals"><span class="header-section-number">2</span> Cauchy’s Theorem and Discontinuous Integrals</h2>
+<p>Cauchy’s theorem states that the integral over a closed contour of a function in the complex plane is equal to all non-analytic contributions inside this contour. If the singularity is a pole, it’s given by residues. If it’s a branch point, one must contour around it, and so on. The theorem systematically accounts for all non-analytic behavior.</p>
+<p>What is notable is that this provides a numerically well-defined procedure to integrate a function that is discontinuous. For example, we can compute the integral of the function <span class="math inline">\sqrt{z}</span> on the circle of radius 1, and the integral converges despite the function being discontinuous at the branch point.</p>
+<section id="contour-integral-of-sqrtz-on-the-unit-circle" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="contour-integral-of-sqrtz-on-the-unit-circle"><span class="header-section-number">2.1</span> <strong>Contour Integral of <span class="math inline">\sqrt{z}</span> on the Unit Circle</strong></h3>
+<p>On the circle <span class="math inline">|z|=1</span> , the function is parameterized as <span class="math inline">z = e^{i \phi}</span> . However, <span class="math inline">\sqrt{z}</span> jumps across the branch cut: above the cut it is <span class="math inline">+1</span> , and below it is <span class="math inline">-1</span> . The contour integral is:</p>
+<p><span class="math display">\oint_{|z|=1} \sqrt{z} \, dz = \int_{0}^{2\pi} \sqrt{e^{i \phi}} \cdot i e^{i \phi} \, d\phi</span></p>
+<p>Taking the principal branch where <span class="math inline">\sqrt{e^{i \phi}} = e^{i \phi/2}</span> , this simplifies to:</p>
+<p><span class="math display">\oint_{|z|=1} \sqrt{z} \, dz = i \int_{0}^{2\pi} e^{i (3/2) \phi} \, d\phi</span></p>
+<p>Care must be taken because the function is discontinuous on the interval <span class="math inline">[0, 2\pi]</span> ; one cannot simply evaluate at the endpoints. To handle this properly, one can shift the integration range to <span class="math inline">[-\pi, \pi]</span> , where the function is continuous on that segment:</p>
+<p><span class="math display">i \int_{-\pi}^{\pi} e^{i (3/2) \phi} \, d\phi</span></p>
+<p>This yields a finite, well-defined result.</p>
+</section>
+<section id="deforming-the-contour-and-the-branch-cut-discontinuity" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="deforming-the-contour-and-the-branch-cut-discontinuity"><span class="header-section-number">2.2</span> <strong>Deforming the Contour and the Branch Cut Discontinuity</strong></h3>
+<p>The key point is that this contour integral equals the integral of the discontinuity across the branch cut. By shrinking the contour around the branch cut (typically placed along the negative real axis), the integral transforms.</p>
+<p>For <span class="math inline">\sqrt{z}</span> with a branch cut along the negative real axis, the values on either side of the cut are:</p>
+<ul>
+<li><strong>Above the cut:</strong> <span class="math inline">\sqrt{z}_{\text{above}} = i\sqrt{|x|}</span></li>
+<li><strong>Below the cut:</strong> <span class="math inline">\sqrt{z}_{\text{below}} = -i\sqrt{|x|}</span> , for <span class="math inline">z = x &lt; 0</span></li>
+</ul>
+<p>The discontinuity across the cut is therefore:</p>
+<p><span class="math display">\sqrt{z}_{\text{above}} - \sqrt{z}_{\text{below}} = 2i\sqrt{|x|}</span></p>
+<p>Thus, deforming the original circular contour gives an equivalent representation:</p>
+<p><span class="math display">\oint \sqrt{z} \, dz = \int_{\text{branch cut}} \left[ \sqrt{z}_{\text{above}} - \sqrt{z}_{\text{below}} \right] dz = \int_{-\infty}^{0} 2i\sqrt{|x|} \, dx</span></p>
+<p>This illustrates a core property of analytic functions and Cauchy’s theorem: <strong>the contour of integration can be deformed freely as long as no non-analytic regions are crossed</strong>. For this example, it is instructive to verify that the circular integral and the branch-cut discontinuity integral give the same result.</p>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>The residue theorem, <span class="math inline">\oint_{\mathcal{C}} f(z) \, dz = 2\pi i \sum_{k} \text{Res}(f, z_k)</span> , is the foundation. For integrals with branch points, we extend the logic by deforming the contour around branch cuts, which reduces the problem to integrating the function’s <strong>discontinuity</strong> across that cut. This technique is powerful for evaluating real integrals and appears in physics contexts like dispersion relations and spectral representations.</p>
+</div>
+</div>
+</div>
+<p>The remaining step is the final evaluation, which involves the imaginary part of <span class="math inline">\sqrt{x}</span> times <span class="math inline">i</span> , leading to a simple integration on the real axis. The two methods—direct parameterization and branch-cut deformation—provide a consistent answer, demonstrating the robustness of the complex analysis approach.</p>
+</section>
+</section>
+<section id="analyticity-and-branch-points-in-the-scattering-amplitude" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="analyticity-and-branch-points-in-the-scattering-amplitude"><span class="header-section-number">3</span> Analyticity and Branch Points in the Scattering Amplitude</h2>
+<p>The scattering amplitude is the real magic function.</p>
+<div id="fig-fg1" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2024-Lecture-08-images/fig1.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: This figure illustrates the derivation of the <strong>optical theorem</strong> using the principle of <strong>unitarity</strong> in scattering theory. On the left, the sum over all possible intermediate states ( <span class="math inline">\sum_n</span> ) is shown, representing the process where the initial state can scatter into any set of possible intermediate particles (labeled by <span class="math inline">n</span> ). The diagram in the center shows the forward scattering amplitude, while the terms on the right represent the subtraction of the amplitude from its complex conjugate. This corresponds to taking the difference between the amplitude and its Hermitian conjugate, which isolates the imaginary part of the forward scattering amplitude. This imaginary part is related (via unitarity) to the total cross section for the process, connecting the squared modulus of the amplitude summed over all intermediate states to the discontinuity (imaginary part) of the amplitude itself. This graphical equation expresses the optical theorem in terms of <strong>analyticity</strong> and <strong>unitarity</strong> of the scattering amplitude as described in the lecture.
+</figcaption>
+</figure>
+</div>
+<p>Let’s return to our two sketches of the amplitude, for which we derived the optical theorem and discussed the analytic structure. The claim is that the amplitude is a real magic function, so part of it.</p>
+<p>Let’s clarify the assumptions and the physical principle. The amplitude is not accessed directly in experiment; we cannot validate its properties exactly. What we measure is the amplitude squared. Access to the amplitude itself is only available via our observables.</p>
+<p>However, scattering theory and probability conservation imply that certain properties of the amplitude, particularly constraints on its imaginary part, tell us where the imaginary part is present. The fact that it’s analytic is a postulate. This is something we have to assume.</p>
+<p>It’s stronger than an assumption. We don’t assume its analytic properties; this is the building principle of our series. All series we have seen so far have unitarity built in. Therefore, not only unitarity, but also causality, which is related to analyticity.</p>
+<p>The amplitude being an analytic function is a principle that is postulated in our theory. It is related to the causality of the theory—that the past does not influence the future. Events separated outside the causality cone don’t influence each other. We are not deriving this, but you can find the causality connection to analyticity in several books; we take it as a postulate.</p>
+<p>The amplitude is analytic, and then unitarity tells you more. Moreover, the amplitude is <strong>real analytic</strong> below the threshold, because the imaginary part is connected to the particle’s appearance in intermediate states. This is only present once you are above threshold, because the interaction tells you that the amplitude has an imaginary part above the threshold. Below threshold it doesn’t have any imaginary part; it’s real.</p>
+<p>So here I have a diagram on the x-axis. Again, it’s the complex plane of the energy. The variable <span class="math inline">s</span> is <span class="math inline">E^2</span> , where <span class="math inline">E</span> is the center-of-mass energy, and the amplitude <span class="math inline">\mathcal{A}(s)</span> as a function of this <span class="math inline">s</span> is an analytic function.</p>
+<p>What we get to deal with is only the values of this amplitude above the threshold. However, the postulates of our theory tell you that using analyticity we can extend the domain of definition into the full complex plane. I hope you wrap your mind around the idea that now we can extend this analytic domain and think of our amplitude as a complex function.</p>
+<p>Instead of the energy of the interactions being like 5 GeV, you can put a complex number there and then you probe the function away from the real axis. This function has a certain range of singularities. The fact that the imaginary part is not present below threshold and then suddenly appears above threshold tells you that a certain singular disk pops up. These singularities are the <strong>branch points</strong>.</p>
+<p>Every threshold has nice derivations of the threshold singularities for different numbers of particles. However, something to see easily is the two-body threshold. I want to show you that it introduces <strong>square root singularities</strong>. It simply follows from the fact that the imaginary part has a square root.</p>
+<p>Let me show you that the imaginary part of the amplitude from unitarity that we derived last time is related to the amplitude squared itself. There is a prefactor here. This prefactor is the phase space, simply the two-body phase space. The one half comes from <span class="math inline">\mathcal{A} - \mathcal{A}^*</span> .</p>
+<p>I place the imaginary part on here, here I replace it and <span class="math inline">\frac{1}{2}</span> over here. The two-body phase space has the factor <span class="math inline">\frac{2p_{\text{cm}}}{\sqrt{s}}</span> . This <span class="math inline">2p_{\text{cm}}</span> is the breakup momentum. This is something that actually makes a singularity, something that vanishes at the threshold.</p>
+<p>The breakup momentum is the momentum particles have. Clearly if you are at the threshold, you have the minimal energy of the system. It’s simply two masses of the particles. They don’t have free energy, they don’t have momentum. That’s something that vanishes.</p>
+<p>Mathematically you see that if you compute this two-body breakup momentum, you find that it’s equal to the Källén function.</p>
+<div id="fig-fg2" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2024-Lecture-08-images/fig2.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: This figure represents the analytic structure of the scattering amplitude <span class="math inline">\mathcal{A}(s)</span> as a function of the Mandelstam variable <span class="math inline">s = E^2</span> , where <span class="math inline">E</span> is the center-of-mass energy. The horizontal axis is the real axis of <span class="math inline">s</span> , while the vertical axis would represent the imaginary part if drawn fully. The portion of the real axis labeled “real analytic” depicts the region below the two-particle threshold at <span class="math inline">s = (m_1 + m_2)^2</span> . In this region, the amplitude is real analytic, meaning it is a real-valued, analytic (holomorphic) function—there is no imaginary part, and the function can be represented by a convergent Taylor series. At the point <span class="math inline">s = (m_1 + m_2)^2</span> , the threshold for producing two particles of masses <span class="math inline">m_1</span> and <span class="math inline">m_2</span> , a branch point occurs. This marks the beginning of a branch cut along the real axis for <span class="math inline">s &gt; (m_1 + m_2)^2</span> , which is where the imaginary part of the amplitude appears due to physical particle production. The branch cut is related to the square root behavior of the two-body phase space, as discussed in the lecture. Thus, the figure illustrates how the analytic properties of the amplitude change at the physical threshold, emphasizing the importance of branch points and cuts in the analytic structure of scattering amplitudes.
+</figcaption>
+</figure>
+</div>
+<p>Remember <span class="math inline">\lambda(x, y, z) = x^2 + y^2 + z^2 - 2xy - 2yz - 2zx</span> . You can arrange this as the product, and to be precise, the product of the two terms where you have <span class="math inline">x - y + z</span> . This is the masses of two particles and the difference between them and under the square root.</p>
+<p>The first term gives you a singularity at the threshold and the second one gives you a singularity at the pseudothreshold. The integral relation as we wrote it, as we derived, is valid only above the threshold. The imaginary part is non-zero and present only once you go above the threshold.</p>
+<p>This imaginary part appears to have a square root behavior. That indicates, that tells you that the function itself has a <strong>square root branch point</strong>. Essentially above that point the function has this branch cut.</p>
+<p>We would like to connect this to the <strong>Schwarz reflection principle</strong>. Since our function was real and analytic on a segment of the real axis, the Schwarz reflection principle works above. It connects the amplitude in the upper half-plane with the amplitude in the lower half-plane.</p>
+<p>If your function is <span class="math inline">\mathcal{A}(s + i\epsilon)</span> , it simply tells you that the imaginary part flips if you go from above the real axis to below the real axis. That’s a relation where <span class="math inline">\epsilon</span> is small enough.</p>
+<p>This is now in the pop, in the rock. People like the word. Maybe next time I bring you something. I was impressed recently. Listen to the song “Infinitesimal,” and that’s a word I like. It just means very, very small, infinitesimal.</p>
+<p>I’m going to use this <span class="math inline">i\epsilon</span> , and you’ve seen it before. This is just the little number that indicates that you are like a very, very small amount above the real axis or below the real axis. Cool.</p>
+<p>It happens due to the phase space. We realized that if the function, if there were no phase space configuration summations on the right, you could relate the imaginary part to the amplitude itself and there would not be branch points. But it’s unavoidable. You have to sum over phase configurations.</p>
+<p>That gives you the square root branch point. It also tells you that the amplitude has a branch point starting at the threshold and going in the positive direction.</p>
+<p>I wanted to quickly give an example of such a function, an example of a real analytic function, a function with a cut to the right. An example of a real analytic function like our scattering amplitude, but something very simple with a square root function that has a cut to the right.</p>
+<p>The square root of <span class="math inline">x</span> doesn’t work. Test. Cut on the left? On the left. Let’s cut to the left. How do I see where it has the cut? Simply because amplitude of <span class="math inline">1 + \epsilon</span> is equal to amplitude of <span class="math inline">1 - \epsilon</span> , there is no cut.</p>
+<p>Then <span class="math inline">\sqrt{-1 + i\epsilon}</span> is equal to <span class="math inline">i</span> , and <span class="math inline">\sqrt{-1 - i\epsilon}</span> is equal to <span class="math inline">-i</span> . On this side the function evaluated from above and the function evaluated from below have different values. That tells me in which direction I put my cut.</p>
+<p>This is a branch point and this is a non-analytic point. For every branch point there is a cut attached and then it splits my manifold and analyticity into the functions, into the sort of surfaces, different sheets. All of the functions elsewhere except this point are analytic.</p>
+<p>But you have to work to see this analyticity. Essentially you have to analytically continue functions. If you see the pattern, you want to make this function analytic. It’s always possible, but you have to work a little bit by extending the analyticity domain.</p>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Key Formulas for This Section</strong></p>
+<ul>
+<li><strong>Two-Body Unitarity:</strong> <span class="math inline">\operatorname{Im} \mathcal{A}(s) = \frac{1}{2} \int d\Phi_2 \, |\mathcal{A}(s)|^2</span></li>
+<li><strong>Breakup Momentum &amp; Phase Space:</strong> <span class="math inline">\rho(s) = \frac{2p_{\text{cm}}}{\sqrt{s}}</span> , where <span class="math inline">p_{\text{cm}} = \frac{\sqrt{\lambda(s, m_1^2, m_2^2)}}{2\sqrt{s}}</span></li>
+<li><strong>Källén Function:</strong> <span class="math inline">\lambda(x, y, z) = x^2 + y^2 + z^2 - 2xy - 2yz - 2zx</span> . For two-body kinematics, this becomes <span class="math inline">\lambda(s, m_1^2, m_2^2) = [s - (m_1 + m_2)^2][s - (m_1 - m_2)^2]</span> , showing the square-root branch points at the threshold <span class="math inline">(m_1+m_2)^2</span> and pseudothreshold <span class="math inline">(m_1-m_2)^2</span> .</li>
+<li><strong>Schwarz Reflection Principle:</strong> <span class="math inline">\mathcal{A}(s + i\epsilon)^* = \mathcal{A}(s - i\epsilon)</span> for real <span class="math inline">s</span> below the first threshold.</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="analytic-structure-and-branch-cuts-of-a-square-root-function" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="analytic-structure-and-branch-cuts-of-a-square-root-function"><span class="header-section-number">4</span> Analytic Structure and Branch Cuts of a Square Root Function</h2>
+<p>Coming back to the example, you’ll understand it better once I finish it.</p>
+<p>So, if I put the minus <em>x</em> and evaluate the function somewhere in the complex plane, I find it’s now fully analytic here, and it has a cut to the right.</p>
+<p>Now, let’s evaluate this function at <strong>s = -1</strong>. What is it equal to? I want my function here, and it gives me one minus, minus. This is an example of a real analytic function.</p>
+<p>Or, let’s put the amplitude—the simplest amplitude. A valid amplitude would be: <span class="math display">\sqrt{-s + m_1^2 m_2^2}</span><br>
+which has similar properties.</p>
+<div id="fig-fg3" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2024-Lecture-08-images/fig3.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: This figure illustrates the analytic structure of the function <span class="math inline">\sqrt{x}</span> in the complex plane. The image shows a complex plane with a vertical (imaginary axis) and horizontal (real axis) line, with a thickened or darkened segment along the negative real axis. This dark segment represents the <strong>branch cut</strong> of the function <span class="math inline">\sqrt{x}</span> , which is a line (chosen conventionally along the negative real axis) where the function is discontinuous. The point at the origin ( <span class="math inline">x=0</span> ) is the <strong>branch point</strong> where the non-analytic behavior begins. Physically, this means that as you move around the origin in the complex plane, the value of <span class="math inline">\sqrt{x}</span> can jump discontinuously when crossing the cut, which is essential for defining the function’s analytic properties. In the context of scattering amplitudes and complex analysis, identifying such branch points and cuts is crucial for understanding where the amplitude is analytic (holomorphic) and where it develops discontinuities due to physical thresholds.
+</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>This function <span class="math inline">f(s) = \sqrt{-s + m_1^2 m_2^2}</span> is analytic in the complex <span class="math inline">s</span> -plane except along a <strong>branch cut</strong>. This cut is typically placed where the expression under the square root, <span class="math inline">-s + m_1^2 m_2^2</span> , is real and negative, leading to a discontinuity.</p>
+</div>
+</div>
+</div>
+<p>Quickly, while I’m cleaning the board: what is the analyticity structure of this? We are in the <em>x</em>-plane.</p>
+<p>Let’s finish here. I put <strong>-9</strong> in the first one to make it more interesting. Anyway, this first function has the cut on the right, and the second one has a cut. They are very similar, but shifted by one.</p>
+<p>So essentially, the structure is: <strong>one cut</strong>, then a <strong>second cut</strong>. When you have this situation, there is no jump here. You can jump twice and the cuts overlap, so there is no discontinuity of the function. It’s analytic right here.</p>
+<p>The right answer is just the cuts connecting two points. This one is tricky. The first time I saw it in a mathematical context, I was really shocked because the locations of the <strong>branch points</strong> are the same. There are two points, <em>x</em> and <em>x</em>, where the function is non-analytic.</p>
+<p>But the locations of the <strong>cut</strong> are driven by the places where the imaginary expression under the square root has an argument of <span class="math inline">\pi</span> or <span class="math inline">-\pi</span> . For a regular square root function, the cut appears where the argument is either <span class="math inline">\pi</span> or <span class="math inline">-\pi</span> .</p>
+<p>To understand where your Mathematica, C, or Python library would draw a cut, you need to understand where the expression under the square root has an argument touching <span class="math inline">\pi</span> or <span class="math inline">-\pi</span> . And then, apparently, this is indeed between the points, but also along this line.</p>
+<ul>
+<li>This is the first cut going to infinity.</li>
+<li>This is the second cut going to infinity.</li>
+</ul>
+<p>It’s crazy, and this is actually different from the previous case.</p>
+<p>If you just split the product into two square roots: <span class="math display">\sqrt{(-s + a)(-s + b)} = \sqrt{-s + a} \cdot \sqrt{-s + b}</span><br>
+then you remove these two connections. I don’t want to confuse you, but to warn you: one has to be careful <strong>how you write the expression</strong>, exactly how you split the square root, because that makes the function different on the real axis.</p>
+<p>I think they will be the same on the real axis, but on the complex plane the functions are different. They might even be different elsewhere…</p>
+<p>To prove that <span class="math inline">\sqrt{(-s + a)(-s + b)}</span> is <strong>not</strong> equal to <span class="math inline">\sqrt{-s + a} \cdot \sqrt{-s + b}</span> , we can simply evaluate the function at <strong>s = -1</strong>. That’s an easy exercise.</p>
+<p>The way I see that they are different is because I know the analytic structure of the first expression is <strong>one cut connecting two branch points</strong>. In order to arrive from this structure to the other, I can take this cut, rotate it over here, take this one, rotate it over there, and cancel two cuts. Making these two cuts cancel each other tells me that the function in the original configuration has a different value at <strong>s = -1</strong>.</p>
+<p>If I evaluate, I should see this immediately:</p>
+<ul>
+<li>Evaluating the top one: <span class="math inline">\sqrt{(-(-1) + 2)(-(-1) + 2)} = \sqrt{(1+2)(1+2)} = \sqrt{9} = 3</span></li>
+<li>Evaluating the product of square roots: from the first factor <span class="math inline">\sqrt{1+2} = \sqrt{3}</span> and from the second <span class="math inline">\sqrt{1+2} = \sqrt{3}</span> . Their product is <span class="math inline">(\sqrt{3})^2 = 3</span> .</li>
+</ul>
+<p>However, with careful sign consideration from the branch choices (as hinted in my notes), the values can differ. For instance, <span class="math inline">\sqrt{2i} \cdot \sqrt{2i}</span> could be evaluated as <span class="math inline">2i</span> , while <span class="math inline">\sqrt{(2i)^2} = \sqrt{-4}</span> could be <span class="math inline">2i</span> with an appropriate branch, illustrating the subtlety. The key point is their <strong>analytic structures</strong>—their branch cuts—are fundamentally different.</p>
+</section>
+<section id="complex-plane-analogy-for-scattering-amplitudes-and-resonances" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="complex-plane-analogy-for-scattering-amplitudes-and-resonances"><span class="header-section-number">5</span> Complex Plane Analogy for Scattering Amplitudes and Resonances</h2>
+<p>Its resonances are <strong>poles of the scattering amplitude</strong>. You will hear that many times in the future.</p>
+<p>Think of the intensity flow. The function in the complex plane is like the complex structure of a house. In this house there are just a few routers. You desperately want your Internet; the farther you are from the router, the weaker signal you get. If you sit at a point and you have a really good Internet, you are probably sitting not far from the router. Similar to that, this is our couch in the house where people usually sit and they experience different strengths of the Internet. The routers are the resonances.</p>
+<p>Here I have combined two modes on the Y axis. I have a complex <span class="math inline">s</span> plane, with real <span class="math inline">s</span> on the axis. This indicates minus imaginary <span class="math inline">s</span> . This is the same as I would have for the complex plane. I draw a square. The square is the strength of your Internet when you sit on this couch. In the middle you have the closest distance to the router, to the resonance pole, and therefore your strength is the highest. If you go far away, your Internet weakens.</p>
+<p>Now let’s make the house a little bit more complicated. We have several floors. In that case the cuts… Here is my map of the room. As usual, I am the couch where people sit on the real axis. But in that case I have the house a little bit complex. There is a room with different electronics, a different floor, so I can go to another room. I experience all the routers that are in another room. Essentially, if in another room I have a router sitting here, I want to see the influence of it from my couch. Let me put it here. This is floor one and the next is two. I am going to draw the sheet too. Sheet one is our floor one and then sheet two is floor two. Here is the gate. You can think of this now as the sort of stairs from one to another, and this continues. If I have my router here, I am going to see I have a really good strength here and then here as well. But if I go around the corner, I start losing the signal. Here the distance becomes high. The way to get Internet is around the wall. This is the gate to another floor and I can only enter on that side.</p>
+<p>Is it clear? I feel like this picture of the floors and the routers is really helpful, but might be still overwhelming. The routers are the resonances. I see the routers on each floor. If they are above the threshold, it is too complicated. Essentially, when you hear about the complex plane and the poles, just think of the intensity floor somewhere in the complex domain. There are gates to other floors. Do not think about them as changing the level, but it is simply the way to connect one to another. Somewhere on this surface that has different levels, you place the routers. These routers influence your intensity, which you see on the real axis.</p>
+<p>What is the difference between a bigger room and multiple floors? No difference. The rooms are infinitely big either way. But since at every point I can be at different sorts of floors that are connected smoothly to each other, I have to draw several maps, several sheets. In the shopping malls you also have multiple floors with shops indicated because it is really hard to show it on a single one.</p>
+<p>For simplicity, unitarity tells us the cut should be to the right. But I would never do it practically like that. I know unitarity tells me that. Nothing happens if I just place the cut to the left. I will demonstrate what I want to do with the square root function, <span class="math inline">\sqrt{x}</span> . It has a branch cut and I am carrying my function value right here. There is nothing going to happen if I just draw the cut in different directions. I would like to say that this function is the same function. But now in that case I have a branch cut. Is it the same? Let us evaluate this function. At <span class="math inline">x = -1</span> you have an <span class="math inline">i</span> . At <span class="math inline">-1 + \epsilon</span> you have an <span class="math inline">i</span> . This function at <span class="math inline">-1</span> gives you an <span class="math inline">i</span> again. This function and that function are exactly the same in this region. The difference between them is that I took my branch cut and rotated it to the right such that I opened the space underneath. I just made the renovation and changed the rooms how they are located in the house. It changes nothing in the strength of the amplitude essentially because the walls, I mean there are no walls. Essentially everything is continuous. The cut, the way how I draw the cut, is just a way to separate different branches. There is no wall that prevents the signal strength. That is why for this I would never do this practically like that. This is what unitarity tells us about imaginary part and real analyticity. For practical reasons it is always convenient to open up the closest branch to us to see. Therefore it is more natural to place the cut in a convenient location. The cut goes to the right, I turn it to the left and now actually my function is not real, but I now expose a bigger range of the complex plane to analyze.</p>
+<p>Essentially, if I sit here, this point on the real axis is influenced by all singularities in the complex plane that are nearby. If I have a pole right here, I do not have to care about the branches any longer. I just immediately see the effect in the strength of my amplitude if my pole is nearby. That is the most convenient, in my opinion, way to think of the complex plane and the scattering amplitude.</p>
+<div id="fig-fg4" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2024-Lecture-08-images/fig4.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: This figure illustrates the physical meaning of <strong>resonances as poles in the scattering amplitude</strong> and the analytic structure of complex functions in the context of scattering theory. - <strong>Branch cuts and analyticity:</strong> The sketches at the top show the analytic structure of functions like <span class="math inline">\sqrt{x(x-1)}</span> versus <span class="math inline">\sqrt{x}\sqrt{x-1}</span> , emphasizing that while individual square roots have branch cuts on the real axis, their product (if not written with care) might not match the full analytic structure, demonstrating the importance of how a function is defined with respect to branch points and cuts. The analytic continuation and placement of branch cuts affect the behavior and discontinuities of the function. - <strong>Poles and “intensity flow”:</strong> The middle section introduces the concept that physical resonances correspond to poles of the scattering amplitude in the complex <span class="math inline">s</span> -plane (where <span class="math inline">s</span> is the Mandelstam variable, often <span class="math inline">s=E^2</span> ), and how these influence observable data. The schematic “complex <span class="math inline">s</span> plane” with a marked resonance pole shows that the observable intensity <span class="math inline">|A|^2</span> (the square of the amplitude) on the real axis is enhanced in the vicinity of such a pole—this is the resonance “peak” seen in experiment. The sketch shows this as “strength of signal” near the pole. - <strong>Sheets and analytic continuation:</strong> The two panels labeled “Sheet I” and “Sheet II” display different Riemann sheets in the complex <span class="math inline">s</span> -plane associated with the function’s branch points and cuts. This reflects the fact that multivalued functions like those with square roots naturally extend to multiple sheets, and poles associated with resonances may appear on different sheets depending on the analytic continuation—a key concept in understanding physical resonances and thresholds. - <strong>Cuts can be rotated:</strong> The panel illustrating how branch cuts can be “rotated” or placed differently without changing the analytic nature of the function emphasizes that the mathematical convenience of cut placement aids analysis, but the physical consequences (like the influence of poles) are unchanged. - <strong>Amplitude pole formula and physical interpretation:</strong> The expression <span class="math inline">\mathcal{A} = 1/(m_R^2 - s)</span> and the boxed formula <span class="math inline">m_R^2 = (M_R - i \Gamma_R/2)^2</span> indicate that the complex pole position encodes both the mass <span class="math inline">M_R</span> and width <span class="math inline">\Gamma_R</span> of the resonance, and the concept of “Full Width at Half Maximum” (FWHM) shown on the intensity plot at bottom right links these mathematical quantities directly to physical observables. - <strong>Influence of singularities:</strong> It is noted that “data points are influenced by singularities”—meaning that the experimental measurements on the real axis “feel” the presence of nearby analytic structures (branch cuts and poles) in the complex plane. <strong>Physically</strong>, this figure captures: - How the analytic structure (branch points, cuts, and poles) of the scattering amplitude function in the complex plane directly governs the observable phenomena in scattering experiments (resonance peaks, thresholds, and cusps). - That resonances (unstable particles) are defined as poles of the amplitude in the complex <span class="math inline">s</span> -plane, while branch cuts stem from multi-particle thresholds. - The importance of Riemann sheets and analytic continuation for understanding the full behavior of these complex amplitudes. - The freedom to draw branch cuts where convenient, reflecting the purely mathematical aspect of cuts in representing multi-valuedness, rather than physical discontinuities. - Ultimately, <strong>the physical resonances in scattering data are manifestations of the analytic structure of complex functions associated with the amplitude</strong>—particularly the positions and nature of poles and branch points in the complex plane.
+</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Key Analytic Structure</strong> The scattering amplitude <span class="math inline">\mathcal{A}(s)</span> has a pole at a complex value <span class="math inline">s = s_p</span> where the denominator vanishes: <span class="math display">\mathcal{A}(s) \propto \frac{1}{s - s_p}</span><br>
+This pole defines the resonance. Its location is complex: <span class="math inline">s_p = (M_p - i\Gamma_p/2)^2</span> , where <span class="math inline">M_p</span> is the pole mass and <span class="math inline">\Gamma_p</span> is the pole width.</p>
+</div>
+</div>
+</div>
+<p>I measure my amplitude above threshold. Here is <span class="math inline">(M_1 + M_2)^2</span> . That is where I measure my amplitude. What I measure is influenced by structures near threshold. If there is a resonance that I see in the data, it means down below there is a pole that makes this resonance. A resonance is always a pole. That is actually how we define the particles. Particles are always poles in the amplitude.</p>
+<p>We have conventions for how to define the width and mass of the resonance. They come from the location of the pole. A single pole amplitude has this form: <span class="math inline">\mathcal{A}(s) \propto \frac{1}{s - s_p}</span> . When I say pole I literally mean a zero of the denominator. The location of this pole where the denominator vanishes is <span class="math inline">s_p</span> or <span class="math inline">\bar{m}^2</span> . This is a complex number. The real and imaginary part of this number are called mass parameters of the pole. This is literally the definition.</p>
+<p>We call the mass of the pole the real part of the square of the pole location and the width of the pole twice the square root of the pole, twice imaginary part minus twice imaginary part of the pole location. More precisely, <span class="math inline">s_p = (M_p - i\Gamma_p/2)^2</span> . They are related to the observed mass and width, because this is something you can define experimentally. If you see the signal, it has a peak location and a full width at half maximum. For narrow resonances, <span class="math inline">\Gamma_p</span> is approximately equal to the full width at half maximum and <span class="math inline">M_p</span> is approximately equal to the peak location. That is not the case for broad resonances, but for narrow ones this is the case.</p>
+<p>What is the analytic structure of this function? The analytic structure is simply a pole. There are no branch points, there is nothing else. It is simply one pole.</p>
+<p>A little bit more complex example that we have on an exercise sheet is the relativistic case. Wigner had everything built in. It had a pole in the K-matrix and it had a square root branch point from the phase space. The K-matrix that we discussed last time is the way to incorporate poles and correct analytic structure together. It works for multiple loops. The scattering amplitude is <span class="math inline">\mathcal{A} = K (1 - i \rho K)^{-1}</span> .</p>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Parameterizing Resonances</strong> In practice, we often use specific parameterizations to fit data:</p>
+<ul>
+<li><p>The <strong>Breit-Wigner amplitude</strong> is a common limit: <span class="math display">\mathcal{A}_{\text{BW}}(s) = \frac{g}{s - M^2 + i M \Gamma(s)}</span></p></li>
+<li><p>The more general <strong>K-matrix formalism</strong> ensures unitarity and can handle multiple channels: <span class="math display">\mathcal{A} = K (1 - i \rho K)^{-1}</span><br>
+Here, <span class="math inline">K</span> is a real symmetric matrix, and <span class="math inline">\rho</span> is the phase-space factor.</p></li>
+</ul>
+</div>
+</div>
+</div>
+<p>The last comment on this subject is what we do when we analyze the data. The ultimate goal is to characterize resonances by their mass and width, or the pole location. We come up with the parameterization using a K-matrix or P-vector. Often you can use a simple Breit-Wigner, <span class="math inline">\mathcal{A}_{\text{BW}}(s) = \frac{g}{s - M^2 + i M \Gamma(s)}</span> , which is the limit case of the K-matrix, unless you constrain your amplitude. The amplitude then has an expression that is rather complicated, has many terms, but it is an analytic function.</p>
+<p>You have three parameters that you are just looking at in the data. By fitting this, you fix these parameters by analyzing data and then you explore the analytic expression. You know that it probably has a branch point. You decide either you draw it to the right or to the left. It is up to you. What is important is that everything that you see, all spikes, all peaks, everything that you see in your functions has some origin, and the origin is in the complex plane. If it has a peak, likely there is a pole there.</p>
+</section>
+<section id="thresholds-branch-points-and-poles" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="thresholds-branch-points-and-poles"><span class="header-section-number">6</span> Thresholds, Branch Points, and Poles</h2>
+<p>Another important phenomenon you see in the data is the <strong>cusp</strong>. This is the amplitude squared, <span class="math inline">|A|^2</span> , plotted against the Mandelstam variable <span class="math inline">s</span> . You see a cusp, and that type of singularity is also known as a <strong>branch point</strong>.</p>
+<p>So, do we have our branch points? The first threshold introduces a branch point; every threshold introduces a singularity. For two particles, it’s a branch point. We have already discussed this branch point. If there are more than two particles, combinations like <span class="math inline">\pi\pi</span> , <span class="math inline">KK</span> , or <span class="math inline">\bar{K}K</span> would give a branch point at 1 GeV. Then the amplitude might have a spike. This is an indication that in the complex plane all is fine, but there is a branch point.</p>
+<p>For every branch point, we have to attach a sheet. This is the location of the cut; it’s up to us how to draw it, but it introduces more surfaces. So this is a direction.</p>
+<p>The last thing to realize is about the triangle. We know that at threshold the function has a square root singularity, but thresholds are only opening new surfaces for you. The thresholds are only determining the map of your complex plane. The real singularities, or the strong singularities that make intensity peak, are <strong>poles</strong>.</p>
+<p>A situation where <span class="math inline">|A|^2</span> has this threshold behavior, but then rises very quickly and goes down, indicates that there are some poles nearby. If the poles were underneath, that kind of function would of course peak at that place. In that case, what likely happens is that there is a <strong>bound state</strong>; there is a pole here. If there is a pole on the real axis, it would not show up as a nice resonance-like peaking structure.</p>
+<p>If you think again about the map of routers and the internet: if you have a router here and you sit on the couch, the signal strength will be highest here and then lower farther away. That’s simply how to understand <strong>threshold enhancements</strong>.</p>
+<ul>
+<li><strong>Threshold enhancements</strong> are often indications of poles <em>below</em> threshold. These are bound states.</li>
+<li>There is another phenomenon of poles at the same locations, but underneath another sheet, which is called a <strong>virtual state</strong>. They are not that different from each other.</li>
+<li>A <strong>bound state</strong> can live forever; it is a real state that can travel. It is a particle that does not decay.</li>
+<li>A <strong>virtual state</strong> is one that does not travel and does not decay. This is simply an enhancement.</li>
+</ul>
+<p>This distinction is one of the objectives and discussion points in the field. When you observe a new structure, what kind of structure is it?</p>
+<ul>
+<li>Is it related to a threshold?</li>
+<li>Is it a pole?</li>
+<li>Is it a pole sitting <em>below</em> a certain threshold?</li>
+<li>Or is it a resonance that sits in the complex plane and is not related to a threshold?</li>
+</ul>
+<p>A relation to a threshold indicates a <strong>molecular nature</strong>. Remember, every threshold has two masses that are summed: <span class="math inline">s = (m_1 + m_2)^2</span> . It implies that there is a continuum; there is one particle and a second particle that interact with each other. This is our threshold. If there is a pole that is related to a threshold, likely part of the wave function for this state is of this two-particle type. This is the molecular type. That’s why identifying all thresholds and the complex structure, and where the resonance pole sits, is so important.</p>
+<p>Now, a quick question. What about the other threshold, <span class="math inline">s = (m_1 - m_2)^2</span> ? Yes, it’s a <strong>pseudo-threshold</strong>. It appears artificially in our expressions because of the breakup momentum formula: <span class="math display">p = \frac{\sqrt{[s - (m_1 + m_2)^2][s - (m_1 - m_2)^2]}}{2\sqrt{s}}</span><br>
+If you look at that place, the amplitude is not supposed to have a physical singularity. This tells you that you cannot literally take this expression and continue analytically at the place of this pseudo-threshold. This is a sort of false threshold. We don’t see it in the amplitude.</p>
+<p>This is one indication that you should not take this expression literally and build it into your model. Instead of using just the phase space factor, <span class="math inline">\rho(s) = \frac{1}{8\pi} \frac{2p}{\sqrt{s}}</span> , note that this is actually the imaginary part of the bubble diagram. You see this simply from unitarity, because once you cut this diagram, the imaginary part would be equal to the product of the matrix elements (both equal to one) and the two-body phase space, because you cut two lines. Here is the two-body phase space.</p>
+<p>The pseudo-threshold is present here because you are using only the imaginary part in your amplitude. If you were to take the full bubble diagram, you don’t have a pseudo-threshold there.</p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Key Formulas Recap</strong></p>
+<ul>
+<li><strong>Physical Threshold:</strong> <span class="math inline">s = (m_1 + m_2)^2</span> defines where a new two-particle channel opens, creating a branch point.</li>
+<li><strong>Two-Body Phase Space:</strong> <span class="math inline">\rho(s) = \frac{1}{8\pi} \frac{2p}{\sqrt{s}}</span> is the phase space factor and appears as the imaginary part of the bubble diagram from unitarity.</li>
+<li><strong>Unitarity Relation:</strong> A simplified form is <span class="math inline">\operatorname{Im} \mathcal{M}(s) \propto \rho(s) |\mathcal{M}(s)|^2</span> , linking the amplitude’s imaginary part to the phase space.</li>
+</ul>
+</div>
+</div>
+</div>
+<p>I was thinking we could do the exercise in the lecture today of computing this bubble diagram literally, because it’s really closely related to unitarity.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
