@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="">
+<meta name="dcterms.date" content="2024-01-01">
+
+<title>(2024) Lecture 11</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-597958c53c93a607afca12fd375c57ed.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-7d3a565c23c4d3b0e7c030e96a8964f3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="quarto-light">
+
+<div id="quarto-search-results"></div>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#analytic-mapping-and-lattice-qcd-fundamentals" id="toc-analytic-mapping-and-lattice-qcd-fundamentals" class="nav-link active" data-scroll-target="#analytic-mapping-and-lattice-qcd-fundamentals"><span class="header-section-number">1</span> Analytic Mapping and Lattice QCD Fundamentals</a>
+  <ul class="collapse">
+  <li><a href="#lecture-11-analytic-structure-chiral-dynamics-and-lattice-qcd" id="toc-lecture-11-analytic-structure-chiral-dynamics-and-lattice-qcd" class="nav-link" data-scroll-target="#lecture-11-analytic-structure-chiral-dynamics-and-lattice-qcd"><span class="header-section-number">1.1</span> Lecture 11: Analytic Structure, Chiral Dynamics, and Lattice QCD</a></li>
+  <li><a href="#recap-scattering-amplitudes-and-analytic-structure" id="toc-recap-scattering-amplitudes-and-analytic-structure" class="nav-link" data-scroll-target="#recap-scattering-amplitudes-and-analytic-structure"><span class="header-section-number">1.2</span> <strong>Recap: Scattering Amplitudes and Analytic Structure</strong></a></li>
+  <li><a href="#transition-to-qcd-and-confinement" id="toc-transition-to-qcd-and-confinement" class="nav-link" data-scroll-target="#transition-to-qcd-and-confinement"><span class="header-section-number">1.3</span> <strong>Transition to QCD and Confinement</strong></a></li>
+  </ul></li>
+  <li><a href="#periodic-boundaries-and-spectral-shifts-in-lattice-systems" id="toc-periodic-boundaries-and-spectral-shifts-in-lattice-systems" class="nav-link" data-scroll-target="#periodic-boundaries-and-spectral-shifts-in-lattice-systems"><span class="header-section-number">2</span> Periodic Boundaries and Spectral Shifts in Lattice Systems</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">(2024) Lecture 11</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">January 1, 2024</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><strong>Presenter</strong>: Mikhail Mikhasenko</p>
+<p><strong>Note Taker</strong>: Ilya Segal</p>
+<section id="analytic-mapping-and-lattice-qcd-fundamentals" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="analytic-mapping-and-lattice-qcd-fundamentals"><span class="header-section-number">1</span> Analytic Mapping and Lattice QCD Fundamentals</h2>
+<section id="lecture-11-analytic-structure-chiral-dynamics-and-lattice-qcd" class="level3" data-number="1.1">
+<h3 data-number="1.1" class="anchored" data-anchor-id="lecture-11-analytic-structure-chiral-dynamics-and-lattice-qcd"><span class="header-section-number">1.1</span> Lecture 11: Analytic Structure, Chiral Dynamics, and Lattice QCD</h3>
+</section>
+<section id="recap-scattering-amplitudes-and-analytic-structure" class="level3" data-number="1.2">
+<h3 data-number="1.2" class="anchored" data-anchor-id="recap-scattering-amplitudes-and-analytic-structure"><span class="header-section-number">1.2</span> <strong>Recap: Scattering Amplitudes and Analytic Structure</strong></h3>
+<p>So far, we have discussed the scattering amplitude as a function of the Mandelstam variable <span class="math inline">S</span> , which is defined as: <span class="math display">S = (P_1 + P_2)^2</span><br>
+This variable <span class="math inline">S</span> is the squared center-of-mass energy and is very convenient for describing the partial wave expansion of the amplitude.</p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Mandelstam Variable <span class="math inline">S</span> :</strong> This is the primary Lorentz-invariant variable used to describe the energy in a two-particle scattering process.</p>
+</div>
+</div>
+</div>
+<div id="fig-fg1" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2024-Lecture-11-images/fig1.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: This figure illustrates the relationship between the analytic structure of the scattering amplitude in the Mandelstam variable <span class="math inline">S</span> (the <span class="math inline">S</span> -plane) and the breakup momentum <span class="math inline">K</span> (the <span class="math inline">K</span> -plane), as discussed in the lecture. - The <strong>top left and center panels</strong> show the <span class="math inline">S</span> -plane on two Riemann sheets: - <strong>First Sheet (left)</strong>: The real axis above the two-particle threshold ( <span class="math inline">S &gt; (m_1 + m_2)^2</span> ) represents the physical scattering region. There is a bound state pole (labeled 4) on the real axis below threshold, corresponding to a stable composite particle. The thick, shaded line on the cut indicates the branch cut beginning at threshold. - <strong>Second Sheet (center)</strong>: Important features like resonances (points 1 and 2) appear off the real axis on the second sheet, along with a virtual state (point 3) below threshold. The branch cut is present here as well, representing the analytic continuation through the physical cut. - The <strong>top right panel</strong> displays the corresponding <span class="math inline">K</span> -plane. Here, <span class="math inline">K</span> is the breakup momentum and is related to <span class="math inline">S</span> via <span class="math inline">K = \sqrt{(S - (m_1 - m_2)^2)(S - (m_1 + m_2)^2)}/(2\sqrt{S})</span> . The analytic structure becomes simpler: the two Riemann sheets of the <span class="math inline">S</span> -plane are mapped onto a single <span class="math inline">K</span> -plane. All physical and unphysical regions are now unified, branch cuts become lines on the imaginary <span class="math inline">K</span> axis, and singularities (poles) are points in the complex <span class="math inline">K</span> -plane. - The <strong>bottom portion</strong> of the figure gives the explicit formula for <span class="math inline">k</span> in terms of <span class="math inline">S</span> , and shows how the mapping works: - Different types of singularities—resonances (1,2), virtual state (3), and bound state (4)—are shown as points in the <span class="math inline">K</span> -plane. The real <span class="math inline">K</span> axis corresponds to the physical scattering region ( <span class="math inline">S &gt; (m_1+m_2)^2</span> ), while the imaginary <span class="math inline">K</span> axis represents energies below threshold. <strong>Physical meaning:</strong> This mapping clarifies the analytic structure of scattering amplitudes, especially near threshold. The complicated two-sheet structure of the <span class="math inline">S</span> -plane, featuring square root branch cuts and multiple types of poles (bound states, virtual states, resonances), is transformed into a single, continuous <span class="math inline">K</span> -plane. Here, analytic continuation and the connections between different physical situations (such as how a bound state can evolve into a virtual state or a resonance) become manifest. This is crucial for understanding finite-volume effects in lattice QCD, resonance dynamics, and the analytic properties of strong-interaction amplitudes.
+</figcaption>
+</figure>
+</div>
+<div id="fig-fg2" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2024-Lecture-11-images/fig2.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: This figure represents the analytic structure of the scattering amplitude in the context of two-particle scattering. The horizontal line symbolizes the real axis of the Mandelstam variable <span class="math inline">S</span> (or energy, equivalently), marking the threshold for particle production. The vertical line emanating from the threshold point illustrates the branch cut associated with the square root behavior near the two-particle threshold, which is related to the breakup momentum <span class="math inline">K</span> discussed in the lecture. The diagram indicates the mapping between the <span class="math inline">S</span> -plane and <span class="math inline">K</span> -plane, with the threshold <span class="math inline">S = (m_1 + m_2)^2</span> corresponding to <span class="math inline">K=0</span> , and the physical region lying just above this threshold. The small circles or arcs may denote the movement around the branch point to different Riemann sheets—representing the physical (first sheet) and unphysical (second sheet) regions where resonances, bound states, and virtual states may occur, as discussed when mapping the analytic structure from <span class="math inline">S</span> to <span class="math inline">K</span> .
+</figcaption>
+</figure>
+</div>
+<p>Equivalently, one can consider the <strong>breakup momentum <span class="math inline">K</span> </strong>, which is essentially the magnitude of the momentum each particle carries in the center-of-mass frame. The variable <span class="math inline">K</span> is related to <span class="math inline">S</span> via the kinematic function: <span class="math display">k = \frac{\sqrt{(s - (m_1 - m_2)^2)(s - (m_1 + m_2)^2)}}{2\sqrt{s}}</span><br>
+The analytic structure of the amplitude is often simpler when expressed in terms of <span class="math inline">K</span> , particularly near the reaction threshold.</p>
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Breakup Momentum <span class="math inline">K</span> :</strong> Using <span class="math inline">K</span> instead of <span class="math inline">S</span> can simplify the analytic structure near threshold ( <span class="math inline">S \approx (m_1 + m_2)^2</span> ), as it “unfolds” the square root branch point present in the <span class="math inline">S</span> -plane.</p>
+</div>
+</div>
+</div>
+<p>I would like us to now map the analytic structure from the <span class="math inline">S</span> -plane to the <span class="math inline">K</span> -plane. Specifically, we need to understand how key features—such as resonances on the second Riemann sheet (points 1 and 2), a bound-state pole on the real axis of the first sheet (point 4), and a virtual state on the unphysical sheet below threshold (point 3)—are represented in the <span class="math inline">K</span> -plane.</p>
+<p>The real <span class="math inline">S</span> axis above threshold corresponds to the physical scattering region. When mapped to the <span class="math inline">K</span> -plane, this region remains physical. The threshold <span class="math inline">S = (m_1+m_2)^2</span> maps to <span class="math inline">K=0</span> . Below this threshold, <span class="math inline">S</span> is real but <span class="math inline">K</span> becomes purely imaginary because the expression under the square root becomes negative.</p>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Mapping Riemann Sheets:</strong> The two Riemann sheets in the <span class="math inline">S</span> -plane, related by the sign of the square root <span class="math inline">\sqrt{s - (m_1+m_2)^2}</span> , both map onto the <strong>single</strong> <span class="math inline">K</span> -plane. The plus and minus signs for <span class="math inline">K</span> are already part of the same complex plane. This is why the <span class="math inline">K</span> -plane has a simpler, single-sheeted structure.</p>
+</div>
+</div>
+</div>
+<p>The key insight is that the <span class="math inline">K</span> -plane is just an analytic mapping of the <span class="math inline">S</span> -plane. If you have a function with a square root branch cut in <span class="math inline">S</span> , it has two Riemann sheets. By using the variable <span class="math inline">K</span> , which is essentially that square root, you work on a single sheet. The two-sheeted structure of the <span class="math inline">S</span> -plane can be understood as arising from the squaring operation <span class="math inline">S \propto K^2</span> , which maps the single <span class="math inline">K</span> -plane onto the two sheets of the <span class="math inline">S</span> -plane.</p>
+</section>
+<section id="transition-to-qcd-and-confinement" class="level3" data-number="1.3">
+<h3 data-number="1.3" class="anchored" data-anchor-id="transition-to-qcd-and-confinement"><span class="header-section-number">1.3</span> <strong>Transition to QCD and Confinement</strong></h3>
+<p>Now, let’s transition to discussing Quantum Chromodynamics (QCD) and the phenomenon of confinement. The fundamental degrees of freedom in QCD are quarks and gluons. However, in the low-energy regime we observe composite particles like protons and pions—this is the signature of confinement.</p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Confinement vs.&nbsp;QED:</strong> In Quantum Electrodynamics (QED), the coupling constant is small: <span class="math inline">\alpha_{\text{QED}} = e^2/(4\pi) \approx 1/137</span> . This allows us to use perturbative expansions with Feynman diagrams. In contrast, the QCD coupling <span class="math inline">\alpha_s</span> becomes large at low energies, leading to the non-perturbative, confining regime where quarks and gluons are bound into hadrons.</p>
+</div>
+</div>
+</div>
+<p>At low energies, the appropriate effective theory is <strong>Chiral Perturbation Theory</strong>. This is not an expansion in a small coupling constant, but rather in the small masses and momenta of the particles (pions). The theory is built on the concept of <strong>spontaneous chiral symmetry breaking</strong>.</p>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Spontaneous Symmetry Breaking and the Quark Condensate:</strong> The order parameter for chiral symmetry breaking is the <strong>quark condensate</strong>, denoted <span class="math inline">\langle \bar{q} q \rangle \neq 0</span> .</p>
+</div>
+</div>
+</div>
+<div id="fig-fg3" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2024-Lecture-11-images/fig3.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: This image illustrates the “Mexican hat” or “wine bottle” potential, which is used to depict spontaneous chiral symmetry breaking in QCD. The horizontal axis is labeled <span class="math inline">\sigma</span> , corresponding to the sigma field (magnitude of the quark condensate), while the radial direction along the rim is associated with the <span class="math inline">\pi</span> (pion) fields, representing the Nambu-Goldstone bosons. The minimum of the potential forms a circle in field space, and the vacuum selects a particular point on this circle, breaking the chiral symmetry. Excitations along the rim (fluctuations in the direction of the arrow labeled <span class="math inline">\pi</span> ) correspond to nearly massless pions, due to the flatness (zero curvature) in these directions—these are the Goldstone modes. Fluctuations in the <span class="math inline">\sigma</span> direction (vertical upward arrow) are associated with the <span class="math inline">\sigma</span> particle and correspond to oscillations in the magnitude of the quark condensate, which are massive due to the curvature of the potential at the minimum. This physical picture, directly discussed in your lecture notes, shows how the vacuum expectation value of the quark condensate gives rise to massless Goldstone bosons (pions) and a massive <span class="math inline">\sigma</span> resonance, visualized as classical averaged fields in the Mexican hat potential.
+</figcaption>
+</figure>
+</div>
+<p>This means the QCD vacuum is filled with a non-zero expectation value of quark-antiquark pairs. The potential for the associated sigma field has a “Mexican hat” shape, and the vacuum settles into one point in the minimum, breaking the symmetry.</p>
+<p>In this picture:</p>
+<ul>
+<li>The <strong>sigma ( <span class="math inline">\sigma</span> ) field</strong> corresponds to the fluctuating magnitude of the condensate. Its mass is related to the curvature of the potential at the minimum.</li>
+<li>The <strong>pion ( <span class="math inline">\pi</span> ) fields</strong> correspond to fluctuations along the “flat” directions of the potential (the rim of the Mexican hat). In the ideal chiral limit (massless quarks), these directions have <strong>zero curvature</strong>, meaning the pions are <strong>massless Goldstone bosons</strong>.</li>
+</ul>
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Goldstone Boson Mass Relation:</strong> When small quark masses <span class="math inline">m_q</span> are introduced, they explicitly break the chiral symmetry, giving the pions a small mass. This is described by the Gell-Mann–Oakes–Renner relation: <span class="math display">m_\pi^2 \propto m_q \langle \bar{q} q \rangle</span></p>
+</div>
+</div>
+</div>
+<p>A common point of confusion concerns the proton mass. If pions are (nearly) massless Goldstone bosons, why is the proton heavy? The proton is not a Goldstone boson. Its mass, like that of most hadrons (e.g., the rho meson), is generated dynamically by the confining quark-gluon interactions and is of the order of the QCD scale <span class="math inline">\Lambda_{\text{QCD}} \sim 1</span> GeV. The proton mass remains significant even in the chiral limit where quark masses are zero. ### <strong>Introduction to Lattice QCD</strong></p>
+<div id="fig-fg4" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2024-Lecture-11-images/fig4.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: This figure represents the discretized spacetime “box” used in Lattice QCD calculations. The physical meaning of the image is the finite four-dimensional grid (lattice) on which quark and gluon fields are defined. The spatial extent of the box is labeled <span class="math inline">L</span> , highlighting the periodic boundary conditions that lead to quantization of momenta ( <span class="math inline">p = 2\pi n / L</span> ) for particles within the box. This finite, periodic volume introduces <strong>finite volume effects</strong> and causes the particle spectrum to become discrete, which is crucial for calculating correlations and extracting particle properties (such as masses and phase shifts) from first-principles QCD. The figure visually encodes the main systematic effects discussed in the lecture: finite volume and discretization, both central to interpreting results from lattice QCD.
+</figcaption>
+</figure>
+</div>
+<p>To study QCD from first principles, we use <strong>Lattice QCD</strong>. This is a non-perturbative method where spacetime is discretized onto a four-dimensional grid (a lattice). Typical lattices might have a spatial extent of ~7 fm divided into 50 points per side, and a temporal extent of ~200 points.</p>
+<div class="callout callout-style-simple callout-caution">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Two Main Systematic Errors:</strong></p>
+<ol type="1">
+<li><strong>Finite Volume Effects:</strong> The lattice has a finite size <span class="math inline">L</span> . Physical quantities (like masses) approach their infinite-volume values with corrections that are <strong>exponentially suppressed</strong>: <span class="math inline">\Delta m \propto e^{-m_\pi L}</span> .</li>
+<li><strong>Discretization Errors:</strong> The lattice spacing <span class="math inline">a</span> is finite. Results must be extrapolated to the continuum limit ( <span class="math inline">a \to 0</span> ). Computations are therefore repeated at several lattice spacings to control this error.</li>
+</ol>
+</div>
+</div>
+</div>
+<p>The primary quantities computed on the lattice are <strong>correlation functions</strong>. For an operator <span class="math inline">\mathcal{O}</span> that creates a state of interest (like a pion), the Euclidean correlation function is: <span class="math display">C(t) = \langle 0 | \mathcal{O}(t) \mathcal{O}^\dagger(0) | 0 \rangle</span></p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Wick Rotation:</strong> To make the path integral weight real and positive for efficient Monte Carlo sampling, we work in <strong>Euclidean spacetime</strong>. This replaces the Minkowski action <span class="math inline">e^{iS_M}</span> with <span class="math inline">e^{-S_E}</span> .</p>
+</div>
+</div>
+</div>
+<p>This correlation function has a spectral decomposition: <span class="math display">C(t) = \sum_n |\langle 0 | \mathcal{O} | n \rangle|^2 e^{-E_n t}</span><br>
+At large time separations <span class="math inline">t</span> , the sum is dominated by the ground state (lightest particle with the quantum numbers of <span class="math inline">\mathcal{O}</span> ), because excited states are exponentially suppressed by <span class="math inline">e^{-(E_n - E_0)t}</span> .</p>
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Extracting the Ground State Mass:</strong> To extract the mass <span class="math inline">m = E_0</span> , we compute the <strong>effective mass</strong>: <span class="math display">m_{\text{eff}}(t) = -\ln \left( \frac{C(t+1)}{C(t)} \right)</span><br>
+At sufficiently large <span class="math inline">t</span> , <span class="math inline">m_{\text{eff}}(t)</span> will plateau at the value of the ground state mass.</p>
+</div>
+</div>
+</div>
+<p>The lattice calculation itself involves evaluating a path integral with an astronomically high number of dimensions. This is done via <strong>Monte Carlo integration</strong>, where field configurations are sampled with a probability proportional to <span class="math inline">e^{-S_E}</span> . The correlation functions are then averaged over these sampled “ensembles” of configurations.</p>
+<p>This concludes our introductory overview. Lattice QCD is a vast and technically rich field, but these principles form the foundation for extracting hadron masses, decay constants, and other non-perturbative quantities directly from QCD.</p>
+</section>
+</section>
+<section id="periodic-boundaries-and-spectral-shifts-in-lattice-systems" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="periodic-boundaries-and-spectral-shifts-in-lattice-systems"><span class="header-section-number">2</span> Periodic Boundaries and Spectral Shifts in Lattice Systems</h2>
+<p>We are already over time, but it’s important to note that the homework exercise today is to realize that a particle in a box is slightly different from a particle in this space.</p>
+<p>Due to the periodic boundary condition, you have a quantization of the momentum. If your wave function is <span class="math inline">e^{i p x}</span> , and you require that <span class="math inline">\psi(x + L) = \psi(x)</span> , you immediately realize that <span class="math inline">p L</span> must be <span class="math inline">2 \pi n</span> . In order for this to match, the power of the exponential should be <span class="math inline">n</span> times <span class="math inline">2 \pi i</span> .</p>
+<p>The momentum of particles is quantized and can only take values in discrete steps proportional to <span class="math inline">1/L</span> : <span class="math display">p = \frac{2\pi n}{L}, \quad n \in \mathbb{Z}</span></p>
+<p>Therefore, if you consider a two-particle system, it has a discrete spectrum. This is the periodic boundary condition.</p>
+<p>You can think of two particles moving in a circle of length <span class="math inline">L</span> . The physics of the one-dimensional case of this box computation would be a circle, and the spectrum is discrete. (see <a href="#fig-fg4" class="quarto-xref">Figure&nbsp;4</a>) In that case, you see that I just simply add the energy. The total energy of the system is equal to the sum of the individual particle energies: <span class="math display">E_{\text{total}} = \sum_i E_i</span><br>
+The particles are freely moving; they don’t interact.</p>
+<p>It appears that once they interact, the energy of the system is slightly different. So we can still write the energy as a sum, but then one has to take into account the interaction energy.</p>
+<p>It’s natural that once you compute the spectrum of an interacting system, your spectrum is going to be slightly different. So there is a shift due to interaction. That’s the idea of computing interaction on the lattice and doing spectroscopy.</p>
+<p>You compute the spectrum in the absence of interaction. You compute the spectrum when interactions are present, and you see how different the levels are from each other. That gives you information about the particles, essentially the <strong>phase shift</strong> of the interaction.</p>
+<p>So you compute the two-point correlator: <span class="math display">C(t) = \langle \mathcal{O}(t) \mathcal{O}^\dagger(0) \rangle</span><br>
+You compute such a quantity for two pions.</p>
+<div id="fig-fg5" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2024-Lecture-11-images/fig5.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: This figure represents the behavior of a two-point correlation function, <span class="math inline">\tilde{C}(t)</span> , as a function of Euclidean time <span class="math inline">t</span> in a typical Lattice QCD computation. Physically, this correlator describes the probability amplitude for a quantum state—created by some operator <span class="math inline">\mathcal{O}</span> at time <span class="math inline">0</span> —to be annihilated at a later time <span class="math inline">t</span> , as measured on the lattice. The curve shows an exponentially decaying function, which corresponds to the spectral decomposition: <span class="math display">C(t) = \sum_n |\langle 0 | \mathcal{O} | n \rangle|^2 e^{-E_n t}</span> At large <span class="math inline">t</span> , the dominant contribution comes from the ground state (lowest energy <span class="math inline">E_1</span> ), with excited states ( <span class="math inline">E_2</span> , <span class="math inline">E_3</span> ,…) becoming exponentially suppressed. The vertical lines at discrete time points illustrate that lattice calculations are performed only at certain values of <span class="math inline">t</span> (due to discretization into <span class="math inline">a_t</span> points). This plot emphasizes how, by analyzing the large- <span class="math inline">t</span> behavior (“plateau”) of the effective mass or the correlator, one can extract the energy/mass of the ground state and learn about the excited states in the system. The stacked energies <span class="math inline">E_1, E_2, ...</span> at the right margin represent this discrete spectrum resulting from the finite volume and lattice discretization.
+</figcaption>
+</figure>
+</div>
+<p>You see where it separates at high energy, where it saturates.</p>
+<p>Where this correlator function saturates at a large value of <span class="math inline">t</span> , you have a measurement of this energy level. Now you do the same computation for the interacting system. You find the energy of the interacting system, and then you compare the two to find the shift.</p>
+<p>You relate the shift to the scattering phase shift: <span class="math display">\Delta E \propto \delta(p)</span><br>
+The way to compare with the answer is by using another kind of technique. You always give them in configuration space or real values of the wavefunctions.</p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>In lattice QCD, the two-point correlation function is used to extract energy levels. At large Euclidean time <span class="math inline">t</span> , <span class="math inline">C(t) \sim e^{-E t}</span> , where <span class="math inline">E</span> is the ground-state energy. Comparing interacting and non-interacting spectra yields energy shifts, which are related to the scattering phase shift via finite-volume formulas like the <strong>Lüscher formula</strong>.</p>
+</div>
+</div>
+</div>
+<p>This is the last QCD lecture. I invite you to the full lectures if someone offers them; it’s a fascinating subject. In recent years we have learned so much about the hadron spectrum from the lattice.</p>
+<p>That’s amazing. The treatment on the lattice has the rather isolated setup where there are no experimental effects. You can really do things you cannot imagine doing in an experiment.</p>
+<p>You can scatter two pions. You can still scatter two pions in an experiment, but scattering, for example, a photon on a sigma meson, you can never do in an experiment. On the lattice, this is a problem that people start discussing.</p>
+<p>You have a 2-pion sigma meson; the sigma meson is the <span class="math inline">\pi\pi</span> S-wave. This is one of the tetraquark candidates at low energy that sits in the spectrum that people observe as a broad resonance.</p>
+<p>What you can do is consider <span class="math inline">\pi\pi</span> scattering, insert a current (the photon), and compute the correlation function to construct the object that gives access to such a form factor.</p>
+<p>This in turn gives you access to the spatial distribution of how inside these mesons the quarks and gluons are arranged. One of the exciting frontiers of lattice QCD is understanding what hadrons look like when you insert a current.</p>
+<p>You can see how quarks and gluons are distributed in the space that you can access. You can’t do that with pure QED because there you just have electromagnetic states, and you cannot look at the quarks directly.</p>
+<p>You cannot compute the form factors in that way. You do not have a way to fix low-energy constants. Some people doing Lattice Perturbation Theory (LPT) might object, but I’m not aware of a way of doing that.</p>
+<p>Also, in experiments for these low-lying resonances, you produce them in some process with stable particles. You only have access to the production amplitude, for example, from a pion and a proton target.</p>
+<p>We have a production amplitude and constraints—unitarity constraints that we discussed are much stronger on the scattering amplitude and the elastic amplitudes. Last time I wrote a matrix element on the board in the recap.</p>
+<p>Some of you said, “Oh wait, shouldn’t the imaginary part be positive because of the unitarity relation?” This is about the scattering amplitude. The constraints are very severe. You cannot just take a random number and put it in for the elastic scattering amplitude.</p>
+<p>The amplitude should lie inside the unitary circle. If the scattering is purely elastic, it should be on the circle; it cannot be outside. The imaginary part is always positive: <span class="math display">\text{Im}\, \mathcal{M} \geq 0</span></p>
+<p>On the lattice, you can access this quantity, to which you have a strong constraint. Elastic amplitudes like <span class="math inline">\pi \pi \to \pi \pi</span> , <span class="math inline">\pi \pi \to K K</span> , <span class="math inline">\pi K \to K \pi</span> , <span class="math inline">\eta \pi \to \eta \pi</span> . You can do all this, plus you have a handle on the quark masses.</p>
+<ul>
+<li>You can now make your pions massless.</li>
+<li>You can make them massive.</li>
+<li>What changes significantly is the region where the amplitude is elastic.</li>
+</ul>
+<p>When the pion mass is zero, you have a <span class="math inline">\pi</span> threshold. So the 2-pion, 3-pion, and 5-pion thresholds are at the same point. But once you move and make pions heavy, you realize that a large area opens where the 2-pion threshold is open, but the 3-pion or 4-pion thresholds are not yet open.</p>
+<p>There is a large area of elastic scattering where all your constraints from unitarity give you an almost parameter-free parameterization. Then you can learn a lot of physics.</p>
+<p>Moreover, by moving masses you can make your particles transit in the complex momentum ( <span class="math inline">K</span> ) plane. We started our lecture by seeing where resonances could be located in this <span class="math inline">K</span> plane. There are analytic, smooth connections between different regimes.</p>
+<p>By moving these quark masses, you can make your particle transition from a bound state to a resonance, effectively traveling in the whole plane. That’s something amazing that tells you all these phenomena are closely connected.</p>
+<p>A bound state, a virtual state, a resonance—these are all different manifestations of states in QCD. Depending on the quark mass, one could become another.</p>
+<p>I hope you’re going to like the exercise sheet that was kindly prepared and printed. It was prepared last night and printed. Thank you very much for being here, for coming today, and sorry for being a little bit overtime. Well done.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
