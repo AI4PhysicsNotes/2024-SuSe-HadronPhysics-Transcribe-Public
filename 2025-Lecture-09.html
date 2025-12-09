@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="">
+<meta name="dcterms.date" content="2025-01-01">
+
+<title>(2025) Lecture 9</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-597958c53c93a607afca12fd375c57ed.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-7d3a565c23c4d3b0e7c030e96a8964f3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="quarto-light">
+
+<div id="quarto-search-results"></div>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#analyticity-and-unitarity-in-scattering-amplitudes" id="toc-analyticity-and-unitarity-in-scattering-amplitudes" class="nav-link active" data-scroll-target="#analyticity-and-unitarity-in-scattering-amplitudes"><span class="header-section-number">1</span> Analyticity and Unitarity in Scattering Amplitudes</a>
+  <ul class="collapse">
+  <li><a href="#lecture-9-recap-and-introduction-to-analyticity" id="toc-lecture-9-recap-and-introduction-to-analyticity" class="nav-link" data-scroll-target="#lecture-9-recap-and-introduction-to-analyticity"><span class="header-section-number">1.1</span> Lecture 9: Recap and Introduction to Analyticity</a></li>
+  <li><a href="#unitarity-and-the-optical-theorem" id="toc-unitarity-and-the-optical-theorem" class="nav-link" data-scroll-target="#unitarity-and-the-optical-theorem"><span class="header-section-number">1.2</span> Unitarity and the Optical Theorem</a></li>
+  <li><a href="#introduction-to-analyticity-and-complex-functions" id="toc-introduction-to-analyticity-and-complex-functions" class="nav-link" data-scroll-target="#introduction-to-analyticity-and-complex-functions"><span class="header-section-number">1.3</span> Introduction to Analyticity and Complex Functions</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">(2025) Lecture 9</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">January 1, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><strong>Presenter</strong>: Mikhail Mikhasenko</p>
+<p><strong>Note Taker</strong>: Anna Zimmer</p>
+<section id="analyticity-and-unitarity-in-scattering-amplitudes" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="analyticity-and-unitarity-in-scattering-amplitudes"><span class="header-section-number">1</span> Analyticity and Unitarity in Scattering Amplitudes</h2>
+<section id="lecture-9-recap-and-introduction-to-analyticity" class="level3" data-number="1.1">
+<h3 data-number="1.1" class="anchored" data-anchor-id="lecture-9-recap-and-introduction-to-analyticity"><span class="header-section-number">1.1</span> Lecture 9: Recap and Introduction to Analyticity</h3>
+<p>We start with a recap of the previous lecture.</p>
+<p>Let’s discuss the problems. Who is finished with the first? Who is finished with the second? Good.</p>
+<p>Then, what’s the name of the area of the decay that we have here? The usual representation of the decay in the coordinates of the invariants is called a <strong>Dalitz plot</strong>, but you can use the same type of coordinates for the crossed process, for the scattering process.</p>
+<p>I don’t want you to know the equation by heart, but rather I want to stress that the same equation would be relevant not just for the Dalitz plot and the decay region, but exactly the same equation would determine the border of the scattering process.</p>
+<p>So, can anyone tell me what equation that is? It’s the <strong>Kibble function</strong>. The Kibble function of <span class="math inline">s, t, u</span> is equal to zero. The Kibble function is also known as the Chew function. The Chew function depends on the mass of the decaying particle, the pair mass of the two particles, and then the other one.</p>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>The <strong>Kibble (or Chew) function</strong> defines the boundary of the physical region in scattering or decay processes (e.g., a Dalitz plot) in terms of Mandelstam variables <span class="math inline">s, t, u</span> . It ensures energy-momentum conservation and relates to the condition that the scattering angle cosine is <span class="math inline">\pm 1</span> : <span class="math display">\Phi(s, t, u) = 0</span><br>
+where <span class="math inline">\Phi</span> is often expressed as: <span class="math display">\Phi(s, t, u) = s t u - (m_1^2 s^2 + m_2^2 t^2 + m_3^2 u^2) + \text{(mass-dependent terms)} = 0</span><br>
+This describes the kinematic limits for processes like <span class="math inline">\pi^+ \pi^0 \to \pi^- \pi^0</span> or crossed channels.</p>
+</div>
+</div>
+</div>
+<p>If you want to plot the area, you just look for the solutions in the plane. It’s easy to derive this from scattering or for the decay. The fact that it describes both appears as the fact that you change one particle to the other side does not change the kinematics.</p>
+<div id="fig-fg11" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg11-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2025-Lecture-09-images/fig11.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg11-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: This figure represents the <strong>Mandelstam plane</strong>, a plot with axes labeled by the Mandelstam variables <span class="math inline">s</span> and <span class="math inline">t</span> , which describe the kinematics of scattering processes. The “physical region” indicated in the diagram corresponds to the subset of allowed values of <span class="math inline">s</span> and <span class="math inline">t</span> where the scattering or decay process can physically occur, determined by kinematic constraints (such as the Kibble or Chew function discussed in the lecture). Outside this region, the amplitude can still be defined by analytic continuation, but does not correspond to direct physical processes—these are the unshaded or shaded regions outside the “physical region” boundary. The diagram illustrates how analytic properties of scattering amplitudes extend beyond the physical region into the complex Mandelstam plane, a concept central to the analytic approach to scattering theory described in the lecture.
+</figcaption>
+</figure>
+</div>
+<p>This condition comes from considering the scattering angle and requiring that the scattering angle is either plus one or minus one; this determines the border. The meaning of this scattering angle changes a little bit once you go from the scattering domain to the decay domain.</p>
+<p>You see it in the rest frame of two particles. Let’s say it’s the <span class="math inline">s</span> channel: here’s particle 1, here’s particle 2, 1, 2, 3. And then this is the <span class="math inline">\cos \theta</span> . The condition for the border is determined by the equations that <span class="math inline">\cos \theta</span> is equal to plus one or minus one. It’s the same for the decay and for the scattering.</p>
+<p>It’s just the direction of this arrow would change. For the decay, two particles collide and the system that you consider is the center of mass for the whole system. For the scattering, that’s for the scattering. For the decay, it’s just a subsystem of the final state.</p>
+<p>The way how you derive it: you write the cosine in terms of the invariants and then you set <span class="math inline">\cos \theta = 1</span> and you arrive at this same equation.</p>
+<p>I’m surprised you need scattering. I suppose most of the variables are defined to be for momentum and then you use energy conservation, and I guess you can somehow introduce cusp functions. The channel function is just a breakup momentum.</p>
+<p>I would consider this once you derive it, once you can consider this as common knowledge. It’s easy to remember. You have derived this one or you look it up in the Bickerstaff-Cajandji book.</p>
+<p>The recipe is you start with the scattering kinematics, and that’s unique because you know that the ranges of the physical region correspond to the cosine going to being plus one or minus one.</p>
+<p>But let’s not get distracted because there’s a lot of material here. The one thing to realize is that once you put this into Mathematica and ask what are the regions in the two-dimensional plane where this equation is satisfied, you don’t get only this region; you also get the other regions that correspond to the cross process.</p>
+<p>Here I’m asking: what are the other physical processes that are connected by crossing and draw the regions? The answer here is that the regions will lie somewhere here, and these lines where also the Kibble function is zero are the borders of the other process.</p>
+<p>You understand them by looking at your original kinematics. So if this is zero going to 1, 2, 3, that process. Then here we define <span class="math inline">s</span> so that process would correspond to—so the variable <span class="math inline">s</span> that you have here for any place inside of the Dalitz plot is a positive quantity and you want to keep it positive.</p>
+<p>For this area it’s bigger but it’s also positive, while the other one becomes negative. For this area these two particles are still in the physical space, so they are in either initial state or final state, while the other one you get crossed to the other side.</p>
+<p>So it’s a <span class="math inline">0, \bar{3}</span> scattering into the 1, 2. The process that we talk about when we discuss this domain is <span class="math inline">\pi^+ \pi^0</span> , so <span class="math inline">\pi^+ \pi^0</span> scattered with the other particle that was a <span class="math inline">\pi^-</span> . Then we put it to there by <span class="math inline">+ \omega \pi^0</span> and we talk about this domain, but in terms of <span class="math inline">\pi^- \pi^0</span> and <span class="math inline">\omega</span> , what is 1, 2 and 3?</p>
+<p>One has to be always consistent, so this zero depends on the axis. So the <span class="math inline">\omega \pi</span> . I call this one, this is two, this is three. So the process here would be zero. But why? For the first process we moved <span class="math inline">\pi^-</span> to the other side, not <span class="math inline">\pi^0</span> .</p>
+<p>Because one axis is <span class="math inline">\omega \pi^0</span> and another one is <span class="math inline">\pi^- \pi^0</span> , right? <span class="math inline">\pi^-</span> . No, it’s diagonal. No, it’s <span class="math inline">\pi^- \pi^0</span> . So that one. So then if there are two <span class="math inline">\pi^0</span> s, shouldn’t we move <span class="math inline">\pi^0</span> to the other side? So I argue that way.</p>
+<p>I have here <span class="math inline">\omega</span> and I have here <span class="math inline">\pi^0</span> . That’s what my channel represents. That’s a threshold for their channel. That’s up to the threshold for that channel. And that will be production threshold for the initial state. I always have this <span class="math inline">s</span> increasing along this axis.</p>
+<p>Are these asymptotes of the locus, like a hyperbola? I’m asking because like in the original Mandelstam paper, they’re not. They try to go over it. I never understood. No, going over is fine. But the question is, do they approach them at the infinite energy region and that’s where you can neglect the masses? I think so.</p>
+<p>Asymptotes means not here and they can cross. But when the energy gets high, do you approach this line? I think so. Well, is it that line or is it another line? The close one is that it’s slightly offset by the threshold.</p>
+<p>Let me draw it here, what scattering process we are dealing with. So the zero scatters with the particle. So 1, 2, 1 3, 2 3. So the energy gets positive. And here is the zero with one bar. So the process here is the <span class="math inline">\pi^+ \pi^0 \omega</span> goes to <span class="math inline">\pi^- \pi^0</span> .</p>
+<p>Then you see that for the particle that you cross to the other side becomes an antiparticle. But for <span class="math inline">\omega</span> and for <span class="math inline">\pi^0</span> , particle and antiparticle is the same. Things get a bit more tricky once you take into account that particles have spin.</p>
+<p>So in fact I should have written here lambda because <span class="math inline">\omega</span> has spin and then helicities; they also have peculiar relations with respect to the crossing. We don’t talk about that. So for the kinematical considerations it’s enough. You can think of particles as scalars.</p>
+<p>To really relate the amplitudes with helicity indices requires more work. Draw regions, indicate process. I think we did draw roughly the regions together. More accurately you have to open a computational notebook, otherwise it’s intuitive.</p>
+</section>
+<section id="unitarity-and-the-optical-theorem" class="level3" data-number="1.2">
+<h3 data-number="1.2" class="anchored" data-anchor-id="unitarity-and-the-optical-theorem"><span class="header-section-number">1.2</span> Unitarity and the Optical Theorem</h3>
+<p>So, questions here quickly. The second unitarity equations. So we consider an elastic scattering process. Shall we break this down. What does it mean? What is <span class="math inline">s</span> and <span class="math inline">t</span> ? Maybe you guys follow what is <span class="math inline">A</span> ? What <span class="math inline">s</span> for the same? <span class="math inline">A</span> is scattering amplitude, <span class="math inline">s</span> is Mandelstam <span class="math inline">s</span> .</p>
+<p>What does it refer to? Like how do you compute this variable? It’s like <span class="math inline">p_0, p_1</span> . And <span class="math inline">t</span> is a Mandelstam variable related to the difference of these two momenta and then scattering amplitude. I’m saying process, but in fact it’s a scattering amplitude.</p>
+<p>What does elastic mean here? I don’t think we discussed elastic, but maybe you heard of this. Energy is conserved. Energy is always conserved. That we’re doing the same check. Exactly. So the initial state and the final state are the same. That’s what I mean.</p>
+<p>Actually here it’s somewhat slang and the elastic is used in a different context. But when we talk about elastic process we usually say initial state is the same as the final state. Elastic scattering.</p>
+<p>Formulate <span class="math inline">A</span> using explicit dependence. Formulate partial wave in unitarity and optical theorem. Can you tell me in the unitarity equation for <span class="math inline">A</span> , maybe can you help me? Is he like what should I relate.</p>
+<p>I mean, what is it about? I don’t know how you’ve so far introduced amplitudes. I always see that this normalized with regards to that energy which introduces a phase space factor. So I would say it’s like <span class="math inline">1 + i \rho A</span> . So I want to write the unitarity equation for <span class="math inline">A</span> .</p>
+<p>So how unitarity constrains my <span class="math inline">A</span> and in fact what you… When you do this consideration, as you say follow, you get constrained to the imaginary part of <span class="math inline">A</span> and then the imaginary part of <span class="math inline">A</span> is related to other amplitudes.</p>
+<p>So maybe I draw it diagrammatically first and then you help me to get the equations. But this is the optical theorem, right? No, that’s the unitarity equation for <span class="math inline">A</span> . What is different between <span class="math inline">t, t'</span> and <span class="math inline">t''</span> ? Very good.</p>
+<p>We are discussing the elastic process. And so <span class="math inline">s</span> and <span class="math inline">t</span> are defined. Here you have. Imaginary part of amplitude is related to the amplitude squared in the elastic region. This is the unitarity equation one has to integrate over all intermediate states when you contract one amplitude to another.</p>
+<p>But since it’s elastic, it’s the same state that is present here. So the same particles, the only difference. Well, the integration actually takes into account that the configuration of the particles in the intermediate states could be different.</p>
+<p>If I consider this process of initial state scattering to the final state, let’s say it, the intermediate state that appears in unitarity equations. Well, essentially what the unitarity equation says, is that you have to sum over all intermediate states that appear for the elastic region.</p>
+<p>It’s just different configurations. There is only one type of particle states that are present. And therefore integration over phase space includes only different orientations of the particles. They are the same particles.</p>
+<p>Once you go to high energy, there will be many more intermediate states that come into the unitarity equations. But to clarify, maybe this drawing can clarify the configuration. What we have to integrate over.</p>
+<p>We fix the initial state, we fix the final state and then the <span class="math inline">t</span> is the scattering angle between the initial and final state. We say they form a plane. This sits in the x-z plane. So here is the x axis, here is the z axis here in the plane.</p>
+<p>The only variable that we have, <span class="math inline">t</span> is connected to the scattering angle between initial and final state. So this angle <span class="math inline">\theta</span> describes is connected to the <span class="math inline">t</span> . What appears in the intermediate state is the arbitrary configuration in the space of the vector of the intermediate state here.</p>
+<p>I call here the <span class="math inline">p_1, p_2</span> . Here is the <span class="math inline">q_3 q_4</span> and here is the <span class="math inline">p_3 p_4</span> . So here there are two scattering processes. First from <span class="math inline">p</span> to <span class="math inline">q</span> and then from <span class="math inline">q</span> to <span class="math inline">p</span> again. So we have to integrate, so the plane is fixed, the <span class="math inline">q</span> points somewhere in the space and we have to integrate over all possible configurations.</p>
+<p>That’s why the <span class="math inline">t'</span> and <span class="math inline">t''</span> come in. And then this is the unitarity equation for the full amplitude. Great simplification. Can you write phase space explicitly? Because <span class="math inline">t'</span> and <span class="math inline">t''</span> are, what they should be in the phase space.</p>
+<p>It’s a regular two-body phase space. We have to integrate over all possible configurations of one vector and a second vector. But there is a constraint making them back to back to each other. Writing this in terms of the <span class="math inline">t'</span> and <span class="math inline">t''</span> is really a highly non-trivial task.</p>
+<p>The way to proceed actually to get our regular unitarity that we know and like—where amplitude is related to itself—requires partial wave expansion. So the next step would be to take each amplitude <span class="math inline">A</span> here, <span class="math inline">A</span> here and <span class="math inline">A</span> there and expand them into partial waves.</p>
+<p>The partial waves would involve connection between scattering angle in the <span class="math inline">t</span> or <span class="math inline">t''</span> . And then we use properties of the angular momentum of the angular functions to get rid of this integral essentially.</p>
+<p>And then once we do, this equation becomes very simple. Instead of the integral of the phase space, we have simply a phase space factor. It’s not an integral, it’s just an energy-dependent factor. So this <span class="math inline">\rho</span> is <span class="math inline">\frac{1}{16 \pi^2} \times \frac{p}{2\sqrt{s}}</span> .</p>
+<p>The <span class="math inline">p</span> is the breakup momentum in the system. It’s a function of the energy. And then here <span class="math inline">A</span> appears. That’s the unitarity equation for the partial wave. Partial wave amplitude has only one dependence on <span class="math inline">s</span> and things drastically simplify. There is no <span class="math inline">t</span> any longer.</p>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>The <strong>unitarity equation</strong> for the elastic scattering amplitude <span class="math inline">A(s, t)</span> ensures probability conservation. It relates the imaginary part of the amplitude to an integral over intermediate states: <span class="math display">2 \, \text{Im} \, A(s, t) = \int d\Phi_2 \, A^*(s, t') \, A(s, t'')</span><br>
+where <span class="math inline">d\Phi_2</span> is the two-body phase space, and <span class="math inline">t', t''</span> are momentum transfers for intermediate configurations. This is a manifestation of the optical theorem.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Expanding the amplitude in partial waves <span class="math inline">a_\ell(s)</span> simplifies the unitarity condition, as different angular momenta decouple: <span class="math display">\text{Im} \, a_\ell(s) = \rho(s) \, |a_\ell(s)|^2</span><br>
+where <span class="math inline">\rho(s) = \frac{1}{16\pi^2} \frac{q}{2\sqrt{s}}</span> is the phase space factor, and <span class="math inline">q</span> is the breakup momentum. This implies <span class="math inline">a_\ell(s)</span> can be written as <span class="math inline">a_\ell(s) = \frac{1}{\rho(s)} \sin \delta_\ell(s) e^{i\delta_\ell(s)}</span> , with <span class="math inline">\delta_\ell(s)</span> the phase shift.</p>
+</div>
+</div>
+</div>
+<p>Another thing I wanted to point out coming back here is that you see that there is a <span class="math inline">t'</span> and <span class="math inline">t''</span> . The reason they are different is because <span class="math inline">t'</span> is measured for the vector <span class="math inline">q</span> with respect to the <span class="math inline">p_1</span> , right? So it’s an amplitude computed between <span class="math inline">q_3</span> and <span class="math inline">p_1</span> .</p>
+<p>So this vector and that vector and then <span class="math inline">q_3</span> . So <span class="math inline">t''</span> is computed between <span class="math inline">q_3</span> and <span class="math inline">p_3</span> . So it’s an intermediate and final state. So either you take these vectors or you take these vectors or these vectors and that’s what makes the variables different.</p>
+<p>There is one limit when these variables are becoming the same. When you have not just elastic scattering, but forward scattering. When you have kinematics, you collide the particles and then they just pass through. It’s forward scattering.</p>
+<p>In that case <span class="math inline">A</span> is equal to… Sorry, <span class="math inline">t</span> is equal to 0. And in that case, if <span class="math inline">p_1</span> is equal to <span class="math inline">p_4</span> , <span class="math inline">t</span> and <span class="math inline">t'</span> becomes the same, <span class="math inline">t'</span> and <span class="math inline">t''</span> become the same. There are two values for <span class="math inline">t</span> , <span class="math inline">t</span> equal to 0 and <span class="math inline">t</span> equal to its maximum.</p>
+<p>Another negative value. So for this type of scattering, forward and backwards. For the backward, the <span class="math inline">t</span> equals to its maximum value, it’s negative. Exactly. But for the forward scattering. You’re right, but it’s a different limit.</p>
+<p>So now I want to discuss the forward limit. In the forward limit, the point is that this amplitude becomes the same as this amplitude. And we can write squared amplitude already right here.</p>
+<p>My question was, isn’t it the same for backward as well? No, I don’t think it’s. No, it’s not. The reason is like forward we have to consider this is a <span class="math inline">p_1</span> and then this is the <span class="math inline">q</span> and this is the <span class="math inline">p_3</span> and this is the <span class="math inline">q</span> , right? That’s a form <span class="math inline">q_3</span> , that’s forward scattering.</p>
+<p>And that’s why what makes them, what makes this angle to be the same as this angle? If you consider backward scattering, so <span class="math inline">p_3</span> will be in that direction, <span class="math inline">q_3</span> will be this and the angle is this. So it’s different.</p>
+<p>You can identify <span class="math inline">t'</span> and <span class="math inline">t''</span> to be the same in a backward scattering? So finishing this I wanted to give the final expression for the optical theorem that comes from this is the following. It’s, but this, nothing else but the full cross section.</p>
+<p>And here you have an optical theorem. Amplitude for the forward scattering is equal to the flux times the full cross section. It’s important to acknowledge the fact here that it’s valid in the elastic region.</p>
+<p>Forward scattering is really important because that’s when you identify that’s how you get rid of one of the variables. The cross section is a function of <span class="math inline">s</span> only. The total cross section doesn’t know anything about angular dependence.</p>
+<p>So you integrate this and this happens once you identify two amplitudes to be the same and take into account the phase space. It’s from unitarity. So this is the first condition wrote down and what comes down.</p>
+<p>So the dependence on the cross section and the flux is the optical theorem for you. So what is what here? I can understand you correctly. The first is unitarity. The second is optical theorem. The second is optical theorem.</p>
+<p>I’m not sure we discussed this last time, but optical theorem comes in quantum mechanics. That’s mentioned. And here is this analog of this related to the transition matrix element amplitude we have in the scattering process.</p>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>The <strong>Optical Theorem</strong> is a special case of unitarity for forward scattering ( <span class="math inline">t = 0</span> ), relating the imaginary part of the forward amplitude to the total cross section <span class="math inline">\sigma_{\text{tot}}(s)</span> : <span class="math display">\text{Im} \, A(s, t=0) = 2 \sqrt{s} \, q \, \sigma_{\text{tot}}(s)</span><br>
+or equivalently, <span class="math display">\sigma_{\text{tot}}(s) = \frac{1}{2q\sqrt{s}} \, \text{Im} \, A(s, t=0)</span><br>
+This connects the amplitude’s analytic properties to measurable cross sections.</p>
+</div>
+</div>
+</div>
+<p>Recap. Well, since it’s recap, let’s recap once again the recap. The unitarity for <span class="math inline">A</span> is this. And then explicitly all variables are mentioned. The cosine is the function that defines the <span class="math inline">t</span> .</p>
+<p>So you can either write the <span class="math inline">t</span> as a function of the <span class="math inline">s</span> and cosine or cosine as a function of <span class="math inline">s</span> and <span class="math inline">t</span> . So two of them are independent. So here is the equation for the unitarity.</p>
+<p>Partial wave unitarity comes when you get rid of the angle dependence. And then <span class="math inline">L</span> here is the summation index. It’s partial waves. And then what is interesting here worth noticing is that partial waves don’t talk to each other.</p>
+<p>Only <span class="math inline">L</span> that is on the left appears on the right. So these properties of the polynomials help you to identify the terms. And <span class="math inline">a_L</span> is a function of <span class="math inline">s</span> only, there is no <span class="math inline">t</span> any longer.</p>
+<p>Finally, optical theorem. Optical theorem is the relation of the amplitude for the forward scattering to the total cross section. Good. And then when we discussed optical theorem last time. So that’s good that we discussed today. It’s important to relate the concepts to each other.</p>
+</section>
+<section id="introduction-to-analyticity-and-complex-functions" class="level3" data-number="1.3">
+<h3 data-number="1.3" class="anchored" data-anchor-id="introduction-to-analyticity-and-complex-functions"><span class="header-section-number">1.3</span> Introduction to Analyticity and Complex Functions</h3>
+<p>Today in the lecture we will go through analytic functions and see how scattering matrix principles are constrained by their properties. How scattering amplitudes are constrained by the properties of the scattering matrix, such as its analyticity and particularly crossing symmetry.</p>
+<p>To consider this first part, I want to make the first part a little bit more mathematical, discussing analytic functions and real analytic functions. I will say a few words about analytic continuation at the end.</p>
+<p>In hadron physics we deal with interactions that are not driven by simple Lagrangian or Hamiltonian dynamics. We cannot proceed unless we restrict ourselves to specific near-threshold interactions. We cannot derive the scattering amplitudes from first principles.</p>
+<div id="fig-fg13" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg13-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2025-Lecture-09-images/fig13.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg13-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: This figure represents a schematic energy spectrum of hadronic states, specifically showing the quantum mechanical levels of a two-particle system (for instance, a pion–pion or pion–strange meson system) as a function of a variable labeled “lqq,” which likely refers to quantum numbers or a kinematic variable relevant in the study of hadron physics. The vertical axis is energy ( <span class="math inline">E</span> ), while the horizontal axis shows “lqq”. The diagram features boxes corresponding to different energy levels and angular momentum (orbital) quantum numbers: - “1S” and “2S” indicate the first and second S-wave (zero orbital angular momentum) states, while - “1P” indicates the first P-wave (one unit of orbital angular momentum) state. In the context of the lecture, which discusses scattering theory, analytic properties, and resonance spectroscopy, this diagram illustrates how physical resonances (hadronic states) appear as discrete levels in energy for two-particle systems, categorized by their angular momentum. The variables within the boxes—such as <span class="math inline">a_0, a_2, b_4</span> —represent scattering parameters or possibly resonance parameters like scattering lengths (for different partial waves). This reflects how amplitude analysis and the study of analytic functions in the S-matrix formalism enable the extraction and classification of resonance parameters from the energy dependence of scattering amplitudes. The structure of the levels ties into discussions of analytic properties, poles (resonances), and real analyticity as these physical states correspond to singularities (poles) in the complex energy plane.
+</figcaption>
+</figure>
+</div>
+<p>Instead, a different approach is used. We study the general principles of scattering theory. And it appears to be constraining enough to derive the general form of the amplitude, having parametric freedom in certain places that can be fixed from the data.</p>
+<p>Therefore, the approach that is utilized in hadron physics to describe the scattering of hadrons, especially from experimental data, is to use general parameterizations of the amplitudes that satisfy unitarity and analyticity.</p>
+<p>Rarely crossing symmetry, very rarely can be included. And then we fix the parametric freedom and get the scattering amplitude as a mathematical expression and study its properties.</p>
+<p>While studying the properties of the scattering amplitude, we get properties of the objects that we describe, the resonances. So that’s the program of hadron spectroscopy: amplitude building and using scattering theory tools to have access to the properties of the objects.</p>
+<p>We study resonances and analyticity is one of the constraints; unitarity is another one, especially telling that the function is constrained in different regions of the variables.</p>
+<p>If a function depends on <span class="math inline">s</span> and <span class="math inline">t</span> , this function must extend, since its validity goes beyond the physical region, and extra constraints come in. And then we consider the amplitude as a complex function of its variables. The scattering amplitude.</p>
+<p>While observables are all real values. The cross section is a real number. The amplitude itself is a complex number and it has a value; it has an absolute value and it has a phase. And this in turn gives important information about the scattering process.</p>
+<p>Let me start with the fact that as we saw in the problem we discussed there, the amplitude was a function of the two variables <span class="math inline">s</span> and <span class="math inline">t</span> .</p>
+<div id="fig-fg10" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2025-Lecture-09-images/fig10.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: This figure illustrates the analytic structure and kinematic channels of the pion-pion ( <span class="math inline">\pi\pi</span> ) scattering amplitude as a function of the Mandelstam variable <span class="math inline">s</span> : - <strong>Left Side (Complex <span class="math inline">s</span> -Plane):</strong> The horizontal axis represents the real part of the complex Mandelstam variable <span class="math inline">s</span> , and the vertical axis is the imaginary part. The amplitude <span class="math inline">A_{\pi\pi \rightarrow \pi\pi,\rho}(s)</span> is analytic except along cuts, which are indicated on the real axis. The solid blue line starting at the threshold <span class="math inline">4m_\pi^2</span> (where <span class="math inline">m_\pi</span> is the pion mass) represents the <strong>s-channel unitarity cut</strong>, i.e., the physical region where two-pion production becomes kinematically allowed. This is the beginning of the non-analytic region associated with the opening of the <span class="math inline">\pi\pi</span> channel. The blue region labeled “u-channel” on the negative real axis represents the unitarity cut for the crossed channel, corresponding to different intermediate states due to crossing symmetry. The label “cardinal sheet” refers to the principal (physical) Riemann sheet of the analytic amplitude. The threshold marks the onset of physical two-pion states, relating to where the imaginary part of the amplitude (discontinuity) develops, as discussed under analytic and real analytic functions and their branch cuts. - <strong>Right Side (Feynman Diagram):</strong> This shows a generic <span class="math inline">2 \to 2</span> pion scattering process: two incoming pions ( <span class="math inline">\pi_1, \pi_2</span> ) scatter via an interaction blob into two outgoing pions ( <span class="math inline">\pi_3, \pi_4</span> ). The Mandelstam variable <span class="math inline">s</span> labels the center-of-mass energy squared of the incoming channel, and <span class="math inline">t</span> labels the momentum transfer. This diagram is used to define the physical process that the complex <span class="math inline">s</span> -plane structure corresponds to, connecting the analytic properties of the amplitude to physical scattering. <strong>Physical meaning in context:</strong> This figure visually connects the analytic properties (cuts, thresholds, Riemann sheets) of the scattering amplitude in the complex <span class="math inline">s</span> -plane with their physical origins in pion-pion scattering. Concepts like the unitarity cut, threshold, and crossing symmetry (s-channel and u-channel) are depicted, illustrating how non-analyticities (branch cuts) in the amplitude arise from opening physical channels—key points in the study of analyticity and scattering theory as discussed in the lecture.
+</figcaption>
+</figure>
+</div>
+<p>So it’s a multivariable function.</p>
+<div id="fig-fg14" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg14-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2025-Lecture-09-images/fig14.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg14-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: This figure illustrates the physical manifestations of different singularities of the scattering amplitude <span class="math inline">a</span> in the complex energy plane, as discussed in the context of analyticity and amplitude analysis. The horizontal axis represents <span class="math inline">\sqrt{s}</span> , where <span class="math inline">s</span> is a Mandelstam variable related to the squared center-of-mass energy, while the vertical axis shows <span class="math inline">|a|^2</span> , the squared modulus of the scattering amplitude, which is related to observable probabilities or cross sections. - The <strong>top panel</strong> depicts a <strong>resonance</strong>, characterized by a pronounced peak in <span class="math inline">|a|^2</span> above the threshold. The resonance is associated with a pole in the complex <span class="math inline">s</span> -plane near the real axis. The curve rises sharply, reaches a maximum (the resonance energy or mass), then falls off. The threshold marks the lowest energy where the reaction can occur. The nearby <strong>branch point</strong> is also indicated, signifying the opening of the physical channel (threshold), and the analytic continuation shows how singularities influence the physical amplitude. - The <strong>middle panel</strong> shows a <strong>bound state</strong>, which appears as a divergence in <span class="math inline">|a|^2</span> below the threshold, indicated by a pole on the real axis below threshold. This manifests as a sharp feature (essentially a “delta function”-like effect in the cross-section) signaling a stable particle or state that cannot decay into the considered channel. - The <strong>bottom panel</strong> demonstrates a <strong>virtual state</strong>, which manifests as a cusp or an enhancement right at the threshold, but there is no true resonance peak or bound state pole on the physical sheet. The cusp reflects the analytic structure of the amplitude due to a pole on the unphysical sheet, which doesn’t correspond to a particle but still impacts the observable cross-section near threshold. These cases illustrate how underlying singularities in the analytic structure of the scattering amplitude (poles and branch points in the complex <span class="math inline">s</span> -plane) physically manifest as observable features—resonances, bound state divergences, or threshold cusps—in experimental scattering data. The analytic continuation concept is critical for understanding how such “hidden” (complex-plane) singularities influence real, measurable quantities due to the analyticity and real analytic properties of the amplitude.
+</figcaption>
+</figure>
+</div>
+<p>It’s a complex multivariable function.</p>
+<p>It appears that we will get some benefits and new insights into the amplitude if we consider not just the amplitude to be a complex function, but also for it to be a function of complex variables.</p>
+<p>So what we are going to do as the sort of imaginary and theoretical part of the theoretical exploration is we will make our <span class="math inline">s</span> variable—a physical thing, something that used to be physical—we will make it complex.</p>
+<p>We’ll see what the properties of the amplitude are when we make the energy of the scattering complex, or when we make the angle of the scattering a complex number, not 30 degrees, but 30 degrees plus i or something. And we’ll see it gives us new insight.</p>
+<p>So what is important for us is not just that the amplitude is a complex function, but also that it’s an analytic function of its arguments everywhere in the complex plane, except a few minor segments.</p>
+<p>Before going into the details, I would like to discuss analytic functions. So here is the mathematical part of the lecture. I would like to remind you what analytic functions are, or the other way we call them is holomorphic.</p>
+<p>Holomorphic just simply means analytic. Holomorphic or analytic functions are functions that match their Taylor series in the vicinity of every point of the complex plane or of the domain.</p>
+<p>If you look in mathematics books, it says an analytic function is one that is complex differentiable everywhere in the complex plane. But we will consider a domain of analyticity. The function doesn’t have to be analytic everywhere in the complex plane, but in certain domains.</p>
+<p>And then in that domain, complex differentiability simply means that it’s equal to its Taylor series. So there is a polynomial series that approximates the function exactly at every point of the plane or in the vicinity of every point.</p>
+<p>I could remind you what the Taylor series means, but you probably remember that expression with the derivatives—essentially a polynomial. That’s the point. And the series can go to infinity, but the function must match it.</p>
+<p>Let’s discuss examples. Clearly, if required, the function matches the polynomial series. Any polynomial function is analytic in <span class="math inline">\mathbb{C}</span> . Polynomials are excellent functions analytic everywhere, but also the boring functions like the square root of <span class="math inline">z</span> , log <span class="math inline">z</span> , are functions that are analytic everywhere except on a line segment.</p>
+<p>This line segment is the cut. For every cut we have two branch points. Sometimes one of the branch points is at infinity, another in the finite range. And then the line that connects the branch points is called the branch cut.</p>
+<div id="fig-fg1" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2025-Lecture-09-images/fig1.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: This figure illustrates the analytic structure of a function in the complex <span class="math inline">z</span> -plane, focusing on the concept of branch points and branch cuts. The point at the origin is labeled as a <strong>branch point</strong>, from which a <strong>branch cut</strong> extends along the negative real axis. This reflects the analytic properties of functions like <span class="math inline">\sqrt{z}</span> , which are analytic everywhere except along the branch cut that starts at the branch point (here, <span class="math inline">z=0</span> ). Physically, in the context of the lecture, this is used to describe how complex functions (such as scattering amplitudes) behave: they are analytic in most of the complex plane, but exhibit non-analytic behavior (discontinuity) when crossing the branch cut. At points just above or below the cut (e.g., <span class="math inline">f(-1 + i\epsilon)</span> vs.&nbsp;<span class="math inline">f(-1 - i\epsilon)</span> ), the function takes different values, highlighting the multivalued nature due to the branch point. This property is crucial for understanding the analytic structure of scattering amplitudes, where cuts and branch points correspond to physical thresholds and the opening of new channels, and dictate how analytic continuation—and hence the exploration of resonances, unitarity, and causality—are treated in quantum field theory.
+</figcaption>
+</figure>
+</div>
+<p>Let me draw a few examples convenient to discuss. The <span class="math inline">z</span> plane, where along the x axis we have the real part of <span class="math inline">z</span> and the y axis is the imaginary part of <span class="math inline">z</span> . And then for every point I can plot, it is the real part plus i times the imaginary part.</p>
+<p>So what I can do using this plot is to indicate where a function is analytic and where it is not. There are regions of non-analyticity. For example, for the function square root of <span class="math inline">z</span> , there is a branch point at zero and a branch cut going to the left, indicating that if I compute the function on one side and on the other side I get different values.</p>
+<p>If I compute the square root of <span class="math inline">z</span> at minus 1 plus a little bit, I get plus i.</p>
+<div id="fig-fg2" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2025-Lecture-09-images/fig2.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: This figure illustrates the analytic structure of the function <span class="math inline">f(z) = \sqrt{z - 1}</span> in the complex <span class="math inline">z</span> -plane. The horizontal axis represents the real part of <span class="math inline">z</span> ( <span class="math inline">\mathrm{Re}(z)</span> ), and the vertical axis represents the imaginary part ( <span class="math inline">\mathrm{Im}(z)</span> ). The blue wavy line begins at the point <span class="math inline">z = 1</span> on the real axis and extends to <span class="math inline">-\infty</span> along the real axis. This line marks the <strong>branch cut</strong> of the function, which connects the <strong>branch point</strong> at <span class="math inline">z = 1</span> to <span class="math inline">-\infty</span> . Physically, this illustrates the concept that functions like <span class="math inline">\sqrt{z-1}</span> , which appear in the description of scattering amplitudes, are analytic everywhere in the complex plane except along their branch cut. The presence of the branch point and associated cut means that the value of the function is discontinuous across the cut, reflecting the multi-sheeted nature of such complex functions. This analytic structure is fundamental in understanding how scattering amplitudes behave as functions of complex variables, especially when we discuss analytic continuation and the physical meaning of singularities and discontinuities in scattering theory.
+</figcaption>
+</figure>
+</div>
+<p>And if I compute it from that side, I get minus i.</p>
+<div id="fig-fg4" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2025-Lecture-09-images/fig4.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7: This figure represents the analytic structure of the complex function <span class="math inline">f(z) = \sqrt{z-1} - \sqrt{z}</span> in the complex <span class="math inline">z</span> -plane. The real axis is labeled as “Re” and the imaginary axis as “Im.” The blue wavy line running from <span class="math inline">z = 0</span> to <span class="math inline">z = 1</span> along the real axis indicates a <strong>branch cut</strong>—a region where the function is non-analytic due to the multivalued nature of the square root functions. Physically, this branch cut corresponds to a discontinuity in the value of the function as you cross from just above to just below the real axis, reflecting a non-trivial analytic structure. In the context of scattering amplitudes discussed in the lecture, such branch cuts represent kinematic thresholds—boundaries in the complex energy plane (or similar Mandelstam variables) where new physical processes (such as particle production) can occur and the amplitude develops an imaginary part. This analytic feature is essential for understanding the behavior of scattering amplitudes, as the existence and location of branch cuts (and their associated <strong>branch points</strong> at <span class="math inline">z = 0</span> and <span class="math inline">z = 1</span> ) dictate where the amplitude ceases to be real and begins to have a discontinuity—properties crucial for unitarity and the correct physical description of processes.
+</figcaption>
+</figure>
+</div>
+<p>It doesn’t happen on that side. If I compute the function at 1 plus i epsilon, I get one. And if I compute it from that direction, like 1 minus i epsilon, I also get one.</p>
+<div id="fig-fg3" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2025-Lecture-09-images/fig3.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8: This figure represents the analytic structure of the function <span class="math inline">f(z) = \sqrt{-z}</span> in the complex <span class="math inline">z</span> -plane. The plot shows a branch cut along the positive real axis, indicating the line segment where the function is non-analytic. This cut starts at the branch point at the origin ( <span class="math inline">z=0</span> ) and extends to <span class="math inline">+\infty</span> along the real axis. Physically, in the context of scattering amplitudes, such branch cuts correspond to the thresholds for physical processes, such as the onset of particle production or scattering channels, and the branch point represents where a new channel opens. The function is analytic everywhere else except along this branch cut. The existence of the branch cut is a manifestation of the multi-valuedness of the function (here, due to the square root), and the discontinuity across the cut reflects the appearance of an imaginary part in the amplitude, related to inelastic processes and the unitarity cut in scattering theory. This structure illustrates how analytic functions in physics, such as scattering amplitudes, are characterized by their branch points and cuts in the complex plane, which encode essential physical information about reaction thresholds and continuations to different Riemann sheets.
+</figcaption>
+</figure>
+</div>
+<p>But on that side there is a discontinuity of the function.</p>
+<p>Just to demonstrate that the branch cut doesn’t have to be at 0. For the function square root of <span class="math inline">z - 1</span> , the branch cut starts at 1 and goes backwards. For the function square root of <span class="math inline">-z</span> , the branch cut starts at 0 and goes upwards.</p>
+<div id="fig-fg5" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2025-Lecture-09-images/fig5.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;9: This figure illustrates the analytic structure of the function <span class="math inline">f(z) = \sqrt{z^2 - 1}</span> in the complex <span class="math inline">z</span> -plane, specifically highlighting the locations of branch cuts and branch points. The real and imaginary axes are labeled as “Re” and “Im,” and the function is annotated in the upper right. Physically, in the context of the lecture, this type of function models the analytic structure one encounters in scattering amplitudes, where the square root reflects the opening of new channels or thresholds. The blue wavy lines represent branch cuts: one running from <span class="math inline">-\infty</span> to <span class="math inline">-1</span> along the real axis, and another from <span class="math inline">1</span> to <span class="math inline">+\infty</span> , indicating non-analytic (discontinuous) behavior of <span class="math inline">f(z)</span> across these intervals. The endpoints <span class="math inline">z = -1</span> and <span class="math inline">z = 1</span> are branch points, signaling the start of the branch cuts and corresponding to physical thresholds (like the onset of new particle production in scattering). This structure encodes how the amplitude (or any analytic function with such a branch cut structure) changes its value when moving around these points in the complex plane, which is crucial for understanding phenomena like the development of an imaginary part (related to physical processes becoming possible) and the analytic continuation to different Riemann sheets—core ideas in the analytic S-matrix approach discussed in the lecture.
+</figcaption>
+</figure>
+</div>
+<p>For the function square root of <span class="math inline">(z - 1) z</span> , the branch cut starts at zero and goes to 1. For the function square root of <span class="math inline">z^2 - 1</span> , the branch cut is more complicated. It starts at 1, goes to 0, then to plus infinity, comes back from minus infinity to minus 1.</p>
+<p>The last example is the log of <span class="math inline">z</span> . And in that case the branch cut starts at zero and goes backwards. Another class of functions and another type of singularities that is present is the poles. Poles are the functions that have poles.</p>
+<p>They are isolated singularities where a function approaches infinity, complex infinity. So let’s say <span class="math inline">\frac{1}{z - 1 + i}</span> . So when <span class="math inline">z</span> is equal to <span class="math inline">1 - i</span> , we approach the pole of the function, the function is undefined, it’s complex infinity.</p>
+<div id="fig-fg6" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2025-Lecture-09-images/fig6.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;10: This figure illustrates the concept of a <strong>pole</strong> in the complex plane, which is a type of isolated singularity important in the analytic structure of scattering amplitudes. The function shown, <span class="math inline">f(z) = \frac{1}{z - 1 + i}</span> , has a pole at <span class="math inline">z = 1 - i</span> , indicated by the black dot on the diagram at that coordinate in the complex <span class="math inline">z</span> -plane (with the real and imaginary axes labeled). Physically, such poles in the scattering amplitude correspond to resonances or bound states in hadron physics; the amplitude becomes very large near the pole, signaling a strong “signal” or enhancement in the cross section. In the analogy provided in the lecture, the pole is like an “internet router”—the amplitude is strongest (largest) when you are closest to the pole in the complex plane, reflecting elevated probability or cross section values in experiments. Thus, this figure emphasizes how the analytic properties—specifically the location and nature of poles—encode key physical information about the behavior of scattering processes and resonances.
+</figcaption>
+</figure>
+</div>
+<div id="fig-fg12" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg12-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2025-Lecture-09-images/fig12.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg12-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11: This figure illustrates the <strong>analytic continuation</strong> of the scattering amplitude <span class="math inline">A_{\pi\pi \to \pi\pi, \rho}^{II}(s)</span> onto the <strong>second Riemann sheet</strong> in the complex <span class="math inline">s</span> -plane. In the context of this lecture, the figure shows that: - The <strong>real axis</strong> (horizontal line) represents physical values of the Mandelstam variable <span class="math inline">s</span> , with the thick segment (branch cut) indicating the area where the imaginary part of the amplitude appears due to the opening of physical thresholds (e.g., two-pion production). - The <strong>branch cut</strong> is associated with the onset of physical intermediate states (unitarity cut), and analytic continuation through this cut leads to a different “sheet” of the function—a key concept in complex analysis of scattering amplitudes. - The <strong>second Riemann sheet</strong> (notated with <span class="math inline">II</span> ) is accessed by analytically continuing the amplitude through the branch cut—this is where <strong>resonance poles</strong> appear. These poles correspond to unstable particles (resonances), which manifest as enhancements (“bumps”) in the cross section in physical processes. - The figure also marks a <strong>virtual state</strong> (star on the imaginary axis left of threshold), representing a singularity not associated with a physical particle, but with a non-observable state. - Thus, the physical meaning is that the analytic structure of the scattering amplitude in the complex <span class="math inline">s</span> -plane, especially the nature and position of its singularities (poles and cuts), encodes information about observable resonances and virtual states in hadron spectroscopy. This is a direct consequence of considering the amplitude as a <strong>real analytic function</strong> and performing analytic continuation. In the context of the lecture, the figure emphasizes how complex analysis and the concept of Riemann sheets are essential for understanding the nature of resonances in scattering theory.
+</figcaption>
+</figure>
+</div>
+<p>Once we go away from this point, the amplitude value is really high. So what I want to say is that that pole value would feel this pole value even being away from it. But we will see that all of the features that we see in the scattering, like bumps or cusps, they are related to the singularities in the complex plane.</p>
+<p>The branch points are just doors to other domains of analyticity. The poles are something that makes the strength of the amplitude. I was thinking of this nice example of the complex multi-floor house that has many Internet routers and you have a router.</p>
+<p>So the poles are your routers. And if you want to have a strong Internet, you better sit next to the router and that provides you a signal. And if you are as close as you are to this Internet router, the better Internet you have, it’s better. It’s a higher value of the absolute value of the amplitude you have.</p>
+<p>If you measure the process and you see that this cross section is large, something must be driving this large cross section. And it’s probably a pole somewhere in the complex plane.</p>
+<p>Interesting things about the cuts. One thing to consider is that the cuts are the doors to other domains, every cut. You probably have heard the saying that branch points are fixed, but the way you draw the cuts is arbitrary, up to you.</p>
+<p>That—I don’t like this way of putting it—but this is another way of saying that the way we draw the cut, you can draw the cut differently by extending the domain of the function. The way I’d like to think of this is that for every cut, you can come up with a different function.</p>
+<p>What I mean is the following. You deal with a function that has a branch point at zero and the cuts towards the left. And the claim is, you can come up with a different function, call it <span class="math inline">F_2</span> , that’s defined in the complex plane such that it’s analytically continuous.</p>
+<p>The function above the cut analytically continues into the domain of analyticity. So I can come up with a different function. In that case, it’s <span class="math inline">\sqrt{z}</span> . But I can tell you the recipe to come up with this <span class="math inline">F_2</span> such that if you join the function, you take this domain and that domain, so there are no cuts any longer.</p>
+<p>The branch point is still there, but the function is analytic in this domain. If I take this and that, one can see this as the way to go beneath the cut. So I can analytically continue the function down. And that’s the perspective that I offer.</p>
+<p>That’s, I think, the easiest way to wrap your head around it. There is a function defined everywhere in <span class="math inline">\mathbb{C}</span> except a finite number of points, except a finite number of segments. And you can compute. If I ask you to compute a value, you can compute the value everywhere.</p>
+<p>The cut locations are fixed; we don’t touch them. We just come up with a different function <span class="math inline">F_2</span> that’s, again, for starters, it has nothing to do with <span class="math inline">F</span> . It’s again another function that I define everywhere except a finite number of segments.</p>
+<p>But what makes us consider them together? The one analytically continues the other. Maybe it’s a bit late, but if you come back to this function, square root of <span class="math inline">z - 1</span> , minus <span class="math inline">s</span> . Shouldn’t there be two branches? Two branch cuts. One from 1 to infinity, from 0 to infinity.</p>
+<p>If it’s a minus, you’re right. But if it’s multiply, then that’s. And well, we can go back here. For all of the functions with the cuts, we can discuss what is <span class="math inline">F_2</span> , what function makes analytic continuation.</p>
+<p>For that function we can discuss that. For any of them, you can ask me a question. What happens? What function would analytically continue the domain of analysis in that direction? And I know the answer. Just a minus sign here or here or there.</p>
+<p>For any way you approach the cut, there should be analytic continuation. The other notion, the other way people talk about that is the Riemann sheets. Instead of saying that there is one function, second function, third function, people say there is just one function that is multivalued and it has a value on different Riemann sheets.</p>
+<p>But that’s the same as saying that there is <span class="math inline">F_1, F_2, F_3</span> . So <span class="math inline">F_1</span> is the value of the function on the first Riemann sheet. <span class="math inline">F_2</span> is the value of the function on the second Riemann sheet. And so on.</p>
+<p>So then, can you come up with the analytic continuation? That guy, that guy and that guy. But you tell me what <span class="math inline">F_2</span> would look like here if I want to analytically continue. And then here, so quickly, what is <span class="math inline">F_2</span> ? What is <span class="math inline">F_3</span> here? No, minus, simply so, when you have a square root, the other sheet or the other branch is simply minus, and you convince yourself by computing <span class="math inline">+\epsilon</span> .</p>
+<p>So <span class="math inline">F_1</span> at <span class="math inline">+\epsilon</span> and <span class="math inline">F_3</span> at <span class="math inline">+\epsilon</span> should be equal to each other if the continuation is correct. And then here, what is <span class="math inline">F_2</span> ? No, it can’t be the same, because I can demonstrate that with log.</p>
+<p>So here, <span class="math inline">F_1</span> is the log of minus 1 plus i epsilon is equal to <span class="math inline">\pi i</span> . And on that side, log of minus 1 minus epsilon is equal to minus <span class="math inline">\pi i</span> .</p>
+<div id="fig-fg7" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2025-Lecture-09-images/fig7.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12: This figure illustrates the concept of real analyticity for complex functions in the context of scattering amplitudes. The shaded segment along the real axis represents the domain where the function <span class="math inline">f(z)</span> is real. When moving away from this segment into the complex plane (either above or below the real axis), the function develops an imaginary part: moving upward in the imaginary direction leads to a positive imaginary component, while moving downward results in a negative imaginary part. This behavior reflects the Schwarz reflection principle, which states that the value of the function at a point and its complex conjugate are related such that <span class="math inline">f(z^*) = f^*(z)</span> . Physically, this underpins the analytic properties of scattering amplitudes and ensures that discontinuities across cuts in the complex plane are purely imaginary, as discussed in the lecture.
+</figcaption>
+</figure>
+</div>
+<p>No, it’s a plus.</p>
+<div id="fig-fg9" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2025-Lecture-09-images/fig9.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;13: This figure illustrates the analytic structure of a scattering amplitude as a function of the Mandelstam variable <span class="math inline">s</span> in the complex <span class="math inline">s</span> -plane. The real axis represents physically allowed values of <span class="math inline">s</span> , while the imaginary axis corresponds to complex (unphysical) values. The branch points at <span class="math inline">(m_1 - m_2)^2</span> and <span class="math inline">(m_1 + m_2)^2</span> indicate the kinematic thresholds for particle production in the scattering process, i.e., the minimal and maximal invariant mass squared for producing particles of masses <span class="math inline">m_1</span> and <span class="math inline">m_2</span> . Between and beyond these points, the amplitude develops branch cuts (shown as wavy lines), which represent the discontinuities or non-analytic regions associated with the opening of physical channels. The blue annotation that “the branch cuts cancel out → function is continuous” emphasizes that, across certain regions (possibly when combining different contributions or sheets), the discontinuity due to the branch cuts can be made to vanish, resulting in a function that is continuous in the complex plane except at the branch points themselves. This reflects the property of <strong>real analyticity</strong> discussed in the lecture: the amplitude is analytic everywhere except along the physical cuts, and across the real axis (below threshold) it is continuous and real. The Schwarz reflection principle guarantees that the amplitude behaves smoothly except precisely along and across these branch cuts. Physically, this diagram encodes how the analytic properties of the scattering amplitude connect to physical thresholds, and how analyticity and unitarity restrict the possible singularities (cuts and poles) in the complex <span class="math inline">s</span> -plane. The function is analytic except for these branch cuts associated with the creation of intermediate states or particles.
+</figcaption>
+</figure>
+</div>
+<p>So, and the way to see that is we computed this already and it’s minus <span class="math inline">\pi i</span> .</p>
+<div id="fig-fg15" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg15-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2025-Lecture-09-images/fig15.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg15-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;14: This figure illustrates the analytic structure of the scattering amplitude <span class="math inline">A(s)</span> in the complex <span class="math inline">s</span> -plane, demonstrating the physical meaning of different singularities and cuts as discussed in the lecture. The real axis <span class="math inline">\mathrm{Re}(s)</span> corresponds to physical kinematic values, with a branch cut (in magenta) starting at the threshold <span class="math inline">s &gt; s_{\text{th}}</span> , representing the onset of physical scattering (the unitarity or right-hand cut). The blue and green lines indicate different analytic domains or “sheets” of the amplitude. The orange point above the real axis on the imaginary axis denotes a “bound state” pole, corresponding to a stable particle below threshold on the physical sheet. The orange point below the real axis, labeled “virtual state,” represents a pole associated with an unstable or non-physical state (on the unphysical sheet). The orange crosses on the lower half-plane, labeled “resonances,” represent poles associated with resonant states—unstable particles that manifest themselves as peaks in the cross section—on the second Riemann sheet ( <span class="math inline">A^{II}(s)</span> ). The diagram also demonstrates how the amplitude <span class="math inline">A(s)</span> behaves in various regions, showing the importance of analytic continuation and Riemann sheets: the physical amplitude is found on the first (physical) sheet, while resonances and virtual states manifest as poles on other sheets, accessible via analytic continuation across the cut. This structure encodes the complex analytic (and real analytic) nature of the scattering amplitude, the linkage of poles to observable physical phenomena, and the impact of branch cuts associated with multi-particle thresholds.
+</figcaption>
+</figure>
+</div>
+<p>If we add <span class="math inline">2 \pi i</span> , we will have the value on that side, so <span class="math inline">F_2</span> equals to plus <span class="math inline">\pi i</span> , so it will analytically continue. Why is it Sheet 3 right away? Oh, it’s not Sheet 3, it’s just labeling. You can call it 2 or. Well, it’s up to me.</p>
+<p>I can call the function going in that direction. So the other function, <span class="math inline">F_3</span> , that is analytically continued would be the one that analytically continues from below, and the one from above is <span class="math inline">F_2</span> . It’s just my notation.</p>
+<p>An interesting aspect that is closely related to the scattering amplitude is the concept of real analyticity. One can take the words “real analytic” literally: a real analytic function that is analytic and real.</p>
+<p>I would like to extend this definition and call the functions real analytic if it has a segment along the real axis, then it’s real. Like this is again my z-plane and then this is my x-axis where the <span class="math inline">z</span> is real.</p>
+<p>I compute the <span class="math inline">F</span> of the real value and I get a real value for the function. It turns out that once you have this function, it has very peculiar properties. It satisfies the reflection principle. The function is real on this segment.</p>
+<p>Analyticity is sort of a special type of continuity of the function. This implies that once you start going away from the real axis, the imaginary part must appear. So the function cannot stay real once you go away from the real axis and it will start appearing in the opposite direction.</p>
+<p>If an imaginary part develops in the positive direction once you go up from the real axis, it must go to the opposite negative direction if you go down from the real axis. That’s essentially what the Schwarz reflection principle tells you.</p>
+<p>The imaginary part of that point is going to be opposite to the imaginary part of the symmetric point. You simply, oh, here you see that I put a star. Star means complex conjugation, which means flip the imaginary part.</p>
+<p>We started by discussing the function that just has a similar single segment of real values. And then if you follow that consideration and do analytic continuation, you realize that the only way for this function to stop being real on the real axis is to get a branch point.</p>
+<p>The function along the real axis is real on a segment and only becomes non‑real once you introduce the branch point. The only way for the function to get an imaginary part is to get the branch point and the cut, for exactly the same reason you have a segment where the function is real here and the imaginary part develops to the.</p>
+<div id="fig-fg8" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2025-Lecture-09-images/fig8.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;15: This figure illustrates the analytic structure of the scattering amplitude <span class="math inline">A(s, t)</span> as a function of the complex Mandelstam variable <span class="math inline">s</span> , for fixed <span class="math inline">t</span> . The horizontal axis represents the real part of <span class="math inline">s</span> ( <span class="math inline">\text{Re}(s)</span> ), while the vertical axis is the imaginary part ( <span class="math inline">\text{Im}(s)</span> ). The depicted thick lines along the real axis correspond to the <strong>branch cuts</strong> associated with physical thresholds for two different scattering channels: - The <strong>threshold for the s-channel</strong> is marked on the positive real- <span class="math inline">s</span> axis. This is where physical s-channel particle production can occur and corresponds to the opening of the unitarity cut. - The <strong>fixed threshold for the u-channel</strong> is indicated on the negative real- <span class="math inline">s</span> axis. This relates to the production threshold for the crossed (u-channel) process. The region between the cuts, on the real <span class="math inline">s</span> -axis below threshold, is labeled “real analytic,” indicating that the amplitude is real and analytic in that segment — in accordance with the property of real analytic functions discussed in the lecture. The cuts themselves signify the locations where the amplitude develops an imaginary part (discontinuity), corresponding to physical particle production (unitarity cuts). This diagram physically encodes how the analytic (and specifically, real analytic) properties of the scattering amplitude in the complex <span class="math inline">s</span> -plane reflect causality and unitarity, with thresholds demarcating the transition points where new physical channels become accessible. These analytic properties are crucial for defining the amplitude’s behavior and for connecting it to physical observables.
+</figcaption>
+</figure>
+</div>
+<p>So imaginary part on that side is positive, imaginary part on that side is negative. That’s why the discontinuity around the cut is going to be twice the imaginary part, because they are developing in opposite directions.</p>
+<p>So now that’s the second lowest threshold opening. Any segment along the real axis would be like closed or open. I’m thinking about. I mean, analytic functions always have an open domain. They have to. As soon as you have an open domain, you can always come.</p>
+<p>So from A to B you can always come with the closed domain. So A minus i epsilon is included. My point is that as soon as you include one of those edges, you cannot put some kind of small circle around it and then say it’s still smooth.</p>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Scattering amplitudes are <strong>real analytic functions</strong> of <span class="math inline">s</span> (for fixed <span class="math inline">t</span> ), meaning they satisfy the <strong>Schwarz reflection principle</strong>. This is tied to causality and implies specific symmetry in the complex <span class="math inline">s</span> -plane: <span class="math display">A(s^*, t) = A^*(s, t)</span><br>
+This property ensures that the amplitude is real along the real axis below thresholds and that discontinuities across cuts are purely imaginary, e.g., <span class="math inline">\text{Disc} \, A(s, t) = 2i \, \text{Im} \, A(s, t)</span> along the unitarity cut.</p>
+</div>
+</div>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

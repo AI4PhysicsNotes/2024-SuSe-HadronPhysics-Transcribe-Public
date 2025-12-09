@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="">
+<meta name="dcterms.date" content="2025-01-01">
+
+<title>(2025) Lecture 7</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-597958c53c93a607afca12fd375c57ed.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-7d3a565c23c4d3b0e7c030e96a8964f3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="quarto-light">
+
+<div id="quarto-search-results"></div>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#helicity-formalism-and-problem-review" id="toc-helicity-formalism-and-problem-review" class="nav-link active" data-scroll-target="#helicity-formalism-and-problem-review"><span class="header-section-number">1</span> Helicity Formalism and Problem Review</a>
+  <ul class="collapse">
+  <li><a href="#review-of-previous-problems" id="toc-review-of-previous-problems" class="nav-link" data-scroll-target="#review-of-previous-problems"><span class="header-section-number">1.1</span> 📝 Review of Previous Problems</a></li>
+  <li><a href="#discussion-of-problem-1" id="toc-discussion-of-problem-1" class="nav-link" data-scroll-target="#discussion-of-problem-1"><span class="header-section-number">1.2</span> ✅ Discussion of Problem 1</a></li>
+  </ul></li>
+  <li><a href="#parity-angular-momentum-and-isospin-in-weak-decays" id="toc-parity-angular-momentum-and-isospin-in-weak-decays" class="nav-link" data-scroll-target="#parity-angular-momentum-and-isospin-in-weak-decays"><span class="header-section-number">2</span> Parity, Angular Momentum, and Isospin in Weak Decays</a></li>
+  <li><a href="#isospin-operators-and-rotations-in-su2" id="toc-isospin-operators-and-rotations-in-su2" class="nav-link" data-scroll-target="#isospin-operators-and-rotations-in-su2"><span class="header-section-number">3</span> Isospin Operators and Rotations in SU(2)</a></li>
+  <li><a href="#two-body-decay-matrix-elements-and-cascade-decay-construction" id="toc-two-body-decay-matrix-elements-and-cascade-decay-construction" class="nav-link" data-scroll-target="#two-body-decay-matrix-elements-and-cascade-decay-construction"><span class="header-section-number">4</span> Two-Body Decay Matrix Elements and Cascade Decay Construction</a></li>
+  <li><a href="#helicity-formalism-and-partial-wave-expansion-in-resonance-decays" id="toc-helicity-formalism-and-partial-wave-expansion-in-resonance-decays" class="nav-link" data-scroll-target="#helicity-formalism-and-partial-wave-expansion-in-resonance-decays"><span class="header-section-number">5</span> Helicity Formalism and Partial Wave Expansion in Resonance Decays</a>
+  <ul class="collapse">
+  <li><a href="#caveat-1-helicity-quantization-axes" id="toc-caveat-1-helicity-quantization-axes" class="nav-link" data-scroll-target="#caveat-1-helicity-quantization-axes"><span class="header-section-number">5.1</span> <strong>Caveat 1: Helicity Quantization Axes</strong></a></li>
+  <li><a href="#caveat-2-factorization-of-vertices" id="toc-caveat-2-factorization-of-vertices" class="nav-link" data-scroll-target="#caveat-2-factorization-of-vertices"><span class="header-section-number">5.2</span> <strong>Caveat 2: Factorization of Vertices</strong></a></li>
+  <li><a href="#angular-dependence-and-the-scalar-case" id="toc-angular-dependence-and-the-scalar-case" class="nav-link" data-scroll-target="#angular-dependence-and-the-scalar-case"><span class="header-section-number">5.3</span> <strong>Angular Dependence and the Scalar Case</strong></a></li>
+  <li><a href="#interpretation-and-practical-truncation" id="toc-interpretation-and-practical-truncation" class="nav-link" data-scroll-target="#interpretation-and-practical-truncation"><span class="header-section-number">5.4</span> <strong>Interpretation and Practical Truncation</strong></a></li>
+  </ul></li>
+  <li><a href="#resonance-models-in-multi-channel-decays" id="toc-resonance-models-in-multi-channel-decays" class="nav-link" data-scroll-target="#resonance-models-in-multi-channel-decays"><span class="header-section-number">6</span> Resonance Models in Multi-Channel Decays</a></li>
+  <li><a href="#modeling-dalitz-plots-with-helicity-formalism" id="toc-modeling-dalitz-plots-with-helicity-formalism" class="nav-link" data-scroll-target="#modeling-dalitz-plots-with-helicity-formalism"><span class="header-section-number">7</span> Modeling Dalitz Plots with Helicity Formalism</a></li>
+  <li><a href="#preview-of-advanced-parameterizations" id="toc-preview-of-advanced-parameterizations" class="nav-link" data-scroll-target="#preview-of-advanced-parameterizations"><span class="header-section-number">8</span> Preview of Advanced Parameterizations</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">(2025) Lecture 7</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">January 1, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><strong>Presenter</strong>: Mikhail Mikhasenko</p>
+<p><strong>Note Taker</strong>: Anna Zimmer</p>
+<section id="helicity-formalism-and-problem-review" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="helicity-formalism-and-problem-review"><span class="header-section-number">1</span> Helicity Formalism and Problem Review</h2>
+<p>Welcome everyone. Today we have the seventh meeting on hadron physics. In today’s lecture we will expand on the previous lecture on helicity formalism. We will discuss <strong>partial wave expansion</strong>, which you have already seen in homework, and also move toward general principles discussing the <strong>Mandelstam plane</strong> and <strong>analyticity</strong>.</p>
+<div id="fig-fg10" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2025-Lecture-07-images/fig10.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: This figure represents the expansion of the scattering amplitude <span class="math inline">\mathcal{M}</span> in terms of multiple contributions, illustrating both the mathematical series and the corresponding Feynman diagrams. The first term shows a direct transition from the initial ( <span class="math inline">i</span> ) to final ( <span class="math inline">f</span> ) state, corresponding to the simplest process, often called the “Born term.” The subsequent terms add the effects of intermediate states: the second term represents a process with a single intermediate state (“rescattering” or “loop” correction), and the third term includes two such intermediate interactions, and so on. Physically, this expansion encodes the idea that the total amplitude for a scattering process includes not only the direct transition but also all possible pathways involving one or more intermediate states, corresponding to multiple exchanges or rescatterings. This iterative structure is central to the understanding of <strong>unitarity</strong> and <strong>analyticity</strong> in quantum scattering theory, as each term contributes to the full, analytic amplitude in line with principles discussed in the lecture, such as the requirements imposed by the Lorentz group and the Mandelstam plane. The formalism shown here lays the groundwork for constructing amplitudes that respect these fundamental symmetries, providing the basis for resonance models and partial wave expansions described throughout the lecture.
+</figcaption>
+</figure>
+</div>
+<div id="fig-fg12" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg12-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2025-Lecture-07-images/fig12.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg12-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: This figure is an Argand diagram illustrating the complex scattering amplitude <span class="math inline">f</span> in partial wave analysis, key to understanding resonance behavior in hadron physics. The horizontal axis represents the real part of <span class="math inline">f</span> , Re( <span class="math inline">f</span> ), and the vertical axis represents the imaginary part, Im( <span class="math inline">f</span> ). The black circle, centered at <span class="math inline">(0,\,1/2)</span> with radius <span class="math inline">1/2</span> , reflects the unitarity condition for the scattering amplitude in a single partial wave. This means that as energy varies, the amplitude <span class="math inline">f</span> must remain within or on this circle, encoding probability conservation. The arc <span class="math inline">\mathcal{R}</span> drawn in red shows how the amplitude associated with a resonance moves through the complex plane as a function of energy. As the energy sweeps through the resonance, the point representing <span class="math inline">f</span> traces out this characteristic arc. In the context of the lecture, this geometric representation is fundamental for visualizing how resonances manifest in scattering: the circular trajectory and its tangency to the unitarity circle demonstrate crucial connections between analytic properties, unitarity, and resonance phenomenology, all of which underpin the Breit-Wigner parameterizations and the more advanced analytic models discussed.
+</figcaption>
+</figure>
+</div>
+<section id="review-of-previous-problems" class="level3" data-number="1.1">
+<h3 data-number="1.1" class="anchored" data-anchor-id="review-of-previous-problems"><span class="header-section-number">1.1</span> 📝 Review of Previous Problems</h3>
+<p>At the beginning, as always, I invite you to look at the problems to recap the material from the previous lecture. I will give you five minutes to think about them, and then we will discuss together.</p>
+<p>We will go through them in this order: Problem 1, then Problem 3, and finally Problem 2.</p>
+<p><strong>Problem 1:</strong> Which interaction is responsible for the <span class="math inline">\Lambda</span> decay to a proton and a pion? Is isospin conserved? Is parity conserved? Is angular momentum conserved?</p>
+<p><strong>Problem 3:</strong> This involves analyzing a Dalitz plot to determine which decay is occurring.</p>
+<p><strong>Problem 2:</strong> This demonstrates that the rotations we discussed are part of the same <span class="math inline">SU(2)</span> group structure as isospin rotations. The question asks: what is the 30‑degree isospin rotation about the <span class="math inline">Y</span> axis, and how does it act on the <span class="math inline">\Delta^+</span> state?</p>
+</section>
+<section id="discussion-of-problem-1" class="level3" data-number="1.2">
+<h3 data-number="1.2" class="anchored" data-anchor-id="discussion-of-problem-1"><span class="header-section-number">1.2</span> ✅ Discussion of Problem 1</h3>
+<p>Let’s start with the first problem. The weak interaction is responsible for the decay <span class="math inline">\Lambda \to p + \pi^-</span> .</p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>The decay involves a flavor change: the <span class="math inline">\Lambda</span> contains a strange quark ( <span class="math inline">s</span> ), while the final-state proton and pion contain only up ( <span class="math inline">u</span> ) and down ( <span class="math inline">d</span> ) quarks. In the Standard Model, <strong>flavor-changing processes are mediated exclusively by the weak interaction</strong>. For ground-state baryons, most decays are indeed weak.</p>
+</div>
+</div>
+</div>
+<p>The reasoning is correct: a flavor change always indicates the weak interaction. For ground state baryons, they all decay weakly—or at least, most of them do. ### 🔧 Relevant Theoretical Context</p>
+<div id="fig-fg6" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2025-Lecture-07-images/fig6.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: This figure illustrates the basic kinematic structures for two-to-two particle scattering processes ( <span class="math inline">A + B \to C + D</span> ) as discussed in the lecture. At the top, it shows a generic <span class="math inline">2 \to 2</span> scattering diagram with incoming particles <span class="math inline">A</span> and <span class="math inline">B</span> and outgoing particles <span class="math inline">C</span> and <span class="math inline">D</span> . Below, it shows two specific “channel” diagrams labeled <span class="math inline">s</span> and <span class="math inline">t</span> : - The ** <span class="math inline">s</span> -channel** (left diagram) corresponds to the situation where particles <span class="math inline">A</span> and <span class="math inline">B</span> annihilate or interact to form an intermediate state, which subsequently decays into <span class="math inline">C</span> and <span class="math inline">D</span> . This configuration is directly related to the Mandelstam variable <span class="math inline">s = (p_A + p_B)^2</span> , which represents the square of the total energy in the center-of-mass frame. - The ** <span class="math inline">t</span> -channel** (right diagram) illustrates a different process where <span class="math inline">A</span> exchanges a particle with <span class="math inline">B</span> , resulting in <span class="math inline">C</span> and <span class="math inline">D</span> . Here the relevant Mandelstam variable is <span class="math inline">t = (p_A - p_C)^2</span> , representing the squared momentum transfer between the initial and final states. Physically, these diagrams represent different ways the scattering can occur, or equivalently, different regions of the Mandelstam plane. The figure emphasizes how the full amplitude for the process can receive contributions from multiple kinematic configurations, each characterized by its corresponding Mandelstam variable ( <span class="math inline">s</span> , <span class="math inline">t</span> , or <span class="math inline">u</span> channels, with <span class="math inline">u</span> not shown). These considerations are fundamental to the partial wave expansion, crossing symmetry, analyticity, and the broader analytic structure of the scattering amplitude being discussed in the lecture.
+</figcaption>
+</figure>
+</div>
+<div id="fig-fg7" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2025-Lecture-07-images/fig7.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: This figure represents the <strong>Mandelstam plane</strong>, a key tool in scattering theory used to visualize and analyze the kinematics of <span class="math inline">2 \to 2</span> scattering processes. The axes correspond to two of the three Mandelstam variables <span class="math inline">(s, t, u)</span> , which are Lorentz-invariant quantities that fully specify the kinematics. The colored regions indicate the physically allowed regions for different scattering channels: - The <strong>upper blue shaded region</strong> labeled “s-channel” corresponds to physical values where <span class="math inline">s</span> is positive and the process describes direct <span class="math inline">2 \to 2</span> scattering. - The <strong>left blue shaded region</strong> labeled “t-channel” corresponds to kinematics where <span class="math inline">t</span> is positive and describes exchange processes. - The <strong>right red shaded region</strong> labeled “u-channel” represents the physical region for the <span class="math inline">u</span> channel. The lines labeled <span class="math inline">s=0</span> , <span class="math inline">t=0</span> , and <span class="math inline">u=0</span> denote the boundaries between different kinematic regions. The areas marked “unphysical” lie outside the regions allowed by energy-momentum conservation for real particles, but can be accessed in analytic continuations of the scattering amplitude. The central green region indicates an overlap of physical boundaries. Physically, the Mandelstam plane illustrates the domains where each scattering channel (s, t, u) is physical, a concept crucial for understanding particle processes, crossing symmetry, and the analytic properties of scattering amplitudes discussed in this lecture.
+</figcaption>
+</figure>
+</div>
+<div id="fig-fg8" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2025-Lecture-07-images/fig8.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: This figure shows the physical setup of a generic <span class="math inline">2 \to 2</span> scattering process, which is a fundamental context for partial wave expansion and the use of Mandelstam variables in hadron physics. - <strong>Left Panel:</strong> This diagram represents a generic scattering process, where particles with initial 4-momenta <span class="math inline">p_1</span> and <span class="math inline">p_2</span> scatter via some interaction (potentially mediated by resonances, as in strong interaction processes) into final-state particles with 4-momenta <span class="math inline">p_1'</span> and <span class="math inline">p_2'</span> . The blob indicates that the interaction can be complex and model-independent. - <strong>Right Panel:</strong> This is the same process drawn in the center-of-mass frame and projected onto the scattering plane. It shows how the initial particle momenta are oriented, and how, after the collision, the outgoing particles are deflected by an angle <span class="math inline">\theta</span> . This angle <span class="math inline">\theta</span> is the <strong>scattering angle</strong>, a key variable in describing differential cross sections and in the <strong>partial wave expansion</strong> of the amplitude: <span class="math display">f(E, \theta) = \frac{1}{k} \sum_\ell (2\ell+1) e^{i\delta_\ell(E)} \sin\delta_\ell(E) P_\ell(\cos\theta)</span> The scattering angle is thus fundamental in decomposing the amplitude into components of definite orbital angular momentum. This image provides the kinematic basis for introducing the <strong>Mandelstam variables</strong> ( <span class="math inline">s</span> , <span class="math inline">t</span> , and <span class="math inline">u</span> ), which are Lorentz-invariant and fully characterize the process. It underpins the analysis of resonance production, angular distributions, and the formal structure of amplitudes discussed in the lecture, including their expansion in terms of Legendre polynomials as dictated by rotational symmetry.
+</figcaption>
+</figure>
+</div>
+<div id="fig-fg13" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg13-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2025-Lecture-07-images/fig13.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg13-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: This figure illustrates the <strong>Mandelstam plane</strong> for the three-body decay process <span class="math inline">\pi^-(1800) \to \pi^- \pi^0 \omega</span> . The axes represent the squared invariant masses of two different pairs in the final state: <span class="math inline">m^2_{\omega\pi^-}</span> and <span class="math inline">m^2_{\omega\pi^0}</span> . The Mandelstam variables <span class="math inline">s</span> , <span class="math inline">t</span> , and <span class="math inline">u</span> are labeled along corresponding directions in this plane. The hatched red regions denote the <strong>kinematical boundaries</strong> associated with each channel—these are the physically accessible regions for the respective invariant mass combinations. The diagram emphasizes how the amplitude for this process is defined over the entire Mandelstam plane but physical decay events are restricted to a particular domain (with the allowed phase space marked). Internal loops or resonant contributions, depicted by circles with arrows, indicate the presence of intermediate resonances or rescattering effects in specific channels. This setup is crucial for understanding the analytic structure of the amplitude, as discussed in the lecture, especially when considering <strong>partial wave expansions</strong> and analytic continuation across the Mandelstam variables. Such visualization is foundational for modern approaches to amplitude analysis, like the <strong>Khuri-Treiman formalism</strong>, where constraints of analyticity and crossing symmetry are imposed using the geometry of the Mandelstam plane.
+</figcaption>
+</figure>
+</div>
+<div id="fig-fg14" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg14-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2025-Lecture-07-images/fig14.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg14-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7: This figure illustrates the unitarity condition for the scattering amplitude in quantum field theory, specifically showing how the <strong>imaginary part of the two-to-two scattering amplitude</strong> is related to the sum over all possible <strong>on-shell intermediate states</strong>. On the left, “Im” denotes the imaginary part of the full amplitude (indicated by the blob diagram with two incoming and two outgoing legs), which is fundamentally connected to the physical processes allowed by the system’s quantum numbers and kinematics. On the right, the diagram shows this imaginary part decomposed into a product of amplitudes for <strong>all possible intermediate state contributions</strong>, where the amplitude <span class="math inline">A</span> for the process is paired with its complex conjugate <span class="math inline">A^*</span> , and the intermediate states are indicated by a vertical cut through the loop. This cut signifies that the particles in the loop go on-shell—a process known as “cutting” the diagram in the context of the <strong>optical theorem</strong> or <strong>Cutkosky rules</strong>. In the context of the lecture, this is a graphical representation of a <strong>unitarity relation</strong> or <strong>discontinuity equation</strong> for the scattering amplitude. It states that the imaginary part (or discontinuity across the real axis in the complex energy plane) can be expressed as a sum over products of amplitudes involving all possible intermediate states. This underpins the concept of <strong>analyticity</strong> in the Mandelstam plane: the physical amplitude is constrained by the requirement of unitarity and is analytic except for known cuts and poles corresponding to physical processes like particle production and resonances. This relation is fundamental in constructing <strong>partial wave expansions</strong> and in understanding the analytic structure of amplitudes, and serves as the starting point for more sophisticated theoretical models such as the <strong>Khuri-Treiman model</strong>, which imposes these constraints on three-body decays using dispersion relations.
+</figcaption>
+</figure>
+</div>
+<p>The topics for today—partial wave expansion and the Mandelstam plane—are built on foundational formulas from scattering theory.</p>
+<p><strong>Partial Wave Expansion</strong> expresses the scattering amplitude in terms of angular momentum eigenstates: <span class="math display">f(E, \theta) = \frac{1}{k} \sum_{\ell=0}^{\infty} (2\ell + 1) e^{i\delta_\ell(E)} \sin \delta_\ell(E) P_\ell(\cos \theta)</span><br>
+where <span class="math inline">k</span> is the momentum, <span class="math inline">\ell</span> is the orbital angular momentum, <span class="math inline">\delta_\ell(E)</span> is the phase shift, and <span class="math inline">P_\ell</span> are Legendre polynomials.</p>
+<p><strong>Mandelstam Variables</strong> <span class="math inline">s</span> , <span class="math inline">t</span> , and <span class="math inline">u</span> are the Lorentz-invariant quantities that describe <span class="math inline">2 \to 2</span> scattering kinematics: <span class="math display">s = (p_1 + p_2)^2, \quad t = (p_1 - p_3)^2, \quad u = (p_1 - p_4)^2</span><br>
+with the constraint <span class="math inline">s + t + u = m_1^2 + m_2^2 + m_3^2 + m_4^2</span> . These define the <strong>Mandelstam plane</strong>.</p>
+<p><strong>Isospin Rotations</strong>, mentioned in Problem 2, are described by the <span class="math inline">SU(2)</span> rotation operator: <span class="math display">U(\theta, \hat{n}) = \exp\left(-i \theta \, \hat{n} \cdot \vec{I}\right)</span><br>
+where <span class="math inline">\vec{I} = (I_1, I_2, I_3)</span> are the isospin generators, <span class="math inline">\theta</span> is the rotation angle, and <span class="math inline">\hat{n}</span> is the rotation axis.</p>
+</section>
+</section>
+<section id="parity-angular-momentum-and-isospin-in-weak-decays" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="parity-angular-momentum-and-isospin-in-weak-decays"><span class="header-section-number">2</span> Parity, Angular Momentum, and Isospin in Weak Decays</h2>
+<p>Is parity conserved in the decay <span class="math inline">\Lambda^0 \to p + \pi^-</span> ? I would say yes, <strong>for the strong interaction</strong>. On the left side, the proton has parity <span class="math inline">1/2^+</span> and the pion has parity <span class="math inline">0^-</span> . How is it conserved? Due to angular momentum. You introduce orbital angular momentum <span class="math inline">L = 1</span> . That works. So the process <em>can</em> proceed as a parity-conserving process, but parity is <strong>not</strong> conserved in that decay because it also happens in S wave ( <span class="math inline">L=0</span> ).</p>
+<p>The sensitivity to the polarization of the <span class="math inline">\Lambda</span> in this decay arises because there are two components: a parity-conserving and a parity-violating one. In a weak decay, parity is always broken. It doesn’t have to be 100% broken; in this case, 99% might proceed via the parity-conserving channel, but there will always be about 1% from the parity-violating part. So in weak decays, parity does not have to be conserved. In fact, it’s not; here there is a significant fraction of the <span class="math inline">L = 0</span> component.</p>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>The general rule is: <strong>In weak decays, parity is not conserved.</strong> The total parity in a decay is given by the product of the intrinsic parities and the parity from orbital angular momentum: <span class="math display">P_{\text{total}} = P_{\text{initial}} = P_{\text{final}} \times (-1)^L</span></p>
+</div>
+</div>
+</div>
+<p>Is angular momentum conserved? For hadron physics, in the course of particle physics events, angular momentum is <strong>always</strong> conserved. This is due to Lorentz group symmetry. If you don’t violate Lorentz symmetry, angular momentum is always conserved. You make it conserved by putting in the correct orbital angular momentum, but you don’t destroy the Lorentz invariance.</p>
+<p>Is isospin conserved? <strong>No.</strong> How do we see that it’s not conserved? Simply counting the number of light quarks is not reliable because <span class="math inline">u\bar{u}</span> pairs can pop up from the vacuum. It’s better to check isospin the same formal way we check for spin and parity.</p>
+<ul>
+<li>The isospin of the <span class="math inline">\Lambda^0</span> is <span class="math inline">0</span> .</li>
+<li>The isospin of the proton is <span class="math inline">1/2</span> .</li>
+<li>The isospin for the pion is <span class="math inline">1</span> , because there are three pions of different charges in the multiplet.</li>
+</ul>
+<p>Isospin is related to charge partners; the multiplicity is <span class="math inline">2I + 1</span> . The proton exists in two species (proton and neutron), so its isospin is <span class="math inline">1/2</span> . The <span class="math inline">\Lambda</span> exists alone, so it is the only particle in its multiplet. For the transition <span class="math inline">\Lambda^0 \to p + \pi^-</span> , you cannot combine a vector of length <span class="math inline">1/2</span> and a vector of length <span class="math inline">1</span> to make <span class="math inline">0</span> . Therefore, isospin is broken.</p>
+<p>In fact, this is also a property of the weak interaction. Isospin is always broken in weak decays, similar to parity. It could be broken severely or just a little bit.</p>
+<p>All right, let’s move to the three-body decay shown in the Dalitz plot.</p>
+<ul>
+<li><strong>How many particles are in the final state?</strong> Three.</li>
+<li><strong>How many in the initial state?</strong> One.</li>
+<li>Therefore, it’s a <strong>1-to-3 decay</strong>. That’s why we represent it on a Dalitz plot.</li>
+</ul>
+<p><strong>What is the final state?</strong> The particles are a proton ( <span class="math inline">p</span> ), a kaon ( <span class="math inline">K^-</span> ), and a pion ( <span class="math inline">\pi^-</span> ). How do you know? Because those are the three particles mentioned on the axes. On the X-axis you have the invariant mass squared of one pair, <span class="math inline">m^2(pK^-)</span> , and on the Y-axis the other pair, <span class="math inline">m^2(K^-\pi^-)</span> . A Dalitz plot always shows the mass squared of one subsystem versus the mass squared of the second subsystem.</p>
+<p><strong>What remains to figure out?</strong> We need to identify the decaying mother particle. There are a few clues:</p>
+<ol type="1">
+<li><p><strong>Resonance bands:</strong> The Dalitz plot shows a horizontal band, which is the strongest resonance. The particle that decays into the proton and <span class="math inline">K^-</span> is that resonance. That line projects into a peak in the <span class="math inline">m(pK^-)</span> dimension. Similarly, vertical bands would correspond to resonances in the <span class="math inline">K^-\pi^-</span> system (these are <span class="math inline">K^*</span> states).</p></li>
+<li><p><strong>Mass from phase space borders:</strong> The phase space is limited by the mass of the decaying particle <span class="math inline">M_0</span> . The borders on the plot are given by: <span class="math display">m_{ij,\text{min}}^2 = (m_i + m_j)^2, \quad m_{ij,\text{max}}^2 = (M_0 - m_k)^2</span><br>
+You can find <span class="math inline">M_0</span> by looking at the highest value on an axis. For example: <span class="math display">M_0 = \sqrt{m^2(pK^-)_{\text{max}}} + m_\pi</span><br>
+From the plot, this gives a mass around 2.4 - 2.6 GeV.</p></li>
+<li><p><strong>Quark content and interaction type:</strong> The final state is <span class="math inline">p\,(uud)</span> , <span class="math inline">K^-\,(s\bar{u})</span> , <span class="math inline">\pi^-\,(u\bar{d})</span> . The <span class="math inline">\bar{u}u</span> and <span class="math inline">\bar{d}d</span> pairs could come from the vacuum. The net quark content is <span class="math inline">u d s u \bar{d}</span> . Could this be a pentaquark decaying strongly, or is it a weak decay? The presence of both parity and isospin violation points to a <strong>weak decay</strong>.</p></li>
+</ol>
+<p>Putting it together—the mass near 2.6 GeV and the weak decay into <span class="math inline">p K^- \pi^-</span> —identifies the mother particle as the <strong>charmed baryon <span class="math inline">\Xi_c^+</span> </strong>. Its weak decay allows for the observed violation of parity and isospin, and the Dalitz plot reveals the intermediate resonant substructure ( <span class="math inline">\Lambda^*</span> and <span class="math inline">K^*</span> states) in the three-body final state.</p>
+</section>
+<section id="isospin-operators-and-rotations-in-su2" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="isospin-operators-and-rotations-in-su2"><span class="header-section-number">3</span> Isospin Operators and Rotations in SU(2)</h2>
+<p><strong>Question 2: Isospin Operators</strong></p>
+<p>We are given isospin operators. Let’s check the statements:</p>
+<ol type="1">
+<li><strong>Is it true that <span class="math inline">\hat{I}^2</span> acting on <span class="math inline">\Delta^+</span> gives <span class="math inline">15/4</span> ?</strong> Yes, this is true. The <span class="math inline">\Delta</span> baryon has total isospin <span class="math inline">I = 3/2</span> . The operator <span class="math inline">\hat{I}^2</span> acting on an eigenstate yields <span class="math inline">I(I+1)</span> .</li>
+</ol>
+<ul>
+<li>For the <span class="math inline">\Delta</span> , this is <span class="math inline">\frac{3}{2} \times \frac{5}{2} = \frac{15}{4}</span> .</li>
+</ul>
+<ol start="2" type="1">
+<li><strong>Is it true that <span class="math inline">\hat{I}_z</span> acting on <span class="math inline">\Delta^+</span> gives <span class="math inline">1/2</span> ?</strong> This is also true. The <span class="math inline">\Delta</span> multiplet contains four states with different projections <span class="math inline">I_3</span> :</li>
+</ol>
+<ul>
+<li><span class="math inline">| \frac{3}{2}, \frac{3}{2} \rangle</span></li>
+<li><span class="math inline">| \frac{3}{2}, \frac{1}{2} \rangle</span> ← This is the <span class="math inline">\Delta^+</span> state.</li>
+<li><span class="math inline">| \frac{3}{2}, -\frac{1}{2} \rangle</span></li>
+<li><span class="math inline">| \frac{3}{2}, -\frac{3}{2} \rangle</span></li>
+</ul>
+<p>The operator <span class="math inline">\hat{I}_z</span> gives the projection <span class="math inline">I_3</span> , so acting on the <span class="math inline">\Delta^+</span> state yields <span class="math inline">\frac{1}{2}</span> .</p>
+<p><strong>Applying a Rotation in Isospin Space</strong></p>
+<p>What happens if we apply a rotation? This connects to how states transform under SU(2). If you act with a rotation (e.g., a 30° rotation around the y-axis) on the <span class="math inline">\Delta^+</span> state, you get a <strong>mixed state</strong> of different <span class="math inline">\Delta</span> states.</p>
+<p>The transformation is governed by the <strong>Wigner D-matrices</strong>:</p>
+<p><span class="math display">\mathcal{R}(\theta) |J, M\rangle = \sum_{M'} D^J_{M',M}(\theta) |J, M'\rangle</span></p>
+<p>The coefficients <span class="math inline">D^J_{M',M}(\theta)</span> are known functions, often found in tables alongside Clebsch-Gordan coefficients. They are trigonometric functions.</p>
+<p>For example, to find the specific coefficient <span class="math inline">D^{3/2}_{3/2, 1/2}(30°)</span> , you would consult such a table. The key point is that applying a rotation not aligned with the quantization axis produces a superposition.</p>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>The transformation preserves total probability. For a given initial state <span class="math inline">|J, M\rangle</span> , the sum of the squared magnitudes of the D-matrix coefficients is one: <span class="math display">\sum_{M'} |D^J_{M',M}(\theta)|^2 = 1</span><br>
+This is the unitarity condition, ensuring probability is conserved under rotation.</p>
+</div>
+</div>
+</div>
+<p>This demonstrates that rotations in isospin space work identically to regular angular momentum rotations because both are governed by the group <strong>SU(2)</strong>.</p>
+<p><strong>Symmetry Relations for Wigner D-Matrices</strong></p>
+<p>A question arose about a specific coefficient, <span class="math inline">D^{3/2}_{3/2, -3/2}</span> , which might not be directly listed in standard tables. Such elements can be found using symmetry relations derived from the unitary nature of the rotation matrices.</p>
+<p>One useful relation is:</p>
+<p><span class="math display">D^J_{-M_1,-M_2}(\theta) = (-1)^{M_1 - M_2} D^J_{M_2,M_1}(\theta)</span></p>
+<p>This allows you to compute coefficients with negative indices from those with positive indices (or vice versa) by swapping the lower indices and applying a phase factor. If this approach doesn’t yield a tabulated value, another method is to use the property that for a unitary matrix, a negative sign in the arguments can be related to complex conjugation and transposition, which effectively swaps indices.</p>
+<p><em>The core takeaway is that these various relations all stem from the unitarity of the transformation.</em></p>
+<p><strong>Transition to Today’s Topic</strong></p>
+<p>Today’s lecture will focus on the <strong>Källén calculation</strong>. We will discuss the application of the helicity formalism to scattering amplitudes.</p>
+<p><strong>A major goal is to avoid confusion</strong> between general, model-independent statements and the specific approximations we will introduce to build and simplify our expressions.</p>
+</section>
+<section id="two-body-decay-matrix-elements-and-cascade-decay-construction" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="two-body-decay-matrix-elements-and-cascade-decay-construction"><span class="header-section-number">4</span> Two-Body Decay Matrix Elements and Cascade Decay Construction</h2>
+<p>I would like to start with a reminder: for the two-body case we have a particle decaying into two, and in its rest frame we have the following configuration.</p>
+<div id="fig-fg1" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2025-Lecture-07-images/fig1.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8: This figure illustrates the kinematic setup for a two-body decay in the context of the helicity formalism. On the left, a Feynman-like diagram represents the decay of a parent particle (labeled “0”) into two daughter particles (labeled “1” and “2”). On the right, the physical configuration in the rest frame of the parent particle (labeled “0-rest frame”) is shown. The z-axis is chosen as the quantization axis for spin. The outgoing particles 1 and 2 emerge back-to-back, with their momenta and helicities (λ₁ and λ₂) indicated. The angles θ (polar) and φ (azimuthal) specify the direction of particle 1 in spherical coordinates with respect to the z-axis. The figure encapsulates the geometric meaning of the helicity formalism: the matrix element for the decay depends on the spin projections and the angular orientation of the outgoing particles, captured here by θ and φ. The angular dependence of the decay amplitude is encoded in the Wigner D-matrix, reflecting how spin and momentum are coupled in the rest frame of the decaying particle. This diagram provides the foundational visualization for expanding amplitudes in terms of partial waves and for connecting angular momentum conservation to observed decay distributions.
+</figcaption>
+</figure>
+</div>
+<p>We are sitting in the rest frame of the decaying particle, and the quantized spin with respect to the z-axis is represented by the canonical state. We use helicity states for particle 1 and particle 2.</p>
+<p>The matrix element represents a transition amplitude between the initial and final state. It must carry all dependencies on the kinematic variables and on the configuration of the particles with respect to the quantization axis. So it must depend on the initial spin projection <span class="math inline">M_0</span> , the helicities <span class="math inline">\lambda_1</span> , <span class="math inline">\lambda_2</span> , as well as the angles.</p>
+<p>The total spin of the system controls the angular dependence of the final state particles. In that case, it is given by the Wigner D-matrix that comes with the angles of the decay products in this rest frame.</p>
+<p>Particle one and two go back-to-back, and we pick one of them. We call it particle number one. We measure its spherical angles, polar <span class="math inline">\theta</span> and azimuthal <span class="math inline">\phi</span> , and they enter as an argument of the D function. This comes from the same algebra as we just discussed for the isospin.</p>
+<p>These functions are the same functions that you find on the page of the Clebsch-Gordan coefficients. The capital D as a matrix is just a little d with a phase factor.</p>
+<div id="fig-fg2" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2025-Lecture-07-images/fig2.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;9: This figure schematically represents the decay of a parent particle into two daughter particles, labeled 1 and 2, within the helicity formalism framework. Each arrow denotes the direction of momentum of the outgoing particles, and the accompanying symbols <span class="math inline">\lambda_1</span> and <span class="math inline">\lambda_2</span> denote their helicities in their respective rest frames. The relation <span class="math inline">m = \lambda_1 - \lambda_2</span> indicates the conservation of angular momentum along the quantization (typically <span class="math inline">z</span> ) axis in the parent’s rest frame: the difference in the helicities of the two final-state particles equals the spin projection <span class="math inline">m</span> of the parent particle along that axis. In the helicity formalism, this physical configuration underpins the angular dependence of the decay amplitude. Specifically, it determines which element of the Wigner D-matrix encodes the angular correlations between the spin projections of the initial and final states, a key concept that translates into the general partial wave expansion discussed in this lecture.
+</figcaption>
+</figure>
+</div>
+<p>Here it comes in the expression for the matrix element:</p>
+<p><span class="math display">\mathcal{M}^{M_0}_{\lambda_1, \lambda_2}(\theta, \phi) = H_{\lambda_1, \lambda_2} \, D^{J_0*}_{M_0,\, \lambda_1 - \lambda_2}(0, \theta, \phi)</span></p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Physics meaning:</strong> This formula describes the decay amplitude for a particle with spin <span class="math inline">J_0</span> and spin projection <span class="math inline">M_0</span> along the z-axis, decaying into two particles with helicities <span class="math inline">\lambda_1</span> and <span class="math inline">\lambda_2</span> . The Wigner D-matrix <span class="math inline">D^{J_0*}</span> encodes the angular dependence, while <span class="math inline">H_{\lambda_1, \lambda_2}</span> is the <strong>reduced matrix element</strong> that contains dynamical information (like coupling constants and mass dependencies) and is independent of angles.</p>
+</div>
+</div>
+</div>
+<p>It comes conjugated because the particles in the final state are rotated with the rotation <span class="math inline">\theta</span> and <span class="math inline">\phi</span> . We use active transformations, active rotations. In order to obtain the configuration of the final state we have to apply <span class="math inline">R_y</span> and <span class="math inline">R_z</span> .</p>
+<p>Here’s an example for the regular rotations. In order to obtain the particle with the spherical coordinates <span class="math inline">\theta</span> and <span class="math inline">\phi</span> , you have to apply to something aligned along the Z axis the rotation first about Y by angle <span class="math inline">\theta</span> and then about Z by angle <span class="math inline">\phi</span> . That’s exactly what you see in arguments of the D function.</p>
+<p>That’s just a series of transformations: first apply rotation about Z. These arguments of the D functions follow the Z-Y-Z convention of the Euler angles. The first is the Z rotation by angle 0, then Y rotation by angle <span class="math inline">\theta</span> , and then Z rotation by angle <span class="math inline">\phi</span> . You don’t need to apply this first Z rotation.</p>
+<p>One of the simplest conventions that is used often is to have no angle for the first rest frame rotation, and then you have <span class="math inline">\theta, \phi</span> .</p>
+<p>What also appears in the expression is this <span class="math inline">H</span> with indices <span class="math inline">\lambda_1</span> and <span class="math inline">\lambda_2</span> . That’s something that depends on the mass parameters only and does not depend any longer on angles. This is what remains as the reduced matrix element, computed as the projection of the z-aligned particle 1 and 2 with the initial state.</p>
+<p>Here we don’t have any angles any longer. We are dealing with the configuration of particle 1 with the helicity <span class="math inline">\lambda_1</span> going in the z direction and particle 2 with the helicity <span class="math inline">\lambda_2</span> going in the minus Z direction. We are projecting this into the particle 0 canonical state with the spin projection <span class="math inline">M</span> equal to <span class="math inline">\lambda_1 - \lambda_2</span> . (see <a href="#fig-fg2" class="quarto-xref">Figure&nbsp;9</a>)</p>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Helicity Constraint:</strong> In the parent rest frame, the z-component of angular momentum is conserved. For back-to-back decay products, the difference in helicities equals the initial spin projection: <span class="math inline">M_0 = \lambda_1 - \lambda_2</span> . This constraint is embedded in the Wigner D-matrix indices.</p>
+</div>
+</div>
+</div>
+<p>That’s a short reminder. Now we’re going to apply the same construction to the more complicated decays. I want to demonstrate that this essentially gives us a recipe for how to construct any cascade decay with particles with spin.</p>
+<p>To illustrate and make it easier to follow, for the reaction that proceeds through an intermediate state, I’m going to put around the vertices the blocks and apply formulas that I have for every specific block. The general structure is like this.</p>
+<p>But now we have to insert the indices. The first D function has two indices. First of all it has a spin. The spin will be of the decaying particle always conjugated.</p>
+<div id="fig-fg5" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2025-Lecture-07-images/fig5.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;10: This figure represents a typical <strong>cascade decay process</strong> in hadron physics involving resonances and intermediate states, as discussed in the lecture. The initial interaction is a <strong>photon ( <span class="math inline">\gamma</span> ) scattering off a proton ( <span class="math inline">p</span> )</strong>, which leads to the production of an <strong>intermediate resonance</strong>—in this case, the ** <span class="math inline">\Delta</span> baryon** (illustrated by the triangle symbol in the diagram). The <span class="math inline">\Delta</span> resonance then decays into a <strong>proton ( <span class="math inline">p</span> )</strong> and a <strong>pion ( <span class="math inline">\pi</span> )</strong>. Physically, this diagram illustrates a <span class="math inline">2\to 2</span> scattering process ( <span class="math inline">\gamma p \to \Delta \to p\pi</span> ), which is a concrete example of a reaction where a resonance (here, the <span class="math inline">\Delta</span> with isospin <span class="math inline">I=3/2</span> , spin <span class="math inline">J=3/2</span> ) appears as an <strong>intermediate state</strong>. In the context of the lecture, this process is used to motivate the <strong>helicity formalism</strong> and the <strong>factorization of amplitudes</strong>: the total matrix element is constructed by combining the production amplitude of the <span class="math inline">\Delta</span> (via <span class="math inline">U(\theta, \hat{n})</span> , rotational properties, and group theory) with the decay amplitude of the resonance, which is characterized by its <strong>Breit-Wigner propagator</strong> and spin-dependent angular distributions (Wigner <span class="math inline">D</span> or <span class="math inline">d</span> functions). The diagram shows how the <strong>partial wave expansion</strong> and resonance modeling (using Breit-Wigner distributions for the propagator and Wigner matrices for the angular structure) are applied in hadron spectroscopy, connecting the discussion of isospin, angular momentum conservation, and resonance dynamics from the lecture to an explicit scattering scenario.
+</figcaption>
+</figure>
+</div>
+<p>The first index is of the particle that decays and then the difference of the helicities of particle one and particle two.</p>
+<p>The reduced matrix element that appears here and there is going to have indices only of the particles that are combined. We don’t need the third one, because that comes the same from the conservation of angular momentum of the helicity.</p>
+<p>So here we will go. We have a transition of particle 0 going to the intermediate state (12) and particle 3. And here we have (12) going to 1 and 2. What is missing is a dynamic function that represents the propagation of the intermediate resonance.</p>
+<p>This is the model and it is a model not because of the angular functions, they are precise and exact, but because of the factorization. We are assuming that the matrix element is able to factorize the first decay from the second decay.</p>
+<p>The fact that we split the interaction matrix element into the two here—here is the reduced matrix element of the first transition, here is the second—is our modeling assumption: <strong>factorization</strong>.</p>
+<p>What is missing here is that we didn’t introduce the helicity <span class="math inline">\lambda</span> of the intermediate state. You see that intermediate state that appears here also has a spin projection <span class="math inline">\lambda</span> . That’s the one that will be carried by one of the particles.</p>
+<p>This is something up to a sum over the angles that appear as arguments. They are not the same, but they are specific to particular transitions here and there. Therefore we better label them differently.</p>
+<p>That’s always tricky to keep consistent labeling. When you apply this cascade decay parameterization, you have a million different angles. Labeling them we need to have some rule to start labeling.</p>
+<p>For example, for the pair of particles that go back to back—reason this is IJ—I can use IJ index here. They will have indices 1, 2, <span class="math inline">\theta_{1,2}</span> . Here is the 1, 2, 3 and here I would like to invite you to do some 3D imaging.</p>
+<p>I want to now sketch on the board in 2D, how it looks in 3D. The definition of the axis. And we need to access. That’s how it starts.</p>
+<p>Here is the representation that I think it’s easy to visualize what’s going on. We start with particle 0 in the lab frame. It flies in this frame. The particle has the helicity <span class="math inline">\lambda_0</span> .</p>
+<p>This particle decays into a combination of the particles 1 and 2 and 3. Then we can boost the system to its rest frame following this axis. In the rest frame, this <span class="math inline">\lambda</span> that used to be the helicity of the particle becomes the canonical spin projection.</p>
+<p>If you think of this and here is the z axis. Here’s <span class="math inline">m_0</span> , that is the zero. This is the zero particle rest frame. The spin is quantized along the z axis by our construction. Since we boost in this direction, and in this frame 1, 2 and 3, they go back to back.</p>
+<p>Now, in order to apply the second part, you have to follow the combination of particles 1 and 2. It’s exactly the same as we started from. In this frame it flies in a certain direction and it decays into two particles.</p>
+<p>What we need here is to boost to its rest frame where it decays into particle one and going back to back.</p>
+<div id="fig-fg4" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2025-Lecture-07-images/fig4.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11: This figure illustrates the kinematic construction and reference frames relevant for the helicity formalism in cascade decays, as discussed in the lecture. It shows how to define the angles and axes necessary for correctly describing the spins and momentum directions of multiple particles in sequential decays. - The <strong>lab frame</strong> (upper left, in purple) depicts the flight of the parent particle “0” with helicity <span class="math inline">\lambda_0</span> . As particle 0 decays, its spin quantization axis is defined in this frame. - The event is boosted to the <strong>rest frame of particle 0</strong> (center), where the decay <span class="math inline">0 \to (12) + 3</span> is considered. Here, the helicities of outgoing particles (e.g., <span class="math inline">\lambda_3</span> ) are defined with respect to the z-axis in this frame, and the relevant angles <span class="math inline">(\theta_{12,3}, \varphi_{12,3})</span> specify the orientation of the (12)-3 system. - A further boost (indicated by “boost <span class="math inline">^{-1}</span>”) brings us to the <strong>(12) rest frame</strong> (top right, red/blue), where the pair (1,2) is at rest, and their decay kinematics can be fully described by <span class="math inline">(\theta_{12}, \varphi_{12})</span> . The quantization axes and the definition of helicities <span class="math inline">\lambda_1</span> , <span class="math inline">\lambda_2</span> are with respect to the new z-axis in this frame. - The diagram shows how each particle’s momentum and spin orientation are defined in the appropriate rest frame along a specific z-axis, and emphasizes how the definition of the kinematic angles ( <span class="math inline">\theta</span> and <span class="math inline">\varphi</span> ) depends on these sequential boosts and rotations. <strong>Physical Meaning:</strong> The figure provides a geometrical visualization of how to construct the angular variables and reference frames needed for a full helicity amplitude calculation in a decay chain. It clarifies that: - <strong>Helicity quantization axes</strong> are defined in different rest frames (a key caveat discussed in the lecture). - <strong>Angles</strong> such as <span class="math inline">\theta_{12}</span> , <span class="math inline">\varphi_{12}</span> , <span class="math inline">\theta_{12,3}</span> , and <span class="math inline">\varphi_{12,3}</span> specify the orientation of momentum vectors after appropriate boosts. - This construction is essential for writing decay amplitudes in terms of Wigner D-functions, ensuring that rotational properties and conservation of angular momentum are properly encoded in the matrix element for sequential decays. The diagram is an explicit, practical guide for defining kinematic variables when applying the helicity formalism and partial wave expansions to multi-body (e.g., three-body) decays in particle physics.
+</figcaption>
+</figure>
+</div>
+<p>So let’s define the angles. Angles are taken as spherical angles of one of the decay products.</p>
+<ul>
+<li><strong>First Decay (0 → (12) + 3):</strong> The spherical angles of one of the decay products (e.g., the combined system (12)) would be <span class="math inline">\theta_{12,3}</span> and <span class="math inline">\phi_{12,3}</span> .</li>
+<li><strong>Second Decay ((12) → 1 + 2):</strong> The angles will be found as the angle with respect to the z axis in the rest frame of the particle (12). These are <span class="math inline">\theta_{12}</span> and <span class="math inline">\phi_{12}</span> .</li>
+</ul>
+<p>When you deal with this practically, you follow the chain and introduce angles while approaching certain rest frames. In experimental physics we are given the four-vectors. You’re literally given three four-vectors for particle one, particle two, particle three, and they are in the lab frame.</p>
+<p>To make this transformation, you first find out what are the spherical angles of this combination 1 to 3 and you rotate to have a 1, 2, 3 vector pointing in the z direction. Then you boost your particle in this frame.</p>
+<p>You take, find <span class="math inline">\theta</span> , the angles of the 1, 2, align this with the z axis and you boost in that direction and then apply appropriate rotations. It’s it.</p>
+</section>
+<section id="helicity-formalism-and-partial-wave-expansion-in-resonance-decays" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="helicity-formalism-and-partial-wave-expansion-in-resonance-decays"><span class="header-section-number">5</span> Helicity Formalism and Partial Wave Expansion in Resonance Decays</h2>
+<p>Now, in fact, the topology that we draw here is not the only one possible. One can imagine the same transition happening through the combination of particle 2 and 3 or 3 and 1, and one would write the same expression.</p>
+<p>To incorporate the resonances in other channels, let’s first discuss this expression a little bit, because there are caveats and things to note.</p>
+<section id="caveat-1-helicity-quantization-axes" class="level3" data-number="5.1">
+<h3 data-number="5.1" class="anchored" data-anchor-id="caveat-1-helicity-quantization-axes"><span class="header-section-number">5.1</span> <strong>Caveat 1: Helicity Quantization Axes</strong></h3>
+<p>The main caveat, and something that I really want you to appreciate, is that the helicities that appear in the expressions are taken from <strong>different rest frames</strong>. In order to apply our helicity formalism and to replace an expectation value by the reduced matrix element—the so-called helicity coupling—we need to be in the rest frame of the decaying particle. Therefore, when we apply this formalism, the values of the <span class="math inline">\lambda</span> that appear are taken in the rest frame of the particle pairs.</p>
+<p>This means the quantization axis is the z-axis of the appropriate frame. From the last homework, we’ve seen that helicity is affected when you boost not along the direction of quantization, but off-axis. Consequently, if I were to write the amplitude where all <span class="math inline">\lambda</span> are defined in the same frame— <span class="math inline">\lambda_1, \lambda_2, \lambda_3, \lambda_0</span> —I would get a linear combination of my amplitudes. This is a somewhat bizarre outcome.</p>
+<p>The only reason we don’t use this formalism literally is that we often don’t care about the individual <span class="math inline">\lambda</span> values themselves. We are going to sum over them once we add things together. So the consistency of the quantization axis is not a concern unless you are dealing with <strong>coherent processes</strong> that use different quantization axes.</p>
+<p>What is important, and what I would like to draw your attention to, is identifying on which axis in this matrix element the spins are quantized.</p>
+<ul>
+<li><span class="math inline">\lambda_0</span> comes from the lab frame (helicity in the lab frame).</li>
+<li><span class="math inline">\lambda_3</span> and the others are defined in their respective resonance rest frames.</li>
+</ul>
+<p>As soon as I square the matrix element and sum over the helicities, I don’t care which axis I quantize them on; they are going to be summed or averaged anyway.</p>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>However</strong>, if I want to add this amplitude to something else—for example, an amplitude from a different topology—I have to be careful with the helicity quantization axis. That’s the first important note: <strong>watch your helicity quantization axis</strong>.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="caveat-2-factorization-of-vertices" class="level3" data-number="5.2">
+<h3 data-number="5.2" class="anchored" data-anchor-id="caveat-2-factorization-of-vertices"><span class="header-section-number">5.2</span> <strong>Caveat 2: Factorization of Vertices</strong></h3>
+<p>The second important note is that we are implicitly assuming the vertices are <strong>factorized</strong>. This is usually a really good assumption, especially when discussing a narrow resonance. Even for a broad resonance, when the dynamics are driven by the resonance in the particle 1 and 2 combination, it’s a good assumption.</p>
+<p>The Wigner <em>d</em>-functions here are a property of the rotations; they are <strong>not</strong> model assumptions. We know Lorentz symmetry is a good symmetry, so these functions must be present.</p>
+<p>If we took the expression without the factorization assumption—if we treated the matrix element together with the propagator as a single entity requiring theory input—we would be computing a more complex product. The form we use is a model-independent expression for the matrix element. It is safe to pull out the rotational functions, but <strong>not</strong> safe to break their structure.</p>
+</section>
+<section id="angular-dependence-and-the-scalar-case" class="level3" data-number="5.3">
+<h3 data-number="5.3" class="anchored" data-anchor-id="angular-dependence-and-the-scalar-case"><span class="header-section-number">5.3</span> <strong>Angular Dependence and the Scalar Case</strong></h3>
+<p>In general, what we’ve done here is explicitly find the angular dependence if a particle with spin <span class="math inline">J</span> is present in the combination of particles 1 and 2. The helicity formalism is a simple way to identify the dependence of the matrix element on the angles.</p>
+<p>The only thing I’m interested in is what spin particles 1 and 2 have. Using this form doesn’t directly give me the answer; it simply gives a <span class="math inline">D^J</span> function of the appropriate angles. Dealing with spin is more complicated, as you might have appreciated already.</p>
+<p>For further discussion, let’s reduce the situation to <strong>scalar particles</strong>. Consider a scalar particle decaying to three scalar particles—the scalar case. The matrix element in that case has no helicity indices. It is simply a function that depends on the kinematic variables.</p>
+<p>Looking at the general helicity amplitude formula, we quickly realize that for scalars, there is no value for <span class="math inline">\lambda</span> except zero. You have a single state in the multiplet for spin zero. Therefore, the Wigner <em>D</em>-function term simplifies to a delta function for <span class="math inline">\lambda=0</span> , which we can propagate through the calculation.</p>
+<p>The expression becomes very simple, and we find that the matrix element in the scalar case does not depend on any angles except one polar angle, <span class="math inline">\theta</span> . In the rest frame of two particles, all other angles drop out.</p>
+<p>A convenient way to write this is using a partial wave expansion in Legendre polynomials <span class="math inline">P_J</span> :</p>
+<p><span class="math display">\mathcal{M}(m_{12}, \theta) = \sum_{J} (2J+1) \, a_J(m_{12}) \, P_J(\cos \theta)</span></p>
+<p>I’m moving towards matching the expression we derived to the partial wave expansion series you see in the homework. That’s why I pulled the terms related to the helicity couplings and the reduced matrix element into the function <span class="math inline">a_J(m_{12})</span> and introduced the <span class="math inline">(2J+1)</span> coefficient.</p>
+</section>
+<section id="interpretation-and-practical-truncation" class="level3" data-number="5.4">
+<h3 data-number="5.4" class="anchored" data-anchor-id="interpretation-and-practical-truncation"><span class="header-section-number">5.4</span> <strong>Interpretation and Practical Truncation</strong></h3>
+<p>We started by writing the matrix element for a decay that proceeds via a resonance with spin <span class="math inline">J</span> . We found that its angular dependence is given by <span class="math inline">d_{00}^J</span> , which are in fact Legendre polynomials. We can match this to a general technique: for any matrix element with angular dependence, we can expand it in a series of Legendre polynomials and analyze the coefficients, with the only remaining dependence being on the mass variable <span class="math inline">m_{12}</span> .</p>
+<p>The argument is that the coefficients <span class="math inline">a_J(m_{12})</span> in this expansion then represent dynamics corresponding to a specific spin <span class="math inline">J</span> of a resonance. So we started from a model, but it gives us an interpretation and intuition for what the coefficients in a partial wave expansion represent.</p>
+<p>The total matrix element in the scalar case depends on only two variables: the scattering angle <span class="math inline">\theta</span> and the invariant mass <span class="math inline">m_{12}</span> . This is exactly what we see in a Dalitz plot.</p>
+<ul>
+<li>The expansion is an <strong>exact</strong> representation if you keep the upper limit of the series to infinity.</li>
+<li>It becomes an <strong>approximation</strong> as soon as you truncate the series.</li>
+</ul>
+<p>In experiment, we often use a <strong>truncated series</strong> of partial waves. This is because, due to the identification we’ve made, we can apply physical intuition:</p>
+<ul>
+<li>Every term corresponds to a particle with spin <span class="math inline">J</span> .</li>
+<li>High-spin particles are not abundant. Looking at the PDG, particles with high values of <span class="math inline">J</span> are rare.</li>
+<li>Amplitudes with high <span class="math inline">J</span> are typically suppressed.</li>
+</ul>
+<p>This gives a natural limit to the expansion. We don’t actually know particles with a spin greater than 6. Spin-6 particles exist, but spin-7 or higher have never been observed experimentally (though they are possible in quark models).</p>
+<p>The reason is simple: such high-spin states are very high in the excitation mass spectrum, are very broad, and thus their effect is small and hard to observe. Practically, we truncate this series at <span class="math inline">J_{\text{max}} = 6</span> .</p>
+<p><span class="math display">\mathcal{M}(m_{12}, \theta) \approx \sum_{J=0}^{J_{\text{max}}=6} (2J+1) \, a_J(m_{12}) \, P_J(\cos \theta)</span></p>
+</section>
+</section>
+<section id="resonance-models-in-multi-channel-decays" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="resonance-models-in-multi-channel-decays"><span class="header-section-number">6</span> Resonance Models in Multi-Channel Decays</h2>
+<p>Once you deal with a channel where resonances appear in a specific pair, like (1,2), the partial wave expansion is a good model to analyze the data.</p>
+<p>When we deal with situations where a resonance can appear in <strong>different</strong> two-body channels—(1,2), (2,3), or (3,1)—instead of writing a partial wave expansion for just one pair, we use a different, more comprehensive model.</p>
+<p>Looking at Dalitz plots for three-body decays, we see resonances can be present in any of these pair combinations.</p>
+<div id="fig-fg3" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2025-Lecture-07-images/fig3.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12: This figure illustrates an example of an <strong>experimental topology</strong> for a three-body decay commonly found in hadron physics analyses. The diagram shows the decaying particle at the interaction point, producing three final-state particles labeled 1, 2, and 3, each with momentum vectors radiating outward. The colored boxes, labeled here as <span class="math inline">b_1</span> and <span class="math inline">b_2</span> , represent two different possible intermediate resonant subsystems (for example, the combinations of particles 1+2 and 2+3, respectively). This reflects how, in an experimental context—such as a Dalitz plot analysis—multiple two-body resonant channels can contribute to the final state. From the perspective of the <strong>helicity formalism</strong> and <strong>partial wave expansion</strong> discussed in the lecture, this topology visually encodes how the decay amplitude is constructed as a sum over possible intermediate states, each described by its own angles and rest frame. The two boxes illustrate “blocks” where specific two-body resonances may appear, as in the <strong>cascade decay/isobar model</strong>: the decay can proceed via an intermediate resonance formed by a pair of particles (e.g., 1+2 or 2+3) before decaying to the observed three-body final state. The orientation of the outgoing particles also emphasizes the need to define angles (such as <span class="math inline">\theta</span> and <span class="math inline">\phi</span> ) in the appropriate rest frames when applying the helicity formalism, as different decay chains (topologies) require consistent and careful bookkeeping of kinematic variables and spin quantization axes.
+</figcaption>
+</figure>
+</div>
+<p>Therefore, instead of writing the infinite partial wave series for just the (1,2) channel, we write the <strong>sum of three truncated series</strong>, one for each possible pair.</p>
+<p><span class="math display">\mathcal{A}_{\text{Isobar}}(s_{12}, s_{23}, s_{31}) = \sum_{\ell=1}^L (2\ell + 1) \, a_\ell^{(12)}(s_{12}) \, P_\ell(\cos\theta_{12}) + \text{cyclic permutations for (2,3) and (3,1)}</span></p>
+<p>In fact, this model, once projected onto any single channel, still contains contributions from an <strong>infinite number of partial waves</strong>. This is a key, non-trivial point.</p>
+<p>The reason we cover an infinite number of partial waves in every channel is that the angles in each expansion are defined in different rest frames. For example, the angle <span class="math inline">\theta_{23}</span> in the (2,3) rest frame is different from <span class="math inline">\theta_{12}</span> in the (1,2) rest frame. Consequently, every term in the full three-body expansion projects onto the (1,2) partial wave expansion as an infinite series of Legendre polynomials.</p>
+<p>This approximated amplitude—the sum of three truncated partial wave series—is known by different names in hadron spectroscopy.</p>
+<ul>
+<li>It is often called the <strong>Isobar model</strong>.</li>
+<li>In this model, the dynamical functions <span class="math inline">a_\ell^{(ij)}(s_{ij})</span> for the propagator are typically parameterized with simple <strong>Breit-Wigner amplitudes</strong>:</li>
+</ul>
+<p><span class="math display">a_\ell^{(ij)}(s_{ij}) \propto \frac{g_\ell \, \Gamma_\ell(s_{ij})}{m_R^2 - s_{ij} - i m_R \Gamma_\ell(s_{ij})}</span></p>
+<p>This is a simple, phenomenological parameterization of resonance peaks that works quite well, but it is a <strong>simplistic approximation</strong> without strong theoretical constraints from unitarity or analyticity.</p>
+<p>I prefer to call it a <strong>cascade decay model</strong>, which refers to more general constructions. The core idea is writing the full matrix element not as a single infinite sum, but as three separate, truncated series. This same ansatz is also the starting point for the more advanced <strong>Khuri-Treiman model</strong>.</p>
+<p>The <strong>Khuri-Treiman model</strong> is a theoretical framework that incorporates final-state interactions and rescattering between different decay channels. It begins with the same three-series ansatz but then introduces theoretical constraints—primarily from <strong>dispersion relations</strong>—so that the amplitudes in each channel “talk to each other” and receive corrections through rescattering processes.</p>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>The Khuri-Treiman model starts with the Isobar/cascade decay ansatz but adds unitarity and analyticity constraints via integral equations. This accounts for rescattering, leading to a more rigorous description of three-body decays where channel coupling is important.</p>
+</div>
+</div>
+</div>
+<p>This model takes into account data and different types of rescattering diagrams. The starting expression is the same, and it relates to what is known in some contexts as a <strong>reconstruction theorem</strong>, derived from dispersion relations. While powerful, for higher spins and partial waves, the Khuri-Treiman approach still involves modeling assumptions, so it is not a complete first-principles solution.</p>
+</section>
+<section id="modeling-dalitz-plots-with-helicity-formalism" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="modeling-dalitz-plots-with-helicity-formalism"><span class="header-section-number">7</span> Modeling Dalitz Plots with Helicity Formalism</h2>
+<p>The last thing for today is to come back to the Dalitz plot distribution and discuss how we would model this distribution using the helicity formalism.</p>
+<p>If you look at these blue Dalitz plots, let’s try to identify the components you see by eye. What kind of expansion would you put there? We will describe the decay <span class="math inline">X \to p K \pi</span> .</p>
+<p>Looking at the plot, we are focusing not on the kinematic borders but on the <strong>dynamics</strong>. All inhomogeneities within the phase space are driven by the physics. They are produced by either resonances that create bumps, or by structures within the bands that reflect the <strong>spin and angular distributions</strong>. All these can be built in using the helicity formalism.</p>
+<p>Let’s quickly list what we need to incorporate to apply the helicity formalism. We need to know:</p>
+<ul>
+<li>The <strong>spins of the particles</strong>.</li>
+<li>What to put for the <strong>reduced matrix elements</strong>.</li>
+<li>What to put for the <strong>resonance propagator</strong>. (see <a href="#fig-fg3" class="quarto-xref">Figure&nbsp;12</a>) In the isobar model, the propagator is parameterized by a relativistic Breit-Wigner function: <span class="math display">\mathcal{P}_R(s) = \frac{1}{m_R^2 - s - i m_R \Gamma_R(s)}</span><br>
+Therefore, we need the <strong>mass</strong> ( <span class="math inline">m_R</span> ) and <strong>width</strong> ( <span class="math inline">\Gamma_R</span> ) for each resonant state. The formalism also requires the resonance spin <span class="math inline">J</span> .</li>
+</ul>
+<p>Let’s look at the plot and identify, for every two-particle combination, the masses, widths, and spins of the prominent resonances.</p>
+<ul>
+<li><p>** <span class="math inline">K\pi</span> combination (horizontal bands):**</p></li>
+<li><p>How many bands do you see? One clear horizontal band.</p></li>
+<li><p>This is the <span class="math inline">K^*(892)</span> . Its spin-parity is <span class="math inline">1^-</span> . It’s the first radial excitation, essentially the rho meson of the strange sector.</p></li>
+<li><p>** <span class="math inline">K p</span> combination (vertical bands):**</p></li>
+<li><p>How many do you see? Two.</p></li>
+<li><p>The first is the <span class="math inline">\Lambda(1520)</span> , with spin-parity <span class="math inline">3/2^-</span> .</p></li>
+<li><p>The second is likely the <span class="math inline">\Lambda(1690)</span> , also <span class="math inline">3/2^-</span> . (see <a href="#fig-fg5" class="quarto-xref">Figure&nbsp;10</a>) These negative parity states belong to the P multiplet, meaning there is orbital angular momentum between the quarks.</p></li>
+</ul>
+<div id="fig-fg9" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2025-Lecture-07-images/fig9.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;13: This figure shows a schematic representation of a resonance in a two-body invariant mass spectrum, as described in the context of the lecture’s discussion of resonance propagators and the Breit-Wigner parameterization. The horizontal axis represents the invariant mass of a two-particle system, <span class="math inline">(m_1 + m_2)</span> , while the vertical axis corresponds to the event rate or probability amplitude. The resonance manifests as a prominent peak, centered at the resonance mass <span class="math inline">m_R</span> . The width of the peak, denoted by <span class="math inline">\Gamma</span> , characterizes the decay width (or inverse lifetime) of the intermediate resonance state. This shape is modeled by the Breit-Wigner resonance amplitude, a key dynamic function used in the isobar and cascade decay models to describe intermediate resonances in multi-body decays. Physically, this plot illustrates how a resonance like <span class="math inline">K^*(892)</span> , <span class="math inline">\Lambda(1520)</span> , or <span class="math inline">\Delta(1232)</span> appears in the invariant mass spectrum of its decay products, with the position and width of the peak directly encoding the resonance’s mass and decay properties.
+</figcaption>
+</figure>
+</div>
+<div id="fig-fg11" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg11-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2025-Lecture-07-images/fig11.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg11-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;14: This figure illustrates the characteristic behavior of a resonance amplitude’s real and imaginary parts as a function of the Mandelstam variable <span class="math inline">s</span> , which typically denotes the invariant mass squared of a two-body subsystem in a decay or scattering process. On the left, the plot shows the imaginary part of the amplitude, <span class="math inline">\text{Im}(a)</span> . It displays a peak at <span class="math inline">s = m_R</span> , where <span class="math inline">m_R</span> is the mass of the resonance. This reflects the fact that, according to the Breit-Wigner parameterization, the imaginary part of the amplitude becomes largest when the invariant mass of the system matches the resonance mass, representing the maximal probability for the resonance to be produced on-shell. On the right, the plot shows the real part of the amplitude, <span class="math inline">\text{Re}(a)</span> , versus <span class="math inline">s</span> . Here, as <span class="math inline">s</span> increases through the resonance region, the real part exhibits a characteristic “phase motion,” smoothly crossing zero at <span class="math inline">s = m_R</span> and changing sign. This behavior is a direct consequence of the analytic properties of the Breit-Wigner (or more generally, resonant) amplitude and is closely related to the unitarity and analyticity constraints discussed in the lecture. The total amplitude thus traces out a circular trajectory in the complex plane as <span class="math inline">s</span> varies, resulting in a rapid change in phase (typically by about <span class="math inline">\pi</span> ) as the system passes through the resonance. Physically, these features—peak in <span class="math inline">\text{Im}(a)</span> and phase motion in <span class="math inline">\text{Re}(a)</span> —are signatures of resonant behavior and are used to identify and characterize hadronic resonances in Dalitz plot analyses and partial wave expansions. The figure matches the lecture’s context, where these generic features of resonance line shapes and their relation to analytic properties of amplitudes are discussed as foundational concepts for parameterizing dynamic functions using the Breit-Wigner form.
+</figcaption>
+</figure>
+</div>
+<ul>
+<li>** <span class="math inline">\pi p</span> combination (diagonal band):**</li>
+<li>You can see a diagonal line. This is the <span class="math inline">\Delta(1232)</span> with spin-parity <span class="math inline">3/2^+</span> .</li>
+</ul>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>The total amplitude for the decay <span class="math inline">X \to p K \pi</span> is a <strong>coherent sum</strong> over these intermediate resonance channels ( <span class="math inline">R</span> ): <span class="math display">\mathcal{A}(X \to p K \pi) = \sum_{R} \mathcal{A}(X \to R + \text{spectator}) \times \mathcal{A}(R \to \text{final particles})</span><br>
+Each resonance amplitude is built from a Breit-Wigner propagator, a reduced matrix element, and Wigner rotation matrices <span class="math inline">D^J</span> that encode the spin and angular distributions via the helicity formalism.</p>
+</div>
+</div>
+</div>
+<p>In principle, you are now equipped to take the equations and draw the Dalitz plot. You would insert the mass and width from the PDG for these three resonances, use their spins, and construct the amplitude.</p>
+<p>However, a complication arises because we have a proton with spin in the final state. If you incorporate this particle blindly using the helicity formalism for different decay chains—each quantized along a different axis—it won’t be done correctly. If all final-state particles were scalars, the procedure would be straightforward.</p>
+</section>
+<section id="preview-of-advanced-parameterizations" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="preview-of-advanced-parameterizations"><span class="header-section-number">8</span> Preview of Advanced Parameterizations</h2>
+<p>So, any questions? We are approaching the end of our current topic.</p>
+<p>I believe the next lecture will focus on <strong>dynamic functions</strong>, specifically discussing the <strong>Breit-Wigner parameterization</strong>.</p>
+<p>We will cover:</p>
+<ul>
+<li>More advanced parameterizations of the <strong>phase shift</strong>.</li>
+<li>The constraints on <strong>line shapes</strong> imposed by <strong>unitarity</strong> and <strong>analyticity</strong>. (see <a href="#fig-fg11" class="quarto-xref">Figure&nbsp;14</a>)</li>
+</ul>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>This segment concludes the current lecture chunk (Chunk 7). The upcoming discussion on the Breit-Wigner form will build upon the foundational concepts of resonance parameterization introduced earlier.</p>
+</div>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

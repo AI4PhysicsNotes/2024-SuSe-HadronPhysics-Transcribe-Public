@@ -1,0 +1,1192 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="">
+<meta name="dcterms.date" content="2025-01-01">
+
+<title>(2025) Lecture 3</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-597958c53c93a607afca12fd375c57ed.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-7d3a565c23c4d3b0e7c030e96a8964f3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="quarto-light">
+
+<div id="quarto-search-results"></div>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#lecture-outline-hadron-structure-and-symmetry" id="toc-lecture-outline-hadron-structure-and-symmetry" class="nav-link active" data-scroll-target="#lecture-outline-hadron-structure-and-symmetry"><span class="header-section-number">1</span> Lecture Outline: Hadron Structure and Symmetry</a>
+  <ul class="collapse">
+  <li><a href="#lecture-plan-key-topics" id="toc-lecture-plan-key-topics" class="nav-link" data-scroll-target="#lecture-plan-key-topics"><span class="header-section-number">1.1</span> <strong>Lecture Plan &amp; Key Topics</strong></a></li>
+  <li><a href="#from-classical-to-quantum-scattering" id="toc-from-classical-to-quantum-scattering" class="nav-link" data-scroll-target="#from-classical-to-quantum-scattering"><span class="header-section-number">1.2</span> <strong>1. From Classical to Quantum Scattering</strong></a></li>
+  </ul></li>
+  <li><a href="#isospin-symmetry-and-quark-content-in-hadrons" id="toc-isospin-symmetry-and-quark-content-in-hadrons" class="nav-link" data-scroll-target="#isospin-symmetry-and-quark-content-in-hadrons"><span class="header-section-number">2</span> Isospin Symmetry and Quark Content in Hadrons</a></li>
+  <li><a href="#isospin-partners-and-symmetry-breaking-in-d-mesons" id="toc-isospin-partners-and-symmetry-breaking-in-d-mesons" class="nav-link" data-scroll-target="#isospin-partners-and-symmetry-breaking-in-d-mesons"><span class="header-section-number">3</span> Isospin Partners and Symmetry Breaking in D Mesons</a></li>
+  <li><a href="#spin-addition-and-quantum-number-combinations" id="toc-spin-addition-and-quantum-number-combinations" class="nav-link" data-scroll-target="#spin-addition-and-quantum-number-combinations"><span class="header-section-number">4</span> Spin Addition and Quantum Number Combinations</a></li>
+  <li><a href="#probing-hadron-structure-with-electromagnetic-scattering" id="toc-probing-hadron-structure-with-electromagnetic-scattering" class="nav-link" data-scroll-target="#probing-hadron-structure-with-electromagnetic-scattering"><span class="header-section-number">5</span> Probing Hadron Structure with Electromagnetic Scattering</a></li>
+  <li><a href="#mandelstam-variables-and-center-of-momentum-frame-quantities" id="toc-mandelstam-variables-and-center-of-momentum-frame-quantities" class="nav-link" data-scroll-target="#mandelstam-variables-and-center-of-momentum-frame-quantities"><span class="header-section-number">6</span> Mandelstam Variables and Center-of-Momentum Frame Quantities</a></li>
+  <li><a href="#kinematics-of-elastic-scattering-and-the-role-of-q2" id="toc-kinematics-of-elastic-scattering-and-the-role-of-q2" class="nav-link" data-scroll-target="#kinematics-of-elastic-scattering-and-the-role-of-q2"><span class="header-section-number">7</span> Kinematics of Elastic Scattering and the Role of <span class="math inline">Q^2</span></a></li>
+  <li><a href="#cross-section-and-phase-space-in-scattering-processes" id="toc-cross-section-and-phase-space-in-scattering-processes" class="nav-link" data-scroll-target="#cross-section-and-phase-space-in-scattering-processes"><span class="header-section-number">8</span> Cross Section and Phase Space in Scattering Processes</a></li>
+  <li><a href="#matrix-element-in-scattering-theory" id="toc-matrix-element-in-scattering-theory" class="nav-link" data-scroll-target="#matrix-element-in-scattering-theory"><span class="header-section-number">9</span> Matrix Element in Scattering Theory</a></li>
+  <li><a href="#form-factors-and-the-rosenbluth-formula" id="toc-form-factors-and-the-rosenbluth-formula" class="nav-link" data-scroll-target="#form-factors-and-the-rosenbluth-formula"><span class="header-section-number">10</span> Form Factors and the Rosenbluth Formula</a></li>
+  <li><a href="#magnetic-moments-and-the-quark-model" id="toc-magnetic-moments-and-the-quark-model" class="nav-link" data-scroll-target="#magnetic-moments-and-the-quark-model"><span class="header-section-number">11</span> Magnetic Moments and the Quark Model</a>
+  <ul class="collapse">
+  <li><a href="#todays-lecture-summary" id="toc-todays-lecture-summary" class="nav-link" data-scroll-target="#todays-lecture-summary"><span class="header-section-number">11.1</span> Today’s Lecture Summary</a></li>
+  </ul></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="header-section-number">12</span> Conclusion</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">(2025) Lecture 3</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">January 1, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><strong>Presenter</strong>: Mikhail Mikhasenko</p>
+<p><strong>Note Taker</strong>: Anna Zimmer</p>
+<section id="lecture-outline-hadron-structure-and-symmetry" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="lecture-outline-hadron-structure-and-symmetry"><span class="header-section-number">1</span> Lecture Outline: Hadron Structure and Symmetry</h2>
+<p>Today we have lecture number three.</p>
+<div id="fig-fg7" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2025-Lecture-03-images/fig7.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: This image schematically represents the internal structure of a hadron, such as a proton, as discussed in the lecture. The large enclosing circle denotes the finite spatial extent of the hadron, indicating that it is <strong>not point-like</strong>. Inside the hadron, the three smaller circles represent its constituent <strong>quarks</strong> (e.g., two up quarks and one down quark in a proton), in line with the <strong>quark model</strong>. The lines connecting the quarks symbolize the strong interaction, or the color force, mediated by gluons that confine the quarks within the hadron. This visualization is physically meaningful because it illustrates how scattering experiments reveal that the proton has an <strong>internal structure</strong> and a spatial <strong>charge distribution</strong>. The existence of form factors in scattering cross sections, introduced in the lecture, is direct evidence of this composite, extended nature rather than a point-like particle. The drawing thus encapsulates the key idea that hadrons are quantum systems with substructure, as probed by high momentum transfer ( <span class="math inline">Q^2</span> ) processes.
+</figcaption>
+</figure>
+</div>
+<p>We will follow the consideration of the symmetry from the last lecture, but also look more carefully at what we know about the structure of hadrons, how they look inside, and what are the actual experimental evidences that they are <strong>not point-like</strong>, that they’re made of quarks.</p>
+<section id="lecture-plan-key-topics" class="level3" data-number="1.1">
+<h3 data-number="1.1" class="anchored" data-anchor-id="lecture-plan-key-topics"><span class="header-section-number">1.1</span> <strong>Lecture Plan &amp; Key Topics</strong></h3>
+<p>We will go through this list of topics:</p>
+<ol type="1">
+<li><strong>Kinematics and Cross Sections:</strong> Starting with the calculation of cross sections and multibody kinematics.</li>
+<li><strong>Classical Scattering:</strong> A simple classical scattering model of an electron and a proton.</li>
+<li><strong>Form Factors:</strong> Discussing the form factors that appear in scattering, and how they relate to hadron properties like charge distributions and magnetic moments.</li>
+<li><strong>The Quark Model:</strong> Discussing these quantities assuming hadrons are made of quarks, and relating experimental distributions to internal structure.</li>
+<li><strong>Symmetry Considerations:</strong> Returning to flavor and spin symmetry from the last lecture.</li>
+<li><strong>Proton &amp; Neutron Wavefunctions:</strong> Examining the proton and neutron spin and flavor wave functions.</li>
+<li><strong>Magnetic Moments:</strong> Computing the magnetic moment in the quark model and relating it to our observables.</li>
+</ol>
+<p>That’s the plan, which hopefully gives a little bit of structure to the detailed discussion we are going to have.</p>
+</section>
+<section id="from-classical-to-quantum-scattering" class="level3" data-number="1.2">
+<h3 data-number="1.2" class="anchored" data-anchor-id="from-classical-to-quantum-scattering"><span class="header-section-number">1.2</span> <strong>1. From Classical to Quantum Scattering</strong></h3>
+<p>I will start with the kinematics and something very fundamental: the calculation of cross sections. We begin with a simple classical picture of electron-proton scattering.</p>
+<p>For a point-like target like a proton, the differential cross section is given by the <strong>Rutherford formula</strong>: <span class="math display">\frac{d\sigma}{d\Omega} = \left( \frac{Z_1 Z_2 e^2}{4E} \right)^2 \frac{1}{\sin^4(\theta/2)}</span><br>
+This describes scattering via a Coulomb potential, assuming <strong>no internal structure</strong>.</p>
+<p>However, for relativistic spin-1/2 particles like electrons, we use the <strong>Mott cross section</strong>, which adds a spin-relativistic correction: <span class="math display">\frac{d\sigma}{d\Omega}_{\text{Mott}} = \left(\frac{d\sigma}{d\Omega}_{\text{Ruth}}\right) \left(1 - \beta^2 \sin^2 \frac{\theta}{2}\right), \quad \beta = \frac{v}{c}</span></p>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>The key experimental discovery was that the proton is <strong>not point-like</strong>. The measured cross section deviates from the Mott prediction, introducing a <strong>form factor</strong> <span class="math inline">F(q^2)</span> : <span class="math display">\left(\frac{d\sigma}{d\Omega}\right)_{\text{exp}} = \left(\frac{d\sigma}{d\Omega}\right)_{\text{Mott}} |F(q^2)|^2</span><br>
+This form factor encodes the proton’s finite size and internal structure. ### <strong>2. Form Factors and Internal Structure</strong></p>
+</div>
+</div>
+</div>
+<div id="fig-fg1" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2025-Lecture-03-images/fig1.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: This figure schematically represents the process of electron-proton scattering, a central topic in the lecture. The diagram shows an incoming electron ( <span class="math inline">e</span> ) scattering off a proton ( <span class="math inline">p</span> ), resulting in an outgoing electron and outgoing proton. The central blob indicates that the interaction is not just point-like but involves the internal structure of the proton. The lower left part of the diagram, with three small circles inside the proton, symbolizes the proton being composed of three quarks, highlighting its non-point-like nature. Physically, this figure illustrates the concept that, as discussed in the lecture, high momentum transfer ( <span class="math inline">Q^2</span> ) in electron-proton scattering experiments probes the internal quark structure of the proton. The departure from the predictions of point-like scattering (e.g., the Mott or Rutherford cross section) leads to the introduction of form factors, which encode the finite size and non-trivial internal structure of the proton due to its composition from quarks. The image thus visually encapsulates the main lecture theme: probing hadron structure and inferring the presence of quarks inside the proton through scattering experiments.
+</figcaption>
+</figure>
+</div>
+<div id="fig-fg2" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2025-Lecture-03-images/fig2.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: This diagram represents the kinematics of elastic electron-proton scattering in the <strong>center of momentum frame (CMF)</strong>. The incoming particles, an electron ( <span class="math inline">e</span> ) and a proton ( <span class="math inline">p</span> ), approach each other along the horizontal axis. After their interaction, they scatter into final states: the outgoing electron ( <span class="math inline">e'</span> ) and outgoing proton ( <span class="math inline">p'</span> ). The angle <span class="math inline">\Theta</span> denotes the <strong>scattering angle</strong> of the electron relative to its initial direction. In the context of the lecture, this figure is used to illustrate the basic setup for analyzing <span class="math inline">2 \to 2</span> scattering, defining important variables like the scattering angle ( <span class="math inline">\theta</span> or <span class="math inline">\Theta</span> ) and emphasizing that these kinematic variables (in particular, the angle and the corresponding transferred momentum <span class="math inline">Q^2</span> ) are central to measuring and interpreting cross sections and exploring the proton’s internal structure. The CMF is the natural frame for describing the energy and momentum relations used in the calculation of Mandelstam variables <span class="math inline">s</span> and <span class="math inline">t</span> , and for connecting experimental observables (like the scattering angle) to theoretical quantities such as form factors and phase space integrals.
+</figcaption>
+</figure>
+</div>
+<div id="fig-fg3" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2025-Lecture-03-images/fig3.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: This figure represents the Feynman diagram for elastic electron-proton scattering, a key process discussed in the lecture. An incoming electron ( <span class="math inline">e^-</span> ) scatters off a proton ( <span class="math inline">p</span> ) by exchanging a virtual photon, depicted as a wavy line labeled by the four-momentum transfer <span class="math inline">Q</span> . The proton vertex is marked with a shaded “blob,” indicating that the proton is not a point-like particle but possesses internal structure. The blob encodes proton form factors ( <span class="math inline">F_1</span> , <span class="math inline">F_2</span> or equivalently <span class="math inline">G_E</span> , <span class="math inline">G_M</span> ), which parameterize the spatial charge and magnetic distributions inside the proton and cause measurable deviations from the predictions for point-like scattering. The scattering angle and resulting momentum transfer ( <span class="math inline">Q^2</span> ) probe either the overall charge radius or the internal quark structure, depending on the kinematic regime, as described in the lecture.
+</figcaption>
+</figure>
+</div>
+<div id="fig-fg4" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2025-Lecture-03-images/fig4.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: This figure illustrates the kinematics of electron-proton scattering in the center-of-mass frame. The incoming electron ( <span class="math inline">e^-</span> ) approaches along the <span class="math inline">z</span> -axis and is scattered at an angle <span class="math inline">\theta</span> relative to its initial direction, emerging as the outgoing electron ( <span class="math inline">e'</span> ). The azimuthal angle <span class="math inline">\phi</span> represents the rotation of the scattered electron around the <span class="math inline">z</span> -axis. These angles, <span class="math inline">\theta</span> and <span class="math inline">\phi</span> , define the entire final-state configuration for a 2-to-2 scattering process. In the context of the lecture, <span class="math inline">\theta</span> is directly related to the transferred momentum squared <span class="math inline">Q^2</span> , which determines the sensitivity to the proton’s internal structure. The azimuthal angle <span class="math inline">\phi</span> often drops out for unpolarized, rotationally symmetric reactions, leaving <span class="math inline">\theta</span> as the key observable for extracting cross section dependencies and probing hadron structure through angular distributions.
+</figcaption>
+</figure>
+</div>
+<div id="fig-fg6" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2025-Lecture-03-images/fig6.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: This figure represents the Feynman diagram for elastic electron-proton scattering, also known as electron-proton scattering via single photon exchange. In the context of this lecture, it illustrates the fundamental physical process used to probe the internal structure of the proton. - The incoming electron (labeled “e”) approaches the proton (labeled “p”), and they interact through the exchange of a virtual photon (wavy line labeled “q”)—the mediating particle of the electromagnetic interaction. - The outgoing electron (labeled “e’”) and outgoing proton (labeled “p’”) are detected after the scattering event. - The exchanged photon transfers four-momentum <span class="math inline">q</span> to the proton, with the squared four-momentum transfer <span class="math inline">Q^2 = -q^2</span> serving as the key variable characterizing the resolution of the probe: small <span class="math inline">Q^2</span> corresponds to probing the overall charge distribution (forward scattering), while large <span class="math inline">Q^2</span> accesses the internal, quark-level structure (deep inelastic scattering). - The black blob on the proton side of the vertex symbolizes the fact that the proton is not a point-like particle. Instead, its electromagnetic vertex is characterized by form factors, such as <span class="math inline">F_1(q^2)</span> and <span class="math inline">F_2(q^2)</span> , encapsulating information about its finite size and internal quark-gluon dynamics. - This process is described mathematically by the matrix element <span class="math inline">\mathcal{M}</span> , and the experimentally measurable cross section depends on the squared amplitude <span class="math inline">|\mathcal{M}|^2</span> , the phase space, and the kinematic flux factor. Overall, the image encapsulates how high-energy electron scattering is employed to extract the electromagnetic form factors of the proton, thereby revealing its spatial charge distribution and internal structure.
+</figcaption>
+</figure>
+</div>
+<div id="fig-fg8" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2025-Lecture-03-images/fig8.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7: This figure illustrates the relationship between the internal charge density distribution of different particles or composite systems and their corresponding form factors, which are directly probed in scattering experiments such as electron-proton elastic scattering. - <strong>First Row (Point-like, e.g., the Electron):</strong> - <strong>Charge density:</strong> The charge is concentrated at a single point, mathematically represented by a delta function, <span class="math inline">\delta(r)/4\pi</span> . - <strong>Form factor:</strong> The Fourier transform of a delta function is a constant. In scattering, this means the cross section follows the prediction for point-like particles (e.g., Mott or Rutherford formulas), with no <span class="math inline">Q^2</span> -dependence beyond kinematics. - <strong>Second Row (Exponential, e.g., the Proton):</strong> - <strong>Charge density:</strong> The charge is distributed according to an exponential profile, such as <span class="math inline">(a^3/8\pi)\exp(-ar)</span> . This spatially extended charge means the particle is not point-like. - <strong>Form factor:</strong> The Fourier transform gives a “dipole” form factor—decreasing smoothly with increasing <span class="math inline">Q^2</span> . This behavior encodes the finite size of the proton, as revealed by deviations from point-like scattering in experiment. - <strong>Third Row (Sphere with Diffuse Edge, e.g., Nucleus like <span class="math inline">^{40}</span> Ca):</strong> - <strong>Charge density:</strong> The charge is spread over a sphere, with a possible diffuse edge (approximated as proportional to <span class="math inline">r^3</span> for certain nuclei). - <strong>Form factor:</strong> The result is an “oscillating” form factor, i.e., the Fourier transform has zeros and oscillations as a function of <span class="math inline">Q^2</span> , characteristic of sharp-edged spatial distributions. Physically, the left column identifies the spatial structure (form) of the charge distribution, the middle column shows its mathematical or qualitative profile (charge density as a function of radius <span class="math inline">r</span> ), and the right column shows the resulting form factor, which determines how the elastic scattering cross section deviates from the point-like behavior as a function of momentum transfer <span class="math inline">Q^2</span> . This directly connects internal structure (probed by form factors) to experimental observations in electron scattering—central themes of this lecture.
+</figcaption>
+</figure>
+</div>
+<p>The form factors that appear in scattering are directly related to the spatial properties of the hadron.</p>
+<ul>
+<li><p>The <strong>electric form factor</strong> <span class="math inline">G_E(Q^2)</span> is the Fourier transform of the spatial charge distribution <span class="math inline">\rho(r)</span> : <span class="math display">G_E(Q^2) = \int \rho(\mathbf{r}) \, e^{i \mathbf{q} \cdot \mathbf{r}} \, d^3r</span><br>
+For a spherically symmetric distribution, this simplifies to: <span class="math display">G_E(Q^2) = \int_0^\infty 4\pi r^2 \rho(r) \frac{\sin(qr)}{qr} \, dr</span><br>
+where <span class="math inline">q = |\mathbf{q}|</span> .</p></li>
+<li><p>The <strong>mean square charge radius</strong>, a key observable, is extracted from the low- <span class="math inline">Q^2</span> behavior of this form factor: <span class="math display">\langle r^2 \rangle = -6 \hbar^2 \left. \frac{d G_E}{d Q^2} \right|_{Q^2=0}</span></p></li>
+</ul>
+<p>For a full quantum mechanical description of elastic electron-proton scattering, we use the <strong>Rosenbluth formula</strong>, which separates the contributions from the proton’s electric ( <span class="math inline">G_E</span> ) and magnetic ( <span class="math inline">G_M</span> ) structure: <span class="math display">\frac{d\sigma}{d\Omega} = \left( \frac{d\sigma}{d\Omega} \right)_{\text{Mott}} \left[ \frac{G_E^2(Q^2) + \tau G_M^2(Q^2)}{1+\tau} + 2\tau G_M^2(Q^2) \tan^2\left(\frac{\theta}{2}\right) \right]</span><br>
+where <span class="math inline">\tau = Q^2/(4M_p^2)</span> and <span class="math inline">Q^2 = -q^2</span> is the squared four-momentum transfer.</p>
+<p>These Sachs form factors ( <span class="math inline">G_E, G_M</span> ) are related to the more fundamental Dirac ( <span class="math inline">F_1</span> ) and Pauli ( <span class="math inline">F_2</span> ) form factors: <span class="math display">G_E = F_1(Q^2) - \frac{Q^2}{4 m^2} F_2(Q^2), \quad G_M = F_1(Q^2) + F_2(Q^2)</span><br>
+### <strong>3. The Quark Model: Symmetry, Wavefunctions, and Predictions</strong></p>
+<div id="fig-fg5" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2025-Lecture-03-images/fig5.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8: This figure schematically represents the three spatial axes (typically labeled as the x, y, and z axes, or 1, 2, and 3) within the proton or hadron. The dashed oval outline suggests the finite spatial extent of the hadron, emphasizing that it is not a point-like object but has an internal structure. The labeled arrows (1, 2, 3) correspond to the directions in space along which observables like spin, momentum, or angular momentum can be projected. In the context of the lecture, this visualization is relevant to the discussion of the proton’s internal charge and magnetic distributions, which are characterized via form factors. Measuring properties such as form factors or the magnetic moment requires considering the projection of physical quantities (such as spin or orbital angular momentum) onto these axes. The axes are also essential in describing how the proton’s (or nucleon’s) wave function and associated observables transform under rotations and other symmetry operations discussed in the lecture, particularly as related to the SU(3) and isospin symmetries. Thus, the image is a schematic for understanding the orientation and internal degrees of freedom accessible within a finite-sized, structured hadron.
+</figcaption>
+</figure>
+</div>
+<p>Now, we relate these observations to internal structure by assuming hadrons are made of quarks. We return to the <strong>symmetry considerations</strong>—flavor symmetry and spin symmetry—and combine them within <strong>SU(6) spin-flavor symmetry</strong>.</p>
+<div id="fig-fg11" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg11-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2025-Lecture-03-images/fig11.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg11-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;9: This figure illustrates the excitation spectrum of hadrons (such as baryons or mesons) in terms of quantum numbers <span class="math inline">N</span> (principal quantum number, or radial excitation), and <span class="math inline">L</span> (orbital angular momentum). The lowest state (ground state) corresponds to <span class="math inline">N=0</span> , <span class="math inline">L=0</span> (labeled “1S”), while the first excited radial state is <span class="math inline">N=1</span> , <span class="math inline">L=0</span> (“2S”). The next set shown is for orbital excitation, <span class="math inline">N=0</span> , <span class="math inline">L=1</span> (“1P”), which results in a multiplet of five mass states depending on spin and angular momentum coupling. A key physical interpretation in the context of the lecture is the “mass difference” (about 600 MeV) between the S and P states, highlighted here as arising from “spin-spin interaction” between quarks inside the hadron. This difference in energies (masses) between states with the same radial quantum number but different angular momentum reflects the internal structure of hadrons: the presence of constituent quark degrees of freedom, and the influence of quantum numbers on the energy spectrum, as described through the quark model and the potential (e.g., spin-spin) interactions among quarks. The labeled mass range (1500–1700 MeV) for the 1P states corresponds to observed masses of excited hadronic states. Overall, the diagram gives a schematic representation of the energy level structure of hadrons, and how spectroscopy (mass splitting) provides evidence for internal structure, consistent with the quark model discussed in the lecture.
+</figcaption>
+</figure>
+</div>
+<ul>
+<li><p>The proton wavefunction must be fully antisymmetric. Its <strong>spin-flavor wavefunction</strong> is a specific combination: <span class="math display">|p\uparrow\rangle = \frac{1}{\sqrt{18}} \left[ 2|u\uparrow u\uparrow d\downarrow\rangle - |u\uparrow u\downarrow d\uparrow\rangle - |u\downarrow u\uparrow d\uparrow\rangle + \text{permutations} \right]</span></p></li>
+<li><p>In the quark model, the <strong>magnetic moment operator</strong> for a hadron is the sum of its constituent quarks’ moments: <span class="math display">\boldsymbol{\mu} = \sum_{i=1}^3 \frac{q_i}{2m_i} \boldsymbol{\sigma}_i</span><br>
+where <span class="math inline">q_i</span> , <span class="math inline">m_i</span> , and <span class="math inline">\boldsymbol{\sigma}_i</span> are the charge, mass, and spin operator of quark <span class="math inline">i</span> .</p></li>
+</ul>
+<p>Assuming <span class="math inline">m_u = m_d</span> , we define quark magnetic moments <span class="math inline">\mu_u = \frac{2}{3} \frac{e\hbar}{2m_u c}</span> and <span class="math inline">\mu_d = -\frac{1}{3} \frac{e\hbar}{2m_d c}</span> .</p>
+<ul>
+<li>This leads to concrete <strong>predictions for the proton and neutron magnetic moments</strong>: <span class="math display">\mu_p = \frac{4}{3} \mu_u - \frac{1}{3} \mu_d, \quad \mu_n = \frac{4}{3} \mu_d - \frac{1}{3} \mu_u</span><br>
+These can be compared to the <strong>experimental values</strong>: <span class="math display">\mu_p = 2.793 \, \mu_N, \quad \mu_n = -1.913 \, \mu_N, \quad \text{where } \mu_N = \frac{e}{2m_p}</span><br>
+The success of these predictions is a major triumph of the quark model.</li>
+</ul>
+</section>
+</section>
+<section id="isospin-symmetry-and-quark-content-in-hadrons" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="isospin-symmetry-and-quark-content-in-hadrons"><span class="header-section-number">2</span> Isospin Symmetry and Quark Content in Hadrons</h2>
+<p>But before starting, I wanted to pose a question to recap. There are two questions.</p>
+<p>The first I’m sure you all will be able to solve. The second I’m sure you all won’t be able to solve, but after today’s lecture you will.</p>
+<ol type="1">
+<li><strong>First question:</strong> What is the isospin of the <span class="math inline">D</span> meson? Specifically, what is the isospin of the <span class="math inline">D^+</span> meson and the <span class="math inline">D^0</span> meson?</li>
+<li><strong>Second question:</strong> What is the isospin of the <span class="math inline">\Xi_{cc}</span> baryon and its quark content?</li>
+</ol>
+<p>For the <span class="math inline">D</span> meson, <span class="math inline">D^+</span> is a charm and anti-up, <span class="math inline">c\bar{u}</span> , and <span class="math inline">D^0</span> is charm and anti-down, <span class="math inline">c\bar{d}</span> . So that was correct.</p>
+<p>The charm quark has a charge of <span class="math inline">+\frac{2}{3}</span> . The anti-up quark has a charge of <span class="math inline">-\frac{2}{3}</span> . The anti-down quark has a charge of <span class="math inline">+\frac{1}{3}</span> . So then let’s get the charge correct here.</p>
+<p>What is the <span class="math inline">\Xi_{cc}</span> charge? It’s <span class="math inline">++</span> .</p>
+<p>The second question for those who are done with the first: <span class="math inline">J/\psi</span> decays to a pair of identical vector particles. <span class="math inline">J/\psi</span> has spin one, parity minus, <span class="math inline">J^P = 1^-</span> , then decays to two vector particles, each with <span class="math inline">J^P = 1^-</span> .</p>
+<p>I’m asking, what is the orbital angular momentum between these two particles to have a correct parity interaction? Who thinks that it is one? Who thinks it’s zero? Who thinks it’s one half? All right, we’ll work on that.</p>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Parity Conservation in <span class="math inline">J/\psi \to VV</span> Decay</strong> For the decay <span class="math inline">J/\psi \to V V</span> , parity conservation requires: <span class="math display">P_{J/\psi} = P_V \cdot P_V \cdot (-1)^L</span><br>
+Substituting the parities <span class="math inline">P_{J/\psi} = -1</span> and <span class="math inline">P_V = -1</span> gives: <span class="math display">(-1) = (-1) \cdot (-1) \cdot (-1)^L</span><br>
+This simplifies to <span class="math inline">(-1)^L = +1</span> , meaning the orbital angular momentum <span class="math inline">L</span> must be <strong>even</strong> (e.g., <span class="math inline">L = 0, 2, \ldots</span> ).</p>
+</div>
+</div>
+</div>
+<p>Isospin symmetry is related to the wave functions of the light quarks. You have a <span class="math inline">u</span> -quark or a <span class="math inline">d</span> -quark. These are two light quarks.</p>
+<p>We are dealing with the isospin wave function that has two components: up or down. Isospin has two components, <span class="math inline">\psi_u</span> and <span class="math inline">\psi_d</span> , and that corresponds to the up and down as a two-component function.</p>
+<p>This multiplicity-two wave function corresponds to the <span class="math inline">+\frac{1}{2}</span> or <span class="math inline">-\frac{1}{2}</span> isospin projection onto the quantization axis, say <span class="math inline">I_3</span> , of the total isospin <span class="math inline">I = \frac{1}{2}</span> .</p>
+<ul>
+<li>As soon as you see one light quark, you are dealing with isospin <span class="math inline">\frac{1}{2}</span> .</li>
+<li>If you have two light quarks, then you deal with a system that has a combination of two <span class="math inline">\frac{1}{2}</span> spins that could be 1 or 0: <span class="math display">\frac{1}{2} \otimes \frac{1}{2} = 1 \oplus 0</span></li>
+</ul>
+<p>Answering this question is as easy as just counting the number of the light quarks. Here is one, has isospin one half. Here is one, has isospin one half. If you see two light quarks, then you have to think either it’s zero or one.</p>
+<p>So, one thing I’ve always found strange about this relation to the light quarks. Why don’t you have like an isospin for a heavier quark? You can have an internal group that relates.</p>
+<p>Now you’re asking, let me introduce the symmetry that acts in the space of the light quarks plus charm. Or let’s extend by one. Let’s say light quarks plus strange. But it has to include the lower quarks as well.</p>
+<p>Somehow looking at the charm quark over here. Charm quark, let’s say, or light… it’s a bit of a weird example anyways. Charm and strange. Fine, let’s consider.</p>
+<p>Is there a symmetry that relates charm and strange? Every wave function we would write and consider the dimension related to the charm and strange presence. The charm quark would be the upper component, the strange would be the lower component.</p>
+<p>And we would say this is a symmetry. The entire consideration is exactly the same as SU(2). The only problem is that our Lagrangian, our nature does not obey this symmetry because as soon as you change strange to charm, they don’t have equal masses.</p>
+<p>Therefore you sort of get a different world. The Lagrangian is not symmetric with respect to this symmetry. So the reason why we consider <span class="math inline">u</span> and <span class="math inline">d</span> quarks here as a part of the multiplet is because they have the same mass, <span class="math inline">m_u \approx m_d</span> .</p>
+<p>And if you change <span class="math inline">u</span> to <span class="math inline">d</span> , nothing happens with the Lagrangian. Sort of… there is a mass difference, right? Both of them are almost zero. Six MeV versus four MeV. So then people say, you know, like the strange quark is 100 MeV. 103, not that different.</p>
+<p>If you look at the scale of 1 GeV where QCD breaks, where the low-energy QCD changes the regime, maybe 100 MeV of this strange quark is not that different from the light quarks. So let’s consider the <span class="math inline">s</span> quark to be part of the same dimension.</p>
+<p>And then you could say, let’s introduce not an isospin, but a different quantity that reflects SU(3), that reflects the sort of place of the meson in the three-quark symmetry.</p>
+<p>And then we come back from the isospin to the diagram of the hypercharge versus isospin that was drawn last time. So then I could ask the same question: where in this hypercharge versus strangeness plane does this meson lie? And that would be a question that includes the strange quark into it.</p>
+<p>One could ask another question. One can include the charm quark. And people do this, say, well, the charm quark is still lighter than the top and bottom. Let’s just include it in the consideration of the symmetry.</p>
+<p>Let’s pretend that we live in a world where the charm quark, strange quark, and light quarks have the same mass and it’s low. Then every meson gets mapped into the three-dimensional point of the symmetry group.</p>
+<p>On one axis you have isospin, another axis you have strangeness, on yet another axis you have charmness. And then all these mesons get their place in this three-dimensional symmetry pattern.</p>
+<p>Symmetry tells you that the <span class="math inline">D^+</span> meson is almost the same as the <span class="math inline">D^0</span> meson because the only difference between them is the light quark, and light quarks are part of the multiplet. So <span class="math inline">D^+</span> and <span class="math inline">D^0</span> are the same particle with respect to the strong interaction.</p>
+<p>That’s what isospin symmetry tells you. Also that particle would be the same as yet another one with respect to the strong interaction. And please tell me which one.</p>
+<p>This particle has, since its isospin is <span class="math inline">\frac{1}{2}</span> , it has a brother or sister, which one? Not in the last row. We are talking about light quarks and I’m saying that replacing light quark <span class="math inline">u</span> to light quark <span class="math inline">d</span> does not change the particle properties.</p>
+<p>That’s the claim of the isospin symmetry. So if you replace a <span class="math inline">u</span> quark to a <span class="math inline">d</span> quark, I’m going to have particles with almost identical properties. Same mass, charge… we don’t care because it’s not a quantity that QCD cares about, it’s electromagnetic interaction, but same mass, similar width, similar interactions with other particles, similar decay modes.</p>
+<p>Even in the Particle Data Group, sometimes we don’t separate them into different nodes; they are in the same node. We kind of understand, it’s understood in the field that particles that differ by the presence of <span class="math inline">u</span> and <span class="math inline">d</span> by the isospin, they are not that different, they are the same particle.</p>
+<p>So if I’m asking for the brother of this, you say well replace <span class="math inline">u</span> to <span class="math inline">d</span> and then you have another particle. Which one will it be? I have a question. Would that be the same case for <span class="math inline">D^+</span> and anti- <span class="math inline">u</span> ? So would I have three other options in that case? Very good.</p>
+<p>So yet another symmetry that we have not considered here is making an antiparticle. And then from this it will be <span class="math inline">D^-</span> which has a <span class="math inline">\bar{c} d</span> , and for the other one it will be <span class="math inline">\bar{D^0}</span> which is <span class="math inline">\bar{c} u</span> .</p>
+<ul>
+<li><strong>Particle to antiparticle symmetry</strong> (charge conjugation <span class="math inline">C</span> ) is even better than isospin symmetry.</li>
+<li><strong>Isospin symmetry</strong> breaks a little bit by the quark masses and by their charges. Someone said <span class="math inline">u</span> quark is not the same mass as <span class="math inline">d</span> quark. Yes, there is a little difference and that’s what makes this symmetry not exact.</li>
+</ul>
+<p>The <span class="math inline">D^+</span> and <span class="math inline">D^0</span> are not exactly the same particles, but they have similar properties. While <span class="math inline">D</span> and <span class="math inline">\bar{D}</span> are so similar to each other that we don’t even talk about them separately unless we measure tiny effects in the standard model like CP violation.</p>
+<p>So charge conjugation is a super good symmetry and we will not discuss that much of charge conjugation because deviations from the property of a particle and its antiparticle are tiny. And they are addressed in the BSM studies, beyond standard model.</p>
+<p>But deviation between <span class="math inline">D^+</span> and <span class="math inline">D^0</span> is an interesting question. This is related to the electromagnetic interactions and the different masses of quarks: <strong>isospin breaking effects</strong>.</p>
+</section>
+<section id="isospin-partners-and-symmetry-breaking-in-d-mesons" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="isospin-partners-and-symmetry-breaking-in-d-mesons"><span class="header-section-number">3</span> Isospin Partners and Symmetry Breaking in D Mesons</h2>
+<p>To finish, I would like to identify the isospin partner in the multiplet. Let’s start with the quark content, and then we can name it.</p>
+<p>The charm mesons form an isospin doublet. Their quark content is <span class="math inline">c\bar{d}</span> for the <span class="math inline">D^+</span> and <span class="math inline">c\bar{u}</span> for the <span class="math inline">D^0</span> : <span class="math display">\begin{pmatrix} D^+ \\ D^0 \end{pmatrix} = \begin{pmatrix} c\bar{d} \\ c\bar{u} \end{pmatrix}</span></p>
+<p>The name is the same for particles within the same isospin multiplet. If the symmetry were exact, their properties would be identical, leading to: <span class="math display">m_{D^+} \approx m_{D^0}</span></p>
+<p>In your homework, you will see a display of this principle. You will also see an example where <strong>isospin breaking</strong> is strong, which results in completely different decay modes for the <span class="math inline">D^+</span> and <span class="math inline">D^0</span> .</p>
+<p>Isospin symmetry is broken only <strong>hardly in observable quantities</strong>. On the level of quantum couplings, it actually holds very well. The primary reason for the breaking is the mass difference.</p>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>The breaking is driven by the small quark mass difference: <span class="math display">\Delta m_q = m_d - m_u</span><br>
+This slight difference in constituent quark masses (e.g., <span class="math inline">m_u \approx 338 \text{ MeV}, m_d \approx 322 \text{ MeV}</span> ) can sometimes lead to huge deviations in observables like decay widths.</p>
+</div>
+</div>
+</div>
+<p>Although the fundamental couplings ( <span class="math inline">|\mathcal{M}|^2</span> ) are similar, the <strong>phase space</strong> available for decays can differ significantly. The decay width is given by: <span class="math display">\Gamma \propto |\mathcal{M}|^2 \times \Phi</span><br>
+where <span class="math inline">\Phi</span> is the phase space factor, which is highly sensitive to small mass differences between the initial and final states.</p>
+</section>
+<section id="spin-addition-and-quantum-number-combinations" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="spin-addition-and-quantum-number-combinations"><span class="header-section-number">4</span> Spin Addition and Quantum Number Combinations</h2>
+<p>One curious fact if you look at any LHCb paper is a standard sentence on the first page. It states that charge-conjugated processes are not listed explicitly, but it is assumed every time we write in our papers. For example, when we write <span class="math inline">B \to D \mu \nu</span> , we assume the charge-conjugated sample was analyzed simultaneously, and we do not even discuss it separately.</p>
+<p>The reason for this is that analyzing one charge and the other addresses the same physics. There is no difference. We combine them and forget about charges, hence the note about charge-conjugated fractions on the first page of every paper. The properties of charge-conjugated mesons are homogeneous. We might revisit this when discussing deviations from the Standard Model and CP violation, if we get to it. But that is the first point done.</p>
+<p>Let us quickly discuss the second question. It is easier to address from the final state. You see two vector states; you add them and ask what possible configurations exist. What is the possible length of a vector you can make with one stick one meter long and another stick one meter long? We have vector one with spin <span class="math inline">S = 1</span> and vector two with spin <span class="math inline">S = 1</span> . You are going to add them.</p>
+<p>The three possible configurations—since spin is quantized in units of 1—are <span class="math inline">S = 0</span> , <span class="math inline">S = 1</span> , and <span class="math inline">S = 2</span> . This is one of the things I hope you will learn from this course: how to add spins. We will practice this every lecture until you understand. We combine these two vectors and can have a total spin combination of zero, a spin combination of one, or a total spin combination of two.</p>
+<p>Here I have <span class="math inline">J_{V1}</span> and <span class="math inline">J_{V2}</span> . They interact with each other. If I consider them together, I can have a total <span class="math inline">J</span> . On one side of a table, I draw their individual quantum numbers. On the other side is the total <span class="math inline">J</span> . The parity is multiplicative when you combine them with zero orbital angular momentum. They do not rotate relative to each other. You just take one, take the second, put them together, and look at the total <span class="math inline">J</span> . You have <span class="math inline">J^P = 0^+</span> , <span class="math inline">1^+</span> , <span class="math inline">2^+</span> . This is called the <span class="math inline">L = 0</span> s-wave.</p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Key Formula: Total Spin Addition</strong> For two particles with spins <span class="math inline">\vec{S}_1</span> and <span class="math inline">\vec{S}_2</span> , the total spin <span class="math inline">\vec{S}</span> is given by <span class="math inline">\vec{S} = \vec{S}_1 + \vec{S}_2</span> . The possible quantum numbers for <span class="math inline">S</span> range from <span class="math inline">|S_1 - S_2|</span> to <span class="math inline">S_1 + S_2</span> in integer steps. For two spin-1 particles: <span class="math inline">S = 0, 1, 2</span> .</p>
+</div>
+</div>
+</div>
+<p>Now we start adding orbital angular momentum. This produces another set of quantum numbers. Orbital angular momentum is easier to address by looking only at the left part and stating that every configuration spans a ladder of states: for <span class="math inline">L = 0</span> , <span class="math inline">L = 1</span> , <span class="math inline">L = 2</span> . I will draw in the rows of the table what is possible.</p>
+<p>Let me start with the <span class="math inline">0^+</span> total combination and add one unit of orbital angular momentum, <span class="math inline">L = 1^-</span> . This means multiplying this <span class="math inline">0^+</span> or adding to it the vector <span class="math inline">1^-</span> . I add <span class="math inline">1^-</span> to <span class="math inline">0^+</span> and get <span class="math inline">1^-</span> . Now these two are trickier because I have one meter stick and another meter stick together. You have three spin combinations: <span class="math inline">S = 0, 1, 2</span> . They will have a parity of minus. Here I have another three combinations: <span class="math inline">J = 1, 2, 3</span> . This is called the P-wave.</p>
+<p>The last one is the D-wave, which I will consider. We can continue to F-wave, G-wave, and so on. For this project, I probably need the F-wave. Yes, because there will be one. We call it F-wave. The way I address it is by looking again only at the first row, not the second, and adding two units of orbital angular momentum, <span class="math inline">L = 2^+</span> . The parity for orbital angular momentum is given by <span class="math inline">(-1)^L</span> . So we have <span class="math inline">0^+</span> , <span class="math inline">1^-</span> , <span class="math inline">2^+</span> , <span class="math inline">3^-</span> , <span class="math inline">4^+</span> , <span class="math inline">5^-</span> .</p>
+<ul>
+<li>Starting with <span class="math inline">0^+</span> , I add <span class="math inline">L = 2^+</span> and get <span class="math inline">2^+</span> .</li>
+<li>Adding it to <span class="math inline">S = 1</span> , I have to think a little. I bring another vector of length two and add. What can I get? The minimum is when they subtract: <span class="math inline">|1-2| = 1</span> . The maximum is <span class="math inline">1+2 = 3</span> . All integer steps are allowed. So possible <span class="math inline">J</span> are 1, 2, 3.</li>
+<li>Now for <span class="math inline">S = 2</span> and <span class="math inline">L = 2</span> : I need help. Here I have a vector of length two and I add two units of orbital angular momentum. What are the possible configurations? The minimum is <span class="math inline">|2-2| = 0</span> . The maximum is <span class="math inline">2+2 = 4</span> . All of them will have parity plus.</li>
+<li>For the F-wave, I bring an even longer stick, <span class="math inline">L = 3^-</span> . Again, I look at the first row. It will give <span class="math inline">J = 1, 2, 3, 4, 5</span> for the last one, all with parity minus.</li>
+</ul>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Key Formula: Total Angular Momentum with Parity</strong> When including orbital angular momentum <span class="math inline">\vec{L}</span> , the total angular momentum <span class="math inline">\vec{J}</span> is <span class="math inline">\vec{J} = \vec{L} + \vec{S}</span> . The possible <span class="math inline">J</span> values range from <span class="math inline">|L - S|</span> to <span class="math inline">L + S</span> .</p>
+<p>The total parity <span class="math inline">P</span> for a system of two particles with intrinsic parities <span class="math inline">P_1</span> and <span class="math inline">P_2</span> is <span class="math inline">P = P_1 P_2 (-1)^L</span> . For two vector mesons (each with parity <span class="math inline">-1</span> ) and <span class="math inline">L = 0</span> : <span class="math inline">P = (-1)(-1)(-1)^0 = +1</span> , giving the s-wave states <span class="math inline">J^P = 0^+, 1^+, 2^+</span> .</p>
+</div>
+</div>
+</div>
+<p>Now look at what decays. First, that is the basic thing. Knowing that you can combine any particles with any spin and any orbital angular momentum, you can figure out the possible quantum numbers: total spin and orbital angular momentum for any <span class="math inline">J^P</span> I give you. Just learn how to fill this table, how to construct it from the combination of the two quantum numbers. Then you know how to deal with spin.</p>
+<p>The next step is we look at what is decaying and try to identify within this table what decays. I look at this list, and one that decays is <span class="math inline">1^-</span> . I have it here, here, here, and here. So four combinations. The answer to this question: it decays into two. Let me remove identical particles, because identical makes it more difficult. There is also the rule that two identical particles cannot be in certain configurations of <span class="math inline">S</span> . I already mentioned it. We will come back to this identical particle point at some point.</p>
+<p>But identical particles will make this and this forbidden. For <span class="math inline">L = 3</span> and the two you showed, I think I remember that <span class="math inline">L + S</span> must be even for identical bosons. So <span class="math inline">3 + 2</span> is odd. Two plus this is odd. This is why only one remains. So it will be only one state for identical particles, and four combinations for non-identical particles.</p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Selection Rule for Identical Particles</strong> For two identical bosons, the total wavefunction must be symmetric under exchange. This imposes the condition <span class="math inline">(-1)^{L+S} = +1</span> , restricting combinations to those where <span class="math inline">L + S</span> is even. For example, if <span class="math inline">L = 1</span> and <span class="math inline">S = 2</span> , then <span class="math inline">L + S = 3</span> (odd) is forbidden.</p>
+</div>
+</div>
+</div>
+<p>All right, second question. You read this and realize you need to draw a table like this, quickly fill it—it is super easy—and then identify what is the stable one. That is it. Questions? I promise this is a super skill you learn so that you never have trouble with combination numbers.</p>
+</section>
+<section id="probing-hadron-structure-with-electromagnetic-scattering" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="probing-hadron-structure-with-electromagnetic-scattering"><span class="header-section-number">5</span> Probing Hadron Structure with Electromagnetic Scattering</h2>
+<p>To understand the structure of hadrons, you need to study a standard, well-understood probe: a well-understood current insertion into the hadron.</p>
+<p>In order to study strong interactions and how hadrons are organized inside, we will look at the electromagnetic interaction. We will scatter an electron off a proton and see how this reaction behaves in the phase space of the kinematic variables.</p>
+<p>The reason is that on the side of the electron there is nothing interesting or complex. The electron is a point-like particle. It interacts with the electromagnetic field of the proton and scatters off. That’s super well understood on the electron side of the reaction.</p>
+<p>The process looks more interesting on the proton side. The electric charge that the electron sees originates from the proton charge if the interaction has a very low momentum transfer, <span class="math inline">Q^2</span> . But then, for high <span class="math inline">Q^2</span> , this current—this electron—starts feeling the charge of the quarks and the properties of the quarks inside the proton, instead of just the bare proton outer field.</p>
+<p>So the problem here is like a large cucumber that you get smashed with the electromagnetic current. First, if the field the electron feels, or the transferred momentum <span class="math inline">Q^2</span> in this reaction, is small, you get the characteristics of the proton itself. (see <a href="#fig-fg1" class="quarto-xref">Figure&nbsp;2</a>) But then, if you go to the regime of high transferred momentum, where a lot of energy is taken from the proton, you start seeing internals. You can look at this regime by the scattering angle <span class="math inline">\theta</span> of the electron, where <span class="math inline">Q^2 = 4 E E' \sin^2(\theta/2)</span> . That’s the idea behind <strong>deep inelastic scattering</strong>.</p>
+<p>Large accelerator machines and facilities have been built to study that very process of scattering.</p>
+<p>Now the proposal. Essentially, the hadron physics program for the next 10 years promises to be more or less that. You will have an <strong>electron-ion collider</strong>, so-called. That’s what is largely discussed. Instead of the proton you will have heavier ions, like Carbon ions, and then you’ll scatter electrons and then study quantum chromodynamics.</p>
+<p>In this process there is a lot to understand about the proton. It’s not just an object that I draw, but there are quarks, there are gluons, and they interact with each other. There are many dynamics, like they are also not static. They move.</p>
+<p>We have many dimensions you can imagine in the proton characteristics. What we understand more or less right is how these quarks inside the proton are distributed, what fraction <span class="math inline">x</span> of the proton momentum these quarks are carrying, as described by the sum rule:</p>
+<p><span class="math display">\sum_i \int_0^1 dx\, x f_i(x) = 1</span></p>
+<p>This is the <strong>proton momentum sum rule</strong>, where <span class="math inline">f_i(x)</span> are the parton distribution functions (PDFs).</p>
+<p>What we don’t understand is what is the perpendicular fluctuation. The problem goes in one direction. Part of its momentum is carried by the quarks. But what’s happening off the axis, the <strong>transverse momentum</strong>, is something not well understood. That’s one of the key questions that people want to address by studying further these days.</p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Key Kinematics of Deep Inelastic Scattering (DIS):</strong></p>
+<ul>
+<li>The <strong>four-momentum transfer squared</strong>, <span class="math inline">Q^2 = -(k - k')^2</span> , sets the resolution scale of the probe. High <span class="math inline">Q^2</span> lets the electron resolve internal quark structure.</li>
+<li>The <strong>Bjorken scaling variable</strong>, <span class="math inline">x = Q^2 / (2p \cdot q)</span> , represents the fraction of the proton’s momentum carried by the struck quark in the parton model.</li>
+<li>The scattering probability is described by structure functions <span class="math inline">F_1(x, Q^2)</span> and <span class="math inline">F_2(x, Q^2)</span> in the <strong>DIS cross section formula</strong>. For spin-1/2 quarks, these are related by the <strong>Callan–Gross relation</strong>: <span class="math inline">F_2(x) = 2x F_1(x)</span> .</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="mandelstam-variables-and-center-of-momentum-frame-quantities" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="mandelstam-variables-and-center-of-momentum-frame-quantities"><span class="header-section-number">6</span> Mandelstam Variables and Center-of-Momentum Frame Quantities</h2>
+<p>This reaction is about the motivation to study it. But what are our observables essentially? A 2-to-2 reaction is very simple in terms of the observables.</p>
+<p>There is the total energy in the system, determined by the energy of the colliding beams, and then the scattering angle of the electron. Essentially that’s it.</p>
+<p>More familiar quantities would be the total energy and momentum in the system and the scattering angle in the center of mass frame, the center of momentum frame.</p>
+<p>But what are more natural and also very often used quantities? Our <strong>Mandelstam invariants</strong>, or <strong>Mandelstam variables</strong>, which are <span class="math inline">s</span> and <span class="math inline">t</span> .</p>
+<ul>
+<li><p>The variable <span class="math inline">s</span> is computed as the square of the sum of the four-momenta of the initial state particles: <span class="math display">s = (p_{\text{electron}} + p_{\text{proton}})^2</span><br>
+<strong>Physics meaning:</strong> <span class="math inline">s</span> is the square of the total center-of-mass energy. (see <a href="#fig-fg2" class="quarto-xref">Figure&nbsp;3</a>) In the CM frame, <span class="math inline">\sqrt{s}</span> equals the total energy <span class="math inline">E_{\text{total}}</span> .</p></li>
+<li><p>The variable <span class="math inline">t</span> is computed as the energy transfer from the initial to final state: <span class="math display">t = (p_{\text{electron}} - p_{\text{electron}'})^2</span><br>
+<strong>Physics meaning:</strong> <span class="math inline">t</span> is the squared four-momentum transfer from the initial to the final electron (related to the scattering angle). It represents the invariant momentum transfer in the process. For spacelike momentum exchange, it is often related to the positive definite <span class="math inline">Q^2</span> via <span class="math inline">Q^2 = -t</span> .</p></li>
+</ul>
+<p>So here you have electron prime, here I have electron. The difference of the four-momenta gives <span class="math inline">t</span> , so that I can convince you that these two quantities are related. I can write this quickly in the center of momentum frame. This is <span class="math inline">E_{\text{electron}}</span> , <span class="math inline">E_{\text{electron}} + E_{\text{proton}}</span> . (see <a href="#fig-fg2" class="quarto-xref">Figure&nbsp;3</a>) The star indicates that it’s talking in the rest frame.</p>
+<p>In that frame, <span class="math inline">\mathbf{p}_{\text{electron}}^{\star} = -\mathbf{p}_{\text{proton}}^{\star}</span> . And <span class="math inline">\sqrt{s}</span> is equal to <span class="math inline">E_{\text{total}}</span> . Essentially, <span class="math inline">\sqrt{s} = E_{\text{total}}</span> .</p>
+<p>So the variable <span class="math inline">t</span> we compute a slightly different way: <span class="math inline">t = (p_e - p_{e'})^2</span> . What I’ve done here is to explicitly write this in the components.</p>
+<p>The square of the difference of the four-vectors: the first four-vector squared gives the mass, the second four-vector squared gives the mass, and then twice the product, the scalar product of the two four-vectors.</p>
+<p>I compute by multiplying energies and then subtracting the scalar multiplication of the vectors: <span class="math display">t = m_e^2 + m_e^2 - 2(E_e E_{e'} - |\mathbf{p}_e||\mathbf{p}_{e'}|\cos\theta_{\text{CM}})</span></p>
+<p>And this is just absolute values squared, product of the absolute values and the cosine of the angle. Super straightforward.</p>
+<p>But one thing to realize is that in the center of momentum frame all of these quantities are expressed in terms of <span class="math inline">s</span> . So for example, the momentum <span class="math inline">|\mathbf{p}_e|</span> .</p>
+<p>And that you find by other algebra, by e.g.&nbsp;writing <span class="math inline">s</span> as the proton plus electron squared. That’s not what you want.</p>
+<p>You want to write <span class="math inline">\sqrt{s} = E_{\text{proton}} + E_{\text{electron}}</span> . So the <span class="math inline">\mathbf{p}_{\text{proton}}</span> , <span class="math inline">\mathbf{p}_{\text{electron}}</span> is equal to…</p>
+<p>The magnitude of the momentum <span class="math inline">p_{\text{CM}}</span> in the CM frame is given by the <strong>breakup momentum</strong>: <span class="math display">p_{\text{CM}} = \frac{\sqrt{[s - (m_p + m_e)^2][s - (m_p - m_e)^2]}}{2\sqrt{s}}</span></p>
+<p>Then you get the electron energy that you have here: <span class="math display">E_e^{\text{CM}} = \frac{s + m_e^2 - m_p^2}{2\sqrt{s}}</span></p>
+<p>And in a similar way you get the momentum. Momentum is the square root of the energy squared minus the mass squared.</p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>The breakup momentum formula <span class="math inline">p_{\text{CM}}</span> is sometimes called the <strong>Chew function</strong>. It appears in phase-space calculations, particularly for two-body final states.</p>
+</div>
+</div>
+</div>
+<p>This expression is a Chew function because… Have you seen the Chew function before? The breakup momentum and the… When you calculate the phase space, I think the Chew function shows up. Phase space, two-body phase space.</p>
+</section>
+<section id="kinematics-of-elastic-scattering-and-the-role-of-q2" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="kinematics-of-elastic-scattering-and-the-role-of-q2"><span class="header-section-number">7</span> Kinematics of Elastic Scattering and the Role of <span class="math inline">Q^2</span></h2>
+<p>One more thing to add for kinematics: let’s look once again at the variables.</p>
+<p>The total energy is fixed by the beam of colliding particles. The scattering angle is something we measure.</p>
+<p>Knowing the total energy, we know <span class="math inline">s</span> . Knowing the scattering angle, we know through the kinematic relation that we can determine <span class="math inline">t</span> . In such an elastic scattering process, a common variable we encounter is <span class="math inline">Q^2</span> , defined as (see <a href="#fig-fg2" class="quarto-xref">Figure&nbsp;3</a>)</p>
+<p><span class="math display">Q^2 = -t .</span></p>
+<p>This definition comes from the fact that, at high energies, the dominant mechanism is an electron passing through and interacting with the target.</p>
+<p>So <span class="math inline">t</span> , or equivalently <span class="math inline">Q^2</span> , is called the <strong>transferred momentum squared</strong>. This is the quantity that actually governs the physics—in fact, it is the only non‑trivial dynamical variable in the process.</p>
+<p>The beam energies of the colliding particles are fixed; that is what we adjust in our accelerator. (see <a href="#fig-fg4" class="quarto-xref">Figure&nbsp;5</a>) The only thing we measure is the angular distribution.</p>
+<p>A bunch of electrons passes through a bunch of protons. If an interaction occurs, electrons change their trajectory—they scatter.</p>
+<p>Before the interaction they fly in one direction; afterward their angle changes. <strong>The change in angle tells us everything:</strong> it reveals what happened inside the process and what momentum was exchanged.</p>
+<p>You might wonder why the minus sign in <span class="math inline">Q^2 = -t</span> is so crucial. For elastic scattering kinematics, if you examine the expression for <span class="math inline">t</span> , you find that <span class="math inline">t</span> is always negative—the transferred momentum is always <strong>space‑like</strong>.</p>
+<p>That means the square of this four‑momentum transfer is negative. We can see this quickly in the lab frame with a fixed target: <span class="math inline">t</span> is always negative.</p>
+<p>That is why physicists prefer to use a positive quantity, <span class="math inline">Q^2 = -t</span> .</p>
+<p><span class="math inline">Q^2</span> is fixed by the scattering angle. This defines in what <strong>regime</strong> the reaction occurs:</p>
+<ul>
+<li>If <span class="math inline">Q^2</span> is <strong>small</strong>, we have shallow electron scattering. The charge felt by the proton current characterizes the proton as a whole—its charge distribution, not its internal partonic content.</li>
+<li>If <span class="math inline">Q^2</span> is <strong>large</strong>, we begin to probe internal structure.</li>
+</ul>
+<p>Thus we can quickly realize: (see <a href="#fig-fg4" class="quarto-xref">Figure&nbsp;5</a>)</p>
+<ul>
+<li>Small <span class="math inline">Q^2</span> → small scattering angles.</li>
+<li>Large <span class="math inline">Q^2</span> → large scattering angles.</li>
+</ul>
+<p>If you want to become sensitive to the quarks inside the proton, you must look at events where scattering happened at a <strong>large angle</strong>. If you are interested in the charge distribution, charge radius, and overall characterization of the proton, you look at <strong>small‑angle scattering</strong>.</p>
+<p>We will discuss two quantities that are characterized by small‑angle scattering:</p>
+<ol type="1">
+<li><strong>The charge radius of the proton</strong> – how the proton appears as a cloud of charge when viewed from a distance. A good approximation for the proton’s charge distribution is an exponential form:</li>
+</ol>
+<p><span class="math display">\rho(r) \propto e^{-r/R},</span></p>
+<p>where <span class="math inline">R</span> is the charge radius.</p>
+<ol start="2" type="1">
+<li><strong>The magnetic moment</strong> – how a particle behaves in a magnetic field, or how it interacts with a magnetic field. If a particle has a magnetic moment <span class="math inline">\vec{\mu}</span> , placing it in a magnetic field <span class="math inline">\vec{B}</span> produces an extra force. This appears as an additional term in the Hamiltonian:</li>
+</ol>
+<p><span class="math display">\Delta E = -\vec{\mu} \cdot \vec{B}.</span></p>
+<p>For example, in a hydrogen atom placed in a magnetic field, the energy levels split (Zeeman splitting) because of the magnetic moment and the finite charge radius.</p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Key kinematic relations</strong></p>
+<ul>
+<li><p><span class="math inline">s = (p_1 + p_2)^2</span> is the fixed center‑of‑mass energy squared.</p></li>
+<li><p><span class="math inline">t = (p_1 - p_3)^2</span> is the momentum‑transfer squared (always negative for elastic scattering).</p></li>
+<li><p>In the lab frame, <span class="math inline">Q^2</span> relates to the scattering angle <span class="math inline">\theta</span> via <span class="math display">Q^2 = 4 E E' \sin^2(\theta/2),</span><br>
+linking large <span class="math inline">Q^2</span> to large angles.</p></li>
+<li><p>Small <span class="math inline">Q^2</span> probes the extended charge cloud (exponential <span class="math inline">\rho(r)</span> ); large <span class="math inline">Q^2</span> resolves internal quark structure.</p></li>
+</ul>
+</div>
+</div>
+</div>
+<p>We have discussed these points.</p>
+</section>
+<section id="cross-section-and-phase-space-in-scattering-processes" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="cross-section-and-phase-space-in-scattering-processes"><span class="header-section-number">8</span> Cross Section and Phase Space in Scattering Processes</h2>
+<p>Before moving to the details, let’s relate quantum process observables with something that we measure in experiment. For that, let me introduce the <strong>cross section</strong>.</p>
+<p>It’s another key equation in this course: how to compute the cross section, the differential cross section, in terms of the matrix element of the reaction. You can think of the square of the matrix element, <span class="math inline">|\mathcal{M}|^2</span> , as something that gives you the probability of a reaction happening at a certain kinematic point.</p>
+<p>The cross section, if you measure it integrated over the whole kinematic domain, would be given by the matrix element squared summed over this domain and then the number of phase space configurations. The phase space, you can think of as the number of configurations in which the reaction can happen. It’s rather intuitive.</p>
+<p>In order to calculate the total probability you need to sum over all possible configurations. That configuration for the spins when you deal with discrete indices is a super intuitive concept. But when you deal with the kinematic manifold, it’s less intuitive because the space is continuous.</p>
+<p>An example you see here: one of the variables that defines the final state is <span class="math inline">\theta</span> , the scattering angle. This is a continuous variable. If you want to calculate the total cross section, you have to sum over all possible <span class="math inline">\theta</span> s. It turns out to be an integral over <span class="math inline">\theta</span> . So that’s what phase space takes care of: it sums over possible configurations.</p>
+<p>Then there is a <strong>flux factor</strong>, which determines the normalization of the wave function so that your wave packets of the colliding particles are attributed correctly in the cross section. The flux factor is the simplest thing; it’s the <span class="math inline">2E_1 2E_2 |v_1 - v_2|</span> kinematic factor. Just put the right energies and velocities and then you have the flux.</p>
+<p>The phase space is slightly trickier, but it’s a standard expression. Phase space presents an integral over all possible configurations in continuous space.</p>
+<p>For each particle in the final state you have a phase space with <span class="math inline">n</span> particles. For every particle you want to write something like <span class="math inline">\frac{d^4p}{(2\pi)^4} 2\pi \delta(p^2 - m^2)</span> . Every particle should be <strong>on mass shell</strong> (on-shell means energy and momentum are correlated with each other, <span class="math inline">p^2 = m^2</span> ).</p>
+<p>So you have an integral over all energy and momentum with the energy-momentum conservation. That 4-vector squared should give a mass squared. One can demonstrate that. Here is the energy-momentum conservation.</p>
+<p>Phase space is nothing else but the continuous version of the counting of possible configurations. It’s very easy—well, not once you’ve done this a couple of times. It’s easy for the two-body phase space, a little bit trickier for the three-body phase space, and gets rather complicated for four-body, five-body. But it’s always a standard integral.</p>
+<p>We compute this numerically if we need to. But for two-body there was a classwork to compute this. We will meet this expression very often. That’s why I will give the expression for two-body.</p>
+<p>Let’s first count the number of variables. You see that every delta function gives the energy-momentum constraint that I can remove by taking the differential. So you can count the number of the <span class="math inline">d</span> ’s that appear. This is the number of the variables I have to integrate. But then you subtract the number of constraints, because every constraint I can satisfy by removing one of the integration variables. That’s how the math of the delta functions works.</p>
+<p>So let’s count for the two-body: how many <span class="math inline">d</span> ’s I have, how many dimensions in my integral before I remove constraints? <strong>Six</strong>. Now minus four constraints from energy-momentum conservation. <strong>Two</strong>. So if I proceed wisely, I should be able to trade every one of these constraints for one of the differentials.</p>
+<p>At the end I can proceed by removing constraints, not actually doing integrals, but just trading constraints for the differentials. Then at the end I am left with two degrees of freedom.</p>
+<p>So the expression, if I do this, is:</p>
+<p><span class="math display">d\Phi_2 = \frac{1}{8\pi} \frac{\lambda^{1/2}(s, m_1^2, m_2^2)}{s} \frac{d\cos\theta \, d\phi}{4\pi}</span></p>
+<p>where <span class="math inline">\lambda(s, m_1^2, m_2^2) = [s - (m_1 + m_2)^2] [s - (m_1 - m_2)^2]</span> is the <strong>Källén triangle function</strong>.</p>
+<p>It’s a great exercise because it’s totally analytic and it’s a very nice answer. This has a lot of properties inside this expression. I really recommend everyone to do this three times: do it once, put it aside, do it a second time, you do it a third time, and then you understand it.</p>
+<p>So the way how to trade these delta functions and the differentials and how to receive this expression. This expression has two differentials remaining and this is an integral over the phase space over the spherical angles.</p>
+<p>When we do <strong>2-to-2 scattering</strong>, I said that there is one variable that determines the scattering. But I didn’t tell you that there is yet another one of rotation around the axis: the particles collide and then, in case you don’t have any polarization, if the initial and final states are not polarized, your matrix element squared does not depend on this azimuthal rotation.</p>
+<p>That’s why <span class="math inline">\phi</span> here can be safely ignored. You have a z-axis, you have an x-axis here, you have a y-axis here. Your colliding particles: here is the electron, here is the scattered electron. Between the z-axis and the electron you have a <span class="math inline">\theta</span> angle. The projection of this electron prime to the XZ plane gives you the <span class="math inline">\phi</span> angle that is immutable. So that’s <span class="math inline">\phi</span> rotation.</p>
+<p>If there is no spin external directions, there is no dependence on <span class="math inline">\phi</span> , like in this expression, the matrix element does not depend on <span class="math inline">\phi</span> . If you want to calculate the total integral here for the cross section, total cross section, we just get rid of this and replace this with <span class="math inline">2\pi</span> . Because the <span class="math inline">\phi</span> integral is equal to <span class="math inline">2\pi</span> .</p>
+<p>What is non-trivial is the <span class="math inline">\cos\theta</span> . And that’s the whole physics. The <span class="math inline">\cos\theta</span> is related to the <span class="math inline">Q^2</span> and that gives you sensitivity to the structure of the proton.</p>
+<p>What you see here is a kinematic factor. It tells you the number of the configurations for a certain energy. If you have a little energy release, if you have an energy very small, like if your energy of the beam is very small, the number of configurations is sort of small.</p>
+<p>This is sort of a non-relativistic effect that if you would count non-relativistically, the number of degrees of freedom is only given by the number of the configurations. Sort of show it: first configuration, second configuration. This outgoing particle: first configuration, second configuration, third configuration. So overall you get <span class="math inline">4\pi</span> configurations.</p>
+<p>But if you take into account that particles are relativistic, then you end up with this factor which is the suppression of the phase space close to the threshold as a function of the energy. This vanishes when energy is equal to the masses of the particles. If your energy of the system is very close to the threshold, your phase space is zero, is very small. Not surprising.</p>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>The differential cross section formula that combines these elements is: <span class="math display">d\sigma = \frac{1}{4E_1 E_2 |v_1 - v_2|} \times |\mathcal{M}|^2 \times d\Phi_n</span><br>
+This relates the measurable cross section to the square of the matrix element <span class="math inline">|\mathcal{M}|^2</span> (the transition probability), the flux factor, and the Lorentz-invariant phase space <span class="math inline">d\Phi_n</span> for the final state.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="matrix-element-in-scattering-theory" class="level2" data-number="9">
+<h2 data-number="9" class="anchored" data-anchor-id="matrix-element-in-scattering-theory"><span class="header-section-number">9</span> Matrix Element in Scattering Theory</h2>
+<p>We discussed this in scattering.</p>
+<p>Now let me quickly tell you what the <strong>matrix element</strong> is. The matrix element you see there is a key input to the reactions. That is something we gain either from a theory of interaction, from which we can derive it, or, if we don’t have a theory—as is often the case in hadron physics—we can use general principles to come up with it.</p>
+<p>For <strong>electromagnetic processes</strong>, we do have a theory: <strong>QED plus QCD</strong>. We know how to write an expression that, when squared and summed over final states and averaged over initial states, gives a mathematical form we can plug in and compare to experiment.</p>
+<p>I also know this expression can only depend on one variable, which is one in two: the energy of the beam and another one. The matrix element is defined in the domain of my <strong>phase space</strong> variables. The phase space, as we just discussed, is a function of two variables, defined by <span class="math inline">\theta</span> . Once I consider the <strong>unpolarized case</strong>, I don’t have a <span class="math inline">\phi</span> dependence, so only <span class="math inline">\theta</span> remains.</p>
+<p>Therefore, the matrix element in our case will be a function of the <strong>scattering angle</strong>. Of course, it will also depend on the total energy, but this is fixed by the energy of the colliding particles.</p>
+<p>This mathematical expression is complex and is defined in field theory in a formal way as part of the <strong>scattering matrix</strong>. You have initial states asymptotically brought to minus infinity in time and a final state with non-interacting particles at <span class="math inline">T = +\infty</span> . You then define the matrix element as the expectation of the interaction operator between the asymptotic initial state and the asymptotic final state.</p>
+<p>It is a complex function, which is important for us. It gives a real value once I take its absolute value squared and sum. So it is a complex function of the two variables <span class="math inline">s</span> and <span class="math inline">t</span> . In the case where <span class="math inline">s</span> is fixed, it is a complex function of one variable, <span class="math inline">t</span> .</p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>The differential cross section, which is the experimental observable, is directly related to this matrix element. It is proportional to the squared matrix element, <span class="math inline">|\mathcal{M}|^2</span> , multiplied by the Lorentz-invariant phase space factor. For unpolarized scattering at fixed center-of-mass energy <span class="math inline">s</span> , the matrix element <span class="math inline">\mathcal{M}</span> and thus the cross section depend only on the Mandelstam variable <span class="math inline">t</span> (related to the scattering angle).</p>
+</div>
+</div>
+</div>
+</section>
+<section id="form-factors-and-the-rosenbluth-formula" class="level2" data-number="10">
+<h2 data-number="10" class="anchored" data-anchor-id="form-factors-and-the-rosenbluth-formula"><span class="header-section-number">10</span> Form Factors and the Rosenbluth Formula</h2>
+<p>Let me write something you might have seen in field theory. I will not go through the details.</p>
+<p>In field theory, the way we approach scattering is by using perturbation theory. We do it order by order, expanding in the number of interactions. Every interaction of an electron with the current gives you a factor of <span class="math inline">\frac{1}{137}</span> . This is <span class="math inline">\alpha</span> , the electromagnetic fine-structure constant. That’s why you can do an expansion series: for example, a photon hitting an electron once versus a photon hitting an electron twice. Already the first term in this series gives a good bulk value of the total cross section.</p>
+<p>Therefore, we will consider the first-order interaction in the electromagnetic process. We write this in the following expression. Every order, every mathematical expression has its equivalent in terms of the cartoon Feynman diagrams. So here I draw the diagram like this. I have a rule in field theory for how to translate the diagram into the mathematical expression. I draw a diagram, put an arrow, make a notation, and then I immediately write the expression.</p>
+<p>Something here might not be familiar: these are <span class="math inline">F_1</span> and <span class="math inline">F_2</span> , the two form factors. These are two functions that are not given by the field theory and appear because the proton is not a point-like particle. <span class="math inline">F_1(q^2)</span> and <span class="math inline">F_2(q^2)</span> are form factors that characterize internal properties of the proton. If the proton were point-like, <span class="math inline">F_2</span> would be equal to 0, but it is not. That’s why we have to deal with them, introduce them, and actually measure them in experiment.</p>
+<ul>
+<li><span class="math inline">u</span> is a spinor.</li>
+<li><span class="math inline">\Gamma</span> is a gamma matrix.</li>
+<li>The thing I discussed last time is that <span class="math inline">\sigma^{\mu\nu}</span> is <span class="math inline">\frac{i}{2}[\gamma^\mu, \gamma^\nu]</span> , the commutation of the gamma matrices.</li>
+</ul>
+<p>It’s really important that you can identify the dimensionality and prove that the expression one writes has the dimensionality one expects. What is the dimensionality of the matrix element? Is it a tensor, is it a scalar? All objects that appear here are tensors. One has to see that all indices match. For example, this <span class="math inline">\mu</span> is contracted with this <span class="math inline">\mu</span> . This is a <span class="math inline">2 \times 2</span> matrix.</p>
+<p><span class="math inline">u</span> is a spinor with indices, but it’s contracted with a <span class="math inline">4 \times 4</span> matrix. So this is a scalar in the spinor indices, but it’s a vector in the Lorentz index. This is again a matrix, but then it’s contracted by vector and by row and column, and then this is again a scalar. This one index <span class="math inline">\mu</span> is the photon momentum. <span class="math inline">F_1</span> and <span class="math inline">F_2</span> are scalar functions.</p>
+<p>I can proceed and derive the cross section. How I deal with spinors you also learn in field theory. The way I proceed with this expression is I find the squared amplitude and then I do spin summation. There are tricks to get rid of these spinors.</p>
+<p>What I want to write is the final expression for the cross section. It’s called the <strong>Rosenbluth formula</strong>. From here to here there are many steps, and I hope you allow me to skip them and I send you to a field theory course. In the book of Peskin and Schroeder it’s derived step by step. It’s not in the Mark Thomson book, but they also give this expression. I think in the field theory course you’re also forced to do that.</p>
+<p>What I want to stress is the physics of it. What you recognize quickly is the <span class="math inline">\frac{1}{\sin^4(\theta/2)}</span> that comes from the <span class="math inline">\frac{1}{Q^2}</span> . <span class="math inline">Q^2</span> is proportional to <span class="math inline">\sin^2(\theta/2)</span> . Then <span class="math inline">1/Q^2</span> leads to the <span class="math inline">1/\sin^4(\theta/2)</span> . That’s a divergence for small angles. For very forward scattering, you have a very high dependence on <span class="math inline">\theta</span> , like <span class="math inline">1/\theta^4</span> . It’s not integrable; you have to do regularization.</p>
+<p><span class="math inline">E_1</span> and <span class="math inline">E_3</span> are the electron energies. One more equation that I missed is how <span class="math inline">G_E</span> and <span class="math inline">G_M</span> are related to <span class="math inline">F_1</span> and <span class="math inline">F_2</span> . For convenience, to make expressions at the end a little nicer, we replace the <span class="math inline">F</span> s with the <span class="math inline">G</span> s and then get this answer.</p>
+<div id="fig-fg9" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2025-Lecture-03-images/fig9.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;10: This figure illustrates the experimental technique used to extract the proton’s electric and magnetic Sachs form factors, <span class="math inline">G_E</span> and <span class="math inline">G_M</span> , from elastic electron-proton scattering data using the <strong>Rosenbluth separation</strong> method. On the vertical axis is the ratio of the experimentally measured differential cross section to the Mott cross section, <span class="math inline">\left( \frac{d\sigma}{d\Omega} \right)_{\mathrm{exp}} / \left( \frac{d\sigma}{d\Omega} \right)_{\mathrm{Mott}}</span> , which removes trivial kinematic factors and highlights the dependence on the proton’s internal structure. The horizontal axis is <span class="math inline">\tan^2(\theta/2)</span> , where <span class="math inline">\theta</span> is the electron scattering angle. At fixed four-momentum transfer squared ( <span class="math inline">Q^2</span> ), the Rosenbluth formula predicts a linear relationship between this cross section ratio and <span class="math inline">\tan^2(\theta/2)</span> , due to the separate contributions of <span class="math inline">G_E^2</span> (electric) and <span class="math inline">G_M^2</span> (magnetic) form factors to the angular dependence. The vertical intercept of the line is proportional to <span class="math inline">G_M^2</span> , and the slope is directly related to <span class="math inline">G_E^2</span> . By measuring the cross section at different scattering angles (i.e., for different values of <span class="math inline">\tan^2(\theta/2)</span> ) but at fixed <span class="math inline">Q^2</span> , one can extract the values of <span class="math inline">G_E</span> and <span class="math inline">G_M</span> for that <span class="math inline">Q^2</span> . This process provides information about the spatial distribution of charge and magnetization inside the proton, which are key experimental evidences that the proton is <strong>not point-like</strong> but possesses internal structure described by these form factors.
+</figcaption>
+</figure>
+</div>
+<p>That’s what people measure. From the <span class="math inline">Q^2</span> dependence of the <span class="math inline">G</span> functions, one gets a property of the proton.</p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>The Sachs form factors <span class="math inline">G_E</span> (electric) and <span class="math inline">G_M</span> (magnetic) are linear combinations of the Dirac ( <span class="math inline">F_1</span> ) and Pauli ( <span class="math inline">F_2</span> ) form factors. They are defined as: <span class="math display">G_E(Q^2) = F_1(Q^2) - \tau F_2(Q^2)</span><br>
+<span class="math display">G_M(Q^2) = F_1(Q^2) + F_2(Q^2)</span><br>
+where <span class="math inline">\tau = Q^2/(4M_p^2)</span> . These are the quantities directly measured in electron-proton scattering experiments.</p>
+</div>
+</div>
+</div>
+<p>I can say a few words next lecture on the extraction of the <span class="math inline">G</span> s because that’s a very nice experiment. There is a nice experimental technique for extracting these <span class="math inline">G</span> and <span class="math inline">F</span> quantities at small values of <span class="math inline">Q^2</span> .</p>
+<p>Let me show you something. The <span class="math inline">Q^2</span> dependence is in fact a dual variable to the spatial coordinate in the sense of the Fourier transformation. If you know the <span class="math inline">Q^2</span> dependence of these form factors, you can interpret this as the spatial distribution. These two are related by the Fourier transformation. Tell me how this depends on <span class="math inline">Q^2</span> , and I can relate this to how the proton charge is distributed over large distances in space.</p>
+<p>In fact, that’s what people do. They assume an exponential dependence on the spatial coordinate. Once you put exponential dependence here, you get a pole-like dependence. Here it’s called the <strong>dipole parameterization</strong>. You will see this in the homework. By measuring the <span class="math inline">Q^2</span> dependence, for example on the lattice or from experiment, we get the parameter of the spatial distribution.</p>
+<p>One of the questions that has been very hot in the field is: what is the charge radius of the proton? Many experiments have tried to measure this with various techniques. Lattice calculations are also trying to address that. One of the quantities you extract on the lattice when you do numerical computation of quantum chromodynamics from first principles is the <span class="math inline">Q^2</span> dependence. A Fourier transformation gives you the spatial distribution, and you get the charge radius.</p>
+</section>
+<section id="magnetic-moments-and-the-quark-model" class="level2" data-number="11">
+<h2 data-number="11" class="anchored" data-anchor-id="magnetic-moments-and-the-quark-model"><span class="header-section-number">11</span> Magnetic Moments and the Quark Model</h2>
+<p>This quantity is another interesting aspect. It is related to the <strong>magnetic moment</strong> of the hadron. I would like to discuss that quantity in the remaining time.</p>
+<p>What I would like to argue is that <span class="math inline">G_M(Q^2 = 0)</span> gives the magnetic moment. If you set <span class="math inline">Q^2 = 0</span> , you get a total integral of the magnetic current over the whole space. That gives you the <strong>total magnetic moment</strong> of the hadron.</p>
+<p>So, what is a magnetic moment? This is like the leading-order term you can derive. You can extend this to higher orders:</p>
+<ul>
+<li><strong>Next-to-leading order (NLO)</strong></li>
+<li><strong>Next-to-next-to-leading order (NNLO)</strong></li>
+</ul>
+<p>The corrections come from the electron side, which we know how to handle, and from the proton side.</p>
+<p>The expression involving the form factors <span class="math inline">F_1</span> and <span class="math inline">F_2</span> is the most general one you can write. While you could derive <span class="math inline">F_1</span> and <span class="math inline">F_2</span> at NLO, this is very challenging in physics and is typically not done. Instead, these functions are <strong>parameterized</strong>. We acknowledge that we cannot compute the detailed dynamics inside the interaction vertex (the “blob”), so we describe it with parameters.</p>
+<p>In practical physics, this parameterized interaction is what we call the <strong>magnetic moment</strong>. You may have seen this in quantum mechanics: the interaction part of the Hamiltonian is given by the product of the particle’s magnetic moment and the magnetic field. This affects the equations of motion, adds an extra energy term to the particle, and thus enters the Lagrangian.</p>
+<p>The magnetic moment for a <strong>point-like Dirac particle</strong> is given by: <span class="math display">\vec{\mu} = g \frac{e}{2m} \vec{S}</span><br>
+Here, <span class="math inline">\vec{S} = \frac{1}{2} \vec{\sigma}</span> is the spin operator for a fermion. The factor <span class="math inline">g</span> is the <strong>gyromagnetic ratio</strong>. For a point-like Dirac particle, <span class="math inline">g = 2</span> .</p>
+<p>This equation implies that for a <strong>neutral point-like particle</strong> (charge <span class="math inline">e=0</span> ), the magnetic moment would be zero.</p>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>What we actually measure for the proton and neutron provides solid evidence that they are <strong>not point-like particles</strong>. The experimental facts are quite telling:</p>
+<ul>
+<li>The magnetic moment of the <strong>neutron is not zero</strong>.</li>
+<li>The magnetic moment of the <strong>proton deviates from the point-like particle value</strong> ( <span class="math inline">g \neq 2</span> ).</li>
+<li>The ratio of the proton’s magnetic moment to the neutron’s is roughly <span class="math inline">-\frac{3}{2}</span> .</li>
+</ul>
+</div>
+</div>
+</div>
+<p>My hope was to demonstrate how this ratio arises in the <strong>quark model</strong>, but we will have to postpone that calculation to the next lecture.</p>
+<div id="fig-fg10" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2025-Lecture-03-images/fig10.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11: This figure illustrates the behavior of the electromagnetic form factors <span class="math inline">G_E</span> and <span class="math inline">G_M</span> for the proton and neutron as functions of the squared four-momentum transfer <span class="math inline">Q^2</span> . - The <strong>vertical axis</strong> represents the form factor value ( <span class="math inline">G</span> ), and the <strong>horizontal axis</strong> represents <span class="math inline">Q^2</span> , the momentum transfer squared. - The <strong>black curve</strong> labeled <span class="math inline">G_E^p</span> shows the electric form factor of the proton. It starts at <span class="math inline">G_E^p(Q^2 = 0) = 1</span> , reflecting the proton’s unit electric charge, and falls off with increasing <span class="math inline">Q^2</span> , demonstrating how the proton’s finite size affects the spatial distribution of its charge as probed by electron scattering. - The blue line labeled <span class="math inline">G_E^n</span> for the neutron starts at zero ( <span class="math inline">G_E^n(Q^2 = 0) = 0</span> ), consistent with the neutron’s lack of net electric charge. - The right side lists the <strong>measured values of the form factors at <span class="math inline">Q^2 = 0</span> </strong> for both proton and neutron: - <span class="math inline">G_E^p(0) = 1</span> (proton charge) - <span class="math inline">G_M^p(0) = 2.79</span> , which corresponds to the proton’s magnetic moment in nuclear magnetons ( <span class="math inline">\mu_p</span> ) - <span class="math inline">G_E^n(0) = 0</span> (neutron charge) - <span class="math inline">G_M^n(0) = -1.91</span> , corresponding to the neutron’s magnetic moment ( <span class="math inline">\mu_n</span> ) - The <strong>experimental significance</strong> highlighted in the lecture is: - For a <strong>point-like particle</strong>, you would expect a different result, especially for the neutron magnetic moment, which would be zero. - The nonzero and nontrivial values (especially for <span class="math inline">G_M</span> ) show that the proton and neutron are <strong>not point-like</strong>, but have internal quark substructure. The deviation of <span class="math inline">G_M^p</span> and <span class="math inline">G_M^n</span> from naïve Dirac theory is direct evidence of composite structure, and their absolute values are key benchmarks for the success of the quark model calculations. In summary, this figure visually connects the form factors measured in electron scattering to intrinsic hadron properties—electric charge and magnetic moment—and demonstrates the evidence that nucleons are composite objects made of quarks.
+</figcaption>
+</figure>
+</div>
+<p>The result is remarkable: the neutron has a non-zero magnetic moment, the proton’s <span class="math inline">g</span> -factor is not 2, and their ratio is approximately <span class="math inline">-3/2</span> . This ratio comes out exactly when you examine the flavor-spin wave function for the proton.</p>
+<p>The procedure is to:</p>
+<ol type="1">
+<li>Write the proton state as a composition of its quark wave functions.</li>
+<li>Act with the magnetic moment operator on the proton.</li>
+<li>Compute the proton’s magnetic moment in terms of the magnetic moments of its constituent quarks.</li>
+<li>Repeat the process for the neutron.</li>
+<li>Find that the predicted ratio matches the experimental value.</li>
+</ol>
+<p>Let me discuss the foundations of this approach. As we discussed previously, the reasoning stems from <strong>confinement</strong> in the strong interaction: the color interaction is confined within the small scale of the proton where the quarks reside.</p>
+<p>Within the proton, quarks and gluons interact. The <strong>emergent properties</strong> and degrees of freedom appear when we consider multiplets and symmetries based on quarks. The quarks act as the leading degrees of freedom, but they gain an effective mass.</p>
+<ul>
+<li>The <strong>current quarks</strong> in the Standard Model Lagrangian have very small masses.</li>
+<li>The <strong>constituent quarks</strong> that emerge have a significant mass (roughly 300 MeV each) and carry most of the proton’s degrees of freedom.</li>
+</ul>
+<p>The quark model assumes we integrate out the gluonic degrees of freedom, and the effect of this integration is to give the quarks an effective, constituent mass. We start with nearly massless quarks, integrate out the gluons, and end up with a system where three massive quarks form a proton.</p>
+<ul>
+<li>The <em>u</em> quark has a charge of <span class="math inline">+\frac{2}{3}e</span> and the <em>d</em> quark has a charge of <span class="math inline">-\frac{1}{3}e</span> .</li>
+<li>Each carries 1/3 of the baryon number.</li>
+<li>Together, they constitute and govern the degrees of freedom of baryons.</li>
+</ul>
+<p>We can construct the proton wave function in a simplified manner by combining representations of the <strong>flavor wave function</strong> and the <strong>spin wave function</strong>, writing the proton in terms of these lower-level quark degrees of freedom. That is what we will do next time.</p>
+<section id="todays-lecture-summary" class="level3" data-number="11.1">
+<h3 data-number="11.1" class="anchored" data-anchor-id="todays-lecture-summary"><span class="header-section-number">11.1</span> Today’s Lecture Summary</h3>
+<p>Today, we discussed the kinematics of <strong>electron-proton scattering</strong>, examining different regimes based on the momentum transfer <span class="math inline">Q^2</span> :</p>
+<ul>
+<li><strong>Forward Scattering ( <span class="math inline">Q^2</span> small):</strong> The electron barely changes direction. This regime probes the proton as a whole, characterizing its total charge density and magnetic moment.</li>
+<li><strong>Deep Inelastic Scattering ( <span class="math inline">Q^2</span> large):</strong> High momentum transfer probes the proton’s internal structure, providing clues about the quarks inside.</li>
+</ul>
+<p>We covered the standard 2-to-2 scattering kinematics, which is essential to understand well: how to calculate phase space, flux, and, given a matrix element, how to obtain a scattering probability.</p>
+<p>We examined the <strong>Rosenbluth formula</strong>, detailing how the scattering cross section is determined by form factors, and how these form factors relate to the proton’s charge distribution and magnetic moment. We began introducing the quark model to explain these properties and will continue next time with the explicit calculation of the magnetic moments.</p>
+</section>
+</section>
+<section id="conclusion" class="level2" data-number="12">
+<h2 data-number="12" class="anchored" data-anchor-id="conclusion"><span class="header-section-number">12</span> Conclusion</h2>
+<hr>
+<p><strong>All right, thanks for your attention.</strong></p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>This concludes the current segment. The following section will build upon the concepts covered here. Please ensure you have reviewed the material before proceeding. If you have any questions, note them for the upcoming discussion.</p>
+</div>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="">
+<meta name="dcterms.date" content="2025-01-01">
+
+<title>(2025) Lecture 11</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-597958c53c93a607afca12fd375c57ed.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-7d3a565c23c4d3b0e7c030e96a8964f3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="quarto-light">
+
+<div id="quarto-search-results"></div>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#branch-points-and-cuts-in-ππ-scattering-amplitudes" id="toc-branch-points-and-cuts-in-ππ-scattering-amplitudes" class="nav-link active" data-scroll-target="#branch-points-and-cuts-in-ππ-scattering-amplitudes"><span class="header-section-number">1</span> Branch Points and Cuts in ππ Scattering Amplitudes</a></li>
+  <li><a href="#analytic-continuation-and-resonances-in-ππ-scattering" id="toc-analytic-continuation-and-resonances-in-ππ-scattering" class="nav-link" data-scroll-target="#analytic-continuation-and-resonances-in-ππ-scattering"><span class="header-section-number">2</span> Analytic Continuation and Resonances in ππ Scattering</a>
+  <ul class="collapse">
+  <li><a href="#kinematic-variables-and-analytic-continuation" id="toc-kinematic-variables-and-analytic-continuation" class="nav-link" data-scroll-target="#kinematic-variables-and-analytic-continuation"><span class="header-section-number">2.1</span> <strong>Kinematic Variables and Analytic Continuation</strong></a></li>
+  <li><a href="#riemann-sheets-and-resonance-poles" id="toc-riemann-sheets-and-resonance-poles" class="nav-link" data-scroll-target="#riemann-sheets-and-resonance-poles"><span class="header-section-number">2.2</span> <strong>Riemann Sheets and Resonance Poles</strong></a></li>
+  <li><a href="#the-ρ-meson-in-ππ-scattering-and-the-quark-model" id="toc-the-ρ-meson-in-ππ-scattering-and-the-quark-model" class="nav-link" data-scroll-target="#the-ρ-meson-in-ππ-scattering-and-the-quark-model"><span class="header-section-number">2.3</span> <strong>The ρ Meson in ππ Scattering and the Quark Model</strong></a></li>
+  </ul></li>
+  <li><a href="#analytic-singularities-and-cross-section-signatures" id="toc-analytic-singularities-and-cross-section-signatures" class="nav-link" data-scroll-target="#analytic-singularities-and-cross-section-signatures"><span class="header-section-number">3</span> Analytic Singularities and Cross-Section Signatures</a></li>
+  <li><a href="#analyticity-and-the-breakup-momentum-plane" id="toc-analyticity-and-the-breakup-momentum-plane" class="nav-link" data-scroll-target="#analyticity-and-the-breakup-momentum-plane"><span class="header-section-number">4</span> Analyticity and the Breakup Momentum Plane</a></li>
+  <li><a href="#lattice-qcd-discretizing-confinement" id="toc-lattice-qcd-discretizing-confinement" class="nav-link" data-scroll-target="#lattice-qcd-discretizing-confinement"><span class="header-section-number">5</span> Lattice QCD: Discretizing Confinement</a>
+  <ul class="collapse">
+  <li><a href="#asymptotic-freedom-and-confinement" id="toc-asymptotic-freedom-and-confinement" class="nav-link" data-scroll-target="#asymptotic-freedom-and-confinement"><span class="header-section-number">5.1</span> <strong>Asymptotic Freedom and Confinement</strong></a></li>
+  <li><a href="#lattice-qcd-a-computational-framework" id="toc-lattice-qcd-a-computational-framework" class="nav-link" data-scroll-target="#lattice-qcd-a-computational-framework"><span class="header-section-number">5.2</span> <strong>Lattice QCD: A Computational Framework</strong></a></li>
+  </ul></li>
+  <li><a href="#lattice-qcd-mesons-boundary-conditions-and-quark-mass-tuning" id="toc-lattice-qcd-mesons-boundary-conditions-and-quark-mass-tuning" class="nav-link" data-scroll-target="#lattice-qcd-mesons-boundary-conditions-and-quark-mass-tuning"><span class="header-section-number">6</span> Lattice QCD: Mesons, Boundary Conditions, and Quark Mass Tuning</a></li>
+  <li><a href="#lattice-qcd-from-continuum-fields-to-euclidean-path-integrals" id="toc-lattice-qcd-from-continuum-fields-to-euclidean-path-integrals" class="nav-link" data-scroll-target="#lattice-qcd-from-continuum-fields-to-euclidean-path-integrals"><span class="header-section-number">7</span> Lattice QCD: From Continuum Fields to Euclidean Path Integrals</a></li>
+  <li><a href="#grassmann-variables-and-lattice-qcd-computations" id="toc-grassmann-variables-and-lattice-qcd-computations" class="nav-link" data-scroll-target="#grassmann-variables-and-lattice-qcd-computations"><span class="header-section-number">8</span> Grassmann Variables and Lattice QCD Computations</a></li>
+  <li><a href="#neutron-nucleus-interaction-and-cross-section" id="toc-neutron-nucleus-interaction-and-cross-section" class="nav-link" data-scroll-target="#neutron-nucleus-interaction-and-cross-section"><span class="header-section-number">9</span> Neutron-Nucleus Interaction and Cross-Section</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">(2025) Lecture 11</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">January 1, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><strong>Presenter</strong>: Mikhail Mikhasenko</p>
+<p><strong>Note Taker</strong>: Anna Zimmer</p>
+<section id="branch-points-and-cuts-in-ππ-scattering-amplitudes" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="branch-points-and-cuts-in-ππ-scattering-amplitudes"><span class="header-section-number">1</span> Branch Points and Cuts in ππ Scattering Amplitudes</h2>
+<p>So the <strong>threshold for ππ scattering</strong> occurs at <span class="math inline">s = 4m_\pi^2</span> .</p>
+<p>Are there any other open channels? For this discussion, let’s assume there are not.</p>
+<p>The <strong>position of the branch point</strong> in the complex <span class="math inline">s</span> -plane is precisely at <span class="math inline">s = 4m_\pi^2</span> . The associated <strong>branch cut</strong> should be drawn from this branch point. While the exact direction is technically a matter of definition, the <strong>physical branch cut</strong> that satisfies causality is drawn along the real axis <strong>to the right</strong>, from <span class="math inline">s = 4m_\pi^2</span> to infinity.</p>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Physics of the s-channel branch point:</strong> This point, <span class="math inline">s_{\text{th}} = 4m_\pi^2</span> , is the minimum squared center-of-mass energy needed to produce two real pions. In the complex plane, it is a <strong>square-root branch point</strong>. Placing the cut along the positive real axis defines the <strong>physical Riemann sheet</strong>, where the scattering amplitude is analytic except for discontinuities across this cut.</p>
+</div>
+</div>
+</div>
+<p>We must also consider <strong>crossing symmetry</strong>. The reaction isn’t only <span class="math inline">\pi\pi \to \pi\pi</span> in the <span class="math inline">s</span> -channel. If we consider the ** <span class="math inline">t</span> -channel** (the crossed channel), a different process becomes relevant.</p>
+<p>For the specific process <span class="math inline">\pi^+ \pi^- \to \pi^+ \pi^-</span> , the <span class="math inline">t</span> -channel corresponds to the scattering <span class="math inline">\pi^+ \pi^+ \to \pi^+ \pi^+</span> (or equivalently, <span class="math inline">\pi^- \pi^- \to \pi^- \pi^-</span> after crossing).</p>
+<p>This leads to <strong>another branch point</strong> in the complex <span class="math inline">s</span> -plane, appearing at <strong>negative <span class="math inline">s</span> values</strong> for physical momentum transfer <span class="math inline">t</span> . This is the ** <span class="math inline">t</span> -channel threshold**.</p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Cross-channel analytic structure:</strong> Crossing symmetry implies the amplitude <span class="math inline">A(s,t)</span> is analytic in <span class="math inline">s</span> with cuts from both channels. The <span class="math inline">t</span> -channel threshold at <span class="math inline">t = 4m_\pi^2</span> corresponds to a branch point in the <span class="math inline">s</span> -plane at <span class="math inline">s = 4m_\pi^2 - t</span> . For physical <span class="math inline">t &gt; 0</span> , this point lies on the negative real <span class="math inline">s</span> -axis, creating a <strong>left-hand cut</strong>. The full analytic structure—with a right-hand cut from the <span class="math inline">s</span> -channel and a left-hand cut from the <span class="math inline">t</span> -channel—is foundational for dispersion relations.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="analytic-continuation-and-resonances-in-ππ-scattering" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="analytic-continuation-and-resonances-in-ππ-scattering"><span class="header-section-number">2</span> Analytic Continuation and Resonances in ππ Scattering</h2>
+<p>When we talk about scattering amplitudes, we are thinking of a blob connecting an initial to a final state. In that case, π₁ and π₂ scatter. We draw the blob and think of this as time going in that direction. This is the initial state. They come together, something happens, they come out of the blob, and that scattering process is referred to as a <strong>channel</strong>. This is well-defined kinematics and a physical process.</p>
+<p>Once the energy in the initial state is higher than the threshold, the total energy of the system for this process to happen must be higher than <span class="math inline">4m_\pi^2</span> . Then the pions in the initial state can fly and the pions in the final state can fly. It happens that there is another process.</p>
+<section id="kinematic-variables-and-analytic-continuation" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="kinematic-variables-and-analytic-continuation"><span class="header-section-number">2.1</span> <strong>Kinematic Variables and Analytic Continuation</strong></h3>
+<p>There are the variables that we defined here: it was <span class="math inline">s</span> and here was <span class="math inline">t</span> . For the physical process, <span class="math inline">s</span> was positive above the threshold; <span class="math inline">t</span> was negative because this is a transferred momentum, and for an elastic reaction it’s actually less than zero. If we think of this amplitude as an analytic function of <span class="math inline">s</span> and <span class="math inline">t</span> , it is defined in the entire domain of the complex plane, in the entire domain of the variables <span class="math inline">s</span> and <span class="math inline">t</span> .</p>
+<p>Once we define this object, it should be defined for any variable <span class="math inline">s</span> , even negative, and for any variable <span class="math inline">t</span> , even positive, despite them not being in the kinematics of this channel. We find out that the same amplitude would describe <span class="math inline">\pi_1 \bar{\pi}_3 \to \pi_2 \pi_4</span> .</p>
+<p>What I’ve done here is I took one particle, one leg here and said, let me just turn it, rotate this diagram. I take this leg, put it here, I take this leg, I put it here. It’s the same blob, just in a different direction, so it must be the same object. We draw it and then we realize that it’s just different variables of <span class="math inline">s</span> and <span class="math inline">t</span> that describe the kinematics for that process.</p>
+<p>It’s a <span class="math inline">t</span> that has to be positive because it’s above the threshold, because we are now in a different domain for this reaction. The <span class="math inline">t</span> is defined as the sum of these two. The language that we use is that that is the <strong>cross channel</strong> for that.</p>
+<ul>
+<li>In the <strong>s-channel</strong>, <span class="math inline">s = (p_1 + p_2)^2</span> is the squared center-of-mass energy and must satisfy <span class="math inline">s &gt; 4m_\pi^2</span> for the physical process <span class="math inline">\pi\pi \to \pi\pi</span> .</li>
+<li>In the <strong>t-channel</strong>, the same analytic function <span class="math inline">A(s,t)</span> describes the crossed process <span class="math inline">\pi_1 + \bar{\pi}_3 \to \pi_2 + \pi_4</span> , where <span class="math inline">t</span> becomes the positive squared center-of-mass energy.</li>
+</ul>
+<div id="fig-fg7" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2025-Lecture-11-images/fig7.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: This figure represents a schematic illustration of a <strong>scattering process</strong> in the context of scattering theory discussed in the lecture. The large circle can be interpreted as the “blob” denoting the interaction region or amplitude where an initial two-particle state (for example, two pions) interacts. The two darkened points on the circumference symbolize the <strong>initial and final states</strong> (or, more generally, the incoming and outgoing particles). The double-headed arrow connecting these points, with an “×” at the top, indicates the <strong>scattering angle</strong>, which is a key kinematic variable in the description of the process. Physically, this diagram is used to visualize two particles approaching, interacting via the strong force inside the blob (the region where the amplitude is defined), and then emerging as outgoing particles. The <strong>scattering angle</strong> (as shown by the arrow) is directly related to the momentum transfer, which is often encapsulated by the <strong>Mandelstam variable <span class="math inline">t</span> </strong> in the lecture. This type of drawing is central to understanding <strong>partial wave analysis</strong> and to visualizing how the scattering amplitude depends on kinematic variables like <span class="math inline">s</span> and <span class="math inline">t</span> . The “×” at the top may indicate a measurement or a particular value of the angle of interest. This picture is foundational for connecting graphical representations of reactions to formal analytic properties, such as branch points and cuts in the complex plane described in the lecture.
+</figcaption>
+</figure>
+</div>
+<p>In the <span class="math inline">s</span> plane, once you do partial wave projections, you’re going to see the reflection of the cross channels as the branch points on the other side. For physical positive and high value of <span class="math inline">s</span> , it’s an s-channel scattering. For negative <span class="math inline">s</span> , it’s a partial wave projection of the t-channel scattering or u-channel. The u-channel would be when you take this four and put it to the other side.</p>
+<p>Just to remind you of what we discussed with this domain: if you draw here <span class="math inline">s</span> , you put here <span class="math inline">t</span> . Our physical reaction sits here. Then there is the cross channel positive <span class="math inline">t</span> . There is a domain here and a domain here. That was for introducing this non-distant point.</p>
+</section>
+<section id="riemann-sheets-and-resonance-poles" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="riemann-sheets-and-resonance-poles"><span class="header-section-number">2.2</span> <strong>Riemann Sheets and Resonance Poles</strong></h3>
+<p>In fact, this amplitude is a rather complex object. There are no singularities elsewhere in this plane. We discussed that we can come up with, in order to explore the full dimensionality or the full analytic structure, we can come up with another function, let’s say not <span class="math inline">A</span> but <span class="math inline">A_2</span> , that analytically continues the amplitude on the other side of the branch point.</p>
+<p>That was referred to as the <strong>second sheet</strong>, the second Riemann sheet. That’s where the interesting and impactful physics is lying. These are the singularities I am talking about. Virtual states are on the other and physical. What I’m saying is that I can come up with the <span class="math inline">A_2</span> , <span class="math inline">\pi\pi \to \pi\pi</span> , that analytically continues my amplitude from below the cut.</p>
+<p>That amplitude will have a very similar analytic structure. We have the branch point here and this function will continue. The values right here above will be exactly the same as right below for that function. This is the location for the virtual state and this is the location for the resonances.</p>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>The physical amplitude <span class="math inline">A(s)</span> has a branch cut along the real axis for <span class="math inline">s \geq 4m_\pi^2</span> . Analytic continuation through this cut leads to the <strong>second Riemann sheet</strong>, where resonance poles are located. Every particle corresponds to a pole in the complex plane of the scattering amplitude. For a resonance like the <span class="math inline">\rho</span> meson, the pole is at <span class="math inline">s_p = M_\rho^2 - i M_\rho \Gamma_\rho</span> , where <span class="math inline">M_\rho</span> is the pole mass and <span class="math inline">\Gamma_\rho</span> is the width.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="the-ρ-meson-in-ππ-scattering-and-the-quark-model" class="level3" data-number="2.3">
+<h3 data-number="2.3" class="anchored" data-anchor-id="the-ρ-meson-in-ππ-scattering-and-the-quark-model"><span class="header-section-number">2.3</span> <strong>The ρ Meson in ππ Scattering and the Quark Model</strong></h3>
+<p>Which resonance is present in this scattering <span class="math inline">\pi\pi</span> in P-wave? In fact, it’s the <span class="math inline">\rho</span> meson. I really like to think of mesons in terms of the quark model constitution. Let me just remind you what it is about: <span class="math inline">1s</span> , <span class="math inline">1p</span> , <span class="math inline">2s</span> . Here I have a spin and <span class="math inline">\rho</span> meson. I have a pion and another <span class="math inline">\rho</span> meson. There’s two <span class="math inline">s</span> excitations.</p>
+<p>Here I have states, four states. They’re called a… On which axis would you put energy? And here they put angular momentum. Angular momentum. But in the quark model, angular momentum between quarks <span class="math inline">L_{q\bar{q}}</span> . If you think of the quark of the hydrogen atom, this is what you find: the Bohr structure in the boxes, <span class="math inline">1s</span> , <span class="math inline">2s</span> . <span class="math inline">1p</span> is the sort of overall Bohr structure of the spectrum.</p>
+<p>But then there is hyperfine splitting related to the spin-spin and spin-orbit interaction that makes splitting of the levels. Every time I’m talking about mesons, it’s really helpful to think of this picture like this. I’m saying, you know, <span class="math inline">J/\psi</span> , <span class="math inline">\eta_c</span> , <span class="math inline">\chi_c</span> . It’s a <span class="math inline">c \bar{c}</span> , right. And then where in the spectrum would it belong? It actually sits here. The first one is <span class="math inline">\eta_c</span> . The second one is the <span class="math inline">J/\psi</span> .</p>
+<p>And then you say you hear <span class="math inline">\chi_{c2}</span> . Where is that? Oh, this is again <span class="math inline">c \bar{c}</span> but sits in this box because it’s a <span class="math inline">1^+</span> quantum numbers. This is the <span class="math inline">1P</span> state in the quark model. That’s super easy, and then you’re able to relate to get a bigger picture. There are so many mesons and resonances, but they all map into this rather simple structure, well, if you don’t talk about exotics, that’s still a minority.</p>
+<p>This was a side remark and that’s… I would really like you to familiarize yourself with this type of representation for the mesons. For the baryons we can do the same. What is important for our discussion here is the singularities in the scattering amplitude.</p>
+<p>I just said that the <span class="math inline">\rho</span> meson decays to <span class="math inline">\pi \pi</span> . This is one of the peculiarities of quantum chromodynamics because in the hydrogen atom, the transitions between states that are hyperfine, that are related within the same box, happen with radiation. In the hydrogen atom, the difference between these two states is actually the quark orientation.</p>
+<p>The pion has the sort of the quark orientation disk like this one, <span class="math inline">q</span> has the… So the wave function is like this. The <span class="math inline">\rho</span> meson has a different spin wave function. That’s the only reason, the only difference between the <span class="math inline">\rho</span> meson and the pion in the quark model.</p>
+<p>But the transition between <span class="math inline">\rho</span> and <span class="math inline">\pi</span> , despite that it can happen radiatively by emitting a photon and flipping the spin of the quark, it prefers to happen via emitting a pion. So <span class="math inline">\rho</span> goes to the pion by emitting another pion. That’s something unimaginable in a hydrogen atom. Imagine that the atom would decay by emitting another atom.</p>
+<p>That’s not how baryons… That’s not how it works in electrodynamics, but in quantum chromodynamics it’s sort of cheap to make quarks out of the vacuum, like quark-antiquark pairs. That’s why the <span class="math inline">\rho</span> -$<span class="math inline">transition happens with emitting another</span> $.</p>
+<p>Therefore, a$ <span class="math inline">meson, while being a state, appears as a resonance in the</span> <span class="math inline">scattering system. If you bring one</span> <span class="math inline">and another</span> <span class="math inline">together, they feel that the</span> <span class="math inline">meson can decay to this pair. So they resonate at a certain frequency, a frequency that is equal to the bare mass of the</span> $meson.</p>
+<p>It’s not only that a$ <span class="math inline">meson can decay to the pair, but also when you bring two pions together, they feel attraction due to the presence of this</span> $meson resonance. This attraction manifests as a peak in the spectrum when you measure the scattering amplitude, when you measure the scattering cross section. But also it manifests in a singularity in the complex plane, namely a pole.</p>
+<p>Every particle is a pole in the complex plane in the scattering amplitude. In order to find this pole, we need to take the scattering amplitude with a rather clear, simple analytic structure and then look more closely at what’s the origin of the peaking. This usually hides in the analytic continuation on the second sheet in the complex plane.</p>
+</section>
+</section>
+<section id="analytic-singularities-and-cross-section-signatures" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="analytic-singularities-and-cross-section-signatures"><span class="header-section-number">3</span> Analytic Singularities and Cross-Section Signatures</h2>
+<p>Now this naturally continues our discussion. To wrap up the scattering theory, I would like to talk about <strong>bound states, virtual states, and resonances</strong>. We will introduce the complex plane that doesn’t have any cuts—the key plane—and look quickly at the loop function for two-particle scattering. These concepts play a fundamental role not just in scattering theory, but also once you go to lattice field theory.</p>
+<p>Today’s lecture was meant to be dedicated to lattice field theory and how we use lattice computations to get a better understanding of resonances. I feel we will get to it in the last hour. So, we need to finish the classification of the states and their analytic properties before we go there. Let’s discuss virtual and bound states. Depending on where the singularity appears in the complex energy plane, we call the state differently.</p>
+<div id="fig-fg1" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2025-Lecture-11-images/fig1.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: This figure illustrates a potential well, which is used to explain the difference between continuum states and bound states in quantum mechanics, and by analogy, in scattering theory as discussed in the lecture. The vertical axis is the potential$ V$, and the horizontal axis is the position <span class="math inline">x</span> . - For energies <span class="math inline">E &gt; 0</span> , any energy is allowed, corresponding to <strong>continuum states</strong>. These are scattering states where the energy lies above the potential well, and the wavefunctions extend to infinity. - For energies <span class="math inline">E &lt; 0</span> , only <strong>discrete energy levels</strong> are allowed, corresponding to <strong>bound states</strong>. In this region, the wave number <span class="math inline">k</span> becomes imaginary, leading to exponentially decaying wavefunctions (as indicated by <span class="math inline">e^{\pm ikx} \in \mathbb{R}</span> ), signifying that the particle is localized within the potential well. - The dashed lines illustrate the quantization of energy levels for bound states, while a continuum of possible energies exists above the well for scattering states. This relates to the lecture’s discussion of <strong>bound states</strong> (poles on the physical sheet below threshold), <strong>virtual states</strong> (poles on the unphysical sheet), and <strong>resonances</strong> (poles above threshold in the complex energy plane). The diagram provides a conceptual and visual context for understanding how physical and mathematical properties of quantum systems manifest as different types of states, as classified by the analytic structure of the scattering amplitude.
+</figcaption>
+</figure>
+</div>
+<p>It also appears differently in the measured mass spectrum.</p>
+<ul>
+<li>If it’s a bump <strong>above</strong> the threshold, we call it a <strong>resonance</strong>.</li>
+<li>There are two more types: <strong>virtual states</strong> and <strong>bound states</strong>.</li>
+<li><strong>Virtual states</strong> are located on the <strong>unphysical sheet</strong> below the threshold.</li>
+<li><strong>Bound states</strong> are located on the <strong>physical sheet</strong> below the threshold.</li>
+</ul>
+<div id="fig-fg2" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2025-Lecture-11-images/fig2.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: This figure represents the energy spectrum of a quantum system, such as two particles interacting via a potential well—an important concept in scattering theory and resonance physics. The vertical axis is the energy <span class="math inline">E</span> . The energy levels below zero ( <span class="math inline">E &lt; 0</span> ) are labeled as “bound states (in potential well),” indicating discrete energy levels corresponding to stable or quasi-stable configurations where the particles are held together by the potential. These states manifest as poles on the physical sheet below threshold in the scattering amplitude. Above zero energy ( <span class="math inline">E &gt; 0</span> ), the spectrum becomes continuous—these are the “continuum states.” Here, the particles are no longer bound and can propagate freely, representing scattering states. This continuum starts at the threshold (here, <span class="math inline">E=0</span> ) consistent with the discussion of branch points in the analytic structure of the S-matrix at threshold (e.g., <span class="math inline">s=4m_\pi^2</span> for <span class="math inline">\pi\pi</span> scattering). Physically, this separation between bound and continuum states underlies key aspects of reaction theory: bound states relate to sharp spectral lines (e.g., stable particles), while continuum states enable phenomena like scattering, resonances, and virtual states near threshold. The energy threshold itself is a branch point in the analytic properties of the amplitude, and the nature of these states (bound, virtual, resonance, continuum) determines the analytic structure observed in physical processes.
+</figcaption>
+</figure>
+</div>
+<p>Let’s think for a second what implication the pole’s position has, and let’s sketch how the measured spectrum would look in the presence of each: a bound state, a virtual state, and a resonance.</p>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Classification of Poles in Scattering Theory</strong></p>
+<ul>
+<li>A <strong>bound state</strong> (e.g., deuteron) corresponds to a pole on the <strong>physical sheet</strong> below the two-particle threshold, representing a stable particle.</li>
+<li>A <strong>virtual state</strong> (e.g., neutron-neutron singlet state) corresponds to a pole on the <strong>unphysical sheet</strong> below threshold, leading to an enhancement near threshold without a true bound state.</li>
+<li>A <strong>resonance</strong> corresponds to a pole in the complex plane <strong>above</strong> threshold, with an imaginary part related to its width.</li>
+</ul>
+</div>
+</div>
+</div>
+<p>The cross section <span class="math inline">\sigma(s)</span> that we measure in an experiment for scattering two particles is connected to the scattering amplitude <span class="math inline">A(s)</span> . If the amplitude is dominated by a single partial wave, we can perform the angular integration analytically. For the simple case of scalar particle scattering, the angular dependence is given by a Legendre polynomial.</p>
+<p>What remains is the following expression for the cross section in the presence of one partial wave with total angular momentum <span class="math inline">J</span> :</p>
+<p><span class="math display">\sigma(s) = \frac{2J + 1}{k^2} |A(s)|^2 \rho(s).</span></p>
+<p>Here, <span class="math inline">k</span> is the center-of-mass momentum, and <span class="math inline">\rho(s)</span> is the phase space factor. For a two-body final state, this factor is:</p>
+<p><span class="math display">\rho(s) = \frac{2p}{\sqrt{s}}.</span></p>
+<p>This function <span class="math inline">\rho(s)</span> starts from zero at the kinematic threshold and approaches a constant ( <span class="math inline">\frac{1}{8\pi}</span> ) at high energies. This factor causes the cross-section to rise from zero at threshold.</p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Threshold Behavior</strong> The cross-section for a partial wave with angular momentum <span class="math inline">L</span> is suppressed near threshold by a factor proportional to the center-of-mass momentum: <span class="math inline">\sigma_L(s) \propto p^{2L}</span> as <span class="math inline">s \to s_{\text{thr}}</span> .</p>
+<ul>
+<li>For an <strong>S-wave</strong> ( <span class="math inline">L=0</span> ), the cross-section is finite at threshold.</li>
+<li>For a <strong>P-wave</strong> ( <span class="math inline">L=1</span> ), like the <span class="math inline">\rho</span> meson in <span class="math inline">\pi\pi</span> scattering, it vanishes at threshold.</li>
+</ul>
+</div>
+</div>
+</div>
+<p>What we are exploring is how the number of interaction counts changes when you collide particles. The cross-section is essentially this probability. On the x-axis, we have the center-of-mass energy <span class="math inline">\sqrt{s}</span> , and on the y-axis, we have <span class="math inline">\sigma(s)</span> (or <span class="math inline">|A(s)|^2</span> ). This probability reflects the properties of the amplitude and, internally, what singularities are present in the complex plane.</p>
+<ol type="1">
+<li><p><strong>Resonance Case:</strong> We collide two particles. If the energy is adjusted to the resonance mass, the probability to interact grows sharply. We see a peak in the cross-section. For example, the <span class="math inline">\rho</span> meson decays to <span class="math inline">\pi\pi</span> , making the <span class="math inline">\pi\pi</span> scattering amplitude resonate at the <span class="math inline">\rho</span> mass. The amplitude near a resonance often follows a Breit-Wigner form: <span class="math display">A(s) \propto \frac{1}{s - M^2 + iM\Gamma}</span><br>
+The distance of the pole from the real axis is related to the width <span class="math inline">\Gamma</span> of the resonance. A smaller width means a narrower, taller peak.</p></li>
+<li><p><strong>Bound State Case:</strong> A bound state corresponds to a pole on the real axis <strong>below</strong> threshold on the physical sheet. In the amplitude, this is a <strong>strong singularity</strong> (a pole, where the amplitude becomes infinite). Since we only measure <strong>above</strong> threshold, we don’t see the infinity directly, but it produces a sharp enhancement or peak <strong>right at the threshold</strong> in the cross-section. A bound state is a real, stable particle (e.g., a deuteron). In a perfect world with only strong interactions and conserved flavor, particles like the proton or pion would be such bound states.</p></li>
+<li><p><strong>Virtual State Case:</strong> A virtual state corresponds to a pole on the real axis <strong>below</strong> threshold, but on the <strong>unphysical sheet</strong>. Its influence is weaker than a bound state pole. It typically does not produce a sharp peak but rather a <strong>cusp or a broad enhancement</strong> very close to the threshold in the cross-section.</p></li>
+</ol>
+<p>In contrast to poles, a <strong>branch point</strong> (like the one at the kinematic threshold from <span class="math inline">\rho(s)</span> ) is a weaker singularity. The function is continuous, but its derivative is not. You might observe a slight change in slope—a cusp—but not a divergent peak.</p>
+</section>
+<section id="analyticity-and-the-breakup-momentum-plane" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="analyticity-and-the-breakup-momentum-plane"><span class="header-section-number">4</span> Analyticity and the Breakup Momentum Plane</h2>
+<p>Another convenient representation of the singularity of the scattering amplitude is the <strong>breakup momentum plane</strong>. This is because the scattering amplitude is an analytic function of the breakup momentum <span class="math inline">p</span> in non-relativistic scattering.</p>
+<p>In a non-relativistic problem, you do not have a square root of <span class="math inline">s</span> anywhere. You only deal with <span class="math inline">p</span> . If you look at the expression for <span class="math inline">\rho</span> , where <span class="math inline">\rho = 2p / \sqrt{s}</span> , in the non-relativistic limit this denominator becomes <span class="math inline">2\mu</span> .</p>
+<p>What you can do is expand the amplitude near the threshold. You expand the amplitude in <span class="math inline">\sqrt{s}</span> near the first branch point, and then you arrive at the expression for <span class="math inline">p</span> :</p>
+<p><span class="math display">p = \sqrt{2\mu (E - E_{\text{th}})}</span></p>
+<p>This quantity has a branch point at <span class="math inline">s = s_{\text{th}}</span> because it is under a square root, and that matches the branch point of the amplitude.</p>
+<p>You can do the inverse relation and find how <span class="math inline">s</span> is related to <span class="math inline">p</span> . The point is that if the amplitude is an analytic function of <span class="math inline">p</span> , the square root will never appear. There is no square root of <span class="math inline">p</span> in the amplitude. The amplitude is actually an analytic function of <span class="math inline">p</span> .</p>
+<p>What we have discussed with the first and second sheet now gets merged to a single complex plane. The upper part represents <span class="math inline">A(p)</span> or <span class="math inline">A(s)</span> , and the lower part is <span class="math inline">A_2(s)</span> . The real physics—where <span class="math inline">p</span> is real and positive—corresponds to the physical values of <span class="math inline">s</span> .</p>
+<p>I want to quickly sketch where the bound and virtual states are. In that representation:</p>
+<ul>
+<li>A <strong>bound state</strong> is sitting on the real axis just below the threshold.</li>
+<li>A <strong>virtual state</strong> is on the real axis, above the threshold.</li>
+<li><strong>Resonances</strong> appear as poles off the real axis in the complex plane.</li>
+</ul>
+<p>This is the breakup momentum plane. You often see this representation; people who do non-relativistic field theory always use the <span class="math inline">p</span> -plane.</p>
+<div id="fig-fg3" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2025-Lecture-11-images/fig3.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: This figure represents the analytic structure of the scattering amplitude in the complex energy (E) plane, focusing on the physical meaning of singularities in scattering theory. The horizontal axis is the real part of energy, with the “threshold” marked as the point where the two-particle continuum begins (e.g., <span class="math inline">E = 2m_\pi</span> for <span class="math inline">\pi\pi</span> scattering, or generally <span class="math inline">E_{\text{th}}</span> ). To the left of the threshold, the X’s denote <strong>bound states</strong>—these correspond to poles of the scattering amplitude that lie on the real axis below the threshold. Such poles signal true stable particles or bound states of the two-body system. From the threshold onward, the wavy line indicates the <strong>branch cut</strong>, which corresponds to the onset of <strong>continuum states</strong>: the region where two real particles can be produced and propagate freely. This branch cut arises from the multi-particle (continuum) nature of the spectrum above threshold, reflecting the analytic (non-pole) singularity structure of the amplitude. The figure thus illustrates the key idea that the amplitude is analytic except for isolated poles (bound states) and a branch cut starting at threshold (continuum states), which together determine much of the physical and analytic behavior of scattering processes.
+</figcaption>
+</figure>
+</div>
+<p>It is somewhat simpler because you draw one picture and you see all objects there. But it works as an expansion around the threshold. It will not work once you have higher thresholds and more branch points.</p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>The breakup momentum can also be expressed relativistically in terms of the Mandelstam variable <span class="math inline">s</span> : <span class="math display">p = \sqrt{2\mu (\sqrt{s} - \sqrt{s_{\text{th}}})}</span><br>
+This shows the branch point at <span class="math inline">s = s_{\text{th}}</span> explicitly.</p>
+</div>
+</div>
+</div>
+<p>Let me summarize to close this chapter. We considered scattering theory or reaction theory that is widely used in hadron spectroscopy. This approach, in contrast to field theory, does not start from the Lagrangian, but rather uses general properties of scattering theory to study hadron-hadron scattering.</p>
+<p>It relies on the principles of <strong>unitarity, analyticity, and crossing symmetry</strong>, and interprets and identifies resonances as the poles of the scattering amplitudes. The main object in this approach is the amplitude. The amplitude is something one has to construct satisfying these general principles.</p>
+<p>Once it is constructed and fixed by experiment, it can further be studied to quantify resonance properties as pole positions and pole strength, which is the residues of the pole. The function <span class="math inline">A(s)</span> , once fixed by the experimental data, provides us with its rich analytic structure, access to all of the artifacts that are in there, namely branch points, but also unphysical sheets where the resonance is sitting.</p>
+<p>What I do in experimental particle physics is constrain this amplitude using experimental data, and then continue it analytically. I find the poles and quantify them with the position of the pole as well as the Cauchy integral around it that gives me a residue—how strong the pole couples to a particular channel.</p>
+<p>These variables, once measured, get tabulated in the Particle Data Group. The next time I want to know something about the scattering of two particles or a particular decay of a particle to a system, these numbers provide me the answer.</p>
+<ul>
+<li>The <strong>mass</strong> is the real part of the pole position.</li>
+<li>The <strong>width</strong> is related to how deep the pole is in the complex plane.</li>
+<li>The <strong>coupling</strong> is how strong this resonance couples to this particular system or the residue of the pole.</li>
+</ul>
+<p><span class="math display">A(s) \approx \frac{g^2}{s - s_{\text{pole}}}, \quad \text{where } s_{\text{pole}} = M^2 - iM\Gamma</span></p>
+<p>All right, so questions here. What will change in all these things if we add spin to the particle? For example, you have explained how we explain <span class="math inline">\pi\pi</span> scattering into <span class="math inline">\pi\pi</span> . But if I want to describe <span class="math inline">\rho\rho</span> scattering to <span class="math inline">\rho\rho</span> , will the presence of spin interaction pop up somewhere? The short answer is no.</p>
+<p>What will change is just <strong>kinematics</strong>. Properties and analyticity—properties of the amplitudes. Kinematics is a good word to say that what will happen is the amplitude will have extra kinematic factors at threshold and it will not be a single amplitude, but rather a vector of amplitudes because there are different helicities.</p>
+<p>If you sum over helicities for the cross section you sum over them. But amplitudes are still carrying the index. So if it is <span class="math inline">\rho\rho</span> scattering, then you can scatter <span class="math inline">\rho\rho</span> with different helicities. So there is not a single amplitude, but several amplitudes. But otherwise, that is right. Everything holds for spin.</p>
+<p>Since it is a very wide subject and there are a lot of technicalities, let me start by first covering the program and what we are going to overview and how lattice field theory helps in understanding QCD. Then we will fill in the details.</p>
+</section>
+<section id="lattice-qcd-discretizing-confinement" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="lattice-qcd-discretizing-confinement"><span class="header-section-number">5</span> Lattice QCD: Discretizing Confinement</h2>
+<p>Quantum Chromodynamics (QCD) is the gauge theory with the <strong>SU(3)</strong> gauge group that is notoriously difficult to deal with. It has the defining properties of <strong>confinement</strong> and <strong>asymptotic freedom</strong>, driven by the self-interaction of gluons described by the Lagrangian:</p>
+<p><span class="math display">\mathcal{L}_{\text{QCD}} = \bar{\psi}_i \left( i \gamma^\mu D_\mu - m_i \right) \psi_i - \frac{1}{4} G^a_{\mu\nu} G_a^{\mu\nu}</span></p>
+<p>where the covariant derivative is <span class="math inline">D_\mu = \partial_\mu - i g_s t^a A^a_\mu</span> and the gluon field strength tensor is <span class="math inline">G^a_{\mu\nu} = \partial_\mu A^a_\nu - \partial_\nu A^a_\mu + g_s f^{abc} A^b_\mu A^c_\nu</span> .</p>
+<section id="asymptotic-freedom-and-confinement" class="level3" data-number="5.1">
+<h3 data-number="5.1" class="anchored" data-anchor-id="asymptotic-freedom-and-confinement"><span class="header-section-number">5.1</span> <strong>Asymptotic Freedom and Confinement</strong></h3>
+<ul>
+<li><p><strong>Asymptotic Freedom:</strong> When the momentum with which we probe the system becomes very large, quarks appear as nearly free objects. This is described by the <strong>running</strong> of the strong coupling constant: <span class="math display">\mu \frac{d\alpha_s}{d\mu} = \beta(\alpha_s) = -\frac{\beta_0}{2\pi} \alpha_s^2 - \frac{\beta_1}{4\pi^2} \alpha_s^3 + \mathcal{O}(\alpha_s^4)</span><br>
+where <span class="math inline">\alpha_s = g_s^2/(4\pi)</span> . The negative sign of the <span class="math inline">\beta</span> -function at leading order causes the coupling to decrease at high energies.</p></li>
+<li><p><strong>Confinement:</strong> At low energy, the system confines. This is the reason for the appearance of all composite particles called <strong>hadrons</strong>. The interaction strength becomes large at a scale of roughly <strong>1 femtometer</strong>, which is set by the <strong>confinement scale</strong>: <span class="math display">\Lambda_{\text{QCD}} = \mu \, \exp\left( -\frac{2\pi}{\beta_0 \alpha_s(\mu)} \right)</span><br>
+This is the scale where color exchange happens, and only color-neutral (colorless) objects are observed.</p></li>
+</ul>
+<p>The property of confinement, driven by a large coupling <span class="math inline">\alpha_s</span> at low energy, makes QCD very difficult to study analytically. Our standard methodology of <strong>perturbation theory</strong> and Feynman diagrams fails because there is no small parameter to order the diagrams—producing two or three gluons can be more probable than producing one.</p>
+</section>
+<section id="lattice-qcd-a-computational-framework" class="level3" data-number="5.2">
+<h3 data-number="5.2" class="anchored" data-anchor-id="lattice-qcd-a-computational-framework"><span class="header-section-number">5.2</span> <strong>Lattice QCD: A Computational Framework</strong></h3>
+<p>To study QCD non-perturbatively, we must use alternative methods. The most productive method over the last 30 years has been <strong>lattice QCD</strong>. This is a computational framework that takes the theory of strong interactions as it is and computes its properties by discretizing space-time onto a grid.</p>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>The core idea is to create a <strong>finite “laboratory” box</strong> in space-time (e.g., 2 fm × 2 fm × 2 fm in space), fill it with quantum fields, solve the equations to evolve these fields in time, and then evaluate any quantum properties of the objects within this box. We can place theoretical “probes” inside this laboratory to measure their properties.</p>
+</div>
+</div>
+</div>
+<p>To make the problem tractable for a computer, we discretize both space and time. Instead of a three-dimensional box evolving in time, we work with a <strong>four-dimensional box</strong> where time is simply another axis. This makes the problem symmetric with respect to all coordinates.</p>
+<ul>
+<li>The step size in all directions (an <strong>isotropic lattice</strong>) is a small distance <span class="math inline">a</span> , typically <strong>0.1 fermi or less</strong>.</li>
+<li>The physical box size is typically a few fermi (2 fm is common), though sometimes a larger box is needed.</li>
+</ul>
+<p>The gauge part of the QCD action on this discrete lattice is given by the <strong>Wilson gauge action</strong>:</p>
+<p><span class="math display">S_G[U] = \frac{2}{g_0^2} \sum_{x} \sum_{\mu &lt; \nu} \text{Re}\, \text{Tr} \left[ 1 - U_{\mu\nu}(x) \right]</span></p>
+<p>where <span class="math inline">U_{\mu\nu}(x) = U_\mu(x) U_\nu(x+\hat{\mu}) U_\mu^\dagger(x+\hat{\nu}) U_\nu^\dagger(x)</span> is called a <strong>plaquette</strong>, and <span class="math inline">g_0</span> is the bare lattice coupling. This formulation maintains gauge invariance on the discrete grid.</p>
+</section>
+</section>
+<section id="lattice-qcd-mesons-boundary-conditions-and-quark-mass-tuning" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="lattice-qcd-mesons-boundary-conditions-and-quark-mass-tuning"><span class="header-section-number">6</span> Lattice QCD: Mesons, Boundary Conditions, and Quark Mass Tuning</h2>
+<p>Since the size of a meson is on the order of a Fermi, we want it to fit inside the simulation volume. Therefore, the lattice must be larger than one fermi to contain the meson and allow us to evaluate its properties.</p>
+<p>We implement <strong>periodic boundary conditions</strong>, which is like mirroring the entire setup on all sides. The primary meson is placed inside this box. The lattice must be large enough so the meson fits comfortably but is also sufficiently small compared to the total box size. This prevents the meson from feeling significant forces from its mirrored images created by the periodic boundaries, an interaction we aim to neglect.</p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Periodic boundary conditions mean the field value at one coordinate equals the field value at the mirrored coordinate. This is equivalent to filling all of space with identical copies of the primary lattice cube.</p>
+</div>
+</div>
+</div>
+<div id="fig-fg6" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2025-Lecture-11-images/fig6.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: This figure represents the <strong>spectrum of energy levels in a finite volume</strong> (such as a finite-size box in lattice QCD), depicted along the “energy plane.” The <strong>threshold</strong> marks the point at which two-particle states can be produced (e.g., the <span class="math inline">\pi\pi</span> threshold in <span class="math inline">\pi\pi</span> scattering). To the left of threshold, discrete “bound states” are shown. When space is made finite with periodic boundary conditions (of spatial extent <span class="math inline">L</span> ), the momenta—and therefore the energies—of the system become <strong>quantized</strong> rather than continuous. This is illustrated by the sequence of discrete x-marks (energy eigenvalues) above the threshold, with a characteristic spacing determined by the box size: the allowed momenta are separated by <span class="math inline">2\pi/L</span> . <strong>Physical meaning:</strong> In a finite volume, such as on a lattice, energy levels are no longer a continuum but become discretized. The spacing between these allowed energy levels is set by the finite size of the box. Bound states remain as isolated discrete levels below the threshold, while above threshold (where, in infinite volume, one would have a continuum of scattering states), the energy spectrum consists of a series of discrete, closely spaced levels. The analysis of these discrete spectra on the lattice allows the extraction of infinite-volume scattering amplitudes via techniques like Lüscher’s method.
+</figcaption>
+</figure>
+</div>
+<p>The evolution of fields, like a pion, happens within this lattice. While the pion itself may not propagate far, we observe the dynamics of fields bubbling in the vacuum. The typical setup uses isotropic spacing, but sometimes anisotropic lattices are used, with different spacing in time versus space.</p>
+<p>The computational program proceeds as follows:</p>
+<ol type="1">
+<li>Start from the QCD Lagrangian.</li>
+<li>Perform a <strong>Wick rotation</strong> to Euclidean time, <span class="math inline">t_E = -i t</span> , to define fields in Euclidean space.</li>
+</ol>
+<p>The resulting Euclidean action is: <span class="math display">S_E = \int d^4x_E \left[ \frac{1}{4} F_{\mu\nu}^a F_{\mu\nu}^a + \sum_f \bar{\psi}_f (\gamma_\mu D_\mu + m_f) \psi_f \right].</span></p>
+<ol start="3" type="1">
+<li>Physical observables are computed as expectation values via the path integral: <span class="math display">\langle \mathcal{O} \rangle = \frac{1}{Z} \int \mathcal{D}[U] \mathcal{D}[\bar{\psi}, \psi] \, \mathcal{O} \, e^{-S_E[U,\bar{\psi},\psi]}.</span></li>
+</ol>
+<div id="fig-fg5" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2025-Lecture-11-images/fig5.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: This figure illustrates the setup for <strong>two-particle scattering in a periodic box</strong>, as is common in lattice QCD calculations. The potential <span class="math inline">V</span> sits in the center of a finite spatial region of length <span class="math inline">L</span> , represented by the box. The wavefunction <span class="math inline">\psi(x)</span> describing the relative motion of the two particles is subject to <strong>periodic boundary conditions</strong>: <span class="math inline">\psi(-L/2) = \psi(L/2)</span> and <span class="math inline">\psi'(-L/2) = \psi'(L/2)</span> . These boundary conditions mean the system is placed in a finite, repeating (periodic) spatial volume, mimicking the setup used in lattice QCD. The physical meaning is that in this finite box, the allowed energy levels become discrete, and by analyzing these discrete levels, one can infer information about scattering phase shifts and resonance properties in infinite volume using methods like Lüscher’s formula. This technique underpins how one extracts scattering amplitudes and resonance parameters from lattice simulations of QCD.
+</figcaption>
+</figure>
+</div>
+<p>This formulation makes the integrand real and enables the use of Monte Carlo integration techniques. From here, we can approach problems like two-particle scattering on the lattice. While direct scattering is not possible in a finite volume, we can infer interaction information using finite-volume methods like <strong>Lüscher’s formula</strong>.</p>
+<p>The QCD Lagrangian has few parameters: a coupling strength <span class="math inline">g</span> and the quark masses. In the lattice setup, we define the lattice spacing <span class="math inline">a</span> and grid size <span class="math inline">L</span> , and tune these parameters. For an operator with pion quantum numbers, a bound state will appear at a specific energy level, giving the pion a mass for that parameter set.</p>
+<p>This mass does not have to be the physical 140 MeV. We have parameters to tune—the up, down, and strange quark masses, and the coupling <span class="math inline">g</span> —to adjust the pion mass to its physical value. This tuning is possible because hadronic phenomena change continuously with quark mass.</p>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>The QCD Lagrangian and strong interactions are continuous functions of quark masses. By varying masses in simulations, we can continuously observe how hadron properties evolve, providing a powerful tool for understanding phenomena like the transition of resonances into bound states.</p>
+</div>
+</div>
+</div>
+<p>For example, the <span class="math inline">\rho</span> meson is a resonance in the <span class="math inline">\pi\pi</span> system. If we make the quark masses heavier in the simulation, the resonance width becomes smaller. Eventually, the pole moves to the real axis in the complex plane, and the <span class="math inline">\rho</span> becomes a bound state. This trajectory is described by: <span class="math display">\sqrt{s_\rho}(m_q) = M_\rho(m_q) - \frac{i}{2} \Gamma_\rho(m_q).</span></p>
+<p>Lattice QCD allows us to perform this numerical experiment, tracing the pole position as a function of quark mass across different lattice sizes and discretizations.</p>
+<p>The computational cost depends heavily on the quark masses. Calculations become more expensive as the pion becomes lighter because the pion mass appears in a denominator in relevant uncertainty relations. The uncertainty grows as quark masses decrease.</p>
+<p>This is tied to the pion’s role as a Goldstone boson. In the chiral limit, its mass vanishes according to the relation from chiral perturbation theory: <span class="math display">m_\pi^2 = 2B m_q + \mathcal{O}(m_q^2).</span></p>
+<p>Therefore, computations near the chiral limit could become infinitely expensive, necessitating the use of approximations like chiral perturbation theory to extrapolate results.</p>
+</section>
+<section id="lattice-qcd-from-continuum-fields-to-euclidean-path-integrals" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="lattice-qcd-from-continuum-fields-to-euclidean-path-integrals"><span class="header-section-number">7</span> Lattice QCD: From Continuum Fields to Euclidean Path Integrals</h2>
+<p>For example, what does it mean that the quark mass is very large? Does it have dimension? On the lattice, we work with dimensionless variables. How do we define the mass? It should be something dimensionless—specifically, the ratio to the lattice spacing <span class="math inline">a</span> .</p>
+<p>The computational cost depends on the magnitude of <span class="math inline">a</span> . We use <span class="math inline">a</span> as a natural scale, so everything is expressed in units of the discretization spacing. For instance, to have a pion at 140 MeV, we can choose different <span class="math inline">a</span> parameters. What is optimal? A finer lattice is better but more expensive. Therefore, what constitutes a good lattice depends on your specific goals.</p>
+<p>There is also the notion of the continuum limit on the lattice. When discussing computational cost, the <span class="math inline">a</span> parameter is not the only factor. For the same value of <span class="math inline">a</span> , different pion masses lead to different convergence rates. The number of samples needed to control statistical uncertainties varies. I will clarify this point further.</p>
+<p>The <strong>QCD Lagrangian in Minkowski spacetime</strong> is a scalar quantity written as <span class="math inline">G_{\mu\nu} G^{\mu\nu}</span> , where <span class="math inline">G_{\mu\nu}</span> is the gluonic field strength tensor. This represents the gluonic field tensor contracted with itself, with all repeated indices summed over. There are eight gluonic fields. Here, <span class="math inline">\mu</span> and <span class="math inline">\nu</span> are Lorentz indices, reflecting the relativistic Lorentz group properties of the fields.</p>
+<p>Gauge invariance is enforced by extending the ordinary derivative to include the gluonic field. The fermionic fields represent the quarks, which interact with the gluons. This interaction is prescribed by gauge theory through a specific term coupling quarks and gluons. The quark mass term is present explicitly. The parameters are the coupling constant <span class="math inline">g</span> and the quark masses; everything else is fixed.</p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>The full QCD Lagrangian density is: <span class="math display">\mathcal{L}_{\text{QCD}} = -\frac{1}{4} G_{\mu\nu}^a G_a^{\mu\nu} + \sum_f \bar{\psi}_f (i \gamma^\mu D_\mu - m_f) \psi_f</span><br>
+where <span class="math inline">D_\mu = \partial_\mu - i g A_\mu^a T^a</span> is the covariant derivative and <span class="math inline">G_{\mu\nu}^a = \partial_\mu A_\nu^a - \partial_\nu A_\mu^a + g f^{abc} A_\mu^b A_\nu^c</span> . The index <span class="math inline">f</span> runs over quark flavors.</p>
+</div>
+</div>
+</div>
+<p>We have fields: the gluonic fields <span class="math inline">A_\mu</span> and the quark fields <span class="math inline">\psi</span> . By “fields,” we mean that both <span class="math inline">\psi</span> and <span class="math inline">A_\mu</span> are functions of a point in spacetime. Any physical observable can be computed as an <strong>expectation value</strong> of an operator: <span class="math display">\langle \mathcal{O} \rangle = \frac{\langle 0 | T \mathcal{O} | 0 \rangle}{\langle 0 | 0 \rangle}</span><br>
+This operator depends on the fields. You construct it from quarks and gluons, and its expectation value is computed by “sandwiching” it with the vacuum state; the result is an observable number, not a function of coordinates.</p>
+<ul>
+<li><strong>Local operators</strong> are evaluated at a single spacetime point.</li>
+<li><strong>Non-local operators</strong> are evaluated at multiple points.</li>
+</ul>
+<p>Following Feynman’s ideas, the <strong>path integral technique</strong> provides a way to compute this expectation value using a functional integral: <span class="math display">\langle \mathcal{O} \rangle = \frac{1}{Z} \int \mathcal{D}A_\mu \mathcal{D}\psi \mathcal{D}\bar{\psi} \, \mathcal{O} \, e^{i S}</span><br>
+where <span class="math inline">Z</span> is the partition function (the same integral without <span class="math inline">\mathcal{O}</span> ) and <span class="math inline">S = \int d^4x \, \mathcal{L}_{\text{QCD}}</span> is the action.</p>
+<p>The action <span class="math inline">S</span> weights different field configurations. For any given configuration—a complete map of what <span class="math inline">A_\mu</span> , <span class="math inline">\psi</span> , and <span class="math inline">\bar{\psi}</span> are at every point in spacetime—you can compute this weight factor by integrating the Lagrangian. The functional integral sums over <em>all possible</em> such configurations. Here, <span class="math inline">\psi</span> and <span class="math inline">\bar{\psi}</span> are independent <strong>Grassmann variables</strong> (anti-commuting numbers).</p>
+<p>This formulation is impractical for direct computation because the weight factor <span class="math inline">e^{iS}</span> is a complex function that oscillates rapidly, preventing convergence in numerical sampling.</p>
+<p>The essential trick for lattice QCD is the <strong>Wick rotation to Euclidean time</strong>. We change from Minkowski time to Euclidean time <span class="math inline">t_E</span> , defined by <span class="math inline">t_E = -i t</span> . This transforms the metric and the Lagrangian.</p>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Under the Wick rotation, the Minkowski action <span class="math inline">S = \int d^4x \, \mathcal{L}</span> becomes a Euclidean action <span class="math inline">S_E</span> . The factor <span class="math inline">e^{iS}</span> becomes <span class="math inline">e^{-S_E}</span> , which is a <strong>real, positive weight</strong> between 0 and 1 (for a positive action). This allows configurations to be interpreted probabilistically and enables Monte Carlo sampling.</p>
+</div>
+</div>
+</div>
+<p>For example, in a simple scalar field theory, the transformation introduces an overall minus sign, making the Euclidean Lagrangian real. For QCD, the time derivatives and gamma matrices must be adjusted accordingly, but the outcome is the same: we obtain a real, positive weighting factor <span class="math inline">e^{-S_E}</span> .</p>
+<p>Finally, another key trick is to <strong>integrate out the fermionic fields</strong>. The original path integral involves three types of fields: <span class="math inline">\bar{\psi}</span> , <span class="math inline">\psi</span> , and <span class="math inline">A_\mu</span> . The fermionic part of the action has a Gaussian form in the Grassmann variables. Performing this functional integral yields the <strong>determinant of the Dirac operator matrix <span class="math inline">M</span> </strong>.</p>
+<p>The gluonic field, which drives confinement and thermodynamics, remains and is the most challenging part. Integrating out the fermions simplifies the problem to working with an effective theory involving only the gluon fields, weighted by <span class="math inline">e^{-S_g} \det(M)</span> . This is the basis for <strong>quenched approximations</strong>, where <span class="math inline">\det(M)</span> is set to a constant.</p>
+<p>I will put the details of the quenched calculation on the board and continue this discussion next time.</p>
+</section>
+<section id="grassmann-variables-and-lattice-qcd-computations" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="grassmann-variables-and-lattice-qcd-computations"><span class="header-section-number">8</span> Grassmann Variables and Lattice QCD Computations</h2>
+<p>One thing to consider is to look at the simple example of the Grassmann variable. Grassmann means that they are anticommuting. So if <span class="math inline">X</span> and <span class="math inline">Y</span> are Grassmann variables, it means <span class="math inline">XY = -YX</span> .</p>
+<p>For every Grassmann variable, <span class="math inline">X^2 = Y^2 = 0</span> . That is clear because <span class="math inline">(XY)^2</span> is also equal to zero. If you write <span class="math inline">XYXY</span> and anticommute, you will see <span class="math inline">X^2</span> and <span class="math inline">Y^2</span> , which are zero. So this is also zero.</p>
+<p>In fact, <span class="math inline">e^{1 - XY} = 1 - XY</span> . Isn’t it amazing? You do a fermion expansion just like that. We do not cut any higher power terms.</p>
+<p>For Grassmann variables, integration is introduced as differentiation. That’s mind-blowing. It’s a definition: integration for Grassmann variables is defined as differentiation.</p>
+<p>So, <span class="math inline">\int dX \, X = 1</span> and <span class="math inline">\int dX \, 1 = 0</span> . Therefore, <span class="math inline">\int dX \, dY \, e^{-XY} = 1</span> . If you put any constant <span class="math inline">a</span> here, it’s equal to <span class="math inline">a</span> .</p>
+<p>You didn’t explain how that determinant pops up from <span class="math inline">M</span> . There is a formula. One can do this trick by considering two variables, say <span class="math inline">x_1, x_2</span> . Even in that case you get a determinant. Probably there is some expansion; it’s a determinant.</p>
+<p>If we integrate over the gluonic fields, what remains of the fermionic field is that integral over all possible configurations of the quark fields. Our operator depends only on the gauge fields; the determinant remains from the quark fields and a weight factor that has the action expression.</p>
+<p>This determinant represents the effect of virtual quarks. All quarks are integrated. Therefore, the only effect we see is <span class="math inline">Q \bar{Q}</span> popping up from the vacuum. It’s purely an expression that only cares about gluons. The only effect quarks can have in this expression is popping up in loops.</p>
+<p>Now another piece of important terminology: <strong>quenched</strong> and <strong>unquenched</strong> calculations refer explicitly to this term. This is used almost as slang.</p>
+<ul>
+<li>Every time you hear in lattice calculations that they do <strong>quenched</strong> calculations, it simply means that this determinant term has been ignored. You literally throw it; there are no quarks in loops.</li>
+<li>In fact, this universe where there are no quarks in loops is not that different. These computations already provide valuable insights into what QCD looks like. And it’s much cheaper computationally. This integral converges numerically much quicker if you throw the term.</li>
+</ul>
+<p>I want you to hear the words <strong>quenched</strong> and <strong>unquenched</strong> and immediately map them to the determinant that remains from the fermionic field integral.</p>
+<p>The last thing I wanted to say is how we proceed with computing this integral. The naive way is to just discretize space, and then all possible values on the side of the lattice are your integration variables. The lattice is 100 by 200; this is time, this is space.</p>
+<p>How many variables do we need to keep on every site? <span class="math inline">A</span> is a function of <span class="math inline">x</span> , and how many variables does this <span class="math inline">A</span> have? It’s <span class="math inline">A_\mu</span> . Therefore, it’s 4 times 9, plus maybe times 2 for complex. So how many? I’ve got 60. If I take this approach, I need to replace this <span class="math inline">DA</span> with 10 billion integrals because every lattice site has four variables. It’s going to be a huge amount of integrals.</p>
+<p>If every integral has a certain dimension, like from <span class="math inline">A</span> to <span class="math inline">B</span> , numerically this integral could be computed by discretizing this <span class="math inline">A</span> to <span class="math inline">B</span> space. Therefore, if I put two points or three points in every dimension, I’m going to get <span class="math inline">3^{10 \text{ billion}}</span> evaluations. That’s much more than the age of the universe. If an evaluation takes a nanosecond, you will probably have to wait still <span class="math inline">10^{20}</span> universe times. It’s impossible.</p>
+<p>So that’s not what we are going to do. Instead, people use the <strong>Monte Carlo sampling</strong> method where different configurations are sampled randomly with a certain weight. That technique allows us to calculate this integral more efficiently. For lattice calculations, discretize space and space-time, use Minkowski transformations and the Monte Carlo sampling technique for the weights. You can also come to that trick of getting rid of the fermions.</p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>On Splitting the Action and the Matrix <span class="math inline">M</span> </strong> How is it possible that we can split the fermionic and gluon part of the action? We don’t split. The fermionic part is <span class="math inline">\int e^{\int d^4x \, \bar{\psi} (D\!\!\!\!/ + m) \psi}</span> . Once you integrate over <span class="math inline">\psi</span> , the matrix <span class="math inline">M</span> that appears still depends on the gluon fields <span class="math inline">A</span> .</p>
+<ul>
+<li><span class="math inline">M</span> is a discretized version of the <span class="math inline">D\!\!\!\!/ + m</span> matrix.</li>
+<li>Why is it <span class="math inline">+m</span> and not <span class="math inline">-m</span> ? This sign happens when we flip the derivative. The <span class="math inline">D_\mu</span> operator: we flip the time derivative so that <span class="math inline">dt</span> becomes <span class="math inline">-dt</span> . We also flip the gamma matrices differently for space and time. For time it doesn’t get flipped at all; for space it gets flipped with an <span class="math inline">i</span> . Overall, the effect is that you have a <span class="math inline">D_4</span> with a minus sign here. So the minus appears here.</li>
+</ul>
+</div>
+</div>
+</div>
+<p><strong>Historical &amp; Conceptual Questions:</strong></p>
+<ul>
+<li><strong>On the Limit of Quenched/Unquenched:</strong> Is there a limit where quenched and unquenched calculations converge into one? I don’t see a limit. So it’s just two independent approaches.</li>
+<li><strong>On Grassmann Algebra:</strong> How was Grassmann algebra developed and how did it come to physics? I know that it existed independently in mathematics. I would also be curious to learn. It’s a trick, but it turns out to be very useful. You can do quite a bit with that.</li>
+<li><strong>On the Usefulness of Grassmann Variables:</strong> What still confuses me: it looks like these variables are quite limiting. From those properties you cannot do much with them; they truncate series. You cannot square them, but apparently you can use this variable to describe fields. Even so, I do not know how, but maybe I learn one day.</li>
+</ul>
+</section>
+<section id="neutron-nucleus-interaction-and-cross-section" class="level2" data-number="9">
+<h2 data-number="9" class="anchored" data-anchor-id="neutron-nucleus-interaction-and-cross-section"><span class="header-section-number">9</span> Neutron-Nucleus Interaction and Cross-Section</h2>
+<p>The next thing we need to do is to look at the interaction of the neutron with the nucleus.</p>
+<p>The neutron is a neutral particle, so it does not feel the <strong>Coulomb barrier</strong>. It can get very close to the nucleus, meaning the interaction is purely <strong>nuclear</strong>.</p>
+<p>Consequently, the cross-section for the neutron to interact with the nucleus is essentially the <strong>geometric cross-section</strong> of the nucleus: <span class="math display">\sigma \approx \pi R^2</span><br>
+where <span class="math inline">R</span> is the nuclear radius.</p>
+<p>For a typical nucleus, the radius is given by: <span class="math display">R \approx 1.2 \, A^{1/3} \, \text{femtometers}</span><br>
+This results in a cross-section on the order of <strong>barns</strong>, where one barn is defined as <span class="math inline">10^{-28}</span> square meters.</p>
+<p>Now, if the neutron has <strong>very low energy</strong>, we enter the regime of <strong>s-wave scattering</strong>. In this regime, the cross-section can become <strong>much larger than the geometric cross-section</strong> due to:</p>
+<ul>
+<li>Resonance effects.</li>
+<li>The presence of bound states near zero energy.</li>
+</ul>
+<p>This enhanced low-energy interaction is quantitatively described by the <strong>scattering length</strong>.</p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>The geometric cross-section <span class="math inline">\pi R^2</span> provides a useful baseline. However, the actual neutron-nucleus interaction cross-section, especially at low energies, is governed by quantum scattering theory and can deviate significantly from this simple geometric picture.</p>
+</div>
+</div>
+</div>
+<div id="fig-fg4" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2025-Lecture-11-images/fig4.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7: This figure illustrates the quantum mechanical scattering of a particle (such as a neutron) off a potential well, as applied to low-energy neutron-nucleus interactions discussed in the lecture. The horizontal axis is position <span class="math inline">x</span> , while the vertical axis represents the potential <span class="math inline">V(x)</span> . The central feature is a potential well of width <span class="math inline">R</span> and depth <span class="math inline">u_0</span> , representing the nuclear force region. Above the well, a blue curve marked <span class="math inline">E &gt; 0</span> indicates the energy of an incoming neutron, which is positive, corresponding to a scattering state rather than a bound state. The blue (and yellow) wavy lines indicate the wavefunction of the incoming and outgoing neutron: outside the potential well, the wavefunction oscillates with constant amplitude, representing a free neutron; inside the well, the wavefunction is modified by the attractive potential. The figure shows that for a neutral particle like the neutron (which does not face a Coulomb barrier), the particle can approach arbitrarily close to the nucleus and interacts with the nuclear potential. If the neutron energy is low (as in the s-wave regime), it is highly sensitive to the details of the potential, which can lead to enhanced scattering cross-sections, particularly if a bound or virtual state is near threshold. The potential well depth <span class="math inline">u_0</span> and width <span class="math inline">R</span> correspond to the geometric parameters of the nucleus, with the cross-section scaling as <span class="math inline">\sigma \sim \pi R^2</span> at high energies, but possibly rising much higher at low energies due to quantum mechanical effects such as resonance or the presence of near-threshold states described in the lecture.
+</figcaption>
+</figure>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

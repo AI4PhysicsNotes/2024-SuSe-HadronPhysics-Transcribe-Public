@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="">
+<meta name="dcterms.date" content="2025-01-01">
+
+<title>(2025) Lecture 5</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-597958c53c93a607afca12fd375c57ed.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-7d3a565c23c4d3b0e7c030e96a8964f3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="quarto-light">
+
+<div id="quarto-search-results"></div>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#production-mechanisms-and-kinematic-frames" id="toc-production-mechanisms-and-kinematic-frames" class="nav-link active" data-scroll-target="#production-mechanisms-and-kinematic-frames"><span class="header-section-number">1</span> Production Mechanisms and Kinematic Frames</a>
+  <ul class="collapse">
+  <li><a href="#center-of-momentum-cm-frame" id="toc-center-of-momentum-cm-frame" class="nav-link" data-scroll-target="#center-of-momentum-cm-frame"><span class="header-section-number">1.1</span> Center-of-Momentum (CM) Frame</a></li>
+  <li><a href="#gottfried-jackson-gj-frame" id="toc-gottfried-jackson-gj-frame" class="nav-link" data-scroll-target="#gottfried-jackson-gj-frame"><span class="header-section-number">1.2</span> Gottfried-Jackson (GJ) Frame</a></li>
+  </ul></li>
+  <li><a href="#rest-frame-of-the-pion-pair" id="toc-rest-frame-of-the-pion-pair" class="nav-link" data-scroll-target="#rest-frame-of-the-pion-pair"><span class="header-section-number">2</span> Rest Frame of the Pion Pair</a></li>
+  <li><a href="#collider-experiments-and-particle-decay-dynamics" id="toc-collider-experiments-and-particle-decay-dynamics" class="nav-link" data-scroll-target="#collider-experiments-and-particle-decay-dynamics"><span class="header-section-number">3</span> Collider Experiments and Particle Decay Dynamics</a></li>
+  <li><a href="#peak-background-and-misidentification-in-three-pion-invariant-mass-spectra" id="toc-peak-background-and-misidentification-in-three-pion-invariant-mass-spectra" class="nav-link" data-scroll-target="#peak-background-and-misidentification-in-three-pion-invariant-mass-spectra"><span class="header-section-number">4</span> Peak, Background, and Misidentification in Three-Pion Invariant Mass Spectra</a></li>
+  <li><a href="#phase-space-factorization-and-the-dalitz-plot" id="toc-phase-space-factorization-and-the-dalitz-plot" class="nav-link" data-scroll-target="#phase-space-factorization-and-the-dalitz-plot"><span class="header-section-number">5</span> Phase Space Factorization and the Dalitz Plot</a>
+  <ul class="collapse">
+  <li><a href="#the-n-body-phase-space-formula" id="toc-the-n-body-phase-space-formula" class="nav-link" data-scroll-target="#the-n-body-phase-space-formula"><span class="header-section-number">5.1</span> The N-Body Phase Space Formula</a></li>
+  <li><a href="#two-body-phase-space" id="toc-two-body-phase-space" class="nav-link" data-scroll-target="#two-body-phase-space"><span class="header-section-number">5.2</span> Two-Body Phase Space</a></li>
+  <li><a href="#three-body-phase-space-and-factorization" id="toc-three-body-phase-space-and-factorization" class="nav-link" data-scroll-target="#three-body-phase-space-and-factorization"><span class="header-section-number">5.3</span> Three-Body Phase Space and Factorization</a></li>
+  <li><a href="#from-angles-to-invariant-masses-the-dalitz-plot" id="toc-from-angles-to-invariant-masses-the-dalitz-plot" class="nav-link" data-scroll-target="#from-angles-to-invariant-masses-the-dalitz-plot"><span class="header-section-number">5.4</span> From Angles to Invariant Masses: The Dalitz Plot</a></li>
+  <li><a href="#the-kinematic-boundary-the-kibble-function" id="toc-the-kinematic-boundary-the-kibble-function" class="nav-link" data-scroll-target="#the-kinematic-boundary-the-kibble-function"><span class="header-section-number">5.5</span> The Kinematic Boundary: The Kibble Function</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">(2025) Lecture 5</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">January 1, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><strong>Presenter</strong>: Mikhail Mikhasenko</p>
+<p><strong>Note Taker</strong>: Anna Zimmer</p>
+<section id="production-mechanisms-and-kinematic-frames" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="production-mechanisms-and-kinematic-frames"><span class="header-section-number">1</span> Production Mechanisms and Kinematic Frames</h2>
+<p>All right, let’s start this lecture. Today, lecture number five will be dedicated to the production mechanisms in different directions across the world to study hadron spectroscopy. We will also go into depth on the kinematics of different reactions, discuss numerical algorithms to produce distributions of particles, particularly decays, and look at one of the most important kinematic setups: frames and then kinematic representation of the phase space for different reactions.</p>
+<div id="fig-fg16" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg16-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2025-Lecture-05-images/fig16.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg16-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: This figure illustrates the weak decay process of a <span class="math inline">\Lambda</span> baryon into a proton and a <span class="math inline">\pi^-</span> , emphasizing both the quark-level transition and the kinematics in different reference frames. - In the <strong>top left</strong>, the diagram shows the underlying weak process: a strange quark ( <span class="math inline">s</span> ) inside the <span class="math inline">\Lambda</span> baryon converts into an up quark ( <span class="math inline">u</span> ) via emission of a <span class="math inline">W^-</span> boson, which subsequently produces a <span class="math inline">u\bar{u}</span> quark pair. The <span class="math inline">u</span> quark, together with the spectator <span class="math inline">u</span> and <span class="math inline">d</span> quarks, forms the final state proton, while the <span class="math inline">\bar{u}</span> combines with a spectator <span class="math inline">d</span> to form the <span class="math inline">\pi^-</span> . - The <strong>bottom left</strong> diagram depicts the decay kinematics in the laboratory (or production) frame. The <span class="math inline">\Lambda</span> moves along the <span class="math inline">z</span> -axis, then decays, producing a proton and a <span class="math inline">\pi^-</span> emitted in a shared “decay plane”. - The <strong>right</strong> side of the figure shows what occurs after boosting into the rest frame of the <span class="math inline">\Lambda</span> (the so-called <strong>helicity frame</strong>, where the <span class="math inline">\Lambda</span> is at rest). In this frame, the proton and <span class="math inline">\pi^-</span> are emitted back-to-back, forming a specific angle <span class="math inline">\theta_H</span> with respect to the <span class="math inline">\Lambda</span> polarization (or motion) axis. The labels <span class="math inline">\lambda_{\Lambda}</span> and <span class="math inline">\lambda_{p\pi}</span> refer to the helicities (spin projections) of the <span class="math inline">\Lambda</span> and the <span class="math inline">p\pi</span> system, respectively. This setup is central in hadron spectroscopy, as analyzing the angular distribution of the decay products in the helicity frame allows measurement of spin and parity properties of the parent particle ( <span class="math inline">\Lambda</span> baryon in this case), as well as the dynamics of weak decay processes. The transformation from lab frame to rest frame and the interpretation of the resulting angular variables are key topics in the lecture’s discussion of kinematics and phase space in particle production and decay.
+</figcaption>
+</figure>
+</div>
+<p>Before starting, we go through the recap and I ask quickly to give the answers. Who feels confident on question number one? Let’s break it down.</p>
+<ul>
+<li><strong>Flavor:</strong> In this context, flavor is a quantum number for the multiplet. It refers to quark types like up, down, strange, and charm. It is distinct from color charge.</li>
+<li><strong>Multiplet:</strong> This refers to the different possible combinations or configurations for a given quantum number, like the different states for a total spin.</li>
+</ul>
+<p>The whole question was: <em>What are the flavor multiplets of Σ_b?</em> We are looking for other baryons that belong to the same multiplet, meaning they share the same quantum numbers but have different projections of the flavor wave function. The Σ_b baryon has quark content (u s b).</p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Isospin and SU(3) Multiplets:</strong></p>
+<ul>
+<li><strong>Isospin SU(2):</strong> This is a flavor symmetry where you can change a u quark to a d quark. For Σ_b, this gives two particles in the isospin multiplet: Σ_b⁺ (u s b) and Σ_b⁰ (d s b). They have different charges.</li>
+<li><strong>SU(3) Flavor:</strong> This symmetry allows flipping the strange quark to others (u, d), leading to larger multiplets like decuplets, which were discussed in lecture two.</li>
+</ul>
+</div>
+</div>
+</div>
+<p>The next question was about the spin of two pions in a D-wave. The quantum numbers of a single pion are <span class="math inline">0^-</span> . When combining two scalar (spin-0) particles:</p>
+<ul>
+<li>In an <strong>s-wave</strong>, the total spin is <span class="math inline">0^+</span> .</li>
+<li>In a <strong>p-wave</strong>, the total spin is <span class="math inline">1^-</span> .</li>
+<li>In a <strong>D-wave</strong>, the total spin is ** <span class="math inline">2^+</span> **.</li>
+</ul>
+<p>The final question: <em>Is flavor symmetry gauge and Lorentz symmetry gauge?</em></p>
+<ul>
+<li><strong>Gauge symmetry</strong> is a <strong>local</strong> symmetry, where transformations can be made independently at every point in spacetime. The electromagnetic field arises from promoting a global phase symmetry to a local one.</li>
+<li><strong>Flavor symmetry</strong> is a <strong>global</strong> symmetry, not a gauge symmetry.</li>
+<li><strong>Lorentz symmetry</strong> (boosts and rotations) is typically applied uniformly across spacetime in our considerations. While it can be treated as a local gauge symmetry in theories of gravity, in standard particle physics it is <strong>not</strong> considered a gauge symmetry. Today we start this lecture on particle production. The first section is “A Dictionary and Slang of Particle Production,” as a follow-up to discussing different production mechanisms. When we talk about production kinematics, it makes sense to distinguish a few different classes. This classification depends on the reaction kinematics, but also on practicalities.</li>
+</ul>
+<div id="fig-fg1" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2025-Lecture-05-images/fig1.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: This figure illustrates the basic setup of a <strong>fixed-target experiment</strong>, one of the two main classes of particle production experiments discussed in the lecture. In this arrangement, a particle beam (such as photons, pions, or muons) is directed onto a stationary target material. The collision produces a variety of <strong>final state particles</strong>, which emerge from the interaction region and can be measured by detectors. This figure emphasizes the directional nature of fixed-target experiments—where the target remains at rest in the laboratory frame and the beam delivers energy, resulting in final-state particles that are typically boosted forward. Fixed-target experiments, such as GlueX and COMPASS, are historically important in hadron spectroscopy and provide specific kinematic features distinct from collider setups.
+</figcaption>
+</figure>
+</div>
+<p>We start by separating two different classes of experiments:</p>
+<ol type="1">
+<li><strong>Fixed-target experiments:</strong> A beam is shot at a stationary target.</li>
+<li><strong>Collider experiments:</strong> Two beams are collided head-on.</li>
+</ol>
+<p><strong>Practical Differences:</strong></p>
+<ul>
+<li><strong>Energy:</strong> Colliders can achieve much higher center-of-mass energy.</li>
+<li><strong>Boost:</strong> Fixed-target experiments produce decay products that are more boosted in the forward direction.</li>
+<li><strong>Complexity:</strong> Fixed-target setups are historically simpler, requiring only a beam and a target.</li>
+</ul>
+<p><strong>Examples of Fixed-Target Experiments:</strong></p>
+<ul>
+<li><strong>GlueX:</strong> Photon beam on a liquid hydrogen target.</li>
+<li><strong>COMPASS:</strong> Pion or muon beam on various targets (hydrogen, lead, ammonia, beryllium).</li>
+</ul>
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Target Materials in Practice:</strong></p>
+<ul>
+<li><strong>Liquid Hydrogen:</strong> Popular for hadron spectroscopy. It’s a 1-meter long pipe (~30 cm active length) requiring careful handling under pressure.</li>
+<li><strong>Beryllium:</strong> A simple, cheap disk target (e.g., 3 cm thick).</li>
+<li><strong>Lead (High-Z):</strong> Used for higher production rates, as cross sections scale with the number of protons (Z) in the target.</li>
+</ul>
+</div>
+</div>
+</div>
+<p>In experiments like GlueX, a <strong>photon beam</strong> is produced via <strong>bremsstrahlung</strong>: electrons pass through a thin foil, emit photons, and are then bent away by a magnet, leaving a pure photon beam. To discuss the physics of the production mechanism, we draw diagrams where incoming particles enter a blob on the left and outgoing particles appear on the right.</p>
+<div id="fig-fg2" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2025-Lecture-05-images/fig2.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: This figure represents a generic diagram for an exclusive particle production reaction in hadron spectroscopy. Here, a photon ( <span class="math inline">\gamma</span> ) and a proton ( <span class="math inline">p</span> ) are shown as incoming particles on the left, entering a central “blob” that symbolizes the underlying interaction or production mechanism. The outgoing particles emerging from the blob are a proton ( <span class="math inline">p</span> ), a positive pion ( <span class="math inline">\pi^+</span> ), and a negative pion ( <span class="math inline">\pi^-</span> ). This setup formalizes a reaction such as <span class="math inline">\gamma p \to p \pi^+ \pi^-</span> . In the context of this lecture, this type of diagram is used to discuss the kinematics of exclusive processes, where all final-state particles are measured. The “blob” represents all possible strong-interaction physics that can occur, while the external lines denote incoming and outgoing real particles. The study of such reactions often involves analyzing the event in the center-of-momentum (CM) frame, using conservation of four-momentum to reconstruct invariant masses (like <span class="math inline">m_{\pi\pi}</span> ), and transitioning to frames such as the Gottfried-Jackson frame to further analyze the decay angular distributions of the particle systems produced. In summary, this figure encapsulates the essential ingredients for investigating production mechanisms, kinematics, and resonance identification in exclusive photoproduction experiments, using the tools discussed throughout the lecture.
+</figcaption>
+</figure>
+</div>
+<ul>
+<li><strong>Exclusive Processes:</strong> We measure <strong>all</strong> final-state particles. This is necessary to understand detailed production mechanisms and specific resonances.</li>
+<li><strong>Inclusive Processes:</strong> We measure only a specific final-state particle (e.g., a kaon), summing over all other unmeasured particles. This gives access to averaged quantities, like parton distribution functions inside the proton.</li>
+</ul>
+<div id="fig-fg3" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2025-Lecture-05-images/fig3.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: This figure illustrates an <strong>inclusive particle production process</strong>, as discussed in the lecture. In this context, the diagram shows a <strong>proton (p)</strong> and a <strong>muon ( <span class="math inline">\mu^-</span> )</strong> entering a reaction (the blob), and in the final state, a <strong>kaon ( <span class="math inline">K^-</span> )</strong>, a <strong>muon ( <span class="math inline">\mu^-</span> )</strong>, and any other unmeasured particles (“anything”, often denoted as X) emerging. This type of process, e.g.&nbsp;<span class="math inline">\mu^- p \to \mu^- K^- X</span> , is typical for <strong>inclusive measurements</strong>, where only one or a subset of final-state particles (here, the <span class="math inline">K^-</span> ) is detected and the rest summed over. Such processes are used to probe the internal structure of particles like the proton—specifically, to gain information about the <strong>strange quark content (sea quarks)</strong> inside the proton through virtual photon exchange. This approach contrasts with <strong>exclusive processes</strong>, where all final-state particles are reconstructed in detail to study specific resonances or reaction mechanisms.
+</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Example: Probing Proton Strangeness</strong> An inclusive process like <span class="math inline">\mu^- p \to \mu^- K^+ X</span> (studied at COMPASS) allows us to probe the strange quark content (“sea quarks”) inside the proton via the exchanged virtual photon.</p>
+</div>
+</div>
+</div>
+<p>For now, let’s focus on the kinematics of <strong>exclusive reactions</strong>. I will introduce two important kinematic frames used for these studies.</p>
+<p>In particle physics, we deal with <strong>four-vectors</strong>. While physics is frame-independent, practical calculations are easier in specific frames. Quantities like angle or energy must always be specified with respect to a chosen frame.</p>
+<section id="center-of-momentum-cm-frame" class="level3" data-number="1.1">
+<h3 data-number="1.1" class="anchored" data-anchor-id="center-of-momentum-cm-frame"><span class="header-section-number">1.1</span> Center-of-Momentum (CM) Frame</h3>
+<p>In this frame, the three-momenta of the initial particles sum to zero. They are back-to-back. For a reaction like <span class="math inline">\gamma p \to p \pi^+ \pi^-</span> , we can group the two pions as a system.</p>
+<div id="fig-fg4" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2025-Lecture-05-images/fig4.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: This figure illustrates the kinematics of an exclusive reaction—specifically, the process <span class="math inline">\gamma p \to p \, (\pi\pi)</span> —in the <strong>center-of-momentum (CM) frame</strong>. The incoming photon ( <span class="math inline">\gamma</span> ) and proton ( <span class="math inline">p</span> ) collide, resulting in an outgoing recoil proton and a dipion system <span class="math inline">(\pi\pi)</span> . The two outgoing particles, the recoil proton and the dipion system, are emitted back-to-back, with their momenta constrained to lie within a single plane, labeled here as the <strong>reaction plane</strong>. This diagram is a typical representation used to discuss production kinematics for reactions studied in fixed-target experiments, emphasizing the conservation of momentum and the definition of planes crucial for analyzing angular distributions and resonance decays.
+</figcaption>
+</figure>
+</div>
+<p><strong>Key Invariant: Mandelstam <span class="math inline">s</span> </strong> The total center-of-mass energy squared is the fundamental Lorentz invariant: <span class="math display">s = (p_{\text{beam}} + p_{\text{target}})^2</span></p>
+<p><strong>Energies and Momenta in the CM Frame</strong> The energy of a particle (e.g., the beam) in the CM frame is: <span class="math display">E_{\text{beam}}^* = \frac{s + m_{\text{beam}}^2 - m_{\text{target}}^2}{2\sqrt{s}}</span><br>
+The magnitude of its three-momentum is found using the <strong>Källén function</strong> <span class="math inline">\lambda(x,y,z) = x^2 + y^2 + z^2 - 2xy - 2xz - 2yz</span> : <span class="math display">|\vec{p}^{\,*}| = \sqrt{(E_{\text{beam}}^*)^2 - m_{\text{beam}}^2} = \frac{\sqrt{\lambda(s, m_{\text{beam}}^2, m_{\text{target}}^2)}}{2\sqrt{s}}</span><br>
+This “breakup momentum” formula is symmetric. For the final state, treating the dipion system as a resonance with mass <span class="math inline">m_{\pi\pi}</span> , the momentum of the recoil proton in the CM frame is: <span class="math display">|\vec{p}_{p}^{\,*}| = \frac{\sqrt{\lambda(s, m_{p}^2, m_{\pi\pi}^2)}}{2\sqrt{s}}</span></p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Why can we treat two pions as one particle?</strong> Kinematically, we use four-momentum conservation: <span class="math display">p_{\text{beam}} + p_{\text{target}} = p_{\text{recoil}} + p_{\pi^+} + p_{\pi^-}</span><br>
+We define the composite four-momentum <span class="math inline">p_{\pi\pi} = p_{\pi^+} + p_{\pi^-}</span> . This allows us to analyze the reaction <span class="math inline">\gamma p \to p \, (\pi\pi)</span> as a quasi-two-body process initially, before studying the decay of the <span class="math inline">(\pi\pi)</span> system.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="gottfried-jackson-gj-frame" class="level3" data-number="1.2">
+<h3 data-number="1.2" class="anchored" data-anchor-id="gottfried-jackson-gj-frame"><span class="header-section-number">1.2</span> Gottfried-Jackson (GJ) Frame</h3>
+<p>To analyze the decay of the resonance (e.g., the <span class="math inline">\pi\pi</span> system), we go to its <strong>rest frame</strong>.</p>
+<div id="fig-fg5" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2025-Lecture-05-images/fig5.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: This figure illustrates the kinematic configuration in the Gottfried-Jackson (GJ) frame, which is the rest frame of a resonance decaying to two pions, such as <span class="math inline">\pi^+\pi^-</span> . In this frame, the sum of the momenta of the <span class="math inline">\pi^+</span> and the <span class="math inline">\pi^-</span> is zero, so they are emitted back-to-back. The z-axis is typically aligned along the direction of the incident beam in the overall center-of-mass frame, while the recoiling proton’s direction (not shown) defines a production plane together with the beam. The figure also shows the transverse component ( <span class="math inline">p_T</span> ) and longitudinal component ( <span class="math inline">p_r</span> ) of the pion momenta with respect to the beam direction. This setup is essential for studying angular distributions of the decay products, which help determine properties like the spin of the intermediate resonance. The GJ frame provides a clear separation between the production plane and the decay plane, allowing a precise analysis of the angular correlations characterizing different partial waves (e.g., S-wave, P-wave, D-wave) and resonance structures in hadron spectroscopy.
+</figcaption>
+</figure>
+</div>
+<p>This is the Gottfried-Jackson frame.</p>
+<div id="fig-fg9" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2025-Lecture-05-images/fig9.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7: This figure represents the kinematics of a two-body decay or production process in the center-of-momentum (CM) frame or a relevant rest frame, such as the Gottfried-Jackson (GJ) frame discussed in the lecture. The axes correspond to the components of momentum: the <span class="math inline">z</span> -axis is chosen as the reference direction, typically aligned with the beam axis or a production direction. The <span class="math inline">p_1</span> and <span class="math inline">p_2</span> vectors represent the momenta of the two outgoing particles produced back-to-back due to momentum conservation. The angle <span class="math inline">\theta</span> specifies the orientation of particle 1’s momentum ( <span class="math inline">p_1</span> ) with respect to the <span class="math inline">z</span> -axis. This angle, often called the “decay angle,” is the primary free variable describing the decay kinematics in two-body phase space. Measuring the distribution of <span class="math inline">\theta</span> in this frame allows one to extract information about the spin of the intermediate resonance, the angular momentum involved in the decay, and other dynamical properties. This setup is crucial in the analysis of exclusive reactions and is used in calculations of phase space and matrix element dynamics as described in the lecture.
+</figcaption>
+</figure>
+</div>
+<div id="fig-fg12" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg12-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2025-Lecture-05-images/fig12.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg12-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8: This figure illustrates the concept of a particle at rest, characterized by a three-momentum <span class="math inline">\vec{p} = \vec{0}</span> in its rest frame. The diagram visually represents the rest frame setup, where the spatial component of the four-momentum vanishes, and only the mass <span class="math inline">m</span> remains as the energy component. In such a frame, the particle’s momentum vector lies at the origin, emphasizing that its velocity is zero in this particular reference frame. This scenario is especially relevant when constructing kinematic frames such as the center-of-momentum or the rest frame (e.g., the Gottfried-Jackson frame for a resonance), where total momentum is set to zero by an appropriate Lorentz boost. The configuration shown is foundational for further analysis of decays: all outgoing momenta from a decay must sum to zero in the parent’s rest frame, and the mass <span class="math inline">m</span> can be directly associated with the system’s invariant mass. The lower right vector labeled <span class="math inline">m'</span> hints at a different particle or system with different mass, underscoring that the same rest-frame logic applies for any particle or composite object. In summary, the physical meaning is the depiction of the rest frame of a particle—where the sum of its spatial momenta vanishes and the energy is simply the mass—serving as the starting point for analyzing more complex reactions and decays in particle physics.
+</figcaption>
+</figure>
+</div>
+<div id="fig-fg14" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg14-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2025-Lecture-05-images/fig14.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg14-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;9: This figure illustrates the transformation of kinematic frames in the analysis of an exclusive reaction, specifically for the process <span class="math inline">\gamma p \to p' S^0</span> . Here, a photon ( <span class="math inline">\gamma</span> ) and a proton ( <span class="math inline">p</span> ) collide to produce a scattered proton ( <span class="math inline">p'</span> ) and a neutral resonance particle ( <span class="math inline">S^0</span> ). - <strong>Top left:</strong> The initial configuration is shown in the <strong>center-of-mass (CM) frame</strong>, where the proton and photon collide, producing <span class="math inline">p'</span> and <span class="math inline">S^0</span> . The angle <span class="math inline">\theta_S</span> is defined between the incoming photon and the outgoing resonance <span class="math inline">S^0</span> in this frame. - <strong>Top right:</strong> A <strong>rotation</strong> is applied so that the z-axis aligns conveniently (typically with respect to the beam or outgoing direction) for the subsequent boost. - <strong>Bottom right:</strong> A <strong>boost</strong> along the momentum direction of <span class="math inline">S^0</span> takes the system into the <strong>helicity frame</strong>—the rest frame of the <span class="math inline">S^0</span> resonance. In this frame, the decay of <span class="math inline">S^0</span> can be analyzed by studying the angular distributions with respect to the new z-axis. Physically, this sequence of transformations allows us to transition from the overall production dynamics (in the CM frame) to the detailed study of the decay of a specific resonance ( <span class="math inline">S^0</span> ) in its rest frame (the helicity frame). This is crucial for constructing kinematic variables (like invariant masses and angular distributions) that reveal the quantum numbers and resonance structure of the produced particles, and it matches the methodology described in the lecture for analyzing decays using different reference frames such as the <strong>Gottfried-Jackson frame</strong> or the <strong>helicity frame</strong>.
+</figcaption>
+</figure>
+</div>
+<div id="fig-fg15" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg15-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2025-Lecture-05-images/fig15.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg15-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;10: This figure illustrates the kinematic setup for the decay of a neutral resonance (for example, a <span class="math inline">\rho^0</span> meson) into two pions, <span class="math inline">\rho^0 \to \pi^+ \pi^-</span> . The diagram is drawn in the rest frame of the decaying resonance, also called the Gottfried-Jackson (GJ) frame. In this frame, the <span class="math inline">\pi^+</span> and <span class="math inline">\pi^-</span> are produced back-to-back, and their total three-momentum vanishes. The axes <span class="math inline">(x_H, y_H, z_H)</span> represent the coordinate system in the GJ frame. The momentum of the emitted <span class="math inline">\pi^+</span> , denoted as <span class="math inline">\vec{p}_{\pi^+}</span> , is shown as a vector leaving the origin. Its direction is specified by the angles <span class="math inline">\theta_H</span> (polar angle) and <span class="math inline">\varphi_H</span> (azimuthal angle), which fully determine the orientation of the decay plane of the pions relative to the chosen axis. These angular variables ( <span class="math inline">\theta_H, \varphi_H</span> ) are essential observables for studying the decay dynamics and the spin-parity structure of the resonance. In hadron spectroscopy, analyzing the angular distribution of decay products in this frame reveals information about the underlying production mechanism and the quantum numbers (such as spin) of the parent particle. In summary, this figure provides a schematic representation of kinematics in two-body decay, specifying how the pion momenta are analyzed in the resonance rest frame to extract physical observables relevant for hadron spectroscopy.
+</figcaption>
+</figure>
+</div>
+<ul>
+<li><p>In this frame, <span class="math inline">\vec{p}_{\pi^+}^{\,GJ} + \vec{p}_{\pi^-}^{\,GJ} = 0</span> . The pions are back-to-back.</p></li>
+<li><p>The momentum of each pion in this frame is: <span class="math display">|\vec{p}_{\pi}^{\,GJ}| = \frac{\sqrt{\lambda(m_{\pi\pi}^2, m_{\pi^+}^2, m_{\pi^-}^2)}}{2 m_{\pi\pi}}</span></p></li>
+<li><p>This frame is defined with specific alignments (often with the beam direction along the z-axis) and is crucial for studying the angular distributions of decay products, which reveal the spin of the resonance.</p></li>
+</ul>
+<div id="fig-fg13" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg13-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2025-Lecture-05-images/fig13.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg13-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11: This figure illustrates the standard procedure to obtain the four-momentum of a particle with arbitrary direction in a chosen kinematic frame, using Lorentz transformations. First, you start in the rest frame (top), where the particle has zero three-momentum ( <span class="math inline">\vec{p}=0</span> ). 1. The first step is to apply a <strong>Lorentz boost</strong> along the <span class="math inline">z</span> -axis, giving the particle a momentum <span class="math inline">\vec{p}_z</span> in that direction. This constructs the state <span class="math inline">|\vec{p}_z\rangle = B_z |\vec{0}\rangle</span> , where <span class="math inline">B_z</span> is the boost operator. 2. The second step is to <strong>rotate</strong> the momentum vector from the <span class="math inline">z</span> -axis to an arbitrary direction, specified by the polar and azimuthal angles <span class="math inline">(\theta, \phi)</span> in spherical coordinates. This completes the assignment of the particle’s momentum direction in three-dimensional space. In the context of this lecture, this is the physical process used to construct event kinematics in simulations and calculations: boosting and rotating reference frames to describe particle momenta in the center-of-mass (CM) or Gottfried-Jackson (GJ) frame. This establishes the kinematic configurations necessary for calculating distributions, phase space, and for analyzing decay products’ angular distributions, which are fundamental in hadron spectroscopy. The process shown here underlies how to generate or interpret the full range of physically allowed configurations for multi-particle reactions.
+</figcaption>
+</figure>
+</div>
+<p>The GJ frame is reached from the CM frame by boosting along the momentum of the <span class="math inline">(\pi\pi)</span> system and then rotating. In this frame, we can clearly see the decay plane of the pions relative to the production plane defined by the beam and recoil proton.</p>
+</section>
+</section>
+<section id="rest-frame-of-the-pion-pair" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="rest-frame-of-the-pion-pair"><span class="header-section-number">2</span> Rest Frame of the Pion Pair</h2>
+<p>Absolutely. It is the same trick I applied earlier, and now it can work for this pion pair.</p>
+<p>We know that in the <strong>Gottfried-Jackson (GJ) frame</strong>—which is the center-of-momentum or rest frame of the <span class="math inline">\pi^+ \pi^-</span> system—the sum of their four-momenta results in a four-vector with <strong>zero spatial components</strong>. Therefore, the total four-momentum is simply <span class="math inline">(m_{\pi\pi}, \mathbf{0})</span> , where <span class="math inline">m_{\pi\pi}</span> is the <strong>invariant mass</strong> of the two-pion system.</p>
+<p>Thus, we can apply this trick. For completeness, let’s write it explicitly:</p>
+<p><span class="math display">p_{\pi^+}^{\text{(GJ)}} + p_{\pi^-}^{\text{(GJ)}} = (m_{\pi\pi}, \mathbf{0})</span></p>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>The invariant mass <span class="math inline">m_{\pi\pi}</span> is a <strong>Lorentz scalar</strong>, meaning it has the same value in all reference frames. It is calculated from the four-vector dot product: <span class="math display">m_{\pi\pi}^2 = (p_{\pi^+} + p_{\pi^-})^2</span><br>
+In the Gottfried-Jackson frame, this simplifies because the total three-momentum is zero, so <span class="math inline">m_{\pi\pi}</span> is just the total energy of the system in that frame. This property is crucial for identifying resonances (like the <span class="math inline">\rho^0</span> meson) in particle physics, as they appear as peaks in the <span class="math inline">m_{\pi\pi}</span> distribution.</p>
+</div>
+</div>
+</div>
+<p><strong>Key points to remember:</strong></p>
+<ul>
+<li>The “trick” is boosting to the frame where the total three-momentum of the system vanishes.</li>
+<li>In that frame, the total four-momentum has only a time component, which is the invariant mass.</li>
+<li>This invariant mass <span class="math inline">m_{\pi\pi} = \sqrt{(p_{\pi^+} + p_{\pi^-})^2}</span> is the quantity used to reconstruct resonance masses.</li>
+</ul>
+</section>
+<section id="collider-experiments-and-particle-decay-dynamics" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="collider-experiments-and-particle-decay-dynamics"><span class="header-section-number">3</span> Collider Experiments and Particle Decay Dynamics</h2>
+<p>I will probably try to add a few more exercises on kinematics because that’s something worth practicing—how you get these particular expressions—and it’s all over the place. It’s a very important skill to be able to operate with <strong>four-vectors</strong>.</p>
+<p>But we continue with discussing another type or class of experiments, particularly <strong>collider experiments</strong>. There are a few collider experiments in the world, and depending on the colliding particles, you have different physics.</p>
+<ul>
+<li>There’s been a time where antiproton beams were collided at Fermilab.</li>
+<li>Now the biggest running machine is the <strong>LHC (Large Hadron Collider)</strong>, where two protons are collided with each other. Hadron spectroscopy and hadrons are particularly studied by essentially all four LHC experiments. The most dedicated experiment to study strong interactions is <strong>LHCb</strong>.</li>
+<li>Then we have <strong>electron-positron machines</strong>. Currently running are <strong>BESIII</strong> and <strong>Belle II</strong>.</li>
+</ul>
+<p>Two important words to introduce from production data are <strong>production</strong> and <strong>decays</strong>.</p>
+<ul>
+<li>When we talk about certain reactions, we can discuss the hadrons produced directly from the colliding beams. In that case, we would call it <strong>prompt</strong> production, promptly from the primary vertex.</li>
+<li>The other mechanism is when you produce a long-lived particle that flies away from the primary vertex and then decays. Studying this system is what we refer to as studying <strong>decays</strong>.</li>
+</ul>
+<p>One thing you can always have in mind is that the <strong>strong interaction</strong> is called strong because it makes cross sections large and processes happen very quickly. While the <strong>weak interaction</strong> is called weak because it has a smaller cross section. If a particle does not decay strongly, but rather decays weakly, it’s going to have a very small width, which corresponds to a very large lifetime.</p>
+<p>If you think of the different particles with heavy flavor—like the B meson, D meson, Sigma_b baryon, Lambda_b baryon, Omega_b baryon, Omega_c baryon—their ground states always decay weakly. This is because the strong interaction doesn’t change flavor. There is no way you can decay these particles without changing the color or flavor. Once a particle decays weakly, its lifetime is large. This means once it’s produced, it manages to fly away from the primary vertex before decaying. That’s what I try to sketch here. You collide two protons. From this collision, a <span class="math inline">B^0</span> meson is produced, which then decays at a delayed vertex to, say, three pions.</p>
+<div id="fig-fg6" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2025-Lecture-05-images/fig6.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12: This figure illustrates the delayed (secondary) vertex topology commonly observed in collider experiments when studying weak decays of heavy flavor hadrons. Two protons (“p p”) collide at the <strong>primary vertex</strong>, producing, among other particles, a neutral <span class="math inline">B^0</span> meson. The <span class="math inline">B^0</span> travels some distance away from the primary vertex before decaying. The secondary (delayed) vertex is where the <span class="math inline">B^0</span> decays into three pions ( <span class="math inline">\pi^+</span> , <span class="math inline">\pi^-</span> , <span class="math inline">\pi^-</span> ). This separation between vertices is a hallmark of weak decays: the <span class="math inline">B^0</span> ’s relatively long lifetime (compared to strong decays) allows it to move a measurable distance before decaying. The <strong>delayed production products</strong> (the three pions) can be tracked in the detector, allowing reconstruction of the displaced decay vertex and the identification of long-lived particles like <span class="math inline">B^0</span> . This is essential for flavor physics analyses and is used to distinguish signal events from promptly produced background.
+</figcaption>
+</figure>
+</div>
+<p>This is an example of <strong>delayed production</strong>.</p>
+<p>Interestingly, despite the <span class="math inline">b</span> quark being much heavier than the charm quark, the lifetime that B hadrons have is larger than that of charm hadrons.</p>
+<p>In QCD, for energies around 70 GeV, the momentum of the B is a few hundred GeV. It manages to fly a distance of roughly <strong>20 millimeters</strong> before decaying. For charm hadrons, this distance is smaller, about <strong>5 millimeters</strong>.</p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Why do decay distances vary?</strong> The quoted distance (e.g., 2 cm) is an <strong>average</strong>. The actual distance a specific particle flies depends on its momentum. In relativistic physics, the observed lifetime in the lab frame is stretched by the <strong>Lorentz factor</strong>, <span class="math inline">\gamma</span> .</p>
+<ul>
+<li>In the rest frame, a <span class="math inline">B</span> meson has a lifetime <span class="math inline">\tau \approx 10^{-9}</span> seconds.</li>
+<li>In the lab frame, if the <span class="math inline">B</span> meson has an energy of 400 GeV and a mass of 4 GeV, then <span class="math inline">\gamma = E/m = 100</span> .</li>
+<li>The average decay length in the lab is <span class="math inline">L \approx \gamma c \tau</span> (since <span class="math inline">\beta \approx 1</span> ). This calculation gives distances on the order of centimeters.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="fig-fg7" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2025-Lecture-05-images/fig7.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;13: This diagram represents the <strong>exponential decay law</strong> for unstable particles, central to the discussion of decay processes in particle physics experiments. The vertical axis shows the decay rate, <span class="math inline">\frac{dN}{dt}</span> , which is the number of particles decaying per unit time, while the horizontal axis indicates time <span class="math inline">t</span> in the rest frame of the particle (labeled <span class="math inline">t_{\text{rf}}</span> ). The curve demonstrates that the probability for a particle to decay is <strong>constant in time</strong>, yielding an exponential decrease in the number of undecayed particles. The mathematical expression <span class="math inline">e^{-t/\tau_{\text{rf}}}</span> captures this behavior, where <span class="math inline">\tau_{\text{rf}}</span> is the characteristic lifetime of the particle in its rest frame. This fundamental distribution underlies the observation that decay vertices are randomly spread in distance (because flight length is tied to this distribution via relativistic time dilation), and gives the <strong>mean</strong> decay length discussed in the lecture. It emphasizes that, even though the mean lifetime <span class="math inline">\tau</span> is quoted (e.g., in the PDG), individual decays occur randomly and stochastically according to this law.
+</figcaption>
+</figure>
+</div>
+<p>But this is not the full story. The lifetime <span class="math inline">\tau</span> you find in the Particle Data Group (PDG) review is the <strong>characteristic time of a distribution</strong>. What is that distribution? It’s the same as in nuclear physics: an <strong>exponential decay law</strong>.</p>
+<p>The number of undecayed particles <span class="math inline">N</span> at time <span class="math inline">t</span> follows: <span class="math display">N(t) = N_0 e^{-t/\tau}</span><br>
+This arises because, at every moment, the probability for a given particle to decay is constant. We observe the same exponential behavior in particle physics for the <span class="math inline">B</span> , <span class="math inline">D</span> , or any unstable particle—it’s a fundamental quantum property.</p>
+<p>Therefore, when we say a <span class="math inline">B</span> meson flies about 2 cm, this is really the mean of a convoluted distribution. There is a distribution of production momenta (and thus <span class="math inline">\gamma</span> factors) from collision to collision, and each individual <span class="math inline">B</span> meson decays at a random time drawn from the exponential distribution.</p>
+<p>So, we’ve discussed the <span class="math inline">B</span> meson. How do you actually observe such events in an experiment? You don’t measure the decaying particle directly. The only way to observe them is by <strong>tracking the final state particles</strong>.</p>
+<p>You get a track for each of the pions. You trace them back—they are straight lines without a magnetic field, or curved lines if a magnetic field is present. You then realize these tracks do not point back to the primary vertex where the protons collided. They appear to come from a common point that is <strong>displaced</strong> from the primary vertex. This is how you reconstruct a <strong>secondary decay vertex</strong>.</p>
+<p>For every track, we define the <strong>closest distance to the primary vertex</strong>, called the <strong>Impact Parameter (IP)</strong>. To account for measurement precision, we use the <strong>Impact Parameter Significance</strong>: <span class="math display">\text{IP} \chi^2 = \left( \frac{d}{\sigma_d} \right)^2</span><br>
+Here, <span class="math inline">d</span> is the closest distance, and <span class="math inline">\sigma_d</span> is its uncertainty. A large IP <span class="math inline">\chi^2</span> indicates the track is inconsistent with originating from the primary vertex. Analysts use this variable to select events containing displaced decays, like those from <span class="math inline">B</span> mesons or <span class="math inline">\Lambda</span> baryons.</p>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>The Power of the Boost</strong> The measurable flight distance is entirely due to <strong>relativistic time dilation</strong>. (see <a href="#fig-fg6" class="quarto-xref">Figure&nbsp;12</a>) A <span class="math inline">\Lambda</span> baryon, with a similar rest-frame lifetime to a <span class="math inline">B</span> meson but often produced with a much higher <span class="math inline">\gamma</span> at the LHC, can fly <strong>meters</strong>—sometimes up to 5 meters—from the primary vertex. This makes its decay vertex easily distinguishable.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="peak-background-and-misidentification-in-three-pion-invariant-mass-spectra" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="peak-background-and-misidentification-in-three-pion-invariant-mass-spectra"><span class="header-section-number">4</span> Peak, Background, and Misidentification in Three-Pion Invariant Mass Spectra</h2>
+<p>A typical observation would be the following. An experiment is performed a million times. The million records are processed and events are selected where there are three particles with a large impact parameter and they must come from the same vertex. The impact parameter with respect to the primary vertex is large, while with respect to the secondary vertex it is small.</p>
+<p>Three particles are forced to come from the same secondary vertex and the invariant mass of the particles is computed. This mass <span class="math inline">M</span> is defined as <span class="math inline">M = \sqrt{(p_1 + p_2 + p_3)^2}</span> , where the four-vectors <span class="math inline">p_i</span> of the particles are measured in the experiment. Then a square root is taken to get the mass of the three particles and a spectrum is observed that peaks around <span class="math inline">M_{B^-}</span> .</p>
+<div id="fig-fg8" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2025-Lecture-05-images/fig8.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;14: This figure illustrates a typical invariant mass spectrum ( <span class="math inline">\frac{dN}{dm_{3\pi}}</span> versus <span class="math inline">m_{\pi^+\pi^-\pi^-}</span> ) for three-pion final states in a particle physics experiment searching for <span class="math inline">B^-</span> meson decays. The plot demonstrates three key physical features from hadron spectroscopy production experiments: 1. <strong>Resonance Peak:</strong> There is a prominent peak at the invariant mass <span class="math inline">m_{B^-}</span> , labeled as such. This peak corresponds to true <span class="math inline">B^-\to\pi^+\pi^-\pi^-</span> decays; due to energy-momentum conservation, the invariant mass of the three final-state pions reconstructs the original <span class="math inline">B^-</span> mass. In an ideal experiment with perfect resolution, this peak would be a delta function. Realistically, detector resolution broadens it into a Gaussian shape. 2. <strong>Combinatorial Background:</strong> There is a nearly flat (green dashed) background beneath the peak, representing combinatorial background. This arises from random combinations of tracks (pions) that do not originate from a genuine <span class="math inline">B^-</span> decay, but nonetheless satisfy the selection criteria. They create a smooth distribution across the mass spectrum. 3. <strong>Misidentification Peaks:</strong> Another peak is indicated, arising from <span class="math inline">B^-\to K^-\pi^+\pi^-</span> decays, where the kaon has been misidentified as a pion. Since tracking alone cannot distinguish between pions and kaons (without additional particle identification detectors), the wrong mass hypothesis for one of the tracks leads to a shifted peak in the reconstructed invariant mass distribution. Overall, this figure encapsulates how resonance signals (true decays) are observed as mass peaks, how backgrounds and misidentified decays complicate the spectra, and highlights the fundamental role of invariant mass calculations—here, <span class="math inline">m_{3\pi} = \sqrt{(p_{\pi^+} + p_{\pi^-} + p_{\pi^-})^2}</span> —in experimental hadron spectroscopy. It also underlines the necessity for additional information, such as particle identification, to distinguish between decay channels with similar track signatures.
+</figcaption>
+</figure>
+</div>
+<p>I would like to discuss three features of the spectrum that are always present.</p>
+<ol type="1">
+<li><strong>The first is the peaking in the spectrum.</strong> The spectrum looks like the number of counts for the lower mass of three pions is small. Suddenly it rises and then again the distribution has the bell shape with a certain width. Most of the events are gathered around this value.</li>
+<li><strong>The second feature is the presence of background.</strong> This peak is sitting on a sort of constant, barely moving floor, which we call the combinatorial background.</li>
+<li><strong>The third feature is that sometimes you have more peaks</strong> that would be associated with misidentifying particles.</li>
+</ol>
+<p>Let’s discuss one by one quickly why the peak appears in the spectrum and what impacts its position and shape.</p>
+<p>If the process is the signal process—a <span class="math inline">B</span> meson flying and decaying to three pions—the mass of the three pions will be exactly that of the <span class="math inline">B</span> . Once we combine the three four-vectors, their invariant mass is equal to the mass of the beam particle.</p>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>In the ideal, theoretical case with no experimental uncertainties, the invariant mass spectrum would be a <strong>delta function</strong> at the true parent particle mass <span class="math inline">M_B</span> , representing exact energy-momentum conservation: <span class="math display">\frac{dN}{dM} = N_0 \, \delta(M - M_B)</span></p>
+</div>
+</div>
+</div>
+<p>In the experimental situation, we don’t observe delta functions; we observe a Gaussian curve. The reason for this spreading is <strong>measurement uncertainty</strong>. (see <a href="#fig-fg8" class="quarto-xref">Figure&nbsp;14</a>) All tracks come with a certain precision from the hit positions and tracking.</p>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Due to finite detector resolution, the ideal delta function is smeared into a <strong>Gaussian distribution</strong>. The observed peak is described by: <span class="math display">\frac{dN}{dM} = \frac{N_0}{\sqrt{2\pi}\sigma} \exp\left[-\frac{(M - M_B)^2}{2\sigma^2}\right]</span><br>
+where <span class="math inline">\sigma</span> represents the experimental mass resolution.</p>
+</div>
+</div>
+</div>
+<p>This shape is very close to a Gaussian. For all particles that decay weakly, like the <span class="math inline">B</span> meson with a lifetime of <span class="math inline">\sim 10^{-9}</span> seconds, the natural decay width (on the order of eV) is completely negligible compared to the GeV-scale experimental resolution. The resonance peak we see is therefore dominated by the resolution of the experiment.</p>
+<p><strong>The second item is combinatorial background.</strong> This refers to the random associations of pions that pass the selection criteria. When you collide two protons at high energy (e.g., 7 TeV), many particles are produced.</p>
+<ul>
+<li>What is the average number of charged particles produced in one collision? The right answer is a few hundred to a few thousand.</li>
+<li>There is a significant chance that tracks originating from the primary vertex get combined and pass the impact parameter criteria simply due to measurement uncertainties.</li>
+<li>The combinatorics are huge. In an event with a thousand tracks, if you have 300 <span class="math inline">\pi^+</span> and 200 <span class="math inline">\pi^-</span> , the number of possible triple combinations is enormous. All these random combinations produce a roughly flat background under the mass distribution.</li>
+</ul>
+<p><strong>The last feature is particle misidentification (mis-ID).</strong> This is crucial for all experiments. When we track charged particles, we measure their momentum from the track curvature in a magnetic field. However, we <strong>do not directly measure the particle’s mass</strong>.</p>
+<ul>
+<li>To compute the particle’s energy and complete its four-vector, we must <strong>assume a mass</strong> (e.g., assume it’s a pion).</li>
+<li>Without extra information from particle identification detectors, all charged tracks look similar. We cannot distinguish pions, kaons, or protons from tracking alone.</li>
+<li>If we make the wrong mass assumption, we compute the wrong energy. For example, consider a real event where a <span class="math inline">B</span> decays to <span class="math inline">K^- \pi^+ \pi^-</span> . If we misidentify the kaon as a pion, we use the smaller pion mass to compute its energy. (see <a href="#fig-fg8" class="quarto-xref">Figure&nbsp;14</a>) This leads to an incorrect calculation of the invariant mass for that combination, creating a shifted peak or background elsewhere in the spectrum.</li>
+</ul>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>This misidentification background is why experiments <strong>must</strong> have good particle identification systems, such as Ring Imaging Cherenkov (RICH) detectors or Time-of-Flight (ToF) systems, to suppress these errors.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="phase-space-factorization-and-the-dalitz-plot" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="phase-space-factorization-and-the-dalitz-plot"><span class="header-section-number">5</span> Phase Space Factorization and the Dalitz Plot</h2>
+<p>When we do experiments, it’s always important to simulate and see what we expect, to simulate different reactions. For this, we have exactly the same setup as we have in the experiment. But in the modeling, there are computer programs that simulate particle collisions, simulate all possible decays, all possible processes that happen, and simulate their movement through a detector.</p>
+<p>It’s very important to know the <strong>cross section</strong> of different processes. But what’s also important is to know the available <strong>configuration space</strong> for different particles. That’s driven by the <strong>phase space</strong>, the available phase space of possible configurations.</p>
+<section id="the-n-body-phase-space-formula" class="level3" data-number="5.1">
+<h3 data-number="5.1" class="anchored" data-anchor-id="the-n-body-phase-space-formula"><span class="header-section-number">5.1</span> The N-Body Phase Space Formula</h3>
+<p>For the <span class="math inline">N</span> -particle phase space, the differential element is given by:</p>
+<p><span class="math display">d\phi_n = \prod_{i=1}^n \frac{d^3 p_i}{(2\pi)^3 2 E_i} (2\pi)^4 \delta^4(p_0 - \sum p_i)</span></p>
+<p>This expression has <span class="math inline">3N - 4</span> independent integrals. It reflects the fact that for <span class="math inline">N</span> particles, we have the on-shell mass constraints and overall four-momentum conservation.</p>
+</section>
+<section id="two-body-phase-space" class="level3" data-number="5.2">
+<h3 data-number="5.2" class="anchored" data-anchor-id="two-body-phase-space"><span class="header-section-number">5.2</span> Two-Body Phase Space</h3>
+<p>The expression for the two-body phase space is more direct. For two particles, you start with eight integrals (three momentum components for each particle). You subtract two from the mass-shell constraint for each particle and four from the momentum conservation delta function. What remains are two differentials.</p>
+<p>This can be arranged so that you only integrate over angles. Essentially, that’s the only freedom you have: the direction orientation, because in the center-of-mass frame, particle one and particle two go back-to-back. The space of configurations in that case is simply <span class="math inline">4\pi</span> non-relativistically, with a relativistic correction factor.</p>
+<p>The final, Lorentz-invariant form is:</p>
+<p><span class="math display">d\phi_2 = \frac{1}{8\pi} \frac{2p^*}{\sqrt{s}} d\cos\theta \frac{d\varphi}{2\pi}</span></p>
+<p>Here, <span class="math inline">p^*</span> is the magnitude of the momentum for each particle in the center-of-mass frame, and <span class="math inline">\sqrt{s}</span> is the total center-of-mass energy.</p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Physics Meaning:</strong> This formula represents the simplified phase space for a decay into two particles. The factor <span class="math inline">\frac{1}{8\pi}</span> arises from integrating over the delta functions, and <span class="math inline">\frac{2|\mathbf{p}|}{\sqrt{s}}</span> is the relativistic kinematic factor. The only free variables are the angular orientation <span class="math inline">(\theta, \phi)</span> .</p>
+</div>
+</div>
+</div>
+</section>
+<section id="three-body-phase-space-and-factorization" class="level3" data-number="5.3">
+<h3 data-number="5.3" class="anchored" data-anchor-id="three-body-phase-space-and-factorization"><span class="header-section-number">5.3</span> Three-Body Phase Space and Factorization</h3>
+<p>For the three-body case, it’s more involved: <span class="math inline">d\phi_3(1, 2, 3)</span> . It’s a Lorentz-invariant expression we can evaluate in any frame.</p>
+<p>A powerful trick is to rewrite the three-body phase space using a two-body topology. We can factorize it by considering the decay as happening in two steps:</p>
+<ol type="1">
+<li>The initial particle decays into a composite system (1,2) and particle 3.</li>
+<li>The composite system (1,2) then decays into particles 1 and 2.</li>
+</ol>
+<p>This is done by introducing the invariant mass squared of the (1,2) pair, <span class="math inline">m_{12}^2</span> , as an integration variable.</p>
+<p><strong>The claim is that the full three-body phase space can be written as:</strong></p>
+<p><span class="math display">d\phi_3 = d\phi_2(0 \to (1,2), 3) \times d\phi_2((1,2) \to 1,2) \times \frac{d m_{12}^2}{2\pi}</span></p>
+<p>This is intuitive: you split your phase space into a sequential pair of two-body decays. This is a general method to reduce an <span class="math inline">N</span> -body phase space to combinations of lower-body phase spaces.</p>
+<p>Substituting the explicit form for the two-body phase spaces, we get:</p>
+<p><span class="math display">d\phi_3 = \frac{1}{8\pi} \frac{2 p_3^*}{\sqrt{s}} \frac{d\Omega_{12,3}}{4\pi} \times \frac{1}{8\pi} \frac{2 k_{1,2}}{m_{12}} \frac{d\Omega_{1,2}}{4\pi} \times \frac{d m_{12}^2}{2\pi}</span></p>
+<p>Here, <span class="math inline">p_3^*</span> is the momentum of particle 3 in the rest frame of the initial particle, and <span class="math inline">k_{1,2}</span> is the momentum of particle 1 (or 2) in the rest frame of the (1,2) system.</p>
+</section>
+<section id="from-angles-to-invariant-masses-the-dalitz-plot" class="level3" data-number="5.4">
+<h3 data-number="5.4" class="anchored" data-anchor-id="from-angles-to-invariant-masses-the-dalitz-plot"><span class="header-section-number">5.4</span> From Angles to Invariant Masses: The Dalitz Plot</h3>
+<p>The final step is to trade the angular variable, specifically <span class="math inline">\cos\theta_{1,2}</span> from the decay of the (1,2) system, for another invariant mass squared, like <span class="math inline">m_{23}^2 = (p_2 + p_3)^2</span> .</p>
+<p>The relation is linear: <span class="math display">m_{23}^2 = m_2^2 + m_3^2 + \frac{1}{2 m_{12}^2} (m_{12}^2 + m_2^2 - m_1^2)(-m_{12}^2 + s - m_3^2) - \frac{1}{2 m_{12}} \lambda_{12}^{1/2} \lambda_{30}^{1/2} \cos \theta_{1,2}</span><br>
+where <span class="math inline">\lambda_{12} = \lambda(m_{12}^2, m_1^2, m_2^2)</span> and <span class="math inline">\lambda_{30} = \lambda(s, m_{12}^2, m_3^2)</span> .</p>
+<p>This allows us to replace the integration over <span class="math inline">d\cos\theta_{1,2}</span> with an integration over <span class="math inline">dm_{23}^2</span> .</p>
+<div id="fig-fg10" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2025-Lecture-05-images/fig10.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;15: This figure represents a Dalitz plot, a fundamental tool for analyzing the kinematics of three-body decays in particle physics. The plot uses invariant mass squared variables— <span class="math inline">m_{12}^2</span> on the horizontal axis and <span class="math inline">m_{23}^2</span> on the vertical axis—to represent all possible configurations of final-state particle momenta. Each physically allowed set of momenta for the three particles corresponds to a single point within the bounded region (the “circle”) shown in the plot, which is defined by the constraints of energy-momentum conservation and the masses of the particles (the phase space boundaries determined by the Kibble function). The text annotates that every possible configuration is mapped inside this region, meaning the entire phase space is represented within the plot. At the bottom, the differential decay rate formula <span class="math inline">d\Gamma = \frac{1}{2\sqrt{s}}|\mathcal{M}|^2 d\phi</span> is shown, emphasizing that the observed distribution in the Dalitz plot is shaped by both the available phase space ( <span class="math inline">d\phi</span> ) and the dynamics of the decay process ( <span class="math inline">|\mathcal{M}|^2</span> ). For pure phase space (i.e., no dynamical structure), the density of events would be uniform across the allowed region. Any non-uniformity reflects physical processes, such as resonances or interaction dynamics among the decay products.
+</figcaption>
+</figure>
+</div>
+<div id="fig-fg17" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg17-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2025-Lecture-05-images/fig17.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg17-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;16: This figure illustrates the angular distribution of decay products, specifically showing how the differential decay rate <span class="math inline">\frac{d\Gamma}{d\cos\theta}</span> depends on the angle <span class="math inline">\theta</span> for a particle decay process (such as a <span class="math inline">\Lambda</span> baryon). The top plot shows a flat, uniform distribution in <span class="math inline">\cos\theta</span> , which is expected “in case of no <span class="math inline">\Lambda</span> polarisation”—that is, when the decaying particle is completely unpolarized, the decay is isotropic and all directions are equally likely, matching the prediction of phase space for an unpolarized system. The bottom plot shows a linear, asymmetric distribution, which is labeled as “observed: backward-forward-asymmetry.” This means that in real data, an asymmetry is measured indicating a preference in the decay direction (either forward or backward along an axis such as the parent momentum or beam direction). This asymmetry is a physical effect, revealing information about polarization, parity violation, or possible new physics in the production or decay process. The use of the variable <span class="math inline">\cos\theta</span> connects this directly to the kinematics and angular distributions discussed in the lecture, and measuring such asymmetries is a key tool for characterizing particle properties in hadron spectroscopy experiments.
+</figcaption>
+</figure>
+</div>
+<p>What we obtain is that the three-body phase space can be expressed purely in terms of two invariant mass squares, for example <span class="math inline">m_{12}^2</span> and <span class="math inline">m_{23}^2</span> :</p>
+<p><span class="math display">\frac{d\phi_3}{d m_{12}^2 d m_{23}^2} \text{ is flat (uniform)}</span></p>
+<div id="fig-fg11" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg11-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2025-Lecture-05-images/fig11.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg11-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;17: This figure illustrates the physical interpretation of a <strong>Dalitz plot</strong> and its projections in the context of three-body decays, as discussed in the lecture. The leftmost plot is a schematic Dalitz plot: a two-dimensional plot where each event in a three-body final state is represented by a point with coordinates given by two invariant mass squares, <span class="math inline">m_{12}^2</span> and <span class="math inline">m_{23}^2</span> . The kinematically allowed region is typically a solid shape (here represented as a circle or oval), defined by the boundaries of energy-momentum conservation and visualized using the Kibble function. The lines labeled “1” and “2” depict paths or loci within this physical region where substructures may occur, for example, if two of the final-state particles resonate to form an intermediate particle (resonance). “Look at <span class="math inline">m_{ij}</span> on the axes” is a prompt to consider projections onto the axes—i.e., the invariant mass squared distributions for different particle pairs. The subsequent small plots to the right show the <strong>projected invariant mass squared spectra</strong> ( <span class="math inline">d\Gamma/dm_{12}^2</span> , <span class="math inline">d\Gamma/dm_{23}^2</span> , <span class="math inline">d\Gamma/dm_{13}^2</span> ): these are the one-dimensional distributions obtained by integrating over the Dalitz plot along one variable. Each projection picks out how often particular mass combinations occur. Peaks in these distributions correspond to resonant substructures or enhancements in the decay rate for specific two-body combinations. The text “if the Dalitz plot had diagonal lines there would be peaks for 3” emphasizes that if correlations along diagonals existed (e.g., due to a third resonance in the third pair), they would manifest as peaks in the respective projection. Overall, this figure visually conveys how the <strong>Dalitz plot encodes all three-body decay kinematics</strong> and how physical resonances or substructures of the matrix element <span class="math inline">|\mathcal{M}|^2</span> manifest as features (such as peaks) in the projections of the invariant mass distributions. This framework is fundamental for analyzing and interpreting exclusive three-body decays in hadron spectroscopy.
+</figcaption>
+</figure>
+</div>
+<div id="fig-fg18" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg18-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2025-Lecture-05-images/fig18.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg18-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;18: This figure illustrates the Dalitz plot for a three-body decay of an unknown particle <span class="math inline">x</span> into a proton ( <span class="math inline">p</span> ), a kaon ( <span class="math inline">K^-</span> ), and a pion ( <span class="math inline">\pi^+</span> ), specifically <span class="math inline">x \to p K^- \pi^+</span> . The Dalitz plot represents each event as a point in the space defined by the squared invariant masses <span class="math inline">m^2(pK^-)</span> (horizontal axis) and <span class="math inline">m^2(K^- \pi^+)</span> (vertical axis). The physical meaning of the plot comes from how regions in this space correspond to different kinematic configurations of the decay products: - The allowed kinematic region is bounded by curves representing the minimum and maximum possible values for these invariant masses, determined by the masses of the initial and final particles (as shown by the various labeled bounds such as <span class="math inline">(m_p + m_{K^-})^2</span> , <span class="math inline">(m_K + m_{\pi^+})^2</span> , <span class="math inline">(m_x - m_p)^2</span> , and <span class="math inline">(m_x - m_{\pi^+})^2</span> ). - A <strong>horizontal band</strong> (parallel to the x-axis) indicates a resonance in the <span class="math inline">K^- \pi^+</span> subsystem: this appears when two final state particles form an intermediate resonance (e.g., a <span class="math inline">K^*</span> ), which would show up as many events clustered at a specific value of <span class="math inline">m^2(K^- \pi^+)</span> . - A <strong>vertical band</strong> (parallel to the y-axis) indicates a resonance in the <span class="math inline">pK^-</span> subsystem: this denotes the presence of an intermediate resonance involving the proton and the kaon. - The distributions along the sides of the plot (represented by horizontal and vertical projections) show the invariant mass spectra of the respective pairs, with peaks corresponding to resonance masses smeared by experimental resolution and possible backgrounds. Overall, the Dalitz plot is a powerful tool in hadron spectroscopy, as it allows experimenters to identify intermediate resonances and study the dynamics of three-body decays by observing the density and structure of events within the kinematic boundaries. The uniformity or enhancement in certain regions of the plot reveal physical processes beyond pure phase space, specifically the effects of the matrix element <span class="math inline">|\mathcal{M}|^2</span> and the presence of resonances.
+</figcaption>
+</figure>
+</div>
+<p>This flatness is a key point. The differential decay width is <span class="math inline">d\Gamma = \frac{1}{2\sqrt{s}} |\mathcal{M}|^2 d\phi</span> . It means the phase space density itself does not depend on <span class="math inline">m_{12}^2</span> and <span class="math inline">m_{23}^2</span> ; all configurations within the kinematically allowed region are equally probable from a phase space perspective. Any suppression or enhancement comes purely from the dynamics encoded in the matrix element squared <span class="math inline">|\mathcal{M}|^2</span> .</p>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>The Dalitz Plot:</strong> Every configuration of the three particles’ momenta can be mapped to a single point inside a two-dimensional plot defined by <span class="math inline">m_{12}^2</span> and <span class="math inline">m_{23}^2</span> . This is the <strong>Dalitz plot</strong>. It’s a powerful way to visualize how a decay proceeds, as structures in the plot directly reflect the behavior of the matrix element.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="the-kinematic-boundary-the-kibble-function" class="level3" data-number="5.5">
+<h3 data-number="5.5" class="anchored" data-anchor-id="the-kinematic-boundary-the-kibble-function"><span class="header-section-number">5.5</span> The Kinematic Boundary: The Kibble Function</h3>
+<p>The interior of the Dalitz plot—the region where points are physically allowed—is described by the <strong>Kibble function</strong>. The condition for a point <span class="math inline">(m_{12}^2, m_{23}^2)</span> to be inside the plot is: (see <a href="#fig-fg10" class="quarto-xref">Figure&nbsp;15</a>) (see <a href="#fig-fg11" class="quarto-xref">Figure&nbsp;17</a>) (see <a href="#fig-fg18" class="quarto-xref">Figure&nbsp;18</a>)</p>
+<p><span class="math display">\Phi = \lambda( \lambda(s, m_1^2, m_{23}^2), \lambda(s, m_2^2, m_{13}^2), \lambda(s, m_3^2, m_{12}^2) ) &lt; 0</span></p>
+<p>Here, <span class="math inline">\lambda(x, y, z) = x^2 + y^2 + z^2 - 2(xy + yz + zx)</span> is the Källén (or triangle) function.</p>
+<p>In summary, for a three-body decay:</p>
+<ul>
+<li>The phase space density in the Dalitz plot variables <span class="math inline">(m_{12}^2, m_{23}^2)</span> is uniform.</li>
+<li>The kinematically allowed region is defined by the Kibble function.</li>
+<li>Any non-uniformity in the distribution of events across the Dalitz plot is a direct signature of the dynamics in <span class="math inline">|\mathcal{M}|^2</span> .</li>
+</ul>
+<p>This gives us a very nice picture to analyze decays. For instance, you could be given a set of three momenta (which sum to zero) from an experiment and your task would be to compute <span class="math inline">m_{12}^2</span> and <span class="math inline">m_{23}^2</span> to place that event as a point on the Dalitz plot.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
