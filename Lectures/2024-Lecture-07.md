@@ -2,7 +2,7 @@
 title: (2024) Lecture 7
 author: ''
 presenter: Mikhail Mikhasenko
-note_taker: Ilya Segal
+note_taker: Anna Zimmer
 date: '2024'
 format: html
 ---
