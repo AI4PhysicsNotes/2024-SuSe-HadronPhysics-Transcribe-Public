@@ -1,8 +1,8 @@
 ---
 title: (2024) Lecture 12
 author: ''
-presenter: Mikhail Mikhasenko
-note_taker: Ilya Segal
+presenter: Farah Afzal
+note_taker: Anna Zimmer
 date: '2024'
 format: html
 ---
