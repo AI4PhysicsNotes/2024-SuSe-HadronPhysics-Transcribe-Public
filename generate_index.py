@@ -131,7 +131,7 @@ class LectureIndexGenerator:
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hadron Physics - Summer Semester 2024 - Ruhr University Bochum</title>
+    <title>Hadron Physics</title>
     <style>
         body {{
             display: flex;
@@ -248,15 +248,15 @@ class LectureIndexGenerator:
         </div>
     </header>
     <h1>Hadron Physics</h1>
-    <h2>Summer Semester 2024 - Ruhr University Bochum</h2>
-    
-    <h2>Lectures</h2>
+    <h2>AI for Physics Lectures — AG Mikhasenko, EP1, Ruhr University Bochum</h2>
 '''
         
         # Generate sections for each year
         for year in years:
+            semester = "SoSe" if year in [2024, 2025] else ""
+            summary_text = f"Hadron Physics {semester} {year}"
             html_content += f'''    <details open>
-        <summary style="font-size: 1.2em; font-weight: bold; color: #17365c; margin: 10px 0;">{year}</summary>
+        <summary style="font-size: 1.2em; font-weight: bold; color: #17365c; margin: 10px 0;">{summary_text}</summary>
         <div class="container">
 '''
             
