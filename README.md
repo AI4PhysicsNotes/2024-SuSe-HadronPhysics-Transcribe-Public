@@ -6,6 +6,11 @@ The content is based on the Course materials for Hadron Physics lectures tought 
 
 [![Pages](https://img.shields.io/badge/Pages-RUB%20Hadron%20Physics-blue)](https://ai4physicsnotes.github.io/2024-SuSe-HadronPhysics-Transcribe-Public/)
 
+## Related Repositories
+
+- [Data](https://github.com/AI4PhysicsNotes/2024-SuSe-HadronPhysics-Transcribe-Data) (internal until published)
+- [Software](https://github.com/AI4PhysicsNotes/Multistream-Processor) (internal until published)
+
 ## Automation
 
 The lecture index is automatically generated based on the actual Markdown files present in the repository. Missing lectures are shown as gray, unclickable buttons.
