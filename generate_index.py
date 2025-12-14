@@ -224,6 +224,17 @@ class LectureIndexGenerator:
             background-color: #f0f0f0;
             border-radius: 5px;
         }}
+        .disclaimer {{
+            text-align: center;
+            color: #555;
+            font-size: 0.85em;
+            margin: 20px auto;
+            max-width: 800px;
+            padding: 15px;
+            background-color: #fff3cd;
+            border: 1px solid #ffeeba;
+            border-radius: 5px;
+        }}
     </style>
 </head>
 <body>
@@ -277,6 +288,9 @@ class LectureIndexGenerator:
     </div>
     <div class="legend">
         <strong>Legend:</strong> Blue buttons = Available | Gray buttons = Missing material
+    </div>
+    <div class="disclaimer">
+        <strong>Disclaimer:</strong> This is an experimental project of agentic conversion (complex pipeline of chunking, polishing and integration) of the lecture recordings and student notes into lecture scripts. The documents are not thoroughly reviewed, they may contain mistakes caused by speech recognition or generative slope.
     </div>
 </body>
 </html>'''
