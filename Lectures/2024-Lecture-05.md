@@ -36,15 +36,15 @@ So for parts A and B, you need to count – tell me how many. Then part C gives 
 
 ### Counting Variables
 
-**Q:** How many degrees of freedom for a 2‑to‑2 scattering of scalar particles?
-**A:** One calculates like  $2 \times 2 = 4$ , then multiply by 3, giving 12 degrees of freedom. Then subtract 4 constraints from conservation laws, leaving 8 variables. That is correct for the entire kinematics if you ignore the lack of an absolute reference frame in space. But you can rotate the space, so you must subtract another 6: 3 rotations and 3 boosts. So after conservation laws you have 8, but after removing the space‑time reference you have  $8 - 6 = 2$  variables.
+<b>Q:</b> How many degrees of freedom for a 2‑to‑2 scattering of scalar particles?
+<b>A:</b> One calculates like  $2 \times 2 = 4$ , then multiply by 3, giving 12 degrees of freedom. Then subtract 4 constraints from conservation laws, leaving 8 variables. That is correct for the entire kinematics if you ignore the lack of an absolute reference frame in space. But you can rotate the space, so you must subtract another 6: 3 rotations and 3 boosts. So after conservation laws you have 8, but after removing the space‑time reference you have  $8 - 6 = 2$  variables.
 
   $$(2+2)(4-1)-4=8,\quad 8-6=2$$  
 
 So for part A, you have 2.
 
-**Q:** What did you get for part B (particles with spin)?
-**A:** You have the 2 variables from part A, and you have the angular distribution of the final‑state particles from the production. I do not have any decay information on these particles. Just 2‑to‑2, then 4. Why 4? The angle between the two production particles, and the angle between the  $3^-$  and  $1^+$  particle. How are these angles different? Why can I not introduce these angles in part A? You can learn they are not necessary. So it is actually 2 as well.
+<b>Q:</b> What did you get for part B (particles with spin)?
+<b>A:</b> You have the 2 variables from part A, and you have the angular distribution of the final‑state particles from the production. I do not have any decay information on these particles. Just 2‑to‑2, then 4. Why 4? The angle between the two production particles, and the angle between the  $3^-$  and  $1^+$  particle. How are these angles different? Why can I not introduce these angles in part A? You can learn they are not necessary. So it is actually 2 as well.
 
 In the first case, my amplitude that describes the interaction blob – the interaction – is a scalar function. It is just a single number. In the case where I have spin for particles, it is not a number; it is a higher‑rank object. So what is the side dimension of my scattering amplitude? Spin‑3 gives 7 dimensions; spin‑1 gives 3 dimensions. Therefore my scattering amplitude is a 21‑dimensional object – I have 21 amplitudes. But all of them are functions of two variables. It is really important to realize that when you have spin for particles, you have more amplitudes, but they all have the same dependencies.
 
@@ -53,8 +53,8 @@ The situation changes when you take into account the decays of the products of t
 ---
 #### Mandelstam Variables
 
-**Q:** What are your favorite two variables to describe a two‑body scattering process?
-**A:** Several choices exist:
+<b>Q:</b> What are your favorite two variables to describe a two‑body scattering process?
+<b>A:</b> Several choices exist:
 
 | Variable Choice | Definition | Comments |
 |-----------------|------------|----------|
@@ -66,14 +66,14 @@ The situation changes when you take into account the decays of the products of t
 
 These variables  $s$  and  $t$  are called invariants; they are Lorentz invariant. They do not describe a specific rest frame, so they do not describe a specific setup of the reactions. They are just something that characterizes the whole process. It does not matter in which frame you consider –  $s$  and  $t$  are understood. When I say “invariant”, I mean Lorentz‑invariant variables.
 
-**Q:** Why talk about a third variable?
-**A:** Because  $u$  is a linear combination of  $s$  and  $t$ . If you pass the algebra, you find that there are only two independent variables, so your favorite set  $s$  and  $u$  is equivalent;  $u$  is a linear combination of  $s$  and  $t$ . You take  $t$  and  $u$ .
+<b>Q:</b> Why talk about a third variable?
+<b>A:</b> Because  $u$  is a linear combination of  $s$  and  $t$ . If you pass the algebra, you find that there are only two independent variables, so your favorite set  $s$  and  $u$  is equivalent;  $u$  is a linear combination of  $s$  and  $t$ . You take  $t$  and  $u$ .
 
-**Q:** Another favorite set from a center‑of‑mass perspective?
-**A:** Energy and angle. That is probably my favorite – indeed,  $\sqrt{s}$ , the center‑of‑mass energy, and then the angle. How do you define the angle? You go to the center‑of‑mass frame (often called center‑of‑momentum), and then you take the angle between  $\vec{p}_1$  and  $\vec{p}_3$ . One has to be careful because the lengths of the vectors indicate their momenta. In the center‑of‑momentum frame, the momentum of the initial and final particles are equal. That choice is fine.
+<b>Q:</b> Another favorite set from a center‑of‑mass perspective?
+<b>A:</b> Energy and angle. That is probably my favorite – indeed,  $\sqrt{s}$ , the center‑of‑mass energy, and then the angle. How do you define the angle? You go to the center‑of‑mass frame (often called center‑of‑momentum), and then you take the angle between  $\vec{p}_1$  and  $\vec{p}_3$ . One has to be careful because the lengths of the vectors indicate their momenta. In the center‑of‑momentum frame, the momentum of the initial and final particles are equal. That choice is fine.
 
-**Q:** Any other common choices?
-**A:** You could choose  $E_1$  in the lab frame and  $E_3$  in the lab frame – that is also fine. One has to be careful: sometimes folding the phase space with a set of variables maps the phase space to a domain that is smaller or has folded coverage – the transformation is not bijective. But that is advanced; I will ask you for an example later.
+<b>Q:</b> Any other common choices?
+<b>A:</b> You could choose  $E_1$  in the lab frame and  $E_3$  in the lab frame – that is also fine. One has to be careful: sometimes folding the phase space with a set of variables maps the phase space to a domain that is smaller or has folded coverage – the transformation is not bijective. But that is advanced; I will ask you for an example later.
 
 Here I have a scalar amplitude  $A(s,t)$  that describes the amplitude as a function of  $s$  and  $t$ :
 
@@ -182,23 +182,23 @@ so that for constant  $\mathcal{M}^2$  we have  $\frac{d\Gamma}{dm_{34}^2 \, dm_
 
 Shall we spend two minutes to find where the points of extreme mass lie? The hint is that on the border of the plot the particles are aligned in one line; inside the surface they always have an angle between them. Once you go to the border, they are somewhat in a line. Think about how to maximize the mass and where on the border that point lies.
 
-**Q:** Any thoughts? I think you should be at the bottom right, because we want to maximize the mass of the  $pK$  system. There are three momenta going out. The three momenta are in opposite directions, so the three‑momentum of the sum should be as small as possible. The sum of the squares of the momenta should be as large as possible, so we should be on the right of the diagram. And if we add the  $K$  and  $\pi$ , same direction should give the lowest mass.
+<b>Q:</b> Any thoughts? I think you should be at the bottom right, because we want to maximize the mass of the  $pK$  system. There are three momenta going out. The three momenta are in opposite directions, so the three‑momentum of the sum should be as small as possible. The sum of the squares of the momenta should be as large as possible, so we should be on the right of the diagram. And if we add the  $K$  and  $\pi$ , same direction should give the lowest mass.
 
-**A:** So you argue that this mass on the  $y$ ‑axis should be as large as possible or as small as possible?
+<b>A:</b> So you argue that this mass on the  $y$ ‑axis should be as large as possible or as small as possible?
 
-**Q:** As small as possible.
+<b>Q:</b> As small as possible.
 
-**A:** Why?
+<b>A:</b> Why?
 
-**Q:** Because the three momenta are in line – we subtract them. In their rest frame, if we boost so that the  $K$  and  $\pi$  fly next to each other, their relative momentum is small. If we boost to their rest frame, they might even both be at rest. So their mass would be just the sum of the masses; that is a minimum.
+<b>Q:</b> Because the three momenta are in line – we subtract them. In their rest frame, if we boost so that the  $K$  and  $\pi$  fly next to each other, their relative momentum is small. If we boost to their rest frame, they might even both be at rest. So their mass would be just the sum of the masses; that is a minimum.
 
-**A:** So what you say is correct. We are looking for the minimal mass of the  $K\pi$  system. Therefore, let us figure out what that point corresponds to. That kinematics has two particles with maximal momentum and the third at rest. They go in opposite directions. That corresponds to this point. I think this plot is from experimental data. Yes. How in experiment will we reconstruct such a case? We do not detect the proton. This is the lab frame; this is the center‑of‑momentum frame. Everything we measure is in the lab frame, which is already boosted. So this point is the maximum mass – they go back‑to‑back, so that is the maximum mass. And this point minimizes the mass. Good.
+<b>A:</b> So what you say is correct. We are looking for the minimal mass of the  $K\pi$  system. Therefore, let us figure out what that point corresponds to. That kinematics has two particles with maximal momentum and the third at rest. They go in opposite directions. That corresponds to this point. I think this plot is from experimental data. Yes. How in experiment will we reconstruct such a case? We do not detect the proton. This is the lab frame; this is the center‑of‑momentum frame. Everything we measure is in the lab frame, which is already boosted. So this point is the maximum mass – they go back‑to‑back, so that is the maximum mass. And this point minimizes the mass. Good.
 
 For the three‑body decay there is a similar way. The standard way to define the angle: I will show the setup using proton, kaon, and pion. I fix the invariant mass of one pair, say the  $K\pi$  system, and then vary the angle between the other particle and that pair. The way to think is to take the setup in the center‑of‑momentum frame and boost to the  $K\pi$  rest frame. Once in that rest frame, the  $K$  and  $\pi$  go back‑to‑back in the center‑of‑momentum frame. I have three particles arranged such that the sum of the three momenta is zero. Then I boost to the  $\Lambda_c^+$  system – it has non‑zero momentum – the  $K$  and  $\pi$  each have non‑zero momentum, but in their rest frame they add to zero. If I fix the mass of the  $K\pi$  system and want to explore the phase space along the line where this mass is fixed, the length of the vectors is fixed. What changes is only the angle  $\theta$  between the proton and the  $K\pi$  system. So I have an angle  $\theta$  that I vary from  $0$  to  $\pi$ . One corner corresponds to  $\theta=0$ , the other to  $\theta=\pi$ .
 
-**Q:** I thought because we fixed the mass of the  $K\pi$  system, what we found is that in this setup the proton and kaon go opposite directions, which gives the maximum mass of the  $K\pi$  system. So for our new setup we only generate one angle. Since the length of all vectors is fixed, we can only rotate. The dependence of the mass of two particles on the angle: the wider the angle, the larger the mass. For the proton–kaon mass, if the angle is zero you have a very high mass; if they go almost in the same direction you have a small mass. You can do the same with the other pair.
+<b>Q:</b> I thought because we fixed the mass of the  $K\pi$  system, what we found is that in this setup the proton and kaon go opposite directions, which gives the maximum mass of the  $K\pi$  system. So for our new setup we only generate one angle. Since the length of all vectors is fixed, we can only rotate. The dependence of the mass of two particles on the angle: the wider the angle, the larger the mass. For the proton–kaon mass, if the angle is zero you have a very high mass; if they go almost in the same direction you have a small mass. You can do the same with the other pair.
 
-**A:** Let me fix the mass of the proton–kaon system again. The most straightforward way is to go to the rest frame of the  $\Lambda_c^+$ , where everything is fixed, and then scan along a line by changing the angle of the  $K\pi$  pair with respect to the rest. Therefore the lines in the Dalitz plot describe the setup where you change the angle in one frame or another. Another thing: in 2‑to‑2 scattering you have a third variable called  $U$ , which is even more symmetric. For the three‑particle decay there is also an invariant mass of the pion–proton system,  $m_{p\pi}^2$ . It is not evident what that mass is, but if you want to fix that mass and scan along a line, it is easy to understand from the relation that  $U$  is a linear combination of the two Mandelstam variables. Actually it is a linear combination with coefficients of one, so it appears as a diagonal in the Dalitz plot. If you fix the mass of the pion–proton system, you move from one corner to another along a diagonal line.
+<b>A:</b> Let me fix the mass of the proton–kaon system again. The most straightforward way is to go to the rest frame of the  $\Lambda_c^+$ , where everything is fixed, and then scan along a line by changing the angle of the  $K\pi$  pair with respect to the rest. Therefore the lines in the Dalitz plot describe the setup where you change the angle in one frame or another. Another thing: in 2‑to‑2 scattering you have a third variable called  $U$ , which is even more symmetric. For the three‑particle decay there is also an invariant mass of the pion–proton system,  $m_{p\pi}^2$ . It is not evident what that mass is, but if you want to fix that mass and scan along a line, it is easy to understand from the relation that  $U$  is a linear combination of the two Mandelstam variables. Actually it is a linear combination with coefficients of one, so it appears as a diagonal in the Dalitz plot. If you fix the mass of the pion–proton system, you move from one corner to another along a diagonal line.
 
 In experimental analysis we usually plot on the  $x$ ‑axis the invariant mass of one pair and on the  $y$ ‑axis the invariant mass of another pair – that is what you see here. In the homework you have an exercise of a more symmetric Dalitz plot where all variables enter symmetrically. This uses the property of an equilateral triangle: for any point inside, the sum of the distances to the three sides is constant. That allows us to introduce variables that are the distances to the sides, so the masses of the pairs are represented by these distances. It is a symmetric representation. It is essentially the same as the rectangular plot but skewed – it is a linear transformation. To relate them you use a transformation that involves  $\sqrt{3}/2$  because of the 60° angles. Both representations show the same kinematics. The objective of this kinematic representation is to understand the dynamics – what processes guide the interaction.
 
@@ -206,9 +206,9 @@ In experimental analysis we usually plot on the  $x$ ‑axis the invariant mass 
 
 Looking ahead to future lectures, we realize that this process is not just  $\Lambda_c^+$  decaying to three particles; it proceeds via intermediate resonances. For a short moment, two of the particles form an intermediate state that then dissociates. This increases the probability of the decay. If the energy is adjusted into a certain range, the probability is higher because these particles interact more strongly at that energy. You might have seen cross sections for two‑particle resonances, which have a bump known as a hadronic resonance. The physics is that you have a system of two particles whose quantum numbers match those of a known resonance. By adjusting the energy you explore how likely the particles are to interact. If there is an intermediate resonance, the system can resonate at that energy, increasing the probability. This leads to bent structures in the Dalitz plot distribution. If you project onto one axis, you see a nice resonance‑like shape. These bent structures can be identified. I like this example because there are resonances in all three pairs.
 
-**Q:** Why is there a larger probability increase when the kaon and pion are near resonance, and also for  $pK$  on the right side, but not only two lines on the left side?
+<b>Q:</b> Why is there a larger probability increase when the kaon and pion are near resonance, and also for  $pK$  on the right side, but not only two lines on the left side?
 
-**A:** Let us quickly identify the different lines. Horizontal lines correspond to a fixed mass of the  $K\pi$  system. They peak at a certain value, indicating resonances in the  $K\pi$  system – these are  $K^*$  resonances. Vertical lines correspond to a fixed mass of the  $pK$  system. Scanning along the vertical axis you see  $pK$  resonances (e.g.,  $\Lambda$  and  $\Sigma$  states). The third combination is  $p\pi$ , which gives  $\Delta$  resonances. In the symmetric Dalitz plot these lines are parallel to the sides of the equilateral triangle. For example,  $\Lambda$  resonances are parallel to one side,  $\Delta$  resonances parallel to another. It is easier to see in that representation, though it is a bit trickier here.
+<b>A:</b> Let us quickly identify the different lines. Horizontal lines correspond to a fixed mass of the  $K\pi$  system. They peak at a certain value, indicating resonances in the  $K\pi$  system – these are  $K^*$  resonances. Vertical lines correspond to a fixed mass of the  $pK$  system. Scanning along the vertical axis you see  $pK$  resonances (e.g.,  $\Lambda$  and  $\Sigma$  states). The third combination is  $p\pi$ , which gives  $\Delta$  resonances. In the symmetric Dalitz plot these lines are parallel to the sides of the equilateral triangle. For example,  $\Lambda$  resonances are parallel to one side,  $\Delta$  resonances parallel to another. It is easier to see in that representation, though it is a bit trickier here.
 
 | Subsystem | Resonance type | Observed as |
 |-----------|----------------|-------------|
@@ -378,7 +378,7 @@ However, the Wigner D functions are also tabulated.
 
 
 ::: callout-caution
-**Mathematica:** Be especially careful with Mathematica. Mathematica has an opposite convention to what we use: it has a plus sign in the exponent and some indices swapped. Beware of this difference.
+<b>Mathematica:</b> Be especially careful with Mathematica. Mathematica has an opposite convention to what we use: it has a plus sign in the exponent and some indices swapped. Beware of this difference.
 :::
 
 - Wikipedia is the most reliable source in that respect.
@@ -512,8 +512,8 @@ That is it — as simple as that.
 
 ## Cascade Decay Kinematics and Helicity Amplitudes
 
-**Q:** How many numbers do I need from you to compute?
-**A:** I want to think now about electromagnetic interactions, or let me do gravity. How many numbers as input do I need from you to predict the angular distribution? It is essentially here, but it misses fundamental components. What is inside the amplitudes? What is inside this amplitude, this amplitude, or this amplitude and that amplitude?
+<b>Q:</b> How many numbers do I need from you to compute?
+<b>A:</b> I want to think now about electromagnetic interactions, or let me do gravity. How many numbers as input do I need from you to predict the angular distribution? It is essentially here, but it misses fundamental components. What is inside the amplitudes? What is inside this amplitude, this amplitude, or this amplitude and that amplitude?
 
 In order to predict all of my values, I just need the amplitudes for the initial and final spin projections. So I have  $(2j_1+1)(2j_2+1)$  values here, which might be functions of particle masses as well — could be masses of particle  $X$ . Then I need a similar number of these amplitudes, but there is a reasonable way to approximate them.
 
