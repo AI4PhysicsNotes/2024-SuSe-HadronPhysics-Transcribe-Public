@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.26">
+<meta name="generator" content="quarto-1.9.38">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -11,6 +11,9 @@
 
 <title>(2024) Lecture 5</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -33,15 +36,14 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="./">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-597958c53c93a607afca12fd375c57ed.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-de63f62b328812d8e578a4d74e282472.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-7d3a565c23c4d3b0e7c030e96a8964f3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-6328bbec51eb20b15cb077af023b6ced.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -129,20 +131,23 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#kinematics-of-two-to-two-scattering-and-three-body-decays" id="toc-kinematics-of-two-to-two-scattering-and-three-body-decays" class="nav-link active" data-scroll-target="#kinematics-of-two-to-two-scattering-and-three-body-decays"><span class="header-section-number">0.1</span> Kinematics of Two-to-Two Scattering and Three-Body Decays</a></li>
-  <li><a href="#kinematics-recap-22-scattering-processes" id="toc-kinematics-recap-22-scattering-processes" class="nav-link" data-scroll-target="#kinematics-recap-22-scattering-processes"><span class="header-section-number">1</span> Kinematics Recap: 2→2 Scattering Processes</a></li>
-  <li><a href="#counting-kinematic-variables" id="toc-counting-kinematic-variables" class="nav-link" data-scroll-target="#counting-kinematic-variables"><span class="header-section-number">2</span> Counting Kinematic Variables</a></li>
-  <li><a href="#choosing-the-two-variables" id="toc-choosing-the-two-variables" class="nav-link" data-scroll-target="#choosing-the-two-variables"><span class="header-section-number">3</span> Choosing the Two Variables</a></li>
-  <li><a href="#scattering-amplitudes-and-spin-dependence" id="toc-scattering-amplitudes-and-spin-dependence" class="nav-link" data-scroll-target="#scattering-amplitudes-and-spin-dependence"><span class="header-section-number">4</span> Scattering Amplitudes and Spin Dependence</a></li>
-  <li><a href="#extension-to-three-body-decays" id="toc-extension-to-three-body-decays" class="nav-link" data-scroll-target="#extension-to-three-body-decays"><span class="header-section-number">5</span> Extension to Three-Body Decays</a></li>
-  <li><a href="#applications-and-homework" id="toc-applications-and-homework" class="nav-link" data-scroll-target="#applications-and-homework"><span class="header-section-number">6</span> Applications and Homework</a>
+  <li><a href="#kinematics-of-two-to-two-scattering-variables-and-invariants" id="toc-kinematics-of-two-to-two-scattering-variables-and-invariants" class="nav-link active" data-scroll-target="#kinematics-of-two-to-two-scattering-variables-and-invariants"><span class="header-section-number">1</span> Kinematics of Two-to-Two Scattering: Variables and Invariants</a>
   <ul class="collapse">
-  <li><a href="#decoding-the-λc-dalitz-plot" id="toc-decoding-the-λc-dalitz-plot" class="nav-link" data-scroll-target="#decoding-the-λc-dalitz-plot"><span class="header-section-number">6.1</span> Decoding the Λc Dalitz Plot</a></li>
-  <li><a href="#dalitz-plot-kinematics-in-three-body-decay" id="toc-dalitz-plot-kinematics-in-three-body-decay" class="nav-link" data-scroll-target="#dalitz-plot-kinematics-in-three-body-decay"><span class="header-section-number">6.2</span> Dalitz Plot Kinematics in Three-Body Decay</a></li>
-  <li><a href="#resonance-structures-and-angular-distributions-in-three-body-decays" id="toc-resonance-structures-and-angular-distributions-in-three-body-decays" class="nav-link" data-scroll-target="#resonance-structures-and-angular-distributions-in-three-body-decays"><span class="header-section-number">6.3</span> Resonance Structures and Angular Distributions in Three-Body Decays</a></li>
-  <li><a href="#angular-distributions-and-partial-wave-analysis" id="toc-angular-distributions-and-partial-wave-analysis" class="nav-link" data-scroll-target="#angular-distributions-and-partial-wave-analysis"><span class="header-section-number">6.4</span> Angular Distributions and Partial Wave Analysis</a></li>
-  <li><a href="#office-hours-arrangement" id="toc-office-hours-arrangement" class="nav-link" data-scroll-target="#office-hours-arrangement"><span class="header-section-number">6.5</span> Office Hours Arrangement</a></li>
+  <li><a href="#lecture-5-angle-distributions-and-partial-wave-analysis" id="toc-lecture-5-angle-distributions-and-partial-wave-analysis" class="nav-link" data-scroll-target="#lecture-5-angle-distributions-and-partial-wave-analysis"><span class="header-section-number">1.1</span> Lecture 5: Angle Distributions and Partial Wave Analysis</a></li>
+  <li><a href="#counting-variables" id="toc-counting-variables" class="nav-link" data-scroll-target="#counting-variables"><span class="header-section-number">1.2</span> Counting Variables</a></li>
   </ul></li>
+  <li><a href="#kinematic-variables-and-the-dalitz-plot-in-three-body-decays" id="toc-kinematic-variables-and-the-dalitz-plot-in-three-body-decays" class="nav-link" data-scroll-target="#kinematic-variables-and-the-dalitz-plot-in-three-body-decays"><span class="header-section-number">2</span> Kinematic Variables and the Dalitz Plot in Three-Body Decays</a></li>
+  <li><a href="#the-dalitz-plot-of-λc-triple-body-decay" id="toc-the-dalitz-plot-of-λc-triple-body-decay" class="nav-link" data-scroll-target="#the-dalitz-plot-of-λc-triple-body-decay"><span class="header-section-number">3</span> The Dalitz Plot of Λc⁺ Triple-Body Decay</a></li>
+  <li><a href="#dalitz-plot-and-phase-space-in-three-body-decays" id="toc-dalitz-plot-and-phase-space-in-three-body-decays" class="nav-link" data-scroll-target="#dalitz-plot-and-phase-space-in-three-body-decays"><span class="header-section-number">4</span> Dalitz Plot and Phase Space in Three-Body Decays</a></li>
+  <li><a href="#dalitz-plot-resonances-and-angular-distributions" id="toc-dalitz-plot-resonances-and-angular-distributions" class="nav-link" data-scroll-target="#dalitz-plot-resonances-and-angular-distributions"><span class="header-section-number">5</span> Dalitz Plot Resonances and Angular Distributions</a>
+  <ul class="collapse">
+  <li><a href="#computing-the-matrix-exponent" id="toc-computing-the-matrix-exponent" class="nav-link" data-scroll-target="#computing-the-matrix-exponent"><span class="header-section-number">5.1</span> Computing the Matrix Exponent</a></li>
+  <li><a href="#conventions-and-warnings" id="toc-conventions-and-warnings" class="nav-link" data-scroll-target="#conventions-and-warnings"><span class="header-section-number">5.2</span> Conventions and Warnings</a></li>
+  <li><a href="#importance-of-rotational-group" id="toc-importance-of-rotational-group" class="nav-link" data-scroll-target="#importance-of-rotational-group"><span class="header-section-number">5.3</span> Importance of Rotational Group</a></li>
+  </ul></li>
+  <li><a href="#angular-distributions-and-wigner-d-functions-for-spin-determination" id="toc-angular-distributions-and-wigner-d-functions-for-spin-determination" class="nav-link" data-scroll-target="#angular-distributions-and-wigner-d-functions-for-spin-determination"><span class="header-section-number">6</span> Angular Distributions and Wigner D Functions for Spin Determination</a></li>
+  <li><a href="#cascade-decay-kinematics-and-helicity-amplitudes" id="toc-cascade-decay-kinematics-and-helicity-amplitudes" class="nav-link" data-scroll-target="#cascade-decay-kinematics-and-helicity-amplitudes"><span class="header-section-number">7</span> Cascade Decay Kinematics and Helicity Amplitudes</a></li>
+  <li><a href="#identifying-dalitz-plots-from-unlabeled-decays" id="toc-identifying-dalitz-plots-from-unlabeled-decays" class="nav-link" data-scroll-target="#identifying-dalitz-plots-from-unlabeled-decays"><span class="header-section-number">8</span> Identifying Dalitz Plots from Unlabeled Decays</a></li>
   </ul>
 </nav>
     </div>
@@ -175,339 +180,313 @@ window.Quarto = {
 
 
 <p><strong>Presenter</strong>: Mikhail Mikhasenko</p>
-<p><strong>Note Taker</strong>: Anna Zimmer</p>
-<section id="kinematics-of-two-to-two-scattering-and-three-body-decays" class="level3" data-number="0.1">
-<h3 data-number="0.1" class="anchored" data-anchor-id="kinematics-of-two-to-two-scattering-and-three-body-decays"><span class="header-section-number">0.1</span> Kinematics of Two-to-Two Scattering and Three-Body Decays</h3>
-<p>Today we are at lecture number five. We’ll discuss angular distributions and partial wave analysis.</p>
-<p>But before going there I would like to start with a recap. The last lecture we discussed the phase space for particle reactions and we discussed different experiments and their kinematics. We went through the list of experiments around the world that study hadrons and look at their production mechanisms and some peculiarities.</p>
-</section>
-<section id="kinematics-recap-22-scattering-processes" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="kinematics-recap-22-scattering-processes"><span class="header-section-number">1</span> Kinematics Recap: 2→2 Scattering Processes</h2>
-<p>We start with a recap on kinematics. The first question: how many variables does one need to describe the two-to-two scattering process? We have two particles in the initial state and two particles in the final state.</p>
+<p><strong>Note Taker</strong>: Ilya Segal</p>
+<section id="kinematics-of-two-to-two-scattering-variables-and-invariants" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="kinematics-of-two-to-two-scattering-variables-and-invariants"><span class="header-section-number">1</span> Kinematics of Two-to-Two Scattering: Variables and Invariants</h2>
+<section id="lecture-5-angle-distributions-and-partial-wave-analysis" class="level3" data-number="1.1">
+<h3 data-number="1.1" class="anchored" data-anchor-id="lecture-5-angle-distributions-and-partial-wave-analysis"><span class="header-section-number">1.1</span> Lecture 5: Angle Distributions and Partial Wave Analysis</h3>
+<section id="recap-on-kinematics" class="level4" data-number="1.1.1">
+<h4 data-number="1.1.1" class="anchored" data-anchor-id="recap-on-kinematics"><span class="header-section-number">1.1.1</span> Recap on Kinematics</h4>
+<p>Today we are at lecture number five. We will discuss angle distributions and partial wave analysis. But before going there, I would like to start with a recap.</p>
+<p>Last lecture we discussed the phase space for particle reactions, and we discussed different experiments and their kinematics. We went through the list of experiments around the world that study hadrons, look at their production mechanisms, and some peculiarities.</p>
+<p>We start with a recap on kinematics. The following items are considered:</p>
 <ul>
-<li><p>Initial state: two 0⁻ scalar particles</p></li>
-<li><p>Final state: two 0⁻ scalar particles</p></li>
-<li><p>Example: 0⁻ + 0⁻ → 3⁻ + 1⁺ scattering</p></li>
+<li><strong>A. Scalar particles:</strong> How many variables are needed to describe a 2‑to‑2 scattering of scalar particles (0⁻ mesons scattering to 0⁻ mesons)? The final state also has two 0⁻ scalar particles.</li>
+<li><strong>B. Particles with spin:</strong> How many variables are needed when particles carry spin? For example, a 0⁻ scattering from a 0⁻ to a 3⁻ and a 1⁺.</li>
+<li><strong>C. Example:</strong> Give a combination of variables that fully describe the process.</li>
 </ul>
+<p>Here is a cartoon diagram that indicates what we are discussing. This is the scattering process; something described by strong interaction theory happens inside the interaction blob, and the arrows indicate the particles coming into the interaction and then leaving the interaction. These are not Feynman diagrams – sometimes they are called unitarity diagrams. We will touch on unitarity in the following lectures. For now, this is a nice way to indicate what we essentially talked about.</p>
+<p>I ask you to calculate the number of variables needed to describe the process entirely – the full kinematics – and we are talking only about kinematics at this point. Whatever happens inside the interaction blob does not impact the answer. The blob is whatever: electromagnetic, strong, gravity, whatever you want. Something happens inside the blob, and how many variables do you need? Then two possibilities: first, particles without spin; second, when particles carry spin, how many variables do you need to describe the pulses? The second is related to the pictures I gave you. But let us do it one by one. Let us take two minutes and then discuss it. I added a third item: give an example of a combination of variables that fully describe the process.</p>
+<p>So for parts A and B, you need to count – tell me how many. Then part C gives the example.</p>
+</section>
+</section>
+<section id="counting-variables" class="level3" data-number="1.2">
+<h3 data-number="1.2" class="anchored" data-anchor-id="counting-variables"><span class="header-section-number">1.2</span> Counting Variables</h3>
+<p><b>Q:</b> How many degrees of freedom for a 2‑to‑2 scattering of scalar particles? <b>A:</b> One calculates like <span class="math inline">2 \times 2 = 4</span> , then multiply by 3, giving 12 degrees of freedom. Then subtract 4 constraints from conservation laws, leaving 8 variables. That is correct for the entire kinematics if you ignore the lack of an absolute reference frame in space. But you can rotate the space, so you must subtract another 6: 3 rotations and 3 boosts. So after conservation laws you have 8, but after removing the space‑time reference you have <span class="math inline">8 - 6 = 2</span> variables.</p>
+<p><span class="math display">(2+2)(4-1)-4=8,\quad 8-6=2</span></p>
+<p>So for part A, you have 2.</p>
+<p><b>Q:</b> What did you get for part B (particles with spin)? <b>A:</b> You have the 2 variables from part A, and you have the angular distribution of the final‑state particles from the production. I do not have any decay information on these particles. Just 2‑to‑2, then 4. Why 4? The angle between the two production particles, and the angle between the <span class="math inline">3^-</span> and <span class="math inline">1^+</span> particle. How are these angles different? Why can I not introduce these angles in part A? You can learn they are not necessary. So it is actually 2 as well.</p>
+<p>In the first case, my amplitude that describes the interaction blob – the interaction – is a scalar function. It is just a single number. In the case where I have spin for particles, it is not a number; it is a higher‑rank object. So what is the side dimension of my scattering amplitude? Spin‑3 gives 7 dimensions; spin‑1 gives 3 dimensions. Therefore my scattering amplitude is a 21‑dimensional object – I have 21 amplitudes. But all of them are functions of two variables. It is really important to realize that when you have spin for particles, you have more amplitudes, but they all have the same dependencies.</p>
+<p>The situation changes when you take into account the decays of the products of the final‑state particles. Usually we do not know any stable <span class="math inline">3^-</span> particles, and none of the stable <span class="math inline">1^+</span> particles would fly; we would consider them final‑state particles. Therefore both of these particles decay. Often you can take into account the decay products and introduce more variables. But if I restrict the problem to that – full stop – two variables, that is it.</p>
+<hr>
+<section id="mandelstam-variables" class="level4" data-number="1.2.1">
+<h4 data-number="1.2.1" class="anchored" data-anchor-id="mandelstam-variables"><span class="header-section-number">1.2.1</span> Mandelstam Variables</h4>
+<p><b>Q:</b> What are your favorite two variables to describe a two‑body scattering process? <b>A:</b> Several choices exist:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 43%">
+<col style="width: 30%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variable Choice</th>
+<th>Definition</th>
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Mass sum</td>
+<td><span class="math inline">M_1+M_2</span> and <span class="math inline">M_1+M_3</span></td>
+<td>Valid but mixes <span class="math inline">s</span> and <span class="math inline">t</span></td>
+</tr>
+<tr class="even">
+<td><strong>Mandelstam variables</strong></td>
+<td><span class="math inline">s = (p_1+p_2)^2</span> , <span class="math inline">t = (p_1-p_3)^2</span></td>
+<td>Lorentz invariant; most common</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">u</span> variable</td>
+<td><span class="math inline">u = (p_2-p_4)^2</span></td>
+<td>Not independent; linear combination of <span class="math inline">s</span> and <span class="math inline">t</span></td>
+</tr>
+<tr class="even">
+<td>Energy‑angle</td>
+<td><span class="math inline">\sqrt{s}</span> (centre‑of‑mass energy) and <span class="math inline">\cos\theta</span> (angle between <span class="math inline">\vec{p}_1</span> and <span class="math inline">\vec{p}_3</span> )</td>
+<td>Centre‑of‑mass frame</td>
+</tr>
+<tr class="odd">
+<td>Lab energies</td>
+<td><span class="math inline">E_1^{\text{lab}}</span> and <span class="math inline">E_3^{\text{lab}}</span></td>
+<td>May cause non‑bijective phase‑space mapping</td>
+</tr>
+</tbody>
+</table>
+<p>These variables <span class="math inline">s</span> and <span class="math inline">t</span> are called invariants; they are Lorentz invariant. They do not describe a specific rest frame, so they do not describe a specific setup of the reactions. They are just something that characterizes the whole process. It does not matter in which frame you consider – <span class="math inline">s</span> and <span class="math inline">t</span> are understood. When I say “invariant”, I mean Lorentz‑invariant variables.</p>
+<p><b>Q:</b> Why talk about a third variable? <b>A:</b> Because <span class="math inline">u</span> is a linear combination of <span class="math inline">s</span> and <span class="math inline">t</span> . If you pass the algebra, you find that there are only two independent variables, so your favorite set <span class="math inline">s</span> and <span class="math inline">u</span> is equivalent; <span class="math inline">u</span> is a linear combination of <span class="math inline">s</span> and <span class="math inline">t</span> . You take <span class="math inline">t</span> and <span class="math inline">u</span> .</p>
+<p><b>Q:</b> Another favorite set from a center‑of‑mass perspective? <b>A:</b> Energy and angle. That is probably my favorite – indeed, <span class="math inline">\sqrt{s}</span> , the center‑of‑mass energy, and then the angle. How do you define the angle? You go to the center‑of‑mass frame (often called center‑of‑momentum), and then you take the angle between <span class="math inline">\vec{p}_1</span> and <span class="math inline">\vec{p}_3</span> . One has to be careful because the lengths of the vectors indicate their momenta. In the center‑of‑momentum frame, the momentum of the initial and final particles are equal. That choice is fine.</p>
+<p><b>Q:</b> Any other common choices? <b>A:</b> You could choose <span class="math inline">E_1</span> in the lab frame and <span class="math inline">E_3</span> in the lab frame – that is also fine. One has to be careful: sometimes folding the phase space with a set of variables maps the phase space to a domain that is smaller or has folded coverage – the transformation is not bijective. But that is advanced; I will ask you for an example later.</p>
+<p>Here I have a scalar amplitude <span class="math inline">A(s,t)</span> that describes the amplitude as a function of <span class="math inline">s</span> and <span class="math inline">t</span> :</p>
+<p><span class="math display">A(s,t)</span></p>
+<p>Now I made my cartoon a bit more rich. I indicate the channels or the variables in <strong>Mandelstam invariants</strong> that describe the process. The energy of the system is given by the variable <span class="math inline">s</span> , which is the sum of four‑vectors squared. The transferred momentum in the <span class="math inline">t</span> channel describes how energy is transferred analogous to this variable, but in the vertical direction. So I described it as <span class="math inline">p_1 - p_3</span> . Here <span class="math inline">p_1</span> is this one.</p>
+<p>In my cartoon I also added the four‑vectors, which have an energy component and a three‑dimensional component, as well as the spin orientation for particles with spin and their <strong>helicity</strong> values <span class="math inline">\lambda_3</span> and <span class="math inline">\lambda_4</span> .</p>
 <div class="callout callout-style-simple callout-note">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p>The “blob” in scattering diagrams represents the interaction region where strong, electromagnetic, or gravitational interactions occur. These are not Feynman diagrams but sometimes called unitarity diagrams.</p>
+<p>Blue: The variable <span class="math inline">s</span> is <span class="math inline">(p_1+p_2)^2</span> for initial state (plus sign), and <span class="math inline">t</span> is <span class="math inline">(p_1-p_3)^2</span> for final state (minus sign). In the three‑body decay section we use a different sign convention: <span class="math inline">s=(p_1-p_2)^2=m_{34}^2</span> , <span class="math inline">t=(p_1-p_3)^2=m_{14}^2</span> (with <span class="math inline">p_1</span> the decaying particle). This will be updated in later notation.</p>
 </div>
 </div>
 </div>
-<p>The number of kinematic variables needed depends only on the external particles - whatever happens inside the interaction blob does not affect this count.</p>
+<p>We discussed two‑body kinematics. We will continue discussing the angular dependence after the <strong>Dalitz plot</strong>. But let us first quickly look… Any questions on the variables that characterize kinematics? Cool.</p>
+<hr>
 </section>
-<section id="counting-kinematic-variables" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="counting-kinematic-variables"><span class="header-section-number">2</span> Counting Kinematic Variables</h2>
-<p>Let’s calculate systematically:</p>
-<p><strong>Step 1: Initial counting</strong></p>
-<ul>
-<li>4 particles × 4 momentum components each = 16 variables</li>
-</ul>
-<p><strong>Step 2: Apply conservation laws</strong></p>
-<ul>
-<li>4-momentum conservation (E, pₓ, pᵧ, p₂) removes 4 constraints → 12 remaining variables</li>
-</ul>
-<p><strong>Step 3: Remove redundant degrees of freedom</strong></p>
-<ul>
-<li>3 rotations and 3 boosts can be eliminated → subtract 6 more variables</li>
-</ul>
-<p><strong>Final count: 2 independent variables</strong></p>
-<div class="callout callout-style-simple callout-important">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-body-container">
-<p>Both scalar and spinning particle cases require <strong>only 2 variables</strong> to fully describe 2→2 scattering kinematics. The difference is that spinning particles have more scattering amplitudes, but all amplitudes still depend on the same 2 kinematic variables.</p>
-</div>
-</div>
-</div>
-</section>
-<section id="choosing-the-two-variables" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="choosing-the-two-variables"><span class="header-section-number">3</span> Choosing the Two Variables</h2>
-<p><strong>Primary Mandelstam variables:</strong> <span class="math display">s = (p_1 + p_2)^2 = (p_3 + p_4)^2</span> <span class="math display">t = (p_1 - p_3)^2</span> <span class="math display">u = (p_1 - p_4)^2</span></p>
-<p>These variables are related by: <span class="math inline">s + t + u = \sum m_i^2</span>, so only two are independent.</p>
-<p><strong>Physics meaning:</strong></p>
-<ul>
-<li><strong><span class="math inline">s</span></strong>: Total center-of-mass energy squared</li>
-<li><strong><span class="math inline">t</span></strong>: Momentum transfer squared between particles 1 and 3</li>
-<li><strong><span class="math inline">u</span></strong>: Alternative momentum transfer variable</li>
-</ul>
-<p><strong>Center of Mass Frame Variables:</strong></p>
-<ul>
-<li><span class="math inline">\sqrt{s}</span>: Center-of-mass energy</li>
-<li><span class="math inline">\cos\theta_{CM}</span>: Scattering angle between initial and final state particles</li>
-</ul>
-<p><strong>Other possibilities:</strong></p>
-<ul>
-<li>Lab frame energies <span class="math inline">E_1</span> and <span class="math inline">E_3</span></li>
-<li>Any two independent variables that characterize the process</li>
-</ul>
-<div class="callout callout-style-simple callout-tip">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-body-container">
-<p>Mandelstam variables are preferred because they are Lorentz invariant and provide an undistorted representation of phase space density. The transformation to these variables has a constant Jacobian.</p>
-</div>
-</div>
-</div>
-</section>
-<section id="scattering-amplitudes-and-spin-dependence" class="level2" data-number="4">
-<h2 data-number="4" class="anchored" data-anchor-id="scattering-amplitudes-and-spin-dependence"><span class="header-section-number">4</span> Scattering Amplitudes and Spin Dependence</h2>
-<p><strong>For scalar particles:</strong> The scattering amplitude is a single scalar function <span class="math inline">A(s,t)</span></p>
-<p><strong>For spinning particles:</strong> The scattering amplitude becomes a multi-component object:</p>
-<ul>
-<li>Spin-3 particle: 7 dimensions</li>
-<li>Spin-1 particle: 3 dimensions</li>
-<li>Total amplitude dimension: 7 × 3 = 21 components</li>
-</ul>
-<p>However, all 21 amplitudes are still functions of the same 2 variables (<span class="math inline">s</span> and <span class="math inline">t</span>).</p>
-</section>
-<section id="extension-to-three-body-decays" class="level2" data-number="5">
-<h2 data-number="5" class="anchored" data-anchor-id="extension-to-three-body-decays"><span class="header-section-number">5</span> Extension to Three-Body Decays</h2>
-<p>Now considering three-body decays (1 particle → 3 particles):</p>
-<p><strong>Kinematic variables:</strong> Still 2 variables needed, same as 2→2 scattering</p>
-<p><strong>Dalitz plot variables:</strong> Typically use two invariant mass squared variables: <span class="math display">m_{34}^2 = (p_3 + p_4)^2</span> <span class="math display">m_{24}^2 = (p_2 + p_4)^2</span></p>
-<p><strong>Three-body phase space formula:</strong> <span class="math display">d\Phi_3 = d\Phi_2(m_{12}^2) \times d\Phi_2(m_{34}^2) \times \frac{dm_{34}^2}{2\pi}</span></p>
-<p><strong>Two-body phase space element:</strong> <span class="math display">d\Phi_2 = \frac{1}{8\pi} \frac{2|\vec{p}|}{\sqrt{s}} \frac{d\Omega}{4\pi}</span></p>
-<div class="callout callout-style-simple callout-important">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-body-container">
-<p>The phase space for three-body decay is <strong>flat</strong> when plotted against Mandelstam variables. (see Figure~1) This means the differential width directly reveals the dynamics of the interaction without kinematic distortions. (see Figure~2) (see Figure~3) (see Figure~6)</p>
-</div>
-</div>
-</div>
-</section>
-<section id="applications-and-homework" class="level2" data-number="6">
-<h2 data-number="6" class="anchored" data-anchor-id="applications-and-homework"><span class="header-section-number">6</span> Applications and Homework</h2>
-<p>We will continue discussing angular distributions after the Dalitz plot. The homework exercise on Dalitz plots connects directly to hadron spectroscopy, which is the focus of upcoming lectures.</p>
-<p><strong>Key realization:</strong> For any N-body process, once you specify the kinematic variables, you can completely reconstruct the “rigid body” configuration of all momentum vectors in the center-of-mass frame.</p>
-<p>The recursive phase space formula demonstrates that the Jacobian for transformation to Mandelstam variables is constant, making these variables ideal for studying interaction dynamics through Dalitz plot analyses.</p>
-<div id="fig-fg2" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-fg2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="2024-Lecture-05-images/fig2.png" class="img-fluid figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: A sketch illustrating the recursive relation when computing the phase-space expression. This is not a dynamic assumption but a mathematical trick that rewrites the full three-body phase-space through lower-dimensional phase-space elements and the two-body phase-space, for which the expression is simple.
-</figcaption>
-</figure>
-</div>
-<section id="decoding-the-λc-dalitz-plot" class="level3" data-number="6.1">
-<h3 data-number="6.1" class="anchored" data-anchor-id="decoding-the-λc-dalitz-plot"><span class="header-section-number">6.1</span> Decoding the Λc Dalitz Plot</h3>
-<p>You can see the example of the triple decay that I have here of the <span class="math inline">\Lambda_c</span> baryon going to the proton, kaon, and pion: <span class="math display">\Lambda_c^+ \to p + K^- + \pi^+</span></p>
-<p>We measure <span class="math inline">\Lambda_c</span> produced in proton-proton collisions or any other collisions. In experiments, they observe <span class="math inline">\Lambda_c</span> abundantly. This is one of the particles that lives long enough and is produced copiously.</p>
-<p>Particles with charm ground states are produced abundantly and live sufficiently long to fly from the primary vertex. That’s why we have a good sample and a good understanding of their decay kinematics—not only kinematics, but dynamics as well. (see Figure~6)</p>
-<p>In this decay, there is a charm quark in the initial state and no charm quark in the final state, indicating that this occurs via <strong>weak interaction</strong>. The charm quark disappears between initial and final states: the charm quark decays, transitioning into a strange quark that ends up in the kaon. This <span class="math inline">c \to s</span> transition happens within one generation and is <strong>not suppressed</strong>—it is an allowed process.</p>
-<p>This decay is considered a <strong>golden channel</strong> for detection because:</p>
-<ul>
-<li>The final state contains three charged particles—there are no neutrals.</li>
-<li>The proton is charged, travels well, and is stable.</li>
-<li>The kaon and pion are stable in our accelerator experiments.</li>
-</ul>
-<p>These particles fly from the decay without distraction, and we see their tracks clearly through all detectors. They point away from the primary interaction vertex.</p>
-<p>There is roughly a <strong>1 cm shift</strong> between the primary vertex and the secondary vertex in <span class="math inline">\Lambda_c</span> decays. This displacement occurs due to the boost and the fact that <span class="math inline">\Lambda_c</span> lives longer in the laboratory frame than in its rest frame.</p>
-<div class="callout callout-style-simple callout-note">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-body-container">
-<p>The decay length in the laboratory frame is given by: <span class="math display">L = \beta\gamma c\tau</span> At the LHC, <span class="math inline">\Lambda_c</span> is produced with energies of a few hundred GeV, making this decay particularly clean and well-suited for study.</p>
-</div>
-</div>
-</div>
-<p>We have studied this decay extensively. Here is the result of an analysis that resembles experimental data. If I showed you actual experimental data, you wouldn’t distinguish it from this plot—the statistics are so high that the distribution appears very smooth.</p>
-<ul>
-<li>On the <strong>x-axis</strong>: invariant mass of the proton and kaon, <span class="math inline">m_{12}^2</span></li>
-<li>On the <strong>y-axis</strong>: invariant mass of the kaon and pion, <span class="math inline">m_{23}^2</span></li>
-</ul>
-<p>All allowed kinematic values for the decay are shown in color. (see Figure~6) The white area corresponds to kinematics where no physical configuration exists—energy and momentum cannot be conserved there.</p>
-<p>If you select a point inside the colored region, you can compute angles between particles and reproduce the configuration with a 3D-printed rigid body. But if you choose a point in the white region, you quickly find that energy conservation cannot be satisfied.</p>
-<p>The range of possible values for the invariant masses is limited, and this surface is called the <strong>Dalitz plot</strong>. The kinematic boundaries are defined by:</p>
-<p><span class="math display">m_{12}^2 + m_{23}^2 + m_{13}^2 = m_{\Lambda_c}^2 + m_p^2 + m_K^2 + m_{\pi}^2</span></p>
-<p>Different colors in the plot indicate different probabilities for the decay to occur at that kinematic point. (see Figure~6) The differential decay rate in the Dalitz plot is:</p>
-<p><span class="math display">\frac{d^2\Gamma}{dm_{12}^2  dm_{23}^2} \propto |\mathcal{M}|^2</span></p>
-<p>We measure the decay by reconstructing particle tracks and identifying from which kinematic point the decay originated. There is an unambiguous relation between four-vectors and kinematic points. (see Figure~3)</p>
-<p>It turns out that certain kinematics are more probable than others—particles prefer specific directions. For example, one configuration may be more common, while another is rare. On the border of the Dalitz plot, particles are aligned in one line, whereas inside the surface they always have an angle between them.</p>
-<p>Think about how to maximize the invariant mass and where on the border such a point lies.</p>
-</section>
-<section id="dalitz-plot-kinematics-in-three-body-decay" class="level3" data-number="6.2">
-<h3 data-number="6.2" class="anchored" data-anchor-id="dalitz-plot-kinematics-in-three-body-decay"><span class="header-section-number">6.2</span> Dalitz Plot Kinematics in Three-Body Decay</h3>
-<p>Let’s consider the three-body decay <span class="math inline">\Lambda_c^+ \to pK^-\pi^+</span> and its kinematics. (see Figure~1) We want to maximize the invariant mass of the proton–Kaon system. (see Figure~6)</p>
-<p>There are three outgoing momenta. The idea is that if the three momenta are arranged in opposite directions, the total three-momentum sum should be as small as possible. (see Figure~6)</p>
-<p>If we add both momentum vectors, the forward momentum—or more precisely, the magnitude of the sum of the momentum vectors—should be as large as possible. Therefore, we should be on the right side of the Dalitz plot diagram.</p>
-<p>Now, consider the mass on the y-axis: should it be as large or as small as possible? (see Figure~3) It should be as small as possible.</p>
-<p>Why? Because when the three momenta are collinear and we subtract them appropriately, the invariant mass is minimized.</p>
-<p>One way to think about this is to go to the rest frame of the Kaon and pion. If they are flying nearly together, their relative momentum is small. In their mutual rest frame, they could both be at rest, so their invariant mass would simply be the sum of their rest masses—this is the minimum possible.</p>
-<div class="callout callout-style-simple callout-important">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-body-container">
-<p>The minimum invariant mass for any two-particle system is given by <span class="math display">M_{ij}^{\text{min}} = m_i + m_j</span> This occurs when the two particles are at rest relative to each other.</p>
-</div>
-</div>
-</div>
-<p>You are correct: we are looking for the minimal invariant mass of the proton–Kaon system.</p>
-<p>Let’s identify what this point corresponds to kinematically. In certain configurations, two particles can be nearly at rest while the third carries away the momentum. (see Figure~6) That corresponds to the minimal invariant mass case.</p>
-<p>This plot is likely from experimental data. How would we reconstruct such an event experimentally if we don’t detect the proton directly? Even though measurements occur in the lab frame (which is boosted), the analysis is often performed in the center-of-mass frame.</p>
-<p>The point of maximum invariant mass occurs when the two particles move back-to-back with maximum momentum. The point we are discussing minimizes the invariant mass.</p>
-<p>For three-body decays, there is a similar way to define angular variables. (see Figure~1) Let me briefly mention this.</p>
-<p>I will boost into the rest frame for each kinematic setup. To clarify, I am referring to the proton, Kaon, and pion. Suppose I fix the invariant mass of the proton–Kaon system.</p>
-<p>The approach is to work in the center-of-momentum frame of the <span class="math inline">\Lambda_c</span>, where the three final-state particles have momenta summing to zero. Then, I boost to the rest frame of the Kaon and pion. (see Figure~6) In that frame, the Kaon and pion have equal and opposite momenta. (see Figure~7)</p>
-<p>If I fix the invariant mass of the proton–Kaon system and explore phase space along a line where that mass is fixed, the magnitudes of the momenta are fixed—only the angle <span class="math inline">\theta</span> changes.</p>
-<p>As <span class="math inline">\theta</span> varies from <span class="math inline">0</span> to <span class="math inline">\pi</span>, one extreme (<span class="math inline">\theta = 0</span>) corresponds to the proton and Kaon moving in the same direction, yielding a small invariant mass. The other extreme (<span class="math inline">\theta = \pi</span>) corresponds to them moving oppositely, giving the maximum invariant mass.</p>
-<div class="callout callout-style-simple callout-note">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-body-container">
-<p>The invariant mass squared for two particles is <span class="math display">M_{ij}^2 = (p_i + p_j)^2 = (E_i + E_j)^2 - (\vec{p}_i + \vec{p}_j)^2</span> This quantity is Lorentz invariant and is used to define Dalitz plot axes.</p>
-</div>
-</div>
-</div>
-<p>For angle <span class="math inline">\theta = 0</span>, the invariant mass is small. As the angle increases, the invariant mass grows. The same logic applies to the other pairings.</p>
-<p>A straightforward analysis method is to go to the rest frame of the proton–Kaon system, where all quantities are fixed, and scan by changing the angle between the proton and Kaon relative to the pion direction. (see Figure~6)</p>
-<p>Thus, lines in the Dalitz plot represent configurations where the angle is varied in some rest frame.</p>
-<p>Another variable in <span class="math inline">2 \to 2</span> scattering kinematics is the <span class="math inline">U</span> variable, which offers a more symmetric treatment. For three-body decays, we also have the invariant mass of the pion–proton system.</p>
-<p>If I fix the invariant mass of the proton–Kaon system and scan the angle, which line do I move along? This follows from the relation that the <span class="math inline">U</span> variable is a linear combination of the invariant masses.</p>
-<p>In fact, the coefficients are such that the motion corresponds to a diagonal in the Dalitz plot. This line represents a fixed pion–proton invariant mass, moving from one kinematic endpoint to the other.</p>
-<p>The standard representation in experimental analyses uses Dalitz plots with the x-axis as the invariant mass squared of one pair and the y-axis as the invariant mass squared of another pair—exactly what is shown here.</p>
-<p>In homework, you may encounter a more symmetric Dalitz plot where all variables enter symmetrically. This uses the geometry of an equilateral triangle, where every point inside satisfies a conservation relation.</p>
-<div class="callout callout-style-simple callout-tip">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-body-container">
-<p>In the symmetric representation, the coordinates are <span class="math display">x = \frac{\sqrt{3}}{2}(M_{12}^2 - M_{23}^2), \quad y = M_{13}^2 - \frac{1}{2}(M_{12}^2 + M_{23}^2)</span> The factor <span class="math inline">\frac{\sqrt{3}}{2}</span> arises from the 60° angles in an equilateral triangle.</p>
-</div>
-</div>
-</div>
-<p>If you sum the perpendicular distances from any interior point to the three sides of an equilateral triangle, the total is constant. This allows us to define symmetric variables representing the sum of the invariant masses.</p>
-<p>The variables are interpreted as distances to the sides. This gives a very symmetric and elegant representation.</p>
-<p>Essentially, this is equivalent to the standard plot—they are related by a linear transformation, not just a rotation but also a skew. To plot experimental data in this form, one must apply the correct coordinate transformation.</p>
-<p>Yesterday, I worked through the algebra relating Cartesian coordinates to the heights in the triangle—it’s straightforward but interesting.</p>
-<p>This symmetric representation is nice, while the standard one is more common and easier to plot directly. Both capture the same kinematics.</p>
-<p>In the Dalitz plot, regions with higher event density indicate kinematic enhancements. The purpose of this kinematic representation is to identify the dynamics and underlying processes governing the decay.</p>
-<div id="fig-fg6" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-fg6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="2024-Lecture-05-images/fig6.png" class="img-fluid figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: A kinematic representation of the transition from the initial state to the final state in the process where particle 0 decays into particle x and particle 3. The arrows indicate the three-momenta of particles 3 and x, and the fat dot marks particle 0, which is at rest in this frame.
-</figcaption>
-</figure>
-</div>
-<p>Looking ahead, we will see that <span class="math inline">\Lambda_c</span> decay to three particles often proceeds via intermediate resonances. Temporarily, two particles form a resonant state that then decays, increasing the decay rate in certain invariant mass regions.</p>
-<p>When the energy of two particles matches a resonance, their interaction is stronger, making the decay more probable. This is why we observe enhanced densities along certain bands in the Dalitz plot.</p>
-</section>
-<section id="resonance-structures-and-angular-distributions-in-three-body-decays" class="level3" data-number="6.3">
-<h3 data-number="6.3" class="anchored" data-anchor-id="resonance-structures-and-angular-distributions-in-three-body-decays"><span class="header-section-number">6.3</span> Resonance Structures and Angular Distributions in Three-Body Decays</h3>
-<p>You might have seen cross sections for two-particle resonances. These exhibit a characteristic bump known as a <strong>hadronic resonance</strong>. The underlying physics is that when you have a system of two particles, and the quantum numbers of that system match those of an intermediate resonance, the interaction probability increases dramatically at specific energies.</p>
-<div class="callout callout-style-simple callout-important">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-body-container">
-<p>The <strong>Breit-Wigner resonance cross section</strong> describes this enhancement: <span class="math display">
-\sigma(E) \propto \frac{\Gamma^2/4}{(E - E_R)^2 + \Gamma^2/4}
-</span> where <span class="math inline">E_R</span> is the resonance energy and <span class="math inline">\Gamma</span> is the resonance width.</p>
-</div>
-</div>
-</div>
-<p>By adjusting the system energy, you explore how likely two particles are to interact. When passing through the resonance region, the probability increases significantly. This creates bent structures in the <strong>Dalitz distribution</strong>—when projected onto one axis, you see the characteristic resonance shape.</p>
-<p>This example is particularly interesting because it shows <strong>resonances in all three particle pairs</strong>:</p>
-<ul>
-<li><strong>Horizontal lines</strong> correspond to fixed <span class="math inline">K\pi</span> mass → <span class="math inline">K^*</span> resonances</li>
-<li><strong>Vertical lines</strong> correspond to fixed proton-<span class="math inline">K\pi</span> mass → <span class="math inline">K</span>-nucleon resonances</li>
-<li><strong>Diagonal lines</strong> correspond to pion-proton combinations → <span class="math inline">\Delta</span> resonances</li>
-</ul>
-<div class="callout callout-style-simple callout-note">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-body-container">
-<p>The <strong>Dalitz plot density</strong> for three-body decays is: <span class="math display">
-\frac{d^2\Gamma}{dm_{12}^2  dm_{23}^2} = \text{constant} \times |\mathcal{M}|^2
-</span> where <span class="math inline">m_{ij}</span> are invariant masses and <span class="math inline">\mathcal{M}</span> is the decay amplitude. (see Figure~1)</p>
-</div>
-</div>
-</div>
-<p>The lines appear parallel to the sides of the Dalitz triangle:</p>
-<ul>
-<li><span class="math inline">K^*</span> resonances parallel to one side</li>
-<li><span class="math inline">\Lambda</span> resonances parallel to another side</li>
-<li><span class="math inline">\Delta</span> resonances parallel to the third side</li>
-</ul>
+<section id="threebody-decay-and-the-dalitz-plot" class="level4" data-number="1.2.2">
+<h4 data-number="1.2.2" class="anchored" data-anchor-id="threebody-decay-and-the-dalitz-plot"><span class="header-section-number">1.2.2</span> Three‑Body Decay and the Dalitz Plot</h4>
 <div id="fig-fg3" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-fg3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="2024-Lecture-05-images/fig3.png" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3: The Dalitz plot, a representation of the phase-space for the three-body decay. (see Figure~6) It appears as an ellipse-shaped area where the internal region corresponds to allowed kinematics and the outside region is forbidden. On the x-axis lies the squared mass of two final-state particles, while the y-axis corresponds to the other subsystem. A horizontal line represents a slice of the phase-space with one mass fixed. The borders of the area correspond to configurations where all three momenta are aligned in the rest frame of the decaying particle, or equivalently, where the scattering angle in the relevant rest frame is either 0 or π.
+Figure&nbsp;1: The Dalitz plot, a representation of the phase-space for the three-body decay. It appears as an ellipse-shaped area where the internal region corresponds to allowed kinematics and the outside region is forbidden. On the x-axis lies the squared mass of two final-state particles, while the y-axis corresponds to the other subsystem. A horizontal line represents a slice of the phase-space with one mass fixed. The borders of the area correspond to configurations where all three momenta are aligned in the rest frame of the decaying particle, or equivalently, where the scattering angle in the relevant rest frame is either 0 or π.
 </figcaption>
 </figure>
 </div>
-<p>Now let’s examine <strong>angular distributions within resonance bands</strong>. When traversing phase space while keeping the mass combination fixed, you’re effectively changing the decay angle. This angle dependence reveals important physics:</p>
-<ul>
-<li>Within a resonance band, probability can be <strong>inhomogeneous</strong></li>
-<li>Particles often prefer aligned vs.&nbsp;perpendicular configurations</li>
-<li>These preferences occur because <strong>intermediate resonances have spin</strong></li>
-</ul>
-<div class="callout callout-style-simple callout-tip">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<p>The homework had an exercise on the <strong>Dalitz plot</strong>. That problem now enters our lectures – part of the course that is specific to hadrons. Up to now we overlapped a lot with particle physics, but from this lecture onward the next couple of lectures will cover material specific to hadron spectroscopy and the approach we use to discuss hadrons. One of the subjects we want to go deeper into is particle representation, essentially three‑body decay.</p>
+<div id="fig-fg1" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2024-Lecture-05-images/fig1.png" class="img-fluid figure-img">
 </div>
-<div class="callout-body-container">
-<p>Angular distributions are powerful tools for measuring:</p>
-<ul>
-<li><strong>Spin</strong></li>
-<li><strong>Parity</strong></li>
-<li><strong>Other quantum numbers</strong></li>
-</ul>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: A unitary diagram for the three-body decay. The arrows show the initial and final state particles, and the blob stands for the interaction that transforms the initial state into the final state.
+</figcaption>
+</figure>
 </div>
-</div>
-</div>
-<p><strong>Key observations:</strong></p>
-<ul>
-<li>Higher spin particles produce more structured angular distributions</li>
-<li>Scalar particles produce no angular asymmetries</li>
-<li>The number of nodes in angular distribution often equals the spin value</li>
-<li>For spin-<span class="math inline">J</span> particles: <span class="math inline">N_{\text{states}} = 2J + 1</span> spin projections</li>
-</ul>
-<p>When dealing with particle spins, we need to understand how quantum states transform under rotations. For a particle with spin <span class="math inline">J</span>, there are <span class="math inline">2J+1</span> possible projections along a quantization axis.</p>
+<p>The <strong>Dalitz plot</strong> is the common technique to indicate the dynamics of the particles – the dynamics of the interactions.</p>
+<p>In the case of three‑body decay we have a similar diagram as before, but now one leg comes in and three legs go out. Inside the interaction blob is the interaction. We can pose all questions as before: what are the number of variables? The answer will not differ – it is the same number of legs. That number tells you that there are two variables that describe the process completely. Once you give me these two variables – <span class="math inline">s</span> and <span class="math inline">t</span> , or angles, or any other – I should be able to draw the entire kinematics.</p>
+<p>Remember my analogy of the rigid body: you come and print on a 3D printer a blob out of which the vectors are sticking. This is a rigid body that describes a kinematic point. Angles between all vectors are fixed; lengths of the vectors are fixed. So you have the entire setup of the kinematics at a single point in phase space. The same for three‑body decay: give me two variables and I should be able to draw how the decay looks in the center‑of‑mass frame. In that case I have to draw three vectors leaving. This is the support out of which the vectors stick. Vectors determine angles and lengths – that is it.</p>
+<p>Now <span class="math inline">s</span> and <span class="math inline">t</span> are defined in a similar way, but now we have different particles in the final state. The step from two‑body to three‑body kinematics is essentially taking one leg and swapping it to the other side, done by changing the sign in the formula. For three‑body decay, let me define it here:</p>
+<p><span class="math display">s = (p_1 - p_2)^2 = m_{34}^2, \qquad t = (p_1 - p_3)^2 = m_{14}^2</span></p>
+<p>I noticed a typo: <span class="math inline">p_1</span> is the particle that decays. I will update my notation later. Let me for now stick to notations that relate to kinematics.</p>
 <div class="callout callout-style-simple callout-important">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p>The <strong>Wigner D-function</strong> describes rotations using Euler angles <span class="math inline">(\phi, \theta, \gamma)</span>: <span class="math display">
-D^J_{m'm}(\phi, \theta, \gamma) = e^{-i m' \phi}  d^J_{m'm}(\theta)  e^{-i m \gamma}
-</span> where <span class="math inline">d^J_{m'm}(\theta)</span> is the Wigner small d-matrix.</p>
+<p>Violet: The phase space for three‑body decay is constant on the variables <span class="math inline">m_{34}^2</span> and <span class="math inline">m_{24}^2</span> . In terms of <span class="math inline">s</span> and <span class="math inline">t</span> we write the recursive phase‑space formula as:</p>
 </div>
 </div>
 </div>
-<p><strong>Rotation conventions in particle physics:</strong> 1.</p>
+<p><span class="math display">d\Phi_3 = \int \frac{dm_{23}^2}{2\pi} \, d\Phi_2 = \frac{1}{(8\pi)^2 \; 2s} \int dm_{23}^2 \, dm_{24}^2</span></p>
+<p>This is the recursive formula we discussed last lecture. It is easy to use this equation to demonstrate that once you substitute the two phase‑space factors and then put the proper mass transformation, you end up with a factor <span class="math inline">\frac{1}{8\pi^2}</span> . This comes from the two phase‑space factors. From the first two‑body phase‑space you get a factor <span class="math inline">\frac{1}{8\pi} \frac{2p}{\sqrt{s}}</span> ; from the second you get the same form. Every phase‑space factor has a <span class="math inline">\frac{1}{2\pi}</span> , so overall <span class="math inline">\frac{1}{(8\pi)^2}\frac{2p}{\sqrt{s}} \frac{3d\Omega}{4\pi}</span> . That is easy to remember because it is <span class="math inline">\frac{1}{8\pi}</span> asymptotically – these things approach 1 at high energy and that is a unit integral.</p>
+<div id="fig-fg2" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2024-Lecture-05-images/fig2.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: A sketch illustrating the recursive relation when computing the phase-space expression. This is not a dynamic assumption but a mathematical trick that rewrites the full three-body phase-space through lower-dimensional phase-space elements and the two-body phase-space, for which the expression is simple.
+</figcaption>
+</figure>
+</div>
+<p>For both phase‑space factors you put this expression. For one of them, the cosine <span class="math inline">\theta</span> describes the variable <span class="math inline">m_{34}</span> in terms of the cosine of the scattering angle. So the <span class="math inline">2p</span> appears, and you have to replace <span class="math inline">E'</span> by <span class="math inline">p</span> . This appears as a Jacobian. I think I may be incorrect; we arrived at these couple of lines without details. I hope we have another chance to fill in the details – it comes through the exercises and several times during the course that we evaluate phase space.</p>
+<p>What we find for the three‑body case is that by using the recursive formula we obtain the fact that the Jacobian for the transformation is constant. The Jacobian for the transformation of the three‑body phase space into the variables of paired masses is constant – there is no extra dependence. It means that when we look at the differential width or differential cross section against these two variables, there will be no extra stretching or extra density increase due to the choice of variables.</p>
+<p>We have several choices, and only one of them – or only the <strong>Mandelstam invariants</strong> – gives the undistorted representation of the density. So if you plot differential widths against two variables, <span class="math inline">m_{34}^2</span> and <span class="math inline">m_{24}^2</span> , the quantity</p>
+<p><span class="math display">\frac{d\Gamma}{dm_{34}^2\,dm_{24}^2} = c \, |\mathcal{M}|^2 = \text{const.}</span></p>
+<p>is a constant numerical number and is not rescaled. That is why representation of three‑body processes in terms of <strong>Mandelstam invariants</strong> (or other linearly related variables) is so powerful: you see directly the content of the interaction blob – what happens with the interaction. That is essentially what the <strong>Dalitz plot</strong> is.</p>
+</section>
+</section>
+</section>
+<section id="kinematic-variables-and-the-dalitz-plot-in-three-body-decays" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="kinematic-variables-and-the-dalitz-plot-in-three-body-decays"><span class="header-section-number">2</span> Kinematic Variables and the Dalitz Plot in Three-Body Decays</h2>
+<p>You can see an example of the three‑body decay of the <span class="math inline">\Lambda_c^+</span> baryon to a proton, a kaon, and a pion. We measure <span class="math inline">\Lambda_c^+</span> produced in proton–proton collisions or any other collisions. In the BES and Belle experiments they see <span class="math inline">\Lambda_c^+</span> . This is one of the particles that has a long lifetime and is produced abundantly. Particles with charm ground states are produced abundantly and they live a sufficient distance to fly from the primary vertex. We reconstruct them. That is why we have a good sample and a good understanding of their decay kinematics – not only kinematics, but dynamics as well.</p>
+<p>In that decay there is a charm quark in the initial state and no charm quark in the final state, indicating that it proceeds via the weak interaction. The charm quark disappears between initial and final. The charm quark decays, transitioning into the <span class="math inline">s</span> quark that ends up in the kaon. The <span class="math inline">c \to s</span> transition is within one generation. This is an allowed process and not suppressed. This decay is a golden channel for registration because in the final state you have three charged particles. There are no neutrals. The proton is a nice charged particle – it travels and is stable. The kaon is stable in our accelerators, and the pion is also stable. So they fly away from the decay without distraction, and we see their tracks nicely through all detectors. We look at them and see they point out of the primary interaction.</p>
+<p>At LHCb energies there is a shift of about 10 mm (roughly 1 cm) between the primary and secondary vertices. That is due to the boost and the fact that the <span class="math inline">\Lambda_c^+</span> in the laboratory frame lives longer than in its rest frame. It has a few hundred GeV produced in proton–proton collisions at the LHC. This is a super nice decay and we have studied it a lot.</p>
+<hr>
+<p>Here is the experimental result of the analysis, which resembles experimental data. If I showed you experimental data, you would not distinguish it from that plot because the statistics are so high that everything is very smooth in this distribution. On the <span class="math inline">x</span> ‑axis I have the invariant mass of the proton–kaon system; on the <span class="math inline">y</span> ‑axis I have the invariant mass of the kaon–pion system. In terms of Mandelstam variables, these are <span class="math inline">s_{pK} = (p_p + p_K)^2</span> and <span class="math inline">s_{K\pi} = (p_K + p_\pi)^2</span> , respectively. The allowed values for the decay are shown in color. The white area around corresponds to kinematics for which no setup exists. If I select a point inside the plot, I can compute the angles between the particles and, in a 3D‑printer analogy, make a rigid body of that kinematic point. But if you ask about the kinematics corresponding to the white region, you quickly find that energy is not conserved at that point – the constraints cannot be satisfied. That is why the range of possible values for the invariants is limited, and the surface is called a Dalitz plot. This is how we explore the kinematics.</p>
+<p>In this plot, different colors indicate different probabilities for the reaction. What we measure is the decay. We reconstruct the tracks of the particles and then determine from which kinematic point the decay occurred, because there is an unambiguous relation between the four‑vectors and the kinematic point. It turns out that certain kinematics are more probable than others – particles prefer to go in different directions. For this decay, for example, one configuration is longer, another is shorter. It turns out that one possibility is rarer than the other, and you can see this looping in the plot.</p>
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>The Dalitz plot is a powerful tool: if the matrix element <span class="math inline">\mathcal{M}</span> is constant, the distribution over the Dalitz plot is flat. The phase space factor for a three‑body decay can be written as <span class="math display">d\Gamma = \frac{|\mathcal{M}|^2}{2m} d\Phi_3, \quad d\Phi_3 = \frac{1}{(8\pi)^2 2s} \int dm_{23}^2 \, dm_{24}^2,</span><br>
+so that for constant <span class="math inline">\mathcal{M}^2</span> we have <span class="math inline">\frac{d\Gamma}{dm_{34}^2 \, dm_{24}^2} = \text{constant}</span> . Any enhancement indicates dynamics, such as intermediate resonances.</p>
+</div>
+</div>
+</div>
+<hr>
+<p>Shall we spend two minutes to find where the points of extreme mass lie? The hint is that on the border of the plot the particles are aligned in one line; inside the surface they always have an angle between them. Once you go to the border, they are somewhat in a line. Think about how to maximize the mass and where on the border that point lies.</p>
+<p><b>Q:</b> Any thoughts? I think you should be at the bottom right, because we want to maximize the mass of the <span class="math inline">pK</span> system. There are three momenta going out. The three momenta are in opposite directions, so the three‑momentum of the sum should be as small as possible. The sum of the squares of the momenta should be as large as possible, so we should be on the right of the diagram. And if we add the <span class="math inline">K</span> and <span class="math inline">\pi</span> , same direction should give the lowest mass.</p>
+<p><b>A:</b> So you argue that this mass on the <span class="math inline">y</span> ‑axis should be as large as possible or as small as possible?</p>
+<p><b>Q:</b> As small as possible.</p>
+<p><b>A:</b> Why?</p>
+<p><b>Q:</b> Because the three momenta are in line – we subtract them. In their rest frame, if we boost so that the <span class="math inline">K</span> and <span class="math inline">\pi</span> fly next to each other, their relative momentum is small. If we boost to their rest frame, they might even both be at rest. So their mass would be just the sum of the masses; that is a minimum.</p>
+<p><b>A:</b> So what you say is correct. We are looking for the minimal mass of the <span class="math inline">K\pi</span> system. Therefore, let us figure out what that point corresponds to. That kinematics has two particles with maximal momentum and the third at rest. They go in opposite directions. That corresponds to this point. I think this plot is from experimental data. Yes. How in experiment will we reconstruct such a case? We do not detect the proton. This is the lab frame; this is the center‑of‑momentum frame. Everything we measure is in the lab frame, which is already boosted. So this point is the maximum mass – they go back‑to‑back, so that is the maximum mass. And this point minimizes the mass. Good.</p>
+<p>For the three‑body decay there is a similar way. The standard way to define the angle: I will show the setup using proton, kaon, and pion. I fix the invariant mass of one pair, say the <span class="math inline">K\pi</span> system, and then vary the angle between the other particle and that pair. The way to think is to take the setup in the center‑of‑momentum frame and boost to the <span class="math inline">K\pi</span> rest frame. Once in that rest frame, the <span class="math inline">K</span> and <span class="math inline">\pi</span> go back‑to‑back in the center‑of‑momentum frame. I have three particles arranged such that the sum of the three momenta is zero. Then I boost to the <span class="math inline">\Lambda_c^+</span> system – it has non‑zero momentum – the <span class="math inline">K</span> and <span class="math inline">\pi</span> each have non‑zero momentum, but in their rest frame they add to zero. If I fix the mass of the <span class="math inline">K\pi</span> system and want to explore the phase space along the line where this mass is fixed, the length of the vectors is fixed. What changes is only the angle <span class="math inline">\theta</span> between the proton and the <span class="math inline">K\pi</span> system. So I have an angle <span class="math inline">\theta</span> that I vary from <span class="math inline">0</span> to <span class="math inline">\pi</span> . One corner corresponds to <span class="math inline">\theta=0</span> , the other to <span class="math inline">\theta=\pi</span> .</p>
+<p><b>Q:</b> I thought because we fixed the mass of the <span class="math inline">K\pi</span> system, what we found is that in this setup the proton and kaon go opposite directions, which gives the maximum mass of the <span class="math inline">K\pi</span> system. So for our new setup we only generate one angle. Since the length of all vectors is fixed, we can only rotate. The dependence of the mass of two particles on the angle: the wider the angle, the larger the mass. For the proton–kaon mass, if the angle is zero you have a very high mass; if they go almost in the same direction you have a small mass. You can do the same with the other pair.</p>
+<p><b>A:</b> Let me fix the mass of the proton–kaon system again. The most straightforward way is to go to the rest frame of the <span class="math inline">\Lambda_c^+</span> , where everything is fixed, and then scan along a line by changing the angle of the <span class="math inline">K\pi</span> pair with respect to the rest. Therefore the lines in the Dalitz plot describe the setup where you change the angle in one frame or another. Another thing: in 2‑to‑2 scattering you have a third variable called <span class="math inline">U</span> , which is even more symmetric. For the three‑particle decay there is also an invariant mass of the pion–proton system, <span class="math inline">m_{p\pi}^2</span> . It is not evident what that mass is, but if you want to fix that mass and scan along a line, it is easy to understand from the relation that <span class="math inline">U</span> is a linear combination of the two Mandelstam variables. Actually it is a linear combination with coefficients of one, so it appears as a diagonal in the Dalitz plot. If you fix the mass of the pion–proton system, you move from one corner to another along a diagonal line.</p>
+<p>In experimental analysis we usually plot on the <span class="math inline">x</span> ‑axis the invariant mass of one pair and on the <span class="math inline">y</span> ‑axis the invariant mass of another pair – that is what you see here. In the homework you have an exercise of a more symmetric Dalitz plot where all variables enter symmetrically. This uses the property of an equilateral triangle: for any point inside, the sum of the distances to the three sides is constant. That allows us to introduce variables that are the distances to the sides, so the masses of the pairs are represented by these distances. It is a symmetric representation. It is essentially the same as the rectangular plot but skewed – it is a linear transformation. To relate them you use a transformation that involves <span class="math inline">\sqrt{3}/2</span> because of the 60° angles. Both representations show the same kinematics. The objective of this kinematic representation is to understand the dynamics – what processes guide the interaction.</p>
+<hr>
+<p>Looking ahead to future lectures, we realize that this process is not just <span class="math inline">\Lambda_c^+</span> decaying to three particles; it proceeds via intermediate resonances. For a short moment, two of the particles form an intermediate state that then dissociates. This increases the probability of the decay. If the energy is adjusted into a certain range, the probability is higher because these particles interact more strongly at that energy. You might have seen cross sections for two‑particle resonances, which have a bump known as a hadronic resonance. The physics is that you have a system of two particles whose quantum numbers match those of a known resonance. By adjusting the energy you explore how likely the particles are to interact. If there is an intermediate resonance, the system can resonate at that energy, increasing the probability. This leads to bent structures in the Dalitz plot distribution. If you project onto one axis, you see a nice resonance‑like shape. These bent structures can be identified. I like this example because there are resonances in all three pairs.</p>
+<p><b>Q:</b> Why is there a larger probability increase when the kaon and pion are near resonance, and also for <span class="math inline">pK</span> on the right side, but not only two lines on the left side?</p>
+<p><b>A:</b> Let us quickly identify the different lines. Horizontal lines correspond to a fixed mass of the <span class="math inline">K\pi</span> system. They peak at a certain value, indicating resonances in the <span class="math inline">K\pi</span> system – these are <span class="math inline">K^*</span> resonances. Vertical lines correspond to a fixed mass of the <span class="math inline">pK</span> system. Scanning along the vertical axis you see <span class="math inline">pK</span> resonances (e.g., <span class="math inline">\Lambda</span> and <span class="math inline">\Sigma</span> states). The third combination is <span class="math inline">p\pi</span> , which gives <span class="math inline">\Delta</span> resonances. In the symmetric Dalitz plot these lines are parallel to the sides of the equilateral triangle. For example, <span class="math inline">\Lambda</span> resonances are parallel to one side, <span class="math inline">\Delta</span> resonances parallel to another. It is easier to see in that representation, though it is a bit trickier here.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Subsystem</th>
+<th>Resonance type</th>
+<th>Observed as</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">K\pi</span></td>
+<td><span class="math inline">K^*</span></td>
+<td>Horizontal bands</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">pK</span></td>
+<td><span class="math inline">\Lambda, \Sigma</span></td>
+<td>Vertical bands</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">p\pi</span></td>
+<td><span class="math inline">\Delta</span></td>
+<td>Diagonal bands</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="the-dalitz-plot-of-λc-triple-body-decay" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="the-dalitz-plot-of-λc-triple-body-decay"><span class="header-section-number">3</span> The Dalitz Plot of Λc⁺ Triple-Body Decay</h2>
+<p>One thing to finish and to move past <strong>the previous topic</strong> and to move to the topic of today is the <strong>angular distribution</strong>.</p>
+<p>I’m going to discuss now the angular distribution for a decay within one band. Let me look at the phase space resonance here. (see <a href="#fig-fg3" class="quarto-xref">Figure&nbsp;1</a>) As we discussed before, when I traverse the Dalitz plot and the phase space from one end to the other, while keeping the mass of the ** <span class="math inline">K\pi</span> combination** fixed, I am changing the angle. So I am exploring the different angles. This is precisely the kinematics.</p>
+<p>Let me sit in the rest frame of the <span class="math inline">K\pi</span> where this band is happening and traverse the phase space by changing this angle. Within the band I can have an inhomogeneity. Sometimes even if I am within the band, one edge of the band has a different probability than the other. It is common that particles like to be aligned and do not like to be perpendicular. So <strong>the perpendicular kinematics</strong> is less probable than <strong>the aligned kinematics</strong>. This preference for alignment might happen.</p>
+<hr>
+<p>This happens because particles have <strong>spin</strong>. This preference appears only because the intermediate resonance in that case — the <span class="math inline">K</span> — is not a scalar particle; it has spin. The spin of particles causes the inhomogeneity in angular distributions and causes inhomogeneity on the Dalitz plot.</p>
+<p>Fifteen minutes before the end, we start with the lecture of today.</p>
+<p>The <strong>angular distribution</strong> is a very powerful tool to understand properties of particles. As we already discussed, that is our way to measure spin, parity, and other quantum numbers in particle interactions.</p>
+<p>Particles with higher spin produce more bumpy, more spiky angular distributions; particles with lower spin, if everything is scalar, produce no asymmetries at all — no structure in angular distributions.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 41%">
+<col style="width: 58%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Higher spin</th>
+<th>Scalar lower spin</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Produce more bumpy, more spiky angular distributions</td>
+<td>Produce no asymmetries at all — no structure in angular distributions</td>
+</tr>
+</tbody>
+</table>
+<p>By looking at the angular distribution, especially in the rest frame of the particle decay, one examines the ratio of aligned kinematics to other types of kinematics. From this one can infer information about the spin.</p>
+<hr>
+<p>For most of the particles that we have discovered up to now, the quantum numbers are not known. We discover particles that appear as bumps in the spectrum, and the next step to understand their properties is to determine their quantum numbers. This is done by looking at angular distributions.</p>
+<p>Most of the time it is as simple as looking at the Dalitz plot and seeing if there is a minimum in the angular distribution, if <strong>the angular distribution curve</strong> has several structures, several nodes. For scalar final-state particles, the nodes directly tell you the spin:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Spin</th>
+<th>Number of nodes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>one node</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>two nodes</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>three nodes</td>
+</tr>
+</tbody>
+</table>
+<p>The intensity vanishes at certain points in the dark spot.</p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>For scalar final-state particles, the nodes in the angular distribution directly tell you the spin: one node means spin one, two nodes mean spin two, three nodes mean spin three.</p>
+</div>
+</div>
+</div>
+<hr>
+<p>If the particles are not scalar — and most of the time they are not — the situation is a little more complicated. I will give an example of scalar resonances. But here let us quickly check what spins are involved.</p>
+<p>The spin of the proton is <span class="math inline">1/2</span> . The kaon and pion have spin zero. The spin of the <span class="math inline">\Lambda</span> is the same as the proton, but the averaging over spin projections smears the distribution.</p>
+<p>If you consider a definite spin projection of the <span class="math inline">\Lambda</span> and the proton, you again get nodes and zeros in the angular distribution. But since we do not polarize the initial-state <span class="math inline">\Lambda</span> and we do not measure the spin of the final state, everything is averaged.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 43%">
+<col style="width: 56%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Definite spin projection of <span class="math inline">\Lambda</span> and proton</th>
+<th>Averaged over spin projections (unpolarized initial and final)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Again get nodes and zeros in the angular distribution</td>
+<td>No minima, nodes, or zeros; things get smeared out</td>
+</tr>
+</tbody>
+</table>
+<p>Therefore you no longer have minima, nodes, or zeros; things get smeared out.</p>
+</section>
+<section id="dalitz-plot-and-phase-space-in-three-body-decays" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="dalitz-plot-and-phase-space-in-three-body-decays"><span class="header-section-number">4</span> Dalitz Plot and Phase Space in Three-Body Decays</h2>
+<p><strong>A particle with spin <span class="math inline">J</span> has <span class="math inline">2J+1</span> possible projections onto a chosen quantization axis.</strong> We choose a <span class="math inline">z</span> axis to quantize the spin, and the operator <span class="math inline">\hat{J}_z</span> gives the eigenvalue <span class="math inline">m</span> for the state <span class="math inline">|J,m\rangle</span> : <span class="math display">\hat{J}_z |J,m\rangle = m |J,m\rangle.</span></p>
 <div id="fig-fg4" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-fg4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -518,156 +497,215 @@ Figure&nbsp;4: A diagram showing the spin projection. The horizontal line arrow 
 </figcaption>
 </figure>
 </div>
-<p>Rotate by <span class="math inline">\phi</span> about Z-axis</p>
-<ol start="2" type="1">
-<li>Rotate by <span class="math inline">\theta</span> about Y-axis</li>
-<li>Rotate by <span class="math inline">\gamma</span> about Z-axis again</li>
+<p>One can think of the ket <span class="math inline">|J,m\rangle</span> as a vector with <span class="math inline">2J+1</span> components. For example, for spin‑ <span class="math inline">1/2</span> we have <span class="math display">\left| \frac{1}{2}, \frac{1}{2} \right\rangle = \begin{pmatrix}1\\0\end{pmatrix},\quad \left| \frac{1}{2}, -\frac{1}{2} \right\rangle = \begin{pmatrix}0\\1\end{pmatrix}.</span><br>
+Operators in this space are matrices that act on these vectors, producing either the same state with a certain eigenvalue or a mixture of states.</p>
+<hr>
+<p>When a rotation acts on a state, it generally produces a mixture of different <span class="math inline">m</span> states, not a single definite projection. In classical vector space one could arrange the rotation to align with a particular axis, but in quantum mechanics that is not possible. A rotation usually yields a superposition of all allowed <span class="math inline">m</span> states. The coefficients of this superposition are tabulated known functions, called <strong>Wigner functions</strong>.</p>
+<hr>
+<p>Let me be more concrete. I will rotate about the <span class="math inline">y</span> axis. So we have <span class="math inline">x</span> , <span class="math inline">y</span> , <span class="math inline">z</span> axes forming a right-handed triple. To rotate <span class="math inline">|J,m\rangle</span> about the <span class="math inline">y</span> axis, we use the operator <span class="math display">R_y(\theta) = e^{-i\hat{J}_y\theta},</span><br>
+with <span class="math inline">\hat{J}_y = (\hat{J}_+ - \hat{J}_-)/(2i)</span> . The raising and lowering operators <span class="math inline">\hat{J}_+</span> and <span class="math inline">\hat{J}_-</span> have zeros on the diagonal and off‑diagonal elements. The matrix exponential of <span class="math inline">\hat{J}_y</span> produces the rotation matrix.</p>
+<p>The result is known: the rotated state is a linear combination <span class="math display">R_y(\theta) |J,m\rangle = \sum_{m'} d^{J}_{m'm}(\theta) |J,m'\rangle,</span><br>
+where the <span class="math inline">d^{J}_{m'm}(\theta)</span> are <strong>Wigner <span class="math inline">d</span> ‑functions</strong>. These coefficients depend on the initial <span class="math inline">m</span> as well, which is why the <span class="math inline">J</span> and <span class="math inline">m</span> indices appear in the notation.</p>
+<hr>
+<p>More generally, any orientation in space can be described by three Euler angles. In the convention used in particle physics, we</p>
+<ol type="1">
+<li>first rotate by <span class="math inline">\alpha</span> about the <span class="math inline">z</span> axis,</li>
+<li>then by <span class="math inline">\theta</span> about the <span class="math inline">y</span> axis,</li>
+<li>and finally by <span class="math inline">\phi</span> about the <span class="math inline">z</span> axis.</li>
 </ol>
+<p>The full rotation operator is <span class="math inline">R = R_z(\phi)R_y(\theta)R_z(\alpha)</span> , and the corresponding <strong>Wigner <span class="math inline">D</span> ‑matrix</strong> is <span class="math display">D^{J}_{M'M}(\alpha,\theta,\phi) = e^{-iM'\alpha}\, d^{J}_{M'M}(\theta)\, e^{-iM\phi}.</span><br>
+The <span class="math inline">z</span> rotations give simple phases; the non‑trivial part is the <span class="math inline">d</span> ‑function for the <span class="math inline">\theta</span> rotation.</p>
+<hr>
+<p>Let me give a small example with spin‑ <span class="math inline">1/2</span> . I will rotate the state <span class="math inline">|1/2,\,1/2\rangle</span> by <span class="math inline">30^\circ</span> about the <span class="math inline">y</span> axis. The result is a combination of <span class="math inline">|1/2,\,1/2\rangle</span> and <span class="math inline">|1/2,\,-1/2\rangle</span> . What are the coefficients? These <span class="math inline">d</span> ‑functions are closely related to <strong>Clebsch‑Gordan coefficients</strong> because both come from the <span class="math inline">SU(2)</span> group. For <span class="math inline">J=1/2</span> , the <span class="math inline">d</span> ‑matrix (for <span class="math inline">m',m</span> ) is <span class="math display">d^{1/2}(\theta) =
+\begin{pmatrix}
+\cos(\theta/2) &amp; -\sin(\theta/2) \\[2pt]
+\sin(\theta/2) &amp;  \cos(\theta/2)
+\end{pmatrix}.</span><br>
+Since the rotation angle is <span class="math inline">30^\circ</span> , the half‑angle is <span class="math inline">15^\circ</span> . Therefore <span class="math display">R_y(30^\circ)\,|1/2,1/2\rangle = \cos 15^\circ\,|1/2,1/2\rangle + \sin 15^\circ\,|1/2,-1/2\rangle.</span></p>
+<p>I should have picked <span class="math inline">60^\circ</span> to get nicer numbers, but <span class="math inline">15^\circ</span> is still easy to look up. In the seminar we will explore more details, but the <span class="math inline">d^{1/2}(\theta)</span> matrix is super simple to remember.</p>
+</section>
+<section id="dalitz-plot-resonances-and-angular-distributions" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="dalitz-plot-resonances-and-angular-distributions"><span class="header-section-number">5</span> Dalitz Plot Resonances and Angular Distributions</h2>
+<section id="questions-concerning-wigner-d-functions" class="level4" data-number="5.0.1">
+<h4 data-number="5.0.1" class="anchored" data-anchor-id="questions-concerning-wigner-d-functions"><span class="header-section-number">5.0.1</span> Questions Concerning Wigner D Functions</h4>
+<p>Would you be able to calculate any rotations of the spin projection? The rotation operator for a rotation about the <span class="math inline">y</span> -axis is</p>
+<p><span class="math display">R_y(\theta) = e^{-i\hat{J}_y\theta},</span></p>
+<p>and its action on a state <span class="math inline">|J m\rangle</span> is</p>
+<p><span class="math display">R_y(\theta) |J m\rangle = \sum_{m'} d^J_{m'm}(\theta) |J m'\rangle.</span></p>
+<p>The general Wigner <span class="math inline">D</span> -function for an arbitrary rotation <span class="math inline">R = R_z(\phi)R_y(\theta)R_z(\alpha)</span> is</p>
+<p><span class="math display">D^J_{m'm}(\alpha,\theta,\phi) = e^{-im'\alpha}\, d^J_{m'm}(\theta)\, e^{-im\phi}.</span></p>
+<p>This explicit form makes the minus‑sign convention clear.</p>
+<hr>
+</section>
+<section id="computing-the-matrix-exponent" class="level3" data-number="5.1">
+<h3 data-number="5.1" class="anchored" data-anchor-id="computing-the-matrix-exponent"><span class="header-section-number">5.1</span> Computing the Matrix Exponent</h3>
+<p>If you want to compute the matrix exponent yourself, in previous exercises we computed these matrices. In principle, one can do that using Python or Julia. Just call the matrix exponent function with a matrix and you obtain the Wigner D functions.</p>
+<p>For example, a rotation by <span class="math inline">30^\circ</span> about the <span class="math inline">y</span> -axis acting on a spin‑ <span class="math inline">\frac12</span> state <span class="math inline">| \frac12, \frac12 \rangle</span> gives</p>
+<p><span class="math display">R_y(30^\circ) \left| \frac{1}{2}, \frac{1}{2} \right\rangle = \cos 15^\circ \left| \frac{1}{2}, \frac{1}{2} \right\rangle + \sin 15^\circ \left| \frac{1}{2}, -\frac{1}{2} \right\rangle,</span></p>
+<p>where the basis states can be represented as column vectors:</p>
+<p><span class="math display">\left| \frac{1}{2}, m \right\rangle = \begin{pmatrix} 1 \\ 0 \end{pmatrix} \text{ or } \begin{pmatrix} 0 \\ 1 \end{pmatrix}.</span></p>
+<hr>
+</section>
+<section id="conventions-and-warnings" class="level3" data-number="5.2">
+<h3 data-number="5.2" class="anchored" data-anchor-id="conventions-and-warnings"><span class="header-section-number">5.2</span> Conventions and Warnings</h3>
+<p>However, the Wigner D functions are also tabulated.</p>
 <div class="callout callout-style-simple callout-caution">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>Be careful with conventions!</strong> Mathematica uses opposite sign conventions compared to standard particle physics. Wikipedia and Python’s sympy library are reliable references.</p>
+<p><b>Mathematica:</b> Be especially careful with Mathematica. Mathematica has an opposite convention to what we use: it has a plus sign in the exponent and some indices swapped. Beware of this difference.</p>
 </div>
 </div>
 </div>
-<p>Let’s construct a model for three-body decays via cascade processes: initial particle → intermediate resonance <span class="math inline">X</span> → particles 1 + 2, plus particle 3.</p>
-<p>![A unitary diagram for the three-body decay.</p>
+<ul>
+<li><p>Wikipedia is the most reliable source in that respect. If you search for “Wigner D functions”, it provides a table and explains the conventions. This is my go‑to page for checking Wigner D functions.</p></li>
+<li><p>They are coded correctly in the <strong>sympy</strong> library (Python) and in <strong>ROOT</strong>. There is a word of warning: be careful with the sign conventions.</p></li>
+</ul>
+<hr>
+</section>
+<section id="importance-of-rotational-group" class="level3" data-number="5.3">
+<h3 data-number="5.3" class="anchored" data-anchor-id="importance-of-rotational-group"><span class="header-section-number">5.3</span> Importance of Rotational Group</h3>
+<p>Let me stress that what we discussed so far does not involve weak interactions; it is about rotations and the rotational group. That is a fun part, and it still impresses me: to understand how particles behave and what the angular distributions are, you need very little from the strong interaction. You need the general properties of the rotational group.</p>
+<p>Angular distributions are determined by how space is rotated, plus the little bit we need from strong interactions regarding which spin particles are produced. Strong interactions tell us which spin particles are produced. But how they decay and what asymmetry appears in the kinematics is determined by the quantum group. That is amazing.</p>
+<p>Therefore we can now move on and have a general recipe to construct any particle decay chain and determine the angular distribution.</p>
+</section>
+</section>
+<section id="angular-distributions-and-wigner-d-functions-for-spin-determination" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="angular-distributions-and-wigner-d-functions-for-spin-determination"><span class="header-section-number">6</span> Angular Distributions and Wigner D Functions for Spin Determination</h2>
+<p>Let’s now explore the blob from the previous slide and consider one of the possible decay kinematics and dynamics. (see <a href="#fig-fg1" class="quarto-xref">Figure&nbsp;2</a>) (see <a href="#fig-fg3" class="quarto-xref">Figure&nbsp;1</a>)</p>
+<p>Now we will construct a model for what is inside the blob.</p>
+<p>It is not kinematics; it comes from modeling assumptions. I assume that the three final‑state particles are produced via a cascade: the initial particle decays to an intermediate particle <span class="math inline">X</span> with <strong>spin</strong> <span class="math inline">J</span> , and then <span class="math inline">X</span> decays to particles <span class="math inline">1</span> and <span class="math inline">2</span> .</p>
 <div id="fig-fg5" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-fg5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="2024-Lecture-05-images/fig5.png" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;5: A dynamic diagram of a cascade decay, where particle 0 decays to a three-body final state through an intermediate state x that sequentially decays into particles 1 and 2. (see Figure~6) The intermediate particle carries spin j and serves as an expansion term of the full amplitude, known as the partial projection term. Lines represent initial and final state particles, while the double line denotes the intermediate particle.
+Figure&nbsp;5: A dynamic diagram of a cascade decay, where particle 0 decays to a three-body final state through an intermediate state x that sequentially decays into particles 1 and 2. The intermediate particle carries spin j and serves as an expansion term of the full amplitude, known as the partial projection term. Lines represent initial and final state particles, while the double line denotes the intermediate particle.
 </figcaption>
 </figure>
 </div>
-<p>The arrows show the initial and final state particles, and the blob stands for the interaction that transforms the initial state into the final state.](2024-Lecture-05-images/fig1.png)</p>
-<p>The general <strong>cascade decay amplitude</strong> structure:</p>
-<p><span class="math display">
-A_{\lambda_0, \lambda_1, \lambda_2, \lambda_3}(s, \theta) = \sum_{\lambda'_X} H^X_{\lambda_0 \lambda'_X} D^{j_X}_{\lambda'_X \lambda_X}(\theta_X, \phi_X) H^Y_{\lambda_X \lambda_Y} D^{j_Y}_{\lambda_Y \lambda_3}(\theta_Y, \phi_Y)
-</span></p>
-<p><strong>Component breakdown:</strong></p>
-<ul>
-<li><strong><span class="math inline">H</span> factors</strong>: Contain dynamics from strong/weak/EM interactions</li>
-<li><strong><span class="math inline">D</span> functions</strong>: Handle rotational kinematics and angular distributions</li>
-<li><strong><span class="math inline">\lambda_i</span></strong>: Helicity projections along particle directions of motion</li>
-</ul>
-<div class="callout callout-style-simple callout-note">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<div id="fig-fg6" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fg6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2024-Lecture-05-images/fig6.png" class="img-fluid figure-img">
 </div>
-<div class="callout-body-container">
-<p>In the <strong>helicity formalism</strong>, we quantize spins along the direction of motion, making <span class="math inline">\lambda_i</span> the helicity projections.</p>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: A kinematic representation of the transition from the initial state to the final state in the process where particle 0 decays into particle x and particle 3. The arrows indicate the three-momenta of particles 3 and x, and the fat dot marks particle 0, which is at rest in this frame.
+</figcaption>
+</figure>
 </div>
-</div>
-</div>
-<p><strong>Special case: aligned kinematics</strong> (<span class="math inline">\Phi = \theta = 0</span>)</p>
-<ul>
-<li>Rotation matrices simplify significantly</li>
-<li>Many summations collapse due to delta functions</li>
-<li>Final expression becomes much cleaner:</li>
-</ul>
-<p>The simplified amplitude becomes: <span class="math display">
-\mathcal{A} = H_0 D(\theta)^{J_X}_{\lambda_X, \lambda_0 + \lambda_3} D(\theta)^{\lambda_0 + \lambda_3}_{\lambda_1 - \lambda_2}
-</span></p>
-<p><strong>Key insight</strong>: Angular distributions are determined primarily by <strong>rotational group properties</strong>, with only the production preferences coming from specific interactions.</p>
 <div id="fig-fg7" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-fg7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="2024-Lecture-05-images/fig7.png" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fg7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;6: A kinematic configuration for the introduction of the helicity matrix in the transition of particle x decaying into particles 1 and 2. The representation is drawn in the rest frame of particle x, shown as a dot at rest, with arrows representing the three-momenta of particles 1 and 2 in this frame.
+Figure&nbsp;7: A kinematic configuration for the introduction of the helicity matrix in the transition of particle x decaying into particles 1 and 2. The representation is drawn in the rest frame of particle x, shown as a dot at rest, with arrows representing the three-momenta of particles 1 and 2 in this frame.
 </figcaption>
 </figure>
 </div>
-<p>This separation makes angular analysis a powerful model-independent tool for determining particle properties.</p>
-</section>
-<section id="angular-distributions-and-partial-wave-analysis" class="level3" data-number="6.4">
-<h3 data-number="6.4" class="anchored" data-anchor-id="angular-distributions-and-partial-wave-analysis"><span class="header-section-number">6.4</span> Angular Distributions and Partial Wave Analysis</h3>
-<p>How many numbers do I need in order to compute electromagnetic interactions or gravity? Specifically, to predict the angular distribution, what input parameters are required? The current framework appears to miss some fundamental components.</p>
-<p>What is inside these interaction vertices or amplitude blocks? To predict all observable values, I need the transition amplitudes for different spin configurations.</p>
-<p>The number of independent amplitudes is given by the spin degeneracy factor: <span class="math display">(2j_1 + 1)(2j_2 + 1)</span> where <span class="math inline">j_1</span> and <span class="math inline">j_2</span> are the spins of the particles involved. These amplitude values might also be functions of particle masses, particularly the masses of the intermediate states.</p>
-<p>A similar number of parameters is needed for the final state amplitudes, but there are reasonable approximation methods available.</p>
-<div class="callout callout-style-simple callout-important">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-body-container">
-<p>In experimental analysis, we often make the initial assumption that these amplitude coefficients are constant, representing fundamental particle properties rather than dynamic functions. This simplification allows us to compute angular distributions without knowing the detailed internal dynamics.</p>
-</div>
-</div>
-</div>
-<p>With this constant amplitude assumption, I can compute the angular distribution while fixing the mass parameters and intensity normalization.</p>
-<p>The differential decay rate with respect to <span class="math inline">\cos\theta</span> is given by: <span class="math display">\frac{d\Gamma}{d\cos\theta} \propto |\mathcal{M}|^2</span></p>
-<p>Using <span class="math inline">\cos\theta</span> rather than <span class="math inline">\theta</span> itself is preferable because it has a simpler Jacobian—we avoid the <span class="math inline">\sin\theta</span> factor that appears in the <span class="math inline">\theta</span> distribution. The matrix element squared <span class="math inline">|\mathcal{M}|^2</span> is typically treated as constant in this approximation.</p>
-<p>The angular distribution spans from <span class="math inline">\cos\theta = -1</span> to <span class="math inline">\cos\theta = 1</span>:</p>
-<ul>
-<li>A flat distribution indicates isotropic decay</li>
-<li>For particles with spin, we often observe parabolic distributions (second-order polynomials in <span class="math inline">\cos\theta</span>)</li>
-<li>Other characteristic patterns may appear depending on the spin structure</li>
-</ul>
-<p>It’s crucial to recognize that <span class="math inline">A</span> represents the quantum transition amplitude—a complex-valued quantity that gets squared to give the observed probability. In experiments, we only measure the squared magnitude of amplitudes.</p>
-<p>For unpolarized decays, the distributions are averaged over initial spin projections and summed over final spin projections: <span class="math display">\frac{d\sigma}{d\Omega} \propto \frac{1}{(2s_1+1)(2s_2+1)} \sum_{\text{spins}} |\mathcal{M}|^2</span></p>
-<p>When analyzing experimental data, we don’t initially guess the amplitude form directly. Instead, we project the angular distributions onto orthogonal polynomials, particularly Legendre polynomials: <span class="math display">\frac{d\sigma}{d\cos\theta} = \sum_{\ell=0}^{L_{\text{max}}} a_\ell P_\ell(\cos\theta)</span></p>
-<p>This Legendre polynomial basis connects directly to the spins of the produced particles, forming the foundation of:</p>
-<ul>
-<li><strong>Partial wave analysis</strong>: Modeling cross sections with amplitude parameters to learn about internal dynamics</li>
-<li><strong>Moment analysis</strong>: Projecting differential cross sections onto polynomial moments</li>
-</ul>
-<p>The initial projection onto polynomials doesn’t directly reveal the internal amplitude structure but provides combinations of these parameters that can be measured experimentally.</p>
-<p>This approach isn’t straightforward, and we’ll have more opportunities to discuss it in detail. We’ve only briefly touched on the differences between canonical states (defined in the rest frame) and helicity states introduced later.</p>
-<p>For comprehensive coverage of this subject, I recommend Martin Spearman’s <em>Elementary Particle Theory</em>, particularly Chapter 4, which covers:</p>
-<ul>
-<li>Lorentz group fundamentals</li>
-<li>Vector construction methods</li>
-<li>Accessible group theory applications</li>
-<li>Particle state definitions</li>
-</ul>
-<p>The chapter provides substantial insights without overwhelming mathematical complexity.</p>
-<p><strong>Exercise Assignment</strong>: I will distribute Dalitz plots from CLEO and BaBar experiments with removed particle labels. You’ll receive:</p>
-<ul>
-<li><p>One <span class="math inline">D</span> meson decay dataset</p></li>
-<li><p>One <span class="math inline">D_s</span> meson decay dataset Using your kinematic knowledge, your task is to:</p></li>
-<li><p>Determine particle masses from the kinematic boundaries</p></li>
-<li><p>Identify the specific decay processes Each group will analyze one case initially, then examine additional examples.</p></li>
-</ul>
-</section>
-<section id="office-hours-arrangement" class="level3" data-number="6.5">
-<h3 data-number="6.5" class="anchored" data-anchor-id="office-hours-arrangement"><span class="header-section-number">6.5</span> Office Hours Arrangement</h3>
+<p>A three‑body decay with two variables; <strong>spins</strong> give the dimension of the matrix (discrete dimensions).</p>
+<p>Since all particles have <strong>spin</strong>, the dimensions are</p>
+<p><span class="math display">(2j_0+1) \times (2j_1+1) \times (2j_2+1) \times (2j_3+1).</span></p>
+<p>If a particle has <strong>spin</strong> <span class="math inline">0</span> , the dimension of the corresponding <strong>spin</strong> is <span class="math inline">1</span> . That is straightforward.</p>
 <hr>
-<p><strong>People, I have to leave now.</strong></p>
+<p>In general, you have many two‑variable functions, and the way to write the amplitude is to sum over the intermediate <strong>spin</strong>.</p>
+<p>For simplicity, we are going to align the kinematics. We consider particle <span class="math inline">X</span> and particle <span class="math inline">3</span> ; they are in different rest frames.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 52%">
+<col style="width: 48%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Particle(s)</th>
+<th>Rest frame</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1 and 2</td>
+<td>are in the rest frame of <span class="math inline">X</span></td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>is in the center‑of‑momentum frame of the initial state</td>
+</tr>
+</tbody>
+</table>
+<p>This is a general expression; it is extendable to any cascade decay.</p>
+<hr>
+<p>I will give you a general formula; we will only have time to understand it, not derive it.</p>
+<p>It has two components: model‑independent angle dependence driven by the Poincaré group, and the particle interactions that you have to insert.</p>
+<p>The <span class="math inline">H</span> ’s are the remaining dark blobs that hide the dynamics of the particles. They come from the weak, strong, or electromagnetic interaction — whatever you have. This physics is contained in <span class="math inline">H</span> , and the rest is the rotational properties of the system. So <span class="math inline">H</span> encodes the physics of the hard interactions, which is unknown because we have no parameterization.</p>
+<p>The amplitude is a sum over intermediate <strong>helicities</strong> of products of <span class="math inline">H</span> couplings and <strong>Wigner <span class="math inline">D</span> -matrices</strong>:</p>
+<p><span class="math display">A_{\lambda_0,\lambda_1,\lambda_2,\lambda_3}(s,\theta) = \sum_{\lambda'_X} H^X_{\lambda_0\lambda'_X}\, D^{\,j_X}_{\lambda'_X\lambda_X}(\theta_X,\phi_X)\, H^Y_{\lambda_X\lambda_Y}\, D^{\,j_Y}_{\lambda_Y\lambda_3}(\theta_Y,\phi_Y).</span></p>
+<p>The <span class="math inline">D</span> functions represent the rotation orientation of the decay. The first index tells you which particle decays; the second index gives where it decays. The particles then have their <strong>spin</strong> quantized in the frame where the particle moves.</p>
+<p>The most natural quantization axis is the direction of motion; then the <strong>spin</strong> projections are <strong>helicities</strong> <span class="math inline">\lambda</span> , the projection of <strong>spin</strong> onto the momentum direction.</p>
+<hr>
+<p>Now look at particle <span class="math inline">X</span> . It carries <strong>spin</strong> projection <span class="math inline">\lambda_X</span> .</p>
+<p>It decays to particles <span class="math inline">1</span> and <span class="math inline">2</span> at an angle relative to the direction of motion of <span class="math inline">X</span> . To compensate for this angle, one must rotate the quantization axis; this is done by rotating the <strong>spin</strong> of <span class="math inline">X</span> to align with the decay direction.</p>
+<p>A Wigner rotation is performed:</p>
+<p><span class="math display">R_y(\theta)\,|J m\rangle = \sum_{m'} d^{\,J}_{m'm}(\theta)\,|J m'\rangle,
+\qquad
+D^{\,J}_{m'm}(\alpha,\theta,\phi) = e^{-im'\alpha}\, d^{\,J}_{m'm}(\theta)\, e^{-im\phi}.</span></p>
+<hr>
+<p>I will evaluate this expression in the aligned kinematics: <span class="math inline">\phi=0,\ \theta=0</span> .</p>
+<p>Here is the center‑of‑mass frame.</p>
+<p>If we evaluate the amplitude when the angles are zero, we do not need to rotate the system. Particle <span class="math inline">X</span> moves along the <span class="math inline">z</span> -axis, so no rotation is needed.</p>
+<p>Therefore the sum over <span class="math inline">\lambda_X</span> reduces because the <strong>Wigner <span class="math inline">D</span> -matrix</strong> at zero angles becomes a <strong>Kronecker delta</strong>:</p>
+<p><span class="math display">D^{\,j_X}_{\lambda'_X\lambda_X}(0) = \delta_{\lambda'_X\lambda_X}.</span></p>
+<p>The product then gives</p>
+<p><span class="math display">\sum_{\lambda'_X} H^X_{\lambda_0\lambda'_X}\,\delta_{\lambda'_X\lambda_X}\, H^Y_{\lambda_X\lambda_3}
+= H^X_{\lambda_0\lambda_X}\, H^Y_{\lambda_X\lambda_3}.</span></p>
+<p>Conservation of angular momentum along the <span class="math inline">z</span> -axis forces <span class="math inline">\lambda_X = \lambda_0 + \lambda_3</span> .</p>
+<p>The second decay angle <span class="math inline">\theta</span> (the angle between particle <span class="math inline">1</span> and the direction of <span class="math inline">X</span> in the <span class="math inline">X</span> rest frame) is non‑zero, so we keep the corresponding Wigner <span class="math inline">d</span> -matrix.</p>
+<p>The final expression simplifies to</p>
+<p><span class="math display">H^X_{\lambda_0,\,\lambda_0+\lambda_3}\; d^{\,j_X}_{\lambda_0+\lambda_3,\ \lambda_1-\lambda_2}(\theta).</span></p>
+<p>That is it — as simple as that.</p>
+</section>
+<section id="cascade-decay-kinematics-and-helicity-amplitudes" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="cascade-decay-kinematics-and-helicity-amplitudes"><span class="header-section-number">7</span> Cascade Decay Kinematics and Helicity Amplitudes</h2>
+<p><b>Q:</b> How many numbers do I need from you to compute? <b>A:</b> I want to think now about electromagnetic interactions, or let me do gravity. How many numbers as input do I need from you to predict the angular distribution? It is essentially here, but it misses fundamental components. What is inside the amplitudes? What is inside this amplitude, this amplitude, or this amplitude and that amplitude?</p>
+<p>In order to predict all of my values, I just need the amplitudes for the initial and final spin projections. So I have <span class="math inline">(2j_1+1)(2j_2+1)</span> values here, which might be functions of particle masses as well — could be masses of particle <span class="math inline">X</span> . Then I need a similar number of these amplitudes, but there is a reasonable way to approximate them.</p>
+<p>Often in the experiment, in the analysis at the first try, we assume that these are actually constant. One amplitude is constant ( <span class="math inline">c</span> ) and the other contains only the particle property. I am going to say that one amplitude is constant ( <span class="math inline">c</span> ) and the other contains only the particle property. Once I do that, I should be able to compute what the angular distribution is.</p>
+<hr>
+<p>In that case I am going to fix the mass of the particle and the intensity distribution that I see along the line. What we have up to now is the differential decay rate <span class="math inline">\frac{d\Gamma}{d\cos\theta}</span> . Cosine is just better because it has a better Jacobian — we do not need the sine Jacobian. That is why often what is looked at is <span class="math inline">\cos\theta</span> , and the matrix element is proportional to the decay rate:</p>
+<p><span class="math display">\frac{d\Gamma}{d\cos\theta} \propto |\mathcal{M}|^2.</span></p>
+This <span class="math inline">|\mathcal{M}|^2</span> is fixed. The distribution changes from <span class="math inline">-1</span> to <span class="math inline">1</span> . So <span class="math inline">\theta</span> gives <span class="math inline">\cos\theta = -1</span> at one endpoint, and we scan from <span class="math inline">-1</span> to <span class="math inline">1</span> . (see <a href="#fig-fg4" class="quarto-xref">Figure&nbsp;4</a>) If it is flat, that is one possibility. What you often see, especially when dealing with particles with spin, is a parabola, a second‑order polynomial in <span class="math inline">\cos\theta</span> . Or what you also often see is this.
+<hr>
 <div class="callout callout-style-simple callout-note">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p>This portion of the lecture contains only administrative announcements about homework distribution and scheduling—<strong>no physics formulas or technical content</strong> are present in this segment.</p>
+<p>The amplitude <span class="math inline">\mathcal{A}</span> appears squared, and in experiments we only see the squared magnitude.</p>
 </div>
 </div>
 </div>
-<p><strong>Homework Distribution:</strong></p>
-<ul>
-<li>If you don’t want to take the homework now, I’ll distribute it from my office.</li>
-<li>Please come with me to collect it.</li>
-<li>This applies to all of you.</li>
-</ul>
-<p><strong>Schedule &amp; Apologies:</strong></p>
-<ul>
-<li>Thank you for coming, and I apologize for being slightly late.</li>
-<li>Will you have time tomorrow at <strong>8am</strong>?</li>
-<li>You may leave now.</li>
-</ul>
-
-
+<p>Notice the difference. It is important to acknowledge that what we wrote here — the amplitude <span class="math inline">\mathcal{A}</span> — is from the quantum transition approach. It is a probability amplitude; it is going to be squared to give the observed probability. This amplitude <span class="math inline">G</span> appears squared. In experiment we only see the squared value of the amplitude. Moreover, often we deal with unpolarized decays, so the distributions are also averaged. Therefore we have to square this thing and sum over the initial and final spin projections:</p>
+<p><span class="math display">\frac{d\Gamma}{d\Omega} = \frac{1}{2j_1+1}\frac{1}{2j_2+1} \sum_{\lambda_i,\lambda_f} |\mathcal{A}_{\lambda_f\lambda_i}|^2 \times \text{(phase space)}.</span></p>
+<p>In experiment you see this and you wonder: what does it tell me? The first way to analyze that is not to guess the amplitude, but rather to acknowledge these angular distributions by projecting onto Legendre polynomials, because that gives a nice basis. And this basis corresponds to the maximum spin value that appears.</p>
+<p>You see some functions from <span class="math inline">-1</span> to <span class="math inline">1</span> and you can expand any such function as a series of Legendre polynomials:</p>
+<p><span class="math display">f(\cos\theta) = \sum_{l=0}^{\infty} a_l\,P_l(\cos\theta).</span></p>
+<p>These Legendre polynomials are related to the spin of the particle that is produced. This is what is called <strong>partial wave analysis</strong>. If you project the differential cross section, this is called <strong>moment analysis</strong>. So partial wave analysis is a way to guess the <span class="math inline">H</span> functions (the helicity amplitudes) to model your cross section, and let these coefficients be free parameters. Then you try to learn what is inside the amplitudes by adjusting them on the data.</p>
+<p>But as a first step, often what is done is to project angular distributions onto the polynomials, which will not give you inside of the amplitudes directly, but some combination of the helicity amplitude parameters. This is not straightforward, I believe, and we will have more chance to discuss that.</p>
 </section>
+<section id="identifying-dalitz-plots-from-unlabeled-decays" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="identifying-dalitz-plots-from-unlabeled-decays"><span class="header-section-number">8</span> Identifying Dalitz Plots from Unlabeled Decays</h2>
+<p>I didn’t tell you much about differences between the <strong>canonical state</strong> we introduced at the beginning and the <strong>helicity state</strong> we introduced later. We only touched a little bit on how the state is defined in the rest frame, and hopefully we will explore more.</p>
+<hr>
+<p>I would like to tell you that this book has the best coverage of this subject: Martin Spearman’s <em>Elementary Particle Theory</em>. <strong>Chapter four</strong> is fundamental. It is really fun reading because it starts from the Lorentz group, tells you how to introduce the vectors, how to do a little bit of group theory, but in a nice way without heavy details, without having mass. It is a really good book.</p>
+<p>Chapter four of Martin Spearman’s <em>Elementary Particle Physics</em> would give you some insights on particle definitions.</p>
+<hr>
+<p>I am going to hand out an exercise. There are some <strong>Dalitz plots</strong> from <strong>CLEO</strong> and <strong>BaBar</strong>, and I have removed the labels. I do not tell you which particles are in the final state. I only tell you that one is a <span class="math inline">D</span> decay and another is a <span class="math inline">D_s</span> decay. (see <a href="#fig-fg6" class="quarto-xref">Figure&nbsp;6</a>) (see <a href="#fig-fg7" class="quarto-xref">Figure&nbsp;7</a>)</p>
+<p>You already know a lot about kinematics. The exercise is to figure out what decay each plot represents. The axis labels are still there, but you do not know what each mass is. From the kinematics you can figure out the masses and perhaps guess the case.</p>
+
+
 </section>
 
 </main> <!-- /main -->
