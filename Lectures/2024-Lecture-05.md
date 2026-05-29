@@ -50,7 +50,7 @@ In the first case, my amplitude that describes the interaction blob – the inte
 
 The situation changes when you take into account the decays of the products of the final‑state particles. Usually we do not know any stable  $3^-$  particles, and none of the stable  $1^+$  particles would fly; we would consider them final‑state particles. Therefore both of these particles decay. Often you can take into account the decay products and introduce more variables. But if I restrict the problem to that – full stop – two variables, that is it.
 
----
+<hr>
 #### Mandelstam Variables
 
 <b>Q:</b> What are your favorite two variables to describe a two‑body scattering process?
@@ -90,7 +90,7 @@ Blue: The variable  $s$  is  $(p_1+p_2)^2$  for initial state (plus sign), and  
 
 We discussed two‑body kinematics. We will continue discussing the angular dependence after the **Dalitz plot**. But let us first quickly look… Any questions on the variables that characterize kinematics? Cool.
 
----
+<hr>
 #### Three‑Body Decay and the Dalitz Plot 
 
 
@@ -165,7 +165,7 @@ In that decay there is a charm quark in the initial state and no charm quark in 
 
 At LHCb energies there is a shift of about 10 mm (roughly 1 cm) between the primary and secondary vertices. That is due to the boost and the fact that the  $\Lambda_c^+$  in the laboratory frame lives longer than in its rest frame. It has a few hundred GeV produced in proton–proton collisions at the LHC. This is a super nice decay and we have studied it a lot.
 
----
+<hr>
 
 Here is the experimental result of the analysis, which resembles experimental data. If I showed you experimental data, you would not distinguish it from that plot because the statistics are so high that everything is very smooth in this distribution. On the  $x$ ‑axis I have the invariant mass of the proton–kaon system; on the  $y$ ‑axis I have the invariant mass of the kaon–pion system. In terms of Mandelstam variables, these are  $s_{pK} = (p_p + p_K)^2$  and  $s_{K\pi} = (p_K + p_\pi)^2$ , respectively. The allowed values for the decay are shown in color. The white area around corresponds to kinematics for which no setup exists. If I select a point inside the plot, I can compute the angles between the particles and, in a 3D‑printer analogy, make a rigid body of that kinematic point. But if you ask about the kinematics corresponding to the white region, you quickly find that energy is not conserved at that point – the constraints cannot be satisfied. That is why the range of possible values for the invariants is limited, and the surface is called a Dalitz plot. This is how we explore the kinematics.
 
@@ -178,7 +178,7 @@ The Dalitz plot is a powerful tool: if the matrix element  $\mathcal{M}$  is con
 so that for constant  $\mathcal{M}^2$  we have  $\frac{d\Gamma}{dm_{34}^2 \, dm_{24}^2} = \text{constant}$ . Any enhancement indicates dynamics, such as intermediate resonances.
 :::
 
----
+<hr>
 
 Shall we spend two minutes to find where the points of extreme mass lie? The hint is that on the border of the plot the particles are aligned in one line; inside the surface they always have an angle between them. Once you go to the border, they are somewhat in a line. Think about how to maximize the mass and where on the border that point lies.
 
@@ -202,7 +202,7 @@ For the three‑body decay there is a similar way. The standard way to define th
 
 In experimental analysis we usually plot on the  $x$ ‑axis the invariant mass of one pair and on the  $y$ ‑axis the invariant mass of another pair – that is what you see here. In the homework you have an exercise of a more symmetric Dalitz plot where all variables enter symmetrically. This uses the property of an equilateral triangle: for any point inside, the sum of the distances to the three sides is constant. That allows us to introduce variables that are the distances to the sides, so the masses of the pairs are represented by these distances. It is a symmetric representation. It is essentially the same as the rectangular plot but skewed – it is a linear transformation. To relate them you use a transformation that involves  $\sqrt{3}/2$  because of the 60° angles. Both representations show the same kinematics. The objective of this kinematic representation is to understand the dynamics – what processes guide the interaction.
 
----
+<hr>
 
 Looking ahead to future lectures, we realize that this process is not just  $\Lambda_c^+$  decaying to three particles; it proceeds via intermediate resonances. For a short moment, two of the particles form an intermediate state that then dissociates. This increases the probability of the decay. If the energy is adjusted into a certain range, the probability is higher because these particles interact more strongly at that energy. You might have seen cross sections for two‑particle resonances, which have a bump known as a hadronic resonance. The physics is that you have a system of two particles whose quantum numbers match those of a known resonance. By adjusting the energy you explore how likely the particles are to interact. If there is an intermediate resonance, the system can resonate at that energy, increasing the probability. This leads to bent structures in the Dalitz plot distribution. If you project onto one axis, you see a nice resonance‑like shape. These bent structures can be identified. I like this example because there are resonances in all three pairs.
 
@@ -226,7 +226,7 @@ I'm going to discuss now the angular distribution for a decay within one band. L
 
 Let me sit in the rest frame of the  $K\pi$  where this band is happening and traverse the phase space by changing this angle. Within the band I can have an inhomogeneity. Sometimes even if I am within the band, one edge of the band has a different probability than the other. It is common that particles like to be aligned and do not like to be perpendicular. So **the perpendicular kinematics** is less probable than **the aligned kinematics**. This preference for alignment might happen.
 
----
+<hr>
 
 This happens because particles have **spin**. This preference appears only because the intermediate resonance in that case — the  $K$  — is not a scalar particle; it has spin. The spin of particles causes the inhomogeneity in angular distributions and causes inhomogeneity on the Dalitz plot.
 
@@ -242,7 +242,7 @@ Particles with higher spin produce more bumpy, more spiky angular distributions;
 
 By looking at the angular distribution, especially in the rest frame of the particle decay, one examines the ratio of aligned kinematics to other types of kinematics. From this one can infer information about the spin.
 
----
+<hr>
 
 For most of the particles that we have discovered up to now, the quantum numbers are not known. We discover particles that appear as bumps in the spectrum, and the next step to understand their properties is to determine their quantum numbers. This is done by looking at angular distributions.
 
@@ -261,7 +261,7 @@ The intensity vanishes at certain points in the dark spot.
 For scalar final-state particles, the nodes in the angular distribution directly tell you the spin: one node means spin one, two nodes mean spin two, three nodes mean spin three.
 :::
 
----
+<hr>
 
 If the particles are not scalar — and most of the time they are not — the situation is a little more complicated. I will give an example of scalar resonances. But here let us quickly check what spins are involved.
 
@@ -296,11 +296,11 @@ One can think of the ket  $|J,m\rangle$  as a vector with  $2J+1$  components. F
   $$\left| \frac{1}{2}, \frac{1}{2} \right\rangle = \begin{pmatrix}1\\0\end{pmatrix},\quad \left| \frac{1}{2}, -\frac{1}{2} \right\rangle = \begin{pmatrix}0\\1\end{pmatrix}.$$  
 Operators in this space are matrices that act on these vectors, producing either the same state with a certain eigenvalue or a mixture of states.
 
----
+<hr>
 
 When a rotation acts on a state, it generally produces a mixture of different  $m$  states, not a single definite projection. In classical vector space one could arrange the rotation to align with a particular axis, but in quantum mechanics that is not possible. A rotation usually yields a superposition of all allowed  $m$  states. The coefficients of this superposition are tabulated known functions, called **Wigner functions**.
 
----
+<hr>
 
 Let me be more concrete. I will rotate about the  $y$  axis. So we have  $x$ ,  $y$ ,  $z$  axes forming a right-handed triple. To rotate  $|J,m\rangle$  about the  $y$  axis, we use the operator
   $$R_y(\theta) = e^{-i\hat{J}_y\theta},$$  
@@ -310,7 +310,7 @@ The result is known: the rotated state is a linear combination
   $$R_y(\theta) |J,m\rangle = \sum_{m'} d^{J}_{m'm}(\theta) |J,m'\rangle,$$  
 where the  $d^{J}_{m'm}(\theta)$  are **Wigner  $d$ ‑functions**. These coefficients depend on the initial  $m$  as well, which is why the  $J$  and  $m$  indices appear in the notation.
 
----
+<hr>
 
 More generally, any orientation in space can be described by three Euler angles. In the convention used in particle physics, we
 
@@ -322,7 +322,7 @@ The full rotation operator is  $R = R_z(\phi)R_y(\theta)R_z(\alpha)$ , and the c
   $$D^{J}_{M'M}(\alpha,\theta,\phi) = e^{-iM'\alpha}\, d^{J}_{M'M}(\theta)\, e^{-iM\phi}.$$  
 The  $z$  rotations give simple phases; the non‑trivial part is the  $d$ ‑function for the  $\theta$  rotation.
 
----
+<hr>
 
 Let me give a small example with spin‑ $1/2$ . I will rotate the state  $|1/2,\,1/2\rangle$  by  $30^\circ$  about the  $y$  axis. The result is a combination of  $|1/2,\,1/2\rangle$  and  $|1/2,\,-1/2\rangle$ . What are the coefficients? These  $d$ ‑functions are closely related to **Clebsch‑Gordan coefficients** because both come from the  $SU(2)$  group. For  $J=1/2$ , the  $d$ ‑matrix (for  $m',m$ ) is
   $$d^{1/2}(\theta) =
@@ -356,7 +356,7 @@ The general Wigner  $D$ -function for an arbitrary rotation  $R = R_z(\phi)R_y(\
 
 This explicit form makes the minus‑sign convention clear.
 
----
+<hr>
 
 ### Computing the Matrix Exponent
 
@@ -370,7 +370,7 @@ where the basis states can be represented as column vectors:
 
   $$\left| \frac{1}{2}, m \right\rangle = \begin{pmatrix} 1 \\ 0 \end{pmatrix} \text{ or } \begin{pmatrix} 0 \\ 1 \end{pmatrix}.$$  
 
----
+<hr>
 
 ### Conventions and Warnings
 
@@ -387,7 +387,7 @@ If you search for "Wigner D functions", it provides a table and explains the con
 - They are coded correctly in the **sympy** library (Python) and in **ROOT**.
 There is a word of warning: be careful with the sign conventions.
 
----
+<hr>
 
 ### Importance of Rotational Group
 
@@ -440,7 +440,7 @@ Since all particles have **spin**, the dimensions are
 
 If a particle has **spin**  $0$ , the dimension of the corresponding **spin** is  $1$ . That is straightforward.
 
----
+<hr>
 
 In general, you have many two‑variable functions, and the way to write the amplitude is to sum over the intermediate **spin**.
 
@@ -453,7 +453,7 @@ For simplicity, we are going to align the kinematics. We consider particle  $X$ 
 
 This is a general expression; it is extendable to any cascade decay.
 
----
+<hr>
 
 I will give you a general formula; we will only have time to understand it, not derive it.
 
@@ -469,7 +469,7 @@ The  $D$  functions represent the rotation orientation of the decay. The first i
 
 The most natural quantization axis is the direction of motion; then the **spin** projections are **helicities**  $\lambda$ , the projection of **spin** onto the momentum direction.
 
----
+<hr>
 
 Now look at particle  $X$ . It carries **spin** projection  $\lambda_X$ .
 
@@ -481,7 +481,7 @@ A Wigner rotation is performed:
 \qquad
 D^{\,J}_{m'm}(\alpha,\theta,\phi) = e^{-im'\alpha}\, d^{\,J}_{m'm}(\theta)\, e^{-im\phi}.$$  
 
----
+<hr>
 
 I will evaluate this expression in the aligned kinematics:  $\phi=0,\ \theta=0$ .
 
@@ -519,14 +519,14 @@ In order to predict all of my values, I just need the amplitudes for the initial
 
 Often in the experiment, in the analysis at the first try, we assume that these are actually constant. One amplitude is constant ( $c$ ) and the other contains only the particle property. I am going to say that one amplitude is constant ( $c$ ) and the other contains only the particle property. Once I do that, I should be able to compute what the angular distribution is.
 
----
+<hr>
 
 In that case I am going to fix the mass of the particle and the intensity distribution that I see along the line. What we have up to now is the differential decay rate  $\frac{d\Gamma}{d\cos\theta}$ . Cosine is just better because it has a better Jacobian — we do not need the sine Jacobian. That is why often what is looked at is  $\cos\theta$ , and the matrix element is proportional to the decay rate:
 
   $$\frac{d\Gamma}{d\cos\theta} \propto |\mathcal{M}|^2.$$  
 
 This  $|\mathcal{M}|^2$  is fixed. The distribution changes from  $-1$  to  $1$ . So  $\theta$  gives  $\cos\theta = -1$  at one endpoint, and we scan from  $-1$  to  $1$ . (see @fig-fg4) If it is flat, that is one possibility. What you often see, especially when dealing with particles with spin, is a parabola, a second‑order polynomial in  $\cos\theta$ . Or what you also often see is this.
----
+<hr>
 
 
 ::: callout-note
@@ -554,7 +554,7 @@ But as a first step, often what is done is to project angular distributions onto
 I didn't tell you much about differences between the **canonical state** we introduced at the beginning and the **helicity state** we introduced later.
 We only touched a little bit on how the state is defined in the rest frame, and hopefully we will explore more.
 
----
+<hr>
 
 I would like to tell you that this book has the best coverage of this subject: Martin Spearman's *Elementary Particle Theory*.
 **Chapter four** is fundamental.
@@ -563,7 +563,7 @@ It is a really good book.
 
 Chapter four of Martin Spearman's *Elementary Particle Physics* would give you some insights on particle definitions.
 
----
+<hr>
 I am going to hand out an exercise. There are some **Dalitz plots** from **CLEO** and **BaBar**, and I have removed the labels. I do not tell you which particles are in the final state. I only tell you that one is a  $D$  decay and another is a  $D_s$  decay. (see @fig-fg6) (see @fig-fg7)
 
 You already know a lot about kinematics.
