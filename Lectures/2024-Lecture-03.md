@@ -13,147 +13,417 @@ format: html
 
 
 
-## Lecture Recording and Isospin Review
+## Lecture Recording with Whisper
 
-So my experiment with recording lectures has been relatively successful, so I could recover what I was saying. There is an open large language model from OpenAI that can translate audio to text called Whisper. Since the architecture is known, there is a C implementation that even runs parallel on Mac. You just download and execute it, and then you have a transcript of your speech.
+<b>Recording Experiment</b>
+
+My experiment with recording lectures has been relatively successful, and I could recover what I was speaking.
+
+There is an open large language model from OpenAI that can translate audio to text, called **Whisper**. Since the architecture is known, there is a **C limitation** that even runs parallel on Mac. You just download and execute, and then you have a transcript of your speech.
+
+
+::: callout-warning
+The lecture is recorded. I do it for myself, but it might be converted to some document. But I don't know what to do with that. Just for fun and for exploring the technologies, I will keep the recordings.
+:::
+
+It records only me in the sense that it is mostly me who speaks. Don't hesitate to talk back, because this will not appear in the recordings anyway.
+
+| Aspect | Detail |
+|--------|--------|
+| Audio-to-text model | **Whisper** (OpenAI, open source) |
+| Running on Mac | "C limitation" that runs in parallel |
+| Transcript generation | Download and execute |
+| Recording purpose | Self-reference, fun, technology exploration |
+| Recorded voice | Mostly professor only |
+| Student participation | Not captured |
+
+
+
+## Isospin Assignments for Mesons and Pentaquarks
+
+#### Isospin Assignments
+
+<b>Isospin</b> involves only the light quarks  $u$  and  $d$ . The strange quark is light but not included in isospin. Heavy quarks are often denoted with capital  $Q$ , light quarks with  $q$  or  $l$ .
+
+A particle’s isospin depends on the number of light ( $u,d$ ) quarks:
+
+- **0 light quarks** → isospin  $0$ 
+- **1 light quark** → isospin  $1/2$ 
+- **3 light quarks** → isospin  $3/2$  (like the  $\Delta$  group) or also  $1/2$ .
+
+The table lists common examples:
+
+| Particle | Composition | Light quarks | Isospin | Charge multiplets |
+|----------|-------------|--------------|---------|------------------|
+|  $c\bar{s}$  meson |  $c\bar{s}$  | 0 | 0 | singlet |
+|  $B$  meson |  $b\bar{q}$  ( $q=u,d$ ) | 1 |  $1/2$  | doublet:  $B^0$  ( $\bar{b}d$ ),  $B^+$  ( $\bar{b}u$ ) |
+| Cascade  $B$  ( $\Xi_b$ ) |  $b s u$  (or  $b s d$ ) | 1 |  $1/2$  | doublet: charge 0 ( $b s u$ ), charge  $-1$  ( $b s d$ ) |
+|  $P_c$  pentaquark (observed in  $J/\psi p$ ) | three light quarks | 3 |  $3/2$  (like  $\Delta$ ) | for  $I=3/2$ : four states ( $P_c^{++},P_c^+,P_c^0,P_c^-$ ) |
+|  $P_c$  alternative | three light quarks | 3 |  $1/2$  | doublet:  $P_c^+$ ,  $P_c^0$  |
 
 
 ::: callout-note
-I record the lecture for myself, but it might be converted to a document. If someone would volunteer to type the questions and the equations there and check them, that would be helpful. But I don't know what to do with that. Just for fun and for exploring the technologies, I will keep the recordings. It records only me in the sense that it's mostly me who speaks, so don't hesitate to talk back because this will not appear in the recordings anyway.
+**Notation:**  $\bar{q}$  refers to a light antiquark. Heavy quarks are often written as capital  $Q$  (e.g.,  $c$ ,  $b$ ). If a particle has no light quark (like  $B_c$ ), its isospin is  $0$ .
 :::
 
-We will talk today about **structure functions**, the structure of hadrons, their internal composition, and how we know about them. But before going there I would like to start with a recap and have a few questions.
+<hr>
 
-**Question 1:** Without looking at the PDG, just from the quark content, tell me the isospin of these particles. The quark content here is:  $c \bar{s}$ ,  $b \bar{q}$ ,  $b \bar{s}$ ,  $q \bar{q}$ .
+### Antiparticles
 
-**Question 2:** What is the dimensionality of the isospin matrix that acts in a space of three quarks? If I treat the quarks as a wave function in two dimensions where spin up corresponds to the  $u$  quark and spin down corresponds to the  $d$  quark, what is the dimensionality of the matrix that acts in this space?
+For antiparticles, the quark content is completely conjugated:
 
-**Question 3:** What are the irreducible representations of this matrix acting on these quarks? Essentially, how does my matrix from the previous point split into independent blocks that don't talk to each other?
+-  $B^+$  ( $u\bar{b}$ ) has antiparticle  $B^-$  ( $b\bar{u}$ ).
+-  $B^0$  ( $d\bar{b}$ ) has antiparticle  $\bar{B}^0$  ( $b\bar{d}$ ).
 
-When we talk about isospin we talk about light quarks.
+For the Cascade  $B$ , the doublet members have antiparticles with opposite charges.
 
-*   The first meson,  $c \bar{s}$ , doesn't have light quarks, so it has isospin  $I = 0$ .
-*   The  $B$  meson,  $b \bar{q}$ , has one light quark and therefore we deal with  $I = \frac{1}{2}$ . (Here,  $q$  means a light quark. Often people use notations: capital  $Q$  is a heavy quark, little  $q$  or  $l$  is a light quark.)
-*   The  $b \bar{s}$  meson: if you talk about  $SU(3)$ , it belongs to the light quarks. If you talk about isospin,  $s$  is not included. So again, one light quark means isospin is  $\frac{1}{2}$ .
-*   Next,  $P_c$ , which is the pentaquark observed in  $J/\psi p$ . If you speak generally about pentaquarks that have three light quarks, what is the isospin? That means it can have the same as the delta group. The three quarks are the same as the delta group. What is the isospin of  $\Delta$ ? It is  $\frac{3}{2}$ . It's the length of the vector, not the projection.
+The antiparticle of  $P_c^+$  is **not**  $P_c^-$ ; it is a different state with opposite quark content (antiquarks and baryon number  $-1$ ).
 
-When we assign isospin to a particle, we don't yet speak about the charge. Different charge versions of the particle form a multiplet. When we say the  $B$  meson has isospin  $\frac{1}{2}$ , it implies there are two  $B$  mesons:  $B^+$  ( $b \bar{u}$ ) and  $B^0$  ( $b \bar{d}$ ). For the antiparticle doublet, you fully conjugate:  $\bar{b} u$  is  $B^-$  and  $\bar{b} d$  is  $\bar{B^0}$ .
+<hr>
 
-Now, the cascade  $b$  has isospin  $\frac{1}{2}$ . The dimensionality is  $2I + 1 = 2$ , so there are two particles of this type. The charges:  $u$  quark has charge  $+\frac{2}{3}$ ,  $d$  quark has charge  $-\frac{1}{3}$ . When I combine three of the lower row like  $ddd$ , I get charge  $-1$ . If I combine three of the upper one like  $uuu$ , I get charge  $+2$ . For  $b \bar{s}$ , the combination gives charge zero.
+### Charge calculations for the Cascade  $B$  doublet
 
-Now we come to the last one which has three quarks, so there are several combinations. For isospin  $\frac{1}{2}$ , the possibilities are  $P_c^+$  and  $P_c^0$ . For isospin  $\frac{3}{2}$ , there are four particles in the multiplet, like for  $\Delta^{++}$ .
+- The combination  $b s u$ :  $b$  and  $s$  each have charge  $-\frac13$ ,  $u$  has  $+\frac23$  → total charge  $0$ .
+- The other member  $b s d$ :  $b$  and  $s$  $-\frac13 $,$ d$  $-\frac13$  → total charge  $-1$ .
 
 
-::: callout-important
-For a particle with isospin  $I$ , the number of charge states is given by:  $\text{Number of states} = 2I + 1$ . This arises from the quantization of isospin in analogy with angular momentum.
-:::
 
-An interesting question: what is the antiparticle for the  $P_c^+$ ? For baryons especially, it's important to distinguish baryon to anti-baryon. They have a different quark component. You put a bar under the quarks.
+## Constructing Isospin States for Three Quarks
 
-Let's go to the irreducible representation of the three quarks. We already have essentially the dimensionality of the isospin matrix acting on three quarks. How do you get to the  $P_c^+$  and  $P_c^0$  with isospin? We only talk about  $SU(2)$ . For  $SU(2)$  there are no decuplets; decuplets and octets are for  $SU(3)$ .
+### Isospin of  $\Delta^{++}$  and Construction of  $\Delta^{+}$ 
 
-If you're mixing  $uud$ , you can't get  $I = \frac{3}{2}$  because of the third component. There is the total isospin. The state  $uuu$  has  $I_3 = +\frac{3}{2}$ . We also get  $I_3 = -\frac{3}{2}$ ,  $I_3 = +\frac{1}{2}$ , and  $I_3 = -\frac{1}{2}$ . We also have  $uud$  and  $ddu$ . In order to construct these, we are going to act with a lowering operator on the combination.
+The  $\Delta^{++}$  has isospin  $I = \frac{3}{2}$  ( $I_{\Delta^{++}} = \frac{3}{2}$ ).
+If you try to construct a  $|UUD\rangle$  state, you cannot obtain  $I_3 = \frac{3}{2}$  — that state necessarily has  $I_3 = \frac{1}{2}$ . The states  $|UUD\rangle$  and  $|DDU\rangle$  also exist.
 
-We expand. What we would like to do now is ask: what is the quark flavor wave function? To do that we need to construct the basis of the irreducible representations. The easiest way is to start with the state you know for sure, which is the maximum spin. For isospin, this is the  $I = \frac{3}{2}$  state. I can talk about spin or flavor; the notation is equivalent.
+<hr>
 
-I would like to act with the isospin lowering operator  $I_-$ . What comes here is  $\sqrt{j(j+1) - m(m-1)}$ . Since  $j = m$  here, it simplifies to  $\sqrt{2j}$ . So, acting with  $I_-$  on  $|u u u\rangle$  gives a combination. This operator is a sum where these operators act only in the space indicated by the index. So I write  $I_- = I_-^{(1)} + I_-^{(2)} + I_-^{(3)}$ .
+### Lowering Operator and the  $\Delta^{+}$  State
 
+To obtain the  $I_3 = \frac{1}{2}$  state, we act with the lowering operator on the maximal isospin state. The derivation is correct. Our goal is the quark‑flavor basis function. We need to construct the basis of irreducible representations. The easiest way is to start with the state we know for sure: the maximum isospin,  $\frac{3}{2}$ . (The notation is equivalent for spin and flavor.)
+
+Act with the lowering operator. The general formula is
+
+  $$I_-|I,M\rangle = \sqrt{I(I+1)-M(M-1)}\,|I,M-1\rangle.$$  
+
+For  $M=I$  this becomes  $\sqrt{2I}$ . Since  $I=\frac{3}{2}$ , the factor is  $\sqrt{3}$ .
+
+The lowering operator  $I_-$  acts as a sum of operators on each quark:  $I_- = I_{1-}+I_{2-}+I_{3-}$ . Applying it to  $|uuu\rangle$  gives
+
+  $$I_-|uuu\rangle = |duu\rangle + |udu\rangle + |uud\rangle.$$  
+
+To obtain a normalized state we compute the inner product.
 
 ::: callout-note
-For a state with total angular momentum  $j$  and projection  $m$ , the action of the lowering operator  $J_-$  is:
-  $$J_- |j, m\rangle = \sqrt{j(j+1) - m(m-1)} \, |j, m-1\rangle$$  
-This is used to construct states with lower isospin or spin projections from the highest-weight state.
+Same‑flavor states are orthonormal; different‑flavor states are orthogonal.
 :::
 
-To ensure we are dealing with a normalized state  $|\frac{3}{2}, \frac{1}{2}\rangle$ , we calculate the product with itself. You use the fact that  $\langle u|d \rangle = 0$  and  $\langle u|u \rangle = \langle d|d \rangle = 1$ . Same flavor is normalized and different flavors are orthogonal.
+Therefore the normalization factor is  $1/\sqrt{3}$ :
 
-We've got that combination and we can follow by acting with more lowering operators. Essentially, that way you find the wave function. It is  $\frac{1}{\sqrt{6}}(2|uud\rangle + 2|udu\rangle + 2|duu\rangle - |uud\rangle' - ...)$ . It's super easy with the highest spin.
+  $$|\Delta^+\rangle = \frac{1}{\sqrt{3}}\bigl(|uud\rangle + |udu\rangle + |duu\rangle\bigr).$$  
 
-Remember we discussed last time the spin of  $\frac{4}{2}$ . That gave us the dimensionality  $2S + 1 = 5$ . Imagine I want to build this from spin  $\frac{1}{2}$  particles. How many spin  $\frac{1}{2}$  particles do I need? Essentially, I have many legs. If I ask you to give me  $S = \frac{3}{2}$ , you use the creation and apply the lowering operator many times. One can automate the process.
+Applying further lowering operators yields the other isospin states ( $\Delta^{0}$ ,  $\Delta^{-}$ ).
 
-It gets trickier when I ask for  $\frac{9}{2}$ . Out of this combination I can have different spins. We agreed that simple spin algebra works. Essentially, when I combine many spin  $\frac{1}{2}$  particles, possible combinations of the total spin have different multiplicities. The dimensionality of the matrix that acts on this space is  $2^n$ , because each spin  $\frac{1}{2}$  gives a two-dimensional representation. This  $2^n$  is written as a tensor product.
+<hr>
 
-We use different notation that comes from  $\frac{1}{2} \otimes \frac{1}{2} \otimes ...$ . Last time we saw this can be decomposed into irreducible representations as different combinations of spins. For a large  $n$ , this is a huge number. But one of these numbers is the spin  $\frac{n}{2}$  plus different spins. Constructing a specific state like  $|\frac{n}{2}, \frac{3}{2}\rangle$  is more difficult.
+### Analogous Construction for Spin
 
-Let's come back to reasonable numbers. I would like to continue with question number two: the dimensionality of the isospin matrix that acts on the space of three quarks. This is for the isospin group, the same as adding  $\frac{1}{2}$  three times.
+Recall last time we discussed the case of total spin  $S=47$ , which gives a representation of dimension  $95$ . To build that from spin‑ $\frac12$  particles, you need  $94$  such particles. The total Hilbert space of  $94$  spin‑ $\frac12$  particles has dimension  $2^{94}$ , which decomposes into irreducible representations of total spin from  $0$  up to  $47$  with various multiplicities. The same principle applies to isospin for three quarks.
 
-Every quark brings a doublet. When we talk about dimensionality, we count the basis vectors in the representation. For every product space, there are two basis vectors. To count how many basis vectors I have in the tensor product, I multiply the number of basis vectors. In the space of three quarks there are  $2^3 = 8$  basis functions. One of them is  $|u d u\rangle$ . Another is  $|u u u\rangle$ , a third is  $|d d u\rangle$ , and so on.
+<hr>
 
-The dimensionality of the isospin matrix that acts on this space is 8, so we have an  $8 \times 8$  matrix. But we can arrange these combinations so they transform under isospin rotations together without talking to other combinations. That's called splitting into irreducible representations by grouping the basis functions into multiplets.
+### Dimensionality of the Three‑Quark Isospin Space
 
-To answer the last question, we do spin algebra:  $\frac{1}{2} \otimes \frac{1}{2} \otimes \frac{1}{2}$ . We combine  $\frac{1}{2}$  and  $\frac{1}{2}$ , which gives  $0 \oplus 1$ . Then we combine this result with another  $\frac{1}{2}$ . We check the dimensionality:  $2 \times 2 \times 2 = 8$ . The decomposition is  $\frac{3}{2} \oplus \frac{1}{2} \oplus \frac{1}{2}$ , with dimensions  $4 + 2 + 2 = 8$ . So our  $8 \times 8$  matrix can be split into blocks of 2, 3, and 4 dimensions.
+Now let us return to the question of dimensionality. For three quarks, each quark carries an isospin doublet. The number of basis vectors in the tensor product space is  $2^3 = 8$ . Explicitly, the basis states are
+
+-  $|uuu\rangle$ 
+-  $|uud\rangle$ 
+-  $|udu\rangle$ 
+-  $|udd\rangle$ 
+-  $|duu\rangle$ 
+-  $|dud\rangle$ 
+-  $|ddu\rangle$ 
+-  $|ddd\rangle$ 
+
+
+
+## Isospin Decomposition and Multiplet Construction
+
+The dimensionality of the isospin matrix acting on this space is 8, giving an  $8 \times 8$  matrix. These combinations can be arranged so that under isospin rotations they transform together without mixing—this is called **splitting into irreducible representations**, i.e., grouping the basis functions into **multiplets**.
+
+<hr>
+
+To answer the last question, we perform the spin algebra:
+
+  $$\frac{1}{2} \otimes \frac{1}{2} = 1 \oplus 0$$  
+
+and then
+
+  $$\frac{1}{2} \otimes \frac{1}{2} \otimes \frac{1}{2} = \frac{1}{2} \oplus \frac{1}{2} \oplus 1 \oplus 0 .$$  
+
+The product of dimensions is  $2 \times 2 \times 2 = 8$ , and the sum of the dimensions of the irreducible representations is  $2 + 2 + 3 + 1 = 8$ . Hence the  $8 \times 8$  matrix can be split into blocks of dimensions:
+
+| Irreducible representation | Dimension |
+|---------------------------|-----------|
+|  $\frac12$                  | 2         |
+|  $\frac12$                  | 2         |
+|  $1$                        | 3         |
+|  $0$                        | 1         |
+
+This corresponds to the ESME (Explicit Symmetry Multiplet Expansion).
+
+<hr>
+
+It is clear how to construct the basis for the highest isospin: start with the state  $uuu$  and then apply the lowering operator. But how do we construct the others?
+
+
+
+## Constructing Orthogonal Basis States via Spin Algebra
+
+### Basis States and Orthogonal Combinations
+
+The basis for the isospin-1/2 and isospin-3/2 representations is discussed. For the isospin-1/2 sector, we only have two basis states (e.g., the proton and neutron). The axis of isospin defines the projection.
+
+Baryon wavefunctions factorize as:
+
+  $$\Psi = \Psi_{\text{color}} \otimes \sum_i \Psi_{\text{isospin}} \otimes \Psi_{\text{spin}}$$  
+
+When combining the isospin of two quarks, we have:
+
+  $$\frac{1}{2} \otimes \frac{1}{2} = 1 \oplus 0$$  
+
+For three quarks, the decomposition is:
+
+  $$\frac{1}{2} \otimes \frac{1}{2} \otimes \frac{1}{2} = \frac{1}{2} \oplus \frac{1}{2} \oplus 1 \oplus 0$$  
+
+This accounts for the two distinct isospin-1/2 states in the baryon octet.
+
+<hr>
+
+### Constructing Orthogonal Wavefunctions
+
+We need to build wavefunctions that are orthogonal to those already constructed. The available states with isospin projection  $+1/2$  are linear combinations of the three-quark states  $|uud\rangle$ ,  $|udu\rangle$ , and  $|duu\rangle$ .
+
+Two orthogonal combinations (up to normalization) are:
+
+| State | Expression |
+|-------|------------|
+| Symmetric (S) |  $\frac{1}{\sqrt{3}}( |uud\rangle + |udu\rangle + |duu\rangle )$  |
+| Antisymmetric (A) |  $\frac{1}{\sqrt{2}}( |uud\rangle - |udu\rangle )$  |
+
+These are obtained by taking the available states and subtracting one from the other.
+
+The scalar product of the symmetric and antisymmetric combinations is zero. To check this, multiply the two combinations:
+
+- The first term contributes  $1$ ,
+- the second contributes  $1$ ,
+- the third contributes  $-2$ ,
+giving a total of  $0$ .
+
+Normalization is computed by squaring the coefficients. Only terms with the same color content contribute, yielding contributions of  $1$ ,  $1$ , and  $4$  (which after taking the square root give the correct normalization factor).
+
+<hr>
+
+### Constructing the Third Orthogonal State using Coordinate Vectors
+
+The lecturer then demonstrates a method using coordinate vectors to find an orthogonal combination. In the basis of three quark states (ordered as  $|uud\rangle$ ,  $|udu\rangle$ ,  $|duu\rangle$ ), the symmetric combination corresponds to the vector  $(1,1,1)$ . Another basis vector is  $(1,-1,0)$ . The third orthogonal vector is then  $(1,-1,0)$ ? Actually, the lecturer says: "I had (1,1,1). So this vector is (1,1,1). And the other one, orthogonal to both, is (1,-1,0)." Using this, the quark state for the orthogonal combination is  $u\,d\,u - u\,u\,d$  (i.e.,  $|udu\rangle - |uud\rangle$ ). The lower (isospin  $-\frac{1}{2}$ ) state is obtained by applying the lowering operator to this state, yielding the combination derived in the next subsection.
+
+<hr>
+
+### Obtaining the Isospin  $-\frac{1}{2}$  State
+
+To construct the basis function for  $| \frac{1}{2}, -\frac{1}{2} \rangle$ , start from the upper (projection  $+\frac{1}{2}$ ) state and apply the lowering operator. The result (up to normalization  $\frac{1}{\sqrt{6}}$ ) is predominantly  $|udd\rangle$  but includes other terms.
+
+The lowering operator acts on each quark:
+
+- Acting on the first state yields  $|dud\rangle + |udd\rangle$ .
+- Acting on the second state yields  $|ddu\rangle + |udd\rangle$ .
+- Acting on  $d$  quarks gives zero, so the third term vanishes.
+
+Combining, we obtain  $-2|ddu\rangle$ , leading to the final combination:
+
+  $$| \frac{1}{2}, -\frac{1}{2} \rangle \propto |ddu\rangle - 2|dud\rangle$$  
+
+After normalizing and combining identical terms, the full wavefunction is obtained.
+
+<hr>
+
+### Group Structure and Block Decomposition
+
+The eight baryon wavefunctions (the octet) form an 8-dimensional representation. An  $8\times 8$  matrix acts on these states. This matrix decomposes into blocks:
+
+- a  $4\times4$  block,
+- a  $2\times2$  block,
+- another  $4\times4$  block,
+- another  $2\times2$  block.
+
+The states appear as a triplet ( $3$ ), a quintet ( $5$ ), and another singlet ( $1$ ). These numbers correspond to the dimensions of the irreducible representations when combining two spin-1 particles (see below).
+
+<hr>
+
+### Spin Algebra with Integer Spins
+
+The same algebra applies to integer spins. When combining two spin-1 particles, the total spin ranges from  $0$  to  $2$ . The decomposition of the product representation is:
+
+  $$3 \otimes 3 = 1 \oplus 3 \oplus 5$$  
+
+(Here the numbers refer to the dimensions of the spin representations: singlet, triplet, and quintet.)
+
+<b>Example basis states for two spin-1 particles:</b>
+
+| Total spin  $S$  |  $S_z$  | Expression in product basis |
+|----------------|-------|-----------------------------|
+|  $2$  |  $+2$  |  $|1,1\rangle \otimes |1,1\rangle$  |
+|  $2$  |  $+1$  |  $\frac{1}{\sqrt{2}}( |1,1\rangle\otimes|1,0\rangle + |1,0\rangle\otimes|1,1\rangle )$  |
+|  $2$  |  $0$  |  $\frac{1}{\sqrt{6}}( |1,1\rangle\otimes|1,-1\rangle + 2|1,0\rangle\otimes|1,0\rangle + |1,-1\rangle\otimes|1,1\rangle )$  |
+|  $1$  |  $+1$  |  $\frac{1}{\sqrt{2}}( |1,1\rangle\otimes|1,0\rangle - |1,0\rangle\otimes|1,1\rangle )$  |
+|  $1$  |  $0$  |  $\frac{1}{\sqrt{2}}( |1,1\rangle\otimes|1,-1\rangle - |1,-1\rangle\otimes|1,1\rangle )$  |
+|  $0$  |  $0$  |  $\frac{1}{\sqrt{3}}( |1,1\rangle\otimes|1,-1\rangle - |1,0\rangle\otimes|1,0\rangle + |1,-1\rangle\otimes|1,1\rangle )$  |
+
+The highest-weight state (total spin  $2$ ,  $S_z=+2$ ) is simple. Applying the lowering operator generates the other  $S=2$  states.
+
+For total spin  $1$ , one state is  $\frac{1}{\sqrt{2}}( |1,1\rangle\otimes|1,0\rangle - |1,0\rangle\otimes|1,1\rangle )$ . A vector orthogonal to that, for total spin  $0$ , is obtained by changing the sign between the terms.
+
+<hr>
+
+### Clebsch–Gordan Coefficients
+
+
+::: callout-caution
+When applying lowering operators to construct states, you must use the correct Clebsch–Gordan coefficients. These coefficients vary depending on the spin representations involved. For spin- $1/2$  systems, the factor is always  $\frac{1}{\sqrt{2}}$ , but for higher spins the factors differ.
+:::
+
+To cross-check with tables: the state for a given hypercharge  $Y$  can be written as combinations of product states like  $|1,1\rangle\otimes|1,0\rangle$ ,  $|1,1\rangle\otimes|1,-1\rangle$ , and  $|0,0\rangle$ . The coefficients from the Clebsch–Gordan table are  $\frac{1}{\sqrt{2}}$  for the appropriate combinations.
+
+<hr>
+
+### Practical Advice
+
+Constructing flavor and spin wavefunctions reduces to practicing spin algebra. This material appears in quantum mechanics, particle physics, and group theory courses.
+
+- SU(2) (spin) is a simple group; SU(3) (flavor) is more complicated, but the spin algebra for SU(2) underlies both.
+- Dimensionalities and the rules for adding spins are essential.
+- Clebsch–Gordan coefficients can be derived without a book simply by combining spins.
+
+I hope this helps you understand where the coefficients and wavefunctions come from.
+
+
+
+## Baryon Wave Function Symmetries and Spin-Isospin Structure
+
+To proceed with structure functions, we need the proton wave function as the basis for understanding hadron internal structure. The homework also includes questions about the internal structure of the delta.
+
+### Symmetries of the baryon wave function
+
+We operate in four spaces: **color**, **space**, **isospin**, and **spin**. The baryon wave function has color indices and must be color-neutral (all hadrons are). The space wave function describes the distribution in  $x$  and time  $t$ . We also have isospin and spin.
+
+In general these spaces are not factorizable – you cannot simply take a product of functions. The wave function lives in the product of the four spaces and can mix them, so a sum of components is needed. It would be wrong to write isospin times the rest.
+
+### Factoring out color and space
+
+The color wave function is a **singlet** (scalar, with no dimensionality of components). Therefore the color wave function can be factored out. A good argument exists that the space wave function is also scalar and can be factored out (take that as given; the lecturer has no better justification). With color and space factored out, the baryon wave function becomes:
+
+  $$\Psi = \Psi_{\text{color}} \otimes \Psi_{\text{space}} \otimes \sum_i \Psi_{\text{isospin}} \otimes \Psi_{\text{spin}}.$$  
+
+### Spin and isospin do not factorize
+
+What remains is a large-dimensional representation where spin and isospin mix. For baryons with three quarks, each quark carries spin and flavor. Each quark state is a product of flavor and spin. The total wave function is a product of three quarks, so we work with a basis in **six dimensions**.
 
 
 ::: callout-important
-The tensor product of three  $I = \frac{1}{2}$  representations decomposes into irreducible representations of  $SU(2)$ :
-  $$\frac{1}{2} \otimes \frac{1}{2} \otimes \frac{1}{2} = \frac{3}{2} \oplus \frac{1}{2} \oplus \frac{1}{2}$$  
-The dimensions satisfy:  $2 \times 2 \times 2 = 4 + 2 + 2 = 8$ .
+The spin/isospin mixing is essential: the baryon wave function cannot be written as a single product of isospin times spin.
 :::
 
-It's super clear how to construct the basis for the highest isospin state. You start with  $|u u u\rangle$  and act with lowering operators. But how to construct the others? I'll follow this. The basis for  $I = \frac{3}{2}$  has 4 states. For  $I = \frac{1}{2}$  we're going to have two states. The principle we use is simple: the vectors we build should be totally orthogonal to what we've built already.
+### Building the delta states
 
-Looking at the available quark combinations with  $I_3 = \frac{1}{2}$ , we can construct an orthogonal combination by putting different signs between them. For example, a combination like  $\frac{1}{\sqrt{2}}(|u u d\rangle - |u d u\rangle)$ . You ensure normalization by calculating the scalar product. To construct the basis function for  $I = \frac{1}{2}, I_3 = -\frac{1}{2}$ , take the upper one and act with a lowering operator.
+To construct particles in this six‑dimensional space, we act with lowering operators. Start from an unambiguous state: the **delta** with spin  $3/2$ . The only combination for  $\Delta^{++}$  is  $u\,u\,u$ . The  $\Delta^{++}$  state with  $J_z = 3/2$  is  $u_R u_R u_R$ .
 
-That way you find the wave function is  $\frac{1}{\sqrt{6}}(|u d d\rangle + |d u d\rangle - 2|d d u\rangle)$ . Now that we figured out that out of our eight states, the  $8 \times 8$  matrix acting on them splits into a block of four, a block of two, and another block of two.
+- Acting with the spin lowering operator  $J_-$  on  $u_R u_R u_R$  reduces the spin projection.
+- Acting with the **flavor (isospin) lowering operator** reduces the charge and gives a different particle.
 
-I look at my representation. I have two basis vectors and I need to construct the third one that is orthogonal to both. Essentially, if I have vectors  $(1,1,1)$  and  $(1,-1,0)$ , the one orthogonal to both is something like  $(1,1,-2)$ . Therefore, the first one is  $|u d u\rangle - |u u d\rangle$ . The lower one I get by applying the lowering operator. It's typical spin algebra.
+This yields  $\Delta^{+}$ . Continuing, one constructs  $\Delta^{-}$  and  $\Delta^{0}$  with  $J_z = 1/2$  by acting twice with the flavor lowering operator and once with the spin lowering operator.
 
-With spins we have discussed, it works not only for half-integer spins but also for integer spins. When I combine two spins, I'm dealing with spin 1. Using spin algebra, what I can get ranges from lowest to highest. The lowest would be 0, the highest is 2. I check the dimensionality:  $3 \times 3 = 1 + 3 + 5 = 9$ . I can start constructing the representation basis. I start with the easiest one, which is a vector.
+### The proton: orthogonal to the delta
 
-Again, the lowering operator gives four combinations. For total spin  $S = 2$ , the state is symmetric. For  $S = 1$ , I need a vector orthogonal to that. I just put a minus sign. Be careful when you do this for realistic examples or homework; you have to use Clebsch-Gordan coefficients when you lower operators. Clebsch might appear different here and there.
+The proton appears as a wave function orthogonal to the delta in both spin and isospin. The spin decomposition of three spin‑1/2 particles is:
 
-For the basis, Clebsch are the same. It's  $\frac{1}{\sqrt{2}}$  always. These are typical ladder operators. You can check in the  $SU(3)$  chapter. Let's figure out this line. I want to construct two for my  $Y$  and write this as combinations. You can look at the Clebsch-Gordan table and find these coefficients; they appear to be  $\frac{1}{\sqrt{2}}$ .
+  $$\frac{1}{2} \otimes \frac{1}{2} \otimes \frac{1}{2} = \frac{3}{2} \oplus \frac{1}{2} \oplus \frac{1}{2},$$  
 
-We are not done with writing the flavor and spin wave functions, but I would consider this. It's just a matter of practicing spin algebra. This comes in many courses: quantum mechanics, particle physics, and group theory. For  $SU(2)$  it's simple spin algebra. You need to think about dimensionalities and how you add spin to each other, and know a few recipes to construct these coefficients.
+with dimensions  $4$ ,  $2$ , and  $2$ . The proton has isospin  $1/2$  and spin  $1/2$ , so it belongs to one of the two  $1/2$  representations.
 
-In order to proceed and talk about structure functions, we need the proton wave function, because that's where the understanding of the internal structure of hadrons comes from. In the homework there will be other questions related to the delta internal structure. It is easier to start with the delta wave function.
+The explicit orthogonal combination (the proton state) is:
 
-We start with the symmetries of the baryon wave function. We have to operate in four spaces: color, space, isospin, and spin. The baryon wave function has color indices and must be color neutral, as all hadrons are. We have a space wave function that describes distribution in  $x$  and  $t$ . We have to operate with isospin and spin.
+  $$|p\rangle = \frac{1}{\sqrt{2}} \left( |\tfrac{1}{2},\tfrac{1}{2}\rangle_{\text{spin}} \otimes |\tfrac{1}{2},\tfrac{1}{2}\rangle_{\text{isospin}} + |\tfrac{1}{2},-\tfrac{1}{2}\rangle_{\text{spin}} \otimes |\tfrac{1}{2},-\tfrac{1}{2}\rangle_{\text{isospin}} \right).$$  
 
-It is important to realize they are not simply factorizable in the general case. The wave function lives in the product of the four spaces and can mix them. You need a sum of components. The color wave function is a singlet, meaning it's a scalar. Therefore, the color wave function can be factored out. There is a good argument why the space wave function is a scalar and can be factored out as well. I am not convinced myself, but one should find the argument in the literature.
+| Particle | Quark content | Isospin  $I$  |  $I_3$  | Spin  $J$  |  $J_z$  examples |
+|----------|---------------|-------------|-------|----------|----------------|
+|  $\Delta^{++}$  |  $uuu$  |  $3/2$  |  $+3/2$  |  $3/2$  |  $+3/2$ ,  $+1/2$ ,  $-1/2$ ,  $-3/2$  |
+|  $\Delta^{+}$  |  $uud$  |  $3/2$  |  $+1/2$  |  $3/2$  |  $+3/2$ ,  $+1/2$ ,  $-1/2$ ,  $-3/2$  |
+|  $\Delta^{0}$  |  $udd$  |  $3/2$  |  $-1/2$  |  $3/2$  |  $+3/2$ ,  $+1/2$ ,  $-1/2$ ,  $-3/2$  |
+|  $\Delta^{-}$  |  $ddd$  |  $3/2$  |  $-3/2$  |  $3/2$  |  $+3/2$ ,  $+1/2$ ,  $-1/2$ ,  $-3/2$  |
+|  $p$  |  $uud$  |  $1/2$  |  $+1/2$  |  $1/2$  |  $+1/2$ ,  $-1/2$  |
 
-What remains is spin and isospin, and these two do not factorize. That's a large dimensional representation. We deal with baryons with three quarks, and every quark has a spin. Every quark is the product of flavor and spin. It's a product of three quarks, so we deal with a basis in six dimensions. It's the same thing as before.
-
-To build the representation of particles in these six dimensions, we act with the lowering operator. Starting with something we know with no ambiguities: the delta, which has spin  $\frac{3}{2}$ . When Delta has spin  $\frac{3}{2}$ , the only combination is  $|u u u\rangle$ . The  $\Delta^{++}$  with  $J_z = +\frac{3}{2}$ .  $\Delta^+$  with  $J_z = +\frac{1}{2}$  is obtained by acting with a lowering operator in the spin space. If we act with the lowering operator in the flavor space, we reduce the charge and obtain a different particle.
-
-We need to act twice with the lowering operator in flavor space and once in spin space to get  $\Delta^0$  and  $\Delta^-$ . The proton appears to be a wave function that is orthogonal. The decomposition is  $\frac{1}{2} \otimes \frac{1}{2} \otimes \frac{1}{2} = \frac{3}{2} \oplus \frac{1}{2} \oplus \frac{1}{2}$ . This is 4 states plus 2 states plus 2 states. The proton is made of the same quarks as delta but has isospin  $\frac{1}{2}$  and spin  $\frac{1}{2}$ . Therefore, we need a wave function orthogonal in both spin and isospin spaces.
-
-We are not going to do that because it's technically complicated. What we will do is explore symmetry. The baryon wave function must be totally antisymmetric under quark exchange. This is a new symmetry not related to  $SU(2)$  directly. We now swap dimensions: take one particle with its spin and isospin and swap with another.
-
-We have a basis function we constructed, and we can examine them to see if they have certain permutation symmetry. For most, there is no symmetry; they are not eigenstates of permutation. Let's see what we demand from the function. The total  $\Psi$  must be antisymmetric under permutation:  $\Psi(1,2,3) = -\Psi(2,1,3)$ .
-
-The color wave function is antisymmetric. To see this, you need to see how it looks. Color is transformed under  $SU(3)$ . In three dimensions there are three colors. The representation of  $SU(3)$  is more complicated. There are decuplets and octets from combining three quarks:  $\mathbf{3} \otimes \mathbf{3} \otimes \mathbf{3} = \mathbf{1} \oplus \mathbf{8} \oplus \mathbf{8} \oplus \mathbf{10}$ . The dimensions match:  $27 = 1 + 8 + 8 + 10$ .
-
-The singlet is  $\mathbf{1}$  and its wave function can be constructed. It's easiest to start with the highest weight state for the decuplet. For the components that have red, green, and blue, you need a totally antisymmetric combination:  $\frac{1}{\sqrt{6}}(|rgb\rangle + |gbr\rangle + |brg\rangle - |rbg\rangle - |grb\rangle - |bgr\rangle)$ . All even permutations have a plus sign, odd permutations a minus sign. The color wave function is antisymmetric; swapping two gives a minus sign.
-
-The space wave function is symmetric for the ground state baryons. They are all in the simplest symmetric configuration. Therefore, the combined spin and isospin wave function must be symmetric.
-
-Let's do an example. To construct a wave function for a proton, we combine isospin  $\frac{1}{2}$  and spin  $\frac{1}{2}$ . Let's examine some basis functions. Is it symmetric under permutation? If I swap particles 1 and 2, the function changes; it doesn't have a certain symmetry. However, it might be symmetric under permutation of quarks 2 and 3.
-
-We construct a spin wave function that has symmetry only on the permutation of 2 and 3. The proton wave function can be guessed by combining symmetric flavor with symmetric spin. But the total wave function must be antisymmetric under any two-particle exchange. If we use just one term, that would be illegal. The wave function goes into another function.
-
-When we combine three quarks, we get the spin  $\frac{3}{2}$  representation and two spin  $\frac{1}{2}$  representations. If I apply the permutation operator to the  $\frac{1}{2}$  multiplet, it mixes with the other  $\frac{1}{2}$  multiplet. The permutation operator is external to the rotation group. Therefore, to construct the proton, we need both of the two-dimensional multiplets.
-
-The delta lives in the  $\frac{3}{2}$  multiplet. Applying a permutation stays within the same multiplet. But for the proton, it lives in a mixture of the two  $\frac{1}{2}$  multiplets. One has to do the algebra to find the answer.
-
-The proton wave function is a combination. I memorize these components. The proton spin-up wave function is a combination of terms like  $|u u d\rangle$ ,  $|u d u\rangle$ ,  $|d u u\rangle$  with different spin orientations. The coefficients in the basis come from ensuring overall symmetry. The normalization comes by summing the squares of coefficients:  $4 + 4 + 4 + 6 = 18$ , so the normalization factor is  $\frac{1}{\sqrt{18}}$ .
+Detailed calculation is straightforward but technically involved; spending a few hours would suffice to reproduce it.
 
 
-::: callout-tip
-The proton wave function (spin-up, isospin-up) is a combination of quark spin-flavor states, ensuring overall symmetry under exchange when combined with antisymmetric color and symmetric spatial parts. For example:
-  $$|p \uparrow\rangle = \frac{1}{\sqrt{18}} \left[ 2|u\uparrow u\uparrow d\downarrow\rangle + 2|u\uparrow d\downarrow u\uparrow\rangle + 2|d\downarrow u\uparrow u\uparrow\rangle - |u\uparrow u\downarrow d\uparrow\rangle - |u\uparrow d\uparrow u\downarrow\rangle - |d\uparrow u\uparrow u\downarrow\rangle - |u\downarrow u\uparrow d\uparrow\rangle - |u\downarrow d\uparrow u\uparrow\rangle - |d\uparrow u\downarrow u\uparrow\rangle \right]$$  
-This reflects the mixed symmetry in spin and isospin spaces required by the Pauli exclusion principle.
-:::
 
-We have the wave function of the proton. Now we can evaluate cool properties of the proton. That came as a surprise.
+## Permutation Symmetry and the Proton Wave Function
 
-Now, let's discuss studies of structure. One way we experimentally probe structure is to use electron scattering. The simplest first question we can answer is: what is the charge distribution inside the hadron? That's done with an electron probing the charge.
+We explore a new symmetry: **permutation symmetry**. This is unrelated to  $\mathrm{SU}(2)$  and involves swapping entire particles (spin + isospin) between quarks – external to the previous symmetries.
 
-When we scatter an electron off a hadron, almost all variables are fixed. The center-of-mass energy is fixed, and one variable remains: the scattering angle. Therefore, the experiment on structure functions is electron-proton scattering. We measure the angular distribution. From it, we get insights on the proton charge distribution and magnetic moment. That's called a scattering experiment.
+The total wave function must be antisymmetric under any two‑quark permutation:
+  $$\Psi_{123} = -\Psi_{213}.$$  
 
-It's important to realize we write many variables, like  $Q^2$  (momentum transfer squared), but it's all related to one angle. You need the probability for the electron to scatter. The kinematics in the lab frame: the electron collides with the proton, and the electron goes to some direction. This is simple two-body kinematics. The only variable is the angle.
+It factorizes as
+  $$\Psi = \Psi_{\text{color}} \otimes \sum_i \Psi_{\text{isospin}} \otimes \Psi_{\text{spin}},$$  
+with the color part required to be antisymmetric.
 
-What's the probability for the electron to scatter with almost no change in direction compared to going perpendicular? Rutherford scattering gives a term like  $1/\sin^4(\theta/2)$ , a huge peak at zero angle. Most of the time, the electron prefers to go straight. 
+<hr>
+#### Color wave function
+
+Under rotations in 3‑dimensional color space, the representation theory is more complicated than spin algebra. The representation of three quarks in  $\mathrm{SU}(3)_{\text{color}}$  decomposes as
+
+| Representation | Multiplicity | Nature |
+|----------------|--------------|--------|
+|  $\mathbf{3} \otimes \mathbf{3} \otimes \mathbf{3}$  | – | 27 states |
+|  $\mathbf{1}$  (singlet) | 1 | Totally antisymmetric |
+|  $\mathbf{8}$  | 2 | Mixed symmetry |
+|  $\mathbf{10}$  | 1 | Totally symmetric |
+
+The color singlet is the fully antisymmetric combination. It can be written as a sum over permutations with signs: even permutations contribute  $+$ , odd permutations give  $-$ .
+
+<hr>
+#### Space and spin‑isospin symmetry
+
+For ground‑state baryons, the spatial wave function is **symmetric** (simplest configuration). Therefore the combined spin‑plus‑isospin part must be **symmetric** to yield overall antisymmetry.
+
+When we examine basis functions for the proton (isospin  $1/2$ , spin  $1/2$ ), we find that a simple product does not have definite symmetry under all exchanges. For instance, swapping particles 1 and 2 changes the function; but the function is symmetric under swapping quarks 2 and 3. This violates the required antisymmetry.
+
+<b>Q:</b> Does that mean it is not symmetric in the first two particles? Can we even use it?
+<b>A:</b> It tells us that using that function is illegal. It does **not** represent a valid baryon wave function.
+
+<hr>
+#### Constructing the proton
+
+Combining three quarks gives one spin‑ $3/2$  representation and two spin‑ $1/2$  representations. Under permutation, the two  $1/2$  multiplets mix. One more comment on the same line: the  $\Delta$  is a valid baryon. If I apply the permutation to this multiplet, I stay within the same multiplet. But for the proton, it lives in the mixture of these two.
+
+The correct proton wave function is a linear combination:
+  $$|p\rangle = \frac{1}{\sqrt{2}} \left( \bigl|\tfrac12,\tfrac12\bigr\rangle_{\text{spin}} \otimes \bigl|\tfrac12,\tfrac12\bigr\rangle_{\text{isospin}} + \bigl|\tfrac12,-\tfrac12\bigr\rangle_{\text{spin}} \otimes \bigl|\tfrac12,-\tfrac12\bigr\rangle_{\text{isospin}} \right).$$  
+
+In matrix form (with basis states labeled by quark flavors and spin orientations):
+  $$|p\rangle_T = \frac{1}{\sqrt{8}} \begin{pmatrix}
+-2 & -1 & -1 \\
+-1 & -1 & 2
+\end{pmatrix}.$$  
+
+Normalization check:  $4+1+1+1+1+4 = 12$ , and the factor  $1/\sqrt{8}$  already includes the correct normalization.
+
+We now have the proton wave function and can evaluate proton properties.
+
+
+
+## Probing Proton Structure via Electron Scattering and Form Factors
+
+#### Structure Studies via Scattering 
 
 
 
@@ -163,24 +433,29 @@ What's the probability for the electron to scatter with almost no change in dire
 
 
 
- The deviation from that behavior tells us about structure. That process is elastic scattering, where initial and final particles are the same.
-
-In contrast, inelastic scattering is where the proton is dissociated. In elastic scattering, the proton stays intact. In inelastic scattering, the final state is many particles  $X$ . The differential cross section for elastic scattering of point-like particles is  $d\sigma/d\Omega \propto 1/\sin^4(\theta/2)$ . An example is electron-muon scattering.
-
-In QED, you calculate diagrams. The matrix element is  $\mathcal{M} = \bar{u}_3 \gamma^\mu u_1 \cdot (g_{\mu\nu}/Q^2) \cdot \bar{u}_4 \gamma^\nu u_2$ . For this course, we analyze it generally. The matrix element is a scalar. It's obtained by contracting different Lorentz structures. The spinor has four components, contracted by gamma matrices.
-
-This is point-like scattering. When we deal with the proton, we extend the vertex function with form factors. The dimensionality of this object is a simple function of  $Q^2$ . It is convenient to introduce a combination: the electric form factor  $G_E(Q^2)$  and magnetic form factor  $G_M(Q^2)$ . They both are functions of  $Q^2$ .
-
-In non-relativistic theory, there is a straightforward interpretation. Those factors show the charge distribution.  $Q$  is momentum. There is a transformation:  $Q^2 = -q^2$ , so  $q$  is the three-momentum transfer. We can transform to coordinate space by Fourier transform. The charge density  $\rho(r)$  is the Fourier transform of  $G_E(q^2)$ :  $\rho(r) = \int \frac{d^3q}{(2\pi)^3} e^{i \vec{q} \cdot \vec{r}} G_E(q^2)$ .
 
 
-::: callout-note
-The charge distribution  $\rho(r)$  is obtained from the electric form factor via Fourier transform:
-  $$\rho(r) = \int \frac{d^3q}{(2\pi)^3} e^{i \vec{q} \cdot \vec{r}} G_E(q^2)$$  
-This relates the momentum-space form factor to the spatial charge density.
-:::
+One method to study the internal structure of hadrons experimentally is to probe the **charge distribution** using an electron. When an electron scatters off a hadron, almost all variables are fixed. The center-of-mass energy is fixed, leaving only **one angle** that describes the entire kinematics. The scattering experiment measures the angular distribution, from which we infer the proton's charge distribution and magnetic moment.
 
-When I put  $q = 0$ , the Fourier transform gives the normalization. So the normalization of the form factors is fixed:  $G_E(0) = 1$  (the proton charge), and  $G_M(0) = \mu_p$  (the magnetic moment). 
+The angular distribution is dominated by a strong forward peak. The cross section behaves as
+
+  $$\frac{d\sigma}{d\Omega} \propto \frac{1}{Q^4},$$  
+
+with the Rutherford scattering term  $1/\sin^4(\theta/2)$  giving a huge peak at  $\theta = 0$ . Most of the time the electron goes straight; **deviations from this point-like behavior** reveal information about the proton's structure.
+
+<hr>
+
+### Elastic vs. Inelastic Scattering
+
+| Process | Description |
+| ------- | ----------- |
+| **Elastic** | Initial and final particles are the same (proton stays intact). The differential cross section peaks at zero angle. |
+| **Inelastic** | The proton dissociates into other particles. |
+
+In elastic scattering, if both particles are point-like (e.g., electron–muon scattering), the cross section follows the ideal point‑like form.
+
+<hr>
+### Feynman Diagrams and Matrix Element Structure 
 
 
 
@@ -192,73 +467,95 @@ When I put  $q = 0$ , the Fourier transform gives the normalization. So the norm
 
 
 
-The magnetic moment is a quantity that reacts in a magnetic field. It is proportional to the spin of the particle:  $\vec{\mu} = g \frac{e}{2m} \vec{S}$ . For a point-like Dirac fermion,  $g = 2$ . For the electron, the magnetic moment is  $\mu_e = \frac{e}{2m_e}$ . The same for a muon.
+For a QED interaction, we calculate Feynman diagrams: the electron line, the photon propagator  $g_{\mu\nu}/Q^2$ , and the baryon line  $\bar{u}_4 \gamma^\mu u_2$ . The matrix element is a scalar — it has no dimensions. It is obtained by combining different structures. The spinors are Lorentz structures with four components, and they are contracted with gamma matrices to become a scalar. The index  $\mu$  indicates the Lorentz index of the gamma matrix. There are four matrices here. It is important to arrive at a single number by contracting different structures. This is point-like scattering, as for the electron.
 
-But for the proton, it's not. The proton has spin  $\frac{1}{2}$ , charge  $+e$ , mass  $m_p$ . That relation is completely different. There is a correction due to internal structure. The magnetic moment can be measured by analyzing  $G_M$  at  $Q^2 = 0$ . One finds it's quite an amazing number: approximately 2.79, not 1. It's a large correction.
+When we deal with the proton, we extend the vertex function by introducing form factors.
 
-It comes from the quark model and is easy to see if you analyze the proton wave function. What could have gone wrong in our naive consideration? We know the proton is made of quarks. How will the equation be modified? Instead of the proton charge, we should use the charges of quarks ( $+\frac{2}{3}e, -\frac{1}{3}e$ ). Instead of the proton mass, we should use the masses of the quarks. The spin is the same.
+### Form Factors for the Proton
 
-The answer is a combination. When we analyze the magnetic moment, we see internal structure. Therefore, what we put as charge and mass in the naive model is not correct. This number can be obtained by looking at the wave function.
+For a point‑like particle (like the electron) the vertex is simple. For the proton we introduce **form factors**  $F_1(Q^2)$  and  $F_2(Q^2)$  to describe its extended structure. Convenient combinations are
 
-Let's act with the magnetic moment operator on the proton. The operator for a baryon is the sum of quark contributions:  $\hat{\mu} = \sum_{i=1}^3 \frac{q_i}{2m_i} \vec{\sigma}_i$ . Act on  $|u u d\rangle$ . The  $u$  quark has charge  $+\frac{2}{3}e$  and mass  $m_u$ , the  $d$  quark has charge  $-\frac{1}{3}e$  and mass  $m_d$ .
+  $$G_M(Q^2) = F_1 + F_2, \qquad G_E(Q^2) = F_1 - \tau F_2, \quad \tau = \frac{Q^2}{4m^2}.$$  
 
-When you act with the  $\mu_z$  operator, you get a number. Doing the algebra for the full proton wave function, you figure out that once you act this operator, you don't get the proton wave function back. The proton is not an eigenstate of the individual quark magnetic moment operator. You have to take the expectation value.
+Both  $G_E$  and  $G_M$  depend only on the momentum transfer  $Q^2$ . In the non‑relativistic limit, their Fourier transforms give the charge and magnetic moment densities  $G_E(r)$  and  $G_M(r)$ . At zero momentum transfer the normalizations are fixed:
 
-Let's make it clear with the quark model. Assume  $m_u \approx m_d \approx 300 \text{ MeV}$ , and  $m_p \approx 1 \text{ GeV}$ . The calculation yields  $\mu_p = \frac{e}{2m_u} \cdot \frac{3}{2}$ . Comparing to the naive expectation  $\mu_p^{\text{naive}} = \frac{e}{2m_p}$ , we get a factor of  $\frac{m_p}{m_u} \approx 3$ . So we've got a factor of about three.
+  $$G_E(0) = 1 \quad\text{(total charge)},\qquad G_M(0) = \mu \quad\text{(total magnetic moment)}.$$  
 
-We can compare this result: part of it is three. Cool. We managed to understand the anomalous magnetic moment of the proton. But basically, this number is the ratio equal to mass of proton over mass of quark? It just turns out to be like this because for the neutron, the answer is approximately -1.91. So the anomalous magnetic moment for neutron is -1.91, for proton it's +2.79. It's not simply a ratio of masses; it's an algebra of the charges and masses together.
+<hr>
+
+### The Magnetic Moment as Evidence for Structure
+
+The magnetic moment of a particle is defined by its response to a magnetic field:
+
+  $$\mu = \frac{e}{m} S,$$  
+
+where  $S$  is the spin. For a point‑like particle the ** $g$ -factor** equals 2. For the electron,
+
+  $$\mu_e = \frac{e}{2 m_e},$$  
+
+with  $g = 2$ . The same relation holds for the muon. For the proton, however, the magnetic moment is **completely different** from that of a point‑like particle. This discrepancy is the simplest and most direct experimental sign that the proton is not point‑like.
 
 
 ::: callout-important
-The magnetic moment operator for a baryon is the sum of the magnetic moments of its constituent quarks:
-  $$\hat{\mu} = \sum_{i=1}^3 \frac{q_i}{2m_i} \vec{\sigma}_i$$  
-For the proton, using  $m_u \approx m_d$ , the magnetic moment is:
-  $$\mu_p = \frac{4}{3} \mu_u - \frac{1}{3} \mu_d = \frac{4}{3} \cdot \frac{2e}{3 \cdot 2m_u} - \frac{1}{3} \cdot \left(-\frac{e}{3 \cdot 2m_d}\right) = \frac{e}{2m_u} \cdot \frac{3}{2}$$  
-This yields  $\mu_p \approx 2.79 \, \mu_N$ , where  $\mu_N = e/(2m_p)$  is the nuclear magneton.
+The deviation of the proton's magnetic moment from the point‑like value  $e/(2m_p)$  (assuming  $g=2$ ) provides the first clear evidence of internal structure.
 :::
 
-I found it amazing. Essentially, what we showed today, just knowing  $SU(2)$  and spin algebra, we can build the proton wave function. Using this function, we can figure out the magnetic moment—something that experimentally shows the proton is not a point-like particle. In the homework, we have an exercise for delta, which is relatively similar, as well as dealing with the magnetic moment operator for the delta particle.
 
 
+## The Proton's Anomalous Magnetic Moment from Quark Structure
 
-## Evidence for Three Quarks and Color
+#### Proton Magnetic Moment: Beyond the Naive Expectation
 
-Another interesting point is understanding that there are **three parts inside a proton**. This evidence comes from scattering experiments.
+The naive magnetic moment of the proton is  $\mu = \frac{e}{m_p} S$ , with  $e$  the proton charge and  $m_p$  the proton mass. This would give  $g = 1$  in the relation  $\vec{\mu}= g \frac{e}{2m_p} \vec{S}$ . However, experiment—obtained by analyzing the magnetic form factor  $G_M(q^2)$  at  $q^2=0$ , where  $G_M(0)=\mu$ —reveals a surprise: ** $g \approx 3$ **, not 1.
 
-From **deep inelastic scattering**, we observe the distribution of form factors. The cross section is described by structure functions  $F_1(x, Q^2)$  and  $F_2(x, Q^2)$ , which reveal the proton's internal structure:
+The failure of the naive calculation points to internal structure. We now know the proton consists of quarks, so the correct magnetic moment operator must use the **quark charges** ( $+\frac{2}{3}$  for up,  $-\frac{1}{3}$  for down) and **quark masses** instead of the proton’s overall charge and mass. The spin remains the same.
 
-  $$\frac{d^2\sigma}{d\Omega\, dE'} = \frac{\alpha^2}{4E^2\sin^4(\theta/2)} \left[ \frac{F_2(x, Q^2)}{\nu} \cos^2(\theta/2) + \frac{2F_1(x, Q^2)}{M} \sin^2(\theta/2) \right]$$  
+### Quark Model Calculation
 
-Here,  $\nu = E - E'$  is the energy transfer,  $\theta$  is the scattering angle,  $M$  is the proton mass, and  $\alpha$  is the fine-structure constant. The key observation was that  $F_2$  scales with the **Bjorken variable**  $x = \frac{Q^2}{2M\nu}$ , which provided direct evidence for **point-like constituents**—quarks.
+The magnetic moment operator for a quark  $q$  is
+  $$\mu_q = \frac{e_q}{2 m_q},$$  
+where  $e_q$  is the quark’s electric charge and  $m_q$  its mass. (see @fig-fg2) Applying this operator to the proton wave function—which mixes flavor and spin via Clebsch–Gordan coefficients—yields an expression for  $\mu_p$ :
 
-So, how do we arrive at **three quarks** in the proton? It's not about three colors yet, but three quarks.
+| Quark | Charge  $e_q$  | Mass  $m_q$  (approx.) |  $\mu_q$  |
+|-------|--------------|----------------------|---------|
+|  $u$    |  $+\frac{2}{3}$  | 300 MeV             |  $\displaystyle \frac{1}{3 m_u}$  |
+|  $d$    |  $-\frac{1}{3}$  | 300 MeV             |  $\displaystyle -\frac{1}{6 m_d}$  |
+|  $s$    |  $-\frac{1}{3}$  | 500 MeV             | (used for other baryons) |
+|  $c$    |  $+\frac{2}{3}$  | 1.5 GeV             | (used for other baryons) |
 
-The **quark model magnetic moment of the proton** can be calculated from three constituent quarks (two up and one down):
-
-  $$\mu_p = \frac{4}{3}\mu_u - \frac{1}{3}\mu_d$$  
-
-where  $\mu_u$  and  $\mu_d$  are the magnetic moments of the up and down quarks. Explicitly, this is approximately:
-
-  $$\mu_\text{proton} \approx \frac{2}{3} \frac{2}{3 m_u} + \frac{1}{3} \frac{1}{3 m_d} + \frac{1}{3} \frac{1}{3 m_u}$$  
-
-This magnetic moment calculation was an early piece of evidence for three quarks, though the exact historical observable might be debated.
+Using the proton wave function (in spin⊗isospin space) and the operator  $\mu_q$ , one finds
+  $$\mu_p = \frac{4}{3}\mu_u - \frac{1}{3}\mu_d .$$  
+Assuming  $m_u = m_d = m$ ,
+  $$\mu_p = \frac{4}{3}\cdot\frac{1}{3m} - \frac{1}{3}\cdot\left(-\frac{1}{6m}\right) = \frac{4}{9m} + \frac{1}{18m} = \frac{1}{2m}.$$  
+Since the proton mass  $m_p \approx 3m$ , we have  $m \approx m_p/3$ , giving
+  $$\mu_p = \frac{1}{2(m_p/3)} = \frac{3}{2 m_p}.$$  
+This is **three times** the naive value  $1/(2m_p)$ , explaining the factor  $g\approx 3$ .
 
 
 ::: callout-note
-The **Gell-Mann–Okubo mass formula** from the **Eightfold Way** provided further evidence for quark organization. It relates the masses of hadrons within an SU(3) flavor multiplet:
-  $$M = M_0 + aY + b\left[ I(I+1) - \frac{1}{4}Y^2 \right]$$  
-where  $M_0$  is a base mass,  $Y$  is the hypercharge, and  $I$  is the isospin. This successful classification of mesons and baryons into octets and decuplets suggested an underlying three-quark structure.
+The same operator acting on the proton wave function does **not** yield an eigenstate—the proton is not an eigenstate of the magnetic moment operator in the quark model.
 :::
 
-Why does the model require exactly **three quarks**? This connects to the concept of **color charge**. The requirement for a totally **antisymmetric baryon wavefunction** under quark exchange forces the introduction of a new quantum number: color.
+### Comparison with Neutron
 
-The total wavefunction is a product:
+The neutron magnetic moment, obtained similarly, is approximately  $-2$  in the same units (experimentally  $-1.7$ ). The deviation from the naive ratio of masses shows that the magnetic moments arise from the algebra of quark charges and masses combined with spin–flavor structure.
 
-  $$\Psi_{\text{total}} = \psi_{\text{space}} \otimes \psi_{\text{spin}} \otimes \psi_{\text{flavor}} \otimes \psi_{\text{color}}$$  
+This experimentally shows that the proton is not a point‑like particle. In the homework there is an exercise for the Δ baryon, which is similar in wave function construction and involves the magnetic moment operator for the Δ.
 
-The color part  $\psi_{\text{color}}$  must be the antisymmetric singlet state:
+### Q&A: How Do We Know There Are Three Quarks Inside?
 
-  $$\psi_{\text{color}} = \frac{1}{\sqrt{6}} \left( RGB - RBG + BRG - BGR + GBR - GRB \right)$$  
+<b>Q:</b> How do we know there are three constituents inside the proton?
+<b>A:</b> Not from color directly, but from **deep inelastic scattering**—the experimental distribution of form factors reveals the sub‑structure.
 
-This ensures the total wavefunction obeys  $\Psi_{123} = -\Psi_{213}$  under particle permutation, satisfying the Pauli exclusion principle for identical quarks. So, the need for three colors arose from spectroscopy and symmetry, not directly from the early scattering experiments, which at the time were not precise enough to reveal color.
+<b>Q:</b> Is it the magnetic moment that shows that?
+<b>A:</b> Not specifically, though magnetic moments are influenced by internal charge distributions.
+
+<b>Q:</b> I remember that the number of generations came from the widths of the  $W$  boson—is that similar?
+<b>A:</b> That is a different piece of evidence. For three colors, the spectroscopic evidence came from the **Eightfold Way**—the pattern of mesons and baryons—which only works with three quarks.
+
+<b>Q:</b> Could it be exactly three because only with three quarks can we get both an octet and a decuplet in flavor  $SU(3)$ ?
+<b>A:</b> Yes, that is a theoretical argument. But I am referring specifically to **experimental** evidence: the form‑factor measurements from deep inelastic scattering that directly saw three‑particle substructure.
+
+<b>Q:</b> At the time those experiments were done, precision was limited.
+<b>A:</b> Good point—earlier experiments were rough, but the combination of spectroscopy and later high‑energy scattering solidified the picture.
 
