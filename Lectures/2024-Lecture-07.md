@@ -13,13 +13,9 @@ format: html
 
 
 
-## Pentaquark Mass and Quantum Numbers
+## PCC Mass, Binding Energy, and Lifetime Constraints
 
-All right, two minutes. So all of the problems are one-liners. You solved them online, but you have to know what to do. It's okay.
-
-### **Question 1: The Pentaquark State**
-
-Let's discuss quickly question number one. First, the mass of the states. This appears as the particle. In this condition, neglecting inelastic channels, this particle is formed by the cascade  $\Sigma_c$  and  $\bar{D}$ . 
+The particle is a hadronic molecule formed by the  $\Sigma_c$  and  $D^*$ . Neglecting inelastic channels, its internal structure is that of a molecular bound state. 
 
 
 
@@ -29,56 +25,83 @@ Let's discuss quickly question number one. First, the mass of the states. This a
 
 
 
- This particle can travel, can leave. This is a regular particle, but its internal structure is a **hadronic molecule**.
 
 
-::: callout-note
-A **hadronic molecule** is a bound state of two or more hadrons, held together by residual strong forces, similar to how nucleons form a deuteron.
-:::
+### Naming and Notation
 
-What is the mass of this particle? Indeed, what is roughly the mass of this  $P_c$  particle—that's how we call them—is the mass of the constituents. Let me put an equal sign:
-  $$M_{P_c} \approx M_{\Sigma_c} + M_{\bar{D}}$$  
-That's the way how we define the binding energy. Binding energy is the mass difference between the mass of the constituents and the mass of the particle:
-  $$B = (M_{\Sigma_c} + M_{\bar{D}}) - M_{P_c}$$  
+<b>Q:</b> Should the particle be called PCC?
+<b>A:</b> No, it is the **PCC bar** (formerly PC, updated last year). The C indicates charm content. In the notation, indices list heavy quarks because they are conserved in decay; light quarks are not listed. They can be recovered from the capital letter. For example,  $\Sigma$  indicates two light quarks (isospin). The S in SACC denotes a pentaquark (five quarks). SACC contains CC plus three others. The  $PCC^+$  has light‑quark content  $UG$ . The states we see in this particular channel are of this type.
 
-It used to be called  $P_c$ , and last year we updated notations. Now it's a  $P_c$ , because with the  $C$ , you indicate that it contains charm. I think this is better. So that's really clear. As an index, you list heavy quarks because they kind of conserve quantities with the decay; light quarks are... we don't miss them. You can always recover them from the capital letter. If I say  $\Sigma$ , you know, that's a capital. The two light quarks, depending on the charge, are either  $u u$ , or  $d d$ , or  $u d$ . An  $SAP$  means pentaquark—5 quarks. An  $SACC$ , you know, the content is  $c \bar{c}$  plus other 3. For the  $P_c^+$ , this is  $u d$ . Likely the  $P_c$  candidates that we see in this particular channel are of this type.
+<hr>
 
-Mass of the... okay, this was easy. Neglecting binding energy, you really get the mass of two particles that are called the threshold. The language that we use is saying that the state is... since the binding energy is small, the state sits at the threshold. So the hadronic threshold is there.
+### Mass and **binding energy**
 
-How much is the binding energy? Approximately like 10 MeV? 100 MeV? What's the scale? 10. Less than 10. More than 1. Yes. The mass of the  $\Sigma_c$  is 2.5 or so, the mass of the  $D$  is around 2 GeV. So the sum is 4.5 GeV. That's roughly where one would search for such formations.
+Roughly, the mass of the PCC bar is the sum of the masses of its constituents:
 
-Now, quantum numbers, spin algebra—my favorite exercise in this course. We have  $1/2$  and  $3/2$  constituents. Parity should be minus minus because we have s-wave. Exactly. Very good. So then it tells you that you expect two states. One of them with spin-parity one-half minus, another one with spin-parity three-halves minus.
+  $$M_{PCC} \approx m_{\Sigma_c} + m_{D^*}$$  
 
-They have a lower bound on lifetime. Where does the lower bound really come from? It is the binding of the two constituents. Any idea why this state would ever decay and how it would decay? When we talk about lifetime, the particle then decays. That's what happens with all the particles.
+That defines the **binding energy**:
 
-How does this particle decay? The energy of the system is conserved. Once you split it into two, the minimal energy that is in a system of two is their mass, like mass one plus mass two. This is already high energy. If they fly apart, its energy is even higher. So this is not allowed. Energy must be conserved. We sit in the rest frame of this particle, and all the energy you have is the mass of this particle. That's it.
+  $$B = m_{\Sigma_c} + m_{D^*} - M_X$$  
 
-Because the  $c$  and the  $\bar{c}$  charm quark travel via the electromagnetic process? So annihilation of these two quarks is possible. But this is a slow process. Since it's an electromagnetic interaction, the probability of this process is much smaller than the process that I would like you to come up with.
+Neglecting **binding energy**, the mass is simply the sum of the constituent masses, which defines the threshold. Since the **binding energy** is small, the state sits at the threshold.
 
-Why have  $c \bar{c}$ ? It will. Why do they have to annihilate electromagnetically? Can they annihilate via the strong interaction? I mean, like when he says that we take  $c \bar{c}$  and then, even if they have different color, they can produce... then you can create some other quarks. This is... it's actually suppressed for heavy particles. The heavier the particles, the smaller the chance for them to annihilate. So this is also strongly suppressed.
+<b>Q:</b> What is the scale of the **binding energy**? Approximately 10 MeV? 100 MeV? Less than 10? More than 1?
+<b>A:</b> Yes.
 
-No, no. The three gluons appear only for the color neutral objects. The three gluons we need to construct the color neutral object here are living in the color octet. It's not singular, so they don't. The strict vertex is a different suppression. No. So you just make the strange. Yeah. Right.
+The mass of  $\Sigma_c$  is about  $2.5$  GeV, and the mass of  $D^*$  is about  $2$  GeV, so the sum is about  $4.5$  GeV:
 
-So the big decay, that's what happens with this object. If we neglect inelastic channels, the decay of this particle that is going to happen is one of the  $c$  quarks transitions to  $s$  emitting the  $W$ . This is a big decay. Actually if the structure of the object is like that, we can even understand the probability of this decay to happen. Because what happens is... Oh, sorry. Big decay is one thing, but there is another transition.
+  $$M_{\text{threshold}} = m_{\Sigma_c} + m_{D^*} \approx 4.5\;\text{GeV}$$  
 
-Okay, big decay is what we discussed. So then one of these two objects decays since it decays weakly. This object will decay or this object would decay quickly. So we can compute the lifetime due to that. But there is another process. You see that this guy is not the lower, it's not the ground state.
+This is roughly where one would search for such formations.
 
-As I said, in the spectrum of the  $D$ , we combine quarks. So we have  $1$  and  $0$ . The lower one is called  $D$  and the upper one is called  $D^*$ . The  $T$  is  $D^*$  here is the  $D$ , here is energy. This transition is possible by emitting  $\pi^0$  or  $\pi$ . Actually the most likely decay channel of this is the radiative decay of the  $D$ . That's what happens lower bound of the lifetime. The width is smaller than the width of the  $D^*$ . So the time is bigger than the time of the  $D^*$ . That's a bound.
+<hr>
 
-Never mind. You combine two objects and the object lives as long. It would live an infinite amount if these two particles are stable. Like deuteron is made of proton and neutron, both proton and neutron. Proton is stable, neutron is not stable, but lives long. But deuteron is a stable particle. It happens because the neutron is so bound inside that it cannot decay.
+### Quantum Numbers — spin algebra, my favorite exercise
 
-What happens is that the binding mechanism suppresses the phase space of the decay and suppresses the lifetime of the particle. The  $D$  meson here would live longer than the  $D$  meson.  $D^*$  meson isolated. The width of the state is smaller than the width of the  $D^*$ . The lifetime  $\tau$  is one over the width. So the lifetime of this object is bigger than the lifetime of the  $D^*$ .
+The system is in an **s‑wave**, so **parity** is  $--$  (minus‑minus). We have a spin‑ $1/2$  $\Sigma_c $and a spin‑$ 1$  $D^*$ . Their composition gives two possible states:
 
-Will the  $\Sigma_c^*$  also survive or also be an atomic molecule? It just goes down an energy step instead of really falling apart. Let's try to understand what you ask. You say there is a cascade:  $\Sigma_c^*$  and now the  $\Sigma_c$  plus  $\pi^0$  this molecule. Does this exist? It does.
+  $$\frac12 \otimes 1 = \frac12 \oplus \frac32$$  
 
-My question was just: so this molecule just makes steps down one energy step? Can it do this? Yes. But it can also dissociate into  $\Sigma_c D \pi$  or  $\Sigma_c D \gamma$ , because the energy for this is a lot. In my project, I have a fixed binding energy because my toy model is fixed for the U turn. So it's actually this binding energy and the situation of the decays is actively discussed in the field, and at every conference you come, you see five talks roughly. That's a really hot subject.
+| State |  $J^P$  |
+|-------|-------|
+|  $1/2 \oplus 1$  →  $1/2$  |  $\frac12^-$  |
+|  $1/2 \oplus 1$  →  $3/2$  |  $\frac32^-$  |
 
-### **Question 2: Kinematics and Mandelstam Variables**
+Both have a lower bound on the lifetime.
 
-Let's move to other questions. Let's move to item number two. Understand? Plane is plane of invariants. For any reaction that has a blob, an open direction center on four legs going out,  $X$ ,  $A$ ,  $B$ ,  $C$ , you can define invariant variables that characterize the kinematics.
+<hr>
 
-The first variable is the mass of the  $A$  and  $B$  squared. So mass of the  $A$  and  $B$  computed as the square root of  $P_A + P_B$ . So  $s$  is the mass squared and square root of  $s$  will be the mass of the system of particle  $A$  and  $B$ . Then  $t$  is mass of the system where it has  $B$  and  $C$  particles. Then the  $u$  is the mass of the system that has  $A$  and  $C$ . Oh, mass squared. Sorry:
-  $$s = (p_A + p_B)^2, \quad t = (p_A - p_C)^2, \quad u = (p_A - p_D)^2$$   
+### Decay and Lifetime Bound
+
+Why would this state ever decay? I would love to say "no". Splitting it into two constituents requires at least the sum of their masses, which is already larger than the particle's mass. In the rest frame, all the energy is the particle's mass. If the constituents fly apart, the energy is even higher—that decay is forbidden by energy conservation.
+
+The charm and anti‑charm can annihilate electromagnetically, but that process has very low probability. Strong annihilation (if they have different colors) can produce other quarks, but that is also suppressed for heavy particles.
+
+If inelastic channels are neglected, the dominant decay is **weak decay**: one of the charm quarks transitions to a strange quark, emitting a  $W$ . Because the particle is a bound state of a  $\Sigma_c$  and a  $D^*$ , one of these constituents decays weakly. The lifetime can be computed from that process.
+
+However, there is another process: the  $D^*$  is not the ground state—it can decay to  $D$  by emitting a  $\pi^0$  or a  $\gamma$ . This gives a lower bound on the lifetime:
+
+  $$\Gamma_X < \Gamma_{D^*}$$  
+
+Since lifetime  $\tau = 1/\Gamma$ , we have  $\tau_X > \tau_{D^*}$ .
+
+Consider the deuteron: it is made of a proton and a neutron. The proton is stable; the neutron is not stable but lives long. The deuteron is stable because the neutron is so bound inside that it cannot decay. The binding mechanism suppresses the phase space for decay. Similarly, the  $D$  meson inside the molecule lives longer than an isolated  $D^*$  meson.
+
+<hr>
+
+### Cascade and Dissociation
+
+<b>Q:</b> Will the  $\Sigma_c D^*$  molecule survive by stepping down one energy level instead of falling apart?
+<b>A:</b> Yes, it can cascade down via one energy step. But it can also dissociate into  $\Sigma_c D \pi$  or  $\Sigma_c D \gamma$ , because the energy is available.
+
+The **binding energy** and decay situation are actively discussed in the field; at every conference you see about five talks. This is a hot subject.
+
+
+
+## Signs of Mandelstam Variables for Different Processes
+
+#### Plane of Invariants 
 
 
 
@@ -104,106 +127,138 @@ The first variable is the mass of the  $A$  and  $B$  squared. So mass of the  $
 
 
 
+For any 2→2 process (a central interaction vertex with four external legs  $X, A, B, C$ ), invariant variables characterize the kinematics.
 
-::: callout-important
-These are the **Mandelstam variables**. They are Lorentz-invariant quantities that fully describe the kinematics of a 2 → 2 scattering process  $A + B \to C + D$ .
+<b>Definition of Mandelstam variables:</b>
+
+  $$s = (p_A + p_B)^2,\qquad
+t = (p_B + p_C)^2,\qquad
+u = (p_C + p_A)^2$$  
+
+Here:
+
+-  $s$  is the mass squared of the system of  $A$  and  $B$ ;  $\sqrt{s}$  is the invariant mass.
+-  $t$  is the mass squared of the system of  $B$  and  $C$ .
+-  $u$  is the mass squared of the system of  $A$  and  $C$ .
+
+Two variables suffice to characterize the kinematics of a four‑point process (counting degrees of freedom). Any pair –  $s$  and  $t$ ,  $s$  and  $u$ , or  $t$  and  $u$  – can be used because the three invariants are related by mass constraints. The scattering amplitude depends on only two variables and is defined on the **plane of invariants**. Different domains on this plane describe different processes.
+
+<hr>
+
+### Sign analysis for processes  $a$ ,  $b$ ,  $d$ 
+
+The following table summarises the sign conditions (positive/negative) for the Mandelstam variables in each process.
+(For simplicity, “positive” means larger than the physical threshold; “negative” means unphysical.)
+
+| Process |  $s$  |  $t$  |  $u$  |
+|---------|------|------|------|
+|  $a$  (all particles incoming or outgoing) |  $s > (m_A+m_B)^2$  |  $t > (m_B+m_C)^2$  |  $u > (m_C+m_A)^2$  |
+|  $b$  (one particle crossed) |  $s < 0$  |  $t > 0$  |  $u < 0$  |
+|  $d$  (one particle crossed) |  $s < 0$  |  $t < 0$  |  $u > 0$  |
+
+<b>Example Socratic exchange:</b>
+
+<b>Q:</b> For process  $a$ , is  $s$  positive?
+<b>A:</b> Yes, because  $s$  is the mass squared of the real two‑particle system. It is well‑defined and at least  $(m_A+m_B)^2$ . The same applies to  $t$  and  $u$ .
+
+<b>Q:</b> Is that simply the sum of masses?
+<b>A:</b> No, it is the sum of four‑vectors, not the sum of masses. Since the particles have momentum in the rest frame, the energy of the system is larger than the sum of masses.
+
+<hr>
+
+#### Crossed‑channel interpretation
+
+For process  $b$ ,  $t$  is the physical mass of  $B$  and  $C$  (positive, above threshold), while  $s$  and  $u$  are combinations of particles on different sides of the diagram and become negative.
+Similarly, for process  $d$ ,  $u$  is positive, but  $s$  and  $t$  are negative.
+
+To describe crossed‑channel reactions with the same invariants, one modifies the definition by swapping momenta with a minus sign for particles that move to the other side of the diagram.
+
+
+::: callout-note
+The exact numerical thresholds depend on the specific masses of the particles, but for the purpose of placing processes on the plane of invariants, the sign of each variable is sufficient.
 :::
 
-It appears that what we figured out before is that two variables are enough to characterize kinematics of the four-legged process. It just comes from counting degrees of freedom. These two variables we have to pick could be either  $s$  and  $t$  or could be  $s$  and  $u$ , or it could be all three. But then on the plane they are connected since the sum of the three invariants is related to the masses:
-  $$s + t + u = m_A^2 + m_B^2 + m_C^2 + m_D^2$$  
-
-The matrix element or the scattering amplitude or transition amplitude depends on two variables only,  $s$  and  $t$  or  $s$  and  $u$  or any. This amplitude is defined as a function on the plane of invariants and the different domains on this plane describe different processes.
-
-Before making this step, let's only focus on kinematics of the process and try to see where  $A$ ,  $B$ ,  $C$ ,  $D$  are located. Any ideas? Number one and the way how I want to solve this is to check just the signs. I want to ask for every process: is  $s$  more or less than 0,  $t$  more or less than 0,  $u$  more or less than 0. By identifying what is the correct answer here, I should be able to place the kinematics.
-
-Let's do  $A$ . The question is, is the mass of these two particles physical? If it's physical, then it's more than zero. If it's unphysical, then it doesn't, you know, like most of the dynamics. You have to see exact masses of particles to see exactly where the range of the variables for these kinematics lies. But for the exercise right now, this should be sufficient.
-
-Okay,  $A$  is variable  $s$  positive. Why? Because we just simply sum masses of this? Not simply sum the masses. No, that's not what we do. It's sum of four-vectors. It's not equivalent of summing masses. True. But they are like real particles. So the mass of the system for these two real particles is well defined. This mass is at least the sum of masses. Since they have a momentum in the rest frame, the energy of the system is bigger than the sum of masses if they have. For the  $A$ , the answer is  $s$  more than zero. That's actually more than  $(m_A + m_B)^2$ .
-
-What about  $t$ ? Same logic. If you write drawing the momenta on the right side on this one. I had to say in which direction arrows are pointing out of the blob or inside of the blob. In this definition all of the particles  $A$ ,  $B$ ,  $C$  are pointing out of the blob and  $X$  points inside the blob and that defines the sign.
-
-The  $t$  is a regular variable, the same as  $s$ . It's a physical mass of two particles. It's also more than zero and more than even particle threshold,  $m_B + m_C$ , and then  $u$  more than zero. So the domain.  $s$  is bigger than the threshold. This is threshold, this is threshold  $(m_B + m_C)^2$ .  $u$  is also bigger than the threshold. The only domain that we have here is the allowed domain for the first kinematics.
-
-For  $B$ ,  $t$  is the physical mass of two particles, is again more than zero, more than threshold again. To discuss, to avoid redefining these variables I then discuss  $A$  and  $D$  particles. I swap  $p$  to  $r$ ,  $p$  to minus. I mean if you don't like that object and we can do it different, but I don't know is it.
-
-The point is to discuss kinematics of part of the reactions, so-called cross-channel reactions, using the same variables. For this scattering, one has to modify definition of the invariants by swapping momenta to minus momenta for particles that move to the other side.
-
-Two different directions and then the sum minuses would appear in the first place there. We could start with this direction. The place for this is when  $t$  is more than zero because  $t$  is the physical mass of two particles. Then  $s$  is under  $A$  and  $B$ . This is kind of an impossible combination. They are on different sides and the variable  $s$  is going to be less than zero and then  $u$  is less than zero.
-
-It's another impossible combination and the domain, roughly speaking, is where  $u$  is below zero. Then  $s$  is above,  $t$  is above zero. So  $t$  prime,  $t$ ,  $t$ . Here's  $t$ .  $t$  is this direction.  $s$  is above zero. This and  $u$  is above zero. This color has so here this is the minimum. This one is  $B$  and same on the  $C$ . Another one  $D$  where is  $D$ ?  $A$  plus  $C$ ,  $X$  plus  $B$ .  $A$  and  $C$  give us  $u$  channel. This is the positive.  $u$  is positive.
-
-Now to see real physical contours for the kinematics. One has to calculate what are the physical ranges of the scattering variables. Like if you work in the cosine of the scattering angle, by placing the restriction that cosine should be from minus one to one, you identify that the border—that not all points here are allowed, but only a certain region.
-
-The true border for the scattering is often given by this sixth-order polynomial. In the center is this canvas. This is our Dalitz plot. This is here. Another direction could be here. So 1, 2, 3, 4. Four regions for physical reactions that are happening. It's important to realize that connection because there's just a single amplitude, a matrix element, that describes all four.
-
-If you get this function and if you constrain it, I mean if you get precisely this function, it describes all four. Just define it on this domain and for every point you can compute, it gives you the complex number one plus three  $i$ . This is the value of the quantum transition amplitude. The amplitude itself you can compute at a different place. Now we have a complex transition amplitude for the decay. I think that's super cool.
-
-It works very well in QED. When you consider Compton scattering, photon electron going to photon electron. This is a Compton process. It's exactly the same matrix element that describes the electron positron annihilation to two photons. It's exactly the same process that describes two-photon production of an electron positron pair in quantum electrodynamics.
-
-In hadron physics it's a little bit more complicated. Since we don't have perturbation theory, we always model. What we are going to do when we describe the Dalitz plot, we model it as a sum of the resonances. Then you find that once you want to compute this function right here, the scattering amplitude, it blows up. It has infinities, so it has unphysical behavior.
-
-The reason is because we employ a finite range or a finite number of resonances and the physics is more complicated analytically. The fact that this amplitude is related to that domain tells you already that you have to put an infinite number of resonances. Like we saw the lines on the dispersion, these are all resonances. In order to relate this to that domain, you have to operate with infinite sums and then the infinite terms would compensate each other and then you have a reasonable amplitude.
-
-There has been an effort for now, 30 years, 50 years, to find such a set of functions that works everywhere nicely and is analytic and reasonable. What's most difficult is to come up with something that describes the data, because the data is described by Regge theory. You might have heard of Regge theory and this is one of the approaches. So you come up with a complex function that has all the nice properties; it works reasonably in the scattering domain and it works in the decay domain.
-
-However, of course, it lacks an exact understanding of the resonance properties. Like, it would put in resonances there that have zero width in Regge theory. One of the interesting developments is to implement resonances with widths.
-
-Okay, questions on Monday's timeline. One more thing. If you like playing with functions, there is a very simple expression that describes the contours of the physical domain. This is called the Källén function. I think it's worth giving. There is just one function. If you solve  $\Phi(s, t, u) = 0$ , you find this line, that line, that line and that line.
-
-Just one function, put it into a solver and for any given value of  $s$ . Let's fix  $s$ —where is our  $s$ ? Let's fix  $s$  to be minus, you know, 50. We're going to get two solutions. One of them, let's put  $s$  equal to plus 20. Then you have two solutions using this. So this function is really easy to type into code. This is the Källén function or Klein function. It's almost a complete polynomial but it misses more terms of this table.
-
-So it's  $x^2 + y^2 + z^2 - 2xy - 2yz - 2zx$ . This is called the Källén or challenge function. I think it's—correct me if it should be going a different direction. So challenge function or Källén function and that's it. Then the Kibble function is the challenge of three challenge functions where every  $\lambda_1$ ,  $\lambda_2$  and  $\lambda_3$  corresponds to a different channel.
-
-So  $\lambda_2$  is then for  $B$  it's  $\lambda(t, m_X^2, m_A^2)$ . Here is the—what's missing? Mass and  $t$ .  $\lambda_3$  is  $\lambda(u, m_X^2, m_B^2)$ . Yeah, that's it:  $\Phi(s, t, u) = \lambda(\lambda_1, \lambda_2, \lambda_3)$ .
 
 
-::: callout-tip
-The **Källén (or triangle) function** is defined as  $\lambda(x, y, z) = x^2 + y^2 + z^2 - 2xy - 2yz - 2zx$ . The **Kibble function**,  $\Phi(s, t, u) = \lambda(\lambda_1, \lambda_2, \lambda_3)$ , where each  $\lambda_i$  is a Källén function of different Mandelstam variables and masses, defines the physical boundaries of the Dalitz plot.
+## The Analytic Connection Between Scattering and Decay Amplitudes
+
+When calculating the real physical contours for kinematics, it is necessary to determine the physical ranges of the scattering variables. For the cosine of the scattering angle, the restriction  $-1\le\cos\theta\le1$  shows that only a certain region of the  $(s,t,u)$  space is allowed. The true boundary is often given by a sixth‑order polynomial; at the center lies the **Dalitz plot**.
+
+The Mandelstam variables are defined as: (see @fig-fg2) (see @fig-fg3)
+
+  $$s=(p_A+p_B)^2,\qquad t=(p_A-p_C)^2,\qquad u=(p_A-p_D)^2$$  
+
+There are four distinct physical regions where reactions can occur:
+
+| Region | Conditions |
+|--------|------------|
+| **a** |  $s>(m_A+m_B)^2,\; t>(m_B+m_C)^2,\; u>(m_C+m_A)^2$  |
+| **b** |  $s<0,\; t>0,\; u<0$  |
+| **c** |  $s<0,\; t<0,\; u<0$  |
+| **d** |  $s<0,\; t<0,\; u>0$  |
+
+
+::: callout-note
+A single amplitude matrix element describes **all four** reactions. If you obtain that function and constrain it properly, it gives the transition amplitude for every physical process in the domain. For a given point you compute a complex number (e.g.,  $1+3i$ ), which is the value of the quantum transition amplitude. The same matrix element, evaluated at different points, yields complex transition amplitudes for decays as well. I think that is super cool. Without an infinite number of resonances, the amplitude cannot be simultaneously analytic and consistent across all physical regions. This is the core difficulty in modelling hadronic processes.
 :::
 
-So then you come home, you go to Wolfram Alpha and say give me a contour plot. Then you form them and you find all this function and discussion on that in the Pikin and Calani book. Have we discussed this book? The best book on particle kinematics is written by two authors. This is the, if I got it right, see Byckling and Kajantie. The book is excellent. If you get a chance, get yourself this. You know everything about particle kinematics, particularly very peculiar properties of the Kibble function and the Chandrasekhar function, right?
+This unification works very well in QED. Consider Compton scattering:  $\gamma e^- \to \gamma e^-$ . This is a compound process. The same matrix element also describes  $e^+e^-$  annihilation into two photons and the two‑photon production of an  $e^+e^-$  pair.
 
-### **Unitarity and the Scattering Amplitude**
+<hr>
 
-So we are good to move to the topic of today and it's unitarity. Unitarity is a constraint on the scattering amplitude. In particle physics we don't compute from first principles the scattering amplitude, this amplitude, but rather we model it and our guiding principles are on what this amplitude can be and what it cannot be.
+In hadron physics the situation is more complicated. Because we use perturbation theory, we always model. When we describe the Dalitz plot we model it as a sum of resonances. If you try to compute the amplitude on the scattering domain, it **blows up** – it has infinities, i.e., unphysical behaviour. The reason is that we employ only a finite number of resonances, but the physics requires **analyticity**. The fact that the amplitude is defined on all four regions implies that an infinite number of resonances must be included. As seen from the lines in the Dalitz plot, these lines represent resonances. To relate the different domains, one must work with infinite sums; the infinite terms then compensate and give a reasonable result.
 
-You cannot just write up an arbitrary expression for this amplitude that fits the data. There are some principles and one of them is probability conservation. Probability conservation transforms into the mathematical statement on the amplitude that is known as unitarity. You might have seen earlier in the particle scattering course, of course, the optical theorem that relates the imaginary part to the total cross section, essentially telling that the imaginary part is equal to the total cross section.
-
-That's a consequence of unitarity, a consequence of the probability conservation. It's so important that this is a very powerful statement that we are going to derive hopefully today, that just this principle alone allows you already to get a decent low-energy scattering amplitude that describes all of the resonance phenomena. You see the bump in the spectrum due to the resonance. You know what expression you should take in order to describe this phenomenon.
-
-Moreover, since unitarity is about analytic properties of the amplitude, it tells you what the analytic structure of the amplitude is. In the last lecture we shortly discussed analytic functions and what singularities they might have like cuts, branch points. Unitarity also tells you what is the location of the singularities in the complex plane. That comes from the fact that we are going to deal with unitary functions. Our scattering amplitudes are real unitary functions, functions for which the imaginary part determines the locations of the cuts.
-
-Let's start discussing the scattering amplitude and partial waves. For the sake of time, let me state where we arrive. We'll arrive there first, and then the emphasis is on the derivation. We will derive the following three equations. The first, and all three are dealing with scattering amplitudes.
-
-The first one tells how unitarity acts on the full amplitude. So  $A$  is the scattering amplitude that describes a certain process. Unitarity tells you that  $A - A^*$  is equal to  $i$  times  $A^* A$  integrated over the phase space of the intermediate state:
-  $$T - T^\dagger = i \int d\Phi \, T^\dagger T$$  
+For 30 to 50 years there has been an effort to find a set of functions that works everywhere analytically and reasonably. The hardest part is describing the data, because data are described by **Regge theory**. In this approach one constructs a complex function with the required analytic properties that works in both scattering and decay domains. However, it lacks an exact description of resonance properties; for example, Regge theory predicts resonances with zero width. An important development is now to implement resonances with finite widths.
 
 
-::: callout-important
-This is the **general unitarity condition**. It is derived from the requirement that the S-matrix is unitary ( $\hat{S}\hat{S}^\dagger = \hat{I}$ ), where  $\hat{S} = \hat{I} + i \hat{T}$ .
-:::
 
-What is this diagrammatically? We are going to simplify this process for writing this. For the partial waves, and for the partial waves the variable  $A$  is a function of. So the amplitude  $A$  is a function of one variable. We're going to find that  $A - A^*$  is equal to this expression, where  $A^*$  is very similar to that. For the partial waves you can simplify the phase space and find the expression for that.
+## The Kibble Function and the Dalitz Plot Boundaries
 
-Essentially it tells you that amplitude minus its complex conjugate gives you the imaginary part, and the imaginary part of the amplitude is now equal to. Okay, let's now try to get these expressions and start with the scattering amplitude and the process, and we are going to deal with the 2-to-2 scattering elastic process.
+The contours of the physical domain are described by a single expression: the **Kibble function**  $\Phi(s,t,u)$ . Solving  $\Phi(s,t,u)=0$  gives the boundaries of the Dalitz plot. For any fixed  $s$  (e.g.,  $-50$  or  $+20$ ), a solver returns two solutions. (see @fig-fg3) This function is easy to code.
 
-On the board, I draw the first diagram where the blob just indicates some interaction—something happens with two particles. Below is the kinematic representation of the reactions in the center of mass frame—the center of momentum frame. In the center of momentum, lengths of the vectors are the same, so the center of momentum means total momentum is zero.
+The building block is the **Källén function** (also called the *Klein* or *Chalng function*):
+  $$\lambda(x,y,z) = x^2 + y^2 + z^2 - 2xy - 2yz - 2zx.$$  
+It is almost a complete polynomial but misses more terms of this table.
 
-Even if particles have different masses, their momenta are the same and they equal to the function of square root of the  $\lambda$  function of masses. So the  $p_1$  is equal to  $p_2$  is equal to  $\lambda^{1/2} / (2\sqrt{s})$ , and  $\lambda$  has  $s$  and the masses. After interactions, particles are the same, the masses are the same, breakup momentum is the same. The only thing that happens is the angle is changing.
+The Kibble function is formed from three Källén functions, each corresponding to a different channel:
+  $$\Phi(s,t,u) = \lambda(\lambda_1, \lambda_2, \lambda_3),$$  
+where
+  $$\lambda_1 = \lambda(s, m_C^2, m_B^2),\quad
+\lambda_2 = \lambda(t, m_X^2, m_A^2),\quad
+\lambda_3 = \lambda(u, m_X^2, m_B^2).$$  
 
-You might wonder where this whole beautiful physics is sitting. Where in my variables would I see different interactions that they put in? It appears the observable for these interactions is the distribution over this angle. We have discussed this already. Whatever happens inside has only one way to manifest itself in the way how the distribution over the angle looks like. Because for two-to-two everything is fixed, energy is fixed. Once you fix the energy, the only way to manifest itself will be the angle.
+| Channel | Källén argument | Masses involved |
+|---------|----------------|-----------------|
+|  $s$ -channel |  $\lambda_1 = \lambda(s, m_C^2, m_B^2)$  |  $m_C$ ,  $m_B$  |
+|  $t$ -channel |  $\lambda_2 = \lambda(t, m_X^2, m_A^2)$  |  $m_X$ ,  $m_A$  |
+|  $u$ -channel |  $\lambda_3 = \lambda(u, m_X^2, m_B^2)$  |  $m_X$ ,  $m_B$  |
 
-There are two variables on it: the energy of the system and the scattering angle, right? So  $p_1$ ,  $p_2$  is the state, is the two-particle state vector, and I'm, I also have mass, and I'm going to use the variable  $\theta$ . The only variable that I need is the scattering angle. The one here I'm going to drop, it indicates that the angle is for particle one.
+To explore the function, open Wolfram Alpha and ask for a contour plot. The full discussion of the Kibble function and its properties is found in the book by **Byckling and Kajantie** — the best reference on particle kinematics. (Have we discussed this book? The authors’ names are famously unspellable, but the book is excellent.) It covers the very peculiar properties of both the Kibble and Källén functions.
 
-I would like to define the amplitude. I would like to consider the contraction of the final state. I make that first:  $p_1'$ ,  $p_2'$ ;  $p_1$ ,  $p_2$  is that scattering amplitude is defined as the expectation value of two-particle states: initial state on the right and then the final state on the left. Conservation of energy and momentum comes with these four delta functions.
 
-Now in order to proceed, which is integrated, so this is the identity operator, or the projection operator. This phase space for 2-body is nothing but  $1 / (2\pi)^5 \cdot (\sqrt{s}/2) \, d\cos\theta \, d\phi / 2$ . What my state here is is the two particles back to back. I define the coordinate system as  $xyz$ . In that coordinate system I have a two-particle state with the angles  $\theta$  and  $\phi$  which are going back to back. The momentum of particle 1 I characterize by the angles  $\theta$  and  $\phi$ .
 
-That's why it actually makes sense to keep  $\theta$  and  $\phi$  here. I have the same state on the right and on the left. I integrate over all possible angles. The two-body phase space here just gives me all possible directions on the sphere. On the sphere for all possible combinations of angles for the  $4\pi$  solid angle.
+## Unitarity and Its Constraints on Scattering Amplitudes
 
-Now it's obvious. It's important to make sure that identity acts as an identity. You come, you act as an identity. You should get something like something similar from that you have normalization condition. What is that? I mean, you see this already. So I put it in. I have to. This is certainly not a function of the  $p_1$ ,  $p_2$ ,  $p_1'$ ,  $p_2'$ .  $1 /$ . The first phase space integral  $d^4$ , so probably  $d^3 / (2\pi)^3$ . That's the expression for this paper.  $2\pi$  over cube,  $2\pi$  over 2 and  $2\pi$  over 4 over here. So this should be identical.
+### Unitarity in Scattering Amplitudes
 
-Let's see if it works. We put it in. Now I have everything right. If I put this identity here, I get to integrate over  $p_1$ ,  $p_2$  and  $2\pi$ . 
+Unitarity is a constraint on scattering amplitudes. In high energy physics, the scattering amplitude is not computed from first principles; instead it is modeled, guided by principles of what the amplitude can and cannot be. You cannot simply write an arbitrary expression that fits the data. A key principle is **probability conservation**, which transforms into a mathematical statement on the amplitude known as **unitarity**.
+
+A consequence of unitarity is the **optical theorem**, which relates the imaginary part of the amplitude to the total cross section:
+
+  $$\operatorname{Im} A = \frac{1}{2} \sigma_{\text{tot}}.$$  
+
+This principle alone already gives a decent lineshape for a scattering amplitude that describes resonance phenomena — you see a bump in the spectrum due to probability conservation. Unitarity tells what expression to take to describe this phenomenon. For example, using the **K‑matrix** formalism or the **Breit–Wigner** form:
+
+  $$a = \frac{K}{1 - i K \mathcal{P}}, \qquad K \text{ real}
+\qquad\text{or}\qquad
+a = \frac{g^2}{m^2 - s - i g^2 \mathcal{P}}.$$  
+
+<hr>
+
+Unitarity also concerns the analytic properties of the amplitude: it determines the analytic structure, including the location of singularities such as cuts and branch points in the complex plane. Scattering amplitudes are real analytic functions, and unitarity fixes the positions of cuts from the imaginary part.
+
+<hr>
+#### Deriving the Unitarity Equations 
 
 
 
@@ -213,58 +268,143 @@ Let's see if it works. We put it in. Now I have everything right. If I put this 
 
 
 
- Of course, if you have one, we have a density. Now we can proceed with unitarity.
-
-This two-particle scattering amplitude is defined. Now unitarity comes. Shouldn't there also be from the unitarity the option that  $p_1'$  is  $p_2$ ? They are distinguishable particles for me, scalar particles distinguishable, different type to avoid cross terms. The probability is a statement on the full scattering operator that it's unitary, and part of the operator is the identity—the transition without interaction—and another one that.
-
-Well, by subtracting identity from the full scattering operator, we introduce our interaction operator, this  $T$ , and that's the operator that stands here that defines our scattering amplitude. When we deal with these amplitudes in field theory we always talk about the nontrivial part, something addition to this one. The easiest way to proceed with this. This is our unitary constraint.
-
-That's a critical statement that will constrain our partial waves, will constrain our scattering amplitude. But in order to see that we need to come from this condition to the condition for  $T$ , and then the condition for  $A$ . The way goes is that by putting  $T$ , so  $1 - 1 + i T$ ,  $1 - i T^\dagger$ . Let's see if  $i$  is on the right side. So minus plus here, plus minus here,  $i$  times  $i$  gives me plus. That's why plus here  $T T^\dagger$ , right? Then here is the  $i T$  multiplied to one and then minus  $i T^\dagger$  here.
-
-Once we multiply both parts by  $i$ , the minus appears here, this  $i$  disappears and we move to the other side. That's correct. The only thing that remains is to put the final state and we put now the  $T$  operator here to split it into  $A A^*$ . Let me first fill this part. For the sake of time.
-
-Right, so the way to proceed from here is to use this expression for the amplitude here and here. That's the product here. What to do with this is a bit more involved. We have to insert identity here and split it into intermediate states. Insert intermediate state, which is in our case just all possible orientations of the intermediate particles, and energy is fixed. Then we have to integrate over the momentum.
-
-What now happens here is that this gives us  $T$  and then  $(2\pi)^4$  delta function. This gives another  $T^\dagger$ ,  $T^*$ ,  $(2\pi)^4$  delta function. It's equal to  $i$ . This together is the delta function to the power 4 even in the phase space  $d\Phi_{\text{intermediate}}$ . Delta function for the energy momentum conservation is going to tell you that  $p_1' + p_2'$  should be equal to the  $p_{1,\text{int}} + p_{2,\text{int}}$ . That's the first.
-
-The second one is going to tell me that the  $p_1 + p_2$  is going to equal  $p_{1,\text{int}} + p_{2,\text{int}}$ . This, the first one connects initial state to final state. Second connects initial state to intermediate, intermediate to final. We can just pull out the one that connects intermediate, which one connects the initial to final. Then keep the one that just constrains the sum of the momentum for the two particles and get our phase space equal to the  $2\pi$  equals  $\delta(p_1 + p_2 - p_{1,\text{int}})$ , and then integral of the  $T^\dagger T d^4$ .
-
-Now we arrive to the first equation:  $T - T^\dagger = i \int T^\dagger T \, d\Phi$ . The most general form of this equation that does not have none of these constraints is going to be very similar to that. It's just you have to sum over all intermediate states and then integrate not over two-body phase space, but rather n-body phase space if there are n-body allowed.
-
-Diagrammatically, it says amplitude minus amplitude conjugated has to be sum over all intermediate states. Every time you have it, the means that you have to integrate over all possible configurations. That's what now. Instead of working, we simplify variables in terms of the momentum and the transferred energy squared and transferred momentum. We can change. We can use angle and this.
-
-Now a function of angle can be approximated by the partial waves. That's a very convenient series because it converges well, especially when for hadron physics. These amplitudes are. There are constraints on this amplitude that they cannot be present for the high  $J$ , so they cannot be large for high  $J$ . There is a natural suppression related to the size of hadrons. There are no, the contributions of the high values of the  $J$  are small.
-
-That's why often in experiment, in order to describe the data, you just need a few partial waves, two, three, sometimes six, but not more than ten. That's a very convenient approximation. It's not an approximation once you keep this sum to infinity. Once you. If you keep the sum to infinity, like in Regge theory, that's an exact relation between left and right.
 
 
-::: callout-tip
-The scattering amplitude is often expanded in **partial waves**:  $A(s, \theta) = \sum_{\ell=0}^\infty (2\ell + 1) a_\ell(s) P_\ell(\cos\theta)$ . This expansion simplifies the unitarity condition for each angular momentum component  $\ell$ .
-:::
+We will derive three equations, all dealing with scattering amplitudes. The first tells how unitarity acts on the **full amplitude**:
+
+  $$A - A^* = i \int d\Phi \, A^* A,$$  
+
+where  $\int d\Phi$  denotes integration over the phase space of intermediate states.
+
+For **partial waves**, the amplitude  $a$  is a function of a single variable. The two‑body phase space simplifies to
+
+  $$\mathcal{P} = \frac{1}{2} \cdot \frac{1}{8\pi} \cdot \frac{2p}{\sqrt{s}}.$$  
+
+Essentially,  $a - a^* = 2i \operatorname{Im} a$ , and unitarity gives
+
+  $$\operatorname{Im} a_l = |a_l|^2 \, \mathcal{P}.$$  
+
+<hr>
+#### Step‑by‑Step Derivation
+
+Consider a  $2\to 2$  elastic process. In the interaction diagram, a **blob** represents some interaction with two incoming and two outgoing particles.
+
+### Kinematics in the Center‑of‑Momentum Frame
+
+In this frame the total momentum is zero, so the lengths of the momentum vectors are equal. Even if particles have different masses, their momenta have the same magnitude: (see @fig-fg4)
+
+  $$p = |\vec{p}_1| = \frac{\sqrt{\lambda(s, m_1^2, m_2^2)}}{2\sqrt{s}},$$   (see @fig-fg2)
+
+where  $\lambda$  is the **Källén function**. For elastic scattering, the final particles are the same as the initial ones, so the masses and the break‑up momentum are the same. The only quantity that changes is the **scattering angle**.
+
+### The Observable: Angular Distribution
+
+The observable for the interaction is the angular distribution of the outgoing particles. Whatever happens inside the interaction manifests itself only through the angular distribution. For a  $2\to 2$  process at fixed energy, the only remaining variable is the scattering angle. Thus we have two variables: the energy of the system and the scattering angle. The two‑particle state is characterized by the momenta  $\vec{p}_1$  and  $\vec{p}_2$ ; we use the scattering angle  $\theta$ .
+
+### Definition of the Scattering Amplitude
+
+Define the scattering amplitude as the transition matrix element between initial and final two‑particle states:
+
+  $$\langle p_1' p_2' | T | p_1 p_2 \rangle .$$  
+
+Energy‑momentum conservation gives a factor  $(2\pi)^4 \delta^{(4)}(p_1+p_2 - p_1'-p_2')$ . We insert the **identity operator** as an integral over intermediate states. The two‑body phase space element is
+
+  $$d\Phi = \frac{1}{2} \cdot \frac{1}{8\pi} \cdot \frac{2p}{\sqrt{s}} \, d\cos\theta \, \frac{d\phi}{2\pi}.$$  
+
+### State Description
+
+The two‑particle state is defined with particles back‑to‑back. Choose a coordinate system with axes  $x$ ,  $y$ ,  $z$ . In this system the two‑particle state is described by angles  $\theta$  and  $\phi$ , and the momentum of particle 1 is characterized by those angles. The same state appears on both sides of the matrix element, and we integrate over all possible angles. The two‑body phase space integration covers all possible directions over the  $4\pi$  solid angle.
+
+### Verifying the Identity
+
+We must verify that the inserted identity operator acts as an identity. This follows from the normalization of states. Inserting the identity leads to an integration over intermediate momenta. Everything is now in place to derive unitarity.
+
+<hr>
+#### Summary of Key Formulas
+
+| Equation | Interpretation |
+|----------|----------------|
+|  $A - A^* = i \int d\Phi \, A^* A$  | Unitarity condition for the full amplitude |
+|  $\displaystyle \mathcal{P} = \frac{1}{2} \cdot \frac{1}{8\pi} \cdot \frac{2p}{\sqrt{s}}$  | Two‑body phase space factor |
+|  $\operatorname{Im} a_l = |a_l|^2 \, \mathcal{P}$  | Unitarity for partial waves, where  $a_l$  is the partial‑wave amplitude |
 
 
 
-## Partial Wave Amplitudes and Unitarity Constraints
+## Unitarity and Partial-Wave Expansion of the Scattering Amplitude
 
-Another thing that appears here is the **partial wave amplitude**. This amplitude is a function of a single variable. For every partial wave there is one function of one variable, and every partial wave has fixed quantum numbers.
+This is the two-particle **scattering amplitude**. It is defined by **unitarity**. (see @fig-fg4)
+<hr>
 
-A large advantage of partial waves is that they do not talk to each other. They don't influence each other. Every partial wave is independent. Since quantum numbers in scattering are conserved, partial waves in the initial state are only related to partial waves in the final state with the same quantum numbers.
+<b>Q:</b> Shouldn't there also be from **unitarity** the option that  $P_1' = P_2$ ?
+<b>A:</b> They are distinguishable scalar particles of different types to avoid cross terms.
 
-In the unitarity constraint, you will see that it's actually a single partial wave that relates to its output. There is no mixing of partial waves.
+<hr>
+<b>Unitarity</b> of the full scattering operator  $\hat{S}$  is the statement  $\hat{S}\hat{S}^\dagger = \hat{I}$ . The identity part of  $\hat{S}$  describes the transition without interaction. (see @fig-fg5) By subtracting the identity, we introduce the interaction operator  $\hat{T}$ :
 
-The way we can proceed is to insert the partial wave expansion here and then simplify the phase space. For this, you will need one magic formula, and I don't have time to derive it. It's present in many references, which I will send you.
+  $$\hat{S} = \hat{I} + i\hat{T}$$  
 
-But there is a really cool relation I would like you to see. When we insert the expansion, the initial state has an angle of zero. The final state depends on the scattering angle  $\theta$ .
+This operator  $\hat{T}$  defines the **scattering amplitude**. In field theory, when we deal with these amplitudes, we always refer to the non‑trivial part.
 
-For the final state, the Legendre polynomial  $P_J(\cos\theta)$  is a function of  $\theta$ . This is the same as the big Wigner  $d$  function  $d^J_{0,0}(\cos\theta)$ . We can write it differently. We know  $d^J_{0,0}$  is important, and it can be decomposed using the relation:
-  $$d^J_{0,0}(\cos\theta) = \sum_\lambda d^J_{0,\lambda} \, d^J_{\lambda,0}$$  
-This is a very powerful expression.
+From  $\hat{S}\hat{S}^\dagger = \hat{I}$  we derive the condition on  $\hat{T}$ :
 
-Here, the capital  $G$  function is defined such that when the indices are zero, it relates to  $d^J_{0,0}$ . What happens next is that you have to integrate over all possible intermediate states, and both amplitudes are expanded in partial waves. The way to do this is to expand the cosine between the first, second, and last states into a composition of intermediate states. These are exactly the functions we need to relate the full amplitude to the partial wave amplitude.
+  $$\hat{T} - \hat{T}^\dagger = i \hat{T}^\dagger \hat{T}$$  
 
-The expression we arrive at for the partial wave amplitude has expected numerical coefficients because it's essentially a base case. The next step is to divide the right part by... or multiply both parts by  $1 / a_J$ , so that term vanishes. Then we have  $1 / a_J^*$ , and a minus sign appears.
+This critical statement constrains the **partial waves** and the **scattering amplitude**.
 
-From this, we find the **imaginary part of the partial wave amplitude** is simply  $i \rho(s)$ . 
+To obtain a more practical form, we insert a complete set of intermediate states between  $\hat{T}^\dagger$  and  $\hat{T}$ . For two‑body initial and final states, the intermediate states are themselves two‑particle states. Inserting the identity and integrating over the four‑momentum yields, after imposing energy‑momentum conservation via delta functions, the **unitarity** relation:
+
+  $$T - T^\dagger = i \int T^\dagger T \, d\Phi$$  
+
+where  $d\Phi$  is the two‑body phase space element:
+
+  $$d\Phi = \frac{1}{8\pi} \frac{2p}{\sqrt{s}} \frac{d\cos\theta}{2} \frac{d\phi}{2\pi}$$  
+
+| Form of **unitarity** | Equation |
+|-------------------|----------|
+| Operator          |  $\hat{T} - \hat{T}^\dagger = i \hat{T}^\dagger \hat{T}$  |
+| Integral          |  $T - T^\dagger = i \int T^\dagger T \, d\Phi$  |
+| **Partial wave**      |  $a_j - a_j^* = i \frac{1}{8\pi} \frac{2p}{\sqrt{s}} a_j^* a_j$  |
+
+The most general form sums over all possible intermediate states (any number of particles  $n$ ) integrated over  $n$ ‑body phase space. Diagrammatically, the amplitude minus its conjugate equals a sum over all intermediate steps, with each loop corresponding to an integration over all configurations.
+
+We then simplify variables in terms of the center‑of‑mass energy  $s$  and the momentum transfer  $t$ , or equivalently the scattering angle  $\theta$ .
+
+<hr>
+
+The **scattering amplitude**  $A(s,t)$  can be expanded in **partial waves**:
+
+  $$A(s,t) = \sum_{j=0}^\infty (2j+1) a_j(s) P_j(\cos\theta)$$  
+
+This series converges rapidly, especially in low‑energy physics. There is a natural suppression of high **partial waves** due to the finite size of hadrons. In experiment, only a few **partial waves** (two to ten) are needed to describe data. If one keeps the entire sum to infinity, as in Regge theory, the expansion is exact.
+
+<hr>
+
+The **partial‑wave** amplitude  $a_j(s)$  is a function of a single variable  $s$  and carries fixed quantum numbers. A major advantage of **partial waves** is that they do not mix: conservation laws ensure that a **partial wave** in the initial state only connects to the same **partial wave** in the final state.
+
+In the **unitarity** constraint, each **partial wave** satisfies its own equation:
+
+  $$a_j - a_j^* = i \frac{1}{8\pi} \frac{2p}{\sqrt{s}} a_j^* a_j$$  
+
+which implies
+
+  $$\operatorname{Im} a_j = -|a_j|^2 \mathcal{P}$$  
+
+where  $\mathcal{P} = \frac{2p}{8\pi\sqrt{s}}$  is the phase space factor. Thus, different **partial waves** do not influence each other.
+
+
+
+## Partial Wave Expansion and the K-Matrix Approach to Resonances
+
+We insert the Legendre polynomial expansion into the partial-wave decomposition and use the  $d$ -function to rewrite the angular dependence. The initial state has scattering angle zero, so  $P_J(1) = 1$ ; the final state has angle  $\theta$ , and  $P_J(\cos\theta) = d^J_{00}(\theta)$ . This yields a cool and powerful expression.
+
+The amplitude expansion is
+
+  $$A(s,t) = \sum_{j=0}^\infty (2j+1)\, a_j(s)\, P_j(\cos\theta).$$  
+
+We integrate over the intermediate-state angles, and both amplitudes are expanded in partial waves. The result is the partial‑wave expansion; the numerical coefficients are the base case.
+
+<hr>
+### Unitarity and the imaginary part 
 
 
 
@@ -274,73 +414,42 @@ From this, we find the **imaginary part of the partial wave amplitude** is simpl
 
 
 
- This is amazing because it tells us exactly how the imaginary part of the **inverse amplitude** looks.
 
 
-::: callout-important
-The unitarity condition for a partial wave amplitude  $a_J(s)$  is:
-  $$\operatorname{Im} a_J(s) = \rho(s) \, |a_J(s)|^2$$  
-This leads directly to the inverse amplitude relation:
-  $$\frac{1}{a_J(s)} = \operatorname{Re} \left[ \frac{1}{a_J(s)} \right] - i \rho(s)$$  
-The imaginary part of the inverse amplitude is fixed by unitarity to be  $-\rho(s)$ .
-:::
+From the unitarity condition we obtain the relation
 
-Let's visualize this. Plot  $s$  on the horizontal axis and the imaginary part of  $a_J$  on the vertical axis. The phase space function  $\rho(s)$  starts from threshold with a square-root behavior,  $\sqrt{s - (M_1 + M_2)^2}$ , and approaches a constant  $1/(16\pi)$  at high  $s$ .
+  $$a_j - a_j^* = i \frac{1}{8\pi} \frac{2p}{\sqrt{s}} \, a_j^* a_j,$$  
 
-More precisely, the two-body phase space factor is:
-  $$\rho(s) = \frac{1}{16\pi} \frac{\lambda^{1/2}(s, m_1^2, m_2^2)}{s}$$  
-where  $\lambda(x, y, z) = x^2 + y^2 + z^2 - 2xy - 2xz - 2yz$ . This function goes to one at high  $s$ .
+which leads to
 
-Now for the last point: **modeling**. We know the imaginary part from unitarity, but we do not know the real part. The real part of the amplitude is genuine to the specific interaction—whether electromagnetic, strong, or gravitational. Any unitary interaction must have an imaginary part related to phase space, but the real part must be computed or modeled.
+  $$\operatorname{Im} a_j = -|a_j|^2 \mathcal{P}, \qquad \mathcal{P} = \frac{1}{8\pi} \frac{p}{\sqrt{s}}.$$  
 
-*   Theorists extract the real part by analyzing LHC data.
-*   Experimentalists extract it by analyzing hadronic data.
+The phase‑space factor  $\mathcal{P}$  behaves as follows:
 
-The simplest model writes the inverse amplitude as some real function plus the unitary imaginary part. One option for this real function is a simple pole. The amplitude computed assuming the real part is a single pole is called a **relativistic Breit-Wigner amplitude**:
-  $$a_J(s) = \frac{g}{M^2 - s - i g \rho(s)}$$  
+| Region | Behavior |
+|--------|----------|
+| Near threshold  $s \to (m_1+m_2)^2$  |  $\mathcal{P} \propto \sqrt{s-(m_1+m_2)^2}$  (square‑root onset) |
+| High energy  $s \to \infty$  |  $\mathcal{P} \to \dfrac{1}{16\pi}$  (constant) |
+| General expression |  $\mathcal{P} = \dfrac{1}{16\pi} \dfrac{\lambda^{1/2}}{s}$  with  $\lambda$  the Källén function |
 
-Modeling the amplitude in terms of such pole terms is often called the ** $K$ -matrix approach**, where:
-  $$a_J(s) = \frac{K(s)}{1 - i \rho(s) K(s)}$$  
-and  $K(s)$  is a real function, like  $K(s) = g / (M^2 - s)$ .
-Let me plot this unperturbed amplitude. On the vertical axis is the absolute value of  $A$ , and on the horizontal axis is  $s$ . The parameter  $M$  is the **bare mass** where the peak appears, and the coupling  $g$  determines how broad the peak is. This is the simplest resonance amplitude. 
+The imaginary part of the inverse amplitude takes the simple form
+
+  $$\frac{1}{a} = \frac{1}{K} - i\mathcal{P},$$  
+
+where  $K$  is a real function that encodes the interaction dynamics.
+
+<hr>
+
+### Modeling the real part: the K‑matrix and Breit‑Wigner
+
+<b>Single‑pole (Breit‑Wigner) model</b> 
 
 
 
 
 ![This figure shows the typical shape of the absolute value of the resonance scattering amplitude,  $|A|$ , as a function of the center-of-mass energy squared,  $s$ . The peak occurs near the "bare mass," marked as  $m^2$ , and the height of the peak is related to the coupling squared,  $g^2$ . This diagram represents a resonant phenomenon described by the relativistic Breit-Wigner amplitude, which is commonly used in particle physics to model resonance behavior. When two particles scatter, if the energy matches the resonance mass, the scattering probability rises sharply—this is visible as the large peak in the amplitude. Away from this energy, the amplitude is small, resulting in a characteristic bump. This behavior is a direct manifestation of creating an intermediate unstable particle (a resonance), and the width of the peak encodes the lifetime (inverse of the decay width) of that resonance. The plot thus visualizes how the unitarity constraint and resonance modeling describe experimental observations in particle collision experiments.](2024-Lecture-07-images/fig7.png){#fig-fg7}
 
-
-
-
-
-
-This describes a resonant phenomenon: particles collide, form an intermediate resonance for a short time, and then decay. In an experiment, you smash particles and count how often they scatter, tuning their collision energy. You would observe:
-
-*   A small interaction probability at most energies.
-*   A huge peak in the cross-section when the energy matches the resonance mass  $M$ .
-*   The probability dies out again at higher energies.
-
-This resonance phenomenon indicates something interesting inside the interaction: an intermediate particle that can be formed.
-
-
-
-## Two-Pole Structure and Unitarity in Scattering Amplitudes
-
-Now, from the two-particle K-matrix, we get two poles. The cross section has two peaks: the first corresponds to the first pole, and the second corresponds to the second pole, with a zero in between.
-
-This zero comes from the fact that the **K-matrix** vanishes. There is a typo to correct: it should be  $K^{-1}$  in the initial expression. The correct scattering amplitude is:
-  $$A = (K^{-1} - i)^{-1}$$  
-When  $K$  multiplies this expression, the entire amplitude is managed, producing two poles. The K-matrix itself has one singularity, which generates another set. To reach the second singular asymptotic behavior, the function must cross zero. Therefore,  $K$  vanishes between the poles, and this zero propagates into the squared amplitude, resulting in an exact zero on the real axis.
-
-Another key point is that the energy values of the peaks are not exactly the bare masses. They enter a complicated expression, so the peak occurs very close to, but not exactly at, the bare mass value. This is why the mass is called the **bare mass**; the process of inserting it into the amplitude **dresses** the bare particle mass via propagator screening.
-Let's examine the amplitude expression more closely:
-  $$A = (K^{-1} - i \rho)^{-1}$$  
-Expanding this in a Taylor series gives:
-  $$A = K + K(i\rho)K + K(i\rho)K(i\rho)K + \cdots$$  
-This infinite series provides a diagrammatic meaning:
-
-*    $\rho$  represents the **two-particle phase space** (the propagator).
-*    $K$  represents the **point-like elementary interaction**. 
+ 
 
 
 
@@ -352,22 +461,71 @@ This infinite series provides a diagrammatic meaning:
 
 
 
-The scattering amplitude is a complex function. We have discussed the magnitude (length) of this complex vector, but not its angle—the **scattering phase**. The argument of the scattering amplitude is this phase, and it has interesting behavior.
+The simplest choice for$ K$ is a single pole:
 
-In the complex plane, the amplitude traces a circle. Starting from threshold, it increases, reaches a maximum, then decreases back to zero before making a second, similar shape. The variable here is the imaginary part of$ A$ as a function of  $s$ . The maximum is approached around  $m_{1,0}^2$ . This plot is called an **Argand diagram**. A more convenient quantity to plot is often:
-  $$F = A \cdot \rho$$  
+  $$K = \frac{g^2}{m^2 - s},$$  
+
+which gives the relativistic Breit‑Wigner amplitude
+
+  $$a = \frac{g^2}{m^2 - s - i g^2 \mathcal{P}}.$$  
+
+The parameter  $m$  is the bare mass; the width is determined by  $g^2\mathcal{P}$ . This describes a resonance: two particles collide, form an intermediate state, then decay. The cross section peaks when the collision energy equals the resonance mass.
+
+<b>Two‑pole model</b>
+
+If we take two poles,
+
+  $$K = \frac{g_1^2}{m_1^2 - s} + \frac{g_2^2}{m_2^2 - s},$$  
+
+the amplitude  $a = \dfrac{K}{1 - iK\mathcal{P}}$  exhibits two peaks and a zero in between. The zero arises because  $K$  itself vanishes between the poles. The actual peak positions are not exactly  $m_1$  and  $m_2$  – those are bare masses that become dressed by the self‑energy.
+
+| Feature | Single‑pole | Two‑pole |
+|---------|-------------|----------|
+|  $K$  form |  $\dfrac{g^2}{m^2 - s}$  |  $\dfrac{g_1^2}{m_1^2 - s} + \dfrac{g_2^2}{m_2^2 - s}$  |
+| Amplitude |  $a = \dfrac{g^2}{m^2 - s - i g^2 \mathcal{P}}$  |  $a = \dfrac{K}{1 - iK\mathcal{P}}$  |
+| Cross‑section shape | One peak near  $s = m^2$  | Two peaks with a zero between |
+| Interpretations | Simple resonance | Two resonances;  $K$  vanishes → amplitude zero |
 
 
 ::: callout-note
-The **unitarity constraint**, from probability conservation, is a crucial tool for modeling amplitudes. It fixes the imaginary part of the amplitude, so we only need to model the real part. This real part represents the point-like interaction, which must be resummed to all orders.
+The Taylor expansion of  $a = K/(1 - iK\mathcal{P})$  yields
+  $$a = K + i K^2 \mathcal{P} - K^3 \mathcal{P}^2 + \cdots$$  
+Diagrammatically,  $K$  is the point‑like interaction and  $\mathcal{P}$  (or  $\rho$ ) is the two‑particle propagator – an infinite series of dressing loops.
 :::
 
-To summarize, unitarity provides a powerful constraint for modeling. The real part of the interaction can be modeled in several ways; one common technique is the **effective range expansion**.
+The real part of the amplitude must be computed or modeled (from lattice, experiment, or theory). Unitarity fixes the imaginary part in terms of phase space, but the real part is genuinely interaction‑dependent.
 
-You can parametrize the inverse K-matrix at low energy as:
-  $$K^{-1}(k) = a^{-1} + \frac{1}{2} r_s k^2 + \mathcal{O}(k^4)$$  
-This is called the **effective range approximation**, where:
 
-*    $a$  is the **scattering length**.
-*    $r_s$  is the **effective range**.
+
+## Unitarity and the Argand Diagram
+
+"""
+The vertex amplitude is a complex function. The magnitude of this complex amplitude has been discussed previously; what remains is the angle—the **scattering phase**, i.e., the argument of the scattering amplitude.
+
+This phase traces a circle in the complex plane. From threshold, the amplitude increases: it starts small, rises to its largest value, then decreases to zero, and then makes a second loop, where the imaginary part of  $A$  is shown. The behavior is a function of  $s$ , the squared center-of-mass energy. The maximal value is approached around  $(m_{1,0})^2$ . The second loop corresponds to another full circle. This plot is called an **Argand diagram**.
+
+As mentioned in the homework, an Argand diagram is a plot of the amplitude  $A$  or  $A$  times  $\rho$ , where  $\rho = \frac{p}{8\pi\sqrt{s}}$  is the phase space factor. Define  $F = A \rho$ , which is more convenient to plot in the complex plane.
+
+<hr>
+Unitarity of the  $S$ -matrix,  $S S^\dagger = I$ , leads to: (see @fig-fg5) (see @fig-fg6)
+
+  $$T - T^\dagger = i T^\dagger T$$  
+
+and imposes for partial-wave amplitudes: (see @fig-fg7) (see @fig-fg8)
+
+  $$\text{Im } a_j = \rho |a_j|^2, \quad \rho = \frac{p}{8\pi\sqrt{s}}$$  
+
+
+::: callout-important
+Amplitude unitarity is an important constraint from probability conservation, giving a tool to model the amplitude. It fixes the imaginary part, so only the real part needs to be modeled.
+:::
+
+The real part corresponds to a point-like interaction that must be resummed to all orders. Several modeling techniques exist:
+
+| Technique | Description | Example |
+|-----------|-------------|---------|
+| **K‑matrix formalism** | Unitarity is enforced by writing  $a = \frac{K}{1 - i K \rho}$ , with  $K$  real. | For a resonance,  $K = \frac{g^2}{m^2 - s}$ , giving  $a = \frac{g^2}{m^2 - s - i g^2 \rho}$ . |
+| **Polynomial (scattering length) approximation** | The real part is modeled as a low‑energy polynomial expansion. | — |
+
+<hr>
 
