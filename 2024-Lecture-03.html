@@ -131,8 +131,53 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#lecture-recording-and-isospin-review" id="toc-lecture-recording-and-isospin-review" class="nav-link active" data-scroll-target="#lecture-recording-and-isospin-review"><span class="header-section-number">1</span> Lecture Recording and Isospin Review</a></li>
-  <li><a href="#evidence-for-three-quarks-and-color" id="toc-evidence-for-three-quarks-and-color" class="nav-link" data-scroll-target="#evidence-for-three-quarks-and-color"><span class="header-section-number">2</span> Evidence for Three Quarks and Color</a></li>
+  <li><a href="#lecture-recording-with-whisper" id="toc-lecture-recording-with-whisper" class="nav-link active" data-scroll-target="#lecture-recording-with-whisper"><span class="header-section-number">1</span> Lecture Recording with Whisper</a></li>
+  <li><a href="#isospin-assignments-for-mesons-and-pentaquarks" id="toc-isospin-assignments-for-mesons-and-pentaquarks" class="nav-link" data-scroll-target="#isospin-assignments-for-mesons-and-pentaquarks"><span class="header-section-number">2</span> Isospin Assignments for Mesons and Pentaquarks</a>
+  <ul class="collapse">
+  <li><a href="#antiparticles" id="toc-antiparticles" class="nav-link" data-scroll-target="#antiparticles"><span class="header-section-number">2.1</span> Antiparticles</a></li>
+  <li><a href="#charge-calculations-for-the-cascade-b-doublet" id="toc-charge-calculations-for-the-cascade-b-doublet" class="nav-link" data-scroll-target="#charge-calculations-for-the-cascade-b-doublet"><span class="header-section-number">2.2</span> Charge calculations for the Cascade <span class="math inline">B</span> doublet</a></li>
+  </ul></li>
+  <li><a href="#constructing-isospin-states-for-three-quarks" id="toc-constructing-isospin-states-for-three-quarks" class="nav-link" data-scroll-target="#constructing-isospin-states-for-three-quarks"><span class="header-section-number">3</span> Constructing Isospin States for Three Quarks</a>
+  <ul class="collapse">
+  <li><a href="#isospin-of-delta-and-construction-of-delta" id="toc-isospin-of-delta-and-construction-of-delta" class="nav-link" data-scroll-target="#isospin-of-delta-and-construction-of-delta"><span class="header-section-number">3.1</span> Isospin of <span class="math inline">\Delta^{++}</span> and Construction of <span class="math inline">\Delta^{+}</span></a></li>
+  <li><a href="#lowering-operator-and-the-delta-state" id="toc-lowering-operator-and-the-delta-state" class="nav-link" data-scroll-target="#lowering-operator-and-the-delta-state"><span class="header-section-number">3.2</span> Lowering Operator and the <span class="math inline">\Delta^{+}</span> State</a></li>
+  <li><a href="#analogous-construction-for-spin" id="toc-analogous-construction-for-spin" class="nav-link" data-scroll-target="#analogous-construction-for-spin"><span class="header-section-number">3.3</span> Analogous Construction for Spin</a></li>
+  <li><a href="#dimensionality-of-the-threequark-isospin-space" id="toc-dimensionality-of-the-threequark-isospin-space" class="nav-link" data-scroll-target="#dimensionality-of-the-threequark-isospin-space"><span class="header-section-number">3.4</span> Dimensionality of the Three‑Quark Isospin Space</a></li>
+  </ul></li>
+  <li><a href="#isospin-decomposition-and-multiplet-construction" id="toc-isospin-decomposition-and-multiplet-construction" class="nav-link" data-scroll-target="#isospin-decomposition-and-multiplet-construction"><span class="header-section-number">4</span> Isospin Decomposition and Multiplet Construction</a></li>
+  <li><a href="#constructing-orthogonal-basis-states-via-spin-algebra" id="toc-constructing-orthogonal-basis-states-via-spin-algebra" class="nav-link" data-scroll-target="#constructing-orthogonal-basis-states-via-spin-algebra"><span class="header-section-number">5</span> Constructing Orthogonal Basis States via Spin Algebra</a>
+  <ul class="collapse">
+  <li><a href="#basis-states-and-orthogonal-combinations" id="toc-basis-states-and-orthogonal-combinations" class="nav-link" data-scroll-target="#basis-states-and-orthogonal-combinations"><span class="header-section-number">5.1</span> Basis States and Orthogonal Combinations</a></li>
+  <li><a href="#constructing-orthogonal-wavefunctions" id="toc-constructing-orthogonal-wavefunctions" class="nav-link" data-scroll-target="#constructing-orthogonal-wavefunctions"><span class="header-section-number">5.2</span> Constructing Orthogonal Wavefunctions</a></li>
+  <li><a href="#constructing-the-third-orthogonal-state-using-coordinate-vectors" id="toc-constructing-the-third-orthogonal-state-using-coordinate-vectors" class="nav-link" data-scroll-target="#constructing-the-third-orthogonal-state-using-coordinate-vectors"><span class="header-section-number">5.3</span> Constructing the Third Orthogonal State using Coordinate Vectors</a></li>
+  <li><a href="#obtaining-the-isospin--frac12-state" id="toc-obtaining-the-isospin--frac12-state" class="nav-link" data-scroll-target="#obtaining-the-isospin--frac12-state"><span class="header-section-number">5.4</span> Obtaining the Isospin <span class="math inline">-\frac{1}{2}</span> State</a></li>
+  <li><a href="#group-structure-and-block-decomposition" id="toc-group-structure-and-block-decomposition" class="nav-link" data-scroll-target="#group-structure-and-block-decomposition"><span class="header-section-number">5.5</span> Group Structure and Block Decomposition</a></li>
+  <li><a href="#spin-algebra-with-integer-spins" id="toc-spin-algebra-with-integer-spins" class="nav-link" data-scroll-target="#spin-algebra-with-integer-spins"><span class="header-section-number">5.6</span> Spin Algebra with Integer Spins</a></li>
+  <li><a href="#clebschgordan-coefficients" id="toc-clebschgordan-coefficients" class="nav-link" data-scroll-target="#clebschgordan-coefficients"><span class="header-section-number">5.7</span> Clebsch–Gordan Coefficients</a></li>
+  <li><a href="#practical-advice" id="toc-practical-advice" class="nav-link" data-scroll-target="#practical-advice"><span class="header-section-number">5.8</span> Practical Advice</a></li>
+  </ul></li>
+  <li><a href="#baryon-wave-function-symmetries-and-spin-isospin-structure" id="toc-baryon-wave-function-symmetries-and-spin-isospin-structure" class="nav-link" data-scroll-target="#baryon-wave-function-symmetries-and-spin-isospin-structure"><span class="header-section-number">6</span> Baryon Wave Function Symmetries and Spin-Isospin Structure</a>
+  <ul class="collapse">
+  <li><a href="#symmetries-of-the-baryon-wave-function" id="toc-symmetries-of-the-baryon-wave-function" class="nav-link" data-scroll-target="#symmetries-of-the-baryon-wave-function"><span class="header-section-number">6.1</span> Symmetries of the baryon wave function</a></li>
+  <li><a href="#factoring-out-color-and-space" id="toc-factoring-out-color-and-space" class="nav-link" data-scroll-target="#factoring-out-color-and-space"><span class="header-section-number">6.2</span> Factoring out color and space</a></li>
+  <li><a href="#spin-and-isospin-do-not-factorize" id="toc-spin-and-isospin-do-not-factorize" class="nav-link" data-scroll-target="#spin-and-isospin-do-not-factorize"><span class="header-section-number">6.3</span> Spin and isospin do not factorize</a></li>
+  <li><a href="#building-the-delta-states" id="toc-building-the-delta-states" class="nav-link" data-scroll-target="#building-the-delta-states"><span class="header-section-number">6.4</span> Building the delta states</a></li>
+  <li><a href="#the-proton-orthogonal-to-the-delta" id="toc-the-proton-orthogonal-to-the-delta" class="nav-link" data-scroll-target="#the-proton-orthogonal-to-the-delta"><span class="header-section-number">6.5</span> The proton: orthogonal to the delta</a></li>
+  </ul></li>
+  <li><a href="#permutation-symmetry-and-the-proton-wave-function" id="toc-permutation-symmetry-and-the-proton-wave-function" class="nav-link" data-scroll-target="#permutation-symmetry-and-the-proton-wave-function"><span class="header-section-number">7</span> Permutation Symmetry and the Proton Wave Function</a></li>
+  <li><a href="#probing-proton-structure-via-electron-scattering-and-form-factors" id="toc-probing-proton-structure-via-electron-scattering-and-form-factors" class="nav-link" data-scroll-target="#probing-proton-structure-via-electron-scattering-and-form-factors"><span class="header-section-number">8</span> Probing Proton Structure via Electron Scattering and Form Factors</a>
+  <ul class="collapse">
+  <li><a href="#elastic-vs.-inelastic-scattering" id="toc-elastic-vs.-inelastic-scattering" class="nav-link" data-scroll-target="#elastic-vs.-inelastic-scattering"><span class="header-section-number">8.1</span> Elastic vs.&nbsp;Inelastic Scattering</a></li>
+  <li><a href="#feynman-diagrams-and-matrix-element-structure" id="toc-feynman-diagrams-and-matrix-element-structure" class="nav-link" data-scroll-target="#feynman-diagrams-and-matrix-element-structure"><span class="header-section-number">8.2</span> Feynman Diagrams and Matrix Element Structure</a></li>
+  <li><a href="#form-factors-for-the-proton" id="toc-form-factors-for-the-proton" class="nav-link" data-scroll-target="#form-factors-for-the-proton"><span class="header-section-number">8.3</span> Form Factors for the Proton</a></li>
+  <li><a href="#the-magnetic-moment-as-evidence-for-structure" id="toc-the-magnetic-moment-as-evidence-for-structure" class="nav-link" data-scroll-target="#the-magnetic-moment-as-evidence-for-structure"><span class="header-section-number">8.4</span> The Magnetic Moment as Evidence for Structure</a></li>
+  </ul></li>
+  <li><a href="#the-protons-anomalous-magnetic-moment-from-quark-structure" id="toc-the-protons-anomalous-magnetic-moment-from-quark-structure" class="nav-link" data-scroll-target="#the-protons-anomalous-magnetic-moment-from-quark-structure"><span class="header-section-number">9</span> The Proton’s Anomalous Magnetic Moment from Quark Structure</a>
+  <ul class="collapse">
+  <li><a href="#quark-model-calculation" id="toc-quark-model-calculation" class="nav-link" data-scroll-target="#quark-model-calculation"><span class="header-section-number">9.1</span> Quark Model Calculation</a></li>
+  <li><a href="#comparison-with-neutron" id="toc-comparison-with-neutron" class="nav-link" data-scroll-target="#comparison-with-neutron"><span class="header-section-number">9.2</span> Comparison with Neutron</a></li>
+  <li><a href="#qa-how-do-we-know-there-are-three-quarks-inside" id="toc-qa-how-do-we-know-there-are-three-quarks-inside" class="nav-link" data-scroll-target="#qa-how-do-we-know-there-are-three-quarks-inside"><span class="header-section-number">9.3</span> Q&amp;A: How Do We Know There Are Three Quarks Inside?</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -166,119 +211,583 @@ window.Quarto = {
 
 <p><strong>Presenter</strong>: Mikhail Mikhasenko</p>
 <p><strong>Note Taker</strong>: Ilya Segal</p>
-<section id="lecture-recording-and-isospin-review" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="lecture-recording-and-isospin-review"><span class="header-section-number">1</span> Lecture Recording and Isospin Review</h2>
-<p>So my experiment with recording lectures has been relatively successful, so I could recover what I was saying. There is an open large language model from OpenAI that can translate audio to text called Whisper. Since the architecture is known, there is a C implementation that even runs parallel on Mac. You just download and execute it, and then you have a transcript of your speech.</p>
-<div class="callout callout-style-simple callout-note">
+<section id="lecture-recording-with-whisper" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="lecture-recording-with-whisper"><span class="header-section-number">1</span> Lecture Recording with Whisper</h2>
+<p><b>Recording Experiment</b></p>
+<p>My experiment with recording lectures has been relatively successful, and I could recover what I was speaking.</p>
+<p>There is an open large language model from OpenAI that can translate audio to text, called <strong>Whisper</strong>. Since the architecture is known, there is a <strong>C limitation</strong> that even runs parallel on Mac. You just download and execute, and then you have a transcript of your speech.</p>
+<div class="callout callout-style-simple callout-warning">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p>I record the lecture for myself, but it might be converted to a document. If someone would volunteer to type the questions and the equations there and check them, that would be helpful. But I don’t know what to do with that. Just for fun and for exploring the technologies, I will keep the recordings. It records only me in the sense that it’s mostly me who speaks, so don’t hesitate to talk back because this will not appear in the recordings anyway.</p>
+<p>The lecture is recorded. I do it for myself, but it might be converted to some document. But I don’t know what to do with that. Just for fun and for exploring the technologies, I will keep the recordings.</p>
 </div>
 </div>
 </div>
-<p>We will talk today about <strong>structure functions</strong>, the structure of hadrons, their internal composition, and how we know about them. But before going there I would like to start with a recap and have a few questions.</p>
-<p><strong>Question 1:</strong> Without looking at the PDG, just from the quark content, tell me the isospin of these particles. The quark content here is: <span class="math inline">c \bar{s}</span> , <span class="math inline">b \bar{q}</span> , <span class="math inline">b \bar{s}</span> , <span class="math inline">q \bar{q}</span> .</p>
-<p><strong>Question 2:</strong> What is the dimensionality of the isospin matrix that acts in a space of three quarks? If I treat the quarks as a wave function in two dimensions where spin up corresponds to the <span class="math inline">u</span> quark and spin down corresponds to the <span class="math inline">d</span> quark, what is the dimensionality of the matrix that acts in this space?</p>
-<p><strong>Question 3:</strong> What are the irreducible representations of this matrix acting on these quarks? Essentially, how does my matrix from the previous point split into independent blocks that don’t talk to each other?</p>
-<p>When we talk about isospin we talk about light quarks.</p>
+<p>It records only me in the sense that it is mostly me who speaks. Don’t hesitate to talk back, because this will not appear in the recordings anyway.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Aspect</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Audio-to-text model</td>
+<td><strong>Whisper</strong> (OpenAI, open source)</td>
+</tr>
+<tr class="even">
+<td>Running on Mac</td>
+<td>“C limitation” that runs in parallel</td>
+</tr>
+<tr class="odd">
+<td>Transcript generation</td>
+<td>Download and execute</td>
+</tr>
+<tr class="even">
+<td>Recording purpose</td>
+<td>Self-reference, fun, technology exploration</td>
+</tr>
+<tr class="odd">
+<td>Recorded voice</td>
+<td>Mostly professor only</td>
+</tr>
+<tr class="even">
+<td>Student participation</td>
+<td>Not captured</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="isospin-assignments-for-mesons-and-pentaquarks" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="isospin-assignments-for-mesons-and-pentaquarks"><span class="header-section-number">2</span> Isospin Assignments for Mesons and Pentaquarks</h2>
+<section id="isospin-assignments" class="level4" data-number="2.0.1">
+<h4 data-number="2.0.1" class="anchored" data-anchor-id="isospin-assignments"><span class="header-section-number">2.0.1</span> Isospin Assignments</h4>
+<p><b>Isospin</b> involves only the light quarks <span class="math inline">u</span> and <span class="math inline">d</span> . The strange quark is light but not included in isospin. Heavy quarks are often denoted with capital <span class="math inline">Q</span> , light quarks with <span class="math inline">q</span> or <span class="math inline">l</span> .</p>
+<p>A particle’s isospin depends on the number of light ( <span class="math inline">u,d</span> ) quarks:</p>
 <ul>
-<li>The first meson, <span class="math inline">c \bar{s}</span> , doesn’t have light quarks, so it has isospin <span class="math inline">I = 0</span> .</li>
-<li>The <span class="math inline">B</span> meson, <span class="math inline">b \bar{q}</span> , has one light quark and therefore we deal with <span class="math inline">I = \frac{1}{2}</span> . (Here, <span class="math inline">q</span> means a light quark. Often people use notations: capital <span class="math inline">Q</span> is a heavy quark, little <span class="math inline">q</span> or <span class="math inline">l</span> is a light quark.)</li>
-<li>The <span class="math inline">b \bar{s}</span> meson: if you talk about <span class="math inline">SU(3)</span> , it belongs to the light quarks. If you talk about isospin, <span class="math inline">s</span> is not included. So again, one light quark means isospin is <span class="math inline">\frac{1}{2}</span> .</li>
-<li>Next, <span class="math inline">P_c</span> , which is the pentaquark observed in <span class="math inline">J/\psi p</span> . If you speak generally about pentaquarks that have three light quarks, what is the isospin? That means it can have the same as the delta group. The three quarks are the same as the delta group. What is the isospin of <span class="math inline">\Delta</span> ? It is <span class="math inline">\frac{3}{2}</span> . It’s the length of the vector, not the projection.</li>
+<li><strong>0 light quarks</strong> → isospin <span class="math inline">0</span></li>
+<li><strong>1 light quark</strong> → isospin <span class="math inline">1/2</span></li>
+<li><strong>3 light quarks</strong> → isospin <span class="math inline">3/2</span> (like the <span class="math inline">\Delta</span> group) or also <span class="math inline">1/2</span> .</li>
 </ul>
-<p>When we assign isospin to a particle, we don’t yet speak about the charge. Different charge versions of the particle form a multiplet. When we say the <span class="math inline">B</span> meson has isospin <span class="math inline">\frac{1}{2}</span> , it implies there are two <span class="math inline">B</span> mesons: <span class="math inline">B^+</span> ( <span class="math inline">b \bar{u}</span> ) and <span class="math inline">B^0</span> ( <span class="math inline">b \bar{d}</span> ). For the antiparticle doublet, you fully conjugate: <span class="math inline">\bar{b} u</span> is <span class="math inline">B^-</span> and <span class="math inline">\bar{b} d</span> is <span class="math inline">\bar{B^0}</span> .</p>
-<p>Now, the cascade <span class="math inline">b</span> has isospin <span class="math inline">\frac{1}{2}</span> . The dimensionality is <span class="math inline">2I + 1 = 2</span> , so there are two particles of this type. The charges: <span class="math inline">u</span> quark has charge <span class="math inline">+\frac{2}{3}</span> , <span class="math inline">d</span> quark has charge <span class="math inline">-\frac{1}{3}</span> . When I combine three of the lower row like <span class="math inline">ddd</span> , I get charge <span class="math inline">-1</span> . If I combine three of the upper one like <span class="math inline">uuu</span> , I get charge <span class="math inline">+2</span> . For <span class="math inline">b \bar{s}</span> , the combination gives charge zero.</p>
-<p>Now we come to the last one which has three quarks, so there are several combinations. For isospin <span class="math inline">\frac{1}{2}</span> , the possibilities are <span class="math inline">P_c^+</span> and <span class="math inline">P_c^0</span> . For isospin <span class="math inline">\frac{3}{2}</span> , there are four particles in the multiplet, like for <span class="math inline">\Delta^{++}</span> .</p>
-<div class="callout callout-style-simple callout-important">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-body-container">
-<p>For a particle with isospin <span class="math inline">I</span> , the number of charge states is given by: <span class="math inline">\text{Number of states} = 2I + 1</span> . This arises from the quantization of isospin in analogy with angular momentum.</p>
-</div>
-</div>
-</div>
-<p>An interesting question: what is the antiparticle for the <span class="math inline">P_c^+</span> ? For baryons especially, it’s important to distinguish baryon to anti-baryon. They have a different quark component. You put a bar under the quarks.</p>
-<p>Let’s go to the irreducible representation of the three quarks. We already have essentially the dimensionality of the isospin matrix acting on three quarks. How do you get to the <span class="math inline">P_c^+</span> and <span class="math inline">P_c^0</span> with isospin? We only talk about <span class="math inline">SU(2)</span> . For <span class="math inline">SU(2)</span> there are no decuplets; decuplets and octets are for <span class="math inline">SU(3)</span> .</p>
-<p>If you’re mixing <span class="math inline">uud</span> , you can’t get <span class="math inline">I = \frac{3}{2}</span> because of the third component. There is the total isospin. The state <span class="math inline">uuu</span> has <span class="math inline">I_3 = +\frac{3}{2}</span> . We also get <span class="math inline">I_3 = -\frac{3}{2}</span> , <span class="math inline">I_3 = +\frac{1}{2}</span> , and <span class="math inline">I_3 = -\frac{1}{2}</span> . We also have <span class="math inline">uud</span> and <span class="math inline">ddu</span> . In order to construct these, we are going to act with a lowering operator on the combination.</p>
-<p>We expand. What we would like to do now is ask: what is the quark flavor wave function? To do that we need to construct the basis of the irreducible representations. The easiest way is to start with the state you know for sure, which is the maximum spin. For isospin, this is the <span class="math inline">I = \frac{3}{2}</span> state. I can talk about spin or flavor; the notation is equivalent.</p>
-<p>I would like to act with the isospin lowering operator <span class="math inline">I_-</span> . What comes here is <span class="math inline">\sqrt{j(j+1) - m(m-1)}</span> . Since <span class="math inline">j = m</span> here, it simplifies to <span class="math inline">\sqrt{2j}</span> . So, acting with <span class="math inline">I_-</span> on <span class="math inline">|u u u\rangle</span> gives a combination. This operator is a sum where these operators act only in the space indicated by the index. So I write <span class="math inline">I_- = I_-^{(1)} + I_-^{(2)} + I_-^{(3)}</span> .</p>
+<p>The table lists common examples:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 15%">
+<col style="width: 20%">
+<col style="width: 21%">
+<col style="width: 14%">
+<col style="width: 28%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Particle</th>
+<th>Composition</th>
+<th>Light quarks</th>
+<th>Isospin</th>
+<th>Charge multiplets</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">c\bar{s}</span> meson</td>
+<td><span class="math inline">c\bar{s}</span></td>
+<td>0</td>
+<td>0</td>
+<td>singlet</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">B</span> meson</td>
+<td><span class="math inline">b\bar{q}</span> ( <span class="math inline">q=u,d</span> )</td>
+<td>1</td>
+<td><span class="math inline">1/2</span></td>
+<td>doublet: <span class="math inline">B^0</span> ( <span class="math inline">\bar{b}d</span> ), <span class="math inline">B^+</span> ( <span class="math inline">\bar{b}u</span> )</td>
+</tr>
+<tr class="odd">
+<td>Cascade <span class="math inline">B</span> ( <span class="math inline">\Xi_b</span> )</td>
+<td><span class="math inline">b s u</span> (or <span class="math inline">b s d</span> )</td>
+<td>1</td>
+<td><span class="math inline">1/2</span></td>
+<td>doublet: charge 0 ( <span class="math inline">b s u</span> ), charge <span class="math inline">-1</span> ( <span class="math inline">b s d</span> )</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">P_c</span> pentaquark (observed in <span class="math inline">J/\psi p</span> )</td>
+<td>three light quarks</td>
+<td>3</td>
+<td><span class="math inline">3/2</span> (like <span class="math inline">\Delta</span> )</td>
+<td>for <span class="math inline">I=3/2</span> : four states ( <span class="math inline">P_c^{++},P_c^+,P_c^0,P_c^-</span> )</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">P_c</span> alternative</td>
+<td>three light quarks</td>
+<td>3</td>
+<td><span class="math inline">1/2</span></td>
+<td>doublet: <span class="math inline">P_c^+</span> , <span class="math inline">P_c^0</span></td>
+</tr>
+</tbody>
+</table>
 <div class="callout callout-style-simple callout-note">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p>For a state with total angular momentum <span class="math inline">j</span> and projection <span class="math inline">m</span> , the action of the lowering operator <span class="math inline">J_-</span> is: <span class="math display">J_- |j, m\rangle = \sqrt{j(j+1) - m(m-1)} \, |j, m-1\rangle</span><br>
-This is used to construct states with lower isospin or spin projections from the highest-weight state.</p>
+<p><strong>Notation:</strong> <span class="math inline">\bar{q}</span> refers to a light antiquark. Heavy quarks are often written as capital <span class="math inline">Q</span> (e.g., <span class="math inline">c</span> , <span class="math inline">b</span> ). If a particle has no light quark (like <span class="math inline">B_c</span> ), its isospin is <span class="math inline">0</span> .</p>
 </div>
 </div>
 </div>
-<p>To ensure we are dealing with a normalized state <span class="math inline">|\frac{3}{2}, \frac{1}{2}\rangle</span> , we calculate the product with itself. You use the fact that <span class="math inline">\langle u|d \rangle = 0</span> and <span class="math inline">\langle u|u \rangle = \langle d|d \rangle = 1</span> . Same flavor is normalized and different flavors are orthogonal.</p>
-<p>We’ve got that combination and we can follow by acting with more lowering operators. Essentially, that way you find the wave function. It is <span class="math inline">\frac{1}{\sqrt{6}}(2|uud\rangle + 2|udu\rangle + 2|duu\rangle - |uud\rangle' - ...)</span> . It’s super easy with the highest spin.</p>
-<p>Remember we discussed last time the spin of <span class="math inline">\frac{4}{2}</span> . That gave us the dimensionality <span class="math inline">2S + 1 = 5</span> . Imagine I want to build this from spin <span class="math inline">\frac{1}{2}</span> particles. How many spin <span class="math inline">\frac{1}{2}</span> particles do I need? Essentially, I have many legs. If I ask you to give me <span class="math inline">S = \frac{3}{2}</span> , you use the creation and apply the lowering operator many times. One can automate the process.</p>
-<p>It gets trickier when I ask for <span class="math inline">\frac{9}{2}</span> . Out of this combination I can have different spins. We agreed that simple spin algebra works. Essentially, when I combine many spin <span class="math inline">\frac{1}{2}</span> particles, possible combinations of the total spin have different multiplicities. The dimensionality of the matrix that acts on this space is <span class="math inline">2^n</span> , because each spin <span class="math inline">\frac{1}{2}</span> gives a two-dimensional representation. This <span class="math inline">2^n</span> is written as a tensor product.</p>
-<p>We use different notation that comes from <span class="math inline">\frac{1}{2} \otimes \frac{1}{2} \otimes ...</span> . Last time we saw this can be decomposed into irreducible representations as different combinations of spins. For a large <span class="math inline">n</span> , this is a huge number. But one of these numbers is the spin <span class="math inline">\frac{n}{2}</span> plus different spins. Constructing a specific state like <span class="math inline">|\frac{n}{2}, \frac{3}{2}\rangle</span> is more difficult.</p>
-<p>Let’s come back to reasonable numbers. I would like to continue with question number two: the dimensionality of the isospin matrix that acts on the space of three quarks. This is for the isospin group, the same as adding <span class="math inline">\frac{1}{2}</span> three times.</p>
-<p>Every quark brings a doublet. When we talk about dimensionality, we count the basis vectors in the representation. For every product space, there are two basis vectors. To count how many basis vectors I have in the tensor product, I multiply the number of basis vectors. In the space of three quarks there are <span class="math inline">2^3 = 8</span> basis functions. One of them is <span class="math inline">|u d u\rangle</span> . Another is <span class="math inline">|u u u\rangle</span> , a third is <span class="math inline">|d d u\rangle</span> , and so on.</p>
-<p>The dimensionality of the isospin matrix that acts on this space is 8, so we have an <span class="math inline">8 \times 8</span> matrix. But we can arrange these combinations so they transform under isospin rotations together without talking to other combinations. That’s called splitting into irreducible representations by grouping the basis functions into multiplets.</p>
-<p>To answer the last question, we do spin algebra: <span class="math inline">\frac{1}{2} \otimes \frac{1}{2} \otimes \frac{1}{2}</span> . We combine <span class="math inline">\frac{1}{2}</span> and <span class="math inline">\frac{1}{2}</span> , which gives <span class="math inline">0 \oplus 1</span> . Then we combine this result with another <span class="math inline">\frac{1}{2}</span> . We check the dimensionality: <span class="math inline">2 \times 2 \times 2 = 8</span> . The decomposition is <span class="math inline">\frac{3}{2} \oplus \frac{1}{2} \oplus \frac{1}{2}</span> , with dimensions <span class="math inline">4 + 2 + 2 = 8</span> . So our <span class="math inline">8 \times 8</span> matrix can be split into blocks of 2, 3, and 4 dimensions.</p>
+<hr>
+</section>
+<section id="antiparticles" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="antiparticles"><span class="header-section-number">2.1</span> Antiparticles</h3>
+<p>For antiparticles, the quark content is completely conjugated:</p>
+<ul>
+<li><span class="math inline">B^+</span> ( <span class="math inline">u\bar{b}</span> ) has antiparticle <span class="math inline">B^-</span> ( <span class="math inline">b\bar{u}</span> ).</li>
+<li><span class="math inline">B^0</span> ( <span class="math inline">d\bar{b}</span> ) has antiparticle <span class="math inline">\bar{B}^0</span> ( <span class="math inline">b\bar{d}</span> ).</li>
+</ul>
+<p>For the Cascade <span class="math inline">B</span> , the doublet members have antiparticles with opposite charges.</p>
+<p>The antiparticle of <span class="math inline">P_c^+</span> is <strong>not</strong> <span class="math inline">P_c^-</span> ; it is a different state with opposite quark content (antiquarks and baryon number <span class="math inline">-1</span> ).</p>
+<hr>
+</section>
+<section id="charge-calculations-for-the-cascade-b-doublet" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="charge-calculations-for-the-cascade-b-doublet"><span class="header-section-number">2.2</span> Charge calculations for the Cascade <span class="math inline">B</span> doublet</h3>
+<ul>
+<li>The combination <span class="math inline">b s u</span> : <span class="math inline">b</span> and <span class="math inline">s</span> each have charge <span class="math inline">-\frac13</span> , <span class="math inline">u</span> has <span class="math inline">+\frac23</span> → total charge <span class="math inline">0</span> .</li>
+<li>The other member <span class="math inline">b s d</span> : <span class="math inline">b</span> and <span class="math inline">s</span> $- <span class="math inline">,</span> d$ <span class="math inline">-\frac13</span> → total charge <span class="math inline">-1</span> .</li>
+</ul>
+</section>
+</section>
+<section id="constructing-isospin-states-for-three-quarks" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="constructing-isospin-states-for-three-quarks"><span class="header-section-number">3</span> Constructing Isospin States for Three Quarks</h2>
+<section id="isospin-of-delta-and-construction-of-delta" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="isospin-of-delta-and-construction-of-delta"><span class="header-section-number">3.1</span> Isospin of <span class="math inline">\Delta^{++}</span> and Construction of <span class="math inline">\Delta^{+}</span></h3>
+<p>The <span class="math inline">\Delta^{++}</span> has isospin <span class="math inline">I = \frac{3}{2}</span> ( <span class="math inline">I_{\Delta^{++}} = \frac{3}{2}</span> ). If you try to construct a <span class="math inline">|UUD\rangle</span> state, you cannot obtain <span class="math inline">I_3 = \frac{3}{2}</span> — that state necessarily has <span class="math inline">I_3 = \frac{1}{2}</span> . The states <span class="math inline">|UUD\rangle</span> and <span class="math inline">|DDU\rangle</span> also exist.</p>
+<hr>
+</section>
+<section id="lowering-operator-and-the-delta-state" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="lowering-operator-and-the-delta-state"><span class="header-section-number">3.2</span> Lowering Operator and the <span class="math inline">\Delta^{+}</span> State</h3>
+<p>To obtain the <span class="math inline">I_3 = \frac{1}{2}</span> state, we act with the lowering operator on the maximal isospin state. The derivation is correct. Our goal is the quark‑flavor basis function. We need to construct the basis of irreducible representations. The easiest way is to start with the state we know for sure: the maximum isospin, <span class="math inline">\frac{3}{2}</span> . (The notation is equivalent for spin and flavor.)</p>
+<p>Act with the lowering operator. The general formula is</p>
+<p><span class="math display">I_-|I,M\rangle = \sqrt{I(I+1)-M(M-1)}\,|I,M-1\rangle.</span></p>
+<p>For <span class="math inline">M=I</span> this becomes <span class="math inline">\sqrt{2I}</span> . Since <span class="math inline">I=\frac{3}{2}</span> , the factor is <span class="math inline">\sqrt{3}</span> .</p>
+<p>The lowering operator <span class="math inline">I_-</span> acts as a sum of operators on each quark: <span class="math inline">I_- = I_{1-}+I_{2-}+I_{3-}</span> . Applying it to <span class="math inline">|uuu\rangle</span> gives</p>
+<p><span class="math display">I_-|uuu\rangle = |duu\rangle + |udu\rangle + |uud\rangle.</span></p>
+<p>To obtain a normalized state we compute the inner product.</p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Same‑flavor states are orthonormal; different‑flavor states are orthogonal.</p>
+</div>
+</div>
+</div>
+<p>Therefore the normalization factor is <span class="math inline">1/\sqrt{3}</span> :</p>
+<p><span class="math display">|\Delta^+\rangle = \frac{1}{\sqrt{3}}\bigl(|uud\rangle + |udu\rangle + |duu\rangle\bigr).</span></p>
+<p>Applying further lowering operators yields the other isospin states ( <span class="math inline">\Delta^{0}</span> , <span class="math inline">\Delta^{-}</span> ).</p>
+<hr>
+</section>
+<section id="analogous-construction-for-spin" class="level3" data-number="3.3">
+<h3 data-number="3.3" class="anchored" data-anchor-id="analogous-construction-for-spin"><span class="header-section-number">3.3</span> Analogous Construction for Spin</h3>
+<p>Recall last time we discussed the case of total spin <span class="math inline">S=47</span> , which gives a representation of dimension <span class="math inline">95</span> . To build that from spin‑ <span class="math inline">\frac12</span> particles, you need <span class="math inline">94</span> such particles. The total Hilbert space of <span class="math inline">94</span> spin‑ <span class="math inline">\frac12</span> particles has dimension <span class="math inline">2^{94}</span> , which decomposes into irreducible representations of total spin from <span class="math inline">0</span> up to <span class="math inline">47</span> with various multiplicities. The same principle applies to isospin for three quarks.</p>
+<hr>
+</section>
+<section id="dimensionality-of-the-threequark-isospin-space" class="level3" data-number="3.4">
+<h3 data-number="3.4" class="anchored" data-anchor-id="dimensionality-of-the-threequark-isospin-space"><span class="header-section-number">3.4</span> Dimensionality of the Three‑Quark Isospin Space</h3>
+<p>Now let us return to the question of dimensionality. For three quarks, each quark carries an isospin doublet. The number of basis vectors in the tensor product space is <span class="math inline">2^3 = 8</span> . Explicitly, the basis states are</p>
+<ul>
+<li><span class="math inline">|uuu\rangle</span></li>
+<li><span class="math inline">|uud\rangle</span></li>
+<li><span class="math inline">|udu\rangle</span></li>
+<li><span class="math inline">|udd\rangle</span></li>
+<li><span class="math inline">|duu\rangle</span></li>
+<li><span class="math inline">|dud\rangle</span></li>
+<li><span class="math inline">|ddu\rangle</span></li>
+<li><span class="math inline">|ddd\rangle</span></li>
+</ul>
+</section>
+</section>
+<section id="isospin-decomposition-and-multiplet-construction" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="isospin-decomposition-and-multiplet-construction"><span class="header-section-number">4</span> Isospin Decomposition and Multiplet Construction</h2>
+<p>The dimensionality of the isospin matrix acting on this space is 8, giving an <span class="math inline">8 \times 8</span> matrix. These combinations can be arranged so that under isospin rotations they transform together without mixing—this is called <strong>splitting into irreducible representations</strong>, i.e., grouping the basis functions into <strong>multiplets</strong>.</p>
+<hr>
+<p>To answer the last question, we perform the spin algebra:</p>
+<p><span class="math display">\frac{1}{2} \otimes \frac{1}{2} = 1 \oplus 0</span></p>
+<p>and then</p>
+<p><span class="math display">\frac{1}{2} \otimes \frac{1}{2} \otimes \frac{1}{2} = \frac{1}{2} \oplus \frac{1}{2} \oplus 1 \oplus 0 .</span></p>
+<p>The product of dimensions is <span class="math inline">2 \times 2 \times 2 = 8</span> , and the sum of the dimensions of the irreducible representations is <span class="math inline">2 + 2 + 3 + 1 = 8</span> . Hence the <span class="math inline">8 \times 8</span> matrix can be split into blocks of dimensions:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Irreducible representation</th>
+<th>Dimension</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\frac12</span></td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\frac12</span></td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">1</span></td>
+<td>3</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">0</span></td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>This corresponds to the ESME (Explicit Symmetry Multiplet Expansion).</p>
+<hr>
+<p>It is clear how to construct the basis for the highest isospin: start with the state <span class="math inline">uuu</span> and then apply the lowering operator. But how do we construct the others?</p>
+</section>
+<section id="constructing-orthogonal-basis-states-via-spin-algebra" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="constructing-orthogonal-basis-states-via-spin-algebra"><span class="header-section-number">5</span> Constructing Orthogonal Basis States via Spin Algebra</h2>
+<section id="basis-states-and-orthogonal-combinations" class="level3" data-number="5.1">
+<h3 data-number="5.1" class="anchored" data-anchor-id="basis-states-and-orthogonal-combinations"><span class="header-section-number">5.1</span> Basis States and Orthogonal Combinations</h3>
+<p>The basis for the isospin-1/2 and isospin-3/2 representations is discussed. For the isospin-1/2 sector, we only have two basis states (e.g., the proton and neutron). The axis of isospin defines the projection.</p>
+<p>Baryon wavefunctions factorize as:</p>
+<p><span class="math display">\Psi = \Psi_{\text{color}} \otimes \sum_i \Psi_{\text{isospin}} \otimes \Psi_{\text{spin}}</span></p>
+<p>When combining the isospin of two quarks, we have:</p>
+<p><span class="math display">\frac{1}{2} \otimes \frac{1}{2} = 1 \oplus 0</span></p>
+<p>For three quarks, the decomposition is:</p>
+<p><span class="math display">\frac{1}{2} \otimes \frac{1}{2} \otimes \frac{1}{2} = \frac{1}{2} \oplus \frac{1}{2} \oplus 1 \oplus 0</span></p>
+<p>This accounts for the two distinct isospin-1/2 states in the baryon octet.</p>
+<hr>
+</section>
+<section id="constructing-orthogonal-wavefunctions" class="level3" data-number="5.2">
+<h3 data-number="5.2" class="anchored" data-anchor-id="constructing-orthogonal-wavefunctions"><span class="header-section-number">5.2</span> Constructing Orthogonal Wavefunctions</h3>
+<p>We need to build wavefunctions that are orthogonal to those already constructed. The available states with isospin projection <span class="math inline">+1/2</span> are linear combinations of the three-quark states <span class="math inline">|uud\rangle</span> , <span class="math inline">|udu\rangle</span> , and <span class="math inline">|duu\rangle</span> .</p>
+<p>Two orthogonal combinations (up to normalization) are:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 36%">
+<col style="width: 63%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>State</th>
+<th>Expression</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Symmetric (S)</td>
+<td><span class="math inline">\frac{1}{\sqrt{3}}( |uud\rangle + |udu\rangle + |duu\rangle )</span></td>
+</tr>
+<tr class="even">
+<td>Antisymmetric (A)</td>
+<td><span class="math inline">\frac{1}{\sqrt{2}}( |uud\rangle - |udu\rangle )</span></td>
+</tr>
+</tbody>
+</table>
+<p>These are obtained by taking the available states and subtracting one from the other.</p>
+<p>The scalar product of the symmetric and antisymmetric combinations is zero. To check this, multiply the two combinations:</p>
+<ul>
+<li>The first term contributes <span class="math inline">1</span> ,</li>
+<li>the second contributes <span class="math inline">1</span> ,</li>
+<li>the third contributes <span class="math inline">-2</span> , giving a total of <span class="math inline">0</span> .</li>
+</ul>
+<p>Normalization is computed by squaring the coefficients. Only terms with the same color content contribute, yielding contributions of <span class="math inline">1</span> , <span class="math inline">1</span> , and <span class="math inline">4</span> (which after taking the square root give the correct normalization factor).</p>
+<hr>
+</section>
+<section id="constructing-the-third-orthogonal-state-using-coordinate-vectors" class="level3" data-number="5.3">
+<h3 data-number="5.3" class="anchored" data-anchor-id="constructing-the-third-orthogonal-state-using-coordinate-vectors"><span class="header-section-number">5.3</span> Constructing the Third Orthogonal State using Coordinate Vectors</h3>
+<p>The lecturer then demonstrates a method using coordinate vectors to find an orthogonal combination. In the basis of three quark states (ordered as <span class="math inline">|uud\rangle</span> , <span class="math inline">|udu\rangle</span> , <span class="math inline">|duu\rangle</span> ), the symmetric combination corresponds to the vector <span class="math inline">(1,1,1)</span> . Another basis vector is <span class="math inline">(1,-1,0)</span> . The third orthogonal vector is then <span class="math inline">(1,-1,0)</span> ? Actually, the lecturer says: “I had (1,1,1). So this vector is (1,1,1). And the other one, orthogonal to both, is (1,-1,0).” Using this, the quark state for the orthogonal combination is <span class="math inline">u\,d\,u - u\,u\,d</span> (i.e., <span class="math inline">|udu\rangle - |uud\rangle</span> ). The lower (isospin <span class="math inline">-\frac{1}{2}</span> ) state is obtained by applying the lowering operator to this state, yielding the combination derived in the next subsection.</p>
+<hr>
+</section>
+<section id="obtaining-the-isospin--frac12-state" class="level3" data-number="5.4">
+<h3 data-number="5.4" class="anchored" data-anchor-id="obtaining-the-isospin--frac12-state"><span class="header-section-number">5.4</span> Obtaining the Isospin <span class="math inline">-\frac{1}{2}</span> State</h3>
+<p>To construct the basis function for <span class="math inline">| \frac{1}{2}, -\frac{1}{2} \rangle</span> , start from the upper (projection <span class="math inline">+\frac{1}{2}</span> ) state and apply the lowering operator. The result (up to normalization <span class="math inline">\frac{1}{\sqrt{6}}</span> ) is predominantly <span class="math inline">|udd\rangle</span> but includes other terms.</p>
+<p>The lowering operator acts on each quark:</p>
+<ul>
+<li>Acting on the first state yields <span class="math inline">|dud\rangle + |udd\rangle</span> .</li>
+<li>Acting on the second state yields <span class="math inline">|ddu\rangle + |udd\rangle</span> .</li>
+<li>Acting on <span class="math inline">d</span> quarks gives zero, so the third term vanishes.</li>
+</ul>
+<p>Combining, we obtain <span class="math inline">-2|ddu\rangle</span> , leading to the final combination:</p>
+<p><span class="math display">| \frac{1}{2}, -\frac{1}{2} \rangle \propto |ddu\rangle - 2|dud\rangle</span></p>
+<p>After normalizing and combining identical terms, the full wavefunction is obtained.</p>
+<hr>
+</section>
+<section id="group-structure-and-block-decomposition" class="level3" data-number="5.5">
+<h3 data-number="5.5" class="anchored" data-anchor-id="group-structure-and-block-decomposition"><span class="header-section-number">5.5</span> Group Structure and Block Decomposition</h3>
+<p>The eight baryon wavefunctions (the octet) form an 8-dimensional representation. An <span class="math inline">8\times 8</span> matrix acts on these states. This matrix decomposes into blocks:</p>
+<ul>
+<li>a <span class="math inline">4\times4</span> block,</li>
+<li>a <span class="math inline">2\times2</span> block,</li>
+<li>another <span class="math inline">4\times4</span> block,</li>
+<li>another <span class="math inline">2\times2</span> block.</li>
+</ul>
+<p>The states appear as a triplet ( <span class="math inline">3</span> ), a quintet ( <span class="math inline">5</span> ), and another singlet ( <span class="math inline">1</span> ). These numbers correspond to the dimensions of the irreducible representations when combining two spin-1 particles (see below).</p>
+<hr>
+</section>
+<section id="spin-algebra-with-integer-spins" class="level3" data-number="5.6">
+<h3 data-number="5.6" class="anchored" data-anchor-id="spin-algebra-with-integer-spins"><span class="header-section-number">5.6</span> Spin Algebra with Integer Spins</h3>
+<p>The same algebra applies to integer spins. When combining two spin-1 particles, the total spin ranges from <span class="math inline">0</span> to <span class="math inline">2</span> . The decomposition of the product representation is:</p>
+<p><span class="math display">3 \otimes 3 = 1 \oplus 3 \oplus 5</span></p>
+<p>(Here the numbers refer to the dimensions of the spin representations: singlet, triplet, and quintet.)</p>
+<p><b>Example basis states for two spin-1 particles:</b></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 30%">
+<col style="width: 13%">
+<col style="width: 55%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Total spin <span class="math inline">S</span></th>
+<th><span class="math inline">S_z</span></th>
+<th>Expression in product basis</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">2</span></td>
+<td><span class="math inline">+2</span></td>
+<td><span class="math inline">|1,1\rangle \otimes |1,1\rangle</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">2</span></td>
+<td><span class="math inline">+1</span></td>
+<td><span class="math inline">\frac{1}{\sqrt{2}}( |1,1\rangle\otimes|1,0\rangle + |1,0\rangle\otimes|1,1\rangle )</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">2</span></td>
+<td><span class="math inline">0</span></td>
+<td><span class="math inline">\frac{1}{\sqrt{6}}( |1,1\rangle\otimes|1,-1\rangle + 2|1,0\rangle\otimes|1,0\rangle + |1,-1\rangle\otimes|1,1\rangle )</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">1</span></td>
+<td><span class="math inline">+1</span></td>
+<td><span class="math inline">\frac{1}{\sqrt{2}}( |1,1\rangle\otimes|1,0\rangle - |1,0\rangle\otimes|1,1\rangle )</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">1</span></td>
+<td><span class="math inline">0</span></td>
+<td><span class="math inline">\frac{1}{\sqrt{2}}( |1,1\rangle\otimes|1,-1\rangle - |1,-1\rangle\otimes|1,1\rangle )</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">0</span></td>
+<td><span class="math inline">0</span></td>
+<td><span class="math inline">\frac{1}{\sqrt{3}}( |1,1\rangle\otimes|1,-1\rangle - |1,0\rangle\otimes|1,0\rangle + |1,-1\rangle\otimes|1,1\rangle )</span></td>
+</tr>
+</tbody>
+</table>
+<p>The highest-weight state (total spin <span class="math inline">2</span> , <span class="math inline">S_z=+2</span> ) is simple. Applying the lowering operator generates the other <span class="math inline">S=2</span> states.</p>
+<p>For total spin <span class="math inline">1</span> , one state is <span class="math inline">\frac{1}{\sqrt{2}}( |1,1\rangle\otimes|1,0\rangle - |1,0\rangle\otimes|1,1\rangle )</span> . A vector orthogonal to that, for total spin <span class="math inline">0</span> , is obtained by changing the sign between the terms.</p>
+<hr>
+</section>
+<section id="clebschgordan-coefficients" class="level3" data-number="5.7">
+<h3 data-number="5.7" class="anchored" data-anchor-id="clebschgordan-coefficients"><span class="header-section-number">5.7</span> Clebsch–Gordan Coefficients</h3>
+<div class="callout callout-style-simple callout-caution">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>When applying lowering operators to construct states, you must use the correct Clebsch–Gordan coefficients. These coefficients vary depending on the spin representations involved. For spin- <span class="math inline">1/2</span> systems, the factor is always <span class="math inline">\frac{1}{\sqrt{2}}</span> , but for higher spins the factors differ.</p>
+</div>
+</div>
+</div>
+<p>To cross-check with tables: the state for a given hypercharge <span class="math inline">Y</span> can be written as combinations of product states like <span class="math inline">|1,1\rangle\otimes|1,0\rangle</span> , <span class="math inline">|1,1\rangle\otimes|1,-1\rangle</span> , and <span class="math inline">|0,0\rangle</span> . The coefficients from the Clebsch–Gordan table are <span class="math inline">\frac{1}{\sqrt{2}}</span> for the appropriate combinations.</p>
+<hr>
+</section>
+<section id="practical-advice" class="level3" data-number="5.8">
+<h3 data-number="5.8" class="anchored" data-anchor-id="practical-advice"><span class="header-section-number">5.8</span> Practical Advice</h3>
+<p>Constructing flavor and spin wavefunctions reduces to practicing spin algebra. This material appears in quantum mechanics, particle physics, and group theory courses.</p>
+<ul>
+<li>SU(2) (spin) is a simple group; SU(3) (flavor) is more complicated, but the spin algebra for SU(2) underlies both.</li>
+<li>Dimensionalities and the rules for adding spins are essential.</li>
+<li>Clebsch–Gordan coefficients can be derived without a book simply by combining spins.</li>
+</ul>
+<p>I hope this helps you understand where the coefficients and wavefunctions come from.</p>
+</section>
+</section>
+<section id="baryon-wave-function-symmetries-and-spin-isospin-structure" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="baryon-wave-function-symmetries-and-spin-isospin-structure"><span class="header-section-number">6</span> Baryon Wave Function Symmetries and Spin-Isospin Structure</h2>
+<p>To proceed with structure functions, we need the proton wave function as the basis for understanding hadron internal structure. The homework also includes questions about the internal structure of the delta.</p>
+<section id="symmetries-of-the-baryon-wave-function" class="level3" data-number="6.1">
+<h3 data-number="6.1" class="anchored" data-anchor-id="symmetries-of-the-baryon-wave-function"><span class="header-section-number">6.1</span> Symmetries of the baryon wave function</h3>
+<p>We operate in four spaces: <strong>color</strong>, <strong>space</strong>, <strong>isospin</strong>, and <strong>spin</strong>. The baryon wave function has color indices and must be color-neutral (all hadrons are). The space wave function describes the distribution in <span class="math inline">x</span> and time <span class="math inline">t</span> . We also have isospin and spin.</p>
+<p>In general these spaces are not factorizable – you cannot simply take a product of functions. The wave function lives in the product of the four spaces and can mix them, so a sum of components is needed. It would be wrong to write isospin times the rest.</p>
+</section>
+<section id="factoring-out-color-and-space" class="level3" data-number="6.2">
+<h3 data-number="6.2" class="anchored" data-anchor-id="factoring-out-color-and-space"><span class="header-section-number">6.2</span> Factoring out color and space</h3>
+<p>The color wave function is a <strong>singlet</strong> (scalar, with no dimensionality of components). Therefore the color wave function can be factored out. A good argument exists that the space wave function is also scalar and can be factored out (take that as given; the lecturer has no better justification). With color and space factored out, the baryon wave function becomes:</p>
+<p><span class="math display">\Psi = \Psi_{\text{color}} \otimes \Psi_{\text{space}} \otimes \sum_i \Psi_{\text{isospin}} \otimes \Psi_{\text{spin}}.</span></p>
+</section>
+<section id="spin-and-isospin-do-not-factorize" class="level3" data-number="6.3">
+<h3 data-number="6.3" class="anchored" data-anchor-id="spin-and-isospin-do-not-factorize"><span class="header-section-number">6.3</span> Spin and isospin do not factorize</h3>
+<p>What remains is a large-dimensional representation where spin and isospin mix. For baryons with three quarks, each quark carries spin and flavor. Each quark state is a product of flavor and spin. The total wave function is a product of three quarks, so we work with a basis in <strong>six dimensions</strong>.</p>
 <div class="callout callout-style-simple callout-important">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p>The tensor product of three <span class="math inline">I = \frac{1}{2}</span> representations decomposes into irreducible representations of <span class="math inline">SU(2)</span> : <span class="math display">\frac{1}{2} \otimes \frac{1}{2} \otimes \frac{1}{2} = \frac{3}{2} \oplus \frac{1}{2} \oplus \frac{1}{2}</span><br>
-The dimensions satisfy: <span class="math inline">2 \times 2 \times 2 = 4 + 2 + 2 = 8</span> .</p>
+<p>The spin/isospin mixing is essential: the baryon wave function cannot be written as a single product of isospin times spin.</p>
 </div>
 </div>
 </div>
-<p>It’s super clear how to construct the basis for the highest isospin state. You start with <span class="math inline">|u u u\rangle</span> and act with lowering operators. But how to construct the others? I’ll follow this. The basis for <span class="math inline">I = \frac{3}{2}</span> has 4 states. For <span class="math inline">I = \frac{1}{2}</span> we’re going to have two states. The principle we use is simple: the vectors we build should be totally orthogonal to what we’ve built already.</p>
-<p>Looking at the available quark combinations with <span class="math inline">I_3 = \frac{1}{2}</span> , we can construct an orthogonal combination by putting different signs between them. For example, a combination like <span class="math inline">\frac{1}{\sqrt{2}}(|u u d\rangle - |u d u\rangle)</span> . You ensure normalization by calculating the scalar product. To construct the basis function for <span class="math inline">I = \frac{1}{2}, I_3 = -\frac{1}{2}</span> , take the upper one and act with a lowering operator.</p>
-<p>That way you find the wave function is <span class="math inline">\frac{1}{\sqrt{6}}(|u d d\rangle + |d u d\rangle - 2|d d u\rangle)</span> . Now that we figured out that out of our eight states, the <span class="math inline">8 \times 8</span> matrix acting on them splits into a block of four, a block of two, and another block of two.</p>
-<p>I look at my representation. I have two basis vectors and I need to construct the third one that is orthogonal to both. Essentially, if I have vectors <span class="math inline">(1,1,1)</span> and <span class="math inline">(1,-1,0)</span> , the one orthogonal to both is something like <span class="math inline">(1,1,-2)</span> . Therefore, the first one is <span class="math inline">|u d u\rangle - |u u d\rangle</span> . The lower one I get by applying the lowering operator. It’s typical spin algebra.</p>
-<p>With spins we have discussed, it works not only for half-integer spins but also for integer spins. When I combine two spins, I’m dealing with spin 1. Using spin algebra, what I can get ranges from lowest to highest. The lowest would be 0, the highest is 2. I check the dimensionality: <span class="math inline">3 \times 3 = 1 + 3 + 5 = 9</span> . I can start constructing the representation basis. I start with the easiest one, which is a vector.</p>
-<p>Again, the lowering operator gives four combinations. For total spin <span class="math inline">S = 2</span> , the state is symmetric. For <span class="math inline">S = 1</span> , I need a vector orthogonal to that. I just put a minus sign. Be careful when you do this for realistic examples or homework; you have to use Clebsch-Gordan coefficients when you lower operators. Clebsch might appear different here and there.</p>
-<p>For the basis, Clebsch are the same. It’s <span class="math inline">\frac{1}{\sqrt{2}}</span> always. These are typical ladder operators. You can check in the <span class="math inline">SU(3)</span> chapter. Let’s figure out this line. I want to construct two for my <span class="math inline">Y</span> and write this as combinations. You can look at the Clebsch-Gordan table and find these coefficients; they appear to be <span class="math inline">\frac{1}{\sqrt{2}}</span> .</p>
-<p>We are not done with writing the flavor and spin wave functions, but I would consider this. It’s just a matter of practicing spin algebra. This comes in many courses: quantum mechanics, particle physics, and group theory. For <span class="math inline">SU(2)</span> it’s simple spin algebra. You need to think about dimensionalities and how you add spin to each other, and know a few recipes to construct these coefficients.</p>
-<p>In order to proceed and talk about structure functions, we need the proton wave function, because that’s where the understanding of the internal structure of hadrons comes from. In the homework there will be other questions related to the delta internal structure. It is easier to start with the delta wave function.</p>
-<p>We start with the symmetries of the baryon wave function. We have to operate in four spaces: color, space, isospin, and spin. The baryon wave function has color indices and must be color neutral, as all hadrons are. We have a space wave function that describes distribution in <span class="math inline">x</span> and <span class="math inline">t</span> . We have to operate with isospin and spin.</p>
-<p>It is important to realize they are not simply factorizable in the general case. The wave function lives in the product of the four spaces and can mix them. You need a sum of components. The color wave function is a singlet, meaning it’s a scalar. Therefore, the color wave function can be factored out. There is a good argument why the space wave function is a scalar and can be factored out as well. I am not convinced myself, but one should find the argument in the literature.</p>
-<p>What remains is spin and isospin, and these two do not factorize. That’s a large dimensional representation. We deal with baryons with three quarks, and every quark has a spin. Every quark is the product of flavor and spin. It’s a product of three quarks, so we deal with a basis in six dimensions. It’s the same thing as before.</p>
-<p>To build the representation of particles in these six dimensions, we act with the lowering operator. Starting with something we know with no ambiguities: the delta, which has spin <span class="math inline">\frac{3}{2}</span> . When Delta has spin <span class="math inline">\frac{3}{2}</span> , the only combination is <span class="math inline">|u u u\rangle</span> . The <span class="math inline">\Delta^{++}</span> with <span class="math inline">J_z = +\frac{3}{2}</span> . <span class="math inline">\Delta^+</span> with <span class="math inline">J_z = +\frac{1}{2}</span> is obtained by acting with a lowering operator in the spin space. If we act with the lowering operator in the flavor space, we reduce the charge and obtain a different particle.</p>
-<p>We need to act twice with the lowering operator in flavor space and once in spin space to get <span class="math inline">\Delta^0</span> and <span class="math inline">\Delta^-</span> . The proton appears to be a wave function that is orthogonal. The decomposition is <span class="math inline">\frac{1}{2} \otimes \frac{1}{2} \otimes \frac{1}{2} = \frac{3}{2} \oplus \frac{1}{2} \oplus \frac{1}{2}</span> . This is 4 states plus 2 states plus 2 states. The proton is made of the same quarks as delta but has isospin <span class="math inline">\frac{1}{2}</span> and spin <span class="math inline">\frac{1}{2}</span> . Therefore, we need a wave function orthogonal in both spin and isospin spaces.</p>
-<p>We are not going to do that because it’s technically complicated. What we will do is explore symmetry. The baryon wave function must be totally antisymmetric under quark exchange. This is a new symmetry not related to <span class="math inline">SU(2)</span> directly. We now swap dimensions: take one particle with its spin and isospin and swap with another.</p>
-<p>We have a basis function we constructed, and we can examine them to see if they have certain permutation symmetry. For most, there is no symmetry; they are not eigenstates of permutation. Let’s see what we demand from the function. The total <span class="math inline">\Psi</span> must be antisymmetric under permutation: <span class="math inline">\Psi(1,2,3) = -\Psi(2,1,3)</span> .</p>
-<p>The color wave function is antisymmetric. To see this, you need to see how it looks. Color is transformed under <span class="math inline">SU(3)</span> . In three dimensions there are three colors. The representation of <span class="math inline">SU(3)</span> is more complicated. There are decuplets and octets from combining three quarks: <span class="math inline">\mathbf{3} \otimes \mathbf{3} \otimes \mathbf{3} = \mathbf{1} \oplus \mathbf{8} \oplus \mathbf{8} \oplus \mathbf{10}</span> . The dimensions match: <span class="math inline">27 = 1 + 8 + 8 + 10</span> .</p>
-<p>The singlet is <span class="math inline">\mathbf{1}</span> and its wave function can be constructed. It’s easiest to start with the highest weight state for the decuplet. For the components that have red, green, and blue, you need a totally antisymmetric combination: <span class="math inline">\frac{1}{\sqrt{6}}(|rgb\rangle + |gbr\rangle + |brg\rangle - |rbg\rangle - |grb\rangle - |bgr\rangle)</span> . All even permutations have a plus sign, odd permutations a minus sign. The color wave function is antisymmetric; swapping two gives a minus sign.</p>
-<p>The space wave function is symmetric for the ground state baryons. They are all in the simplest symmetric configuration. Therefore, the combined spin and isospin wave function must be symmetric.</p>
-<p>Let’s do an example. To construct a wave function for a proton, we combine isospin <span class="math inline">\frac{1}{2}</span> and spin <span class="math inline">\frac{1}{2}</span> . Let’s examine some basis functions. Is it symmetric under permutation? If I swap particles 1 and 2, the function changes; it doesn’t have a certain symmetry. However, it might be symmetric under permutation of quarks 2 and 3.</p>
-<p>We construct a spin wave function that has symmetry only on the permutation of 2 and 3. The proton wave function can be guessed by combining symmetric flavor with symmetric spin. But the total wave function must be antisymmetric under any two-particle exchange. If we use just one term, that would be illegal. The wave function goes into another function.</p>
-<p>When we combine three quarks, we get the spin <span class="math inline">\frac{3}{2}</span> representation and two spin <span class="math inline">\frac{1}{2}</span> representations. If I apply the permutation operator to the <span class="math inline">\frac{1}{2}</span> multiplet, it mixes with the other <span class="math inline">\frac{1}{2}</span> multiplet. The permutation operator is external to the rotation group. Therefore, to construct the proton, we need both of the two-dimensional multiplets.</p>
-<p>The delta lives in the <span class="math inline">\frac{3}{2}</span> multiplet. Applying a permutation stays within the same multiplet. But for the proton, it lives in a mixture of the two <span class="math inline">\frac{1}{2}</span> multiplets. One has to do the algebra to find the answer.</p>
-<p>The proton wave function is a combination. I memorize these components. The proton spin-up wave function is a combination of terms like <span class="math inline">|u u d\rangle</span> , <span class="math inline">|u d u\rangle</span> , <span class="math inline">|d u u\rangle</span> with different spin orientations. The coefficients in the basis come from ensuring overall symmetry. The normalization comes by summing the squares of coefficients: <span class="math inline">4 + 4 + 4 + 6 = 18</span> , so the normalization factor is <span class="math inline">\frac{1}{\sqrt{18}}</span> .</p>
-<div class="callout callout-style-simple callout-tip">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-body-container">
-<p>The proton wave function (spin-up, isospin-up) is a combination of quark spin-flavor states, ensuring overall symmetry under exchange when combined with antisymmetric color and symmetric spatial parts. For example: <span class="math display">|p \uparrow\rangle = \frac{1}{\sqrt{18}} \left[ 2|u\uparrow u\uparrow d\downarrow\rangle + 2|u\uparrow d\downarrow u\uparrow\rangle + 2|d\downarrow u\uparrow u\uparrow\rangle - |u\uparrow u\downarrow d\uparrow\rangle - |u\uparrow d\uparrow u\downarrow\rangle - |d\uparrow u\uparrow u\downarrow\rangle - |u\downarrow u\uparrow d\uparrow\rangle - |u\downarrow d\uparrow u\uparrow\rangle - |d\uparrow u\downarrow u\uparrow\rangle \right]</span><br>
-This reflects the mixed symmetry in spin and isospin spaces required by the Pauli exclusion principle.</p>
-</div>
-</div>
-</div>
-<p>We have the wave function of the proton. Now we can evaluate cool properties of the proton. That came as a surprise.</p>
-<p>Now, let’s discuss studies of structure. One way we experimentally probe structure is to use electron scattering. The simplest first question we can answer is: what is the charge distribution inside the hadron? That’s done with an electron probing the charge.</p>
-<p>When we scatter an electron off a hadron, almost all variables are fixed. The center-of-mass energy is fixed, and one variable remains: the scattering angle. Therefore, the experiment on structure functions is electron-proton scattering. We measure the angular distribution. From it, we get insights on the proton charge distribution and magnetic moment. That’s called a scattering experiment.</p>
-<p>It’s important to realize we write many variables, like <span class="math inline">Q^2</span> (momentum transfer squared), but it’s all related to one angle. You need the probability for the electron to scatter. The kinematics in the lab frame: the electron collides with the proton, and the electron goes to some direction. This is simple two-body kinematics. The only variable is the angle.</p>
-<p>What’s the probability for the electron to scatter with almost no change in direction compared to going perpendicular? Rutherford scattering gives a term like <span class="math inline">1/\sin^4(\theta/2)</span> , a huge peak at zero angle. Most of the time, the electron prefers to go straight.</p>
+</section>
+<section id="building-the-delta-states" class="level3" data-number="6.4">
+<h3 data-number="6.4" class="anchored" data-anchor-id="building-the-delta-states"><span class="header-section-number">6.4</span> Building the delta states</h3>
+<p>To construct particles in this six‑dimensional space, we act with lowering operators. Start from an unambiguous state: the <strong>delta</strong> with spin <span class="math inline">3/2</span> . The only combination for <span class="math inline">\Delta^{++}</span> is <span class="math inline">u\,u\,u</span> . The <span class="math inline">\Delta^{++}</span> state with <span class="math inline">J_z = 3/2</span> is <span class="math inline">u_R u_R u_R</span> .</p>
+<ul>
+<li>Acting with the spin lowering operator <span class="math inline">J_-</span> on <span class="math inline">u_R u_R u_R</span> reduces the spin projection.</li>
+<li>Acting with the <strong>flavor (isospin) lowering operator</strong> reduces the charge and gives a different particle.</li>
+</ul>
+<p>This yields <span class="math inline">\Delta^{+}</span> . Continuing, one constructs <span class="math inline">\Delta^{-}</span> and <span class="math inline">\Delta^{0}</span> with <span class="math inline">J_z = 1/2</span> by acting twice with the flavor lowering operator and once with the spin lowering operator.</p>
+</section>
+<section id="the-proton-orthogonal-to-the-delta" class="level3" data-number="6.5">
+<h3 data-number="6.5" class="anchored" data-anchor-id="the-proton-orthogonal-to-the-delta"><span class="header-section-number">6.5</span> The proton: orthogonal to the delta</h3>
+<p>The proton appears as a wave function orthogonal to the delta in both spin and isospin. The spin decomposition of three spin‑1/2 particles is:</p>
+<p><span class="math display">\frac{1}{2} \otimes \frac{1}{2} \otimes \frac{1}{2} = \frac{3}{2} \oplus \frac{1}{2} \oplus \frac{1}{2},</span></p>
+<p>with dimensions <span class="math inline">4</span> , <span class="math inline">2</span> , and <span class="math inline">2</span> . The proton has isospin <span class="math inline">1/2</span> and spin <span class="math inline">1/2</span> , so it belongs to one of the two <span class="math inline">1/2</span> representations.</p>
+<p>The explicit orthogonal combination (the proton state) is:</p>
+<p><span class="math display">|p\rangle = \frac{1}{\sqrt{2}} \left( |\tfrac{1}{2},\tfrac{1}{2}\rangle_{\text{spin}} \otimes |\tfrac{1}{2},\tfrac{1}{2}\rangle_{\text{isospin}} + |\tfrac{1}{2},-\tfrac{1}{2}\rangle_{\text{spin}} \otimes |\tfrac{1}{2},-\tfrac{1}{2}\rangle_{\text{isospin}} \right).</span></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 21%">
+<col style="width: 18%">
+<col style="width: 9%">
+<col style="width: 14%">
+<col style="width: 22%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Particle</th>
+<th>Quark content</th>
+<th>Isospin <span class="math inline">I</span></th>
+<th><span class="math inline">I_3</span></th>
+<th>Spin <span class="math inline">J</span></th>
+<th><span class="math inline">J_z</span> examples</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\Delta^{++}</span></td>
+<td><span class="math inline">uuu</span></td>
+<td><span class="math inline">3/2</span></td>
+<td><span class="math inline">+3/2</span></td>
+<td><span class="math inline">3/2</span></td>
+<td><span class="math inline">+3/2</span> , <span class="math inline">+1/2</span> , <span class="math inline">-1/2</span> , <span class="math inline">-3/2</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\Delta^{+}</span></td>
+<td><span class="math inline">uud</span></td>
+<td><span class="math inline">3/2</span></td>
+<td><span class="math inline">+1/2</span></td>
+<td><span class="math inline">3/2</span></td>
+<td><span class="math inline">+3/2</span> , <span class="math inline">+1/2</span> , <span class="math inline">-1/2</span> , <span class="math inline">-3/2</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\Delta^{0}</span></td>
+<td><span class="math inline">udd</span></td>
+<td><span class="math inline">3/2</span></td>
+<td><span class="math inline">-1/2</span></td>
+<td><span class="math inline">3/2</span></td>
+<td><span class="math inline">+3/2</span> , <span class="math inline">+1/2</span> , <span class="math inline">-1/2</span> , <span class="math inline">-3/2</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\Delta^{-}</span></td>
+<td><span class="math inline">ddd</span></td>
+<td><span class="math inline">3/2</span></td>
+<td><span class="math inline">-3/2</span></td>
+<td><span class="math inline">3/2</span></td>
+<td><span class="math inline">+3/2</span> , <span class="math inline">+1/2</span> , <span class="math inline">-1/2</span> , <span class="math inline">-3/2</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">p</span></td>
+<td><span class="math inline">uud</span></td>
+<td><span class="math inline">1/2</span></td>
+<td><span class="math inline">+1/2</span></td>
+<td><span class="math inline">1/2</span></td>
+<td><span class="math inline">+1/2</span> , <span class="math inline">-1/2</span></td>
+</tr>
+</tbody>
+</table>
+<p>Detailed calculation is straightforward but technically involved; spending a few hours would suffice to reproduce it.</p>
+</section>
+</section>
+<section id="permutation-symmetry-and-the-proton-wave-function" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="permutation-symmetry-and-the-proton-wave-function"><span class="header-section-number">7</span> Permutation Symmetry and the Proton Wave Function</h2>
+<p>We explore a new symmetry: <strong>permutation symmetry</strong>. This is unrelated to <span class="math inline">\mathrm{SU}(2)</span> and involves swapping entire particles (spin + isospin) between quarks – external to the previous symmetries.</p>
+<p>The total wave function must be antisymmetric under any two‑quark permutation: <span class="math display">\Psi_{123} = -\Psi_{213}.</span></p>
+<p>It factorizes as <span class="math display">\Psi = \Psi_{\text{color}} \otimes \sum_i \Psi_{\text{isospin}} \otimes \Psi_{\text{spin}},</span><br>
+with the color part required to be antisymmetric.</p>
+<hr>
+<section id="color-wave-function" class="level4" data-number="7.0.1">
+<h4 data-number="7.0.1" class="anchored" data-anchor-id="color-wave-function"><span class="header-section-number">7.0.1</span> Color wave function</h4>
+<p>Under rotations in 3‑dimensional color space, the representation theory is more complicated than spin algebra. The representation of three quarks in <span class="math inline">\mathrm{SU}(3)_{\text{color}}</span> decomposes as</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Representation</th>
+<th>Multiplicity</th>
+<th>Nature</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\mathbf{3} \otimes \mathbf{3} \otimes \mathbf{3}</span></td>
+<td>–</td>
+<td>27 states</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\mathbf{1}</span> (singlet)</td>
+<td>1</td>
+<td>Totally antisymmetric</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\mathbf{8}</span></td>
+<td>2</td>
+<td>Mixed symmetry</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\mathbf{10}</span></td>
+<td>1</td>
+<td>Totally symmetric</td>
+</tr>
+</tbody>
+</table>
+<p>The color singlet is the fully antisymmetric combination. It can be written as a sum over permutations with signs: even permutations contribute <span class="math inline">+</span> , odd permutations give <span class="math inline">-</span> .</p>
+<hr>
+</section>
+<section id="space-and-spinisospin-symmetry" class="level4" data-number="7.0.2">
+<h4 data-number="7.0.2" class="anchored" data-anchor-id="space-and-spinisospin-symmetry"><span class="header-section-number">7.0.2</span> Space and spin‑isospin symmetry</h4>
+<p>For ground‑state baryons, the spatial wave function is <strong>symmetric</strong> (simplest configuration). Therefore the combined spin‑plus‑isospin part must be <strong>symmetric</strong> to yield overall antisymmetry.</p>
+<p>When we examine basis functions for the proton (isospin <span class="math inline">1/2</span> , spin <span class="math inline">1/2</span> ), we find that a simple product does not have definite symmetry under all exchanges. For instance, swapping particles 1 and 2 changes the function; but the function is symmetric under swapping quarks 2 and 3. This violates the required antisymmetry.</p>
+<p><b>Q:</b> Does that mean it is not symmetric in the first two particles? Can we even use it? <b>A:</b> It tells us that using that function is illegal. It does <strong>not</strong> represent a valid baryon wave function.</p>
+<hr>
+</section>
+<section id="constructing-the-proton" class="level4" data-number="7.0.3">
+<h4 data-number="7.0.3" class="anchored" data-anchor-id="constructing-the-proton"><span class="header-section-number">7.0.3</span> Constructing the proton</h4>
+<p>Combining three quarks gives one spin‑ <span class="math inline">3/2</span> representation and two spin‑ <span class="math inline">1/2</span> representations. Under permutation, the two <span class="math inline">1/2</span> multiplets mix. One more comment on the same line: the <span class="math inline">\Delta</span> is a valid baryon. If I apply the permutation to this multiplet, I stay within the same multiplet. But for the proton, it lives in the mixture of these two.</p>
+<p>The correct proton wave function is a linear combination: <span class="math display">|p\rangle = \frac{1}{\sqrt{2}} \left( \bigl|\tfrac12,\tfrac12\bigr\rangle_{\text{spin}} \otimes \bigl|\tfrac12,\tfrac12\bigr\rangle_{\text{isospin}} + \bigl|\tfrac12,-\tfrac12\bigr\rangle_{\text{spin}} \otimes \bigl|\tfrac12,-\tfrac12\bigr\rangle_{\text{isospin}} \right).</span></p>
+<p>In matrix form (with basis states labeled by quark flavors and spin orientations): <span class="math display">|p\rangle_T = \frac{1}{\sqrt{8}} \begin{pmatrix}
+-2 &amp; -1 &amp; -1 \\
+-1 &amp; -1 &amp; 2
+\end{pmatrix}.</span></p>
+<p>Normalization check: <span class="math inline">4+1+1+1+1+4 = 12</span> , and the factor <span class="math inline">1/\sqrt{8}</span> already includes the correct normalization.</p>
+<p>We now have the proton wave function and can evaluate proton properties.</p>
+</section>
+</section>
+<section id="probing-proton-structure-via-electron-scattering-and-form-factors" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="probing-proton-structure-via-electron-scattering-and-form-factors"><span class="header-section-number">8</span> Probing Proton Structure via Electron Scattering and Form Factors</h2>
+<section id="structure-studies-via-scattering" class="level4" data-number="8.0.1">
+<h4 data-number="8.0.1" class="anchored" data-anchor-id="structure-studies-via-scattering"><span class="header-section-number">8.0.1</span> Structure Studies via Scattering</h4>
 <div id="fig-fg1" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-fg1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -289,23 +798,41 @@ Figure&nbsp;1: This figure illustrates the difference between <strong>elastic</s
 </figcaption>
 </figure>
 </div>
-<p>The deviation from that behavior tells us about structure. That process is elastic scattering, where initial and final particles are the same.</p>
-<p>In contrast, inelastic scattering is where the proton is dissociated. In elastic scattering, the proton stays intact. In inelastic scattering, the final state is many particles <span class="math inline">X</span> . The differential cross section for elastic scattering of point-like particles is <span class="math inline">d\sigma/d\Omega \propto 1/\sin^4(\theta/2)</span> . An example is electron-muon scattering.</p>
-<p>In QED, you calculate diagrams. The matrix element is <span class="math inline">\mathcal{M} = \bar{u}_3 \gamma^\mu u_1 \cdot (g_{\mu\nu}/Q^2) \cdot \bar{u}_4 \gamma^\nu u_2</span> . For this course, we analyze it generally. The matrix element is a scalar. It’s obtained by contracting different Lorentz structures. The spinor has four components, contracted by gamma matrices.</p>
-<p>This is point-like scattering. When we deal with the proton, we extend the vertex function with form factors. The dimensionality of this object is a simple function of <span class="math inline">Q^2</span> . It is convenient to introduce a combination: the electric form factor <span class="math inline">G_E(Q^2)</span> and magnetic form factor <span class="math inline">G_M(Q^2)</span> . They both are functions of <span class="math inline">Q^2</span> .</p>
-<p>In non-relativistic theory, there is a straightforward interpretation. Those factors show the charge distribution. <span class="math inline">Q</span> is momentum. There is a transformation: <span class="math inline">Q^2 = -q^2</span> , so <span class="math inline">q</span> is the three-momentum transfer. We can transform to coordinate space by Fourier transform. The charge density <span class="math inline">\rho(r)</span> is the Fourier transform of <span class="math inline">G_E(q^2)</span> : <span class="math inline">\rho(r) = \int \frac{d^3q}{(2\pi)^3} e^{i \vec{q} \cdot \vec{r}} G_E(q^2)</span> .</p>
-<div class="callout callout-style-simple callout-note">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-body-container">
-<p>The charge distribution <span class="math inline">\rho(r)</span> is obtained from the electric form factor via Fourier transform: <span class="math display">\rho(r) = \int \frac{d^3q}{(2\pi)^3} e^{i \vec{q} \cdot \vec{r}} G_E(q^2)</span><br>
-This relates the momentum-space form factor to the spatial charge density.</p>
-</div>
-</div>
-</div>
-<p>When I put <span class="math inline">q = 0</span> , the Fourier transform gives the normalization. So the normalization of the form factors is fixed: <span class="math inline">G_E(0) = 1</span> (the proton charge), and <span class="math inline">G_M(0) = \mu_p</span> (the magnetic moment).</p>
+<p>One method to study the internal structure of hadrons experimentally is to probe the <strong>charge distribution</strong> using an electron. When an electron scatters off a hadron, almost all variables are fixed. The center-of-mass energy is fixed, leaving only <strong>one angle</strong> that describes the entire kinematics. The scattering experiment measures the angular distribution, from which we infer the proton’s charge distribution and magnetic moment.</p>
+<p>The angular distribution is dominated by a strong forward peak. The cross section behaves as</p>
+<p><span class="math display">\frac{d\sigma}{d\Omega} \propto \frac{1}{Q^4},</span></p>
+<p>with the Rutherford scattering term <span class="math inline">1/\sin^4(\theta/2)</span> giving a huge peak at <span class="math inline">\theta = 0</span> . Most of the time the electron goes straight; <strong>deviations from this point-like behavior</strong> reveal information about the proton’s structure.</p>
+<hr>
+</section>
+<section id="elastic-vs.-inelastic-scattering" class="level3" data-number="8.1">
+<h3 data-number="8.1" class="anchored" data-anchor-id="elastic-vs.-inelastic-scattering"><span class="header-section-number">8.1</span> Elastic vs.&nbsp;Inelastic Scattering</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 38%">
+<col style="width: 61%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Process</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Elastic</strong></td>
+<td>Initial and final particles are the same (proton stays intact). The differential cross section peaks at zero angle.</td>
+</tr>
+<tr class="even">
+<td><strong>Inelastic</strong></td>
+<td>The proton dissociates into other particles.</td>
+</tr>
+</tbody>
+</table>
+<p>In elastic scattering, if both particles are point-like (e.g., electron–muon scattering), the cross section follows the ideal point‑like form.</p>
+<hr>
+</section>
+<section id="feynman-diagrams-and-matrix-element-structure" class="level3" data-number="8.2">
+<h3 data-number="8.2" class="anchored" data-anchor-id="feynman-diagrams-and-matrix-element-structure"><span class="header-section-number">8.2</span> Feynman Diagrams and Matrix Element Structure</h3>
 <div id="fig-fg2" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-fg2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -316,59 +843,119 @@ Figure&nbsp;2: This figure represents the basic Feynman diagram for <strong>elas
 </figcaption>
 </figure>
 </div>
-<p>The magnetic moment is a quantity that reacts in a magnetic field. It is proportional to the spin of the particle: <span class="math inline">\vec{\mu} = g \frac{e}{2m} \vec{S}</span> . For a point-like Dirac fermion, <span class="math inline">g = 2</span> . For the electron, the magnetic moment is <span class="math inline">\mu_e = \frac{e}{2m_e}</span> . The same for a muon.</p>
-<p>But for the proton, it’s not. The proton has spin <span class="math inline">\frac{1}{2}</span> , charge <span class="math inline">+e</span> , mass <span class="math inline">m_p</span> . That relation is completely different. There is a correction due to internal structure. The magnetic moment can be measured by analyzing <span class="math inline">G_M</span> at <span class="math inline">Q^2 = 0</span> . One finds it’s quite an amazing number: approximately 2.79, not 1. It’s a large correction.</p>
-<p>It comes from the quark model and is easy to see if you analyze the proton wave function. What could have gone wrong in our naive consideration? We know the proton is made of quarks. How will the equation be modified? Instead of the proton charge, we should use the charges of quarks ( <span class="math inline">+\frac{2}{3}e, -\frac{1}{3}e</span> ). Instead of the proton mass, we should use the masses of the quarks. The spin is the same.</p>
-<p>The answer is a combination. When we analyze the magnetic moment, we see internal structure. Therefore, what we put as charge and mass in the naive model is not correct. This number can be obtained by looking at the wave function.</p>
-<p>Let’s act with the magnetic moment operator on the proton. The operator for a baryon is the sum of quark contributions: <span class="math inline">\hat{\mu} = \sum_{i=1}^3 \frac{q_i}{2m_i} \vec{\sigma}_i</span> . Act on <span class="math inline">|u u d\rangle</span> . The <span class="math inline">u</span> quark has charge <span class="math inline">+\frac{2}{3}e</span> and mass <span class="math inline">m_u</span> , the <span class="math inline">d</span> quark has charge <span class="math inline">-\frac{1}{3}e</span> and mass <span class="math inline">m_d</span> .</p>
-<p>When you act with the <span class="math inline">\mu_z</span> operator, you get a number. Doing the algebra for the full proton wave function, you figure out that once you act this operator, you don’t get the proton wave function back. The proton is not an eigenstate of the individual quark magnetic moment operator. You have to take the expectation value.</p>
-<p>Let’s make it clear with the quark model. Assume <span class="math inline">m_u \approx m_d \approx 300 \text{ MeV}</span> , and <span class="math inline">m_p \approx 1 \text{ GeV}</span> . The calculation yields <span class="math inline">\mu_p = \frac{e}{2m_u} \cdot \frac{3}{2}</span> . Comparing to the naive expectation <span class="math inline">\mu_p^{\text{naive}} = \frac{e}{2m_p}</span> , we get a factor of <span class="math inline">\frac{m_p}{m_u} \approx 3</span> . So we’ve got a factor of about three.</p>
-<p>We can compare this result: part of it is three. Cool. We managed to understand the anomalous magnetic moment of the proton. But basically, this number is the ratio equal to mass of proton over mass of quark? It just turns out to be like this because for the neutron, the answer is approximately -1.91. So the anomalous magnetic moment for neutron is -1.91, for proton it’s +2.79. It’s not simply a ratio of masses; it’s an algebra of the charges and masses together.</p>
+<p>For a QED interaction, we calculate Feynman diagrams: the electron line, the photon propagator <span class="math inline">g_{\mu\nu}/Q^2</span> , and the baryon line <span class="math inline">\bar{u}_4 \gamma^\mu u_2</span> . The matrix element is a scalar — it has no dimensions. It is obtained by combining different structures. The spinors are Lorentz structures with four components, and they are contracted with gamma matrices to become a scalar. The index <span class="math inline">\mu</span> indicates the Lorentz index of the gamma matrix. There are four matrices here. It is important to arrive at a single number by contracting different structures. This is point-like scattering, as for the electron.</p>
+<p>When we deal with the proton, we extend the vertex function by introducing form factors.</p>
+</section>
+<section id="form-factors-for-the-proton" class="level3" data-number="8.3">
+<h3 data-number="8.3" class="anchored" data-anchor-id="form-factors-for-the-proton"><span class="header-section-number">8.3</span> Form Factors for the Proton</h3>
+<p>For a point‑like particle (like the electron) the vertex is simple. For the proton we introduce <strong>form factors</strong> <span class="math inline">F_1(Q^2)</span> and <span class="math inline">F_2(Q^2)</span> to describe its extended structure. Convenient combinations are</p>
+<p><span class="math display">G_M(Q^2) = F_1 + F_2, \qquad G_E(Q^2) = F_1 - \tau F_2, \quad \tau = \frac{Q^2}{4m^2}.</span></p>
+<p>Both <span class="math inline">G_E</span> and <span class="math inline">G_M</span> depend only on the momentum transfer <span class="math inline">Q^2</span> . In the non‑relativistic limit, their Fourier transforms give the charge and magnetic moment densities <span class="math inline">G_E(r)</span> and <span class="math inline">G_M(r)</span> . At zero momentum transfer the normalizations are fixed:</p>
+<p><span class="math display">G_E(0) = 1 \quad\text{(total charge)},\qquad G_M(0) = \mu \quad\text{(total magnetic moment)}.</span></p>
+<hr>
+</section>
+<section id="the-magnetic-moment-as-evidence-for-structure" class="level3" data-number="8.4">
+<h3 data-number="8.4" class="anchored" data-anchor-id="the-magnetic-moment-as-evidence-for-structure"><span class="header-section-number">8.4</span> The Magnetic Moment as Evidence for Structure</h3>
+<p>The magnetic moment of a particle is defined by its response to a magnetic field:</p>
+<p><span class="math display">\mu = \frac{e}{m} S,</span></p>
+<p>where <span class="math inline">S</span> is the spin. For a point‑like particle the ** <span class="math inline">g</span> -factor** equals 2. For the electron,</p>
+<p><span class="math display">\mu_e = \frac{e}{2 m_e},</span></p>
+<p>with <span class="math inline">g = 2</span> . The same relation holds for the muon. For the proton, however, the magnetic moment is <strong>completely different</strong> from that of a point‑like particle. This discrepancy is the simplest and most direct experimental sign that the proton is not point‑like.</p>
 <div class="callout callout-style-simple callout-important">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p>The magnetic moment operator for a baryon is the sum of the magnetic moments of its constituent quarks: <span class="math display">\hat{\mu} = \sum_{i=1}^3 \frac{q_i}{2m_i} \vec{\sigma}_i</span><br>
-For the proton, using <span class="math inline">m_u \approx m_d</span> , the magnetic moment is: <span class="math display">\mu_p = \frac{4}{3} \mu_u - \frac{1}{3} \mu_d = \frac{4}{3} \cdot \frac{2e}{3 \cdot 2m_u} - \frac{1}{3} \cdot \left(-\frac{e}{3 \cdot 2m_d}\right) = \frac{e}{2m_u} \cdot \frac{3}{2}</span><br>
-This yields <span class="math inline">\mu_p \approx 2.79 \, \mu_N</span> , where <span class="math inline">\mu_N = e/(2m_p)</span> is the nuclear magneton.</p>
+<p>The deviation of the proton’s magnetic moment from the point‑like value <span class="math inline">e/(2m_p)</span> (assuming <span class="math inline">g=2</span> ) provides the first clear evidence of internal structure.</p>
 </div>
 </div>
 </div>
-<p>I found it amazing. Essentially, what we showed today, just knowing <span class="math inline">SU(2)</span> and spin algebra, we can build the proton wave function. Using this function, we can figure out the magnetic moment—something that experimentally shows the proton is not a point-like particle. In the homework, we have an exercise for delta, which is relatively similar, as well as dealing with the magnetic moment operator for the delta particle.</p>
 </section>
-<section id="evidence-for-three-quarks-and-color" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="evidence-for-three-quarks-and-color"><span class="header-section-number">2</span> Evidence for Three Quarks and Color</h2>
-<p>Another interesting point is understanding that there are <strong>three parts inside a proton</strong>. This evidence comes from scattering experiments.</p>
-<p>From <strong>deep inelastic scattering</strong>, we observe the distribution of form factors. The cross section is described by structure functions <span class="math inline">F_1(x, Q^2)</span> and <span class="math inline">F_2(x, Q^2)</span> , which reveal the proton’s internal structure:</p>
-<p><span class="math display">\frac{d^2\sigma}{d\Omega\, dE'} = \frac{\alpha^2}{4E^2\sin^4(\theta/2)} \left[ \frac{F_2(x, Q^2)}{\nu} \cos^2(\theta/2) + \frac{2F_1(x, Q^2)}{M} \sin^2(\theta/2) \right]</span></p>
-<p>Here, <span class="math inline">\nu = E - E'</span> is the energy transfer, <span class="math inline">\theta</span> is the scattering angle, <span class="math inline">M</span> is the proton mass, and <span class="math inline">\alpha</span> is the fine-structure constant. The key observation was that <span class="math inline">F_2</span> scales with the <strong>Bjorken variable</strong> <span class="math inline">x = \frac{Q^2}{2M\nu}</span> , which provided direct evidence for <strong>point-like constituents</strong>—quarks.</p>
-<p>So, how do we arrive at <strong>three quarks</strong> in the proton? It’s not about three colors yet, but three quarks.</p>
-<p>The <strong>quark model magnetic moment of the proton</strong> can be calculated from three constituent quarks (two up and one down):</p>
-<p><span class="math display">\mu_p = \frac{4}{3}\mu_u - \frac{1}{3}\mu_d</span></p>
-<p>where <span class="math inline">\mu_u</span> and <span class="math inline">\mu_d</span> are the magnetic moments of the up and down quarks. Explicitly, this is approximately:</p>
-<p><span class="math display">\mu_\text{proton} \approx \frac{2}{3} \frac{2}{3 m_u} + \frac{1}{3} \frac{1}{3 m_d} + \frac{1}{3} \frac{1}{3 m_u}</span></p>
-<p>This magnetic moment calculation was an early piece of evidence for three quarks, though the exact historical observable might be debated.</p>
+</section>
+<section id="the-protons-anomalous-magnetic-moment-from-quark-structure" class="level2" data-number="9">
+<h2 data-number="9" class="anchored" data-anchor-id="the-protons-anomalous-magnetic-moment-from-quark-structure"><span class="header-section-number">9</span> The Proton’s Anomalous Magnetic Moment from Quark Structure</h2>
+<section id="proton-magnetic-moment-beyond-the-naive-expectation" class="level4" data-number="9.0.1">
+<h4 data-number="9.0.1" class="anchored" data-anchor-id="proton-magnetic-moment-beyond-the-naive-expectation"><span class="header-section-number">9.0.1</span> Proton Magnetic Moment: Beyond the Naive Expectation</h4>
+<p>The naive magnetic moment of the proton is <span class="math inline">\mu = \frac{e}{m_p} S</span> , with <span class="math inline">e</span> the proton charge and <span class="math inline">m_p</span> the proton mass. This would give <span class="math inline">g = 1</span> in the relation <span class="math inline">\vec{\mu}= g \frac{e}{2m_p} \vec{S}</span> . However, experiment—obtained by analyzing the magnetic form factor <span class="math inline">G_M(q^2)</span> at <span class="math inline">q^2=0</span> , where <span class="math inline">G_M(0)=\mu</span> —reveals a surprise: ** <span class="math inline">g \approx 3</span> **, not 1.</p>
+<p>The failure of the naive calculation points to internal structure. We now know the proton consists of quarks, so the correct magnetic moment operator must use the <strong>quark charges</strong> ( <span class="math inline">+\frac{2}{3}</span> for up, <span class="math inline">-\frac{1}{3}</span> for down) and <strong>quark masses</strong> instead of the proton’s overall charge and mass. The spin remains the same.</p>
+</section>
+<section id="quark-model-calculation" class="level3" data-number="9.1">
+<h3 data-number="9.1" class="anchored" data-anchor-id="quark-model-calculation"><span class="header-section-number">9.1</span> Quark Model Calculation</h3>
+<p>The magnetic moment operator for a quark <span class="math inline">q</span> is <span class="math display">\mu_q = \frac{e_q}{2 m_q},</span><br>
+where <span class="math inline">e_q</span> is the quark’s electric charge and <span class="math inline">m_q</span> its mass. (see <a href="#fig-fg2" class="quarto-xref">Figure&nbsp;2</a>) Applying this operator to the proton wave function—which mixes flavor and spin via Clebsch–Gordan coefficients—yields an expression for <span class="math inline">\mu_p</span> :</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 13%">
+<col style="width: 26%">
+<col style="width: 42%">
+<col style="width: 17%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Quark</th>
+<th>Charge <span class="math inline">e_q</span></th>
+<th>Mass <span class="math inline">m_q</span> (approx.)</th>
+<th><span class="math inline">\mu_q</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">u</span></td>
+<td><span class="math inline">+\frac{2}{3}</span></td>
+<td>300 MeV</td>
+<td><span class="math inline">\displaystyle \frac{1}{3 m_u}</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">d</span></td>
+<td><span class="math inline">-\frac{1}{3}</span></td>
+<td>300 MeV</td>
+<td><span class="math inline">\displaystyle -\frac{1}{6 m_d}</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">s</span></td>
+<td><span class="math inline">-\frac{1}{3}</span></td>
+<td>500 MeV</td>
+<td>(used for other baryons)</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">c</span></td>
+<td><span class="math inline">+\frac{2}{3}</span></td>
+<td>1.5 GeV</td>
+<td>(used for other baryons)</td>
+</tr>
+</tbody>
+</table>
+<p>Using the proton wave function (in spin⊗isospin space) and the operator <span class="math inline">\mu_q</span> , one finds <span class="math display">\mu_p = \frac{4}{3}\mu_u - \frac{1}{3}\mu_d .</span><br>
+Assuming <span class="math inline">m_u = m_d = m</span> , <span class="math display">\mu_p = \frac{4}{3}\cdot\frac{1}{3m} - \frac{1}{3}\cdot\left(-\frac{1}{6m}\right) = \frac{4}{9m} + \frac{1}{18m} = \frac{1}{2m}.</span><br>
+Since the proton mass <span class="math inline">m_p \approx 3m</span> , we have <span class="math inline">m \approx m_p/3</span> , giving <span class="math display">\mu_p = \frac{1}{2(m_p/3)} = \frac{3}{2 m_p}.</span><br>
+This is <strong>three times</strong> the naive value <span class="math inline">1/(2m_p)</span> , explaining the factor <span class="math inline">g\approx 3</span> .</p>
 <div class="callout callout-style-simple callout-note">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p>The <strong>Gell-Mann–Okubo mass formula</strong> from the <strong>Eightfold Way</strong> provided further evidence for quark organization. It relates the masses of hadrons within an SU(3) flavor multiplet: <span class="math display">M = M_0 + aY + b\left[ I(I+1) - \frac{1}{4}Y^2 \right]</span><br>
-where <span class="math inline">M_0</span> is a base mass, <span class="math inline">Y</span> is the hypercharge, and <span class="math inline">I</span> is the isospin. This successful classification of mesons and baryons into octets and decuplets suggested an underlying three-quark structure.</p>
+<p>The same operator acting on the proton wave function does <strong>not</strong> yield an eigenstate—the proton is not an eigenstate of the magnetic moment operator in the quark model.</p>
 </div>
 </div>
 </div>
-<p>Why does the model require exactly <strong>three quarks</strong>? This connects to the concept of <strong>color charge</strong>. The requirement for a totally <strong>antisymmetric baryon wavefunction</strong> under quark exchange forces the introduction of a new quantum number: color.</p>
-<p>The total wavefunction is a product:</p>
-<p><span class="math display">\Psi_{\text{total}} = \psi_{\text{space}} \otimes \psi_{\text{spin}} \otimes \psi_{\text{flavor}} \otimes \psi_{\text{color}}</span></p>
-<p>The color part <span class="math inline">\psi_{\text{color}}</span> must be the antisymmetric singlet state:</p>
-<p><span class="math display">\psi_{\text{color}} = \frac{1}{\sqrt{6}} \left( RGB - RBG + BRG - BGR + GBR - GRB \right)</span></p>
-<p>This ensures the total wavefunction obeys <span class="math inline">\Psi_{123} = -\Psi_{213}</span> under particle permutation, satisfying the Pauli exclusion principle for identical quarks. So, the need for three colors arose from spectroscopy and symmetry, not directly from the early scattering experiments, which at the time were not precise enough to reveal color.</p>
+</section>
+<section id="comparison-with-neutron" class="level3" data-number="9.2">
+<h3 data-number="9.2" class="anchored" data-anchor-id="comparison-with-neutron"><span class="header-section-number">9.2</span> Comparison with Neutron</h3>
+<p>The neutron magnetic moment, obtained similarly, is approximately <span class="math inline">-2</span> in the same units (experimentally <span class="math inline">-1.7</span> ). The deviation from the naive ratio of masses shows that the magnetic moments arise from the algebra of quark charges and masses combined with spin–flavor structure.</p>
+<p>This experimentally shows that the proton is not a point‑like particle. In the homework there is an exercise for the Δ baryon, which is similar in wave function construction and involves the magnetic moment operator for the Δ.</p>
+</section>
+<section id="qa-how-do-we-know-there-are-three-quarks-inside" class="level3" data-number="9.3">
+<h3 data-number="9.3" class="anchored" data-anchor-id="qa-how-do-we-know-there-are-three-quarks-inside"><span class="header-section-number">9.3</span> Q&amp;A: How Do We Know There Are Three Quarks Inside?</h3>
+<p><b>Q:</b> How do we know there are three constituents inside the proton? <b>A:</b> Not from color directly, but from <strong>deep inelastic scattering</strong>—the experimental distribution of form factors reveals the sub‑structure.</p>
+<p><b>Q:</b> Is it the magnetic moment that shows that? <b>A:</b> Not specifically, though magnetic moments are influenced by internal charge distributions.</p>
+<p><b>Q:</b> I remember that the number of generations came from the widths of the <span class="math inline">W</span> boson—is that similar? <b>A:</b> That is a different piece of evidence. For three colors, the spectroscopic evidence came from the <strong>Eightfold Way</strong>—the pattern of mesons and baryons—which only works with three quarks.</p>
+<p><b>Q:</b> Could it be exactly three because only with three quarks can we get both an octet and a decuplet in flavor <span class="math inline">SU(3)</span> ? <b>A:</b> Yes, that is a theoretical argument. But I am referring specifically to <strong>experimental</strong> evidence: the form‑factor measurements from deep inelastic scattering that directly saw three‑particle substructure.</p>
+<p><b>Q:</b> At the time those experiments were done, precision was limited. <b>A:</b> Good point—earlier experiments were rough, but the combination of spectroscopy and later high‑energy scattering solidified the picture.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
