@@ -84,7 +84,7 @@ Higher generations are heavier and harder to produce. Most matter around us is m
 
 
 
-## The Origin of Proton Mass: Gluon Condensate vs. Higgs
+## The Constituent Quark Model and the Origin of Mass
 
 ### **Constituent Quark Model**
 
@@ -138,7 +138,7 @@ Cool.
 
 
 
-## QED Lagrangian and Four-Vector Fields
+## QED Lagrangian and Lorentz Transformations
 
 Now let's move to a bit more equations and discuss **quantum chromodynamics**.
 
@@ -167,7 +167,7 @@ Another thing to note is that I am using **Einstein notation**, summing over rep
 
 
 
-## Gauge Invariance and the QED Lagrangian
+## Gauge Invariance and the Structure of QED
 
 Next we introduce fermion fields. For leptons we have a four‑component Dirac spinor  $\psi$  and its adjoint  $\bar{\psi} = \psi^\dagger \gamma^0$ . The Lagrangian must be a scalar:
 
@@ -209,7 +209,7 @@ is gauge invariant. The new term  $\bar{\psi} \gamma^\mu A_\mu \psi$  couples th
 
 
 
-## Exponential Map and Lie Groups for Phase, SU(2), and SU(3) Transformations
+## Lie Group Transformations and Matrix Exponentials
 
 I will give a quick overview of the different groups for the transformation of  $\Psi$ .
 
@@ -245,7 +245,7 @@ The corresponding rule for SU(2) is
 
 
 
-## Perturbation Theory and Cross Section Formalism
+## QCD Lagrangian, Gluon Self-Interactions, and Cross Section Basics
 
 One aspect not yet discussed is **perturbation theory**. 
 
