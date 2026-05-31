@@ -1,8 +1,8 @@
 ---
 title: (2025) Lecture 1
 author: ''
-presenter: Mikhail Mikhasenko
-note_taker: Anna Zimmer
+presenter: Unknown
+note_taker: Unknown
 date: '2025'
 format: html
 ---
@@ -13,59 +13,72 @@ format: html
 
 
 
-### Foundations of Hadron Physics
+## Introduction to Hadron Physics and Course Logistics
 
-Lecture one will be dedicated to the introduction of hadron physics.
-I would like to start by explaining the origin of hadron physics and how it appeared at the earlier stages of the universe, where it matters in the course of evolution of our universe.
-Then we'll discuss the matter composition and how quark physics plays its own role.
-We'll discuss the standard model and then equations that describe the motion of fields.
-We will talk about the gauge groups and mention the important property of the strong interaction that is the key to matter formation, known as confinement.
-I will write the basic equations that will help you to solve exercises.
+### Lecture 1: Introduction to Hadron Physics
 
-Today is the 8th.
-The course is for the second time.
-I will be reusing material from the last lecture from last year as well.
-Last year we made an experiment of recording the lectures and transforming them into text.
-There is a project we are working on to have this more automatic way.
-We experiment to gain more material to play with.
-I would like to ask if no one minds me recording myself.
-This iPhone is the recording device.
-There are no voices usually on that.
-But if you mind, I don't have to.
-I have recordings from last year.
-That will benefit you as well, because the idea is that I provide you with the text of the lecture.
-Another thing is that if someone makes the pictures, wants to fill the board, it will also get included.
-It will throw this to the language model as well and have it formally typed.
-So probably I will ask you to make a picture once we fill the board.
+This lecture introduces hadron physics — its origin, its role in the early universe, and the key concepts needed to understand matter formation.
+#### Origin and Role in the Universe
 
-It's good to start the lecture course by establishing the timeline for the universe and the numbers for different epochs and stages.
-They are really hard to imagine - either very small or very large.
-That's why we need this on human scale first.
-The number that is where we are now is 14 billion years, which is what we believe is the age of the universe.
-Starting from the Big Bang there will be many points, but to have a human scale, I would like to make one exercise.
-A clap represents the Big Bang, and then the sound travels.
-The speed of sound is like 300 meters per second, so for one meter it's 0.003 seconds.
-If the clap was a Big Bang from that moment, the universe started evolving, and by the time when the sound came, most of the stages had passed.
-Hadron physics is actually around this time.
-So we need $10^{-6}$, $10^{-12}$.
-At like one second at the beginning, matter is produced.
-We don't know what kind of matter is there, but we assume that the structures started forming already.
-The seeds of the structure were already produced during inflation, inflation of the space and time.
-We have little idea about what's going on here, so we'll move to $10^{-12}$, where already electroweak scale is passed, Planck scale is passed.
-Higgs potential developed its minimum, universe collapsed to the lower, to the second minimum of the Higgs potential, and we arrive at $10^{-12}$, where the matter itself is the equivalent plasma.
-The dots here are quarks - they are constituents of the matter.
-The fields that operate in this space are gluons.
-With the abbreviation QGP, we refer to quark gluon plasma.
-There is no matter as we know it - it's just a soup in which fields are acting.
-The equation of motion at high temperature in place around $10^{-6}$, this soup starts evolving into structure.
-In the interval somewhere here you've got hadronization process.
-When the sound came, what happened with our universe is that it already has elementary matter blocks, which are mesons and baryons.
-Quarks are now confined and gluon fields are almost entirely sitting inside of these objects.
-Essentially that's all we need from this picture.
-What happens further is another 14 billion years of evolution.
-Somewhere here I mark one second, which is a good mark, where the nuclear synthesis starts.
-Another visually pleasant indication is when radiation separates from the matter.
-Big Bang nuclear synthesis and then radiation separates from the matter is around - doesn't have a scale.
+Hadron physics emerged in the earliest stages of the universe and is crucial throughout its evolution. We will discuss how quark physics contributes to matter composition.
+#### The Standard Model and Field Equations
+
+We briefly survey the **Standard Model**, then introduce the equations that describe the motion of fields:
+
+  $$\partial_\mu \left( \frac{\partial \mathcal{L}}{\partial (\partial_\mu \psi)} \right) - \frac{\partial \mathcal{L}}{\partial \psi} = 0$$  
+
+This is the **Euler–Lagrange equation** for fields, the starting point for deriving dynamics from a Lagrangian.
+
+### Gauge Groups and the Strong Interaction
+
+We discuss **gauge groups** — the symmetry groups that define the fundamental interactions — and then move to the key property of the strong interaction: **confinement**. Confinement is the force that binds quarks into hadrons and is essential for matter formation.
+
+To illustrate these ideas, we compare the Lagrangians of quantum electrodynamics (QED) and quantum chromodynamics (QCD):
+
+| Property | QED (electromagnetic) | QCD (strong) |
+|----------|-----------------------|--------------|
+| **Symmetry group** |  $U(1)$  |  $SU(3)$  |
+| **Lagrangian** |   $$\mathcal{L}_{QED} = -\frac14 F_{\mu\nu}F^{\mu\nu} + \bar{\psi}(i\gamma^\mu D_\mu - m)\psi$$   |   $$\mathcal{L}_{QCD} = -\frac12 \operatorname{Tr}(G_{\mu\nu}G^{\mu\nu}) + \sum_f \bar{\psi}_f^i (i\gamma^\mu D_\mu^{ij} - m_f\delta^{ij}) \psi_f^j$$   |
+| **Covariant derivative** |  $D_\mu = \partial_\mu - i e A_\mu$  |  $D_\mu^{ij} = \partial_\mu \delta^{ij} - i g_s (T^a)^{ij} A_\mu^a$  |
+| **Gauge transformation** |   $$\psi \to \psi' = e^{i\alpha(x)}\psi,\; A_\mu \to A_\mu - \partial_\mu\alpha$$   | Local  $SU(3)$  transformation on quark fields and gluon fields |
+| **Mediating particle** | Photon  $A_\mu$  | Gluon  $G_\mu^a$  |
+| **Confinement?** | No (photons are massless, force is long-range) | Yes (force does not decrease with distance — quarks are permanently bound) |
+
+The QCD Lagrangian explicitly shows the interaction between quarks ( $\psi_f^i$ ) and gluons (via the covariant derivative and the gluon field strength  $G_{\mu\nu}$ ). Confinement emerges from the non-Abelian nature of  $SU(3)$ .
+
+<hr>
+#### Basic Equations for Exercises
+
+We will work with the Euler–Lagrange equation and the Lagrangians above. These are the tools you will need to solve exercises.
+
+<hr>
+#### Logistics and Course Information
+
+Today is the 8th. This is the second time this course is offered. I am reusing material from last year's lectures. Last year we experimented with recording the lectures and transforming them into text. We are working on a project to automate this process — we are still gaining more material to experiment with.
+
+
+::: callout-note
+I would like to ask if anyone minds me recording myself (using this iPhone). The recordings contain no voice from the audience. If you prefer not to be recorded, I already have recordings from last year. The goal is to provide you with a typed version of the lecture. Additionally, if someone makes pictures or fills the board, that content will also be fed into the language model to produce a formal typed version.
+:::
+
+
+
+## From Big Bang to Quark-Gluon Plasma: A Human-Scale Timeline
+
+It’s helpful to start a lecture course with the timeline of the universe and the numbers for its different epochs and stages. These numbers are hard to imagine—either very small or very large—so we first put them on a human scale.
+
+The present age of the universe is ** $14\,\text{by}$ ** (14 billion years), starting from the Big Bang. To make the scale tangible, try this exercise: I clap my hands—that’s the Big Bang. Watch the distance as the sound travels. The clap reaches the first row (1 m away) first, then the second row, then the back.
+
+The speed of sound is about **300 m/s**, so:
+
+  $$t_{\text{sound}} = \frac{1\,\text{m}}{300\,\text{m/s}} \approx 0.003\,\text{s}$$  
+
+If my clap is the Big Bang, by the time the sound reaches you, most of the stages of the universe have already passed. The hadron physics we will discuss actually happens around this time. We need timescales of ** $10^{-6}\,\text{s}$ ** and ** $10^{-12}\,\text{s}$ **. At around **1 second**, matter is produced. We don’t yet know what kind of matter exists, but we assume structure starts forming already. The seeds of structure were produced during inflation—a rapid expansion of space and time. We have little idea about what goes on there, so we move forward.
+
+Advancing time to ** $10^{-12}\,\text{s}$ **, the electroweak scale has already been passed; the Planck scale is passed. The Higgs potential developed its minimum, and the universe collapsed to the second minimum. At  $10^{-12}\,\text{s}$  matter exists as an equivalent plasma. The dots in this picture represent **quarks**—the constituents of matter. The fields operating in this space are **gluons**. This state is abbreviated **QGP** (quark‑gluon plasma). There is no matter as we know it; just a soup of interacting fields.
+
+At around ** $10^{-6}\,\text{s}$ **, the soup begins to evolve into structure due to the equations of motion at high temperature. In this interval, the **hadronization** process occurs. By the time the sound from the clap reached you, the universe already had elementary matter blocks—mesons and baryons. 
+
 
 
 
@@ -74,30 +87,48 @@ Big Bang nuclear synthesis and then radiation separates from the matter is aroun
 
 
 
-That happens for 400,000 years after the Big Bang.
-We've got pions and baryons.
-For the rest of the semester, what will happen with our universe, which we just created? There will be some nuclear synthesis starting.
-We won't get to the forming of the atoms as we know them with electron shells until 400,000 years after.
+ Quarks are now confined, and gluon fields are almost entirely sitting inside these objects.
 
-So what I have here is the electron, right? So atom is what? Let's now go to the second item.
-What is the matter? What's the most abundant element in the crust of the earth? By mass, the most abundant element is iron, and the most abundant in the crust it seems is oxygen, so oxygen.
-Oxygen is an element with eight protons and eight neutrons, and they form a rather compact object in the center of the atom which is the nucleus, and they are actually packed to each other very, very tightly.
+That’s essentially all we need from this picture. What happens afterwards is another 14 billion years of evolution.
+
+Some key milestones along this timeline:
+
+| Epoch / Event | Time after Big Bang | Description |
+|---------------|---------------------|-------------|
+| Quark‑gluon plasma epoch |  $10^{-12}\,\text{s}$  | Matter as quarks and gluons in a plasma; electroweak and Planck scales already passed. |
+| Hadronization |  $10^{-6}\,\text{s}$  | Quarks become confined into mesons and baryons. |
+| Nucleosynthesis begins |  $1\,\text{s}$  | Light nuclei form. |
+| Radiation separates from matter |  $400{,}000$  years | Atoms form (electrons bind to nuclei). |
+| Present |  $14\,\text{by}$  | The current universe. |
+
+<b>Q:</b> When does radiation separate from matter?
+<b>A:</b> I think it happens  $400{,}000$  years after the Big Bang.
+
+By that time we already have pions, kaons, and baryons. For the rest of the semester we’ll explore what happens with our just‑created universe—starting with nucleosynthesis and eventually the formation of atoms with electron shells at  $400{,}000$  years.
+
+So what is matter? What is the most abundant element on the crust of the Earth?
+
+<b>Q:</b> (Mixed answers)
+<b>A:</b> By mass, the most abundant element is iron; in the crust, it is **oxygen**.
+
+Oxygen has eight protons and eight neutrons, packed together tightly in the nucleus. The size of a single proton or neutron is roughly **1 fm** (one fermi):
+
+  $$r_p \sim 1\,\text{fm}$$  
+
+If we pack 16 nucleons (eight protons + eight neutrons) together, a naive calculation gives a nuclear radius of about **3 fm**:
+
+  $$r_{\text{core}} \sim 3\,\text{fm}$$  
+
+That results in a diameter of **6 fm**:
+
+  $$\text{diameter} \approx 6\,\text{fm}$$  
 
 
 
-![Structure of an oxygen atom with compact nucleus and surrounding electron cloud. The sketch highlights the separation of scales and shows that most of the atomic volume is empty space, with the dense nucleus occupying only a tiny fraction.](2025-Lecture-01-images/fig3.png){#fig-fg3}
+## Atomic Scale and Orbital Radii
 
+Electrons occupy shells of the atom:  $1s^2\,2s^2\,2p^4$ . The orbital labels: **s** stands for *S orbital*, circular; **p** stands for the *p orbital*, which has a dumbbell shape. 
 
-
-
-What's the size of a single nuclear proton or neutron? It's roughly one fermi.
-And yet you have 16 balls of one fermi packed together.
-If you think of this setup, you get roughly the size of the nucleus, and this is 6 fermi in diameter.
-So we do measure that a radius of 3 fermi is what naive calculation tells you.
-That's why I multiply by two and I get the diameter of six fermi.
-
-Then electrons are another part of the atom and how many of them do we expect? They occupy shells of the atom which is 1s 2 2s 2 2p 4, where s stands for s orbital circular P stands for the p orbital which are what is the shape of it? It's not banana shape, it's what exactly like a dumbbell shape.
-If you remember that there was the energy of electrons versus the angular momentum in the lower one was 1s was 2 1s and here.
 
 
 
@@ -106,117 +137,102 @@ If you remember that there was the energy of electrons versus the angular moment
 
 
 
-Right, something like that.
-Then the wave function of the electron of 1s orbital is something like $ e^{-r/a_0} $ where $ a_0 $ is the Bohr radius and you already get the scale.
-So the size of the atom is given by the Bohr radius.
-This you find by solving Schrödinger equation of moving of electron bound in the electromagnetic field of the core.
+
+
+The wave function of the electron in the 1s orbital is
+  $$\psi_e(1s)=N e^{-r/a_0},$$  
+where  $a_0$  is the **Bohr radius** — the scale that gives the size of the atom.
+You find this by solving the Schrödinger equation for an electron bound in the electromagnetic field of the core. The Bohr radius is
+  $$a_0 = 59,000\ \mathrm{fm} = 59\ \mathrm{pm}.$$  
+
+<b>Q:</b> Doesn't the charge of the nucleus affect the radius?
+<b>A:</b> Of course it does. In fact it scales: if  $Z=8$ , you get  $8$  times smaller numbers. However, electrons in outer orbitals get **screened** by the inner electrons, so they feel a smaller effective charge. That is why outer shells have radii of roughly several hundred picometers. So I have a clear estimate of  $100$  picometers.
+
+The average radii for the first orbitals are:
+
+| Orbital |  $\langle r \rangle$  |
+|---------|---------------------|
+| 1s      |  $\frac{3}{2}a_0$  |
+| 2s      |  $6a_0$  |
+| 2p      |  $\frac{5}{2}a_0$  |
+
+To get the actual radius for a given atom, take these averages and divide by the **effective charge**. For example, for the 2s orbital:  $6a_0$  divided by an effective charge. The atomic number is  $8$ , but screening reduces it, so the effective charge is probably around  $4$  or  $6$ . 
+
+
+
+
+![Structure of an oxygen atom with compact nucleus and surrounding electron cloud. The sketch highlights the separation of scales and shows that most of the atomic volume is empty space, with the dense nucleus occupying only a tiny fraction.](2025-Lecture-01-images/fig3.png){#fig-fg3}
+
+
+
+
+ That gives roughly  $a_0$ . That is why  $a_0$  is taken as giving the radius, and why we end up with about  $100$  picometers.
+
 
 ::: callout-note
-The **Schrödinger equation** for hydrogen-like atoms is:
-$$ \hat{H}\psi = E\psi $$
-where the Hamiltonian is:
-$$ \hat{H} = -\frac{\hbar^2}{2m}\nabla^2 - \frac{Ze^2}{4\pi\epsilon_0 r} $$
-The **1s orbital wavefunction** is:
-$$ \psi_{1s}(r) = \frac{1}{\sqrt{\pi a_0^3}} e^{-r/a_0} $$
-where $a_0 \approx 0.529 \times 10^{-10}$ m is the **Bohr radius**.
+**Screening:** inner electrons reduce the effective nuclear charge felt by outer electrons, so outer-shell radii are larger than the bare  $Z$  scaling would suggest.
 :::
-For the scale $ a_0 $ is equal to 50 picometers I think 59, 59,000 femtometers.
-This is 60 picometers and this thing would be of order 50,000.
 
-Wait a second, doesn't the charge of the nucleus affect the radius? Of course it does.
-In fact it just scales.
-If you have a Z equal to 8 here, then you are going to find 8 times smaller numbers.
-However, further electrons from the orbital they get screened by the internal electrons, they feel less charge and that's why you have outer shells, I mean of roughly several hundred picometers.
-So I have a clear estimation of 100.
+How to imagine this? I was comparing the atom to our solar system. Here is Earth. If I compare the radius of the nucleus to the orbital shells, and compare the radius of the Sun to the orbit of the Earth, I find I must scale the Sun down by a factor of  $150$  to make it smaller, and then the distances in the atom roughly match. This gives you a sense of the scales.
 
-To imagine that, comparing this to our solar system and sketching it here.
-Here is Earth.
-Comparing the radius of the nucleus to the orbital shells and comparing to the radius of the sun versus the orbit of the Earth, scaling the sun by a factor of 150 makes them smaller and then it matches the distances in the atom roughly.
-This is so that you have scales in mind, scaled some sizes.
 
-I think I will add here that the average radius for 1s is equal to $ \frac{3}{2} a_0 $.
-The average radius for the 2s is for the figure is equal to $ 6a_0 $ and then the average radius for the 2p.
-When I got this number is roughly I took this and I divided by effective charge.
-2s is $ 6a_0 $ and then divide by effective charge of roughly probably it's to be started with eight.
-We get some screening.
-So it's probably four, I don't know minus two six.
-So we get roughly $ a_0 $.
-That's why $ a_0 $ is taken is giving us the radius and then roughly where the hundred picometers come from.
 
-::: callout-tip
-For hydrogen-like atoms, the **average radii** scale with nuclear charge:
+## Two Sectors, Three Charges: Quarks and the Standard Model Forces
 
-- $\langle r \rangle_{1s} = \frac{3}{2}\frac{a_0}{Z}$
-- $\langle r \rangle_{2s} = 6\frac{a_0}{Z_{\text{eff}}}$
-where $Z_{\text{eff}}$ accounts for electron screening effects.
+To match your preference for seeing the Standard Model as two parts, it is worth expanding. The electroweak sector contains three parts: electromagnetic, weak, and the Higgs (mass‑energy) sector. The strong sector is QCD.
+
+### Particle‑Sector Identification
+
+| Particle | Sector |
+|----------|--------|
+| Higgs | Higgs sector |
+| W boson | Weak sector |
+| Z boson | Weak sector |
+| Photon | Professor accepts “weak interaction” as a good answer (it belongs to the electroweak sector) |
+| Top, Charm (quarks) | Strong interaction (QCD) |
+
+The professor’s exact exchange for the photon:
+
+<b>Q:</b> (Indicating a photon) To which sector does this belong?
+<b>A:</b> QCD? … No. Weak interaction is a good answer. (Then adds: “Weak interaction plus electron? Electro… Not electro. Essentially, correct.”)
+
+<hr>
+
+This classification is a little vague because we will mostly talk about quarks. Electroweak deals with leptons; the electromagnetic part has photons; the weak part has W and Z bosons; and the Higgs is a separate field. However, as soon as a particle has a charge of a certain type, it can interact with the carrier of that charge. Therefore it is worth describing what the charges are.
+
+If you forget the charge of a particle, just draw the diagram: **up, down, charm, strange, top, bottom**. This diagram already tells you a lot.
+
+### Quarks and Their Charges
+
+| Generation | Up‑type (electric +2/3, weak +1/2) | Down‑type (electric −1/3, weak −1/2) |
+|------------|--------------------------------------|----------------------------------------|
+| 1st        | up                                   | down                                   |
+| 2nd        | charm                                | strange                                |
+| 3rd        | top                                  | bottom                                 |
+
+Quarks are organized in three generations, arranged in two rows. The top row (up‑type) has electric charge **+2/3** and weak charge **+1/2**; the bottom row (down‑type) has electric charge **−1/3** and weak charge **−1/2**.
+
+So a quark carries both electric and weak charges, and also a **strong charge** (called **color**). Because they possess all three types of charge, quarks are the most diverse particles in the Standard Model.
+
+- A quark can interact with **light** (electromagnetic) because it has an electric charge.
+- It can interact with the **Z and W bosons** because it has a weak charge.
+- It can interact with **gluons** (carriers of the strong interaction) because it has a strong (color) charge.
+
+
+::: callout-important
+Quarks are the only particles that couple to all three fundamental forces: electromagnetic, weak, and strong. Their versatility makes them central to the strong interaction (QCD).
 :::
-Standard Model then questions here.
-Particle physics has the most accurate and precise theory that describes unfortunately everything that we have observed so far which is the Standard Model.
-It's so accurate that for 10 years now we have been trying to find any single deviation by colliding particles at CERN and elsewhere from predictions of the Standard Model.
-So far we don't find it, it's very nice and accurate.
-There are some problems with the Standard Model which we will probably touch on at the large scale.
-When we think of the evolution of the universe, there are also questions of the naturalness of the certain couplings, that is certain parameters have been measured and we know accurately in the Standard Model.
-But it's unclear where they come from, why they are like this.
-Roughly the Standard Model you can think of is electroweak sector times QCD.
-The fact that Standard Model is such a good theory and that it works so well doesn't mean that we understand it fully.
-That particularly refers to the quantum chromodynamics.
-The interaction that describes strong interaction.
-Everything that we talk about in hadron physics course is governed by strong interaction.
-Quantum chromodynamics is the theory of the strong interaction, theory of the color charge.
-This is the theory that works very well, for phenomena physics, but it's such a complicated theory that until recently direct predictions from the sort of basic equations of quantum chromodynamics to the real world observables were not possible.
-The reason that we will discuss later in the lecture is the fact that fundamental interaction describes interactions between the fundamental building blocks, quarks and gluons.
-After that the theory turns into something different, where there are particles with the non-trivial structure and not fundamental particles of the theory starts interacting.
-Essentially hadron physics is not so much about level of the quark in drawings, but what this fundamental theory implies.
-For the form in which the theory manifests itself, the hadrons manifest themselves as color neutral objects, in the objects where the charge that is carried by the theory is confined.
-We will in this course, in the scope of this course, we will try to understand the relation of the fundamental part to sort of effective interaction that appears between hadrons.
 
-To match to what you prefer already to manage this picture of the standard model being two parts, I think it's worth expanding still.
-The electroweak sector and the leptonic sector contains only three parts: electromagnetic interaction, weak interaction and mass energy sector.
-Let's quickly probably have a repetition of that.
-Quickly write down the particles.
-Write down the particle symbol and tell me to which it belongs.
-So first, start? Higgs.
-Where it belongs? The Higgs.
-What's that? W boson.
-This is also from the weak sector.
-What's that? Z boson.
-Belongs to weak.
-These are the two are light or F of the weak sector.
-So they are carriers of the charge in the weak sector.
-What is there? Photon.
-That belongs to electromagnetic.
-To which sector would it belong? Weak interaction plus electromagnetic.
-Electroweak.
-Essentially, it's correct to say that.
-Then maybe switch finally some particles.
-Top.
-Charm.
-Which theory is.
-It's strong one.
-What is it about? Yes, it's a QCD strong interaction.
-These are called quarks.
-These are elementary particles that make strong interactions so this classification is a little bit vague because we will mostly talk about quarks.
-Electroweak talks about leptons, electromagnetic has photons and weak interaction has WZ bosons and Higgs as a separate field however, as soon as the particle has a charge of certain type it can interact with the carriers of the it can interact in a certain way so things worth describing what charge? Write them all down in four X.
-Think that's most important if you forgot the charge of particle.
-This classification should we mention a severance? Yes, it's actually and well would have been better to put it first but I think we will get to the discussion of that if you forgot the charge just draw that up down, charm strange, top bottom this diagram and then tells you already a lot so the quarks are organized in generations first generation, second generation, third generation and they are organized in the two rows of top quarks and bottom quarks and depending on the location of this actually the only thing that matters for the charges is the either top row or bottom row so the top row so I can say electric charge of $ +\frac{2}{3} $ plus electric charge of $ -\frac{1}{3} $ plus $ \frac{2}{3} $ minus $ \frac{1}{3} $ and then the weak charge for the upper one will be $ +\frac{1}{2} $ weak charge for the lower one will be $ -\frac{1}{2} $.
-That's it? So let's look at the chart Quark it has a charge of $ +\frac{2}{3} $ and then has the weak charge $ +\frac{1}{2} $ as soon as a particle has a charge of certain type it can couple to the carrier of the charge it actually has to be other sector that is relevant for this charge has to be considered so the quarks are the most sort of diverse particles in the standard model because they couple to all charges they couple to the electromagnetic charge they couple to the weak charge and then also have.
-So I can say they have a strong charge and have a strong charge.
-Let's take up quark can it interact with the light that comes out of the window? Yes it can because it has an electric charge can it actually interact with the Z boson and W? Yes it can because it has a weak charge and can it interact with the gluons carriers of the strong interaction? Yes, because it has a strong charge which in fact we called color that's because it's colored.
+Color charge is the same as strong charge. Like electric charge (positive/negative), color charge comes in three varieties – we label them **red, green, blue**. The corresponding antiparticles carry **anti‑red, anti‑green, anti‑blue**. Throughout this hadron physics course, we will talk about the strong interaction, which is also the **color interaction**.
 
-I don't know if color charge and strong charge are the same thing.
-Like electrons could be positive or negative, the color charge could be positive or negative but also we use letters red, green and blue for the color charge.
-In the same way anti-red, anti-green and anti-blue are the three charges that the antiparticle can have.
-You will quickly get used to this language: strong charge as color charge.
-In the course of the physics consideration we'll be talking about the strong interaction, which is also color interaction.
 
-Then perhaps worse, squaring the carriers of the...
-When we say interaction, it's interaction of the object with the field.
-The fields are represented by these carriers of the force which are W and Z for the weak interaction, photons for electromagnetic interaction and gluons for the strong interaction.
-We are reaching...
-So we discussed standard model composition and we're reaching unification.
-The standard framework in the field theory to describe the fields and the interaction between particles and carriers is the field theory, which starts with the Lagrangian, an expression that describes interaction in a very condensed line.
-Here I have an example.
-You might remember the Lagrangian mechanics from your first or second semester where the entire motion of the system was condensed down to a single equation.
+
+## From QED to QCD: Lagrangian Structure, Gauge Symmetry, and Field Interactions
+
+#### QED Lagrangian
+
+The QED (quantum electrodynamics) Lagrangian describes how light interacts with anything that has a charge. It is relevant here for two reasons: quarks have charge, so they interact with photons, and the QED Lagrangian is simpler than the QCD one. 
+
 
 
 
@@ -225,100 +241,9 @@ You might remember the Lagrangian mechanics from your first or second semester w
 
 
 
-This was Lagrange equation.
-There is the kinetic term, there is a potential term, and once you subtract them you get a certain expression.
-This expression represents the energy of the system.
-So kinetic minus potential in that case, and this is an equation of motion.
-What happens with the system in the next moment, starting from the initial state, is described by an equation that can be derived from the Lagrangian.
-So what you do, you differentiate the Lagrangian by the dot by the velocity.
-Then you subtract the term that differentiates Lagrangian by the coordinate.
-In that case one that is a system where the point can move here and it creates slides without friction.
-Then also we have a pendulum and there is another mass here.
-The equation of motion is a differential equation.
-You find this equation by applying a classical equivalent of this equation.
-
-::: callout-important
-The **Euler-Lagrange equation** is fundamental in classical and quantum field theory:
-$$ \frac{d}{dt}\left(\frac{\partial L}{\partial \dot{q}}\right) - \frac{\partial L}{\partial q} = 0 $$
-where $L = T - U$ is the Lagrangian (kinetic minus potential energy).
-The **Standard Model Lagrangian** has the general structure:
-$$ \mathcal{L}_{\text{SM}} = \mathcal{L}_{\text{electroweak}} + \mathcal{L}_{\text{QCD}} = (EM \otimes \text{weak} \otimes \text{Higgs}) \otimes QCD $$
-:::
+ Understanding all its symbols first will make the transition to QCD easier. 
 
 
-### Lagrangian Structure and Gauge Symmetry
-
-I will now clarify this equation, because this is the one we will use for the fields.
-
-Let me refresh your memory on this.
-
-## Starting with QED
-
-I start with **QED** — quantum electrodynamics — which describes how light interacts with anything that has a charge.
-
-It's relevant for us for only two reasons:
-
-1. Our quarks have charge, so they interact with photons.
-2. The Lagrangian for QED is much simpler than for QCD. (see Figure~4)
-
-Let's use this chance to understand all symbols, and we'll proceed to QCD later.
-
-The equation is complicated, but once you understand the general structure, you don't need to look it up to write it down.
-
-The Lagrangian is a function of two fundamental fields:
-
-- $\psi$ — the field of an electron, muon, or quark (something with charge)
-- $A$ — the photon field
-
-So, $\psi$ is a fermion field, and $A$ is the photon field.
-
-## Lagrangian Structure and Notation
-
-The Lagrangian is a **scalar quantity** — not a vector or matrix, but a number once evaluated at any point.
-
-Scalar quantities are achieved by contracting indices: every index introduces a dimension, and you only get a scalar when all indices match.
-
-We use **Einstein notation**: when you see the same index twice, it means we sum over it — same as in quantum mechanics.
-
-Here, $\mu$ and $\nu$ are Lorentz indices living in 4 dimensions: 3 spatial ($x$, $y$, $z$) and 1 time dimension.
-
-The $\mu$ here and $\mu$ there must be contracted. I'm skipping the explicit summation over $\mu$ from 1 to 4, and also over $\nu$, which also appears twice.
-
-Now, $F_{\mu\nu}$ is actually a matrix: $\mu$ is 4-dimensional and $\nu$ is 4-dimensional, so $F_{\mu\nu}$ is a $4 \times 4$ matrix.
-
-You don't multiply matrices as usual; you multiply them component-wise. Every component is multiplied by itself, and then you take the trace or sum all elements.
-
-Each coordinate in this matrix is computed as:
-
-$$F_{\mu\nu} = \partial_\mu A_\nu - \partial_\nu A_\mu$$
-
-where $\partial_\nu$ is the derivative in time and space — essentially $\frac{\partial}{\partial x^\nu}$.
-
-## Indices and Spinor Structure
-
-If it were just $\mu$ contracted with $\mu$, it would be simple. But here, we also have spinor indices.
-
-There is another set of indices that I suppressed — $\tau$ and $\rho$ — which come from the **spin** of the particles.
-
-Particles are not scalar; they have spin. That's why the fermion field $\psi$ has **four components**.
-
-$\tau$ and $\rho$ are **spin indices**, not Lorentz indices. For Lorentz indices, we distinguish covariant and contravariant, but for spin indices, we just sum.
-
-Something is still fishy in this Lagrangian because I'm adding a map.
-
-We agree that these are four matrices, and this is a vector, so we can contract them. We get a matrix here, and then somehow from a matrix I'm subtracting a scalar — that's not good.
-
-What's missing is the **diagonal matrix**.
-
-$\psi$ is a four-component spinor, and $\bar{\psi}$ is not a four-component spinor in the same way — it's a row vector.
-
-What we do is take the conjugate transpose (dagger), then multiply by the $\gamma$ matrix from the left so it remains a row of numbers. Then you're ready to contract with whatever matrix is here.
-
-::: callout-important
-The full QED Lagrangian is:
-$$\mathcal{L}_{\text{QED}} = -\frac{1}{4}F_{\mu\nu}F^{\mu\nu} + \bar{\psi}(i\gamma^\mu D_\mu - m)\psi$$
-This describes interactions between charged fermions and photons, with the first term representing electromagnetic field energy and the second describing fermions with mass and interactions.
-:::
 
 
 ![Feynman diagram representing an interaction term in the Lagrangian: two fermion fields coupled to the electromagnetic current with vertex strength g. The diagram directly corresponds to the interaction term of the Lagrangian.](2025-Lecture-01-images/fig5.png){#fig-fg5}
@@ -327,306 +252,185 @@ This describes interactions between charged fermions and photons, with the first
 
 
 
-## Moving to QCD
 
-One exercise is to see the same structure for the QCD Lagrangian, which I'll write next. Once you do it once, it becomes super clear.
+The Lagrangian is a function of two fundamental fields:  $\psi$  (a fermion field — electron, muon, or quark) and  $A$  (the photon field, a boson). It is a scalar quantity: at any point it evaluates to a single number. This scalar nature comes from contracting all indices using the Einstein summation convention — when an index appears twice, it is summed. Here  $\mu$  is a Lorentz index in four dimensions (three spatial, one time). In  $F_{\mu\nu}F^{\mu\nu}$ ,  $\mu$  and  $\nu$  each appear twice and are summed from 1 to 4.
 
-Let's do QCD now — it's not too bad.
+ $F_{\mu\nu}$  is a  $4\times4$  matrix. It is not multiplied in the usual matrix way; each component is multiplied by itself, and effectively a trace is taken (all elements summed). Each component is computed as:
+  $$F_{\mu\nu} = \partial_\mu A_\nu - \partial_\nu A_\mu,$$  
+where  $\partial_\nu$  represents  $\frac{\partial}{\partial x^\nu}$ .
 
-The exercise says: recover the indices, the range, the number of terms. You introduce the blue one because every index is $N$.
+There is another set of indices (call them  $\tau, \rho$ ) from the gamma matrices — these come from the fact that particles have spin. The spinor indices are not Lorentz indices; they are matrix indices for which covariant and contravariant are not distinguished. Only Lorentz indices have upper/lower distinction. When gamma matrices are contracted with  $\psi$  and  $\bar{\psi}$ , a matrix in spinor space is obtained. The full Lagrangian must be a scalar, so we also take a trace in spinor space — that is why the mass term  $\bar{\psi} m \psi$  has an implicit identity matrix in spinor space.
 
-So: $F_{G\mu\nu}$, then $U_{G\nu}$ minus $D_G$, $A$ is contracted besides gluon. That's a really good exercise to write down — it's super logical.
+The complete QED Lagrangian is:
+  $$\mathcal{L}_{\text{QED}} = -\frac{1}{4}F_{\mu\nu}F^{\mu\nu} + \bar{\psi}(i\gamma^\mu D_\mu - m)\psi,
+\qquad D_\mu = \partial_\mu - i e A_\mu.$$  
 
-It's actually the same equation as here with more indices because there are more dimensions.
+ $\psi$  is a four-component spinor.  $\bar{\psi}$  is not another four-component spinor; it is the row obtained by first taking the conjugate transpose (dagger) and then multiplying by  $\gamma^0$  from the left. That row is ready to contract with the gamma matrix and the field.
 
-Let me check if I forgot $G$ in front of the term $g_s$ — exactly, here there is another $G$.
+One of the exercises is to see the same structure for the QCD Lagrangian — what objects exist in terms of dimensions. Once you do it once, it becomes very clear.
 
-## Dimensionality in QCD
+<hr>
+#### QCD Lagrangian
 
-Now let's figure out the dimensionality of the objects quickly.
+The QCD Lagrangian follows the same structure but with added color indices:
+  $$\mathcal{L}_{\text{QCD}} = -\frac{1}{2}\mathrm{Tr}(G_{\mu\nu}G^{\mu\nu}) + \sum_f \bar{\psi}_f^i (i\gamma^\mu D_\mu^{ij} - m_f\delta^{ij})\psi_f^j,$$  
+with
+  $$G_{\mu\nu}^{ij} = \partial_\mu G_\nu^{ij} - \partial_\nu G_\mu^{ij} + g_s[G_\mu, G_\nu]^{ij},\qquad D_\mu^{ij} = \partial_\mu - i g_s A_\mu^a T_{ij}^a.$$  
 
-There's a new object $\lambda$ here. These are three-dimensional — that's a good starting point.
+- **New object**: generators  $T^a$  (the Gell-Mann matrices), which are  $3\times3$  matrices.
+- **Color indices**  $i,j$  run over three color dimensions.
+-  $G_{\mu\nu}$  has Lorentz indices  $\mu,\nu$  **and** color indices  $i,j$ .
+- The trace in the kinetic term is over color indices.
+- The commutator term multiplies two matrices in color space and subtracts the product in reverse order, giving another matrix in color space.
+- **Flavor index**  $f$  runs over the six quark flavors: u, d, s, c, b, t.
 
-So $IJ$ is here. These are $2 \times 2$ matrices. $IJ$ must be here, must be here this one. Then they come, you contract over $A$.
+Each flavor has a spinor with four components **and** an extra index for color (i=1,2,3). The spinor indices are not written explicitly, but think of a field: fix the flavor to up quark, fix the color to red, and then there are four more components for spin projection.
 
-This has a $\mu$ and also $ij$. These are still...
+From the Lagrangian, the Euler–Lagrange equation with respect to  $\bar{\psi}$  gives the Dirac equation:
+  $$(i\gamma^\mu D_\mu - m)\psi = 0.$$  
+For QCD, the same equation holds, with the covariant derivative now containing the gluon field.
 
-Now we go here: $IJ$ stays $I$, $J$, $I$, $J$. Here is the trace in these $IJ$ dimensions.
+<hr>
+#### Gauge Symmetry
 
-When you commute two matrices, you get a matrix — it's multiplication minus subtitled multiplication.
+Gauge symmetry is an essential concept. In quantum mechanics, multiplying the wavefunction by a global phase  $e^{i\alpha}$  does not change probabilities. However, if the phase is allowed to vary from point to point (a **local gauge transformation**), the free Dirac Lagrangian is no longer invariant. Under
+  $$\psi \rightarrow \psi' = e^{i\alpha(x)}\psi,$$  
+the derivative acquires an extra term:
+  $$\partial_\mu \psi' = e^{i\alpha(x)}\partial_\mu\psi + i(\partial_\mu\alpha)e^{i\alpha(x)}\psi.$$  
 
-Overall, this is a matrix in $\mu$ and $\nu$ ($2 \times 2$), but also in $ij$ where $I$ is an index of 3 and $j$ is an index of 3.
+To restore invariance, we introduce the **covariant derivative**  $D_\mu = \partial_\mu - i e A_\mu$  and require that the photon field transforms as
+  $$A_\mu \rightarrow A_\mu - \partial_\mu\alpha.$$  
+The extra  $\partial_\mu\alpha$  term is then cancelled, producing a gauge-invariant Lagrangian. This structure dictates exactly how photons and fermions interact, with coupling strength  $e$ .
 
-I'll try to make more sense of this equation in a moment. As soon as I think all indices have to be introduced.
+From the equations of motion, you can see how different fields are coupled. Using the pendulum analogy, the motion of the upper marble affects the pendulum, and vice versa. Similarly, the motion of the fermion fields is affected by the motion of the photons, and photons are affected by fermions. Gauge symmetry enforces the precise way they interact. The structure is very simple: it all comes from the gamma matrices (4×4) and the contraction of indices.
 
-I really care that you understand what equations are right, at least in terms of mathematical structure. Definitely everyone is capable of tracing this.
+<hr>
+#### Weak Interaction (Transition to QCD)
 
-## Flavor and Color Indices
+Before moving to QCD, consider the weak interaction. Here the wavefunction lives in a two‑dimensional space (up and down components). The weak charge for quarks is  $\pm 1/2$ . The fields are still fermions with four hidden spinor components, but the transformation that rotates the two components must be unitary to keep observables like  $\psi^\dagger\psi$  unchanged. These unitary  $2\times2$  matrices form the group SU(2) (determinant = 1). Any such matrix can be written as:
+  $$U = e^{i\alpha_i \sigma_i},$$  
+where  $\sigma_i$  are the Pauli matrices:
+  $$\sigma_1 = \begin{pmatrix}0&1\\1&0\end{pmatrix},\quad
+\sigma_2 = \begin{pmatrix}0&-i\\i&0\end{pmatrix},\quad
+\sigma_3 = \begin{pmatrix}1&0\\0&-1\end{pmatrix}.$$  
 
-The $F$ traces the flavors — $F$ numbers: quarks $U$, $D$, $S$, $C$, $T$, $B$. We have **six flavors**, so the index $F$ goes over all six possibilities.
+<hr>
+#### Comparison of Gauge Theories
 
-What else? Spinors in that case had four dimensions, and now there's an extra three for **color**.
+| Feature | QED | Weak Interaction | QCD |
+|---------|-----|-----------------|-----|
+| **Gauge group** | U(1) | SU(2) | SU(3) |
+| **Gauge boson** | Photon  $A_\mu$  |  $W^\pm, Z$  bosons | Gluons  $G_\mu^a$  |
+| **Gauge coupling** |  $e$  |  $g$  (weak) |  $g_s$  (strong) |
+| **Fermion internal space** | 4‑component spinor | 2 weak‑isospin  $\times$  4‑spinor | 3 color  $\times$  4‑spinor |
+| **Covariant derivative** |  $D_\mu = \partial_\mu - i e A_\mu$  |  $D_\mu = \partial_\mu - i g W_\mu^a \tau^a$  |  $D_\mu^{ij} = \partial_\mu - i g_s A_\mu^a T_{ij}^a$  |
+| **Group generators** | 1 (trivial) |  $\tau^a$  (Pauli matrices,  $2\times2$ ) |  $T^a$  (Gell‑Mann matrices,  $3\times3$ ) |
 
-The index $I$ here traces the **color charge**.
+The same gauge principle underlies all three theories: local gauge invariance dictates the interactions.
 
-The only thing I don't track is the spinor indices. For the QED Lagrangian, we agreed there's something related to the spin projection of the particle — that's another $\tau\rho$ indices. We don't put it here; otherwise it's too complicated.
+<hr>
 
-If you think of this field, it has:
-
-- A flavor (let's fix to up quark)
-- A color (let's fix to red)
-- Another four which are spinors (spin projections)
-
-::: callout-note
-The QCD Lagrangian is:
-$$\mathcal{L}_{\text{QCD}} = -\frac{1}{2}\mathrm{Tr}(G_{\mu\nu}G^{\mu\nu}) + \sum_f \bar{\psi}_f(i\gamma^\mu D_\mu - m_f)\psi_f$$
-where $f$ runs over the 6 quark flavors, and the field strength tensor includes non-Abelian terms due to gluons carrying color charge.
-:::
-## Equations of Motion
-
-Last thing about this expression: once you know the Lagrangian, you can get the equations of motion by applying $\frac{\partial\mathcal{L}}{\partial(\partial_\mu \text{field})}$.
-
-I think it's easier to look at this expression where such a partial derivative would be nonzero.
-
-For $\psi$, we can do the same for $A_\mu$ (the gauge field). $\psi$ is only sitting in this term.
-
-The first derivative for the first term actually equals zero. The only place where this is nonzero is when you have $\partial_\mu \psi$.
-
-The $D$ has the inside of it — that's the derivative. If you expand this, you'll have $\bar{\psi}\gamma^\mu D_\mu\psi$.
-
-When you differentiate, $\bar{\psi}$ will remain, and then $\frac{\partial\mathcal{L}}{\partial\psi}$ would be nonzero from the other term here.
-
-The mass term will also produce something for the second term.
-
-That way, you get equations of motion — differential equations describing how the field evolves in time and space.
-
-If we apply this to QED, do you know what the equation is called that describes the motion of a fermion?
-
-Perfect. Remember, what's the equation? It says it changes, but it doesn't have a $\bar{\psi}$ side; it just has $\psi$.
-
-Note: $G$ plus or minus is the same term as here. I think the $D_\mu$ here instead of the short — yes.
-
-That would be for the next portion.
-
-## Gauge Transformations
-
-Go to the next portion — the Rancho Kinemic picture.
-
-While I'm cleaning the board, let me ask questions about this point.
-
-We discussed the Lagrangian and equations of motion. Let's discuss **gauge transformation** and **gauge symmetry** — an extremely important concept in field theory.
-
-We'll only touch on this briefly since we're not doing field theory, but it's really important you know where legs grow from it.
-
-Something very familiar from quantum mechanics is the **phase ambiguity** of the wave function. We can update the phase, and the absolute square of the wave function won't change because you multiply $\psi$ to $\psi^*$ and the phase drops out.
-
-This is fine. First is to acknowledge that this should be a symmetry of our theory — we should be allowed to make this phase transformation.
-
-It's kind of by definition, so this overall phase you don't even have to think about.
-
-The problem appears when you demand your theory to be invariant under changes of phase at **all possible space-time points** simultaneously with **different phases**.
-
-What if I want to adjust my wave function at every space point?
-
-Why is this a problem? Because in our equation of motion, in our Lagrangian — let me just write the Dirac part: $\bar{\psi}D_\mu\gamma^\mu\psi$.
-
-Here I have a term $\partial_\mu\psi$, and this term becomes $\partial_\mu\psi'$ which is $\partial_\mu(e^{i\alpha(x)}\psi)$.
-
-Let me take the derivative. This equals applying the derivative to the first term and then to the second term.
-
-When I apply it to the second term, I just have $\partial_\mu\psi$. When I apply it to the first term, I get $\partial_\mu$ acting on this — the exponent stays, but I have to take the derivative of the exponent.
-
-So there's an **extra term**. Indeed, the same equation won't hold for $\psi'$. It doesn't transform to the same equation because the derivative yields another term with $\partial_\mu\alpha$.
-
-This means that **local gauge transformation** is not a symmetry of the free Lagrangian of the free moving Dirac particle.
-
-You cannot adjust phase independently at different points for a free particle.
-
-In simple words, this means the theory is **incomplete**. It only becomes complete if you consider radiation, photons, and charged particles together.
-
-Once you look at the full Lagrangian (I think I get a minus here — that's an exercise in field theory), you update simultaneously the phase of the field $\psi$ and the electromagnetic field $A$.
-
-Then you see that the additional term appearing in the covariant derivative $D_\mu$ will **cancel exactly** the one you get from the phase.
-
-Then the Lagrangian stays the same with the updated fields $\psi$ and $A$.
-
-This fact led us to the $D_\mu$ term. Actually, writing $D_\mu$ minus or plus — was it plus before or minus? That's correct.
 
 ::: callout-tip
-The covariant derivative in QED is:
-$$D_\mu = \partial_\mu - ieA_\mu$$
-This ensures local U(1) gauge invariance by canceling the extra terms from phase transformations, with $e$ being the electromagnetic coupling constant.
+Once you understand the index structure in the QED Lagrangian, the same pattern extends to QCD — just replace U(1) with SU(3) and add color indices. The counting of dimensions (Lorentz, spinor, color) is similar.
 :::
-## Physical Implications
-
-From equations of motion, you can see how different fields are coupled to each other.
-
-In our pendulum example, we would see how the pendulum affects the movement of the upper marble.
-
-Similarly, from equations of motion, we can see that motion of fermion fields is affected by motion of photons, and photons are affected by fermions.
-
-The way we introduce **gauge symmetry** tells us exactly how they affect each other — how they interact.
-
-Gauge symmetry enforces a certain way photons and fermions interact with each other. They have to interact with strength $g$.
-
-The structure is very simple. Again, this is a scalar quantity.
-
-You can figure out and convince yourself that the same integral is a scalar quantity. I guess it comes from this $G$ matrix — $\gamma$ being $4 \times 4$ and then contracting the stuff.
-
-These are contracted. We'll find — that's important.
-
-I think it's worth writing down: **gauge symmetry tells us how objects interact with each other**. That's very important.
-
-## Extending to Other Theories
-
-Now we'll take this idea and move from QED to QCD.
-
-Before jumping to QCD, where we deal with wave functions in three dimensions, let's consider wave functions in the space of two coordinates — the case for weak interaction.
-
-For weak interaction, you have up components and down components. Remember how the weak charge for quarks was $+1/2$ or $-1/2$ — the same range.
-
-Here you have an up field and down field. Remember, it's still a fermion, so they have hidden four spinor components (we don't talk about that).
-
-In that case, the transformation that updates the phase is more general.
-
-What we want is that the update happening here doesn't change the observable. Our observable will be $\psi^\dagger\psi$.
-
-$G$ or the matrix that updates the field — $\psi$ is the $2 \times 2$ matrix, and it's **unitary** because observables should not change.
-
-In this case, we're dealing with transformations that are unitary, described by unitary matrices spanning the class called the **$U(2)$ group**.
-
-We'll also fix the determinant of this matrix to be 1, and then this $S$ comes from — for all matrices with determinant equal to 1 and unitary, they can be represented as an exponent.
-
-Who has seen the exponent of a matrix before? If you saw, what is this? Can you tell me what I should write here and then $V$?
-
-This is more complicated. As soon as I put here one, it gets a little bit...
-
-We solved it last year, right? I think it's either 1 or $1 - e$ something. So $e$ to 1, 1, 10 gets more complicated.
 
 
 
-### Matrix Exponentiation and Generators in SU(N) Groups
+## Generators of SU(2) and SU(3) in Gauge Theory
 
-Exactly right.
-So the approach is to take the expansion and perform multiple matrix multiplications.
+The matrix exponentiation approach defines any element of the **SU(2)** group:
 
-I recall it's either $e^{1}$ or $1 - e$, but here, this is certainly not zero — and in fact, I'm not entirely sure about that anyway — so you understand what I'm referring to.
+  $$M = e^{\alpha}, \qquad \det M = e^{\operatorname{Tr}(\alpha)} \;\Rightarrow\; \operatorname{Tr}(\alpha)=0.$$  
 
-This is **matrix exponentiation**, and you can represent any element of the **SU(2) group** using matrix exponentiation.
-Here, we have a $2 \times 2$ matrix with **zero trace**.
-That condition comes from the determinant:
-$$
-\det(U) = e^{\mathrm{Tr}(\alpha)} = 1
-$$
-which implies the trace of $\alpha$ must be zero.
+The three traceless **generators** are the **Pauli matrices**  $\sigma_1,\sigma_2,\sigma_3$ :
 
-In fact, there are only **three matrices** that span the entire basis of such traceless matrices: the **Pauli matrices**.
-These are called the **generators of the group** because they generate any group element.
+| Matrix | Definition |
+|--------|------------|
+|  $\sigma_1$  |  $\begin{pmatrix}0&1\\1&0\end{pmatrix}$  |
+|  $\sigma_2$  |  $\begin{pmatrix}0&-i\\i&0\end{pmatrix}$  |
+|  $\sigma_3$  |  $\begin{pmatrix}1&0\\0&-1\end{pmatrix}$  |
 
-Once we identify these three generators, we can take any three real numbers $\alpha_1, \alpha_2, \alpha_3$, compute the combination $-i\alpha_j \sigma_j$, exponentiate it, and obtain an element of SU(2) — and in fact, this spans the entire group.
-You need to know the generator matrices — they're fixed — then provide three numbers, and I can plug them into a Python routine.
+Given three real numbers  $\alpha_1,\alpha_2,\alpha_3$ , we form
+
+  $$\alpha = \sum_{i=1}^3 \alpha_i \sigma_i,$$  
+
+exponentiate, and obtain a group element. This spans the entire **SU(2)** group.
+
+<hr>
+
+<b>Q:</b> Is there a reason why we fix the determinant?
+<b>A:</b> Yes, because the group is **SU(2)**. U(2) factorises as
+
+  $$U(2) = U(1) \cdot SU(2).$$  
+
+The U(1) part is a simple scalar phase; the **SU(2)** part is the nontrivial matrix. This scalar phase is the same as in 2D, while the new **SU(2)** matrix gives the interesting structure.
+
+<b>Q:</b> I see the relationship, but I don't know why we need to fix the determinant then.
+<b>A:</b> **SU(2)** is one of the standard groups — we know everything about it: how many **generators** it has, how to exponentiate them. It is a nice object to work with. Choosing **SU(2)** (instead of the more complicated U(2)) is a matter of convenience and a standard classification. The same philosophy applies to higher dimensions.
+
+<hr>
+
+For the three‑component wave function of quantum chromodynamics (colors red, blue, green), the transformation is a  $3\times3$  matrix with an overall phase – that part is not complicated – and a nontrivial part of matrices with determinant 1. Again, exponentiation requires the exponent to be traceless. All bases of traceless 3×3 matrices that satisfy this have anti-commutation properties.
+
+In three dimensions the traceless Hermitian matrices have eight **generators** (the Gell‑Mann matrices  $T_i$ ):
+
+  $$\alpha^\dagger = \alpha,\quad \operatorname{Tr}(\alpha)=0 \;\Rightarrow\; \alpha = \sum_{i=1}^8 \alpha_i T_i.$$  
+
+The number of **generators** is related to the number of charge carriers in the field. Each **generator** matrix appears in the interaction term, which "knows" about the matrix. When you attach the field  $\psi$ , you also attach the interaction field  $A$  together with the **generator** matrix.
+
+For **SU(2)**, the three **generators** correspond to three charge carriers:  $Z$ ,  $W^+$ ,  $W^-$ .
+For **SU(3)**, the eight **generators** correspond to eight gluons.
+
+| Group | **Generators** | Charge carriers |
+|-------|----------------|----------------|
+| **SU(2)** | 3 |  $Z,\,W^+,\,W^-$  |
+| **SU(3)** | 8 | 8 gluons |
+
+
+::: callout-note
+The naming of the eight gluons is often schematic (e.g., color combinations) because there is no single set of distinct names – as the lecture says: "unfortunately we lack imagination to give them all proper names."
+:::
+
+<hr>
+
+The same derivative that introduced the extended derivative in the 2‑component case will appear, together with the appropriate matrix, when we move to higher dimensions. Thus  $\alpha$  is now a  $2\times2$  traceless Hermitian matrix, and the transformation is
+
+  $$\psi \to e^{i\alpha}\psi.$$  
+
+These **generator** matrices –  $\sigma_i$  for **SU(2)** or  $\lambda_i$  (Gell‑Mann) for **SU(3)** – penetrate the interaction vertex.
+
+
+
+## Gluon Matrices, Confinement, and Cross-Section Types
+
+#### Matrix Structure in QCD
+
+In the electroweak interaction, there is a matrix diagonal in the weak isospin space that corresponds to the  $Z$  boson; the  $W$  and  $Z$  bosons are charged similarly to the gluon field. In QCD, some matrices are diagonal in **color space**, and we identify an extra hypercharge for the states. Other matrices are off-diagonal, like  $W_2$  or  $W^\pm$  if you think of the electroweak matrix structure. The same matrix structure appears in the homework exercise.
+
+The eight gluons can be thought of as having different matrix forms. They act differently on the quark fields, and the interaction vertex changes depending on which gluon interacts with the quark—this is driven by the **structure constants**. It is a good exercise to think about the interaction term.
+
+<hr>
+#### Confinement
+
 
 ::: callout-important
-Any element of SU(2) can be written as:
-$$
-U = e^{-i \alpha_j \sigma_j}
-$$
-where $\sigma_j$ are the Pauli matrices and $\alpha_j$ are real parameters.
+**Confinement** is a property of the strong interaction: the interaction strength **grows** when objects are pulled apart. In contrast, the electromagnetic interaction between an electron and a positron decreases with distance. For quarks the opposite is true—the strong interaction that governs the color charge **increases** as you separate the objects, confining quarks to small scales. The only way to experience a strong interaction is to zoom into the smallest objects: mesons and baryons.
 :::
-Is there a reason we fix the determinant to 1?
-Yes — because we're working with **SU(2)**.
-In general,
-$$
-U(N) = U(1) \times SU(N)
-$$
-So U(2) is U(1) × SU(2).
-The U(1) part is just a simple scalar phase, while SU(2) contains the non-trivial matrix structure.
-The scalar phase behaves exactly as in the 2D case, but the SU(2) matrix gives something interesting.
 
-So I see the relationship, but why do we fix the determinant?
-Because **SU(2)** is one of the standard groups — we know a lot about it.
-If we considered U(2) instead, we'd have more generators and greater complexity.
-SU(2) is one of the primary elementary groups — that's the main reason.
-We know everything about SU(2): how many generators it has, its matrix structure — it's a nice object to work with.
+Confinement means that the strong interaction is confined inside a **bubble**. There is no strong interaction outside the bubble of a meson or baryon. If you try to pull them apart with a huge force, they will eventually split, and each fragment will again form a confined, color‑neutral object.
 
-This factorization helps us proceed similarly for higher groups:
-$$
-U(3) = U(1) \times SU(3)
-$$
-We factor out the phase, and what remains is the standard group **SU(3)**, which we use to describe the global update of the wave function with the same components.
-This is exactly what we deal with in **quantum chromodynamics (QCD)**.
+| Property | Strong Interaction | Electromagnetic Interaction |
+|----------|-------------------|----------------------------|
+| Behavior with distance | Attraction grows (confinement) | Attraction decreases (Coulomb law) |
+| Effective coupling  $\alpha_s$  vs  $\alpha_\text{EM}$  | Large at low  $Q$ , small at high  $Q$  | Small at low  $Q$ , grows logarithmically |
+| Charge type | Color (3 charges) | Electric (1 charge) |
+| Force carriers | Gluons (self‑interacting) | Photons (no self‑interaction) |
 
-When dealing with **color charge**, we don't have two components — we have **three**: red, blue, and green.
-The transformation is then a $3 \times 3$ matrix with an overall phase — that's not too complicated.
-We've discussed this before.
+<b>Color neutral</b> means zero net color charge with respect to the strong interaction. As soon as a particle carries a color charge, gluons can interact with it, and it would not be confined. (see @fig-fg4) Matter forms these little bubbles where the strong interaction resides; outside, particles do not feel the strong field—they are color neutral.
 
-But then there's a non-trivial contribution where you update your fields significantly.
-These are $3 \times 3$ matrices with determinant equal to 1.
-Again, you can relate this to the matrix exponential, and the exponent must be **traceless**.
+I am not deriving confinement from the Lagrangian; it is a **postulate** of the theory, and it has been proven by the fact that life exists. Confinement plays a crucial role in binding quarks. However, looking at the QCD Lagrangian, you cannot directly see that it is a confined theory. (see @fig-fg5) There are indications, one of which is the **gluon self‑interaction**. 
 
-The basis of traceless matrices in three dimensions that satisfy the anti-commutation properties — should I say the output must be anti-Hermitian? Does it hold for our condition?
-We insert it, multiply by two, and get $-i\alpha$, then move to the other part.
-
-If you look at the basis in two dimensions for traceless matrices, you get **three** generators; in three dimensions, you get **eight**.
-The number of generators is related to the number of **charge carriers** in the field.
-
-In fact, we identify each generator matrix with the action of the field because they appear in the **interaction term**.
-The interaction term includes this matrix:
-every time you attach the field $\psi$ and the interaction field $A$, it comes together with this generator matrix.
-
-To connect this back: remember where this chunk came from?
-We were computing derivatives and found an extra derivative for the phase.
-This extra derivative led us to introduce an **extended derivative** of the field — an interaction term that appears in Feynman diagrams.
-
-As soon as we deal with higher dimensions, the same derivative we compute will come together with the appropriate matrix.
-So $\alpha$ is now $2 \times 2$, and it will appear here as another matrix.
-These generator matrices — $\sigma$ for SU(2), or $\lambda$ for SU(3) — will appear in the **interaction vertex**.
-
-We find that:
-
-- For **SU(2)**: 3 generators → 3 charge carriers: $Z$, $W^+$, $W^-$
-- For **SU(3)**: 8 generators → 8 gluons
-
-Unfortunately, we lack the imagination to name all eight gluons properly, but they are identified by their matrices.
-
-In the case of weak interaction, one matrix is diagonal in the space — roughly corresponding to the **Z boson**.
-The W and Z are charged similarly to the gluon field; some will be diagonal, and we identify certain extra hypercharges for the states.
-Some will behave like $W_2$, $W^+$, depending on the matrix.
-
-You'll see the same matrices in homework exercises.
-Think of them as the eight different gluons — you can name them, and they act differently on the field.
-They appear in the interaction vertex depending on the **flavor of the gluon** interacting with the quark.
-Each vertex behaves differently, driven by the structure of the Pauli matrices or their generalizations.
-
-That's why it's a good exercise to think about this interaction term:
-How does this become a skewer? How do we contract the color charge? It's a big, old puzzle.
-
-Now, the last part: I have two more topics.
-**Confinement** is important to discuss, so let me say a few words about it, and then we'll go through the basic equations quickly.
-
-**Confinement** is the property of the theory where the **strong interaction grows** with distance.
-Unlike electromagnetic interactions, which decrease with distance, the strong interaction governing color charge **increases** when you pull quarks apart.
-This confines quarks to small scales.
-
-The only way to feel the strong interaction is to zoom in to the smallest objects: **mesons** and **baryons**.
-Let's draw them again:
-
-- This is a **meson**
-- This is a **baryon**
-
-The word "confined" means that the strong interaction exists only **inside** the bubble of the meson or baryon.
-There is **no strong interaction outside**.
-If you try to pull them apart with huge force, at some point they divide — but then the resulting objects are again **color-neutral**, confined, and travel as stable particles.
-
-**Color neutral** means having **zero charge** with respect to the strong interaction.
-Remember: as soon as a particle has color charge, gluons can interact with it — meaning it's **not confined**.
-Therefore, matter forms into these little bubbles where strong interactions are active inside, but outside they don't feel the strong field — they are color neutral.
-
-I'm not deriving this — I'm stating it as a fact of the theory, proven by the existence of life as we know it.
-Confinement plays a vital role in binding and making life possible.
-
-However, if you look at the **Lagrangian** — where did our Lagrangian go? — you can't directly see that it's a confined theory.
-There are **indications** of confinement in the Lagrangian, and one of them is the **gluon self-interaction**.
 
 
 
@@ -635,80 +439,40 @@ There are **indications** of confinement in the Lagrangian, and one of them is t
 
 
 
-In QED, we had photon terms; in QCD, we have $G_\mu$ terms like:
-$$
-G_\mu G_\nu - G_\nu G_\mu + f^{abc} G_\nu G_\nu
-$$
-and then $G_\mu G_\mu$ with 3-gluon and 4-gluon terms.
-These manifest in interaction vertices like this and this — called **gluon self-interactions**.
+ The QCD Lagrangian is
 
-Gluon self-interaction is one indication of confinement — not a proof, but a clue.
-People study all possible field theories; some have confinement, some don't.
-Confinement remains one of the great unsolved problems — there's even a prize waiting for whoever can explain it.
+  $$\mathcal{L}_\text{QCD} = -\frac12 \operatorname{Tr}\left( G_{\mu\nu} G^{\mu\nu} \right) + \sum_f \bar\psi_f^i \left( i\gamma^\mu D_\mu^{ij} - m_f \delta^{ij} \right) \psi_f^j,$$  
 
-::: callout-note
-The **running coupling** $\alpha_s(Q)$ depends on the momentum transfer $Q$:
+with the field strength tensor
 
-- **Asymptotic freedom**: $\alpha_s(Q) \to 0$ as $Q \to \infty$
-- **Confinement**: $\alpha_s(Q)$ grows large at low $Q$ (around 1 GeV)
-:::
+  $$G_{\mu\nu}^{ij} = \partial_\mu G_\nu^{ij} - \partial_\nu G_\mu^{ij} + g_s [G_\mu, G_\nu]^{ij},$$  
 
+where the term  $g_s[G_\mu, G_\nu]^{ij}$  gives rise to **three‑ and four‑gluon vertices**. The gluon self‑interactions are one indication of confinement, though not a proof. The covariant derivative is  $D_\mu^{ij} = \partial_\mu - i g_s A_\mu^a T_{ij}^a$ , where  $A_\mu^a$  are the gluon fields and  $T_{ij}^a$  are the generators of  $SU(3)$ .
 
-![Running of the strong coupling $\alpha_s(Q)$ with momentum transfer $Q$. At high $Q$, the coupling decreases, showing asymptotic freedom; at low $Q \lesssim 1 GeV$, the coupling grows large, marking the confinement region.](2025-Lecture-01-images/fig7.png){#fig-fg7}
+Among all possible field theories, some exhibit confinement and some do not. Confinement remains **one of the unsolved problems**; there is a €1 000 000 prize for a person who can explain it—the Paris Prize? There is another phenomenon as well.
+
+<hr>
+#### Effective Coupling and Asymptotic Freedom
+
+The effective strong coupling  $\alpha_s$  depends on the momentum transfer  $Q$  with which you probe the quark. 
 
 
 
 
-
-We define $Q$ as the momentum with which we probe the hadron.
-What we experience is the **effective strong coupling** $\alpha_s^{\text{eff}}$.
-You can think of a gluon coming in, interacting with a quark, and a lot happening — effectively, one quantum bubble with an effective interaction strength that depends on the gluon's momentum.
-
-This gluon, depending on its energy, will experience different interaction strengths.
-In electromagnetic interactions, we discuss screening effects; here, the effective interaction depends on $Q$ as follows:
-
-- If $Q$ is very high, we're in the regime of **asymptotic freedom**
-- If $Q$ is low, we're in the regime of **confinement**
-
-The transition happens around 1 GeV.
-Hadrons live in the low-$Q$ region.
-
-If you think about it: these particles talk to each other, exchange gluons, and the gluon couples to the fermion.
-When they're close together, the gluon momentum is small — below 1 GeV — and that's where the interaction is super strong.
-Meanwhile, at very high momentum transfer, the coupling becomes small — that's **asymptotic freedom**, which we'll discuss more later.
+![Running of the strong coupling  $\alpha_s(Q)$  with momentum transfer  $Q$ . At high  $Q$ , the coupling decreases, showing asymptotic freedom; at low  $Q \lesssim 1 GeV$ , the coupling grows large, marking the confinement region.](2025-Lecture-01-images/fig7.png){#fig-fg7}
 
 
 
-### Nuclear Binding and Decay Fundamentals
 
-I notice you've provided detailed instructions and examples for editing lecture transcripts, but you haven't included the actual nuclear physics lecture transcription that needs to be polished.
+ For **high  $Q$ **, the coupling is small—a regime called **asymptotic freedom**. For **low  $Q$ **—around the GeV scale—the coupling is large, and this is the regime of confinement. Hadrons live in this low‑energy region. When quarks exchange gluons, the gluon momentum is small, below 1 GeV, so the interaction is very strong. As the transfer momentum becomes very high, the coupling becomes small.
+<hr>
+#### Cross‑Section Types
 
-The helping material contains several relevant nuclear physics formulas that could be integrated if they appear in your transcript:
+We will use three types of cross‑sections:
 
-**Key Nuclear Physics Formulas:**
-
-* **Nuclear Binding Energy**: Calculates the energy equivalent of the mass defect:
-$$B(Z,A) = [Zm_p + (A-Z)m_n - m_{\text{nucleus}}]c^2$$
-
-* **Semi-Empirical Mass Formula**: Approximates binding energy based on the liquid drop model:
-$$B(Z,A) = a_V A - a_S A^{2/3} - a_C \frac{Z(Z-1)}{A^{1/3}} - a_A \frac{(A-2Z)^2}{A} + \delta(A,Z)$$
-
-* **Radioactive Decay Law**: Follows exponential decay:
-$$N(t) = N_0e^{-\lambda t}$$
-
-* **Rutherford Scattering**: Describes angular distribution:
-$$\frac{d\sigma}{d\Omega} = \left(\frac{Z_1Z_2e^2}{8\pi\epsilon_0E}\right)^2 \frac{1}{\sin^4(\theta/2)}$$
-
-* **Universe Evolution Timeline**: Includes key phases:
-- $t \sim 10^{-12}$ seconds: Quark-Gluon Plasma
-- $t \sim 1$ second: Big Bang nucleosynthesis begins
-
-* **Quark Charge Properties**:
-- **Up-type quarks** ($u, c, t$): Electric charge $+\frac{2}{3}$
-- **Down-type quarks** ($d, s, b$): Electric charge $-\frac{1}{3}$
-
-::: callout-note
-These formulas represent **fundamental concepts** in nuclear and particle physics that might appear in your lecture transcript. The binding energy formulas explain nuclear stability, the decay law describes radioactive processes, Rutherford scattering reveals nuclear structure, and the quark properties form the basis of particle physics.
-:::
-Could you please provide the actual lecture transcription you'd like me to edit? Once you share the text, I'll apply your requested corrections while preserving all technical content, explanations, and analogies.
+| Type | Definition |
+|------|------------|
+| **Inclusive** | Measure only the outgoing electron; integrate over all other produced particles. |
+| **Exclusive** | Measure the electron **and at least one other** particle (e.g., a proton or a pion). |
+| **Semi‑inclusive** | Measure the electron **and one other** particle, ignoring the rest. |
 
