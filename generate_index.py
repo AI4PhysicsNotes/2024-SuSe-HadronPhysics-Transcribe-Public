@@ -240,9 +240,9 @@ class LectureIndexGenerator:
 <body>
     <header>
         <div class="header-buttons">
-            <a href="https://github.com/mmikhasenko/LM-Notes-HadronPhysics" target="_blank">
+            <a href="https://github.com/AI4PhysicsNotes/2024-SuSe-HadronPhysics-Transcribe-Public" target="_blank">
                 <img src="github-mark.png" alt="GitHub Logo">
-                Code
+                GitHub
             </a>
             <a href="https://moodle.ruhr-uni-bochum.de/course/view.php?id=58809" target="_blank">Moodle Course</a>
         </div>
