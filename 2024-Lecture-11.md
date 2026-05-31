@@ -12,47 +12,6 @@ format: html
 **Note Taker**: {{< meta note_taker >}}
 
 
-
-## Exam Participation and Symmetry Breaking Discussion
-
-- **Date and format** fixed, with possible adjustment between the 23rd and 25th.
-- **Participants from the group** who may come for the exam: Marx, Moritz, and possibly Fabian. (Fabian’s need for credit points is uncertain.)
-- **Other people** are also welcome to attend.
-- **Paul** is finishing his bachelor and will not be involved.
-- **Dhuvanshu** (a PhD student in the group) **must participate**. He was partly involved in the typing exercises and is usually at CERN doing hardware work. He was present the first week and made it through the exam despite skipping most of the semester. He now has to work.
-
-<b>Q:</b> Do you want to participate in the exam?
-<b>A:</b> I do not mind, but we certainly have to make Dhuvanshu participate.
-
-<hr>
-
-### Symmetry-breaking discussion
-
-- The lecturer sent encouragement to look at symmetry breaking.
-- He saw the material in the morning and made some notes.
-- Moritz briefly saw it yesterday but then had a dentist appointment.
-- The material was sent on Friday.
-- A meeting with Hanin is set for Thursday; others are welcome.
-
-
-::: callout-tip
-Combine the information obtained today with the symmetry-breaking material. Bring your notes to Ilya for the meeting on Thursday. The exercise is simple and gives easy points. You do not need to report, but collecting the points over the semester is important.
-:::
-
-### People involved
-
-| Person | Role / status | Notes |
-|--------|---------------|-------|
-| Marx | Likely examiner | Asked to come; likely to participate |
-| Moritz | Likely examiner | Asked to come; likely to participate |
-| Fabian | Possibly examiner | Might not need credit points |
-| Dhuvanshu | PhD student | Must participate; was inactive during semester |
-| Paul | Bachelor student | Finishing bachelor; not coming |
-| Hanin | ? | Meeting on Thursday |
-| Ilya | ? | To receive notes on Thursday |
-
-
-
 ## Mapping S-Plane to k-Plane: Threshold and Riemann Sheets
 
 So far we have discussed the amplitude as a function of the Mandelstam variable  $S = (P_1 + P_2)^2$ , which is convenient for describing the partial‑wave scattering amplitude in terms of a single variable. 
