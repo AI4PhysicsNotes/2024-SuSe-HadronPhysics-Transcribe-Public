@@ -150,6 +150,61 @@ window.Quarto = {
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
+<div class="lecture-page-top">
+  <header class="lecture-page-header">
+    <div class="header-buttons">
+      <a href="index.html" class="header-btn">← Index</a>
+      <a href="https://github.com/AI4PhysicsNotes/2024-SuSe-HadronPhysics-Transcribe-Public" class="header-btn" target="_blank" rel="noopener noreferrer">
+        <img src="github-mark.png" alt="" aria-hidden="true" width="14" height="14">
+        GitHub
+      </a>
+      <span class="feedback-group">
+        <span class="feedback-label">Feedback:</span>
+        <a href="#" class="header-btn" id="feedback-email">Email</a>
+        <a href="#" class="header-btn" id="feedback-issue">Issue</a>
+      </span>
+    </div>
+  </header>
+  <div class="lecture-disclaimer">
+    <strong>Experimental!</strong> AI-processed lecture transcript.
+  </div>
+</div>
+<script>
+(function () {
+  var top = document.querySelector(".lecture-page-top");
+  var content = document.getElementById("quarto-content");
+  if (top && content && top.parentNode !== document.body) {
+    document.body.insertBefore(top, content);
+  }
+
+  var match = document.title.match(/\((\d{4})\)\s+Lecture\s+(\d+)/);
+  var year = match ? match[1] : "";
+  var lectureNum = match ? match[2] : "";
+  var lectureLabel = lectureNum ? "Lecture " + lectureNum : "this lecture";
+  var template = "Looking at the " + lectureLabel + ", I've noticed ";
+  var subject = lectureNum
+    ? "Feedback on Lecture " + lectureNum + (year ? " (" + year + ")" : "")
+    : "Feedback on lecture notes";
+
+  var emailLink = document.getElementById("feedback-email");
+  if (emailLink) {
+    emailLink.href =
+      "mailto:mikhail.mikhasenko@rub.de?subject=" +
+      encodeURIComponent(subject) +
+      "&body=" +
+      encodeURIComponent(template);
+  }
+
+  var issueLink = document.getElementById("feedback-issue");
+  if (issueLink) {
+    issueLink.href =
+      "https://github.com/AI4PhysicsNotes/2024-SuSe-HadronPhysics-Transcribe-Public/issues/new?title=" +
+      encodeURIComponent(subject) +
+      "&body=" +
+      encodeURIComponent(template);
+  }
+})();
+</script>
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
