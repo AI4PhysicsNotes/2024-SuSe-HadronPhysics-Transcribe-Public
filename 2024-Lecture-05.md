@@ -538,9 +538,11 @@ The lecture briefly touched on differences between the **canonical state** (intr
 
 ::: callout-note
 The best coverage of this subject is in Martin Spearman's *Elementary Particle Theory*, chapter 4. (see @fig-fg7) It starts from the Lorentz group, introduces vectors, and does group theory without heavy detail or mass – providing insights into particle definitions.
-<hr>
-### Comparison of state definitions (as described in the lecture) (see @fig-fg2)
 :::
+
+<hr>
+
+### Comparison of state definitions (as described in the lecture) (see @fig-fg2)
 
 | Aspect | Canonical state | Helicity state |
 |--------|----------------|----------------|
@@ -549,6 +551,7 @@ The best coverage of this subject is in Martin Spearman's *Elementary Particle T
 | Coverage in reference book | Chapter 4 of Spearman | Chapter 4 of Spearman |
 
 <hr>
+
 An **exercise** will be handed out: (see @fig-fg1) (see @fig-fg3) (see @fig-fg6)
 
 - Dalitz plots from **CLEO** and **BaBar** are provided, with labels removed.

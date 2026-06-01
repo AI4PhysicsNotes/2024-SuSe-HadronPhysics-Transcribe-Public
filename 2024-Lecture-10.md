@@ -286,6 +286,7 @@ There is no single, always-valid intuitive picture for right-handed and left-han
 *   When the mass is significant  $(m \sim E)$ , chirality and helicity are **not the same**. A massive particle's state is a mixture of both chiral components, and its helicity can change under a Lorentz boost (like moving to its rest frame).
 
 This distinction is fundamental in particle physics. For example, in the **electroweak interaction** of the Standard Model, the  $W$  boson couples only to **left-handed chiral fermions** and **right-handed chiral anti-fermions**.
+
 ### **Connection to the Weak Interaction** 
 
 
