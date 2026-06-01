@@ -157,6 +157,7 @@ In 1967 an experiment initially gave a wrong result for the muon polarization; i
 ## The Muon's Anomalous Magnetic Moment
 
 The same technique used to measure the proton's magnetic moment was subsequently applied to the muon.
+
 #### Proton magnetic moment review
 
 The magnetic moment of a point‑like fermion is given by

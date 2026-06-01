@@ -199,6 +199,7 @@ In the current direction theory, the field that experiences binding in the confi
 
 
 This is a useful picture: everything is filled with a rather boring sigma field. Because of QCD properties and spontaneous symmetry breaking, this field does not fluctuate around zero but sits at a certain vacuum expectation value. The pi fields appear massless because they do not see the curvature of the potential. This is essentially the Goldstone theorem: once spontaneous symmetry breaking of a global symmetry occurs, massless bosons appear.
+
 #### Goldstone Bosons in the Chiral Limit
 
 If quarks are massless, the pions, kaons, and eta mesons would be massless. Formally, in the chiral limit:
@@ -213,21 +214,25 @@ If quarks are massless, the pions, kaons, and eta mesons would be massless. Form
 |  $\eta$  | 0 | Eighth Goldstone boson of SU(3) |
 
 The Lagrangian of QCD has a global SU(2) symmetry when no mass term is present, and this symmetry is spontaneously broken when one moves to the minimum of the theory. Independent rotations of right and left quark fields correspond to rotations in the sigma field—related to the symmetry of the potential. Once at the minimum, this symmetry is broken (a global symmetry), and Goldstone bosons (pions) appear massless.
+
 #### Why Mesons Are Not Massless in Nature
 
 Quarks have mass, which breaks the symmetry explicitly. This is connected to the Higgs mechanism via Yukawa couplings that give mass to quarks. However, for perturbative QCD calculations, we simply put a mass term explicitly into the Lagrangian. The Higgs discovery shows that something similar to fundamental symmetry breaking happens with the Higgs field, but it is a different phenomenon.
 
 Even in QCD without quark masses, the **eta prime** appears massive. This is related to the U(1) symmetry. The group U(2) equals SU(2) plus one U(1); if you allow the determinant to be a phase, you get an extra global U(1) symmetry. The Lagrangian appears invariant under this U(1) rotation because derivatives do not touch the phase—for example,  $\bar\psi\psi$  is invariant. However, this symmetry is also dynamically broken, and anomalies make the eta prime massive even when the seed quark masses are zero.
+
 #### What About the Proton Mass?
 
 In the chiral limit (setting quark masses to zero), the pion and kaon are massless. The proton is different: it is made of three quarks, but its mass comes from quark-gluon interactions, not from seed quark masses. The proton has quark-gluon interactions stored as energy. The mass of the proton is purely determined by these interactions.
 
 Pions and kaons are special—they are Goldstone bosons. The sigma field (quark condensate) fills the vacuum, and pions are little fluctuations on this background. Protons are excitations of this condensate of a different type. So except for Goldstone bosons, all other hadrons (like the proton, rho meson, etc.) have a proper mass related to quark-gluon interactions on top of the quark condensate.
+
 #### Tuning Masses in QCD
 
 The theory does not treat the values of masses as special. One can tune the masses—increase them or set them to zero. Introducing small quark masses (like up and down, smaller than the QCD scale of 1 GeV) does not change the physics much. Adding quark masses adds a linear term to the potential, skewing it slightly. The Mexican‑hat potential picture remains almost the same; now there is a small curvature in the pion direction, giving pions a small mass. But the theory remains the same—for example, the ratio of the proton mass to the rho meson mass is characterized by QCD interactions and does not change much if the masses are increased.
 
 In lattice QCD computations it is easier to calculate when pions are slightly heavier because slightly larger quark masses are used. This yields unphysical pion masses but still teaches us about properties of the theory—details like particle masses and widths change, but certain characteristics do not. This is a tool to learn about QCD.
+
 #### Lattice QCD
 
 All fields depend on coordinates  $x$ , a four-dimensional vector with time and spatial dimensions. A grid is introduced in spatial dimensions and time, and the Lagrangian action or correlations of particles are computed on this grid. A typical lattice setup:

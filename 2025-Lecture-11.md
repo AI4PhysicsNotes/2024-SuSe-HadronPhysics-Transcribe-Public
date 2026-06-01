@@ -21,6 +21,7 @@ The threshold for  $\pi\pi$  scattering (assuming no other open channels) is at 
 The branch cut is drawn to the right on the real axis of the  $s$ ‑plane to satisfy causality.
 
 A cross channel also exists for this reaction — for example,  $\pi^+\pi^- \to \pi^+\pi^-$  has a  $t$ ‑channel where  $\pi^+\pi^+$  scattering appears. (see @fig-fg7) This introduces another branch point on the left (negative  $s$  region) of the  $s$ ‑plane.
+
 #### Scattering Channels and Mandelstam Variables
 
 The scattering amplitude is an analytic function of the Mandelstam variables  $s$  and  $t$  (or equivalently  $s$  and  $u$ , since  $s+t+u = \sum m_i^2$ ). For a given reaction (called a **channel**), the kinematically allowed region in  $(s,t)$  is different.
@@ -32,11 +33,13 @@ The scattering amplitude is an analytic function of the Mandelstam variables  $s
 |  $u$ ‑channel (e.g.  $\pi\pi\to\pi\pi$  with legs crossed) |  $u > (2M_\pi)^2$ ,  $s<0$  |
 
 The same amplitude  $A(s,t)$  describes all three channels. When we take partial-wave projections in the  $s$ ‑channel, the  $t$ ‑ and  $u$ ‑channel singularities appear as branch points on the left‑hand side of the complex  $s$ ‑plane (for negative  $s$ ).
+
 #### Riemann Sheets and Singularities
 
 The amplitude can be analytically continued across the branch cut to a second Riemann sheet (denoted  $A_2$ ). The analytic structure on the second sheet is similar (branch point, cuts), but the values above the cut on the first sheet match the values below the cut on the second sheet.
 
 On this second sheet lie **virtual states** and **resonance poles**. In  $\pi\pi$  scattering in  $P$ ‑wave, the  $\rho$  meson appears as a resonance pole.
+
 #### Quark Model Picture of Mesons
 
 The quark model organizes mesons into levels according to the relative orbital angular momentum  $L_{QQ}$  between the quark and antiquark. The “bare” spectrum consists of boxes like 1s, 1p, 2s, … with hyperfine splitting (spin‑spin and spin‑orbit interactions) generating the fine structure.
@@ -48,11 +51,13 @@ For a  $c\bar{c}$  pair:
 - The  $1^{++}$  state  $\chi_{c2}$  belongs to the 1p box.
 
 This scheme maps most known mesons into simple angular‑momentum levels.
+
 #### The  $\rho$  Meson as a  $\pi\pi$  Resonance
 
 In the quark model, the  $\rho$  and  $\pi$  differ only by their spin wave functions. Unlike hydrogen‑atom transitions (which emit photons), QCD allows cheap creation of quark‑antiquark pairs from the vacuum. Therefore the  $\rho$  decays mainly to  $\pi\pi$ :
   $$\rho \;\rightarrow\; \pi\pi$$  
 This is strong decay; the  $\rho$  appears as a **resonance** in  $\pi\pi$  scattering. When two pions come together, they feel an attraction at the bare mass of the  $\rho$ , producing a peak in the cross section. That peak corresponds to a complex pole in the scattering amplitude on the second Riemann sheet.
+
 #### Summary and Next Steps
 
 Every particle is a pole in the complex plane of the scattering amplitude. To identify these poles, one must:
@@ -245,6 +250,7 @@ The principles of unitarity, analyticity, and crossing symmetry remain unchanged
 #### Introduction
 
 Since this is a very wide subject with many technicalities, we first cover the program and how lattice field theory helps us understand QCD. Then we will fill in the details.
+
 #### QCD and Its Challenges
 
 <b>QCD</b> is the gauge theory with an **SU(3) gauge group** that is extremely difficult to deal with. It has two key phenomena, both driven by gluon self‑interaction:
@@ -255,6 +261,7 @@ Since this is a very wide subject with many technicalities, we first cover the p
 | **Asymptotic freedom** | At very high momentum, quarks behave as nearly free particles. |
 
 Because the coupling is large at low energy, the usual methodology of **perturbation theory** and **Feynman diagrams** fails. There is no ordering scheme: producing two or three gluons is more profitable than one. Four different methods are needed. Over the last 30 years, one of the most productive has been **lattice QCD**.
+
 #### Lattice QCD
 
 <b>Lattice QCD</b> is a computational framework that takes the theory of the strong interaction as it is and computes its properties — including different observable operators — on a discretized space‑time grid.
@@ -265,6 +272,7 @@ The basic setup works like a laboratory:
 2. Fill the box with quantum fields.
 3. Solve the equations to evolve the fields for a certain time.
 4. Evaluate the properties of objects (e.g., hadrons) or probe the system.
+
 #### Defining the Box
 
 The box is what makes the theory numerically tractable. To put it into a computer:
@@ -276,6 +284,7 @@ The box is what makes the theory numerically tractable. To put it into a compute
 - All dimensions are discretized with a step size of about **0.1 fm**.
 
 The total box size should be a few femtometers; **2 fm** is a typical value.
+
 #### Fitting a Meson Inside
 
 The size of a meson is about **1 fm**, so we need the box to be bigger than that. The meson is placed inside, and its properties are evaluated. However, the meson must also be small enough relative to the box size to avoid feeling the mirrored images that arise from **periodic boundary conditions**.
@@ -283,6 +292,7 @@ The size of a meson is about **1 fm**, so we need the box to be bigger than th
 
 ::: callout-tip
 The box must be large enough that the meson (∼1 fm) does not interact with its periodic images, but not so large that computational costs become prohibitive. 2 fm is a good compromise.
+
 #### Periodic Boundary Conditions
 :::
 

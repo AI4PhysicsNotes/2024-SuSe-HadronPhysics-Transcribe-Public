@@ -252,7 +252,9 @@ window.Quarto = {
 <section id="with-spin" class="level3" data-number="1.3">
 <h3 data-number="1.3" class="anchored" data-anchor-id="with-spin"><span class="header-section-number">1.3</span> With spin</h3>
 <p>If the final-state particles have spin (e.g., <span class="math inline">3^{-}</span> and <span class="math inline">1^{+}</span> in scattering of <span class="math inline">0^{-}</span> $P^{+} $), the kinematics still requires only <strong>2 variables</strong>. The angular distributions of the final particles from production do not add independent degrees of freedom because they are determined by the dynamics, not free parameters.</p>
-<p>The amplitude in the spin case is not a scalar but a higher-rank object. For spin 3 (7 states) and spin 1 (3 states), the scattering amplitude becomes a$ 7 = 21 $-component object. Nevertheless, all 21 amplitudes depend on the same two kinematic variables. #### Mandelstam Variables</p>
+<p>The amplitude in the spin case is not a scalar but a higher-rank object. For spin 3 (7 states) and spin 1 (3 states), the scattering amplitude becomes a$ 7 = 21 $-component object. Nevertheless, all 21 amplitudes depend on the same two kinematic variables.</p>
+<section id="mandelstam-variables" class="level4" data-number="1.3.1">
+<h4 data-number="1.3.1" class="anchored" data-anchor-id="mandelstam-variables"><span class="header-section-number">1.3.1</span> Mandelstam Variables</h4>
 <p>The two variables are commonly chosen as Lorentz-invariant Mandelstam variables:</p>
 <p><span class="math display">s = (p_1 + p_2)^2 = (p_3 + p_4)^2 = m_{34}^2</span></p>
 <p><span class="math display">t = (p_1 - p_3)^2</span></p>
@@ -307,8 +309,9 @@ window.Quarto = {
 </div>
 </div>
 <hr>
-<section id="connection-to-three-body-decay-and-the-dalitz-plot" class="level4" data-number="1.3.1">
-<h4 data-number="1.3.1" class="anchored" data-anchor-id="connection-to-three-body-decay-and-the-dalitz-plot"><span class="header-section-number">1.3.1</span> Connection to Three-Body Decay and the Dalitz Plot</h4>
+</section>
+<section id="connection-to-three-body-decay-and-the-dalitz-plot" class="level4" data-number="1.3.2">
+<h4 data-number="1.3.2" class="anchored" data-anchor-id="connection-to-three-body-decay-and-the-dalitz-plot"><span class="header-section-number">1.3.2</span> Connection to Three-Body Decay and the Dalitz Plot</h4>
 <p>The same counting applies to a three-body decay: one incoming particle, three outgoing. The number of independent variables is again <strong>2</strong> because the number of legs is the same (four legs total).</p>
 <p>The three-body phase space can be expressed using the recursive formula, which yields a constant Jacobian when using Mandelstam invariants. The differential width is then:</p>
 <p><span class="math display">d\Gamma = \frac{|\mathcal{M}|^2}{2m}\, d\Phi</span></p>
@@ -327,8 +330,8 @@ window.Quarto = {
 </div>
 <hr>
 </section>
-<section id="key-formulas-from-the-recap" class="level4" data-number="1.3.2">
-<h4 data-number="1.3.2" class="anchored" data-anchor-id="key-formulas-from-the-recap"><span class="header-section-number">1.3.2</span> Key Formulas from the Recap</h4>
+<section id="key-formulas-from-the-recap" class="level4" data-number="1.3.3">
+<h4 data-number="1.3.3" class="anchored" data-anchor-id="key-formulas-from-the-recap"><span class="header-section-number">1.3.3</span> Key Formulas from the Recap</h4>
 <ul>
 <li><p>Number of degrees of freedom for spinless scattering: <span class="math display">(2+2)(4-1)-4 = 8 \quad \Rightarrow \quad 8-6 = 2</span></p></li>
 <li><p>Mandelstam invariants for two-body scattering: <span class="math display">s = (p_1 + p_2)^2 = (p_3 + p_4)^2 = m_{34}^2</span><br>
@@ -360,7 +363,10 @@ Figure&nbsp;1: A unitary diagram for the three-body decay. The arrows show the i
 <p>The charm quark decays, transitioning into an <span class="math inline">s</span> quark that ends up in the kaon. The <span class="math inline">c \to s</span> transition is within one generation and is not suppressed — an allowed process.</p>
 <p>This is the <strong>golden channel</strong> for registration because the final state has three charged particles (no neutrals). The proton is a charged, stable particle; the kaon and pion are stable in our experiments. They fly away from the decay without distraction, and their tracks are seen nicely through all detectors, pointing away from the primary interaction.</p>
 <p>At LHCb energies, there is about a 10 mm shift (≈1 cm) between the primary and secondary vertices. That shift comes from the boost and the fact that the <span class="math inline">\Lambda_c</span> in the laboratory frame lives longer than in its rest frame; it is produced with a few hundred GeV in proton–proton collisions at the LHC.</p>
-<p>This is a super‑nice decay and has been studied extensively. Below is an experimental result from an analysis that resembles the experimental data — the actual data would be indistinguishable from this plot because the statistics are so high that everything is smooth. #### Dalitz Plot Description</p>
+<p>This is a super‑nice decay and has been studied extensively. Below is an experimental result from an analysis that resembles the experimental data — the actual data would be indistinguishable from this plot because the statistics are so high that everything is smooth.</p>
+</section>
+<section id="dalitz-plot-description" class="level4" data-number="2.0.2">
+<h4 data-number="2.0.2" class="anchored" data-anchor-id="dalitz-plot-description"><span class="header-section-number">2.0.2</span> Dalitz Plot Description</h4>
 <p>The Dalitz plot for <span class="math inline">\Lambda_c \to pK\pi</span> has:</p>
 <ul>
 <li>** <span class="math inline">x</span> -axis**: invariant mass squared of the proton–kaon system, <span class="math inline">m_{pK}^2</span> .</li>
@@ -368,21 +374,33 @@ Figure&nbsp;1: A unitary diagram for the three-body decay. The arrows show the i
 </ul>
 <p>All allowed values for the decay are shown in colour; the white area around corresponds to kinematics for which no configuration exists (energy conservation cannot be satisfied). Selecting a point inside the coloured region determines the angles between particles and the lengths of those angles, allowing a rigid‑body model of that kinematic point.</p>
 <p>The range of possible invariant masses is limited. The allowed region is called a <strong>Dalitz plot</strong> — the tool we use to explore the kinematics.</p>
-<p>Different colours in the plot indicate different probabilities for the reaction to occur. We reconstruct the tracks of the particles and determine from which kinematic point the decay happened (there is an unambiguous relation between the four‑vectors and the point in the Dalitz plot). It turns out that certain kinematics are more probable than others — particles prefer to go in different directions. #### Kinematic Boundaries and Maximizing <span class="math inline">m_{pK}</span></p>
+<p>Different colours in the plot indicate different probabilities for the reaction to occur. We reconstruct the tracks of the particles and determine from which kinematic point the decay happened (there is an unambiguous relation between the four‑vectors and the point in the Dalitz plot). It turns out that certain kinematics are more probable than others — particles prefer to go in different directions.</p>
+</section>
+<section id="kinematic-boundaries-and-maximizing-m_pk" class="level4" data-number="2.0.3">
+<h4 data-number="2.0.3" class="anchored" data-anchor-id="kinematic-boundaries-and-maximizing-m_pk"><span class="header-section-number">2.0.3</span> Kinematic Boundaries and Maximizing <span class="math inline">m_{pK}</span></h4>
 <p>Suppose everything is collinear. One possibility is that the particles are aligned in one line, which corresponds to a boundary of the Dalitz plot. Inside the surface, they always have an angle between them; at the boundary, they are collinear.</p>
 <p><b>Q:</b> How do we maximise the mass of the proton–kaon system? Where does that point lie on the boundary? <b>A:</b> The point should be in the bottom right of the Dalitz plot.</p>
 <p><b>Q:</b> Why? <b>A:</b> To maximise the mass of <span class="math inline">pK</span> , the three‑momenta should be arranged so that the sum of the three‑momenta is as small as possible. If we add both momentum vectors (p and K) going in the same direction, the forward‑momentum sum should be as large as possible, so we should be on the right. Then if we add the kaon and pion momenta going in the same direction, the invariant mass <span class="math inline">m_{K\pi}</span> should be as small as possible.</p>
 <p><b>Q:</b> So you argue that <span class="math inline">m_{K\pi}</span> should be as small as possible? <b>A:</b> Yes, because the three momenta are in line — we subtract them.</p>
 <p>The professor’s way of thinking: in the rest frame of the <span class="math inline">K\pi</span> system, the kaon and pion fly next to each other, so their relative momentum is small. If you boost to that rest frame, they might even be both at rest — their invariant mass would be just the sum of their masses, the minimum mass. That point corresponds to the bottom right of the Dalitz plot (where <span class="math inline">m_{K\pi}</span> is minimal).</p>
 <p><b>Q:</b> Is this plot from experimental data? <b>A:</b> Yes.</p>
-<p><b>Professor:</b> And how in experiment will we reconstruct such a case, because we will not detect the proton? This is the lab frame. Everything we measure is in the lab frame, which is already boosted. Despite the problem being addressed in the lab frame, it is already boosted. So this point is the maximum mass? No — they have maximum momentum and go back‑to‑back, that corresponds to maximum mass. This point minimises the mass. Good. #### Parameterising the Dalitz Plot with Angles</p>
+<p><b>Professor:</b> And how in experiment will we reconstruct such a case, because we will not detect the proton? This is the lab frame. Everything we measure is in the lab frame, which is already boosted. Despite the problem being addressed in the lab frame, it is already boosted. So this point is the maximum mass? No — they have maximum momentum and go back‑to‑back, that corresponds to maximum mass. This point minimises the mass. Good.</p>
+</section>
+<section id="parameterising-the-dalitz-plot-with-angles" class="level4" data-number="2.0.4">
+<h4 data-number="2.0.4" class="anchored" data-anchor-id="parameterising-the-dalitz-plot-with-angles"><span class="header-section-number">2.0.4</span> Parameterising the Dalitz Plot with Angles</h4>
 <p>For a three‑body decay, fix the mass of the <span class="math inline">K\pi</span> system. In the centre‑of‑momentum frame of the <span class="math inline">\Lambda_c</span> , the three particles are arranged such that the sum of their three‑momenta is zero. Then boost into the rest frame of the <span class="math inline">K\pi</span> system. In that frame, the kaon and pion are back‑to‑back and their total momentum is zero; the proton carries the opposite momentum. With the mass of the <span class="math inline">K\pi</span> system fixed, the lengths of the kaon and pion momenta are fixed; the only variable is the angle <span class="math inline">\theta</span> between the proton and the direction of the <span class="math inline">K\pi</span> system. The entire Dalitz plot can be explored by varying <span class="math inline">\theta</span> from <span class="math inline">0</span> to <span class="math inline">\pi</span> . One corner corresponds to <span class="math inline">\theta=0</span> , the other to <span class="math inline">\theta=\pi</span> .</p>
 <p><b>Q:</b> Which coordinate corresponds to which corner? <b>A:</b> The right side (bottom right) should be <span class="math inline">\theta=0</span> and the left side? We found that when the proton and kaon go in opposite directions, that gives the maximum <span class="math inline">pK</span> mass. Since the lengths of all vectors are fixed, we can only rotate. The mass of the <span class="math inline">pK</span> system depends on the angle between them: a wider angle gives a larger mass. When the angle is zero, the mass is high; when they are nearly parallel, the mass is small.</p>
 <p>Exactly. The same reasoning applies for other particle pairs.</p>
-<p>Now fix the mass of the proton–kaon system. The most straightforward way to analyse a Dalitz plot is to go to the rest frame of that pair, where everything is fixed, and then scan along a line by changing the angle of that pair with respect to the third particle. The lines in the Dalitz plot correspond to fixing one invariant mass and varying the angle in one frame or another. #### Third Variable and Symmetric Representation</p>
+<p>Now fix the mass of the proton–kaon system. The most straightforward way to analyse a Dalitz plot is to go to the rest frame of that pair, where everything is fixed, and then scan along a line by changing the angle of that pair with respect to the third particle. The lines in the Dalitz plot correspond to fixing one invariant mass and varying the angle in one frame or another.</p>
+</section>
+<section id="third-variable-and-symmetric-representation" class="level4" data-number="2.0.5">
+<h4 data-number="2.0.5" class="anchored" data-anchor-id="third-variable-and-symmetric-representation"><span class="header-section-number">2.0.5</span> Third Variable and Symmetric Representation</h4>
 <p>There is also a third variable, called <span class="math inline">u</span> in 2‑to‑2 scattering; for three particles it is the invariant mass of the pion–proton system. The third variable is a linear combination of the two plotted masses. If we fix the mass of one pair, we move along a diagonal in the plot.</p>
 <p>In experimental analyses, the <strong>standard Dalitz plot</strong> has on the <span class="math inline">x</span> -axis the mass of one pair and on the <span class="math inline">y</span> -axis the mass of another pair — as shown here.</p>
-<p>In the homework, you have an exercise on a more <strong>symmetric Dalitz plot</strong>, where all three variables enter symmetrically. This uses the property of an equilateral triangle: for any point inside, the sum of the distances to the three sides is constant. The three invariant masses become the distances to the three sides. This symmetric representation is a linear transformation of the standard Dalitz plot, involving a factor <span class="math inline">\sqrt{3}/2</span> because of the <span class="math inline">60^\circ</span> angles. Both represent the same kinematics. #### Understanding Dynamics: Intermediate Resonances</p>
+<p>In the homework, you have an exercise on a more <strong>symmetric Dalitz plot</strong>, where all three variables enter symmetrically. This uses the property of an equilateral triangle: for any point inside, the sum of the distances to the three sides is constant. The three invariant masses become the distances to the three sides. This symmetric representation is a linear transformation of the standard Dalitz plot, involving a factor <span class="math inline">\sqrt{3}/2</span> because of the <span class="math inline">60^\circ</span> angles. Both represent the same kinematics.</p>
+</section>
+<section id="understanding-dynamics-intermediate-resonances" class="level4" data-number="2.0.6">
+<h4 data-number="2.0.6" class="anchored" data-anchor-id="understanding-dynamics-intermediate-resonances"><span class="header-section-number">2.0.6</span> Understanding Dynamics: Intermediate Resonances</h4>
 <p>The objective of these kinematic representations is to understand the dynamics — what processes govern the interaction. In future lectures we will see that the decay <span class="math inline">\Lambda_c \to pK\pi</span> does not proceed directly; it proceeds via <strong>intermediate resonances</strong>. For a short moment, two of the particles form an intermediate state that then dissociates, increasing the probability of the decay.</p>
 <p>These two particles interact more strongly when their invariant mass matches a resonance, and you see a bump in the cross‑section – a hadronic resonance. By adjusting the energy of that system, you explore how likely the two particles are to interact at that energy. If an intermediate resonance exists, the system resonates, the probability increases, and you see a <strong>band</strong> in the Dalitz plot (or a peak in a projection onto one axis).</p>
 <p>In the example shown, there are resonances in all three pairs:</p>
@@ -412,7 +430,10 @@ Figure&nbsp;1: A unitary diagram for the three-body decay. The arrows show the i
 </tr>
 </tbody>
 </table>
-<p>In the symmetric triangular Dalitz plot, these resonance bands are parallel to the three sides. #### Differential Decay Rate</p>
+<p>In the symmetric triangular Dalitz plot, these resonance bands are parallel to the three sides.</p>
+</section>
+<section id="differential-decay-rate" class="level4" data-number="2.0.7">
+<h4 data-number="2.0.7" class="anchored" data-anchor-id="differential-decay-rate"><span class="header-section-number">2.0.7</span> Differential Decay Rate</h4>
 <p>The differential decay rate for this three‑body decay is</p>
 <p><span class="math display">\frac{d\Gamma}{dm_{pK}^2\,dm_{K\pi}^2} = c\,|\mathcal{M}|^2,</span></p>
 <p>so the colour intensity in the plot is proportional to the squared matrix element <span class="math inline">|\mathcal{M}|^2</span> .</p>

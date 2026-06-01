@@ -399,6 +399,7 @@ Because the isospin is zero, there are no other particles in this multiplet; the
 | Ground state |  $L=0$ , no radial nodes |  $\Lambda_c$  |
 | Radial excitation | Like hydrogen, principal quantum number  $n$  increases size; analogous to 1s, 2s, … |  $\Lambda_c^{**}$  (broad) |
 | Orbital excitation |  $L=1$  (P‑wave) between the light diquark and the charm quark | Two states from  $L=1$  (e.g., different total  $J$ ) |
+
 #### Excitations of  $\Lambda_c$ 
 
 One way to create different particles is to interchange the up and down quarks, but since the isospin is zero this gives no new states.
@@ -454,5 +455,5 @@ Consider a hydrogen atom in a strong magnetic field. What is the excitation spec
 
 Neglect both the proton and electron spins. Draw the energy spectrum as a function of the magnetic field. This is a beautiful puzzle (you may have seen it before).
 
-Thank you for coming. See you next time. If you have questions or suggestions, you can stop by or share them anonymously with Ilya and R. Please let me know if there are other students who were not present, so I can give them the problem set.
+Thank you for coming. See you next time.
 
