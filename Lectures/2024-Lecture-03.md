@@ -12,33 +12,6 @@ format: html
 **Note Taker**: {{< meta note_taker >}}
 
 
-
-## Lecture Recording with Whisper
-
-<b>Recording Experiment</b>
-
-My experiment with recording lectures has been relatively successful, and I could recover what I was speaking.
-
-There is an open large language model from OpenAI that can translate audio to text, called **Whisper**. Since the architecture is known, there is a **C limitation** that even runs parallel on Mac. You just download and execute, and then you have a transcript of your speech.
-
-
-::: callout-warning
-The lecture is recorded. I do it for myself, but it might be converted to some document. But I don't know what to do with that. Just for fun and for exploring the technologies, I will keep the recordings.
-:::
-
-It records only me in the sense that it is mostly me who speaks. Don't hesitate to talk back, because this will not appear in the recordings anyway.
-
-| Aspect | Detail |
-|--------|--------|
-| Audio-to-text model | **Whisper** (OpenAI, open source) |
-| Running on Mac | "C limitation" that runs in parallel |
-| Transcript generation | Download and execute |
-| Recording purpose | Self-reference, fun, technology exploration |
-| Recorded voice | Mostly professor only |
-| Student participation | Not captured |
-
-
-
 ## Isospin Assignments for Mesons and Pentaquarks
 
 #### Isospin Assignments
