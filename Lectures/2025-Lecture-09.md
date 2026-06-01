@@ -1,8 +1,8 @@
 ---
 title: (2025) Lecture 9
 author: ''
-presenter: Unknown
-note_taker: Unknown
+presenter: Mikhail Mikhasenko
+note_taker: Anna Zimmer
 date: '2025'
 format: html
 ---
