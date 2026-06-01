@@ -1,8 +1,8 @@
 ---
 title: (2025) Lecture 2
 author: ''
-presenter: Unknown
-note_taker: Unknown
+presenter: Farah Afzal
+note_taker: Anna Zimmer
 date: '2025'
 format: html
 ---
