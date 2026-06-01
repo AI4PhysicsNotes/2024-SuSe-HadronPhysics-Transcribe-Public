@@ -18,9 +18,11 @@ format: html
 ### Lecture 1: Introduction to Hadron Physics
 
 This lecture introduces hadron physics — its origin, its role in the early universe, and the key concepts needed to understand matter formation.
+
 #### Origin and Role in the Universe
 
 Hadron physics emerged in the earliest stages of the universe and is crucial throughout its evolution. We will discuss how quark physics contributes to matter composition.
+
 #### The Standard Model and Field Equations
 
 We briefly survey the **Standard Model**, then introduce the equations that describe the motion of fields:

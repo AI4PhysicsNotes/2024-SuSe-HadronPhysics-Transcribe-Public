@@ -16,6 +16,7 @@ format: html
 ## Kinematics of Two-to-Two Scattering: Variables and Invariants
 
 ### Lecture 5: Angle Distributions and Partial Wave Analysis
+
 #### Recap on Two-Body Kinematics
 
 We begin with a recap of kinematics for a two-to-two scattering process of scalar particles ( $0^{-}\to 0^{-}$ ). The particles are considered point-like; the interaction is represented by a blob (unitarity diagram, not a Feynman diagram). The question: how many variables are needed to fully describe the kinematics?
@@ -37,6 +38,7 @@ Thus **2 independent variables** suffice to describe the kinematics of a two-bod
 If the final-state particles have spin (e.g.,  $3^{-}$  and  $1^{+}$  in scattering of  $0^{-}$  $P^{+} $), the kinematics still requires only **2 variables**. The angular distributions of the final particles from production do not add independent degrees of freedom because they are determined by the dynamics, not free parameters.
 
 The amplitude in the spin case is not a scalar but a higher-rank object. For spin 3 (7 states) and spin 1 (3 states), the scattering amplitude becomes a$ 7 \times 3 = 21 $-component object. Nevertheless, all 21 amplitudes depend on the same two kinematic variables.
+
 #### Mandelstam Variables
 
 The two variables are commonly chosen as Lorentz-invariant Mandelstam variables:
@@ -66,6 +68,7 @@ Any two non-redundant variables work, but the transformation must be bijective. 
 :::
 
 <hr>
+
 #### Connection to Three-Body Decay and the Dalitz Plot
 
 The same counting applies to a three-body decay: one incoming particle, three outgoing. The number of independent variables is again **2** because the number of legs is the same (four legs total).
@@ -86,6 +89,7 @@ The flatness of the phase space in Mandelstam variables is why the Dalitz plot i
 :::
 
 <hr>
+
 #### Key Formulas from the Recap
 
 - Number of degrees of freedom for spinless scattering:
@@ -128,6 +132,7 @@ This is the **golden channel** for registration because the final state has thre
 At LHCb energies, there is about a 10 mm shift (≈1 cm) between the primary and secondary vertices. That shift comes from the boost and the fact that the  $\Lambda_c$  in the laboratory frame lives longer than in its rest frame; it is produced with a few hundred GeV in proton–proton collisions at the LHC.
 
 This is a super‑nice decay and has been studied extensively. Below is an experimental result from an analysis that resembles the experimental data — the actual data would be indistinguishable from this plot because the statistics are so high that everything is smooth.
+
 #### Dalitz Plot Description
 
 The Dalitz plot for  $\Lambda_c \to pK\pi$  has:
@@ -140,6 +145,7 @@ All allowed values for the decay are shown in colour; the white area around corr
 The range of possible invariant masses is limited. The allowed region is called a **Dalitz plot** — the tool we use to explore the kinematics.
 
 Different colours in the plot indicate different probabilities for the reaction to occur. We reconstruct the tracks of the particles and determine from which kinematic point the decay happened (there is an unambiguous relation between the four‑vectors and the point in the Dalitz plot). It turns out that certain kinematics are more probable than others — particles prefer to go in different directions.
+
 #### Kinematic Boundaries and Maximizing  $m_{pK}$ 
 
 Suppose everything is collinear. One possibility is that the particles are aligned in one line, which corresponds to a boundary of the Dalitz plot. Inside the surface, they always have an angle between them; at the boundary, they are collinear.
@@ -159,6 +165,7 @@ The professor’s way of thinking: in the rest frame of the  $K\pi$  system, the
 <b>A:</b> Yes.
 
 <b>Professor:</b> And how in experiment will we reconstruct such a case, because we will not detect the proton? This is the lab frame. Everything we measure is in the lab frame, which is already boosted. Despite the problem being addressed in the lab frame, it is already boosted. So this point is the maximum mass? No — they have maximum momentum and go back‑to‑back, that corresponds to maximum mass. This point minimises the mass. Good.
+
 #### Parameterising the Dalitz Plot with Angles
 
 For a three‑body decay, fix the mass of the  $K\pi$  system. In the centre‑of‑momentum frame of the  $\Lambda_c$ , the three particles are arranged such that the sum of their three‑momenta is zero. Then boost into the rest frame of the  $K\pi$  system. In that frame, the kaon and pion are back‑to‑back and their total momentum is zero; the proton carries the opposite momentum. With the mass of the  $K\pi$  system fixed, the lengths of the kaon and pion momenta are fixed; the only variable is the angle  $\theta$  between the proton and the direction of the  $K\pi$  system. The entire Dalitz plot can be explored by varying  $\theta$  from  $0$  to  $\pi$ . One corner corresponds to  $\theta=0$ , the other to  $\theta=\pi$ .
@@ -169,6 +176,7 @@ For a three‑body decay, fix the mass of the  $K\pi$  system. In the centre‑o
 Exactly. The same reasoning applies for other particle pairs.
 
 Now fix the mass of the proton–kaon system. The most straightforward way to analyse a Dalitz plot is to go to the rest frame of that pair, where everything is fixed, and then scan along a line by changing the angle of that pair with respect to the third particle. The lines in the Dalitz plot correspond to fixing one invariant mass and varying the angle in one frame or another.
+
 #### Third Variable and Symmetric Representation
 
 There is also a third variable, called  $u$  in 2‑to‑2 scattering; for three particles it is the invariant mass of the pion–proton system. The third variable is a linear combination of the two plotted masses. If we fix the mass of one pair, we move along a diagonal in the plot.
@@ -176,6 +184,7 @@ There is also a third variable, called  $u$  in 2‑to‑2 scattering; for three
 In experimental analyses, the **standard Dalitz plot** has on the  $x$ -axis the mass of one pair and on the  $y$ -axis the mass of another pair — as shown here.
 
 In the homework, you have an exercise on a more **symmetric Dalitz plot**, where all three variables enter symmetrically. This uses the property of an equilateral triangle: for any point inside, the sum of the distances to the three sides is constant. The three invariant masses become the distances to the three sides. This symmetric representation is a linear transformation of the standard Dalitz plot, involving a factor  $\sqrt{3}/2$  because of the  $60^\circ$  angles. Both represent the same kinematics.
+
 #### Understanding Dynamics: Intermediate Resonances
 
 The objective of these kinematic representations is to understand the dynamics — what processes govern the interaction. In future lectures we will see that the decay  $\Lambda_c \to pK\pi$  does not proceed directly; it proceeds via **intermediate resonances**. For a short moment, two of the particles form an intermediate state that then dissociates, increasing the probability of the decay.
@@ -191,6 +200,7 @@ In the example shown, there are resonances in all three pairs:
 |  $p\pi$  |  $\Delta$  resonances | Diagonal bands |
 
 In the symmetric triangular Dalitz plot, these resonance bands are parallel to the three sides.
+
 #### Differential Decay Rate
 
 The differential decay rate for this three‑body decay is
