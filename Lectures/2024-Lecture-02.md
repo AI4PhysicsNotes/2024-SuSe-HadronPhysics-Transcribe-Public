@@ -454,5 +454,5 @@ Consider a hydrogen atom in a strong magnetic field. What is the excitation spec
 
 Neglect both the proton and electron spins. Draw the energy spectrum as a function of the magnetic field. This is a beautiful puzzle (you may have seen it before).
 
-Thank you for coming. See you next time. If you have questions or suggestions, you can stop by or share them anonymously with Ilya and R. Please let me know if there are other students who were not present, so I can give them the problem set.
+Thank you for coming. See you next time.
 
